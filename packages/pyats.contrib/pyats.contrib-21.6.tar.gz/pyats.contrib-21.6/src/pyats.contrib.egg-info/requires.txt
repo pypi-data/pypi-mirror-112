@@ -1,0 +1,6 @@
+ansible
+requests
+requests-toolbelt
+xlrd==1.2
+xlwt
+xlsxwriter
