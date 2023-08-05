@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "sf_max"
+version = "0.1.1"
+description = ""
+authors = ["Will Max <maxwillx@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+sf = "sf_max.entry:main"
