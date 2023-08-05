@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+versioneer.py
+afar/__init__.py
+afar/_version.py
+afar/core.py
+afar.egg-info/PKG-INFO
+afar.egg-info/SOURCES.txt
+afar.egg-info/dependency_links.txt
+afar.egg-info/requires.txt
+afar.egg-info/top_level.txt
+afar/tests/__init__.py
+afar/tests/test_core.py
