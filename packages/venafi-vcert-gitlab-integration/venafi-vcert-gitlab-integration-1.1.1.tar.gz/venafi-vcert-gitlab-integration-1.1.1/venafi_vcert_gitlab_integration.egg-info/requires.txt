@@ -1,0 +1,4 @@
+cryptography<4,>=3.4.7
+envparse<0.3,>=0.2.0
+requests<3,>=2.25.1
+vcert<0.10,>=0.9.1
