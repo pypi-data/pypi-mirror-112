@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: aeroplatform
+Version: 1.2.0
+Summary: A simple Data Infrastructure Platform
+Home-page: UNKNOWN
+Author: Aero Technologies
+Author-email: aero@robbiea.co.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click (>=7.0)
+Requires-Dist: requests
+Requires-Dist: boto3
+Requires-Dist: pylint (<2.5.0)
+Requires-Dist: aero-metaflow
+
+# Aero
+
+
+
