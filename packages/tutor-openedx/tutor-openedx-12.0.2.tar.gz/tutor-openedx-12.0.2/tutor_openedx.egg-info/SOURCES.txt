@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.py
+tutor_openedx.egg-info/PKG-INFO
+tutor_openedx.egg-info/SOURCES.txt
+tutor_openedx.egg-info/dependency_links.txt
+tutor_openedx.egg-info/requires.txt
+tutor_openedx.egg-info/top_level.txt
+tutoropenedx/__about__.py
+tutoropenedx/__init__.py
