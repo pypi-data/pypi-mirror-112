@@ -1,0 +1,13 @@
+gmsh>=4.8
+meshio[all]
+vtk
+pandas
+toolz
+pyquaternion
+lmfit
+ccx2paraview
+jupyterlab
+pythreejs
+pyparsing
+plotly
+kaleido
