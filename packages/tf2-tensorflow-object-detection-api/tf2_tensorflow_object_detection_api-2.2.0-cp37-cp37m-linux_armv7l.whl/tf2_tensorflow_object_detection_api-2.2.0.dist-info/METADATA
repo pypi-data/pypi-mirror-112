@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: tf2-tensorflow-object-detection-api
+Version: 2.2.0
+Summary: Tensorflow Object Detection Library with TF2.0
+Home-page: https://github.com/forskamse/TensorFlow-Object-Detection-API
+Maintainer: forskamse
+Maintainer-email: forskamse@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >3.6
+Requires-Dist: Cython
+Requires-Dist: apache-beam
+Requires-Dist: avro-python3
+Requires-Dist: contextlib2
+Requires-Dist: lvis
+Requires-Dist: lxml
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: pillow
+Requires-Dist: pycocotools
+Requires-Dist: scipy
+Requires-Dist: six
+Requires-Dist: tensorflow (>=2.2.0)
+Requires-Dist: tf-slim
+
+UNKNOWN
+
+
