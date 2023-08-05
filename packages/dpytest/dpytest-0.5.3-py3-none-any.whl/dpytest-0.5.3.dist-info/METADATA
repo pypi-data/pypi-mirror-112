@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: dpytest
+Version: 0.5.3
+Summary: A package that assists in writing tests for discord.py
+Home-page: https://github.com/CraftSpider/dpytest
+Author: Rune Tynan
+Author-email: runetynan@gmail.com
+License: UNKNOWN
+Keywords: discord discord.py test
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Testing
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: discord.py
+Requires-Dist: pytest-asyncio
+
+# dpytest
+
+[![Build Status](https://travis-ci.com/CraftSpider/dpytest.svg?branch=master)](https://travis-ci.com/CraftSpider/dpytest)
+[![Documentation Status](https://readthedocs.org/projects/dpytest/badge/?version=latest)](https://dpytest.readthedocs.io/en/latest/?badge=latest)
+[![Discord Server](https://img.shields.io/discord/523301176309972993.svg?label=Support%20Discord)](https://discord.gg/aNe8DqAuxd)
+
+
+This is a package to allow testing of discord.py.
+It is only compatible with the rewrite version, and is still in alpha.
+If using pytest, it is suggested to use pytest-asyncio for test running, otherwise the user will need
+to provide their own async test runner.
+
+# Documentation
+
+Documentation can be found at [dpytest.readthedocs.io](https://dpytest.readthedocs.io/en/latest/), including examples and tutorials
+
+
+# History
+
+## 0.5.3
+
+- Docs: Add vertical spacing for functions & methods
+- Fix behaviour 'discord.Role.edit' with hoist, mentionable, etc.
+
+## 0.5.2
+
+- Get member mentions by using the user ID in mention
+
+## 0.5.1
+
+- NEW methods : Pins, get_user, & clear_reactions
+- fix utils functions imports
+
+## 0.5.0
+
+- Remove the runner verification methods, replace them with verification builders
+
+## 0.4.0
+
+- Rename simulate_reaction -> add_reaction and make it take a user to react as
+
+## 0.3.0
+
+- unrealease (error when bumping version)
+
+## 0.2.0
+
+- Merge hint files into .py files
+- Use typing export of Pattern
+
+## 0.1.1
+
+- Add content type to attachments
+- Overwrite _guild_needs_chunking (fix for asyncio wait_for errors)
+
+## 0.1.0
+
+- Bump version (sould have done that with 0.0.23, since many changes have been commited)
+- Bug fix with role_mentions=None being not iterable.
+
+## 0.0.23
+
+- Support for discord.py 1.7.1
+- Attachments allowed on messages
+- verify_embed without test fixed
+- Add members intent
+- Added more testing
+
+

@@ -1,0 +1,15 @@
+discord/ext/test/__init__.py,sha256=kx2OTkSUHba_Ms66yFyqA7-nqB98VXjjJ1bUVGudEvk,335
+discord/ext/test/_types.py,sha256=pJ4va2leCf-SzY27mWK66NV5ACYqtBinO6OfhKvjUO8,514
+discord/ext/test/backend.py,sha256=kNjhfeH81s42Ng72pYzRSxjjz5dUpsn5DB7h7E434P8,38041
+discord/ext/test/callbacks.py,sha256=xNz_ikuKTlqhZLUSBHXl1r4xculKPh3Tr2_Dmnjv-iQ,1992
+discord/ext/test/factories.py,sha256=C1R-_uH8tWlr1ki_xwz5XIl_RmddBJqZNjVw_14Wxmk,19793
+discord/ext/test/runner.py,sha256=UsX4lwmy7QTORw8dMFeslivEfdrMJzORr55weWNlgeA,13381
+discord/ext/test/state.py,sha256=RFbsGaPVpIXabjgf0y6S19eWDWdt2I7uTnrhoGaB2J8,2707
+discord/ext/test/utils.py,sha256=Jw7n_6imj02vBatKEZ5QSx-IOWWXW2B8YFaEvmHBAG0,1821
+discord/ext/test/verify.py,sha256=dvse_0NOraL9FtpIcjhwwKZGqX4ZEQzCcjVoHmWs9Dw,10242
+discord/ext/test/websocket.py,sha256=7Ge5w8-eOLwOoebWzHcMDzkTCun5nboEnPmiD5w7y-g,1651
+dpytest-0.5.3.dist-info/LICENSE,sha256=edIgLHw0JqsuzSDPIo5rNBw-X51Dt2DOPAo5jjCxSsI,1102
+dpytest-0.5.3.dist-info/METADATA,sha256=7fanhTVQllnG-oHkplnieH6t6f19AwOI5WPpv-YesM4,2657
+dpytest-0.5.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dpytest-0.5.3.dist-info/top_level.txt,sha256=fJkrNbR-_8ubMBUcDEJBcfkpECrvSEmMrNKgvLlQFoM,8
+dpytest-0.5.3.dist-info/RECORD,,
