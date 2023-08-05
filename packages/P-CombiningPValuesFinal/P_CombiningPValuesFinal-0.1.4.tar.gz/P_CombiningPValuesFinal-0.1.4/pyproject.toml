@@ -1,0 +1,12 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "P_CombiningPValuesFinal"
+author = "Breya McGlown"
+author-email = "bswlker2@memphis.edu"
+home-page = "https://github.com/StatsGirl/Master2021"
+classifiers = [ "License :: OSI Approved :: MIT License",]
+description-file = "README.md"
+
