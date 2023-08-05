@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+webscrapingapi/__init__.py
+webscrapingapi/client.py
+webscrapingapi.egg-info/PKG-INFO
+webscrapingapi.egg-info/SOURCES.txt
+webscrapingapi.egg-info/dependency_links.txt
+webscrapingapi.egg-info/requires.txt
+webscrapingapi.egg-info/top_level.txt
