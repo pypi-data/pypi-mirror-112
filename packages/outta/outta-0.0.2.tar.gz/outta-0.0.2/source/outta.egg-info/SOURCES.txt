@@ -1,0 +1,16 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+source/outta/__init__.py
+source/outta/elements.py
+source/outta/parser.py
+source/outta/screen.py
+source/outta/stream.py
+source/outta/version.py
+source/outta/web.py
+source/outta.egg-info/PKG-INFO
+source/outta.egg-info/SOURCES.txt
+source/outta.egg-info/dependency_links.txt
+source/outta.egg-info/requires.txt
+source/outta.egg-info/top_level.txt
