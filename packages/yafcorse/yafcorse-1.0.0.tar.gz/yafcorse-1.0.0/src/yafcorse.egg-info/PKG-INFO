@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: yafcorse
+Version: 1.0.0
+Summary: Yet Another Flask CORS Extension.
+Home-page: https://github.com/pyfaddist/yafcorse
+Author: Christian Dein
+Author-email: christian.dein@dein-hosting.de
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Yet Another Flask CORS Extension
+
+```bash
+pip install yafcorse
+```
+
+```python
+from flask import Flask
+
+from yafcorse import Yafcorse
+
+def create_app():
+    app = Flask(__name__)
+
+    cors = Yafcorse({
+        'origins': lambda origin: origin == 'https://api.your-domain.space',
+        'allowed_methods': ['GET', 'POST', 'PUT'],
+        'allowed_headers': ['Content-Type', 'X-Test-Header'],
+        'allow_credentials': True,
+        'cache_max_age': str(60 * 5)
+    })
+    cors.init_app(app)
+
+    return app
+```
+
+
