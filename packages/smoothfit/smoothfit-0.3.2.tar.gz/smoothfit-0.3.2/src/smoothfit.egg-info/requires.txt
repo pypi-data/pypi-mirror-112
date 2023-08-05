@@ -1,0 +1,7 @@
+pykry
+numpy
+scikit-fem>=3.0.0
+scipy
+
+[:python_version < "3.8"]
+importlib_metadata
