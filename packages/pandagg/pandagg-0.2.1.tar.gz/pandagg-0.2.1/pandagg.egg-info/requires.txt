@@ -1,0 +1,16 @@
+six
+future
+lighttree==1.1.1
+elasticsearch<8.0.0,>=7.0.0
+
+[develop]
+pre-commit
+black
+coverage
+flake8
+pytest
+pytest-cov
+mock
+pandas
+Sphinx
+twine
