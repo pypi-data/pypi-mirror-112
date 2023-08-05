@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+datatransformer/__init__.py
+datatransformer/abstractobject.py
+datatransformer/tensorflow.py
+datatransformer.egg-info/PKG-INFO
+datatransformer.egg-info/SOURCES.txt
+datatransformer.egg-info/dependency_links.txt
+datatransformer.egg-info/requires.txt
+datatransformer.egg-info/top_level.txt
