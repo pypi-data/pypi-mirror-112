@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: wc-bankid-nbu
+Version: 0.1.2
+Summary: SDK for NMU's BankID authorization.
+Home-page: UNKNOWN
+Author: WebCase
+Author-email: info@webcase.studio
+License: MIT License
+Description: # WebCase NUBUBankId
+        
+        SDK for NMU\'s BankID authorization.
+        
+        ## Installation
+        
+        ```sh
+        pip install wc-bankid-nbu
+        ```
+        
+        ## TODO
+        
+        - [_] Social auth pipeline integrations.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
