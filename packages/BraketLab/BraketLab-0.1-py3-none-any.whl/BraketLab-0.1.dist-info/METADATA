@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: BraketLab
+Version: 0.1
+Summary: Educational tool for learning quantum theory with Jupyter Notebooks
+Home-page: https://github.uio.no/audunsh/braketlab
+Author: Audun Skau Hansen
+Author-email: a.s.hansen@kjemi.uio.no
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# braketlab
+Educational quantum theory toy
+
+
