@@ -1,0 +1,3 @@
+[console_scripts]
+youtube_thumbnail = youtube_thumbnail.cli:main
+
