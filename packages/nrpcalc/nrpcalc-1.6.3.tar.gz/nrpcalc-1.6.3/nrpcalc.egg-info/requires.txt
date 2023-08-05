@@ -1,0 +1,10 @@
+numpy>=1.19.0
+biopython>=1.77
+leveldb>=0.201
+scipy>=1.5.1
+networkx>=2.4
+jupyter>=1.0.0
+scikit-learn>=0.23.1
+seaborn>=0.10.1
+statsmodels>=0.11.0
+ViennaRNA>=2.4.18a1
