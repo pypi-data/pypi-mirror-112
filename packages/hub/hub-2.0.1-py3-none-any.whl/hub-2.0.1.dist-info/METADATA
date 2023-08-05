@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: hub
+Version: 2.0.1
+Summary: Activeloop Hub
+Home-page: UNKNOWN
+Author: activeloop.ai
+Author-email: support@activeloop.ai
+License: UNKNOWN
+Project-URL: Documentation, https://docs.activeloop.ai/
+Project-URL: Source, https://github.com/activeloopai/Hub
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: numcodecs (>=0.7.3)
+Requires-Dist: msgpack (>=1.0.2)
+Requires-Dist: pillow (==7.2.0)
+Requires-Dist: boto3
+Requires-Dist: boto3-stubs[essential]
+Requires-Dist: pathos
+Requires-Dist: humbug (>=0.2.6)
+Requires-Dist: types-requests
+Requires-Dist: types-click
+Requires-Dist: tqdm
+
+UNKNOWN
+
