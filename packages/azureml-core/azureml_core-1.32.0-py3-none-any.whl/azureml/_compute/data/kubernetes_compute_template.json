@@ -1,0 +1,15 @@
+{
+  "location": "",
+  "properties": {
+    "computeType": "Kubernetes",
+    "computeLocation": "",
+    "description": "",
+    "resourceId": "",
+    "properties": {
+      "namespace": "",
+      "defaultInstanceType": "",
+      "instanceTypes":{
+      }
+    }
+  }
+}
