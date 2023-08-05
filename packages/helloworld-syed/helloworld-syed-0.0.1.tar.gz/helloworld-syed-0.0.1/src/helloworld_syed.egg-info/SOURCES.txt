@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+test_helloworld.py
+tox.ini
+src/helloworld.py
+src/helloworld_judy2k.egg-info/PKG-INFO
+src/helloworld_judy2k.egg-info/SOURCES.txt
+src/helloworld_judy2k.egg-info/dependency_links.txt
+src/helloworld_judy2k.egg-info/requires.txt
+src/helloworld_judy2k.egg-info/top_level.txt
+src/helloworld_syed.egg-info/PKG-INFO
+src/helloworld_syed.egg-info/SOURCES.txt
+src/helloworld_syed.egg-info/dependency_links.txt
+src/helloworld_syed.egg-info/requires.txt
+src/helloworld_syed.egg-info/top_level.txt
