@@ -1,0 +1,3 @@
+[console_scripts]
+posecamera = posecamera.cli:main
+

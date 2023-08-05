@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+posecamera/__init__.py
+posecamera/cli.py
+posecamera.egg-info/PKG-INFO
+posecamera.egg-info/SOURCES.txt
+posecamera.egg-info/dependency_links.txt
+posecamera.egg-info/entry_points.txt
+posecamera.egg-info/requires.txt
+posecamera.egg-info/top_level.txt
+posecamera/modules/__init__.py
+posecamera/modules/file_providers.py
+posecamera/modules/hand_tracker.py
+posecamera/modules/one_euro_filter.py
+posecamera/modules/pose_tracker.py
