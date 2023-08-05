@@ -1,0 +1,17 @@
+fiona
+numpy
+pyproj==1.9.6
+rasterio
+rtree
+scikit-image
+scipy
+shapely
+tqdm
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov

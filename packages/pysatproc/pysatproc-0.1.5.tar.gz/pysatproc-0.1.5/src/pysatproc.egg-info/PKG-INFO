@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pysatproc
+Version: 0.1.5
+Summary: Python library and CLI tools for processing geospatial imagery for ML
+Home-page: https://github.com/dymaxionlabs/satproc/
+Author: Damián Silvani
+Author-email: damian@dymaxionlabs.com
+License: Apache-2.0
+Project-URL: Documentation, https://satproc.readthedocs.io/en/latest/
+Description: # satproc
+        
+        Python library and CLI tools for processing geospatial imagery for ML
+        
+        ## Description
+        
+        satproc helps you work with large amount of geospatial raster images
+        (satellite, drone, etc.) and process them for training machine learning, for
+        object detection or semantic segmentation problems.
+        
+        ## Contributing
+        
+        Bug reports and pull requests are welcome on GitHub at the [issues
+        page](https://github.com/dymaxionlabs/satproc). This project is intended to be
+        a safe, welcoming space for collaboration, and contributors are expected to
+        adhere to the [Contributor Covenant](http://contributor-covenant.org) code of
+        conduct.
+        
+        ## License
+        
+        This project is licensed under Apache 2.0. Refer to [LICENSE.txt](LICENSE.txt).
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Provides-Extra: testing
