@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: promoterExtract
+Version: 0.2
+Summary: Extract promoter sequence for biologists
+Home-page: https://github.com/zhusitao1990
+Author: zhusitao
+Author-email: zhusitao1990@163.com
+License: MIT
+Description: The ngs-tools is python package for bioinformatics. 
+        Package format is a bioinformatics file format. 
+        Package util is a common tools software. 
+        Package PopGen is a population genetics software.
+        Package pipe is a pipeline of frequently-used.
+        
+Keywords: promoter
+Platform: UNKNOWN
+Description-Content-Type: str
