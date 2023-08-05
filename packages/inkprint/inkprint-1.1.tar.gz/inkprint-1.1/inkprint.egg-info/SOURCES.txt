@@ -1,0 +1,10 @@
+setup.py
+inkprint/__init__.py
+inkprint/example.py
+inkprint/inkprint.py
+inkprint/test_inkprint.py
+inkprint.egg-info/PKG-INFO
+inkprint.egg-info/SOURCES.txt
+inkprint.egg-info/dependency_links.txt
+inkprint.egg-info/not-zip-safe
+inkprint.egg-info/top_level.txt
