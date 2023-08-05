@@ -1,0 +1,6 @@
+matplotlib
+meshio
+numpy
+scikit-image>=0.17
+scipy
+Pillow
