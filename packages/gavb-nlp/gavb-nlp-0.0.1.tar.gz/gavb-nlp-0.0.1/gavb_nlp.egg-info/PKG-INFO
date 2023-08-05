@@ -1,0 +1,18 @@
+Metadata-Version: 1.0
+Name: gavb-nlp
+Version: 0.0.1
+Summary: NLP preprocessing for different nlp tasks.
+Home-page: https://github.com/felipeoliverai/gavb-nlp
+Author: Felipe Oliveria / Luiz Simioni / GAVB Deep Learning
+Author-email: UNKNOWN
+License: MIT
+Description: GAVB Deep learning team's creates a NLP tiny package, for endure text preprocessing in several NLP tasks.
+        
+        Change log
+        ==========
+        
+        0.0.1 (05/07/2021)
+        ==================
+        
+        - First release 
+Platform: UNKNOWN
