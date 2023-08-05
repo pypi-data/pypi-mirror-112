@@ -1,0 +1,14 @@
+pywin32>=224
+
+[all]
+cryptography
+Jinja2
+pandas
+matplotlib
+plotly
+flask
+requests
+
+[pro]
+cryptography
+Jinja2
