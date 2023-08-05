@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: textrank4ch
+Version: 1.0.0
+Summary: Key words extracting and Key sentences extracting
+Home-page: https://github.com/skykiseki/textrank4ch
+Author: Wei, Zhihui
+Author-email: evelinesdd@qq.com
+License: MIT
+Keywords: NLP,Chinese,Chinese words,textrank
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Natural Language :: Chinese (Traditional)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Indexing
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+
+我家还蛮大的, 欢迎你们来我家van.
+
+https://github.com/skykiseki
+
+textrank4ch
+====
+
+"基于textrank的关键字摘取与摘要句摘取", 
+
+
+具体textrank的知识参考, 我个人觉得还不错
+[《PageRank 笔记》](https://clvsit.blog.csdn.net/article/details/90322422)
+[《textrank提取关键词与关键句》](https://blog.csdn.net/weixin_40746796/article/details/89963268)
+
+
+完整文档见 ``README.md``
+
+GitHub: https://github.com/skykiseki/textrank4ch
+
+
