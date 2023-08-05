@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "net-gsd"
+version = "0.1.2"
+description = "Network Get Stuff Done"
+authors = ["Ryan Bradshaw <ryan@rbradshaw.dev>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+scrapli = "^2021.1.30"
+asyncssh = "^2.7.0"
+genie = "21.4"
+pyats = "21.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+mypy = "^0.910"
+bpython = "^0.21"
+black = "^21.6b0"
+flake8 = "^3.9.2"
+
+[tool.black]
+line-length = 120
+target-version = ['py38']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
