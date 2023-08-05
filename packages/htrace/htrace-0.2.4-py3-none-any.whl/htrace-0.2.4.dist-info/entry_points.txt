@@ -1,0 +1,3 @@
+[console_scripts]
+htrace=htrace.__main__:main
+
