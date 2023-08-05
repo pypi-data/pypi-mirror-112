@@ -1,0 +1,3 @@
+[console_scripts]
+GPSconverter = GPSconverter.__main__:main
+
