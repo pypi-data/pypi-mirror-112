@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/helpsk/__init__.py
+src/helpsk/example.py
+src/helpsk.egg-info/PKG-INFO
+src/helpsk.egg-info/SOURCES.txt
+src/helpsk.egg-info/dependency_links.txt
+src/helpsk.egg-info/top_level.txt
