@@ -1,0 +1,17 @@
+imsize/__init__.py,sha256=tpR0nD3O9JwnoCHBoMjTuex97yRGR9BLLKjjDTjKjxQ,346
+imsize/argv.py,sha256=ojb0xeW1x6cew_GElbzU-zlVUGlVz2hkBVjdquulEcs,9886
+imsize/consoleapp.py,sha256=VppQsIhSNRGD0QuS1o3pVCb_0uhohSnkN67OeRtl0U0,3674
+imsize/exrhdr.py,sha256=xhlOxyoLPMh_BDwbRvFXK2-xj271sZcHls1judYXI34,2766
+imsize/imsize.py,sha256=eFJteKk2Icfazkngo8QNmI1j6wrrbOzInFg4ML36980,11997
+imsize/pfmhdr.py,sha256=6Wi5g0ZZzTa21gbUcyqVdUObiGtlCPNbcT8loL2SH-A,1785
+imsize/pnmhdr.py,sha256=gEzq4FUPl3cByk30s5p7dw2EL_-_BsG1oQNZomAck_0,1733
+imsize-1.1.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+imsize-1.1.0.dist-info/METADATA,sha256=DtZwDpTEKtIKcwSwsbHn5KstFc_Erae5Ad2gxQwgFT0,392
+imsize-1.1.0.dist-info/RECORD,,
+imsize-1.1.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+imsize-1.1.0.dist-info/entry_points.txt,sha256=5tc9sX8V4FsyIK7nxn77je7FGXuPQ1MTmQisFDL-bnE,51
+imsize-1.1.0.dist-info/metadata.json,sha256=bTYIxISpa0d8YDHeCw7T5NelziIAXGjBEqrhjfrD5z8,720
+imsize-1.1.0.dist-info/top_level.txt,sha256=nIm3p2d-y1mhhNS4nucDieJFnGi3MmK-PTBL-AIBnoc,12
+imsize-1.1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_read.py,sha256=qVFB_lfuVwbr368TSIiwU6JwvBZFh4uwJPTKQ8RlNAs,3522
