@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: django-dyncss
+Version: 0.1.1
+Summary: django-dyncss is an extension to Django allowing to save css assets in the DB
+Home-page: https://github.com/jcolot/django-dyncss
+Author: Julien Colot
+Author-email: julien.colot@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/x-rst
+License-File: COPYING
+Requires-Dist: django (>=2.23)
+Requires-Dist: csscompressor (==0.9.5)
+
+=============
+django-dyncss
+=============
+
+`Django DynCSS <https://github.com/jcolot/django-dyncss>`_ is an extension
+to `Django <https://github.com/django/django>`_ which adds the possibility
+to store css files in the Django DB with simple versioning.
+
+Installation
+============
+
+Install the latest version from pypi.python.org:
+
+    pip install django-dyncss
+
+Install the development version by cloning the source from github.com:
+
+    pip install git+https://github.com/jcolot/django-dyncss.git
+
+Configuration
+=============
+
+Add the package to your `INSTALLED_APPS`:
+::
+
+    INSTALLED_APPS = (
+        ...
+        'dyncss',
+    )
+
+Add the url path in your main urls.py.
+::
+
+    urlpatterns = [
+        ...
+        path('dyncss/', include('dyncss.urls')),
+    ]
+
+Usage
+=====
+
+Create a CSS File from the Django Admin
+
+Add a link to that file in your Django template
+::
+
+    <link rel="stylesheet" href="dyncss/example.css">
+
+You can also use the template tag
+::
+
+    {% load dyncss %}
+
+    {% dyncss 'example.css' inline=True %}
+
+The parameter `inline` when `True` allows to render the file inline within `<style>` tags
+
+License
+=======
+
+-   Released under MIT License
+-   Copyright (c) 2021 Julien Colot <julien.colot@gmail.com>
+
+Resources
+=========
+
+-   `Code <https://github.com/jcolot/django-dyncss>`_
+
+
