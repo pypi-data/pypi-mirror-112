@@ -1,0 +1,15 @@
+paramiko
+psutil
+dargs
+requests
+
+[:python_version<'3.7']
+typing_extensions
+
+[cloudserver]
+oss2
+
+[docs]
+sphinx
+recommonmark
+sphinx_rtd_theme
