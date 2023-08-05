@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+Displacement_strain_planet/B1986_nmax.py
+Displacement_strain_planet/Displacement_strain.py
+Displacement_strain_planet/__init__.py
+Displacement_strain_planet/_version.py
+Displacement_strain_planet.egg-info/PKG-INFO
+Displacement_strain_planet.egg-info/SOURCES.txt
+Displacement_strain_planet.egg-info/dependency_links.txt
+Displacement_strain_planet.egg-info/requires.txt
+Displacement_strain_planet.egg-info/top_level.txt
