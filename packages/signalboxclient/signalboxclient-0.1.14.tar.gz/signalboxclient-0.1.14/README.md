@@ -1,0 +1,3 @@
+```sh
+conda activate signalbox
+```
