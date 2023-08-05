@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: PyDIVOC
+Version: 0.1.0
+Summary: Python library for decoding and verifying the COWIN Covid19 Credentials for India from DIVOC
+Home-page: https://github.com/decentralised-dataexchange/pydivoc
+Author: George J Padayatti
+Author-email: george.padayatti@igrant.io
+License: Apache Software License
+Keywords: covid19,divoc,india,w3c credential
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Requires-Python: >=3.6.3
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: autopep8 (==1.5.7)
+Requires-Dist: joblib (==1.0.1)
+Requires-Dist: numpy (==1.21.0)
+Requires-Dist: opencv-python (==4.5.2.54)
+Requires-Dist: pycodestyle (==2.7.0)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: zbar-py (==1.0.4)
+
+# PyDIVOC
+
+## Introduction
+
+Author: [George J Padayatti](mailto:george%40igrant.io)
+
+Python library for decoding and verifying the [COWIN Covid19 Credentials for India](https://www.cowin.gov.in/) from [DIVOC](https://divoc.egov.org.in/)
+
+## Pre requisites
+
+This package have dependency to OpenCV and ZBAR (QR code library)
+
+
+## Installation
+
+Using a virtual environment is generally recommended:
+
+```sh
+$ python -m venv env
+$ source env/bin/activate
+```
+
+Install with pip:
+
+```sh
+pip install PyDIVOC
+```
+
+## Usage
+
+```python
+from PyDIVOC.divoc_qr import decode_divoc_covid19_qr
+w3c_vc = decode_divoc_covid19_qr("qr.png")
+```
+
+## TODO
+
+- [ ] Function to verify JSON-LD signatures embedded in Covid19 Certificate
+
