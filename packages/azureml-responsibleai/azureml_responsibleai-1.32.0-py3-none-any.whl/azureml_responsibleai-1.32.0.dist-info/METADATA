@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: azureml-responsibleai
+Version: 1.32.0
+Summary: AzureML Responsible AI package
+Home-page: https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py
+Author: Microsoft Corp
+Author-email: amlraidev@microsoft.com
+License: Proprietary https://aka.ms/azureml-preview-sdk-license 
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6,<3.8
+Description-Content-Type: text/x-rst
+Requires-Dist: azureml-core (~=1.32.0)
+Requires-Dist: azureml-dataset-runtime (~=1.32.0)
+Requires-Dist: azureml-interpret (~=1.32.0)
+Requires-Dist: fairlearn (>=0.6.2)
+Requires-Dist: joblib
+Requires-Dist: jsonschema
+Requires-Dist: responsibleai (~=0.7.0)
+
+AzureML Responsible AI package
+
+
+
+
