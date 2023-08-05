@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/PyAutoFact.egg-info/PKG-INFO
+src/PyAutoFact.egg-info/SOURCES.txt
+src/PyAutoFact.egg-info/dependency_links.txt
+src/PyAutoFact.egg-info/requires.txt
+src/PyAutoFact.egg-info/top_level.txt
+src/py_auto_fact/__init__.py
+src/py_auto_fact/auto_fact.py
+src/py_auto_fact/lr_module.py
