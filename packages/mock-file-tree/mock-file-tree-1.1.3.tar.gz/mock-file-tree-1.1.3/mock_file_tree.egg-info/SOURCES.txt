@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mock_file_tree.egg-info/PKG-INFO
+mock_file_tree.egg-info/SOURCES.txt
+mock_file_tree.egg-info/dependency_links.txt
+mock_file_tree.egg-info/requires.txt
+mock_file_tree.egg-info/top_level.txt
+src/__init__.py
+src/models/__init__.py
+src/models/exceptions.py
+src/models/file_tree.py
+src/models/mock_file_tree.py
+src/models/unsupported.py
+src/utils/__init__.py
+src/utils/paths.py
