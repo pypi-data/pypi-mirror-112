@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: pearson-pdf
+Version: 1.0.5
+Summary: Tool to download Pearson books as PDFs.
+Home-page: https://github.com/jyooru/pearson-pdf
+Author: jyooru
+License: MIT
+Project-URL: Source, https://github.com/jyooru/pearson-pdf
+Project-URL: Issues, https://github.com/jyooru/pearson-pdf/issues
+Keywords: pearson,ebook,pearson-ebook,pdf,pearson-pdf
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pearson-pdf
+
+Tool to download Pearson books as PDFs.
+
+## Installation
+
+Install `pearson-pdf` using pip.
+
+```bash
+pip install pearson-pdf
+```
+
+## Usage
+
+To download a PDF, you'll need to get the book's ID:
+
+1. Open up DevTools in your browser.
+2. Navigate to Console.
+3. Type in:
+   ```js
+   window.foxitAssetURL;
+   ```
+4. Copy that URL. pearson-pdf will parse the ID from that URL.
+
+Now you can download your PDF:
+
+```bash
+# with an id
+pearson_pdf xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx output.pdf
+
+# with a url
+pearson_pdf -u https://example.com/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx output.pdf
+```
+
+More information on usage is in the help page:
+
+```bash
+pearson_pdf -h
+```
+
+## License
+
+See [LICENSE](LICENSE) for details.
+
+

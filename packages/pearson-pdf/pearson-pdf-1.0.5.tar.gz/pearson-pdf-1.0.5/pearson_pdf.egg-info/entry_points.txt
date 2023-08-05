@@ -1,0 +1,3 @@
+[console_scripts]
+pearson_pdf = pearson_pdf.__main__:main
+
