@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: cloudrail
+Version: 1.3.158
+Summary: Cloudrail CLI tool
+Home-page: UNKNOWN
+Author: Indeni
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7, <4
+Requires-Dist: click (~=7.1.2)
+Requires-Dist: click-aliases (==1.0.1)
+Requires-Dist: colorama (~=0.4.3)
+Requires-Dist: config (==0.4.2)
+Requires-Dist: dataclasses-json (==0.5.2)
+Requires-Dist: halo (~=0.0.29)
+Requires-Dist: natsort (==3.3.0)
+Requires-Dist: PyYAML (>=5.3.1)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: six (~=1.15.0)
+Requires-Dist: junit-xml (==1.8)
+Requires-Dist: python-terraform (==0.10.1)
+Requires-Dist: checkov (==2.0.175)
+Requires-Dist: jsonpickle (==1.4.1)
+Requires-Dist: netaddr (==0.7.19)
+Requires-Dist: arnparse (==0.0.2)
+Requires-Dist: backoff (==1.10.0)
+Requires-Dist: packaging
+Requires-Dist: Pygments (==2.7.3)
+Requires-Dist: semantic-version (==2.8.5)
+Requires-Dist: marshmallow
+Requires-Dist: cloudrail-knowledge (==0.0.58)
+Requires-Dist: rsa (==4.7.2)
+Requires-Dist: cfn-flip
+
+UNKNOWN
+
