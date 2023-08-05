@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+ddf_conversions/__init__.py
+ddf_conversions.egg-info/PKG-INFO
+ddf_conversions.egg-info/SOURCES.txt
+ddf_conversions.egg-info/dependency_links.txt
+ddf_conversions.egg-info/requires.txt
+ddf_conversions.egg-info/top_level.txt
+ddf_conversions/dir/__init__.py
+ddf_conversions/dir/word_to_pdf.py
+ddf_conversions/excel_to_change/__init__.py
+ddf_conversions/excel_to_change/excel_to_word.py
