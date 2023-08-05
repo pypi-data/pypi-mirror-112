@@ -1,0 +1,87 @@
+{% import '_circleci.jinja' as circleci %}
+---
+version: 2.1
+
+jobs:
+{{ circleci.job_header('install', image) }}
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - setup-py-\{\{ checksum "setup.py" \}\}
+      - run:
+          name: "Install dependencies"
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install .[dist,lint,test,types]
+      - save_cache:
+          paths:
+            - ./venv
+          key: setup-py-\{\{ checksum "setup.py" \}\}
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - .
+
+{{ circleci.python_command_job(project, 'flake8', 'lint', image) }}
+
+{{ circleci.python_command_job(project, 'pytest', 'test', image) }}
+
+{{ circleci.python_command_job(project, 'mypy', 'types', image) }}
+
+{{ circleci.job_header('release', image) }}
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Configure .pypirc
+          command: |
+            echo -e "[pypi]" >> ~/.pypirc
+            echo -e "username = $PYPI_USERNAME" >> ~/.pypirc
+            echo -e "password = $PYPI_PASSWORD" >> ~/.pypirc
+      - run:
+          name: Create distributions
+          command: |
+            . venv/bin/activate
+            python setup.py sdist
+            python setup.py bdist_wheel
+      - run:
+          name: Upload to pypi
+          command: |
+            . venv/bin/activate
+            twine upload dist/*
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - install
+      - lint:
+          requires:
+            - install
+          filters:
+            tags:
+              only: /.*/
+      - test:
+          requires:
+            - install
+          filters:
+            tags:
+              only: /.*/
+      - types:
+          requires:
+            - install
+          filters:
+            tags:
+              only: /.*/
+      - release:
+          requires:
+            - test
+            - lint
+            - types
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^[0-9]+(\.[0-9]+)*/
