@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "data-france"
+version = "0.12.0"
+description = "Paquet agrégeant des données administratives publiques pour en rendre l'utilisation facile."
+authors = [
+  "Arthur Cheysson <arthur@cheysson.fr>",
+  "Jill Royer <perso@jillroyer.me>"
+]
+license = "GNU-GPL 3.0"
+
+packages = [
+  { include = "data_france" },
+]
+include = ["data_france/data/*.csv.lzma"]
+
+readme = "README.rst"
+homepage = "https://github.com/aktiur/data-france"
+
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+django = "==3.1.*"
+topojson = "^1.1"
+
+[tool.poetry.dev-dependencies]
+black = "==19.10b0"
+doit = "==0.33.*"
+PyYAML = "==5.*"
+pandas = "==1.*"
+pyarrow = "==3.*"
+xlrd = "==2.*"
+openpyxl = "==3.*"
+libarchive = "*"
+fiona = "*"
+ipython = "*"
+dj-database-url = "*"
+shapely = "*"
+python-dotenv = "^0.15.0"
+lxml = "^4.6.3"
+psycopg2 = "==2.8.*"
+toml = "^0.10.2"
+beautifulsoup4 = "^4.9.3"
+requests = "^2.25.1"
+glom = "^20.11.0"
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
