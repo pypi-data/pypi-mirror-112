@@ -1,0 +1,74 @@
+[
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "users",
+        "permissions": []
+    }
+},
+{
+    "model": "backend.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$PAUmDRRUmuNP$O/roYJIo2RxZtXXgHe7m7K60f9L7JpMJ4lWxxGPC7EY=",
+        "last_login": "2021-06-01T14:11:38.590Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@example.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-06-01T14:10:05.640Z",
+        "base_group": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "backend.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$6xJsmbZGXrsu$mxX/YJRSE0QQ2qKIR3ZiP8Z3nIkCHAxQiy4+xgd1F7o=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "user",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-06-29T11:31:53Z",
+        "base_group": [
+            "users"
+        ],
+        "parent": null,
+        "groups": [],
+        "user_permissions": [],
+        "friends": []
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+        "domain": "localhost:8000",
+        "name": "localhost:8000"
+    }
+},
+{
+    "model": "flatpages.flatpage",
+    "pk": 1,
+    "fields": {
+        "url": "/",
+        "title": "Home",
+        "content": "Welcome!",
+        "enable_comments": false,
+        "template_name": "",
+        "registration_required": false,
+        "sites": [
+            [
+                "localhost:8000"
+            ]
+        ]
+    }
+}
+]

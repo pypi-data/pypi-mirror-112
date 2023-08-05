@@ -1,0 +1,66 @@
+version: '2'
+
+services:
+  db:
+    environment:
+      POSTGRES_DB: app_db
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: changeme
+    restart: always
+    image: postgres:9.6
+    expose:
+      - "5432"
+  redis:
+    restart: always
+    image: redis:3.0
+    expose:
+      - "6379"
+  couchdb:
+    environment:
+       COUCHDB_USER: admin
+       COUCHDB_PASSWORD: couchdb
+    image: couchdb:3
+    restart: always
+    expose:
+      - "5984"
+    ports:
+      - "5984:5984"
+  couchdb-setup:
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: couchdb
+    image: curlimages/curl
+    command:
+      - '/bin/sh'
+      - '-c'
+      - '/bin/sleep 7 && curl -X PUT --url http://admin:couchdb@couchdb:5984/_users && curl -X PUT --url http://admin:couchdb@couchdb:5984/_replicator && curl -X PUT --url http://admin:couchdb@couchdb:5984/_global_changes'
+    restart: "no"
+    links:
+      - couchdb:couchdb
+    depends_on:
+      - couchdb
+  app:
+    environment:
+      DJANGO_SECRET_KEY: changeme
+      DATABASE_URL: postgres://app_user:changeme@db/app_db
+      CACHE_URL: redis://redis
+      DJANGO_PROJECT_BACKUP_COUCHDB_DATASTORE_URL: http://couchdb:5984
+      DJANGO_PROJECT_BACKUP_COUCHDB_DATASTORE_USER: admin
+      DJANGO_PROJECT_BACKUP_COUCHDB_DATASTORE_PASSWORD: couchdb
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - media-root:/app/media
+    links:
+      - db:db
+      - redis:redis
+      - couchdb:couchdb
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
+      - couchdb
+volumes:
+  media-root:
