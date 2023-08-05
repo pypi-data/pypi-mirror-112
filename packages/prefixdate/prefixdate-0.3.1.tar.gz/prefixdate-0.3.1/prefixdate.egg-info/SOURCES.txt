@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+prefixdate/__init__.py
+prefixdate/formats.py
+prefixdate/parse.py
+prefixdate/precision.py
+prefixdate/py.typed
+prefixdate.egg-info/PKG-INFO
+prefixdate.egg-info/SOURCES.txt
+prefixdate.egg-info/dependency_links.txt
+prefixdate.egg-info/not-zip-safe
+prefixdate.egg-info/requires.txt
+prefixdate.egg-info/top_level.txt
