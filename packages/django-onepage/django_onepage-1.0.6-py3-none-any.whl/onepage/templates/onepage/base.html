@@ -1,0 +1,38 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Responsive Bootstrap 4 Admin &amp; Dashboard Template">
+        <meta name="author" content="Bdtask">
+        <title>{% block title %}Onepage - Model Management In Onepage{% endblock title %}</title>
+        <link rel="shortcut icon" href="{% static 'image/mapplate.jpg' %}">
+        {% include 'onepage/related-css.html' %}
+    </head>
+    <body class="{% block body_class %}fixed{% endblock body_class %}">
+        <div class="wrapper ">
+            {% include 'onepage/nav.html' %}
+            <div class="wrapper">
+                <div class="content">
+                    <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                        <i class="fas fa-align-left"></i> <span>Menu</span>
+                    </a>
+                    <div id="ajaxTwoActHandlerUpdate"></div>
+                    <div id="bodyContent" class="body-content px-3 py-3">
+                        {% block content %}
+                        {% if html_body %}
+                        {{ html_body|safe }}
+                        {% endif %}
+                        {% endblock %}
+                    </div>
+                </div>
+                {% block footer %}{% endblock footer %}
+                <div class="overlay"></div>
+            </div>
+        </div>
+        {% include 'onepage/related-js.html' %}
+        {% block staticjs %}{% endblock staticjs %}
+    </body>
+</html>

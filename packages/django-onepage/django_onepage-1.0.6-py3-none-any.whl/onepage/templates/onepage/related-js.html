@@ -1,0 +1,54 @@
+{% load static %}
+
+<script src="{% static 'onepage/jQuery/jquery.min.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="{% static 'onepage/bootstrap/js/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'onepage/datatables/dataTables.min.js' %}"></script>
+<script src="{% static 'onepage/datatables/dataTables.bootstrap4.min.js' %}"></script>
+<script src="{% static 'onepage/datatables/dataTables.responsive.min.js' %}"></script>
+<script src="{% static 'onepage/datatables/responsive.bootstrap4.min.js' %}"></script>
+<script src="{% static 'onepage/datatables/dataTables.buttons.min.js' %}"></script>
+<script src="{% static 'onepage/datatables/buttons.bootstrap4.min.js' %}"></script>
+<script src="{% static 'onepage/datatables/jszip.min.js' %}"></script>
+<script src="{% static 'onepage/datatables/pdfmake.min.js' %}"></script>
+<script src="{% static 'onepage/datatables/vfs_fonts.js' %}"></script>
+<script src="{% static 'onepage/datatables/buttons.html5.min.js' %}"></script>
+<script src="{% static 'onepage/datatables/buttons.print.min.js' %}"></script>
+<script src="{% static 'onepage/datatables/data-bootstrap4.active.js' %}"></script>
+
+<script src="{% static 'onepage/modals/classie.js'%}"></script>
+<script src="{% static 'onepage/modals/modalEffects.js'%}"></script>
+
+<script src="{% static 'onepage/select2/dist/js/select2.min.js' %}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput-angular.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+
+<script src="{% static 'onepage/sweetalert/sweetalert.min.js' %}"></script>
+
+<script src="{% static 'onepage/assets/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'onepage/assets/js/jquery-migrate-3.0.0.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="{% static 'onepage/assets/js/jquery.backstretch.min.js' %}"></script>
+<script src="{% static 'onepage/assets/js/wow.min.js' %}"></script>
+<script src="{% static 'onepage/assets/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'onepage/assets/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script src="{% static 'onepage/assets/js/scripts.js' %}"></script>
+
+<script src="{% static 'onepage/custom.js' %}"></script>
+
+<script>
+    var path_now = {{ request.path }};
+    path_now = path_now.toString().replace('/', '');
+    path_now = path_now.replace('/', '')
+    $("#" + path_now).addClass("mm-active");
+</script>
