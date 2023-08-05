@@ -1,0 +1,7 @@
+click==8.0.1
+setuptools==57.1.0
+scikit-image==0.18.2
+numpy==1.21.0
+tifffile==2021.7.2
+tqdm==4.61.1
+imagecodecs==2021.6.8
