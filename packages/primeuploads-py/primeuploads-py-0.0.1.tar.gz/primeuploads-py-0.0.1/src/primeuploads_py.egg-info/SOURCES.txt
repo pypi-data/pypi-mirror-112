@@ -1,0 +1,9 @@
+pyproject.toml
+setup.py
+src/prime/__init__.py
+src/prime/prime.py
+src/primeuploads_py.egg-info/PKG-INFO
+src/primeuploads_py.egg-info/SOURCES.txt
+src/primeuploads_py.egg-info/dependency_links.txt
+src/primeuploads_py.egg-info/requires.txt
+src/primeuploads_py.egg-info/top_level.txt
