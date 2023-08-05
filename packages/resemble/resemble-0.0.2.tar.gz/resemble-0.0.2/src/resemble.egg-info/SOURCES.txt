@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/resemble/__init__.py
+src/resemble/api.py
+src/resemble.egg-info/PKG-INFO
+src/resemble.egg-info/SOURCES.txt
+src/resemble.egg-info/dependency_links.txt
+src/resemble.egg-info/top_level.txt

@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: resemble
+Version: 0.0.2
+Summary: Resemble API Client Library
+Home-page: https://github.com/resemble-ai/resemble-python
+Author: ResembleAI
+Author-email: team@resemble.ai
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/resemble-ai/resemble-python/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Work in progress
+
+# Publishing new versions
+
+0. Update the version attribute in `setup.cfg`
+1. Remove previous builds: `rm -rf ./dist/`
+1. Build the package: `python3 -m build`
+2. 
+
