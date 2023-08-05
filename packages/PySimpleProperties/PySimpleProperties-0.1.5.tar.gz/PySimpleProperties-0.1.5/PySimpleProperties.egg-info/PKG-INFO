@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: PySimpleProperties
+Version: 0.1.5
+Summary: A simple adaptation of java properties
+Home-page: https://github.com/JariBou/PySimpleProperties
+Author: JariBou (Tomé Bourdié)
+Author-email: <bourdietome@gmail.com>
+License: LICENSE
+Description: A simple adaptation of java properties.
+        Includes a Properties objects manager to help in managing multiple objects, useful for example if you have multi language support.
+        GitHub repo: https://github.com/JariBou/PySimpleProperties
+        Feel free to contact me at my mail: bourdietome@gmail.com
+        
+        -JariBou (Tomé Bourdié)
+Keywords: python,properties,file manager
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
