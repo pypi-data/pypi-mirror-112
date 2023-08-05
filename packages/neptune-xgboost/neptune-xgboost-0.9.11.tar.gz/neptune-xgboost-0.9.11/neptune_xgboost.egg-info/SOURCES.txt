@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+neptune_xgboost/__init__.py
+neptune_xgboost/_version.py
+neptune_xgboost.egg-info/PKG-INFO
+neptune_xgboost.egg-info/SOURCES.txt
+neptune_xgboost.egg-info/dependency_links.txt
+neptune_xgboost.egg-info/not-zip-safe
+neptune_xgboost.egg-info/requires.txt
+neptune_xgboost.egg-info/top_level.txt
+neptune_xgboost/impl/__init__.py

@@ -1,0 +1,6 @@
+neptune-client>=0.10.0
+xgboost>=1.3.0
+matplotlib
+graphviz
+
+[all]
