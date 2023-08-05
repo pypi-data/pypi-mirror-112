@@ -1,0 +1,14 @@
+docutils
+jsonpointer
+myst-parser
+recommonmark
+sphinx
+sphinxcontrib-opendataservices-jsonschema
+
+[test]
+coveralls
+flake8
+isort
+lxml
+pytest
+pytest-cov
