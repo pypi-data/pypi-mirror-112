@@ -1,0 +1,45 @@
+name: DB12 testing
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.6, 3.9, 2.7]
+        
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+  
+    - uses: actions/checkout@v2
+    - uses: conda-incubator/setup-miniconda@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+        activate-environment: python
+        environment-file: environment.yml
+        
+    - name: Pylint
+      run: |
+        source /usr/share/miniconda/etc/profile.d/conda.sh
+        conda activate python
+        list="$(find . -name \*.py -and -not -name '__init*' -and -not -name 'setup*')"
+        for file in $list; do pylint $file --max-statements=100; done
+        
+    - name: Test with pytest
+      run: |
+        source /usr/share/miniconda/etc/profile.d/conda.sh
+        conda activate python
+        pytest tests
+        
+    - uses: actions/checkout@v2
+    - name: Artifacts for integration test
+      run: python src/DIRACbenchmark/dirac_benchmark.py > result_python${{ matrix.python-version }}.txt
+  
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Integration test 
+        path: result_python${{ matrix.python-version }}.txt
