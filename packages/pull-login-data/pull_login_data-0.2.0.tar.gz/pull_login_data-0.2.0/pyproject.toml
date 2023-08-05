@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "pull_login_data"
+version = "0.2.0"
+description = ""
+authors = ["ZacHooper <zac.g.hooper@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
