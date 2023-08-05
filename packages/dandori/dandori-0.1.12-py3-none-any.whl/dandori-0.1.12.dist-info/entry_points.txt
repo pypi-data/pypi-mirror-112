@@ -1,0 +1,3 @@
+[console_scripts]
+dandori=dandori.__main__:main
+
