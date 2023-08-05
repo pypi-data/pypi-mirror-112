@@ -1,0 +1,7 @@
+flake8
+flask
+flask-jwt-extended
+Flask-SQLAlchemy
+Flask-WTF
+cryptography==3.2.1
+sshtunnel
