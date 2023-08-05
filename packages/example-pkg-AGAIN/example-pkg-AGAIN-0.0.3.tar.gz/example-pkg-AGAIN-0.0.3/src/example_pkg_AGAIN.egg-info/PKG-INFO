@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: example-pkg-AGAIN
+Version: 0.0.3
+Summary: Sync data transformation information from BigQuery to GitHub and create a dynamic Markdown documantation.
+Home-page: https://github.com/beepbeeptechnology/sync_from_bigquery_to_github
+Author: Beepbeep Technology
+Author-email: contact@beepbeep.technology
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/beepbeeptechnology/sync_from_bigquery_to_github/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# beepbeep_txflowutils
+
+This is an project to Sync data transformation information from BigQuery to GitHub and create a dynamic Markdown documantation.
+
+## Installation
+Run the following to install:
+```python
+pip install beepbeep_txflowutils
+```
+
+## Usage
+```python
+git clone https://github.com/beepbeeptechnology/sync_from_bigquery_to_github.git
+```
+
+# Create venv
+```python
+python -m venv <venv_name>
+source <venv_name>/Scripts/activate for wondows os
+```
+
+# Genarate streamlit app
+```
+streamlit run app.py
+```
+
+# Developing beepbeep_txflowutils
+To install beepbeep_txflowutils, along with the tool need to develop and run test, run the following in your virtualenv:
+
+```bash
+$pip install -e .[dev] TODO
+```
+
