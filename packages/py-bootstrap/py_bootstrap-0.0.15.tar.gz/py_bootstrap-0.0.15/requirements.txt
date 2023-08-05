@@ -1,0 +1,7 @@
+colorama>=0.4.4
+qg_eureka>=0.0.1
+pipreqs>=0.4.10
+requests>=2.25.1
+python_logstash>=0.4.6
+termcolor>=1.1.0
+qg_tool>=0.0.2
