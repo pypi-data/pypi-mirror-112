@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyaln
+Version: 0.0.9
+Summary: Read, process, write multiple sequence alignments in Python
+Home-page: https://github.com/marco-mariotti/pyaln
+Author: Marco Mariotti
+Author-email: marco.mariotti.mm@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pyaln
+Read, process, write multiple sequence alignments in Python
+
+

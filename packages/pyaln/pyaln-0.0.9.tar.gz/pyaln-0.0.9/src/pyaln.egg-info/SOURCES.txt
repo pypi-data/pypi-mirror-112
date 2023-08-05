@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pyaln/__init__.py
+src/pyaln/alignment.py
+src/pyaln.egg-info/PKG-INFO
+src/pyaln.egg-info/SOURCES.txt
+src/pyaln.egg-info/dependency_links.txt
+src/pyaln.egg-info/requires.txt
+src/pyaln.egg-info/top_level.txt
