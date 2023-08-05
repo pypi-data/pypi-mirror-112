@@ -1,0 +1,3 @@
+[console_scripts]
+slcpy = slcpy.cli:main
+
