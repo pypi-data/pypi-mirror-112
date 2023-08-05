@@ -1,0 +1,17 @@
+gsheets_import/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gsheets_import/admin.py,sha256=0VVm60qPNfO48QIOo18vyM_A0Gdx0XuNVHw52rQd52I,6537
+gsheets_import/forms.py,sha256=ChJUDtk6LIQLQdWMppSn53cyCEvOTCEZwyJh20BoqqA,2630
+gsheets_import/google_sheet_format.py,sha256=DQHPNvMrN6n3l5JQkrz0ca617HlmaPQz6389BT0HhKw,704
+gsheets_import/static/gsheets_import/css/file_and_google.css,sha256=jjYC3TozonB3m3Z00WWYCZLzv_lcvqW4d8ogLXgVhZg,1117
+gsheets_import/static/gsheets_import/css/sticky.css,sha256=TFRTpamHg3oPG5PD6z8VvbMAXXkjo9JeEOEloFVO_jk,1108
+gsheets_import/static/gsheets_import/js/gcp_identifiers.js,sha256=M0pAf0RGiX3gk3NQiurW74o-MdDgrvJQR2LQX8MCcU0,457
+gsheets_import/static/gsheets_import/js/import_gs.js,sha256=tiVnwb36Ft34usKHE1pHIwFwlSB30aVUkyLYI2Mopc4,4923
+gsheets_import/static/gsheets_import/js/sticky.js,sha256=TupYywz-wpQF_ZT_P5G4ODbV8CYvV5nEqu5jkJwA6xw,2345
+gsheets_import/static/gsheets_import/js/sticky_helpers.js,sha256=mR2FWQPvnY66tm6shDpVE5VW_rj-BeNhhG8_dcmBnQQ,909
+gsheets_import/templates/admin/gsheets_import/import.html,sha256=NhIq1D4Zv9smoiEda_edGzx2cbuY-nFYVnp303pWHRY,8117
+gsheets_import/templates/forms/widgets/file_and_google.html,sha256=LV1V3M_ZDDAxsAnCy4sE1XrVY6UUbPRt9WfcH1LGpuk,568
+django_gsheets_import-0.0.1.dist-info/LICENSE,sha256=0E-hN9FTonfxCO3M3LjtLwI4C-lwDBGpuUC8ZzBPeYs,1328
+django_gsheets_import-0.0.1.dist-info/METADATA,sha256=rvGIJSr48VZuU1eOgTG8LLqB3fIJmz2k-Ha5QfxIsTU,5020
+django_gsheets_import-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_gsheets_import-0.0.1.dist-info/top_level.txt,sha256=QDX_yUS0cVs4y9P8Abq26cnUJujtS90RZAs7FlcTPFk,15
+django_gsheets_import-0.0.1.dist-info/RECORD,,
