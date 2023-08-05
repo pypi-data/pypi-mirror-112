@@ -1,0 +1,12 @@
+gcm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gcm/gcm.py,sha256=-8mupALNdfECdBbxW03VZN7I4mN9vDoj4_nVmoW3Nm0,6254
+gcm/edge_selectors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gcm/edge_selectors/bernoulli.py,sha256=Sy5c8PdEXngwom7yFFm4vS-3g_QACby__A_fdpkq5RM,9077
+gcm/edge_selectors/dense.py,sha256=dmvF6Hps9GEUiwCif3OGEXEjxj24H07bqopG8p2g5o0,650
+gcm/edge_selectors/distance.py,sha256=d3QI_3ZpX5-QVY7AJnbJupfklefYdqvbkf-wgijtwaA,2548
+gcm/edge_selectors/self_edge.py,sha256=NV4ZqNvpaMXEL7ujiSkh-U1qy_SHokfBoxiSoXmy3-M,328
+gcm/edge_selectors/temporal.py,sha256=Kgsz4qxtWoNnJCWz0Y-vX6MGURj2GN4VUlbTuR_OZZg,1801
+graph_conv_memory-0.0.2.dist-info/METADATA,sha256=x034t0ya908nQ0ZBoOukSfcqvWswD8KL5H1Kx63Vmn4,3936
+graph_conv_memory-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+graph_conv_memory-0.0.2.dist-info/top_level.txt,sha256=BGp_whYc05Bzpn0P8089BWgPQOpXGw3yicioFqv6Dew,4
+graph_conv_memory-0.0.2.dist-info/RECORD,,
