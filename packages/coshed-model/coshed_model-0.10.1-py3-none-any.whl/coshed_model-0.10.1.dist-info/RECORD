@@ -1,0 +1,13 @@
+coshed_model/__init__.py,sha256=5a_r-0D1Rlr4W1MhJrIslF6uwWppx1rF5Y1tdkoSSxc,263
+coshed_model/alarm_trespassing.py,sha256=SFU9dWHvlYIy_jKGWNOP8NCxPk6QlI0QuzYIWpic9xQ,10882
+coshed_model/alarmed_notification_notification.py,sha256=qBgj-HB7Sto-j-QnwmFCL-I_hJGquEuUrr_b2JiRi2M,1867
+coshed_model/alarmed_user_data.py,sha256=5GXvIi6xkNzAiy-Z9gvZpzSYgz-PiIV5IK7XVLjoWjk,5722
+coshed_model/datetime_slots.py,sha256=RbVGAP9BGzMp6VbGy6Th-bvbcB8z4J7MUiKUmdZp6XI,5346
+coshed_model/naming.py,sha256=UhJJ3Qhhs3eSoqv1FdmULOIUPhLV-12kvy2gRx3xXsM,2561
+coshed_model/roster.py,sha256=13NzgKJrwUzXY5o-cxK9WCd2Ws-BGTMSbhVGAQchJ6U,2019
+coshed_model/spof_client.py,sha256=XlXcUJBcwI2XadQOjtTUcWlnuuIS9xfSaUI9qX_rSho,2036
+coshed_model/tools.py,sha256=vuzjn8H5JbZOoUbYT8vUj4yoOSxB5Irweq8pWEWx_ZE,3139
+coshed_model-0.10.1.dist-info/COPYING,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+coshed_model-0.10.1.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+coshed_model-0.10.1.dist-info/METADATA,sha256=3fLQVHnNuS0-Kzy9XA93RPZyktbnoxNGxSOQ_MCJcvY,473
+coshed_model-0.10.1.dist-info/RECORD,,
