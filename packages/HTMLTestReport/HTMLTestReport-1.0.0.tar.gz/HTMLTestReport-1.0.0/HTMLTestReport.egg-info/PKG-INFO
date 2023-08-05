@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: HTMLTestReport
+Version: 1.0.0
+Summary: A TestRunner for Python UnitTest
+Home-page: https://github.com/likgjava/htmltestreport
+Author: outman
+Author-email: likg.java@163.com
+License: MIT Licence
+Keywords: pip,HTMLTestReport,report
+Platform: any
+
+A TestRunner for use with the Python UnitTest framework
+
