@@ -1,0 +1,55 @@
+# Octopulse Python Logger Package
+
+This is a Python library to setup clean structured logs, for local development, and production with Google Cloud Logging.
+
+This logger uses these external packages:
+* `google-cloud-logging`
+* `structlog`
+* `colorama`
+* `python-json-logger`
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the package.
+
+```bash
+pip install octopulse-logger
+```
+
+## Setup
+
+To be able to sent logs to GCP, you need to provide authentication credentials to your application code by setting the environment variable `GOOGLE_APPLICATION_CREDENTIALS`.  
+Replace `[PATH]` with the file path of the JSON file that contains your service account key.
+```commandline
+export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
+```
+
+## Usage
+
+You have the possibility to add global arguments that will add contextual information to all logs.
+```python
+from octopulse_logger import logger_setup
+
+# setup the logger
+logger_setup.setup('logger_name', setup_google_logging=True, setup_stdout_logging=True, logger_level='DEBUG', my_global_var="foobar")
+```
+Setup `setup_google_logging` and/or `setup_stdout_logging` to send logs to Google Cloud Logging and/or std output.
+
+Then you can start to log with [default logger](https://docs.python.org/3/howto/logging.html) or [structlog](https://www.structlog.org/en/stable/) :
+```python
+import logging
+import structlog
+
+structlog_logger = structlog.getLogger('logger_name')
+structlog_logger.warning('Warning !', value_a=1)
+# or
+basic_logger = logging.getLogger('logger_name')
+basic_logger.error('An error occurred :(')
+```
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
