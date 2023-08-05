@@ -1,0 +1,184 @@
+
+
+# SDK Python3 para Integração com Juno
+
+Esta SDK foi desenvolvida para abstrair aos desenvolvedores os principais detalhes da comunicação com API v2 da Juno tanto em [produção](https://juno.com.br/#) quanto em ambiente [sandbox](https://sandbox.juno.com.br/#).
+
+Você pode acessar a documentação base da api aqui: [Api V2 Juno](https://dev.juno.com.br/api/v2).
+
+# Instalação
+Instalação utilizando Pip
+```bash
+pip install junopy
+```
+Git/Clone
+```
+git clone https://github.com/robertons/junopy
+cd junopy
+pip install -r requirements.txt
+python setup.py install
+```
+
+## Configuração Inicial com Token
+
+```python
+import junopy
+
+junopy.Juno('PRIVATE_TOKEN', 'CLIENT_ID', 'CLIENT_SECRET')
+```
+### Obtenção de TOKEN
+
+Cada token com permissão de acesso ao servidor de serviço tem validade de 1 hora, a recomendação da Juno é que um novo Token seja gerado apenas em caso de expiração. A instancia gerada administra isso automaticamente, contudo a função *GetToken* permite obter o token para que os dados sejam utilizado em outras instâncias.  Este processo **não é obrigatório, mas é recomendável** principalmente em sistemas onde serão **criadas novas instâncias junopy a cada transação**
+
+```python
+import junopy
+
+junopy.Juno('PRIVATE_TOKEN', 'CLIENT_ID', 'CLIENT_SECRET')
+junopy.GetToken()
+token_valido_1h = junopy.TOKEN
+```
+
+### Definição Token de Acesso - Usando dados gerados anteriormente
+
+É possível definir manualmente os dados de acesso através da função *SetToken*
+
+```python
+import junopy
+
+junopy.Juno('PRIVATE_TOKEN')
+junopy.SetToken('access_token', 'token_type', 'expires')
+```
+
+# Conta Digital
+A seção compreende:
+-   Criação de contas digitais
+-   Consulta de contas digital
+-   Alteração de dados da conta digital
+
+### Criação
+
+Objetos podem ser criados e preenchidos em duas formas. na sua inicialização incluindo um *`dictionary`*  como *`kargs`* *(Address no exemplo abaixo)* ou campos individualmente *(DigitalAccount e BankAccount no exemplo abaixo)*
+
+**Após o preenchimento do Objeto o comando Create, realiza o Post na ApiV2.**
+
+```python
+	conta = junopy.DigitalAccount()
+
+    conta.name = "Usuário Teste"
+    conta.document = "123.456.789-00"
+    conta.email = "usu.teste@email.com"
+    conta.birthDate = "1980-01-01" #
+    conta.phone = "9999999999"
+    conta.businessArea = 0
+    conta.linesOfBusiness = "INDIVIDUAL"
+
+    conta.address = junopy.Address(**{
+    		'street': 'Nome da Rua',
+    		'number': '01',
+    		'complement': 'Casa',
+    		'neighborhood': 'Bairro',
+    		'city': 'Cidade',
+    		'state': 'UF',
+    		'postCode': '99999999'
+    })
+
+    conta_bancaria =  junopy.BankAccount()
+    conta_bancaria.bankNumber = "000"
+    conta_bancaria.agencyNumber = "1111"
+    conta_bancaria.accountNumber = "22334455"
+    conta_bancaria.accountComplementNumber = "0"
+    conta_bancaria.accountType = "CHECKING"
+    conta_bancaria.accountHolder = junopy.AccountHolder(**{
+    		'name': 'Usuario Teste',
+    		'document': '00000000000'
+    })
+    conta.bankAccount = conta_bancaria
+
+    conta.Create()
+```
+
+### Consulta
+```python
+	conta = junopy.DigitalAccount().Get()
+```
+
+### Atualialização
+```python
+	conta = junopy.DigitalAccount()
+	conta.id = "CO_IDTOKEN"
+	conta.address = junopy.Address(**{
+    		'street': 'Nome da Rua',
+    		'number': '01',
+    		'complement': 'Casa',
+    		'neighborhood': 'Bairro',
+    		'city': 'Cidade',
+    		'state': 'UF',
+    		'postCode': '99999999'
+    })
+	conta = junopy.DigitalAccount().Update()
+```
+**Alguns módulos estão em Desenvolvimento:**
+
+ - Credenciais de Contas Digitais
+ - Onboarding - Solução Whitelabel
+ - Listagem, consulta e envio de Documentos
+
+# Saldo
+```python
+import junopy
+
+junopy.Juno('PRIVATE_TOKEN', 'CLIENT_ID', 'CLIENT_SECRET')
+saldo = junopy.Balance()
+```
+> {'balance': 0.0, 'withheldBalance': 0.0, 'transferableBalance': 0.0}
+
+# Transferência
+
+### Conta Bancária Default
+```python
+import junopy
+
+junopy.Juno('PRIVATE_TOKEN', 'CLIENT_ID', 'CLIENT_SECRET')
+transfer = junopy.transfers.Default(100.0)
+```
+### Transferência P2P
+```python
+import junopy
+
+junopy.Juno('PRIVATE_TOKEN', 'CLIENT_ID', 'CLIENT_SECRET')
+#P2P(name:str, document:str, amount:float, accountNumber:str)
+transfer = junopy.transfers.P2P('Nome', 'CPF/CNPJ', 100.0, 'NUMERO_CONTA_2P')
+```
+
+### Transferência Bancária
+```python
+import junopy
+
+junopy.Juno('PRIVATE_TOKEN', 'CLIENT_ID', 'CLIENT_SECRET')
+#Bank(name:str, document:str, amount:float, bank:BankAccount)
+
+conta_bancaria =  junopy.BankAccount()
+conta_bancaria.bankNumber = "000"
+conta_bancaria.agencyNumber = "1111"
+conta_bancaria.accountNumber = "22334455"
+conta_bancaria.accountComplementNumber = "0"
+conta_bancaria.accountType = "CHECKING"
+transfer = junopy.transfers.Bank('Nome', 'CPF/CNPJ', 100.0, conta_bancaria)
+```
+
+
+### Transferência PIX
+```python
+import junopy
+
+junopy.Juno('PRIVATE_TOKEN', 'CLIENT_ID', 'CLIENT_SECRET')
+#Pix(name:str, document:str, amount:float, bank:BankAccount)
+transfer = junopy.transfers.Pix('Nome', 'CPF/CNPJ', 100.0, junopy.BankAccount(**{
+	'ispb': '0000000',
+	'bankNumber':"000",
+	'agencyNumber':"1111",
+	'accountNumber':"22334455",
+	'accountComplementNumber':"0",
+	'accountType':"SAVINGS"
+}))
+```
