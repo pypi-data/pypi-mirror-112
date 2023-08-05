@@ -1,0 +1,18 @@
+# DesktopResourceSpec
+
+The configurable properties of a DesktopResource. A DesktopResource is also a NetworkResource, so it must have a unique name across all NetworkResources. Note that if the DesktopResource must be associated with a Connector (via `connector_id`) in order for users to access it. If `connector_id` is empty, then the DesktopResource cannot be accessed. 
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | The name of the DesktopResource. This uniquely identifies the DesktopResource within the organisation.  | 
+**address** | **str** | The hostname or IP of the DesktopResource. A Desktop Gateway will proxy requests from the client through to this address via the Connector associated with this gateway using &#x60;connector_id&#x60;.  | 
+**org_id** | **str** | Unique identifier | 
+**desktop_type** | **str** | The type of desktop represented by this DesktopResource. The type identifies which protocol will be used to communicate with it. The possible types are:   - &#x60;rdp&#x60;: Remote Desktop Protocol (RDP). This allows clients which support RDP to connect to a desktop     running an RDP server.  | defaults to "rdp"
+**connector_id** | **str** | Unique identifier | [optional] 
+**name_slug** | [**K8sSlug**](K8sSlug.md) |  | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
