@@ -1,0 +1,5 @@
+include *.in
+include *.txt
+include *.py
+include *.xml
+recursive-include src *
