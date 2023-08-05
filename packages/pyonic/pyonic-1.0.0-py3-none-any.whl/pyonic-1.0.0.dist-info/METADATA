@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyonic
+Version: 1.0.0
+Summary: A python SDK for the Ion-Channel application
+Home-page: https://github.com/ion-channel/ion-channel-python-sdk
+Author: Ion Channel
+Author-email: dev@ionchannel.io
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+
+UNKNOWN
+
