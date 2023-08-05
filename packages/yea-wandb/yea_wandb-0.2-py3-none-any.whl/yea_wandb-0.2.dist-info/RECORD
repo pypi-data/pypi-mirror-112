@@ -1,0 +1,11 @@
+yea_wandb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yea_wandb/backend.py,sha256=NZbafxmy6trj560t68vCxpxG0Gp3C8Tsh4EORp2Gn7Y,3460
+yea_wandb/mock_requests.py,sha256=5_6ueGqyoBbIGQ1TQLe3lCAexcEqzB5mPGxQaD5IIt8,7846
+yea_wandb/mock_server.py,sha256=dQU02m3nq8Nz1bdVd-1VlESmkKkpj5y9V3jkg2vdG3Y,46782
+yea_wandb/plugin.py,sha256=YwqwzpACC84wFwx0NcJQfqF4kCXU4Z-7lcIgf0n2ihk,2800
+yea_wandb-0.2.dist-info/LICENSE,sha256=dYwK3wzx3z-tjPkr7SP8Kkw4XomS2suvIv0t_HkEHro,1075
+yea_wandb-0.2.dist-info/METADATA,sha256=Z5f8pLVO4YDiENl_ouIx2h8stTON_Hj2s5hZlTTPDhY,226
+yea_wandb-0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+yea_wandb-0.2.dist-info/entry_points.txt,sha256=iuyJxEvX36Zjr6mIHbB4Mx4gOt8Toku_AKp6i3Anj2Y,44
+yea_wandb-0.2.dist-info/top_level.txt,sha256=gbMNvTr_D1YF0HeRyNhrDEZrkCDqeEHmTMYy5ZN31XI,10
+yea_wandb-0.2.dist-info/RECORD,,
