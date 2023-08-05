@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "easystruct"
+version = "0.1.0"
+description = "A Python library to make the usage of struct from the stdlib a little bit easier."
+authors = ["zocker_160 <zocker1600@posteo.net>"]
+license = "WTFPL"
+readme = "README.md"
+homepage = "https://github.com/zocker-160/simple-struct"
+repository = "https://github.com/zocker-160/simple-struct"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
