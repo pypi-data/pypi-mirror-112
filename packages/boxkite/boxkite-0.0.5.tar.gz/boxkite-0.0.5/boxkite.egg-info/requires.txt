@@ -1,0 +1,6 @@
+fluent-logger<0.11,>=0.10.0
+prometheus_client<0.12,>=0.10.1
+numpy<2,>=1.16
+
+[:python_version < "3.7"]
+dataclasses
