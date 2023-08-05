@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: tst
+Version: 0.12.0
+Summary: TST Student Testing
+Home-page: http://github.com/daltonserey/tst
+Author: Dalton Serey
+Author-email: daltonserey@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: cachecontrol[filecache]
+Requires-Dist: pyyaml (>=5.1)
+Requires-Dist: requests (>=2.6.1)
+
+UNKNOWN
+
+
