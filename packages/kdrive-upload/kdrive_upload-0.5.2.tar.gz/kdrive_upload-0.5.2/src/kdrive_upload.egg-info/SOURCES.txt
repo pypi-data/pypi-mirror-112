@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+src/kdrive_upload/__init__.py
+src/kdrive_upload/__main__.py
+src/kdrive_upload/kdrive.py
+src/kdrive_upload/kdrive_test.py
+src/kdrive_upload.egg-info/PKG-INFO
+src/kdrive_upload.egg-info/SOURCES.txt
+src/kdrive_upload.egg-info/dependency_links.txt
+src/kdrive_upload.egg-info/entry_points.txt
+src/kdrive_upload.egg-info/requires.txt
+src/kdrive_upload.egg-info/top_level.txt
