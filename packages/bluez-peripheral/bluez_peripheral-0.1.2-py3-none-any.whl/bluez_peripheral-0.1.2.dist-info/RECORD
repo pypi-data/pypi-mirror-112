@@ -1,0 +1,14 @@
+bluez_peripheral/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bluez_peripheral/advert.py,sha256=OKXeg0_uZFL7BJeZs_zl2sE34MJcD1I4vS8b2QJeWaY,6652
+bluez_peripheral/agent.py,sha256=a9AI6mwQvTjgZjlIdNJO744gnCCKJ5ThXUk2ELTl1yY,6116
+bluez_peripheral/util.py,sha256=-dud-mDvcNjg0aVVO7mNPS16GuURQoW86STy6zqVAAc,3943
+bluez_peripheral/uuid.py,sha256=rneEdPDxiDeBEf0QnEFveUZwVTFU4X8sI73PqBAwFJI,2402
+bluez_peripheral/gatt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bluez_peripheral/gatt/characteristic.py,sha256=fVTdCQGvLFKCILpgEb0pdXiFUcyPnKM5uo9Tvmh_nWE,13283
+bluez_peripheral/gatt/descriptor.py,sha256=Ujk2ix1ZmJ6gCN5tVs_GCap3g2kPZtQyRAAWL1OmdSk,7214
+bluez_peripheral/gatt/service.py,sha256=s_RLrA9erc5POFcIgN09c3c3zIGnfD3nMtQ8UujWl2c,9292
+bluez_peripheral-0.1.2.dist-info/LICENSE,sha256=8NpQCNp0NFi_xCvaBFPbFs9YK3jCk5RtsxZEhZeMWQU,1068
+bluez_peripheral-0.1.2.dist-info/METADATA,sha256=FwSPGuiLgEt7F4Nm_CTA7g4a-giZHH1x8KMuEyIlbrs,5361
+bluez_peripheral-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bluez_peripheral-0.1.2.dist-info/top_level.txt,sha256=uUEetJiUaTxMzQImtl6cjd03lMBf4gjQ0OtKS-Jrc1s,17
+bluez_peripheral-0.1.2.dist-info/RECORD,,
