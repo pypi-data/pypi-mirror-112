@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: PHASEfilter
+Version: 0.0.1a1
+Summary: Software package to filter variants, SNPs and INDELs, that are present in heterozygous form, in phased genomes.
+Home-page: https://github.com/ibigen/PHASEfilter
+Author: Miguel Pinheiro
+Author-email: monsanto@ua.pt
+License: MIT
+Project-URL: Bug Reports, https://github.com/ibigen/PHASEfilter/issues
+Project-URL: Source, https://github.com/ibigen/PHASEfilter
+Keywords: filtering synchronize genome bioinformatics
+Platform: linux
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: pyvcf (==0.6.8)
+Requires-Dist: pysam (==0.15.2)
+Requires-Dist: biopython (==1.78)
+Requires-Dist: gff3tool (==2.0.1)
+Requires-Dist: wheel
+
+UNKNOWN
+
+
