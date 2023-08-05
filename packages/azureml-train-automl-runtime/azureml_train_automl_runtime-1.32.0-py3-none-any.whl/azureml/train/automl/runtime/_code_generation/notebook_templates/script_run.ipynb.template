@@ -1,0 +1,383 @@
+{
+	"cells": [{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"Copyright (c) Microsoft Corporation. All rights reserved.\n",
+				"\n",
+				"Licensed under the MIT License."
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"#  Train using Azure Machine Learning Compute\n",
+				"\n",
+				"* Initialize a Workspace\n",
+				"* Create an Experiment\n",
+				"* Introduction to AmlCompute\n",
+				"* Submit an AmlCompute script run using a persistent compute target\n",
+				"* Download the fitted model from the run output artifacts"
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"## Prerequisites\n",
+				"If you are using an Azure Machine Learning Notebook VM, **Experiment** is a logical container in an Azure ML Workspace. It hosts run records which can include run metrics and output artifacts from your experiments. Please ensure `azureml-core` is installed on the machine running Jupyter."
+			]
+		},
+		{
+			"cell_type": "code",
+			"execution_count": null,
+			"metadata": {},
+			"outputs": [],
+			"source": [
+				"# Check core SDK version number\n",
+				"import azureml.core\n",
+				"\n",
+				"print(\"SDK version:\", azureml.core.VERSION)"
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"## Initialize a Workspace\n",
+				"\n",
+				"Initialize a workspace object from the previous experiment"
+			]
+		},
+		{
+			"cell_type": "code",
+			"execution_count": null,
+			"metadata": {
+				"tags": [
+					"create workspace"
+				],
+				"automl_codegen": {
+					"arguments": [
+						"subscription_id",
+						"resource_group",
+						"workspace_name"
+					]
+				}
+			},
+			"outputs": [],
+			"source": [
+				"from azureml.core import Workspace\n",
+				"\n",
+				"# The workspace information from the previous experiment has been pre-filled for you.\n",
+				"subscription_id = \"{{ subscription_id }}\"\n",
+				"resource_group = \"{{ resource_group }}\"\n",
+				"workspace_name = \"{{ workspace_name }}\"\n",
+				"\n",
+				"ws = Workspace(subscription_id=subscription_id, resource_group=resource_group, workspace_name=workspace_name)\n",
+				"print(ws.name, ws.resource_group, ws.location, ws.subscription_id, sep = '\\n')"
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"## Create An Experiment\n",
+				"\n",
+				"**Experiment** is a logical container in an Azure ML Workspace. It hosts run records which can include run metrics and output artifacts from your experiments."
+			]
+		},
+		{
+			"cell_type": "code",
+			"execution_count": null,
+			"metadata": {
+				"automl_codegen": {
+					"arguments": [
+						"experiment_name"
+					]
+				}
+			},
+			"outputs": [],
+			"source": [
+				"from azureml.core import Experiment\n",
+				"\n",
+				"# The experiment name has been pre-filled for you.\n",
+				"experiment_name = \"{{ experiment_name }}\"\n",
+				"experiment = Experiment(workspace = ws, name = experiment_name)"
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"## Introduction to AmlCompute\n",
+				"\n",
+				"Azure Machine Learning Compute is managed compute infrastructure that allows the user to easily create single to multi-node compute of the appropriate VM Family. It is created **within your workspace region** and is a resource that can be used by other users in your workspace. It autoscales by default to the max_nodes, when a job is submitted, and executes in a containerized environment packaging the dependencies as specified by the user. \n",
+				"\n",
+				"Since it is managed compute, job scheduling and cluster management are handled internally by Azure Machine Learning service. \n",
+				"\n",
+				"For more information on Azure Machine Learning Compute, please read [this article](https://docs.microsoft.com/azure/machine-learning/service/how-to-set-up-training-targets#amlcompute)\n",
+				"\n",
+				"**Note**: As with other Azure services, there are limits on certain resources (for eg. AmlCompute quota) associated with the Azure Machine Learning service. Please read [this article](https://docs.microsoft.com/azure/machine-learning/service/how-to-manage-quotas) on the default limits and how to request more quota.\n",
+				"\n",
+				"\n",
+				"The training script is already created for you. Let's have a look."
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"## Submit an AmlCompute run in a few different ways\n",
+				"\n",
+				"First lets check which VM families are available in your region. Azure is a regional service and some specialized SKUs (especially GPUs) are only available in certain regions. Since AmlCompute is created in the region of your workspace, we will use the supported_vms () function to see if the VM family we want to use ('STANDARD_D2_V2') is supported.\n",
+				"\n",
+				"You can also pass a different region to check availability and then re-create your workspace in that region through the [configuration notebook](../../../configuration.ipynb)."
+			]
+		},
+		{
+			"cell_type": "code",
+			"execution_count": null,
+			"metadata": {},
+			"outputs": [],
+			"source": [
+				"from azureml.core.compute import ComputeTarget, AmlCompute\n",
+				"\n",
+				"AmlCompute.supported_vmsizes(workspace = ws)\n"
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"### Create project directory\n",
+				"\n",
+				"Create a directory that will contain all the necessary code from your local machine that you will need access to on the remote resource. This includes the training script, and any additional files your training script depends on"
+			]
+		},
+		{
+			"cell_type": "code",
+			"execution_count": null,
+			"metadata": {},
+			"outputs": [],
+			"source": [
+				"import os\n",
+				"import shutil\n",
+				"\n",
+				"project_folder = os.path.join(\".\", experiment_name)\n",
+				"os.makedirs(project_folder, exist_ok=True)\n",
+				"shutil.copy('script.py', project_folder)"
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"### Create environment\n",
+				"\n",
+				"Create Docker based environment with scikit-learn installed."
+			]
+		},
+		{
+			"cell_type": "code",
+			"execution_count": null,
+			"metadata": {
+				"automl_codegen": {
+					"arguments": [
+						"training_package"
+					]
+				}
+			},
+			"outputs": [],
+			"source": [
+				"import uuid\n",
+				"from azureml.core import Environment\n",
+				"from azureml.core.runconfig import DockerConfiguration\n",
+				"from azureml.core.conda_dependencies import CondaDependencies\n",
+				"\n",
+				"training_package = \"{{ training_package }}\"\n",
+				"environment_name = str(uuid.uuid4())\n",
+				"\n",
+				"myenv = Environment(environment_name)\n",
+				"myenv.python.conda_dependencies = CondaDependencies.create(pip_packages=[training_package], pin_sdk_version=False)\n",
+				"\n",
+				"# Enable Docker\n",
+				"docker_config = DockerConfiguration(use_docker=True)"
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"### Provision as a persistent compute target (Basic)\n",
+				"\n",
+				"You can provision a persistent AmlCompute resource by simply defining two parameters thanks to smart defaults. By default it autoscales from 0 nodes and provisions dedicated VMs to run your job in a container. This is useful when you want to continously re-use the same target, debug it between jobs or simply share the resource with other users of your workspace.\n",
+				"\n",
+				"* `vm_size`: VM family of the nodes provisioned by AmlCompute. Simply choose from the supported_vmsizes() above\n",
+				"* `max_nodes`: Maximum nodes to autoscale to while running a job on AmlCompute"
+			]
+		},
+		{
+			"cell_type": "code",
+			"execution_count": null,
+			"metadata": {
+				"tags": [
+					"sample-amlcompute-provision"
+				]
+			},
+			"outputs": [],
+			"source": [
+				"from azureml.core.compute import ComputeTarget, AmlCompute\n",
+				"from azureml.core.compute_target import ComputeTargetException\n",
+				"\n",
+				"# Choose a name for your CPU cluster\n",
+				"cpu_cluster_name = \"cpu-cluster\"\n",
+				"\n",
+				"# Verify that cluster does not exist already\n",
+				"try:\n",
+				"    cpu_cluster = ComputeTarget(workspace=ws, name=cpu_cluster_name)\n",
+				"    print('Found existing cluster, use it.')\n",
+				"except ComputeTargetException:\n",
+				"    compute_config = AmlCompute.provisioning_configuration(vm_size='STANDARD_D2_V2',\n",
+				"                                                           max_nodes=4)\n",
+				"    cpu_cluster = ComputeTarget.create(ws, cpu_cluster_name, compute_config)\n",
+				"\n",
+				"cpu_cluster.wait_for_completion(show_output=True)"
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"### Configure & Run"
+			]
+		},
+		{
+			"cell_type": "code",
+			"execution_count": null,
+			"metadata": {},
+			"outputs": [],
+			"source": [
+				"from azureml.core import ScriptRunConfig\n",
+				"\n",
+				"src = ScriptRunConfig(source_directory=project_folder, \n",
+				"                      script='autogenerated_script.py', \n",
+				"                      compute_target=cpu_cluster, \n",
+				"                      environment=myenv,\n",
+				"                      docker_runtime_config=docker_config)\n",
+				" \n",
+				"run = experiment.submit(config=src)\n",
+				"run"
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"Note: if you need to cancel a run, you can follow [these instructions](https://aka.ms/aml-docs-cancel-run)."
+			]
+		},
+		{
+			"cell_type": "code",
+			"execution_count": null,
+			"metadata": {},
+			"outputs": [],
+			"source": [
+				"%%time\n",
+				"# Shows output of the run on stdout.\n",
+				"run.wait_for_completion(show_output=True)"
+			]
+		},
+		{
+			"cell_type": "code",
+			"execution_count": null,
+			"metadata": {},
+			"outputs": [],
+			"source": [
+				"run.get_metrics()"
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"### Download Fitted Model"
+			]
+		},
+		{
+			"cell_type": "code",
+			"execution_count": null,
+			"metadata": {},
+			"outputs": [],
+			"source": [
+				"import pickle\n",
+				"\n",
+				"# Load the fitted model from the script run.\n",
+				"\n",
+				"# Note that if training dependencies are not installed on the machine\n",
+				"# this notebook is being run from, this step can fail.\n",
+				"try:\n",
+				"    run.download_file(\"outputs/model.pkl\", \"model.pkl\")\n",
+				"    with open(\"model.pkl\", \"rb\") as f:\n",
+				"        model = pickle.load(f)\n",
+				"except ImportError:\n",
+				"    print('Required dependencies are missing; please run pip install azureml-automl-runtime.')\n",
+				"    raise"
+
+			]
+		},
+		{
+			"cell_type": "markdown",
+			"metadata": {},
+			"source": [
+				"You can now inference using this model.  \n",
+				"For classification/regression, call `model.predict()`  \n",
+				"For forecasting, call `model.forecast()`"
+			]
+		}
+	],
+	"metadata": {
+		"authors": [{
+			"name": "erah"
+		}],
+		"category": "training",
+		"compute": [
+			"AML Compute"
+		],
+		"datasets": [
+			"Diabetes"
+		],
+		"deployment": [
+			"None"
+		],
+		"exclude_from_index": false,
+		"framework": [
+			"None"
+		],
+		"friendly_name": "Train on Azure Machine Learning Compute",
+		"index_order": 1,
+		"kernelspec": {
+			"display_name": "Python 3",
+			"language": "python",
+			"name": "ex"
+		},
+		"language_info": {
+			"codemirror_mode": {
+				"name": "ipython",
+				"version": 3
+			},
+			"file_extension": ".py",
+			"mimetype": "text/x-python",
+			"name": "python",
+			"nbconvert_exporter": "python",
+			"pygments_lexer": "ipython3",
+			"version": "3.7.10"
+		},
+		"tags": [
+			"None"
+		],
+		"task": "Submit a run on Azure Machine Learning Compute."
+	},
+	"nbformat": 4,
+	"nbformat_minor": 2
+}
