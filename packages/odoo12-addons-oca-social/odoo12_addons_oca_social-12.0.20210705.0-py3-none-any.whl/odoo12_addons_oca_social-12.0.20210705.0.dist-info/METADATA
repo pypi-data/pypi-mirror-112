@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: odoo12-addons-oca-social
+Version: 12.0.20210705.0
+Summary: Meta package for oca-social Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo12-addon-base-search-mail-content
+Requires-Dist: odoo12-addon-email-template-qweb
+Requires-Dist: odoo12-addon-fetchmail-thread-default
+Requires-Dist: odoo12-addon-mail-activity-board
+Requires-Dist: odoo12-addon-mail-activity-done
+Requires-Dist: odoo12-addon-mail-activity-partner
+Requires-Dist: odoo12-addon-mail-activity-reminder
+Requires-Dist: odoo12-addon-mail-activity-team
+Requires-Dist: odoo12-addon-mail-attach-existing-attachment
+Requires-Dist: odoo12-addon-mail-attach-existing-attachment-account
+Requires-Dist: odoo12-addon-mail-check-mailbox-size
+Requires-Dist: odoo12-addon-mail-debrand
+Requires-Dist: odoo12-addon-mail-drop-target
+Requires-Dist: odoo12-addon-mail-footer-notified-partner
+Requires-Dist: odoo12-addon-mail-full-expand
+Requires-Dist: odoo12-addon-mail-history
+Requires-Dist: odoo12-addon-mail-improved-tracking-value
+Requires-Dist: odoo12-addon-mail-inline-css
+Requires-Dist: odoo12-addon-mail-notification-custom-subject
+Requires-Dist: odoo12-addon-mail-optional-autofollow
+Requires-Dist: odoo12-addon-mail-optional-follower-notification
+Requires-Dist: odoo12-addon-mail-outbound-static
+Requires-Dist: odoo12-addon-mail-preview-audio
+Requires-Dist: odoo12-addon-mail-preview-base
+Requires-Dist: odoo12-addon-mail-private
+Requires-Dist: odoo12-addon-mail-restrict-follower-selection
+Requires-Dist: odoo12-addon-mail-send-copy
+Requires-Dist: odoo12-addon-mail-show-follower
+Requires-Dist: odoo12-addon-mail-template-substitute
+Requires-Dist: odoo12-addon-mail-track-diff-only
+Requires-Dist: odoo12-addon-mail-tracking
+Requires-Dist: odoo12-addon-mail-tracking-mailgun
+Requires-Dist: odoo12-addon-mail-tracking-mass-mailing
+Requires-Dist: odoo12-addon-mass-mailing-custom-unsubscribe
+Requires-Dist: odoo12-addon-mass-mailing-custom-unsubscribe-event
+Requires-Dist: odoo12-addon-mass-mailing-event-registration-exclude
+Requires-Dist: odoo12-addon-mass-mailing-list-dynamic
+Requires-Dist: odoo12-addon-mass-mailing-newsletter-welcome-mail
+Requires-Dist: odoo12-addon-mass-mailing-partner
+Requires-Dist: odoo12-addon-mass-mailing-resend
+Requires-Dist: odoo12-addon-mass-mailing-unique
+Requires-Dist: odoo12-addon-message-auto-subscribe-notify-own
+Requires-Dist: odoo12-addon-test-mail-private
+Requires-Dist: odoo12-addon-website-mass-mailing-name
+
+UNKNOWN
+
