@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+kafka_schema_registry/__init__.py
+kafka_schema_registry/version.py
+kafka_schema_registry.egg-info/PKG-INFO
+kafka_schema_registry.egg-info/SOURCES.txt
+kafka_schema_registry.egg-info/dependency_links.txt
+kafka_schema_registry.egg-info/requires.txt
+kafka_schema_registry.egg-info/top_level.txt
