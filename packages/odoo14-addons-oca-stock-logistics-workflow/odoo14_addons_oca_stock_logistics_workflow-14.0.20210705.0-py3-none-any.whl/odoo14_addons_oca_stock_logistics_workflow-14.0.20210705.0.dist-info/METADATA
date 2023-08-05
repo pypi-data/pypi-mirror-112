@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: odoo14-addons-oca-stock-logistics-workflow
+Version: 14.0.20210705.0
+Summary: Meta package for oca-stock-logistics-workflow Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo14-addon-stock-auto-move
+Requires-Dist: odoo14-addon-stock-delivery-note
+Requires-Dist: odoo14-addon-stock-move-assign-picking-hook
+Requires-Dist: odoo14-addon-stock-move-line-auto-fill
+Requires-Dist: odoo14-addon-stock-no-negative
+Requires-Dist: odoo14-addon-stock-picking-back2draft
+Requires-Dist: odoo14-addon-stock-picking-filter-lot
+Requires-Dist: odoo14-addon-stock-picking-invoice-link
+Requires-Dist: odoo14-addon-stock-picking-line-sequence
+Requires-Dist: odoo14-addon-stock-putaway-hook
+Requires-Dist: odoo14-addon-stock-quant-package-dimension
+Requires-Dist: odoo14-addon-stock-quant-package-product-packaging
+Requires-Dist: odoo14-addon-stock-restrict-lot
+Requires-Dist: odoo14-addon-stock-return-request
+Requires-Dist: odoo14-addon-stock-valuation-layer-by-category
+
+UNKNOWN
+
