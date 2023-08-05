@@ -1,0 +1,11 @@
+pandas
+numpy
+tqdm
+seaborn
+plotly>=4.4.0
+matplotlib
+wordcloud
+pillow
+networkx
+ipython
+scikit-learn
