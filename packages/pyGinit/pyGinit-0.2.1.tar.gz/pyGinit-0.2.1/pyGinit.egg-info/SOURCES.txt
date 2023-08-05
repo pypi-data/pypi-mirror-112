@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pyGinit/__init__.py
+pyGinit/gitCommand.py
+pyGinit/gitignoreList.py
+pyGinit/inquirer.py
+pyGinit/main.py
+pyGinit.egg-info/PKG-INFO
+pyGinit.egg-info/SOURCES.txt
+pyGinit.egg-info/dependency_links.txt
+pyGinit.egg-info/entry_points.txt
+pyGinit.egg-info/requires.txt
+pyGinit.egg-info/top_level.txt
