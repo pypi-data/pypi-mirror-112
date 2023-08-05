@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/pytools/__MainLib__.py
+src/pytools/__init__.py
+src/pytools/__main__.py
+src/pytools/docs.py
+src/pytools/pytprompt.py
+src/pytoolskar.egg-info/PKG-INFO
+src/pytoolskar.egg-info/SOURCES.txt
+src/pytoolskar.egg-info/dependency_links.txt
+src/pytoolskar.egg-info/top_level.txt
