@@ -1,0 +1,12 @@
+README.md
+setup.py
+pulumi_kubernetes_proxy/__init__.py
+pulumi_kubernetes_proxy/_utilities.py
+pulumi_kubernetes_proxy/provider.py
+pulumi_kubernetes_proxy/py.typed
+pulumi_kubernetes_proxy.egg-info/PKG-INFO
+pulumi_kubernetes_proxy.egg-info/SOURCES.txt
+pulumi_kubernetes_proxy.egg-info/dependency_links.txt
+pulumi_kubernetes_proxy.egg-info/not-zip-safe
+pulumi_kubernetes_proxy.egg-info/requires.txt
+pulumi_kubernetes_proxy.egg-info/top_level.txt
