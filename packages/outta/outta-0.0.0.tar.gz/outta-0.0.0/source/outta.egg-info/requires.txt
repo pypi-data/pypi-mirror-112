@@ -1,0 +1,11 @@
+click
+pyte
+fastapi
+pydantic
+
+[dev]
+black
+bump2version
+
+[test]
+pytest

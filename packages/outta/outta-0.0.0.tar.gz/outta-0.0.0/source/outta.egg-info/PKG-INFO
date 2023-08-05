@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: outta
+Version: 0.0.0
+Summary: ANSI control code parsing
+Home-page: http://github.com/abingham/outta
+Author: Austin Bingham
+Author-email: austin.bingham@protonmail.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Provides-Extra: dev
+Provides-Extra: test
+License-File: LICENSE
+
+outta
+
+ANSI control code parsing
+
+
