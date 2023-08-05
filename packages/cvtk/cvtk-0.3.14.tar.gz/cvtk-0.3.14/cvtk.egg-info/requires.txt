@@ -1,0 +1,13 @@
+albumentations>=0.5.2
+hiplot>=0.1.23
+lxml==4.6.2
+networkx
+numpy
+opencv-python-headless>=4.5.1
+pandas
+pillow>=8.1.2
+requests
+simplejson
+scikit-image>=0.18.1
+scikit-learn>=0.24.1
+tqdm
