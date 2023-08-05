@@ -1,0 +1,14 @@
+[console_scripts]
+yarp = yarp.bin.__main__:main
+yarp-config = yarp.bin.__main__:main
+yarpdatadumper = yarp.bin.__main__:main
+yarpdev = yarp.bin.__main__:main
+yarphear = yarp.bin.__main__:main
+yarpidl_rosmsg = yarp.bin.__main__:main
+yarpidl_thrift = yarp.bin.__main__:main
+yarpmanager-console = yarp.bin.__main__:main
+yarprobotinterface = yarp.bin.__main__:main
+yarpros = yarp.bin.__main__:main
+yarprun = yarp.bin.__main__:main
+yarpserver = yarp.bin.__main__:main
+
