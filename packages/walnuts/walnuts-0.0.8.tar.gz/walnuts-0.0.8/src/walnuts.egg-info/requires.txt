@@ -1,0 +1,7 @@
+requests
+configobj
+pyyaml
+click
+jinja2
+pytest
+pytest-html
