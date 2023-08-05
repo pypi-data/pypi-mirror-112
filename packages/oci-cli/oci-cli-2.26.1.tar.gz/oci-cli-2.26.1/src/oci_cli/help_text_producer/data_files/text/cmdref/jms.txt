@@ -1,0 +1,71 @@
+jms
+***
+
+
+Description
+===========
+
+CLI for the Java Management Service. Use this CLI to view and manage
+Fleets.
+
+
+Available Commands
+==================
+
+* application-usage
+
+  * request-summarized
+
+  * summarize
+
+* fleet
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* fleet-agent-configuration
+
+  * get
+
+  * update
+
+* installation-usage
+
+  * request-summarized
+
+  * summarize
+
+* jre-usage
+
+  * request-summarized
+
+  * summarize
+
+* managed-instance-usage
+
+  * request-summarized
+
+  * summarize
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs
