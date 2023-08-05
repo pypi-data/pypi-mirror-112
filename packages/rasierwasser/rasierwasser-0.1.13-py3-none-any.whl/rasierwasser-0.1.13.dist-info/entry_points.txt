@@ -1,0 +1,4 @@
+[console_scripts]
+rasierwasser=rasierwasser.service.server:main
+rasierwasser_sign=rasierwasser.helper.signing:main
+
