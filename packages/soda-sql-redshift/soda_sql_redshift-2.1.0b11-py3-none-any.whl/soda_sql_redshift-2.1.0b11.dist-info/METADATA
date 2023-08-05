@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: soda-sql-redshift
+Version: 2.1.0b11
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: soda-sql-core (==2.1.0b11)
+Requires-Dist: soda-sql-postgresql (==2.1.0b11)
+Requires-Dist: boto3 (>=1.15.18)
+
+UNKNOWN
+
