@@ -1,0 +1,37 @@
+Metadata-Version: 1.2
+Name: pytest-embedded
+Version: 0.3.0
+Summary: pytest embedded plugin
+Home-page: https://docs.espressif.com/projects/pytest-embedded/en/latest/
+Author: Fu Hanxi
+Author-email: fuhanxi@espressif.com
+License: MIT
+Description: # pytest-embedded
+        
+        Base plugin for all other plugins under this repo.
+        
+        ## Fixtures
+        
+        - `test_file_path` (the test script file path)
+        - `test_case_name` (the test function name)
+        - `app` (instance of App class)
+        - `dut` (instance of Dut class)
+        
+        ## Functions
+        
+        - `expect` (`pexpect.expect` wrapper)
+        
+Platform: UNKNOWN
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
