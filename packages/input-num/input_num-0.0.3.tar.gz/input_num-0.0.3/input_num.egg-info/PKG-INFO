@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: input-num
+Version: 0.0.3
+Summary: Python package - input_num is like input but it only accepts numbers
+Home-page: https://github.com/HexagonCore/input_num
+Author: Hexagon Core Development
+Author-email: mp3martin.developer@gmail.com
+License: MIT
+Description: [![CodeFactor](https://www.codefactor.io/repository/github/hexagoncore/input_num/badge)](#/)
+        [<img src="https://img.shields.io/github/license/HexagonCore/input_num">](#/)
+        [<img src="https://img.shields.io/github/stars/HexagonCore/input_num">](#/)
+        [<img src="https://img.shields.io/github/forks/HexagonCore/input_num">](#/)
+        [<img src="https://img.shields.io/github/issues/HexagonCore/input_num">](#/)
+        
+        
+        # input_num
+        Python package - input_num is like input but it only accepts numbers
+        ___
+        ### ‎
+        
+        ## Instalation
+        * ### Windows / macOS
+        	Run `python3 -m pip install input_num`
+        	
+        * ### Linux
+        	Run `python3 -m pip install input_num`
+        ### ‎
+        
+        ## Usage
+        * ### Windows / macOS / Linux
+        	Add this to your script: `import LOL`<br/> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`LOL`
+        	 ‎
+        	
+        	
+        
+        ### ‎
+        
+        ## Uninstallation
+        * ### Windows / macOS
+        	Run `python3 -m pip uninstall input_num`
+        	
+        * ### Linux
+        	Run `python3 -m pip uninstall input_num`
+        
+        ### ‎
+        ## FAQ
+        * ### Question
+        	Answer
+        ### ‎
+        
+        
+        Do you like this? Hit that ⭐!                                
+        Use the star button as way to show us, that it works              
+        Forks and pull requests are welcome of course
+         
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
