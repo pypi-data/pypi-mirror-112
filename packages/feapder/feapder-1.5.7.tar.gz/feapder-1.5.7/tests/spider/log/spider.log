@@ -1,0 +1,25 @@
+Thread-5|2021-06-18 11:46:57,627|parser_control.py|run|line:54|DEBUG| parser 等待任务 ...
+TestSpider|2021-06-18 11:46:57,629|scheduler.py|<lambda>|line:107|INFO| 
+********** feapder begin **********
+Thread-5|2021-06-18 11:46:59,637|request.py|get_response|line:312|DEBUG| 
+                -------------- TestSpider.parse request for ----------------
+                url  = https://www.baidu.com
+                method = GET
+                body = {'timeout': 22, 'stream': True, 'verify': False, 'headers': {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.62 Safari/537.36'}}
+                
+Thread-5|2021-06-18 11:46:59,796|parser_control.py|run|line:54|DEBUG| parser 等待任务 ...
+Thread-3|2021-06-18 11:47:00,138|item_buffer.py|__add_item_to_db|line:306|DEBUG| 
+                -------------- item 批量入库 --------------
+                表名: feapder:test_spider:s_spider_data_item
+                datas: [
+                {
+                                "title": "百度一下，你就知道"
+                }
+]
+                    
+Thread-3|2021-06-18 11:47:00,150|mysqldb.py|__init__|line:91|DEBUG| 连接到mysql数据库 localhost : feapder
+Thread-3|2021-06-18 11:47:00,156|mysql_pipeline.py|save_items|line:46|INFO| 共导出 1 条数据 到 spider_data, 重复 0 条
+TestSpider|2021-06-18 11:47:03,659|scheduler.py|<lambda>|line:112|INFO| 
+********** feapder end **********
+TestSpider|2021-06-18 11:47:03,660|scheduler.py|spider_end|line:505|INFO| 《feapder:test_spider》爬虫结束，耗时 6秒
+TestSpider|2021-06-18 11:47:03,663|scheduler.py|delete_tables|line:422|INFO| 正在删除key feapder:test_spider:z_spider_status
