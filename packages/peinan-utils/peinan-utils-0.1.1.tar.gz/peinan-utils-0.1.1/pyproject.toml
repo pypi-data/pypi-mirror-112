@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "peinan-utils"
+version = "0.1.1"
+license = "MIT"
+description = "An util package for myself. (Mostly about NLP)"
+readme = 'README.md'
+authors = ["Peinan ZHANG <peinan7@gmail.com>"]
+
+homepage = "https://github.com/peinan/peinan-utils-py"
+repository = "https://github.com/peinan/peinan-utils-py"
+
+keywords = ["utils", "nlp", "tools"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    'Programming Language :: Python :: 3',
+    "Programming Language :: Python :: 3.7",
+    "Topic :: Utilities",
+]
+
+packages = [
+    { include = 'peinan_utils' },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+mecab-python3 = "^1.0.4"
+ipadic = "^1.0.0"
+matplotlib = "^3.4.2"
+loguru = "^0.5.3"
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.25.0"
+pytest = "^6.2.4"
+icecream = "^2.1.1"
+tox = "^3.23.1"
+coverage = "^5.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
