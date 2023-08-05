@@ -1,0 +1,32 @@
+# beepbeep_txflowutils
+
+This is an project to Sync data transformation information from BigQuery to GitHub and create a dynamic Markdown documantation.
+
+## Installation
+Run the following to install:
+```python
+pip install beepbeep_txflowutils
+```
+
+## Usage
+```python
+git clone https://github.com/beepbeeptechnology/sync_from_bigquery_to_github.git
+```
+
+# Create venv
+```python
+python -m venv <venv_name>
+source <venv_name>/Scripts/activate for wondows os
+```
+
+# Genarate streamlit app
+```
+streamlit run app.py
+```
+
+# Developing beepbeep_txflowutils
+To install beepbeep_txflowutils, along with the tool need to develop and run test, run the following in your virtualenv:
+
+```bash
+$pip install -e .[dev] TODO
+```
