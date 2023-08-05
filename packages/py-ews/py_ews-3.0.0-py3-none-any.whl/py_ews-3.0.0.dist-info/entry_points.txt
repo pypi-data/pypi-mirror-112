@@ -1,0 +1,3 @@
+[console_scripts]
+pyews = pyews.__main__:main
+
