@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<registry
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="imio.smartweb">
+
+    <records interface="imio.smartweb.core.browser.controlpanel.ISmartwebControlPanel" prefix="smartweb" />
+
+    <record name="imio.directory.url">
+      <field type="plone.registry.field.URI">
+        <title>Directory (for smartweb) url</title>
+        <value_type type="plone.registry.field.TextLine" />
+      </field>
+      <value>http://localhost:8080/Plone</value>
+    </record>
+
+    <record name="plone.types_not_searched"
+            interface="Products.CMFPlone.interfaces.controlpanel.ISearchSchema"
+            field="types_not_searched">
+      <value purge="false">
+        <element>imio.smartweb.SectionFiles</element>
+        <element>imio.smartweb.SectionGallery</element>
+        <element>imio.smartweb.SectionText</element>
+        <element>imio.smartweb.SectionVideo</element>
+      </value>
+    </record>
+
+    <record name="plone.show_excluded_items"
+            interface="Products.CMFPlone.interfaces.controlpanel.INavigationSchema"
+            field="show_excluded_items">
+      <value>False</value>
+    </record>
+
+    <record name="plone.displayed_types"
+            interface="Products.CMFPlone.interfaces.controlpanel.INavigationSchema"
+            field="displayed_types">
+      <value purge="false">
+        <element>imio.smartweb.Folder</element>
+        <element>imio.smartweb.Page</element>
+      </value>
+    </record>
+
+    <records prefix="plone.resources/smartweb-view"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="css">
+        <element>++plone++imio.smartweb.core/view.less</element>
+      </value>
+    </records>
+
+    <records prefix="plone.bundles/smartweb-view"
+             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+      <value key="resources">
+        <element>smartweb-view</element>
+      </value>
+      <value key="enabled">True</value>
+      <value key="compile">True</value>
+      <value key="expression"></value>
+      <value key="merge_with">default</value>
+      <value key="csscompilation">++plone++imio.smartweb.core/smartweb-view-compiled.css</value>
+      <value key="last_compilation">2021-04-09 14:00:00</value>
+    </records>
+
+    <records prefix="plone.resources/smartweb-edit"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">++plone++imio.smartweb.core/edit.js</value>
+      <value key="css">
+        <element>++plone++imio.smartweb.core/edit.less</element>
+      </value>
+    </records>
+
+    <records prefix="plone.bundles/smartweb-edit"
+             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+      <value key="resources">
+        <element>smartweb-edit</element>
+      </value>
+      <value key="enabled">True</value>
+      <value key="compile">True</value>
+      <value key="expression">python: member is not None</value>
+      <value key="merge_with">logged-in</value>
+      <value key="csscompilation">++plone++imio.smartweb.core/smartweb-edit-compiled.css</value>
+      <value key="jscompilation">++plone++imio.smartweb.core/smartweb-edit-compiled.js</value>
+      <value key="last_compilation">2021-03-24 15:00:00</value>
+      <value key="stub_js_modules">
+        <element>jquery</element>
+      </value>
+    </records>
+
+</registry>
