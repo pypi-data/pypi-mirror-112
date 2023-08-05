@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: siate
+Version: 1.2.1.9
+Summary: Security Investment Analysis Tools in English (SIATE)
+Home-page: UNKNOWN
+Author: WANG Dehong, Intrernational Business School, BFSU
+Author-email: wdehong2000@163.com
+License: Copyright (C) WANG Dehong, 2021. For education purpose only!
+Platform: UNKNOWN
+Requires-Dist: pandas-datareader
+Requires-Dist: yfinance
+Requires-Dist: tushare
+Requires-Dist: akshare
+Requires-Dist: mplfinance
+Requires-Dist: statsmodels
+Requires-Dist: yahoo-earnings-calendar
+Requires-Dist: yahooquery
+Requires-Dist: pypinyin
+Requires-Dist: seaborn
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: sklearn
+
+This plugin is for use with the author's book - 
+Security Investment Analysis, where real cases 
+can be replayed, updated and re-created in different security, different 
+time line and different ratios. The plugin is for learning purpose only, 
+not for commercial use. The author is not responsible for the results in
+real investment activities.
+
