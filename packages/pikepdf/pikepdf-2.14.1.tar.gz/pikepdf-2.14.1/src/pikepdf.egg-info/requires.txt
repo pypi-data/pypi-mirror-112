@@ -1,0 +1,27 @@
+lxml>=4.0
+Pillow>=6.0
+
+[docs]
+ipython
+matplotlib
+pybind11
+setuptools_scm
+Sphinx>=3
+sphinx-issues
+sphinx-rtd-theme
+
+[test]
+attrs>=20.2.0
+hypothesis<7,>=5
+Pillow<9,>=7
+psutil<6,>=5
+pybind11>=2.6.0
+pytest<7,>=6
+pytest-cov<3,>=2.10.1
+pytest-forked
+pytest-xdist<3,>=1.28
+pytest-timeout>=1.4.2
+python-dateutil>=2.8.0
+
+[test:sys_platform != "nt"]
+python-xmp-toolkit>=2.0.1
