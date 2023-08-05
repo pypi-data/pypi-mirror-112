@@ -1,0 +1,11 @@
+% rebase('base.html', title="Mnemo Assistant - Journal")
+% if session.is_logged:
+<!-- JOURNAL -->
+<div class="container">
+    <h1 class="main-title">
+        Welcome to Mnemo-Journal!
+        % include includes/main-menu.html
+    </h1>
+    <br />
+    % include includes/assistant-scene.html
+</div>

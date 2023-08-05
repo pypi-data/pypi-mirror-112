@@ -1,0 +1,52 @@
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1.main-title {
+    margin-top: 100px;
+    font-weight: 600;
+}
+
+div.form-group {
+    margin-bottom: 1em;
+}
+
+div#body-veil {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #dedede;
+    opacity: 25%;
+    z-index: 2000;
+}
+
+/* UTILITIES */
+
+.text-color-1,
+.text-color-1:hover {
+    color: #74c476;
+}
+
+.text-color-2,
+.text-color-2:hover {
+    color: #41ab5d;
+}
+
+.text-color-3,
+.text-color-3:hover {
+    color: #238b45;
+}
+
+.text-color-4,
+.text-color-4:hover {#000
+.text-color-5,
+.text-color-5:hover {
+    color: #00441b;
+}
