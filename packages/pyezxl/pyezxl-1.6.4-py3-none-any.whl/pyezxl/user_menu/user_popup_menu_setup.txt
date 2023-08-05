@@ -1,0 +1,3 @@
+0, User_Popup_Menu_100_Test, 유저용메뉴, nofaceid
+	1, User_Popup_Menu_추가 : 문자열 추가 (왼쪽에, 테스트), pyezxl_100_add_text_at_left_01.py, nofaceid, none
+	1, User_Popup_Menu_추가 : 문자열 추가 (오른쪽에, 테스트), pyezxl_100_add_text_at_right_01.py, nofaceid, none
