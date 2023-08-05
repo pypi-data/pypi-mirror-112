@@ -1,0 +1,152 @@
+Metadata-Version: 2.1
+Name: functional-streams
+Version: 1.0.0
+Summary: Functional Programming Streams ,Similar like Java, for writing concise functions
+Home-page: https://github.com/muthuishere/python-streams
+Author: Muthukumaran Navaneethskrishnan
+Author-email: muthuishere@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/muthuishere/python-streams/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# functional-streams
+Streams in Python similar like java for writing concise code
+
+```python
+
+#To Fetch from a list of users
+#       Get their firstname , if their salary greater than 80000 and gender is male
+
+#Instead of writing like this
+
+list(map(lambda user: user['first_name'],  filter(lambda user:user['salary'] > 80000, filter(lambda product: product['gender'] == 'Male',users))))
+
+#Write this
+from streams.Stream import Stream
+
+results = (Stream
+           .create(users)
+           .filter(lambda user:user['salary'] > 80000)
+           .filter(lambda product: product['gender'] == 'Male')
+           .map(lambda user: user['first_name'])
+           .asList())
+
+#A concise way to write lambdas,functional code in python
+
+```
+
+```python
+from streams.Stream import Stream
+users = [
+    {
+        "id": 1,
+        "first_name": "Mandy",
+        "last_name": "Gowan",
+        "email": "mgowan0@aol.com",
+        "gender": "Female",
+        "loves": ['Soccer','Cricket','Golf'],
+        "salary": 119885
+    },
+    {
+        "id": 2,
+        "first_name": "Janessa",
+        "last_name": "Cotterell",
+        "email": "jcotterell1@aol.com",
+        "gender": "Female",
+        "loves": ['Cricket'],
+        "salary": 107629
+    },
+    {
+        "id": 6,
+        "first_name": "Jasen",
+        "last_name": "Franzini",
+        "email": "jfranzini5@aol.com",
+        "gender": "Male",
+        "loves": ['Soccer','Golf'],
+        "salary": 78373
+    }
+]
+
+#Using Map Filter 
+results = (Stream
+           .create(users)
+           .filter(lambda user:user['salary'] > 80000)
+           .map(lambda user: user['first_name'])
+           .asList())
+#['Mandy', 'Janessa']
+
+#Using flatMap Distinct 
+results = (Stream
+           .create(users)
+           .flatmap(lambda user:user['loves'] )
+           .distinct()
+           .asList())
+#['Cricket', 'Golf', 'Soccer']
+
+#Using skip take 
+results = (Stream
+           .create(users)
+           .skip(1)
+           .take(1)
+           .map(lambda user: user['first_name'])
+           .asList())
+#['Janessa']
+
+
+#Even you can peek results
+results = (Stream
+           .create(users)
+           .peek(lambda data:print("User",data))
+           .map(lambda user: user['first_name'])
+           .asList())
+#Will list out all users
+
+```
+
+## Additional Information
+#### Design
+Most of the functions underneath uses the same functions available in python (map uses map , filter uses filter etc..).
+Only we have added wrapper to make the code concise
+
+
+#### Abstractions
+If you need to use partial abstraction , try using stream method. 
+        as the generators used get corrupted by the very first expansion
+For Example
+
+```python
+
+
+stream_of_users = (Stream
+                    .create(users)
+                    )
+
+#The below code wont work
+total_users = (stream_of_users
+               .length())
+
+firstname_of_users = (stream_of_users           
+                           .map(lambda user: user['first_name'])
+                           .asList())
+
+
+#The above code should be rewritten as
+total_users = (stream_of_users
+               .length())
+
+firstname_of_users = (stream_of_users
+                            .stream()
+                           .map(lambda user: user['first_name'])
+                           .asList())
+
+# The stream will make use of copying the items which has been expanded 
+
+```
+
+
