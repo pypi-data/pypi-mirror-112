@@ -1,0 +1,137 @@
+opsi
+****
+
+
+Description
+===========
+
+Use the Operations Insights CLI to perform data extraction operations
+to obtain database resource utilization, performance statistics, and
+reference information. For more information, see About Oracle Cloud
+Infrastructure Operations Insights.
+
+
+Available Commands
+==================
+
+* database-insights
+
+  * change
+
+  * create-em-external-db
+
+  * delete
+
+  * disable
+
+  * enable-em-external-db
+
+  * get
+
+  * ingest-database-configuration
+
+  * ingest-sql-bucket
+
+  * ingest-sql-plan-lines
+
+  * ingest-sql-text
+
+  * list
+
+  * list-database-configurations
+
+  * list-sql-plans
+
+  * list-sql-searches
+
+  * list-sql-texts
+
+  * summarize-database-insight-resource-capacity-trend
+
+  * summarize-database-insight-resource-forecast-trend
+
+  * summarize-database-insight-resource-statistics
+
+  * summarize-database-insight-resource-usage
+
+  * summarize-database-insight-resource-usage-trend
+
+  * summarize-database-insight-resource-utilization-insight
+
+  * summarize-database-insight-tablespace-usage-trend
+
+  * summarize-sql-insights
+
+  * summarize-sql-plan-insights
+
+  * summarize-sql-response-time-distributions
+
+  * summarize-sql-statistics
+
+  * summarize-sql-statistics-time-series
+
+  * summarize-sql-statistics-time-series-by-plan
+
+  * update-autonomous-db
+
+  * update-em-external-db
+
+  * update-macs-external-db
+
+* enterprise-manager-bridges
+
+  * change
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-importable-enterprise-manager-entities
+
+  * update
+
+* host-insights
+
+  * change
+
+  * create-macs-external-host
+
+  * delete
+
+  * disable
+
+  * enable-macs-external-host
+
+  * get
+
+  * ingest-host-configuration
+
+  * ingest-host-metrics
+
+  * list
+
+  * list-hosted-entities
+
+  * summarize-host-insight-resource-capacity-trend
+
+  * summarize-host-insight-resource-forecast-trend
+
+  * summarize-host-insight-resource-statistics
+
+  * summarize-host-insight-resource-usage
+
+  * summarize-host-insight-resource-usage-trend
+
+  * summarize-host-insight-resource-utilization-insight
+
+  * update-macs-external-host
+
+* work-requests
+
+  * get
+
+  * list
