@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+vectormatrixlib/__init__.py
+vectormatrixlib/matrix.py
+vectormatrixlib/row.py
+vectormatrixlib.egg-info/PKG-INFO
+vectormatrixlib.egg-info/SOURCES.txt
+vectormatrixlib.egg-info/dependency_links.txt
+vectormatrixlib.egg-info/top_level.txt
