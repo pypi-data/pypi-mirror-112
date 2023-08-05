@@ -1,0 +1,124 @@
+Metadata-Version: 2.1
+Name: icevision
+Version: 0.8.1
+Summary: Agnostic Computer Vision Framework
+Home-page: UNKNOWN
+Author: Lucas Goulart Vazquez, Farid Hassainia
+Author-email: lgvaz42@gmail.com, farid@airctic.com
+License: Apache-2.0
+Keywords: object detection,machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Requires-Python: <4,>=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch (<1.9,>=1.7.0)
+Requires-Dist: torchvision (<0.10,>=0.8.0)
+Requires-Dist: fastcore (<1.4,>=1.3.0)
+Requires-Dist: tqdm (<5,>=4.49.0)
+Requires-Dist: opencv-python (<5,>=4.1.1)
+Requires-Dist: albumentations (<0.6,>=0.4.6)
+Requires-Dist: matplotlib (<4,>=3.2.2)
+Requires-Dist: pycocotools (>=2.0.2<3)
+Requires-Dist: requests (>=2.24.0<3)
+Requires-Dist: loguru (>=0.5.3)
+Requires-Dist: pillow (>8.0.0)
+Requires-Dist: importlib-metadata (>=1) ; python_version < "3.8"
+Provides-Extra: all
+Requires-Dist: fastai (<2.4,>=2.1) ; extra == 'all'
+Requires-Dist: ipykernel (<6,>=4.10.1) ; extra == 'all'
+Requires-Dist: pytorch-lightning (>=1.2.10) ; extra == 'all'
+Requires-Dist: effdet (<0.3,>=0.2.1) ; extra == 'all'
+Requires-Dist: omegaconf (<3,>=2) ; extra == 'all'
+Requires-Dist: dataclasses (==0.6) ; extra == 'all'
+Requires-Dist: wandb (>=0.10.7) ; extra == 'all'
+Requires-Dist: resnest (<0.0.7,>=0.0.6b20201125) ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: black (<21,>=20.8b1) ; extra == 'dev'
+Requires-Dist: pytest (<7,>=6) ; extra == 'dev'
+Requires-Dist: keras-autodoc (==0.6.0) ; extra == 'dev'
+Requires-Dist: mkdocs (<2,>=1.1.2) ; extra == 'dev'
+Requires-Dist: mkdocs-material (<8,>=7.0.6) ; extra == 'dev'
+Requires-Dist: mike (<1,>=0.5.5) ; extra == 'dev'
+Requires-Dist: jupyter (<2,>=1.0.0) ; extra == 'dev'
+Requires-Dist: pymdown-extensions (<9,>=8.0) ; extra == 'dev'
+Requires-Dist: Sphinx (<4,>=3.1.0) ; extra == 'dev'
+Requires-Dist: pytest-cov (<3,>=2.10.1) ; extra == 'dev'
+Requires-Dist: flake8 (<4,>=3.8.3) ; extra == 'dev'
+Requires-Dist: pre-commit (<3,>=2.8.2) ; extra == 'dev'
+Provides-Extra: inference
+Requires-Dist: effdet (<0.3,>=0.2.1) ; extra == 'inference'
+Requires-Dist: omegaconf (<3,>=2) ; extra == 'inference'
+Requires-Dist: dataclasses (==0.6) ; extra == 'inference'
+Requires-Dist: resnest (<0.0.7,>=0.0.6b20201125) ; extra == 'inference'
+
+<div align="center">
+  <img src="images/icevision-logo-slogan.png" alt="logo" width="535px" style="display: block; margin-left: auto; margin-right: auto"/>
+  <h2><b>An Agnostic Object Detection Framework</b></h2>
+</div>
+
+* * * * *
+
+    
+[![tests](https://github.com/airctic/icevision/workflows/tests/badge.svg?event=push)](https://github.com/airctic/icevision/actions?query=workflow%3Atests)
+[![docs](https://github.com/airctic/icevision/workflows/docs/badge.svg)](https://airctic.com)
+[![codecov](https://codecov.io/gh/airctic/icevision/branch/master/graph/badge.svg)](https://codecov.io/gh/airctic/icevision)
+[![PyPI version](https://badge.fury.io/py/icevision.svg)](https://badge.fury.io/py/icevision)
+[![Downloads](https://pepy.tech/badge/icevision)](https://pepy.tech/project/icevision)
+
+[![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/airctic/icevision/blob/master/LICENSE)
+[![Discord](https://img.shields.io/discord/735877944085446747?label=Discord&logo=Discord)](https://discord.gg/2jqrwrQ)
+
+</div>
+
+
+* * * * *
+
+IceVision is the first agnostic computer vision framework to offer a curated collection with hundreds of high-quality pre-trained models from torchvision, MMLabs, and soon Pytorch Image Models. It orchestrates the end-to-end deep learning workflow allowing to train networks with easy-to-use robust high-performance libraries such as Pytorch-Lightning and Fastai
+
+**IceVision Unique Features:**
+
+- Data curation/cleaning with auto-fix
+
+- Access to an exploratory data analysis dashboard
+
+- Pluggable transforms for better model generalization 
+
+- Access to hundreds of neural net models
+
+- Access to multiple training loop libraries
+
+- Multi-task training to efficiently combine object detection, segmentation, and classification models 
+
+<!-- Not included in docs - start -->
+
+## Installation
+
+```bash
+pip install icevision[all]
+```
+
+For more installation options, check our [docs](https://airctic.com/0.7.0/install/).
+
+**Important:** We currently only support Linux/MacOS.
+<!-- Not included in docs - end -->
+
+## Quick Example: How to train the **Fridge Objects Dataset**
+<a href="https://colab.research.google.com/github/airctic/icevision/blob/master/notebooks/getting_started_object_detection.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+![image](images/icevision-readme.png)
+
+![image](images/icevision-end-to-end-training.gif)
+
+## Happy Learning!
+If you need any assistance, feel free to:
+
+[Join our Forum](https://discord.gg/JDBeZYK)
+
+
