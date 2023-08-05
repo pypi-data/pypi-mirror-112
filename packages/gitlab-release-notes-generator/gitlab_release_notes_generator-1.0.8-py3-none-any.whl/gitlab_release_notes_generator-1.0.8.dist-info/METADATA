@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: gitlab-release-notes-generator
+Version: 1.0.8
+Summary: Utility for use in gitlab ci to generate changelogs.
+Home-page: https://gitlab.com/nimpsch/gitlab_release_notes_generator.git
+Author: Sebastian Nimpsch
+Author-email: snimpsch@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: python-dateutil
+Requires-Dist: setuptools-scm
+
+
+# gitlab-release-note-generator  
+===============  
+  
+Special thanks to [gitlab-release](https://gitlab.com/alelec/gitlab-release). Most of the code used in this project is based on gitlab-release.
+
+This Python utility is used to generate a markdown changelog in the form:
+
+```
+### Release note (2021-02-09 12:19:16)
+
+#### [](#closed-issues)Closed issues
+
+-   Adds initial gitlab yaml [(#1)]
+
+#### [](#merged-merge-requests)Merged merge requests
+
+-   Resolve "Adds initial gitlab yaml" [(#1)]
+```
+
+  
+  
+It can be used in a ``.gitlab-ci.yml`` stage like:  
+  
+::  
+  
+    release:  
+      stage: release  
+      image: python3  
+      script:  
+        - pip3 install gitlab-release gitlab-release-notes-generator 
+        - Output=$(gitlab-release-notes-generator --private-token $GITLAB_ACCESS_TOKEN)
+        - gitlab-release --description "${Output}" --zip "release-${CI_COMMIT_TAG}.zip" *
+      only:  
+        - tags  
+  
+  
+Setting up the required private token  
+---------------------------------------  
+  
+This tool requires you to put a copy of a ``PRIVATE_TOKEN`` in a  
+secret CI variable for the project to give it access to post the files  
+back to the project.  
+  
+For this create a new `Personal Access Token` at  
+https://gitlab.com/profile/personal_access_tokens and use that. (You  
+could also use your personal token from  
+https://gitlab.com/profile/account, but this is `not recommended`.)  
+  
+Make sure you enable `Access your API` when creating the token. The  
+`name` of the token is just for you to remeber what it's for, it wont  
+affeect operation.  
+  
+Add it to a secret variable called ``PRIVATE_TOKEN`` for the project you’re  
+building at ``https://gitlab.com/<user>/<project>/settings/ci_cd>``.  
+  
+  
+Usage  
+-----  
+::  
+  
+    usage: gitlab-release-note-generator [-h] [--server SERVER] [--project-id PROJECT_ID]
+                                              [--private-token PRIVATE_TOKEN] [-f FILE] 
+
+============================= =====  
+optional arguments  
+============================= =====  
+| Argument | Description |
+  |--|--|
+  |``--server SERVER``       | Url of gitlab server <br/>(default: http://gitlab.com/) |
+  |``--project-id``          |  Unique id of project, available in Project. Settings/General <br/>(default:  $CI_PROJECT_ID) |
+ |``--private-token``       | Login token with permissions to commit to repo                                      <br/>(default:  $PRIVATE_TOKEN)|
+ | ``-f, --file``  |The changelog file, which shall be written. <br/>(default: stdout) |
+|  ``-h``, ``--help``                 |Show this help message and exit   |
+============================= =====
+
+
+
+
+

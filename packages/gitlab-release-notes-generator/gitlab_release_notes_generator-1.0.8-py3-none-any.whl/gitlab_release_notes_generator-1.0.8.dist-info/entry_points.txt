@@ -1,0 +1,4 @@
+[console_scripts]
+gitlab-release-notes-generator = gitlab_release_notes_generator:main
+gitlab_release_notes_generator = gitlab_release_notes_generator:main
+
