@@ -1,0 +1,3 @@
+[console_scripts]
+klogpy=klogpy.cli:klg
+
