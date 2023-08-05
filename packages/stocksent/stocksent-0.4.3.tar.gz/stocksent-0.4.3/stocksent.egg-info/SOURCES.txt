@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+stocksent/__init__.py
+stocksent/get_sentiment_data.py
+stocksent/sentiment.py
+stocksent/stock_list.txt
+stocksent.egg-info/PKG-INFO
+stocksent.egg-info/SOURCES.txt
+stocksent.egg-info/dependency_links.txt
+stocksent.egg-info/requires.txt
+stocksent.egg-info/top_level.txt
