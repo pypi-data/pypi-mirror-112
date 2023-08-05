@@ -1,0 +1,21 @@
+{
+    "standard_library": [
+        "from typing import Dict, Generator",
+        "import multiprocessing"
+    ],
+    "third_party": [
+        "import numpy as np",
+        "import gym",
+        "from perceptilabs.core_new.layers.base import DataReinforce",
+        "import tensorflow as tf",
+        "import gym",
+        "import numpy as np",                                    
+        "from perceptilabs.core_new.utils import Picklable",
+        "from gym_unity.envs import UnityToGymWrapper"
+    ],
+    "perceptilabs": [
+        "from perceptilabs.core_new.utils import Picklable",
+        "from perceptilabs.core_new.serialization import can_serialize, serialize",
+        "from perceptilabs.core_new.layers.base import DataReinforce"
+    ]
+}
