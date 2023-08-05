@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/recursive_regex/__init__.py
+src/recursive_regex/recursive_regex.py
+src/recursive_regex/sample_config.py
+src/recursive_regex.egg-info/PKG-INFO
+src/recursive_regex.egg-info/SOURCES.txt
+src/recursive_regex.egg-info/dependency_links.txt
+src/recursive_regex.egg-info/entry_points.txt
+src/recursive_regex.egg-info/requires.txt
+src/recursive_regex.egg-info/top_level.txt
