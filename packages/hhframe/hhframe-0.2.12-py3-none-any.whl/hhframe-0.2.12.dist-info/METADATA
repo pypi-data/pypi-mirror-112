@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: hhframe
+Version: 0.2.12
+Summary: houheaven frame for python
+Home-page: http://plugin.houheaven.com/hhframe
+Author: 立树
+Author-email: 970012685@qq.com
+License: UNKNOWN
+Project-URL: Bug Tracker, http://plugin.houheaven.com/hhframe
+Keywords: hhframe
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: qiniu (>=7.4.1)
+Requires-Dist: urllib3 (>=1.26.5)
+Requires-Dist: xlwt (>=1.3.0)
+Requires-Dist: mysqlclient (>=2.0.3)
+Requires-Dist: PyExecJs (>=1.5.1)
+Requires-Dist: bs4 (>=0.0.1)
+
+
+# hhframe
+
+为 “Python开发” 而生
+
+## 网站
+[后天堂](http://www.houheaven.com)  
+[后天堂工作室](http://studio.houheaven.com)  
+[后天堂框架](http://plugin.houheaven.com/hhframe)  
+
