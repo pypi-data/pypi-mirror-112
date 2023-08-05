@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+sciviewer/__init__.py
+sciviewer/gui.py
+sciviewer/sciviewer.py
+sciviewer/utils.py
+sciviewer.egg-info/PKG-INFO
+sciviewer.egg-info/SOURCES.txt
+sciviewer.egg-info/dependency_links.txt
+sciviewer.egg-info/not-zip-safe
+sciviewer.egg-info/requires.txt
+sciviewer.egg-info/top_level.txt
