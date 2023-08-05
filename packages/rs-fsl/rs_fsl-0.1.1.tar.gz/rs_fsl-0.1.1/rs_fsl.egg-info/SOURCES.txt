@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+versioneer.py
+rs_fsl/__init__.py
+rs_fsl/_version.py
+rs_fsl/rs_fsl.py
+rs_fsl.egg-info/PKG-INFO
+rs_fsl.egg-info/SOURCES.txt
+rs_fsl.egg-info/dependency_links.txt
+rs_fsl.egg-info/requires.txt
+rs_fsl.egg-info/top_level.txt
