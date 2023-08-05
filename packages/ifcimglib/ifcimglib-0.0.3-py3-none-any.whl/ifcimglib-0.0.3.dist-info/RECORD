@@ -1,0 +1,14 @@
+ifcimglib/__init__.py,sha256=4GZKi13lDTD25YBkGakhZyEQZWTER_OWQMNPoH_UM2c,22
+ifcimglib/_nbdev.py,sha256=VbooTh3P7CSIjQXGbXmKE-QPfkv2yfeppk8z-aTUnVU,1268
+ifcimglib/apply.py,sha256=KwIMNW6U7Stx73qrL5kNgexboSfOy_EhYgd_OS7DlF4,3288
+ifcimglib/cif2lmdb.py,sha256=7Y38PBDsoi_qvYFFrQzx-gPINfZgZjkyVeSR9S7hDOo,5800
+ifcimglib/cif2tiff.py,sha256=hFz4dMOvYr6rwt8WAtLJoeFHPazA-yaIemM1fJ76SA8,6200
+ifcimglib/imglmdb.py,sha256=PjoJGqCXUZIP3vScOAnspI6FD-UI-xbJtEVO2sKMvFY,6683
+ifcimglib/preprocessing.py,sha256=Y99nOdp2mpExX0ksNijBisqW2K4koE71dt1NO5n819w,3537
+ifcimglib/utils.py,sha256=ZOFHGb0py7PKRLZ3UGnS1dc2VxkYjPFEHU_d95gszXM,320
+ifcimglib-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ifcimglib-0.0.3.dist-info/METADATA,sha256=n4J8WBpUvKx6K904mRQgZaB5aeZBk-VDY_3o76lN3Jc,3209
+ifcimglib-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ifcimglib-0.0.3.dist-info/entry_points.txt,sha256=m7pHvXjGRWny0g222i6h9J5-H6XhgErZwL6BkRb6Pvc,103
+ifcimglib-0.0.3.dist-info/top_level.txt,sha256=gw5Apb6Wwywq2IRv8L1fGU3aYwvDB3Mt_efBg8JEM_s,10
+ifcimglib-0.0.3.dist-info/RECORD,,
