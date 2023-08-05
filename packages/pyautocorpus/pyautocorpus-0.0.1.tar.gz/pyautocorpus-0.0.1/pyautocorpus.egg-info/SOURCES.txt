@@ -1,0 +1,9 @@
+README.md
+setup.py
+AutoCorpus/src/common/utilities.cpp
+AutoCorpus/src/wikipedia/Textifier.cpp
+pyautocorpus.egg-info/PKG-INFO
+pyautocorpus.egg-info/SOURCES.txt
+pyautocorpus.egg-info/dependency_links.txt
+pyautocorpus.egg-info/top_level.txt
+src/pyautocorpus.cpp
