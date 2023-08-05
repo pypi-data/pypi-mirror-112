@@ -1,0 +1,3 @@
+[console_scripts]
+tkbrowser = tkbrowser.__main__:main
+
