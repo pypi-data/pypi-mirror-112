@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: faust-s3-backed-serializer
+Version: 1.1.0
+Summary: Faust serializer that serializes large messages on Amazon S3
+Home-page: https://github.com/bakdata/faust-s3-backed-serializer
+Author: bakdata
+Author-email: opensource@bakdata.com
