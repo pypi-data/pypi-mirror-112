@@ -1,0 +1,9 @@
+setup.py
+imgsim/__init__.py
+imgsim/imgsim.py
+imgsim/model.pth
+imgsim.egg-info/PKG-INFO
+imgsim.egg-info/SOURCES.txt
+imgsim.egg-info/dependency_links.txt
+imgsim.egg-info/requires.txt
+imgsim.egg-info/top_level.txt
