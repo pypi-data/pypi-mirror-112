@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: lcbuilder
+Version: 0.3.6
+Summary: Easy light curve builder from multiple sources
+Home-page: https://github.com/PlanetHunders/lcbuilder
+Author: M. Dévora-Pajares
+Author-email: mdevorapajares@protonmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.9
+Description-Content-Type: text/markdown
+Requires-Dist: astropy (==4.1)
+Requires-Dist: pandas (==1.1.5)
+Requires-Dist: lightkurve (==2.0.9)
+Requires-Dist: photutils (==1.0.2)
+Requires-Dist: tess-point (==0.6.1)
+Requires-Dist: foldedleastsquares (==1.0.27)
+Requires-Dist: numpy (==1.19) ; python_version < "3.7"
+Requires-Dist: numpy (==1.20.1) ; python_version >= "3.7"
+
+# lcbuilder
+Easy light curve builder from multiple sources
+
+
