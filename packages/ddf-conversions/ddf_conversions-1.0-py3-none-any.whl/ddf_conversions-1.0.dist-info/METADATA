@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ddf-conversions
+Version: 1.0
+Summary: ddf转换工具
+Home-page: https://github.com/ddf118/ddf.conversions
+Author: ddf118
+Author-email: dyf402@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pywin32 (==300)
+Requires-Dist: xlrd (==1.2.0)
+Requires-Dist: python-docx (==0.8.10)
+
+# ddf.conversion
+
