@@ -1,0 +1,207 @@
+Metadata-Version: 2.1
+Name: ConversationAgent
+Version: 0.0.1
+Summary: text conversation system
+Home-page: https://github.com/pypa/sampleproject
+Author: Theta
+Author-email: gavin19950511@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Submodule
+ADD:
+```
+git submodule add --name StageAgent http://ubestream-gitlab.japaneast.cloudapp.azure.com/ai_team/StageAgentCore.git StageAgent
+git submodule init
+git submodule update
+git submodule foreach "(git submodule init; git submodule update)"
+
+```
+UPDATE (CLONE):
+```
+git pull
+git submodule init
+git submodule update
+git submodule foreach "(git submodule init; git submodule update)"
+
+```
+UPDATE FROM LATEST:
+```
+git submodule foreach "(git checkout master; git pull)"
+git submodule foreach "(git submodule init; git submodule update)"
+```
+
+## Using
+
+### Example:build a conversion system
+1. build stages
+2. Add stages to Agent
+3. (option) using mock_client to up the agent
+
+#### Setup Stage Class
+```
+class YourStage(Stage):
+    def __init__(self):
+        super(YourStage, self).__init__()
+        self.stage_type = __YOUR_STAGE__
+        self.sys_reply_q1 = "哈囉你好，現在能幫忙訂車票喔"
+        self.sys_reply_q2 = "如果想訂票，請說 「線上訂票」，或是「我要訂票」"
+        self.sys_reply_complete = f"好的，您將從 {self.get_default_var_label(__SAVE_LABEL__)} 出發"
+
+
+    @staticmethod
+    def is_fit_needs_n_gen_entity(kwargs) -> (bool, dict):
+        if fit_re(".*訂票.*", kwargs.get(__USER_TEXT__, "")):
+            kwargs = self.set_default_var(kwargs, __SAVE_LABEL__, __SAVE_CONTENT__)
+            return True, kwargs
+        else:
+            return False, kwargs
+```
+#### - init Var
+- stage_type: str, unique label for identify stage
+- sys_reply_q1: str, reply for the user access the stage at the first time.
+- sys_reply_q2: str, reply for the user when user's reply not fit to stage's needs.
+- sys_reply_complete: str, reply for the user when user's reply fit to stage's needs.
+    -  `self.get_default_var_label(__SAVE_LABEL__)`: would replace text by `__SAVE_LABEL__`
+
+
+#### - setup stage's needs.
+```
+@staticmethod
+def is_fit_needs_n_gen_entity(kwargs) -> (bool, dict):
+    if fit_re(__RE_RULE__, kwargs.get(__USER_TEXT__, "")):
+        kwargs = self.set_default_var(kwargs, __SAVE_LABEL__, __SAVE_CONTENT__)
+        return True, kwargs
+    else:
+        return False, kwargs
+```
+- `__RE_RULE__`: str, re rule for catch entities, or you could build other function to identified entities
+- `kwargs.get(__USER_TEXT__, "")`: str, user's source text
+- `__SAVE_LABEL__`: str, a label for the var
+- `__SAVE_CONTENT__`: str, content for the var
+
+
+#### - (optional) disable first time reply (sys_reply_q1)
+```
+@staticmethod
+def is_first_access(data, stage_id):
+    return False
+```
+
+### test your stage Class
+```
+a = YourStage()
+
+# first time access (q1)
+res = {}
+res = a.run(**res)
+assert res.get(__SYS_STAGE__, None) == StageStatus.FIRST
+
+# refuse access (q2)
+res[__USER_TEXT__] = "{something text not fit to your RE rule}"
+res.pop(__SYS_REPLY__)
+res = a.run(**res)
+assert res.get(__SYS_STAGE__, None) == StageStatus.REFUSE
+
+# accecpt access (complete)-1
+res[__USER_TEXT__] = "{something text fit to your RE rule}"
+res.pop(__SYS_REPLY__)
+res = a.run(**res)
+assert res.get(__SYS_STAGE__, None) == StageStatus.COMPLETE
+
+# accecpt access (complete)-2
+res.pop(__SYS_REPLY__)
+res = a.run(**res)
+assert res.get(__SYS_STAGE__, None) == StageStatus.COMPLETE
+```
+
+### run your stage Class on mock client
+```
+from StageAgent import Agent, mock_client_human
+from StageAgent.SentenceStage import HelloStage, OrderHelloStage,OrderStartStage,OrderEndStage,OrderConfirmStage,CleanStage
+
+stages = [YourStage()]
+mock_agent = Agent(stages)
+mock_client_human(mock_agent)
+```
+### - mock client structure
+![image](http://20.48.113.118/ai_team/StageAgent/raw/master/docs/mock_client.002.jpeg)
+![image](http://20.48.113.118/ai_team/StageAgent/raw/master/docs/mock_client.001.jpeg)
+
+### Example:build a conversion system by Lib-rule
+`python ./example/lib_order_ticket.py`
+
+```buildoutcfg
+請輸入：?
+系統: ['請問是哪一站上車呢？']
+請輸入：?
+系統: ['請說站名，例如『板橋火車站』']
+請輸入：?
+系統: ['請說站名，例如『板橋火車站』']
+請輸入：?
+系統: ['請說站名，例如『板橋火車站』']
+請輸入：板ㄑㄠˊ
+系統: ['請說站名，例如『板橋火車站』']
+請輸入：板橋
+系統: ['好的，您將從板橋出發', '請問是哪一站下車呢？']
+請輸入：新竹
+系統: ['好的，您將在新竹下車，\n感謝您的使用，退出請輸入exit\n', 'thanks for using.']
+請輸入：qwe
+系統: ['thanks for using.']
+請輸入：qwe
+系統: ['thanks for using.']
+請輸入：exit
+
+Process finished with exit code 0
+```
+## LIB-Stage Class
+An easy way to build chat-flow by Json file
+
+### - init a LibStage Class （Only support LIB-Stage Class）
+```
+test_stage1 = {
+    "stage_type": __RE_STAGE__,
+    "question": {
+        "sys_reply_q1": "請問是哪一站上車呢？",
+        "sys_reply_q2": "請說站名，例如『板橋火車站』",
+        "sys_reply_complete": f"好的，您將從 %%on_board_station%% 出發",
+    },
+    "is_fits": [
+        ("[板橋|南港|新竹]+[火車|捷運|車]?[站]?$", "on_board_station"),
+        ("[板橋|南港|新竹]+[公車站|轉運站]+$", "on_board_station"),
+    ]
+
+}
+mock_client_human(gen_agent([test_stage1, test_stage2]))
+```
++ gen_agent: support REStage class, return Agent class
+### - init a LibSwitchStage Class 
+```
+test_switch_stage = {
+    "stage_type": __SWITCH_STAGE__,
+    "stages_filter": [
+        ("set_level", "商務", "s_1"),
+        ("set_level", "商務座位", "s_1"),
+        ("set_level", "商務座", "s_1"),
+        ("set_level", "普通", "s_2"),
+        ("set_level", "普通座", "s_2"),
+        ("set_level", "普通座位", "s_2"),
+    ]
+
+}
+
+mock_client_human(gen_multi_agent({
+    MultiAgent.__MAIN_STAGES__: [__MOCK_STAGE_1__, test_switch_stage],
+    "s_1": [__MOCK_STAGE_2__],
+    "s_2": [__MOCK_STAGE_3__],
+}))
+```
++ gen_multi_agent: input use dict, return MultiAgent class
+  + `MultiAgent.__MAIN_STAGES__` key is must to have
+
+
