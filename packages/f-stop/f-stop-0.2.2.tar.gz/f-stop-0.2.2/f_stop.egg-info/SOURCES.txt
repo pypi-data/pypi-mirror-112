@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+f_stop.egg-info/PKG-INFO
+f_stop.egg-info/SOURCES.txt
+f_stop.egg-info/dependency_links.txt
+f_stop.egg-info/requires.txt
+f_stop.egg-info/top_level.txt
+f_stop.egg-info/zip-safe
+fstop/__init__.py
+fstop/core.py
+fstop/cv.py
+fstop/lexer.py
+fstop/objects.py
+fstop/operations.py
+fstop/parser.py
