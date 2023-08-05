@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+new_words_detection/__init__.py
+new_words_detection/main.py
+new_words_detection/wordSegment.py
+new_words_detection.egg-info/PKG-INFO
+new_words_detection.egg-info/SOURCES.txt
+new_words_detection.egg-info/dependency_links.txt
+new_words_detection.egg-info/requires.txt
+new_words_detection.egg-info/top_level.txt
