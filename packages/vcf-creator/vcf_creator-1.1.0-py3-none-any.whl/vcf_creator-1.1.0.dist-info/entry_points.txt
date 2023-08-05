@@ -1,0 +1,3 @@
+[console_scripts]
+vcf_creator = vcf_creator.cli:main
+
