@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: gitdataminer
+Version: 0.0.1
+Summary: Git logs analyzer
+Home-page: UNKNOWN
+Author: Tushant Khatiwada && Manish Yadav
+Author-email: programmertushant@gmail.com,manish.sinuwari@gmail.com
+License: UNKNOWN
+Keywords: python,git analyzer,git data science
+Platform: Windows
+Platform: Linux
+Platform: Solaris
+Platform: Mac OS-X
+Platform: Unix
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Requires-Python: >=3.7
+Requires-Dist: matplotlib (==3.4.2)
+Requires-Dist: pandas (==1.2.5)
+Requires-Dist: numpy (==1.21.0)
+
+Git logs analyzer which analyzes the metrics regarding total commits,    commits per year, commits per month, top 10 author, total commits by author,     coding days, churn, author insertion rate, productive day and so on
+
