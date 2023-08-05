@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: markupFor3DSlicer
+Version: 0.2.1
+Summary: Librairie de création de Markups pour 3D SLicer.
+Home-page: UNKNOWN
+Author: Guillaume ROCHE
+Author-email: g.roche1712@protonmail.com
+License: MIT
+Description: Librairie que renvoit un simple dictionnaire comportant la mise en page qui lui permet d'Ãªtre lu par 3D Slicer en temps que fichier markups.
+        
+        Fonctions :
+        
+        line(x,y,z,vectX,vectY,vectZ,norme,name='vect',large=0.3)
+            - x,y,z : position de depart
+            - vectX,vectY,vectZ : position d'arriver
+            - norme : taille de la ligne
+            - name : nom de la ligne (optionnel)
+            - large : largeur de la ligne (optionnel)
+        
+        point(x,y,z,name="point",large=5.0)
+            - x,y,z : position du point
+            - name : nom du point (optionnel)
+            - large : largeur du point (optionnel)
+        
+        final(suite)
+            - suite : suite contenant tout les dictionnaire creer precedement (Attention, il est imperatif que la condition soit une suite et non un dictionnaire)
+        
+        Change Log
+        ==========
+        
+        0.1 (05/07/2021)
+        ----------------
+        - First release : Ajout de la fonction line(x,y,z,vectX,vectY,vectZ,norme,name) permettant de creer un ligne Markup.
+        
+        0.2.1 (06/07/2021)
+        ----------------
+        - Second release : Changement de la fonction line(...) pour ajouter les condition "large" (lageur de la ligne), ajout de la fonction point(x,y,z,name,large) permettant de creer un point Markup et final(suite)
+         permettant de realiser la mise en page final.
+Keywords: markup
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

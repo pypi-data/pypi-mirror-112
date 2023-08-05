@@ -1,0 +1,11 @@
+Change Log
+==========
+
+0.1 (05/07/2021)
+----------------
+- First release : Ajout de la fonction line(x,y,z,vectX,vectY,vectZ,norme,name) permettant de creer un ligne Markup.
+
+0.2.1 (06/07/2021)
+----------------
+- Second release : Changement de la fonction line(...) pour ajouter les condition "large" (lageur de la ligne), ajout de la fonction point(x,y,z,name,large) permettant de creer un point Markup et final(suite)
+ permettant de realiser la mise en page final.
