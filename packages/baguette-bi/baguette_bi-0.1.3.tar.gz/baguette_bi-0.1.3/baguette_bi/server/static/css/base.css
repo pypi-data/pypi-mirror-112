@@ -1,0 +1,126 @@
+body {
+    font-size: 14pt;
+}
+
+* {
+    color: #333;
+}
+
+pre {
+    font-family: 'DejaVu Sans Mono', 'Courier New', Courier, monospace;
+    padding: 1em 0.5em 1em 0.5em;
+}
+
+.login-form {
+    height: 50vh;
+    width: 100%;
+}
+
+.login-form input {
+    border: none;
+    border-bottom: 1px solid darkgray;
+    width: 250px;
+    height: 36px;
+    font-size: 24px;
+    outline: none;
+    text-align: center;
+    color: #333;
+}
+
+.login-form input::placeholder {
+    color: darkgray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-top: 1.25em;
+    margin-bottom: 0.75em;
+    font-weight: 300;
+    color: rgb(75, 75, 75);
+}
+
+a {
+    text-decoration: none;
+}
+
+.pages-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.pages-sidebar {
+    width: 50pt;
+    border: 1px solid #d9d9d9;
+}
+
+.sidebar {
+    /* border: 1px solid #d9d9d9; */
+}
+
+.sidebar a {
+    color: rgb(75, 75, 75);
+}
+
+.sidebar-logo {
+    background-color: #F8F8F8;
+    width: 50pt;
+    height: 50pt;
+}
+
+.sidebar-button-group {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-button {
+    border: 1px solid #d9d9d9;
+    /* display: table-cell; */
+    width: 50pt;
+    height: 50pt;
+    margin: -0.5px -0.5px -0.5px -0.5px;
+}
+
+.sidebar-button .bi {
+    font-size: 16pt;
+}
+
+.pages-page>* {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pages-chart {
+    /* override vega-embed class inline-block */
+    display: block!important;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.pages-row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pages-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.big-number {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.pages-chart canvas {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
