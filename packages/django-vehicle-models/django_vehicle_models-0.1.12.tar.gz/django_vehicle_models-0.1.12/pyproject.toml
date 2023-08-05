@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "django_vehicle_models"
+version = "0.1.12"
+description = "models for storing in DB"
+authors = ["Lamarmora <scheduleanevent@gmail.com>"]
+packages = [
+    { include = "models" , from = "src" }
+]
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
