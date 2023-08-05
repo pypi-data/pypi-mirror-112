@@ -1,0 +1,11 @@
+pandas
+numpy
+asyncio
+websocket-client
+networkx
+uuid
+pycryptodome
+pillow
+tabulate
+matplotlib==3.2.1
+ipython
