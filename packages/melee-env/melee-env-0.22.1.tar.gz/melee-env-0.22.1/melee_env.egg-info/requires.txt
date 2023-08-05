@@ -1,0 +1,4 @@
+melee>=0.30.3
+requests>=2.20
+requests-toolbelt!=0.9.0,>=0.8.0
+tqdm>=4.14
