@@ -1,0 +1,12 @@
+numpy
+scikit-image
+nd2reader
+matplotlib
+tifffile
+h5py
+aicsimageio
+xarray
+natsort
+ipywidgets
+imageio
+imageio-ffmpeg
