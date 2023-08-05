@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: londiste
+Version: 3.6.1
+Summary: Database replication based on PgQ
+Home-page: https://github.com/pgq/londiste
+Maintainer: Marko Kreen
+Maintainer-email: markokr@gmail.com
+License: ISC
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Database
+Classifier: Topic :: System :: Clustering
+Classifier: Topic :: Utilities
+Requires-Dist: pgq
+Requires-Dist: skytools
+
+Londiste
+========
+
+Londiste is PgQ-based logical replication for PostgreSQL.
+
