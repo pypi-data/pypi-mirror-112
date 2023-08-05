@@ -1,0 +1,23 @@
+adabelief-tf
+black
+dataclasses-json
+GitPython
+imageio
+nptyping
+opencv-python-headless
+openpyxl
+paiargparse==1.1.1
+pandas
+pillow
+prettytable
+pre-commit
+python-Levenshtein
+pytest
+scikit-image
+tensorflow>=2.4.0,<2.6.0
+tensorflow_addons>=0.12.0,<0.14.0  # must be compatible with tensorflow version
+tensorflow-datasets~=3.0.0
+tqdm
+typeguard
+xlrd==1.2.0
+pre-commit
