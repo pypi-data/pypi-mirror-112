@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: c2cgeoportal-admin
+Version: 2.6.0
+Summary: c2cgeoportal admin
+Home-page: https://github.com/camptocamp/c2cgeoportal/
+Author: Camptocamp
+Author-email: info@camptocamp.com
+License: UNKNOWN
+Keywords: web gis geoportail c2cgeoportal geocommune pyramid
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Pyramid
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Development Status :: 6 - Mature
+Description-Content-Type: text/markdown
+Requires-Dist: c2cgeoform
+Requires-Dist: c2cwsgiutils
+Requires-Dist: colander
+Requires-Dist: deform
+Requires-Dist: passwordgenerator
+Requires-Dist: pyproj
+Requires-Dist: pyramid
+Requires-Dist: pyramid-debugtoolbar
+Requires-Dist: pyramid-jinja2
+Requires-Dist: pyramid-tm
+Requires-Dist: sqlalchemy
+Requires-Dist: translationstring
+Requires-Dist: zope.event
+
+# c2cgeoportal admin interface
+
+## Run the c2cgeoportal_admin development web server
+
+From this folder (admin):
+
+```
+make preparedev
+make serve
+```
+
+Now open http://localhost:8888/ in your favorite browser.
+
+
