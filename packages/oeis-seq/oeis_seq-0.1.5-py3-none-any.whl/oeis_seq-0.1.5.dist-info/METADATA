@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: oeis-seq
+Version: 0.1.5
+Summary: OEIS Integer sequences implemented in Python
+Home-page: https://github.com/reidhoch/oeis-seq
+License: MIT
+Author: Reid Hochstedler
+Author-email: reidhoch@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/reidhoch/oeis-seq
