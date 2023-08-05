@@ -1,0 +1,11 @@
+cryptography
+scitokens
+
+[docs]
+sphinx>=4.0.0
+sphinx-automodapi
+sphinx-material
+
+[test]
+pytest>=3.9.1
+pytest-cov
