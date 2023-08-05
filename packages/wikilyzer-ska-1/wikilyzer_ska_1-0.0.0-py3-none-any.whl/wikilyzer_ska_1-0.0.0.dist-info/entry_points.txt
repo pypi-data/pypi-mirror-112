@@ -1,0 +1,3 @@
+[console_scripts]
+wikilyzer = process.core:main
+
