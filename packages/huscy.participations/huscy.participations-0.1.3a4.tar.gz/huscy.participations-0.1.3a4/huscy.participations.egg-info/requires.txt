@@ -1,0 +1,8 @@
+huscy.recruitment
+
+[development]
+psycopg2-binary
+
+[testing]
+tox
+watchdog
