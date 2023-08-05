@@ -1,0 +1,6 @@
+[build-system]
+requires = [
+    "geopandas","pandas","numpy",
+    "PIL"
+]
+build-backend = "setuptools.build_meta"
