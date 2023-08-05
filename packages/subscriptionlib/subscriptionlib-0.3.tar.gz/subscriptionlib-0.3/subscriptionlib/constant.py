@@ -1,0 +1,7 @@
+SUB_ENDPOINT = "https://subscriptions.zoho.com/api/v1/subscriptions"
+CLIENT_ID = "1000.0EEUMT0BFPEZWIX3IW5F9KKP4WLLSP"
+CLIENT_SECRET = "cc5a5b71bd4b32876d818ebca4dc0596f6412ea179"
+OAUTH2_ENDPOINT = "/oauth/v2/token"
+ORGANIZATION_ID = "752206187"
+OAUTH2_URI = "https://accounts.zoho.com"
+CUSTOMER_ENDPOINT = "https://subscriptions.zoho.com/api/v1/customers/"
