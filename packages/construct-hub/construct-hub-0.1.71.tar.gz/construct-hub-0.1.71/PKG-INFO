@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: construct-hub
+Version: 0.1.71
+Summary: A construct library that model Construct Hub instances.
+Home-page: https://github.com/cdklabs
+Author: Amazon Web Services, Inc.<construct-ecosystem-team@amazon.com>
+License: Apache-2.0
+Project-URL: Source, https://github.com/cdklabs/construct-hub.git
+Description: # Construct Hub
+        
+        This project maintains a [AWS Cloud Development Kit](https://github.com/aws/aws-cdk) construct library
+        that can be used to deploy instances of the Construct Hub in any AWS Account.
+        
+        ## Development
+        
+        The `test/devapp` directory includes an AWS CDK app designed for deploying the
+        construct hub into a development account. This app is also used as a golden
+        snapshot, so every time the construct changes, you'll see its snapshot updated.
+        
+        To bootstrap your developer account, use the following command:
+        
+        ```shell
+        CDK_NEW_BOOTSTRAP=1 npx cdk bootstrap aws://ACCOUNT/REGION
+        ```
+        
+        Use the following tasks to work with the dev app. It will always work with the
+        currently configured CLI account/region:
+        
+        * `yarn dev:synth` - synthesize into `test/devapp/cdk.out`
+        * `yarn dev:deploy` - deploy to the current environment
+        * `yarn dev:diff` - diff against the current environment
+        
+        ## Security
+        
+        See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more
+        information.
+        
+        ## License
+        
+        This project is licensed under the Apache-2.0 License.
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Typing :: Typed
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
