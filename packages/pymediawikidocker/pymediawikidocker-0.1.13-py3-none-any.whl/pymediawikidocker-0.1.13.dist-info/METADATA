@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: pymediawikidocker
+Version: 0.1.13
+Summary: Python controlled mediawiki docker application cluster installation
+Home-page: https://github.com/WolfgangFahl/pymediawikidocker
+Author: Wolfgang Fahl
+Author-email: wf@bitplan.com
+Maintainer: Wolfgang Fahl
+License: Apache License
+Project-URL: Documentation, http://wiki.bitplan.com/index.php/Pymediawikidocker
+Project-URL: Code, https://github.com/WolfgangFahl/pymediawikidocker
+Project-URL: Issue tracker, https://github.com/WolfgangFahl/pymediawikidocker/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: Jinja2
+Requires-Dist: python-on-whales
+Requires-Dist: six
+Requires-Dist: mysql-connector-python
+Requires-Dist: py-3rdparty-mediawiki
+Requires-Dist: pylodstorage
+
+# pymediawikidocker
+Python controlled mediawiki docker application cluster installation
+
+[![pypi](https://img.shields.io/pypi/pyversions/pymediawikidocker)](https://pypi.org/project/pymediawikidocker/)
+[![Github Actions Build](https://github.com/WolfgangFahl/pymediawikidocker/workflows/Build/badge.svg?branch=main)](https://github.com/WolfgangFahl/pymediawikidocker/actions?query=workflow%3ABuild+branch%3Amain)
+[![GitHub open issues](https://img.shields.io/github/issues/WolfgangFahl/pymediawikidocker.svg)](https://github.com/WolfgangFahl/pymediawikidocker/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/WolfgangFahl/pymediawikidocker.svg)](https://github.com/WolfgangFahl/pymediawikidocker/issues/?q=is%3Aissue+is%3Aclosed)
+[![PyPI Status](https://img.shields.io/pypi/v/pymediawikidocker.svg)](https://pypi.python.org/pypi/pymediawikidocker/)
+[![License](https://img.shields.io/github/license/WolfgangFahl/pymediawikidocker.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
+## Documentation
+[Wiki](http://wiki.bitplan.com/index.php/pymediawikidocker)
+
+### Authors
+* [Wolfgang Fahl](http://www.bitplan.com/Wolfgang_Fahl)
+
+
