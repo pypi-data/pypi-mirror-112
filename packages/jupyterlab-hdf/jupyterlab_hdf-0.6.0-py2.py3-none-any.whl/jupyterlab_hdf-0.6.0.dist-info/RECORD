@@ -1,0 +1,17 @@
+jupyterlab_hdf/__init__.py,sha256=lXjNb0rT8gpZtF8Tcx0KaZ0XbG27UcEWlE2J6ZCF-5Q,1412
+jupyterlab_hdf/_version.py,sha256=rnPKmLBAw6_7L8nS01_iL-PBcWu5gSB4VDfy9MZCBFI,149
+jupyterlab_hdf/attrs.py,sha256=X76kdI-rnkcAfwTaBmp62mEhE0OounNNkrgtPp_UAxA,619
+jupyterlab_hdf/baseHandler.py,sha256=_xMNkrTPDyf7m4AhIEPy-Srw_wxOTz0kTUjj4COW4A4,5001
+jupyterlab_hdf/config.py,sha256=7wAEsrH4WhIcBXg9pK2SSFyy_ILLwKCDGqdGtj7nwVk,1179
+jupyterlab_hdf/contents.py,sha256=n3t7q-dqvvo-TBfGsIvaewhpEHL-th5d_tVr8JnesdM,1188
+jupyterlab_hdf/data.py,sha256=S3jbEZTbJmT0an3QKQwC5jpgYKEUFSTRwaf1jwxivNI,1074
+jupyterlab_hdf/exception.py,sha256=6wfIQSmryVxNRNJXjM03bZkFMbEMCjaClZuv6A9C4So,189
+jupyterlab_hdf/meta.py,sha256=pkUxIQr9wMhc9WOC4hyUFeR4e80mO_iK5hxVjlCHQhY,647
+jupyterlab_hdf/snippet.py,sha256=Wmdn_92eb1KaGQDmKTyzdTZOSqlk1_veBCT5_s44lkg,1407
+jupyterlab_hdf/util.py,sha256=9offcWZdGY9wEHJAOgbZg6GcdfRYapya4uPu1UtdURM,11346
+jupyterlab_hdf-0.6.0.data/data/etc/jupyter/jupyter_notebook_config.d/jupyterlab_hdf.json,sha256=oBDJkPsh3YQimQ8XfH1jA5f9uNIkVvpqbDi1TahsknM,91
+jupyterlab_hdf-0.6.0.dist-info/LICENSE,sha256=NAaNjORUQDInb2FfFWDk8Mw89UGfloe__thyxef4TN0,1535
+jupyterlab_hdf-0.6.0.dist-info/METADATA,sha256=mauMKU0hV4PSCVgJ1x8raGq0WFm0kJNSRDadXIxoCl8,4201
+jupyterlab_hdf-0.6.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+jupyterlab_hdf-0.6.0.dist-info/top_level.txt,sha256=JTvqBTxd4C8twZNl3NyrxgxbVphghMGl2omtQoj6WsQ,15
+jupyterlab_hdf-0.6.0.dist-info/RECORD,,
