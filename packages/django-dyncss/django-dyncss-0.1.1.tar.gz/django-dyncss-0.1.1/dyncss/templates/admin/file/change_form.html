@@ -1,0 +1,57 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_urls %}
+
+{% block extrahead %}
+    {{ block.super }}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js"></script>
+    <script>
+        django.jQuery(function () {
+            // ace editor cannot be attached directly to a textarea
+            var textarea = django.jQuery('textarea').css('display', 'none');
+            var settings = textarea.data();
+            var div = django.jQuery('<div>', {
+                position: 'absolute',
+                width: '100%',
+                height: textarea.height(),
+                'class': textarea.attr('class')
+            }).insertBefore(textarea);
+
+            // init editor with settings
+            var editor = ace.edit(div[0]);
+            editor.setTheme('ace/theme/github');
+            editor.getSession().setValue(textarea.val());
+            editor.getSession().setMode('ace/mode/css');
+            editor.setOptions({
+                fontSize: '14px',
+                cursorStyle: 'smooth'
+            });
+            editor.renderer.setScrollMargin(5, 5);
+
+            // send data back to textarea when submitting
+            textarea.closest('form').submit(function () {
+                textarea.val(editor.getSession().getValue());
+            })
+        });
+    </script>
+{% endblock %}
+{% block object-tools-items %}
+    {{ block.super }}
+{% if object_id %}
+{% url 'admin:dyncss_version_changelist' as versions_url %}
+<li>
+    <a href="{{ versions_url }}?file__exact={{ object_id }}" class="versionslink">{% trans "List of versions" %}</a>
+</li>
+{% endif %}
+
+{% if has_absolute_url %}<li><a href="{{ absolute_url }}" class="viewsitelink">{% trans "View on site" %}</a></li>{% endif %}
+{% endblock %}
+
+{% block submit_buttons_bottom %}
+    <div class="submit-row">
+        <input type="submit" value="{% trans 'Save' %}" class="default" name="_save">
+        {% url opts|admin_urlname:'delete' original.pk|admin_urlquote as delete_url %}
+        <p class="deletelink-box"><a href="{% add_preserved_filters delete_url %}" class="deletelink">{% trans "Delete" %}</a></p>
+        {% if show_close %}<a href="{% url opts|admin_urlname:'changelist' %}" class="closelink">{% trans 'Close' %}</a>{% endif %}
+    </div>
+{% endblock %}
