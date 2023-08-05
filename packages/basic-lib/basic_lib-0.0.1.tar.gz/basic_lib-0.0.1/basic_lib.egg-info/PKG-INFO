@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: basic-lib
+Version: 0.0.1
+Summary: A simple library for python
+Home-page: UNKNOWN
+Author: JeysDv
+Author-email: Jeys.Dev.contact@gmail.com
+License: MIT
+Description: This is a simple open-source python lib 
+        
+        Change Log
+        ==========
+        
+        0.0.1(07/07/2021)
+        -----------------
+        -First Release
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python
