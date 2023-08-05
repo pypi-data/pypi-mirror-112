@@ -1,0 +1,4 @@
+include *.gitignore
+recursive-include build *.DS_Store
+recursive-include build *.py
+recursive-include dist *.whl
