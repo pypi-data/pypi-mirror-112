@@ -1,0 +1,6 @@
+[spacy_cli]
+ray = spacy_ray.train_cli:ray_cli
+
+[spacy_loggers]
+spacy-ray.ConsoleLogger.v1 = spacy_ray.loggers:ray_console_logger
+
