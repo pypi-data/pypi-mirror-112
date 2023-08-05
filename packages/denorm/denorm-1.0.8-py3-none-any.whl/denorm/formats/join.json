@@ -1,0 +1,206 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "description": "Configuration for joining tables.",
+  "definitions": {
+    "hook": {
+      "description": "Hook function.",
+      "properties": {
+        "schema": {
+          "description": "Schema of function.",
+          "title": "Schema",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of function.",
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "title": "Hook",
+      "type": "object"
+    },
+    "column": {
+      "description": "Column.",
+      "properties": {
+        "name": {
+          "description": "Name of column.",
+          "title": "Name",
+          "type": "string"
+        },
+        "type": {
+          "description": "Type of column.",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": ["name", "type"],
+      "title": "Column"
+    },
+    "table": {
+      "description": "Table",
+      "dependencies": {
+        "join": ["joinOn"],
+        "joinOn": ["join"]
+      },
+      "properties": {
+        "lockId": {
+          "default": null,
+          "description": "Advisory lock space to use for queueing. If null, it is generated from the ID and table ID.",
+          "maximum": 32677,
+          "minimum": -32678,
+          "title": "Lock ID",
+          "type": ["integer", "null"]
+        },
+        "join": {
+          "default": null,
+          "description": "IDs of dependency table.",
+          "title": "Join dependency",
+          "type": ["string", "null"]
+        },
+        "joinOn": {
+          "default": null,
+          "description": "SQL expression to join to dependency.",
+          "title": "Dependency join",
+          "type": ["string", "null"]
+        },
+        "joinMode": {
+          "default": "sync",
+          "description": "Mode of dependency join.",
+          "enum": ["async", "sync"],
+          "title": "Join consistency",
+          "type": ["string", "null"]
+        },
+        "key": {
+          "default": null,
+          "description": "Unique key.",
+          "items": {
+            "type": "string"
+          },
+          "title": "key",
+          "type": "array"
+        },
+        "name": {
+          "description": "Name of table",
+          "title": "Name",
+          "type": "string"
+        },
+        "targetKey": {
+          "default": null,
+          "description": "SQL expressions for target key values.",
+          "items": {
+            "type": "string"
+          },
+          "title": "key",
+          "type": ["array", "null"]
+        }
+      },
+      "required": ["name"],
+      "type": "object",
+      "title": "Table"
+    },
+    "targetTable": {
+      "description": "Target table.",
+      "properties": {
+        "columns": {
+          "default": null,
+          "description": "Columns.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Columns",
+          "type": ["array", "null"]
+        },
+        "key": {
+          "default": null,
+          "description": "Key columns",
+          "items": {
+            "type": "string"
+          },
+          "title": "Key",
+          "type": "array"
+        },
+        "refresh": {
+          "default": "full",
+          "description": "Insert inserts. Full inserts, updates, and deletes. Insert only inserts. Upsert inserts and updates.",
+          "enum": ["full", "insert", "upsert"],
+          "title": "Refresh mode",
+          "type": "string"
+        },
+        "schema": {
+          "default": null,
+          "description": "Schema of table. If null, the table is not schema-qualified.",
+          "title": "Schema",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of table",
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": ["name"],
+      "title": "Target table"
+    }
+  },
+  "properties": {
+    "consistency": {
+      "default": "immedidate",
+      "description": "Consistency level",
+      "enum": ["deferred", "immediate"],
+      "title": "Consistency",
+      "type": "string"
+    },
+    "id": {
+      "description": "ID for name mangling created objects.",
+      "title": "ID",
+      "type": "string"
+    },
+    "lock": {
+      "default": false,
+      "description": "Whether to lock before refreshing target.",
+      "title": "Lock",
+      "type": "boolean"
+    },
+    "key": {
+      "default": null,
+      "description": "Key. If null, uses values from targetTable.",
+      "item": {
+        "$ref": "#/defintions/keyColumn"
+      },
+      "title": "Key",
+      "type": ["array", "null"]
+    },
+    "setup": {
+      "$ref": "#/definitions/hook",
+      "default": null,
+      "description": "Setup function.",
+      "title": "Setup"
+    },
+    "schema": {
+      "default": null,
+      "description": "Schema for created objects. If not set, the default schema is used.",
+      "title": "Schema",
+      "type": "string"
+    },
+    "tables": {
+      "additionalProperties": {
+        "$ref": "#/definitions/table"
+      },
+      "description": "Map from ID to table.",
+      "title": "Tables",
+      "type": "object"
+    },
+    "targetQuery": {
+      "default": "TABLE $1",
+      "description": "Query to populate the target table.",
+      "title": "Query",
+      "type": ["string", "null"]
+    },
+    "targetTable": {
+      "$ref": "#/definitions/targetTable"
+    }
+  },
+  "required": ["id", "tables", "targetTable"],
+  "title": "Join config",
+  "type": "object"
+}
