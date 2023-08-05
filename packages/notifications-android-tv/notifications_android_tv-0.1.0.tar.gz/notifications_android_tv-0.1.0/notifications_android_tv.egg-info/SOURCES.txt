@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+setup.cfg
+setup.py
+notifications_android_tv/__init__.py
+notifications_android_tv/notifications.py
+notifications_android_tv.egg-info/PKG-INFO
+notifications_android_tv.egg-info/SOURCES.txt
+notifications_android_tv.egg-info/dependency_links.txt
+notifications_android_tv.egg-info/not-zip-safe
+notifications_android_tv.egg-info/requires.txt
+notifications_android_tv.egg-info/top_level.txt
