@@ -1,0 +1,3 @@
+[console_scripts]
+ecas = ecas.ecas:list_ecas_steps
+

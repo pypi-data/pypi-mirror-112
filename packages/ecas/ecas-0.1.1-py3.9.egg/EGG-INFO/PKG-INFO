@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: ecas
+Version: 0.1.1
+Summary: A CLI to directly read your PR status
+Home-page: UNKNOWN
+Author: Pierre Valentin
+Author-email: pievalentin@gmail.com
+License: MIT
+Project-URL: repository, https://github.com/pievalentin/ecas
+Platform: UNKNOWN
+Requires-Python: ==3.*,>=3.8.0
+Provides-Extra: dev
+License-File: LICENSE
+
+
+Ecas RP automation script
+=========================
+
+This tool has been written to check the status of your PR application in ECAS automatically. This avoid multiple click and form filling. You can set alert using a system like cron.
+
+Getting started
+---------------
+
+
+#. Get the code
+
+First get this code on your machine with
+
+.. code-block:: bash
+
+   git clone git@github.com:pievalentin/ecas.git && cd ecas
+
+
+#. Install the tool
+
+Run this command to install the tool:
+
+.. code-block:: bash
+
+   pip3 install .
+
+Restart your terminal so the ``ecas`` is available.
+
+Usage
+-----
+
+.. code-block:: bash
+
+   ecas lastname iuc_number birthday birth_country_code
+
+For example for France:
+
+.. code-block:: bash
+
+   ecas Dupont 112245589 "2001-01-01" 022
+
+For more details, you can
+
+.. code-block:: bash
+
+   ecas --help
+
+Find your country code
+----------------------
+
+To find your country code, you can look it up `in this file </country_code.html>`_
+
+NB
+--
+
+Use this tool responsibly. Don't spam IRCC server :)
+
+
