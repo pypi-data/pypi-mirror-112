@@ -1,0 +1,17 @@
+mangas_dl/__init__.py,sha256=hKRQVlJYTnOY5crhfSfYks5yjfAXUgl1elxLSlemlJs,15
+mangas_dl/__main__.py,sha256=yfwbUGJFmI9TsjgC-FugJeHGSlicKGN4QJMimXN_TI4,2890
+mangas_dl/download_chapters_functions.py,sha256=mGMpxtmXMHOx3U4MIlQsrcAqqV8td6Z9aHep3Fddiqo,3533
+mangas_dl/mangas_dl_class.py,sha256=MAmoCFaFNllbI5f6n_BeyJzfADsvdhjxVfU_3U67eas,4096
+mangas_dl/pre_download_functions.py,sha256=ecMmU7WvudBSOlUXWK6clzqWvTLx9UcW8jB_P29wM0E,3448
+mangas_dl/Headers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mangas_dl/Headers/download_and_convert.py,sha256=DRIaqX4u_ET8DaVfnDVKKV1o8oP95oTIE4wcTJc-HyM,911
+mangas_dl/Headers/errors.py,sha256=N3-H3fAl7yiSxkPgwZ1PSbdKT0RQG2f64vqLQSLiwBw,505
+mangas_dl/Headers/functions.py,sha256=7c1dOm5OI-07kdzuROv6wNQZYH-Jesue2YsnPYI897w,608
+mangas_dl/Headers/functions_formatting.py,sha256=rT4E27_BCPCjYa4gRUD_7qUYen5djWMo5_mANUyB9Jg,2159
+mangas_dl/Headers/functions_os.py,sha256=FtEprfLQjsWg4zFNif1kRKzDl6VT7yRum-zk91lV6fE,1416
+mangas_dl/Headers/functions_web.py,sha256=kSDxVZAsAK8_3U8ItXSwV3cZG-YlRgCUYvN5dUUMnZw,663
+mangas_dl-0.2.3.dist-info/METADATA,sha256=hGO7pNAzc9tB2dm1neFwEumjsotg-64WRxAY1to-2ro,4718
+mangas_dl-0.2.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mangas_dl-0.2.3.dist-info/entry_points.txt,sha256=KesMZ5kkWn1AxyNYuOFg55ELeaLq-yfG4Fw6_058OcM,73
+mangas_dl-0.2.3.dist-info/top_level.txt,sha256=lGgTH7KEALPrcDwUwjU5WiCkRh8LYXxfrvnAQPQYHZY,10
+mangas_dl-0.2.3.dist-info/RECORD,,
