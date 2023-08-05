@@ -1,0 +1,5 @@
+[console_scripts]
+SLIXLineplotParameterGenerator = SLIX._cmd:main_line_profile
+SLIXParameterGenerator = SLIX._cmd:main_full_image
+SLIXVisualizeParameter = SLIX._cmd:main_visualize
+
