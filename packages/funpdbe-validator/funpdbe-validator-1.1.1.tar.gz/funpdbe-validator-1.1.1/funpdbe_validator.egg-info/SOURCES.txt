@@ -1,0 +1,11 @@
+README.md
+setup.py
+funpdbe_validator/__init__.py
+funpdbe_validator/residue_index.py
+funpdbe_validator/validator.py
+funpdbe_validator.egg-info/PKG-INFO
+funpdbe_validator.egg-info/SOURCES.txt
+funpdbe_validator.egg-info/dependency_links.txt
+funpdbe_validator.egg-info/requires.txt
+funpdbe_validator.egg-info/top_level.txt
+funpdbe_validator.egg-info/zip-safe
