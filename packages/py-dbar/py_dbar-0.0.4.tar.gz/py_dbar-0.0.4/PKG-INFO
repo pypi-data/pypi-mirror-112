@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: py_dbar
+Version: 0.0.4
+Summary: Dbar Algorithm for EIT
+Home-page: UNKNOWN
+Author: NablaIp
+Author-email: <ivanpombo.eigen@gmail.com>
+License: UNKNOWN
+Keywords: python,EIT,DBar Algorithm
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+This package complements the pyEIT package, providing a framework of the Dbar Algorithm for Electrical Impedance Tomography initially implemented by S. Siltanen in Matlab based on the theoretical of A. Nachman
+
