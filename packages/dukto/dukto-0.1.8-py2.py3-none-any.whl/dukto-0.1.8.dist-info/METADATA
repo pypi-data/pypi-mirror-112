@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dukto
+Version: 0.1.8
+Summary: data pre-processing pipeline library.
+Home-page: https://github.com/ahmedhindi/dukto
+Author: UNKNOWN
+Author-email: ahmedelsyd5@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: pandas
+Requires-Dist: pydantic
+
+UNKNOWN
+
+
