@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+README_en.md
+SourceHanSansCN-Medium.otf
+__init__.py
+insightface_paddle.py
+requirements.txt
+setup.py
+insightface_paddle.egg-info/PKG-INFO
+insightface_paddle.egg-info/SOURCES.txt
+insightface_paddle.egg-info/dependency_links.txt
+insightface_paddle.egg-info/entry_points.txt
+insightface_paddle.egg-info/requires.txt
+insightface_paddle.egg-info/top_level.txt
+test/test_python.py

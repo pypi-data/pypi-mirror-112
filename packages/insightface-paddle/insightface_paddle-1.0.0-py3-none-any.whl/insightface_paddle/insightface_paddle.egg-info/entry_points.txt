@@ -1,0 +1,3 @@
+[console_scripts]
+insightfacepaddle = insightface_paddle:main
+
