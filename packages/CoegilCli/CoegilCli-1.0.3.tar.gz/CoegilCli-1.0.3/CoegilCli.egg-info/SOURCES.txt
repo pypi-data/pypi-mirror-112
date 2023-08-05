@@ -1,0 +1,11 @@
+setup.py
+CoegilCli.egg-info/PKG-INFO
+CoegilCli.egg-info/SOURCES.txt
+CoegilCli.egg-info/dependency_links.txt
+CoegilCli.egg-info/entry_points.txt
+CoegilCli.egg-info/requires.txt
+CoegilCli.egg-info/top_level.txt
+coegil/ApiService.py
+coegil/Cli.py
+coegil/Helpers.py
+coegil/__init__.py
