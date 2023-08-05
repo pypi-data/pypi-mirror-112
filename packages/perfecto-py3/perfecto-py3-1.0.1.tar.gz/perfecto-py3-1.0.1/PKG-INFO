@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: perfecto-py3
+Version: 1.0.1
+Summary: Perfecto Reporting SDK for Python
+Perfecto Reporting is a multiple execution digital report
+Home-page: https://github.com/PerfectoCode
+Author: Perfecto
+Author-email: perfecto@perfectomobile.com
+License: UNKNOWN
+Download-URL: https://github.com/PerfectoCode
+Description: UNKNOWN
+Keywords: Perfecto,PerfectoMobile,Reporting,Selenium,Appium,Automation testing
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
