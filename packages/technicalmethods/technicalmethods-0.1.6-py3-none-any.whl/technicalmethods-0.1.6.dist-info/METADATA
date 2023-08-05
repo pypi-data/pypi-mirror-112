@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: technicalmethods
+Version: 0.1.6
+Summary: Technical Analysis tools
+Home-page: https://github.com/GBERESEARCH/technicalmethods
+Author: GBERESEARCH
+Author-email: gberesearch@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.16.2)
+Requires-Dist: pandas (>=1.0.0)
+
+# technicalmethods
+
+
