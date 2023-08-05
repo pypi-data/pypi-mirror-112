@@ -1,0 +1,366 @@
+Metadata-Version: 2.1
+Name: yourbase
+Version: 6.0.0b0
+Summary: Automatically skip tests that don't need to run
+Home-page: https://yourbase.io
+Author: YourBase
+Author-email: python@yourbase.io
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Testing :: Unit
+Classifier: Topic :: Software Development :: Version Control :: Git
+Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+Requires-Dist: coverage (>=5)
+Requires-Dist: pastel
+Requires-Dist: python-dateutil (>=2.7)
+Requires-Dist: requests
+Requires-Dist: six
+Requires-Dist: backports-tempfile ; python_version < "3"
+Requires-Dist: enum34 ; python_version < "3"
+Requires-Dist: functools32 ; python_version < "3"
+Requires-Dist: pathlib ; python_version < "3"
+Requires-Dist: typing ; python_version < "3"
+
+# YourBase Python Test Acceleration
+
+Tests are important. For large monoliths, they're also a major source of drag
+on velocity.
+
+YourBase is a tool that traces your tests to determine which functions each
+test depends on in order to create a dependency graph. It can later use the
+dependency graph to determine which tests don't need to run because their
+code paths have not changed. These tests are skipped automatically.
+
+No configuration, setup, or babysitting required. To install:
+
+```sh
+pip install yourbase
+```
+
+YourBase works with Python 2.7+ and Python 3.5+; using `pytest` or
+`unittest`.
+
+See [docs.yourbase.io][docs.yourbase.io] for more information.
+
+[docs.yourbase.io]: https://docs.yourbase.io/
+
+## Access
+
+By using YourBase, you agree to our [terms of service][tos].
+
+YourBase test acceleration works on your laptop, YourBase test acceleration
+works in your CI! Your data never leaves your control—cache data locally or
+specify an S3 bucket to synchronize dependency graphs among any number of
+credentialed machines.
+
+YourBase will work for free for 30 days. Please consider [purchasing a
+license][yourbase.io] if you like it—those who do generally get more back than
+they spend.
+
+[tos]: https://yourbase.io/legal/terms
+[yourbase.io]: https://yourbase.io
+
+## First run
+
+### `unittest` Only
+
+Place
+
+```python
+import unittest
+import yourbase
+
+yourbase.attach(unittest)
+```
+
+in a file that runs before your tests (e.g. `tests/__init__.py`). Do not do this
+step if you are using `pytest`.
+
+### All installations
+
+Run your tests with the same command you typically use. You should see some
+output from YourBase similar to
+
+```text
+[YB] Starting Python acceleration
+```
+
+The first run will be cold. During a cold run, YourBase will build
+a dependency graph based on the tests that are executed. The graph
+contains relationships between individual tests and the functions they
+call. If you just want to see YourBase in action and your tests are
+going to take a while, you can run a subset of tests. The dependency
+graph for the subset will be used correctly even if you later run all tests.
+
+After the run finishes, running again will skip all tests. Modifying a
+dependency will run only tests whose code paths touched the changed code.
+You're YourBased! 🚀
+
+### Forcing specific tests to run
+
+You can tell YourBase to never skip specific tests with decorators:
+
+```python
+# pytest
+import pytest
+
+@pytest.mark.do_not_accelerate
+def test_function():
+   # ...
+
+# unittest
+import yourbase.plugins.unittest as yourbase
+
+@yourbase.do_not_accelerate
+class TestClass(unittest.TestCase):
+   def test_function():
+      # ...
+```
+
+The test or group will never be skipped due to unchanged dependencies. If you
+are using test cohorting (below), it may still be skipped if it is not assigned
+to the running shard.
+
+We do not yet support this feature for `unittest`.
+
+### How do I know YourBase won't incorrectly skip important tests?
+
+YourBase test selection includes an "observation mode" which allows you to test drive test selection without actually skipping any tests. "Observation mode" provides feedback to help you establish trust between your test suite and the test selection plugin.
+
+In “observation mode” all [command-line specified] examples will be run, but YourBase will monitor if the test selection would have skipped any tests that ultimately failed. At the end, it will print out the names of any tests that would have been incorrectly skipped.
+
+To enable observation mode, set `YOURBASE_OBSERVATION_MODE=true` in the environment, and run your tests.
+
+```sh
+# Pytest example
+$ YOURBASE_OBSERVATION_MODE=true pytest tests/
+```
+
+#### Synchronizing dependency graphs
+
+By default, YourBase's dependency graph is stored locally on the machine where it was
+created, and it will not leave the machine without further configuration. While local
+test acceleration is great for your individual needs, the true power comes in
+sharing graphs with individuals, teams, and CI environments.
+
+The dependency graph data includes:
+
+- test names
+- file names
+- class and function names
+- relationships between of the above
+- a small amount of metadata like commit hash, build time, and Python version
+
+To share dependency graphs, YourBase utilizes an S3 bucket as a collaboration point.
+
+##### AWS S3 bucket configuration
+
+All machines should set
+
+```sh
+YOURBASE_REMOTE_CACHE=s3://<bucketname>[/key/prefix]
+```
+
+where `<bucketname>` is an S3 bucket that each machine has `Get`/`Put`/`List`
+access to. Dependency graphs generated for passing builds from clean working trees
+will be synchronized to this location, then used for future runs if a local
+cache is not present. (Dependency graphs run against code with uncommitted changes
+will be stored only locally.)
+
+It is safe to share one bucket between multiple repositories, even if across
+multiple languages. (Ruby test acceleration coming soon!)
+
+YourBase uses the system AWS credentials by default. This can be configured via
+environment variables or [AWS CLI configuration files](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html).
+
+```sh
+# To use system AWS credentials via environment variables, ensure your
+# credentials are exported in your environment.
+export AWS_ACCESS_KEY_ID=changeme
+export AWS_SECRET_ACCESS_KEY=changeme
+```
+
+If you want YourBase to use different credentials (or if you're setting the
+system AWS credentials to bogus values for your tests or CI), you can set these
+YourBase-specific environment variables instead:
+
+```sh
+# To set YourBase specific AWS credentials, export the following:
+export YOURBASE_AWS_ACCESS_KEY_ID=changeme
+export YOURBASE_AWS_SECRET_ACCESS_KEY=changeme
+```
+
+If these are set, we'll use them instead of the system credentials.
+
+Your code will never be uploaded to the bucket. Only the dependency graphs are
+uploaded to the bucket. Neither your code nor your dependency graphs will touch
+YourBase servers.
+
+#### Test parallelization
+
+YourBase has first-party support for acceleration-friendly parallelization:
+
+1. Set `YOURBASE_COHORT_COUNT` to the number of shards
+2. Set `YOURBASE_ACTIVE_COHORT` to the shard ID (in the range `[1, YOURBASE_COHORT_COUNT]`)
+
+YourBase uses consistent hashing to split your tests across shards so they
+do not get "reshuffled" when other tests are added or removed. This
+will give parallelized tests the full benefits of acceleration.
+
+CircleCI users do not have to set the above environment variables as YourBase
+will inherit them automatically. However you **must** remove any CircleCI
+test splitting or globbing, as YourBase will automatically choose which
+tests to run "just in time".
+
+#### Compatibility
+
+##### Poetry
+
+YourBase is compatible with the packaging and dependency management tool
+Poetry. Once the YourBase package is installed, simply use Poetry as
+normally.
+
+For example:
+
+```sh
+# Install the YourBase package
+poetry add yourbase
+
+# Execute tests
+poetry run pytest
+```
+
+## Known issues
+
+### Incorrectly skipped tests
+
+If you are using `unittest` and define your own `setUp`/`tearDown` functions, be
+sure they call `super` before performing other actions:
+
+```python
+class MyTestClass:
+   def setUp(self):
+      super(self.__class__, self).setUp()
+      # ...
+
+   def tearDown(self):
+      super(self.__class__, self).tearDown()
+      # ...
+```
+
+If you are not defining your own `setUp` and `tearDown` functions, you do not
+need to do this.
+
+### Errors
+
+If you run into errors about the `_sqlite3` module not being found, first run
+
+```sh
+# Debian-based
+sudo apt-get install libsqlite3-dev
+# macOS
+brew install sqlite3
+```
+
+then rebuild and reinstall the Python version you are using. If you use
+`pyenv`, this will look something like
+
+```sh
+pyenv install --force <PYTHON_VERSION>
+
+# If that doesn't work, try
+PYTHON_CONFIGURE_OPTS="--enable-loadable-sqlite-extensions" pyenv install --force <PYTHON_VERSION>
+```
+
+### Conflicts
+
+#### Proxy objects
+
+Python objects that opaquely wrap other objects by overriding Python builtins
+like `__name__` and `__class__` can cause tracing issues in YourBase that may
+manifest as errors from within those proxy objects. If you experience these
+issues, you can set
+
+```sh
+export YOURBASE_TIMID=true
+```
+
+to use a slower tracing algorithm that will avoid these errors. Tracing overhead
+is dramatically increased using this flag, so we don't recommend setting this if
+you are not experiencing issues.
+
+#### Plugin pytest-xdist
+
+The YourBase Test Selection and `pytest-xdist` plugins have similar goals, reducing
+the overall test execution time of tests, but take different approaches to solving
+the problem. As such, there are conflicts when both plugins are enabled. When
+using the YourBase Test Selection plugin, please uninstall pytest-xdist or
+execute pytest-xdist with NUMCPUS=0.
+
+## Changelog
+
+- 5.2.4 (2021-06-04)
+  - Adds a temporary workaround to a `pytest` behavior that causes skipped tests' teardown hooks to be run even when their corresponding setup hooks weren't; all setup and teardown hooks will now be run for skipped tests
+- 5.2.3 (2021-05-28)
+  - Demotes a superfluous warning to a debug message
+- 5.2.2 (2021-05-28)
+  - Fixes a possibility of duplicate error messages in observation mode
+- 5.2.0 (2021-05-28)
+  - Adds observation mode
+  - Adds optional anonymized telemetry
+- 5.1.6 (2021-05-26)
+  - Improves documentation
+  - Improves log output
+  - Fixes a bug where blank/absent/unreadable file paths for Python code would cause an error when traced
+  - Fixes a bug where a remote dependency graph could be found and selected, but not used
+  - In pytest, tests not run due to cohorting are now deselected (changed from selected but skipped)
+  - Improved error handling in the face of `pytest-xdist`
+  - Fixes a bug where a pytest run that selected 0 tests would be interpreted as failed
+  - Fixes a bug where attaching to unittest hooks then using pytest to run a `unittest.TestCase` test would error
+  - Standardizes terminology to "dependency graph" over "tracing data"
+- 5.1.5 (2021-05-18)
+  - When debug mode is on, debug output is now sent to both stdout and file (changed from just file)
+- 5.1.4 (2021-05-18)
+  - Fixes a bug with `unittest` support that could yield a blank dependency
+    graph
+  - Fixes a bug with `unittest` support that could cause a dependency graph to
+    be written even for failed tests
+- 5.1.3 (2021-05-18)
+  - Fixes an error condition if `pytest` isn't installed
+- 5.1.2 (2021-05-17)
+  - Fixes CircleCI sharded environments from not being inherited by YourBase correctly
+- 5.1.1 (2021-05-17)
+  - Adds first-party support for test parallelization
+- 5.0.10 (2021-05-13)
+  - Fixes a compatibility issue with Celery
+  - Fixes a compatibility issue with "proxy objects" causing tests to error
+  - Improves error messages related to Git availability
+- 5.0.9 (2021-05-11)
+  - Fixes an issue processing certain styles of [PEP 263](https://www.python.org/dev/peps/pep-0263/) tags (e.g. `# -*- coding: utf-8 -*-`)
+  - Adds some friendlier error messages and/or fallbacks caused by Git issues
+- 5.0.7 (2021-05-06)
+  - Fixes a JSON decoding issue present in Python 3.5
+  - Fixes a breaking bug when YourBase is enabled alongside tests that use [`moto`](https://github.com/spulec/moto) mocks
+
+
