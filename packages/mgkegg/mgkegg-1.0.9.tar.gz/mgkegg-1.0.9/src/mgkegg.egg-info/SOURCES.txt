@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/mgkegg/__init__.py
+src/mgkegg/__main__.py
+src/mgkegg/downloads.py
+src/mgkegg/highlight.py
+src/mgkegg/html_parser.py
+src/mgkegg/rest.py
+src/mgkegg/update.py
+src/mgkegg.egg-info/PKG-INFO
+src/mgkegg.egg-info/SOURCES.txt
+src/mgkegg.egg-info/dependency_links.txt
+src/mgkegg.egg-info/entry_points.txt
+src/mgkegg.egg-info/requires.txt
+src/mgkegg.egg-info/top_level.txt
