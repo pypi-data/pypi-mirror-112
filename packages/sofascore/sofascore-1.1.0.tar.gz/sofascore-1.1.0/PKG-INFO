@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: sofascore
+Version: 1.1.0
+Summary: 
+Author: shimst3r
+Author-email: shimst3r@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pandas (>=1.3.0,<2.0.0)
+Requires-Dist: tables (>=3.6.1,<4.0.0)
