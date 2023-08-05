@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: colorful-print
+Version: 0.0.1
+Summary: Can use it to color print.
+Home-page: https://github.com/sanggi-wjg/color_print.git
+Author: SangGi
+Author-email: girr311@naver.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requirements
+
+# color_print
+
+```python
+from color_print import color
+
+color.black('Black')
+color.red('Red')
+color.green('Green')
+color.yellow('Yellow')
+color.blue('Blue')
+color.magenta('Magenta')
+color.cyan('Cyan')
+color.white('White')
+
+```
+
