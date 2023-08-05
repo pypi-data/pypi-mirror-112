@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/schemdule/__init__.py
+src/schemdule/__main__.py
+src/schemdule/timetable.py
+src/schemdule.egg-info/PKG-INFO
+src/schemdule.egg-info/SOURCES.txt
+src/schemdule.egg-info/dependency_links.txt
+src/schemdule.egg-info/top_level.txt
+src/schemdule/prompters/__init__.py
+src/schemdule/prompters/general.py
