@@ -1,0 +1,12 @@
+purplship/mappers/dhl_universal/__init__.py,sha256=72NkmfKE-5cRwwQjFsgBJUGRpxGfKsfTZDn_wswWmCY,353
+purplship/mappers/dhl_universal/mapper.py,sha256=AaELrrb8dtmZW9c9fASWvajri_zNLmOWSC9KiQDtIDY,4272
+purplship/mappers/dhl_universal/proxy.py,sha256=rdX6ZTSlA2AUF5jh_MMuPIQk4dyAeyd3UpX9h89xGyw,980
+purplship/mappers/dhl_universal/settings.py,sha256=NSRBOFCYhYOKmNInw4k97nuO0kjJyoqVsAIAnNGo-aQ,419
+purplship/providers/dhl_universal/__init__.py,sha256=D1bW7gYJDhU_GoQ9x3Ds7eP1uUzNAShjhd9EW9iLpcA,823
+purplship/providers/dhl_universal/error.py,sha256=OAyZIDuNhutdMUtldaft938EeUqF5rrYiw3irbOGI_0,709
+purplship/providers/dhl_universal/tracking.py,sha256=yZo2evr1IucHTRVSilx6i80sBzLnUQv5UVI3cTdTeh4,2141
+purplship/providers/dhl_universal/units.py,sha256=RwjtB-EwJWXFlMkqj68EVHbfuZdocNPWOQBeXsNmSSs,1342
+purplship/providers/dhl_universal/utils.py,sha256=ByYsBw7DZlGqxXRR2MQp8ZXhWiVrutjURZ6052qCjx8,386
+purplship.dhl_universal-2021.6.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+purplship.dhl_universal-2021.6.dist-info/METADATA,sha256=nMMTV-yTJMUGqQygO7VN203FPDTpD4zVujH6RzuVbio,1473
+purplship.dhl_universal-2021.6.dist-info/RECORD,,
