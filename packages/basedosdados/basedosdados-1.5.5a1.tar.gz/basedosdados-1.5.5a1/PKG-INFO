@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: basedosdados
+Version: 1.5.5a1
+Summary: Organizar e facilitar o acesso a dados brasileiros através de tabelas públicas no BigQuery.
+Home-page: https://github.com/base-dos-dados/bases
+License: MIT
+Author: Joao Carabetta
+Author-email: joao.carabetta@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Jinja2 (==2.11.2)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: google-cloud-bigquery (==1.28.0)
+Requires-Dist: google-cloud-bigquery-storage (==1.1.0)
+Requires-Dist: google-cloud-storage (==1.31.2)
+Requires-Dist: pandas (==1.2.4)
+Requires-Dist: pandas-gbq (==0.13.2)
+Requires-Dist: pyaml (==20.4.0)
+Requires-Dist: ruamel.yaml (==0.17.4)
+Requires-Dist: tomlkit (==0.7.0)
+Requires-Dist: tqdm (==4.50.2)
+Project-URL: Repository, https://github.com/base-dos-dados/bases
+Description-Content-Type: text/markdown
+
+# Python Package
+
+## Desenvolvimento
+
+#### CLI
+
+Suba o CLI localmente
+
+```sh
+make create-env
+. .mais/bin/activate
+python setup.py develop
+```
+
+#### Versionamento
+
+Publique nova versão
+
+```sh
+poetry version [patch|minor|major]
+poetry publish --build
+```
