@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+gura/GuraParser.py
+gura/Parser.py
+gura/__init__.py
+gura.egg-info/PKG-INFO
+gura.egg-info/SOURCES.txt
+gura.egg-info/dependency_links.txt
+gura.egg-info/requires.txt
+gura.egg-info/top_level.txt
