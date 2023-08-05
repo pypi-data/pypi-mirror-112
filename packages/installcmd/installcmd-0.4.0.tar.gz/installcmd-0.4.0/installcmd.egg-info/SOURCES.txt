@@ -1,0 +1,13 @@
+README.md
+setup.py
+installcmd/__init__.py
+installcmd/cli.py
+installcmd/commands.yaml
+installcmd/lib.py
+installcmd/linux.py
+installcmd.egg-info/PKG-INFO
+installcmd.egg-info/SOURCES.txt
+installcmd.egg-info/dependency_links.txt
+installcmd.egg-info/entry_points.txt
+installcmd.egg-info/requires.txt
+installcmd.egg-info/top_level.txt

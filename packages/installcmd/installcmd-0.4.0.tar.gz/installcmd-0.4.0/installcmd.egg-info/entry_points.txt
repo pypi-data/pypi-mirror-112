@@ -1,0 +1,3 @@
+[console_scripts]
+installcmd = installcmd.cli:main
+
