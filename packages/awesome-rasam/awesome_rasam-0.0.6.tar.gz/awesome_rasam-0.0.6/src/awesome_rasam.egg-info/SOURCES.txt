@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/awesome_rasam/__init__.py
+src/awesome_rasam.egg-info/PKG-INFO
+src/awesome_rasam.egg-info/SOURCES.txt
+src/awesome_rasam.egg-info/dependency_links.txt
+src/awesome_rasam.egg-info/requires.txt
+src/awesome_rasam.egg-info/top_level.txt
