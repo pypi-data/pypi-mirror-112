@@ -1,0 +1,16 @@
+signalboxclient/__init__.py,sha256=caTQFhCGhEA-Vkb80ACFCxaBzXZccMiG56zP-Ub0SLo,200
+signalboxclient/client.py,sha256=RuXEHYuRKPA8DrmAX4wbPZum2qy0ShYeVJSCjKihF2w,8000
+signalboxclient/client_functions.py,sha256=biZIUU4exNjTlbCYGN9kZtKBFPg1m-OzOBjhnRHPOeo,1975
+signalboxclient/exceptions.py,sha256=k5-bEx9YwHBpiW6d0C53530dxrwH19JFZ2IPKTaHfD0,377
+signalboxclient/experiments.py,sha256=sBy7nBdHA9e7nO2pM7obcdykT6zSXHQ-w5nL9nkAkUQ,1366
+signalboxclient/pagination.py,sha256=oiVeb41aau3ML5Do2eK06mSB0jWirOex9TFCiHIAftY,659
+signalboxclient/parameter_recommenders.py,sha256=s_BPwiJM1UHTFdKHzryZpJCbvbfCI1DDWTKL2XwyB6A,671
+signalboxclient/parameters.py,sha256=2C_tFD_4mwnrexZuZvqshWcydVSlYmxsuPI5y5fFLSo,586
+signalboxclient/product_recommenders.py,sha256=-RpJ6NcTLF0gtJxJjCrflXOtOMmnawIrWgIwWNPoJCw,767
+signalboxclient/products.py,sha256=x2K-SiVYm3XUrm9xgFFXOMa2fy-zMHOL8y92Zm-xRG8,777
+signalboxclient/touchpoints.py,sha256=dbaY15mu94Kj_vWxrPsAci176GzwytXOTlyxb3A8998,1201
+signalboxclient/trackedusers.py,sha256=SkdRW5BACEEOYSZdiwGx1QfwVpvuI0DayBU_nU0hSdM,991
+signalboxclient-0.1.17.dist-info/LICENSE,sha256=RwMifKvE3dUD9SHExRvZY-Viv2buFj9EGemSru-Zy4Y,1080
+signalboxclient-0.1.17.dist-info/WHEEL,sha256=iTBNkFIR26Wnx2cg5455J1IIBEskRg4YJC9DJwgu-js,99
+signalboxclient-0.1.17.dist-info/METADATA,sha256=m2hnnnnAopumxY-nCw3UK8LjQFk2tJnzN2cQBiza3po,322
+signalboxclient-0.1.17.dist-info/RECORD,,
