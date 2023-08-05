@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "casey"
+version = "1.0.2"
+description = "A simple library to support various naming conventions and convert strings from one to another"
+authors = [
+    "Marek Sierociński <mareksierocinski@gmail.com>"
+]
+license = "Apache-2.0"
+
+readme = "README.md"
+
+repository = "https://github.com/marverix/casey"
+homepage = "https://github.com/marverix/casey"
+
+keywords = ["naming conventions", "camelCase", "PascalCase", "kebab-case", "snake_case"]
+
+classifiers = [
+    "Topic :: Utilities"
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.1"
+pycodestyle = "^2.7.0"
+coverage = "^5.5"
+tox = "^3.23.0"
+tox-poetry = "^0.3.0"
+codecov = "^2.1.11"
+tox-gh-actions = "^2.5.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
