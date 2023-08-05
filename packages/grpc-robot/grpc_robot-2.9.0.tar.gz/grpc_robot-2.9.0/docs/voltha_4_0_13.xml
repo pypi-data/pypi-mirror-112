@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="grpc_robot.Voltha" type="LIBRARY" format="ROBOT" scope="SUITE" namedargs="true" generated="2021-07-07T10:14:23Z" specversion="2" source="../grpc_robot/voltha_robot.py" lineno="19">
+<version>2.9.0</version>
+<scope>test suite</scope>
+<namedargs>yes</namedargs>
+<doc>
+    This library is intended to supported different Protocol Buffer definitions. Precondition is that python files
+    generated from Protocol Buffer files are available in a pip package which must be installed before the library
+    is used.
+
+    | Supported device  | Pip package   | Pip package version | Library Name      |
+    | voltha            | voltha-protos | 4.0.13              | grpc_robot.Voltha |
+    </doc>
+<kw name="Connection Close">
+<arguments>
+</arguments>
+<doc>
+Closes the connection to the gRPC host.</doc>
+</kw>
+<kw name="Connection Open">
+<arguments>
+<arg>host</arg>
+<arg>port</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+Opens a connection to the gRPC host.
+
+*Parameters*:
+- host: &lt;string&gt;|&lt;IP address&gt;; Name or IP address of the gRPC host.
+- port: &lt;number&gt;; TCP port of the gRPC host.
+
+*Named Parameters*:
+- timeout: &lt;number&gt;; Timeout in seconds for a gRPC response. Default: 30 s</doc>
+</kw>
+<kw name="Connection Parameters Get">
+<arguments>
+</arguments>
+<doc>
+Retrieves the connection parameters for the gRPC channel.
+
+*Return*: A dictionary with the keys:
+- timeout</doc>
+</kw>
+<kw name="Connection Parameters Set">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+Sets the gRPC channel connection parameters.
+
+*Named Parameters*:
+- timeout: &lt;number&gt;; Timeout in seconds for a gRPC response.
+
+*Return*: Same dictionary as the keyword _Connection Parameter Get_ with the values before they got changed.</doc>
+</kw>
+<kw name="Extension Get Ext Value">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Extension Set Ext Value">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Get Keyword Names">
+<arguments>
+</arguments>
+<doc>
+Returns the list of keyword names</doc>
+</kw>
+<kw name="Hw Management Service Get Health Status">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Library Version Get">
+<arguments>
+</arguments>
+<doc>
+Retrieve the version of the currently running library instance.
+
+*Return*: version string consisting of three dot-separated numbers (x.y.z)</doc>
+</kw>
+<kw name="Open Olt Activate Onu">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Collect Statistics">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Create Traffic Queues">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Create Traffic Schedulers">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Deactivate Onu">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Delete Group">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Delete Onu">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Disable Olt">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Disable Pon If">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Enable Indication">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Enable Pon If">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Flow Add">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Flow Remove">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Get Device Info">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Get Ext Value">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Get Gem Port Statistics">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Get Logical Onu Distance">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Get Logical Onu Distance Zero">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Get Onu Statistics">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Heartbeat Check">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Omci Msg Out">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Onu Itu Pon Alarm Set">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Onu Packet Out">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Perform Group Operation">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Reboot">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Reenable Olt">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Remove Traffic Queues">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Remove Traffic Schedulers">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Open Olt Uplink Packet Out">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Pon Sim Get Device Info">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Pon Sim Get Stats">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Pon Sim Receive Frames">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Pon Sim Send Frame">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Pon Sim Update Flow Table">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Activate Image Update">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Cancel Image Download">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Create Device">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Create Event Filter">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Delete Device">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Delete Event Filter">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Disable Device">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Disable Logical Device Port">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Disable Port">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Download Image">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Enable Device">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Enable Logical Device Port">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Enable Port">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Force Delete Device">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Alarm Device Data">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Core Instance">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Device">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Device Group">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Device Type">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Event Filter">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Ext Value">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Image Download">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Image Download Status">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Images">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Logical Device">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Logical Device Port">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Membership">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Mib Device Data">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Get Voltha">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Adapters">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Core Instances">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Device Flow Groups">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Device Flows">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Device Groups">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Device Ids">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Device Pm Configs">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Device Ports">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Device Types">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Devices">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Event Filters">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Image Downloads">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Logical Device Flow Groups">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Logical Device Flows">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Logical Device Meters">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Logical Device Ports">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service List Logical Devices">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Reboot Device">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Receive Change Events">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Receive Packets In">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Reconcile Devices">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Revert Image Update">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Self Test">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Set Ext Value">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Simulate Alarm">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Start Omci Test Action">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Stream Packets Out">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Subscribe">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Update Device Pm Configs">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Update Event Filter">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Update Logical Device Flow Group Table">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Update Logical Device Flow Table">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Update Logical Device Meter Table">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Service Update Membership">
+<arguments>
+<arg>param_dict</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>
+no documentation available</doc>
+</kw>
+<kw name="Voltha Version Get">
+<arguments>
+</arguments>
+<doc>
+Retrieve the version of the currently used python module _voltha-protos_.
+
+*Return*: version string consisting of three dot-separated numbers (x.y.z)</doc>
+</kw>
+</keywordspec>

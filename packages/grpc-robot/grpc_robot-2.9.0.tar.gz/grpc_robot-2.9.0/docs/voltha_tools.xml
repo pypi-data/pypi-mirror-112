@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="grpc_robot.VolthaTools" type="LIBRARY" format="ROBOT" scope="TEST" namedargs="true" generated="2021-07-07T10:14:25Z" specversion="2" source="../grpc_robot/tools/voltha_tools.py" lineno="20">
+<version>2.9.0</version>
+<scope>test case</scope>
+<namedargs>yes</namedargs>
+<doc>Tools for the voltha, e.g decoding / conversions.</doc>
+<kw name="Events Decode Event" lineno="31">
+<arguments>
+<arg>bytestring</arg>
+<arg>return_enum_integer=false</arg>
+<arg>return_defaults=false</arg>
+<arg>human_readable_timestamps=true</arg>
+</arguments>
+<doc>Converts bytes to an Event as defined in _message Event_ from events.proto
+
+*Parameters*:
+- bytestring: &lt;bytes&gt;; Byte string, e.g. as it comes from Kafka messages.
+- return_enum_integer: &lt;string&gt; or &lt;bool&gt;; Whether or not to return the enum values as integer values rather than their labels. Default: _false_.
+- return_defaults: &lt;string&gt; or &lt;bool&gt;; Whether or not to return the default values. Default: _false_.
+- human_readable_timestamps: &lt;string&gt; or &lt;bool&gt;; Whether or not to convert the timestamps to human-readable format. Default: _true_.
+
+*Return*: A dictionary with _event_ structure.
+
+*Example*:
+| Import Library | grpc_robot.VolthaTools | WITH NAME | voltha_tools |
+| ${kafka_records} | kafka.Records Get |
+| FOR | ${kafka_record} | IN | @{kafka_records} |
+|  | ${event} | voltha_tools.Events Decode Event | ${kafka_record}[message] |
+|  | Log | ${event} |
+| END |</doc>
+</kw>
+<kw name="Tech Profile Decode Resource Instance" lineno="59">
+<arguments>
+<arg>bytestring</arg>
+<arg>return_enum_integer=false</arg>
+<arg>return_defaults=false</arg>
+<arg>human_readable_timestamps=true</arg>
+</arguments>
+<doc>Converts bytes to an resource instance as defined in _message ResourceInstance_ from tech_profile.proto
+
+*Parameters*:
+- bytestring: &lt;bytes&gt;; Byte string, e.g. as it comes from Kafka messages.
+- return_enum_integer: &lt;string&gt; or &lt;bool&gt;; Whether or not to return the enum values as integer values rather than their labels. Default: _false_.
+- return_defaults: &lt;string&gt; or &lt;bool&gt;; Whether or not to return the default values. Default: _false_.
+- human_readable_timestamps: &lt;string&gt; or &lt;bool&gt;; Whether or not to convert the timestamps to human-readable format. Default: _true_.
+
+*Return*: A dictionary with _event_ structure.
+
+*Example*:
+| Import Library | grpc_robot.VolthaTools | WITH NAME | voltha_tools |
+| ${kafka_records} | kafka.Records Get |
+| FOR | ${kafka_record} | IN | @{kafka_records} |
+|  | ${event} | voltha_tools. Tech Profile Decode Resource Instance | ${kafka_record}[message] |
+|  | Log | ${event} |
+| END |</doc>
+</kw>
+</keywordspec>

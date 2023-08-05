@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: grpc_robot
+Version: 2.9.0
+Summary: Package for sending/recieving messages to/from a gRPC server.
+Home-page: UNKNOWN
+License: 2.9.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+2.9.0
+
