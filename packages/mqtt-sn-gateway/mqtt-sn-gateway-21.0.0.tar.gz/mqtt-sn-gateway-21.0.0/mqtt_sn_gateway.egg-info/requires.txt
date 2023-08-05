@@ -1,0 +1,5 @@
+attrs
+click
+asyncio-mqtt
+asyncio-dgram
+uvloop
