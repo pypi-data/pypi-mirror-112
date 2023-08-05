@@ -1,0 +1,16 @@
+README.md
+setup.py
+sciex/__init__.py
+sciex/check_status.py
+sciex/components.py
+sciex/functions.py
+sciex/gather_results.py
+sciex/reorganize_trials.py
+sciex/result_types.py
+sciex/trial_runner.py
+sciex/util.py
+sciex.egg-info/PKG-INFO
+sciex.egg-info/SOURCES.txt
+sciex.egg-info/dependency_links.txt
+sciex.egg-info/requires.txt
+sciex.egg-info/top_level.txt
