@@ -1,0 +1,7 @@
+singer-python==5.9.0
+slackclient==2.6.0
+
+[dev]
+pylint
+ipdb
+nose
