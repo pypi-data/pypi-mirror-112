@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: dctap
+Version: 0.2.2
+Summary: Validate and debug DCTAP instances.
+Home-page: https://github.com/dcmi/dctap-python
+Author: DCMI
+Author-email: admin@dublincore.net
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click
+Requires-Dist: dataclasses
+Requires-Dist: ruamel.base
+Requires-Dist: ruamel.yaml
+Requires-Dist: sphinx ; extra == "doc"
+Requires-Dist: sphinx_rtd_theme ; extra == "doc"
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Provides-Extra: doc
+Provides-Extra: test
+
+dctap-python
+============
+
+Basic validation of a DCTAP instance.
+
+|Tests Badge|
+
+Documentation
+-------------
+
+- [dctap-python project](https://readthedocs.org/projects/dctap-python/) on readthedocs.org
+- https://dctap-python.readthedocs.io/en/latest/
+
+|Docs Badge|
+
+Installation
+------------
+
+.. code-block:: bash
+
+    $ git clone https://github.com/dcmi/dctap-python.git
+    $ cd dctap-python
+    dctap-python$ python -m venv .venv
+    dctap-python$ source .venv/bin/activate
+    dctap-python$ python3 -m pip install flit Pygments
+    dctap-python$ flit install -s
+
+.. |Docs Badge| image:: https://readthedocs.org/projects/dctap-python/badge/
+       :alt: Documentation Status
+       :scale: 100%
+       :target: https://dctap-python.readthedocs.io
+       
+.. |Tests Badge| image:: https://github.com/dcmi/dctap-python/actions/workflows/python-tests.yaml/badge.svg
+       :alt: Test Status
+       :scale: 100%
+       :target: https://github.com/dcmi/dctap-python/actions/workflows/python-tests.yaml
+
