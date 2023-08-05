@@ -1,0 +1,3 @@
+[console_scripts]
+pykindler-run = pykindler.cli:client
+
