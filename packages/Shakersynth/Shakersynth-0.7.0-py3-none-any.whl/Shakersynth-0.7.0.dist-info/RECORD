@@ -1,0 +1,16 @@
+Shakersynth-0.7.0.data/scripts/shakersynth.bat,sha256=j7VlrUtsR3yEM9YwzjMmdcs10PyAEofos6R_7PI__dE,21
+shakersynth/__init__.py,sha256=yVNWvhSXGqiBGeiIbzapHG66jOIj-c56KMVs3DkbUT4,193
+shakersynth/__main__.py,sha256=qc0qIbbgUfNL4FHa_wLRVKxhHof404Vvr057mPaUGrw,3827
+shakersynth/aircraft/__init__.py,sha256=58yqu3_dovCQ0YHqhyI4oHVmB2ZYQVOpHmKbpIfwO08,76
+shakersynth/aircraft/aircraft.py,sha256=-lXtnye0WV4mxXjeMW0hrGVPFis73z5UFFGcwoRJdDI,1807
+shakersynth/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shakersynth/config/loader.py,sha256=bhfoMaeOuVDkft4qScdz_iUDceTa6JrTpW0symReldw,2349
+shakersynth/receiver/__init__.py,sha256=F0OOxD1Yc44Lt5KrQdBqYa3jMsTbw75juM6C5yJigW8,52
+shakersynth/receiver/shakersynth.py,sha256=rCjqB4y6IqpPERHYqJT04pVC_kzBVO5IWOtGoPFn7LM,2084
+shakersynth/synth/__init__.py,sha256=NfWM2owbRKZ7i08nOjRwzwB5h2S71Nt0cDW91QyYLZ0,148
+shakersynth/synth/rotor.py,sha256=z-5lRLUyexrr5vuNkOeulZcFGSm2ZnjqnmZgV6bw-xM,4900
+Shakersynth-0.7.0.dist-info/LICENSE,sha256=He4UOKOmacba4ZEjwtufPgIUUddvnNU-rJioIMHCEME,1072
+Shakersynth-0.7.0.dist-info/METADATA,sha256=Jh0lP8cibxbgqZTTZWruK2DcpetDM_ViLasbx0yZfiY,3974
+Shakersynth-0.7.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+Shakersynth-0.7.0.dist-info/top_level.txt,sha256=wWnduWhZ5tb9FRpGTZWmCVO0xE5QmIm-y8r2E2w5-0I,12
+Shakersynth-0.7.0.dist-info/RECORD,,
