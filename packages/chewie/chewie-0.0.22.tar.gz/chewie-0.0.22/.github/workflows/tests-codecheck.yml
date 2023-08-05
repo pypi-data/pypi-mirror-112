@@ -1,0 +1,27 @@
+name: Code health checks
+
+on: [push, pull_request]
+
+env:
+  CODECHECK_PY_VER: 3.8
+
+jobs:
+  codecheck:
+    name: Code check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Set up python-${{ env.CODECHECK_PY_VER }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.CODECHECK_PY_VER }}
+      - name: Install dependencies
+        run: |
+          ./docker/pip_deps.sh --extra-requirements="codecheck-requirements.txt"
+      - name: Run pylint
+        run: |
+          ./test/codecheck/pylint.sh
+      - name: Run pytype
+        run: |
+          PYTHONPATH=. pytype --config setup.cfg chewie
