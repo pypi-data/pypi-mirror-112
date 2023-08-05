@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: playwrighting
+Version: 0.7.1
+Summary: Get your ING account data
+License: MIT
+Author: Pablo Cabezas
+Author-email: headsrooms@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: 12factor-configclasses (>=0.4,<0.5)
+Requires-Dist: anyio (>=3.1.0,<4.0.0)
+Requires-Dist: asyncclick (>=8.0.1,<9.0.0)
+Requires-Dist: beautifulsoup4 (>=4.9,<5.0)
+Requires-Dist: dateparser (>=1.0.0,<2.0.0)
+Requires-Dist: html5lib (>=1.1,<2.0)
+Requires-Dist: lxml (>=4.6.3,<5.0.0)
+Requires-Dist: more-itertools (>=8.7,<9.0)
+Requires-Dist: pandas (>=1.2.4,<2.0.0)
+Requires-Dist: playwright (>=1.11,<2.0)
+Requires-Dist: python-dotenv (>=0.15,<0.16)
+Requires-Dist: rich (>=10.2.2,<11.0.0)
+Requires-Dist: selectolax (>=0.2,<0.3)
+Requires-Dist: tabulate (>=0.8.9,<0.9.0)
+Description-Content-Type: text/markdown
+
+# PlaywrightING
+
+Get your ING bank account data.
+
+This works for ING ES (Spain), for another country page you will have to change some values in constants.py and some 
+and selectors.py.
+
+## Install
+
+    pip install playwrighting
+
+## Commands
+
+To inspect all CLI commands use:
+
+    pying
+
+### Init
+
+This command will initialize the app, scraping your bank data from your account and creating an internal file 
+that will have your global position (cards, accounts and transactions).
+
+    pying init
+
+### Update
+
+This command will try to update your account info, if there are some changes.
+You can force the update with parameter --force.
+
+    pying update [--force]
+
+
+### Download
+
+Files (csv) with your accounts transactions will be downloaded in the specified download_path or supplied parameter 
+--download path.
+
+    pying download [--download_path PATH]
+
+### Show
+
+    pying show
+
+
+## Build
+
+    poetry build
