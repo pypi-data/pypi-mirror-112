@@ -1,0 +1,8 @@
+pyserial>=2.0
+pyqt5>=5.15
+pywebview>=3.0
+requests>=2.20
+qdarkstyle==2.8.1
+pygdbmi>=0.10
+qscintilla>=2.10
+watchdog>=2.1
