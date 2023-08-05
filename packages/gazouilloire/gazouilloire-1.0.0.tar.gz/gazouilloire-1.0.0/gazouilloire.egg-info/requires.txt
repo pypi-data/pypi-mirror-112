@@ -1,0 +1,10 @@
+elasticsearch>=7.10.1
+twitwi>=0.9.1
+requests
+pytz
+psutil
+minet<0.53,>=0.52
+future
+click
+progressbar2
+casanova>=0.15.5
