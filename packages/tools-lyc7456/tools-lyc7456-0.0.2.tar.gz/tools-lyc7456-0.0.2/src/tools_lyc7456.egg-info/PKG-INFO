@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: tools-lyc7456
+Version: 0.0.2
+Summary: lyc7456 运维开发小工具
+Home-page: https://gitee.com/lyc7456/tools-lyc7456.git
+Author: lyc7456
+Author-email: lyc7456gg1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# tools-lyc7456
+
+lyc7456 运维开发小工具
+
+## 0.0.1 更新内容
+
+2021-7-6 开发库创建，上传代码
+
+
