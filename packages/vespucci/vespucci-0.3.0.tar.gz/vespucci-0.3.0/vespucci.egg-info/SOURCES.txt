@@ -1,0 +1,17 @@
+MANIFEST.in
+VERSION
+setup.py
+docs/source/description.rst
+src/vespucci/__init__.py
+src/vespucci/base.py
+src/vespucci/crawler.py
+src/vespucci/oracle.py
+src/vespucci/store.py
+src/vespucci/store_stream.py
+src/vespucci/token_bucket.py
+src/vespucci/utils.py
+vespucci.egg-info/PKG-INFO
+vespucci.egg-info/SOURCES.txt
+vespucci.egg-info/dependency_links.txt
+vespucci.egg-info/requires.txt
+vespucci.egg-info/top_level.txt
