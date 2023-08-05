@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: cfn-lint-serverless
+Version: 0.2.1
+Summary: Serverless rules for cfn-lint
+License: MIT-0
+Author: Amazon Web Services
+Requires-Python: >=3.6,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cfn-lint (>=0.49.2,<0.53.0)
+Description-Content-Type: text/markdown
+
+cfn-lint-serverless
+===================
+
+Ruleset for [cfn-lint](https://github.com/aws-cloudformation/cfn-lint) for serverless applications.
+
+Installation
+------------
+
+```bash
+pip install cfn-lint cfn-lint-serverless
+```
+
+Usage
+-----
+
+```bash
+cfn-lint template.yaml -a cfn_lint_serverless.rules
+```
