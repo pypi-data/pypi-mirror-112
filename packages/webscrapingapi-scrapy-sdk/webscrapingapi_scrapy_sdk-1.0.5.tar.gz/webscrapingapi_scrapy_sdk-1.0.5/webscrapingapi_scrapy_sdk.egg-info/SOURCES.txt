@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+webscrapingapi_scrapy_sdk/__init__.py
+webscrapingapi_scrapy_sdk/middleware.py
+webscrapingapi_scrapy_sdk/request.py
+webscrapingapi_scrapy_sdk/spider.py
+webscrapingapi_scrapy_sdk.egg-info/PKG-INFO
+webscrapingapi_scrapy_sdk.egg-info/SOURCES.txt
+webscrapingapi_scrapy_sdk.egg-info/dependency_links.txt
+webscrapingapi_scrapy_sdk.egg-info/requires.txt
+webscrapingapi_scrapy_sdk.egg-info/top_level.txt
