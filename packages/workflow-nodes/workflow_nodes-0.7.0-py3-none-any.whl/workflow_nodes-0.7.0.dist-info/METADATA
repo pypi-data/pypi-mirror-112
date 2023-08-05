@@ -1,0 +1,208 @@
+Metadata-Version: 2.1
+Name: workflow-nodes
+Version: 0.7.0
+Summary: Collection of nodes for use in workflows.
+Home-page: https://gitlab.com/iam-cms/workflows/workflow-nodes
+Author: Karlsruhe Institute of Technology
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bcrypt (==3.2.0)
+Requires-Dist: certifi (==2021.5.30)
+Requires-Dist: cffi (==1.14.5)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: click-completion (==0.5.2)
+Requires-Dist: cryptography (==3.4.7)
+Requires-Dist: cycler (==0.10.0)
+Requires-Dist: defusedxml (==0.7.1)
+Requires-Dist: et-xmlfile (==1.1.0)
+Requires-Dist: graphviz (==0.16)
+Requires-Dist: idna (==2.10)
+Requires-Dist: jinja2 (==3.0.1)
+Requires-Dist: kadi-apy (==0.15.0)
+Requires-Dist: kiwisolver (==1.3.1)
+Requires-Dist: lxml (==4.6.3)
+Requires-Dist: markupsafe (==2.0.1)
+Requires-Dist: matplotlib (==3.4.2)
+Requires-Dist: numpy (==1.21.0)
+Requires-Dist: openpyxl (==3.0.7)
+Requires-Dist: ordered-set (==4.0.2)
+Requires-Dist: pandas (==1.3.0)
+Requires-Dist: paramiko (==2.7.2)
+Requires-Dist: pillow (==8.3.0)
+Requires-Dist: pycparser (==2.20)
+Requires-Dist: pylatex (==1.4.1)
+Requires-Dist: pynacl (==1.4.0)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2021.1)
+Requires-Dist: qrcode (==7.1)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: scipy (==1.7.0)
+Requires-Dist: scp (==0.13.5)
+Requires-Dist: shellingham (==1.4.0)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: urllib3 (==1.26.6)
+Requires-Dist: xmlhelpy (==0.6.0)
+Provides-Extra: dev
+Requires-Dist: appdirs (==1.4.4) ; extra == 'dev'
+Requires-Dist: astroid (==2.6.2) ; extra == 'dev'
+Requires-Dist: beautifulsoup4 (==4.9.3) ; extra == 'dev'
+Requires-Dist: black (==21.6b0) ; extra == 'dev'
+Requires-Dist: bleach (==3.3.0) ; extra == 'dev'
+Requires-Dist: bs4 (==0.0.1) ; extra == 'dev'
+Requires-Dist: build (==0.5.1) ; extra == 'dev'
+Requires-Dist: certifi (==2021.5.30) ; extra == 'dev'
+Requires-Dist: cffi (==1.14.5) ; extra == 'dev'
+Requires-Dist: cfgv (==3.3.0) ; extra == 'dev'
+Requires-Dist: chardet (==4.0.0) ; extra == 'dev'
+Requires-Dist: click (==7.1.2) ; extra == 'dev'
+Requires-Dist: colorama (==0.4.4) ; extra == 'dev'
+Requires-Dist: cryptography (==3.4.7) ; extra == 'dev'
+Requires-Dist: distlib (==0.3.2) ; extra == 'dev'
+Requires-Dist: docutils (==0.17.1) ; extra == 'dev'
+Requires-Dist: filelock (==3.0.12) ; extra == 'dev'
+Requires-Dist: identify (==2.2.10) ; extra == 'dev'
+Requires-Dist: idna (==2.10) ; extra == 'dev'
+Requires-Dist: importlib-metadata (==4.6.1) ; extra == 'dev'
+Requires-Dist: isort (==5.9.1) ; extra == 'dev'
+Requires-Dist: jeepney (==0.6.0) ; extra == 'dev'
+Requires-Dist: jinja2 (==3.0.1) ; extra == 'dev'
+Requires-Dist: keyring (==23.0.1) ; extra == 'dev'
+Requires-Dist: lazy-object-proxy (==1.6.0) ; extra == 'dev'
+Requires-Dist: markupsafe (==2.0.1) ; extra == 'dev'
+Requires-Dist: mccabe (==0.6.1) ; extra == 'dev'
+Requires-Dist: mypy-extensions (==0.4.3) ; extra == 'dev'
+Requires-Dist: nodeenv (==1.6.0) ; extra == 'dev'
+Requires-Dist: packaging (==21.0) ; extra == 'dev'
+Requires-Dist: pathspec (==0.8.1) ; extra == 'dev'
+Requires-Dist: pep517 (==0.10.0) ; extra == 'dev'
+Requires-Dist: pip-tools (==6.2.0) ; extra == 'dev'
+Requires-Dist: pkginfo (==1.7.0) ; extra == 'dev'
+Requires-Dist: pluggy (==0.13.1) ; extra == 'dev'
+Requires-Dist: pre-commit (==2.13.0) ; extra == 'dev'
+Requires-Dist: py (==1.10.0) ; extra == 'dev'
+Requires-Dist: pycparser (==2.20) ; extra == 'dev'
+Requires-Dist: pygments (==2.9.0) ; extra == 'dev'
+Requires-Dist: pylint (==2.9.3) ; extra == 'dev'
+Requires-Dist: pyparsing (==2.4.7) ; extra == 'dev'
+Requires-Dist: pyyaml (==5.4.1) ; extra == 'dev'
+Requires-Dist: readme-renderer (==29.0) ; extra == 'dev'
+Requires-Dist: regex (==2021.7.6) ; extra == 'dev'
+Requires-Dist: requests (==2.25.1) ; extra == 'dev'
+Requires-Dist: requests-toolbelt (==0.9.1) ; extra == 'dev'
+Requires-Dist: rfc3986 (==1.5.0) ; extra == 'dev'
+Requires-Dist: secretstorage (==3.3.1) ; extra == 'dev'
+Requires-Dist: six (==1.16.0) ; extra == 'dev'
+Requires-Dist: soupsieve (==2.2.1) ; extra == 'dev'
+Requires-Dist: toml (==0.10.2) ; extra == 'dev'
+Requires-Dist: tox (==3.23.1) ; extra == 'dev'
+Requires-Dist: tqdm (==4.61.2) ; extra == 'dev'
+Requires-Dist: twine (==3.4.1) ; extra == 'dev'
+Requires-Dist: typed-ast (==1.4.3) ; extra == 'dev'
+Requires-Dist: typing-extensions (==3.10.0.0) ; extra == 'dev'
+Requires-Dist: urllib3 (==1.26.6) ; extra == 'dev'
+Requires-Dist: virtualenv (==20.4.7) ; extra == 'dev'
+Requires-Dist: webencodings (==0.5.1) ; extra == 'dev'
+Requires-Dist: wheel (==0.36.2) ; extra == 'dev'
+Requires-Dist: wrapt (==1.12.1) ; extra == 'dev'
+Requires-Dist: zipp (==3.5.0) ; extra == 'dev'
+Requires-Dist: pip (==21.1.3) ; extra == 'dev'
+Requires-Dist: setuptools (==57.1.0) ; extra == 'dev'
+
+# workflow-nodes
+
+**workflow-nodes** is a collection of nodes usable inside a *workflow* written
+in Python 3. Each node is an executable command line tool providing the
+`--xmlhelp` interface, which can be used to obtain a machine readable
+representation of any command line tool and its parameters (see also
+[xmlhelpy](https://gitlab.com/iam-cms/workflows/xmlhelpy).
+
+There are nodes to generate reports, to wrap system commands like `awk` and
+some nodes for special use cases like integrating ImageJ macros. Additionally,
+some nodes can interact with a [Kadi4Mat](https://kadi.iam-cms.kit.edu/)
+instance as well.
+
+## Installation
+
+The library can be installed using `pip3` (or `pip`, if there is no dedicated
+version of `pip` for Python 3 installed), which generally comes bundled with
+Python installations. Python version >= 3.6 is required.
+
+`pip3 install workflow-nodes`
+
+When installing the library from source for development instead, it is
+recommended to install the library in editable mode, which simply creates a
+link to the sources so all changes are reflected in the installed package
+immediately. The command will also install some additional development
+dependencies as defined in `setup.py`.
+
+`pip3 install -e .[dev]`
+
+Running the installations inside a virtual environment is recommended, see
+[Virtualenv](https://virtualenv.pypa.io/en/latest/ "Virtualenv") for more
+information.
+
+After installing, make sure the `workflow-nodes` command is runnable from
+anywhere. Depending on the type of installation and if a virtual environment is
+used or not, the `PATH` system variable may need to be adapted accordingly to
+include the path the executable resides in. For example, the following command
+can be used on Linux, assuming the executable resides in `~/.local/bin`:
+
+`export PATH=${HOME}/.local/bin:${PATH}`
+
+This line can also be added to `.bashrc` so it will be executed each time a new
+terminal is opened:
+
+`echo 'export PATH=${HOME}/.local/bin:${PATH}' >> ${HOME}/.bashrc`
+
+Autocomplete is available for fish, zsh, bash and PowerShell and can be
+activated via:
+
+`workflow-nodes config activate-autocompletion`
+
+## Usage
+
+All commands concerning different resources are available as various
+subcommands. For more information or to get a list of subcommands, the
+following commands can be used:
+
+`workflow-nodes --help`
+
+`workflow-nodes --commands`
+
+To use nodes with the local workflow editor, they have to be added to the file
+`$HOME/.pacestudio/tools.txt`. Afterwards you can insert them using the "Add
+Tool" context menu option in the editor.
+
+## Contributing
+
+* First, create a fork of this project and clone it. The main repository can be
+  added as an additional remote to the cloned project, often called `upstream`.
+  Also checkout the `development` branch, which is currently used as the main
+  development branch.
+* Install the project in development mode according to the instructions above
+  and setup the [pre-commit](https://pre-commit.com/) hooks by running
+  `pre-commit install`.
+* Create a Python file for the node in the desired package, e.g. in
+  `workflow_nodes/report/` and implement the functionality of the tool. You can
+  use other existing tools as a reference. Afterwards, add the implemented
+  function to a fitting subcommand group, e.g. to
+  `workflow_nodes/report/main.py`.
+* If there are any new (development) dependencies, add them to
+  `requirements.in` or `requirements.dev.in` and run `pip-compile
+  requirements.in --allow-unsafe` or `pip-compile requirements.dev.in
+  --allow-unsafe` manually.
+* Add an entry about any new functionality to `HISTORY.md`.
+* Before creating a merge request on the main repository, make sure the GitLab
+  CI runs through successfully in your fork.
+
+
