@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+pyonic/__init__.py
+pyonic/client.py
+pyonic.egg-info/PKG-INFO
+pyonic.egg-info/SOURCES.txt
+pyonic.egg-info/dependency_links.txt
+pyonic.egg-info/requires.txt
+pyonic.egg-info/top_level.txt

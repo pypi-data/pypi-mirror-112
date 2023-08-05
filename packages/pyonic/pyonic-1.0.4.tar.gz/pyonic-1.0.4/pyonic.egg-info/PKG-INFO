@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pyonic
+Version: 1.0.4
+Summary: A python SDK for the Ion-Channel application
+Home-page: https://github.com/ion-channel/ion-channel-python-sdk
+Author: Ion Channel
+Author-email: dev@ionchannel.io
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# ion-channel-python-sdk
+
+This is a Python SDK for the Ion Channel Application Programming Interface
+
+Note: This SDK package is still in an alpha development stage - use cautiously
+
+Installation: pip install pyonic
+
+![Black](https://github.com/ion-channel/ion-channel-python-sdk/actions/workflows/black.yml/badge.svg)
+
+
