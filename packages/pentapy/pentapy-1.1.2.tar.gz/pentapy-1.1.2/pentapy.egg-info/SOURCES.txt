@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pentapy/__init__.py
+pentapy/_version.py
+pentapy/core.py
+pentapy/solver.pyx
+pentapy/tools.py
+tests/test_pentapy.py
