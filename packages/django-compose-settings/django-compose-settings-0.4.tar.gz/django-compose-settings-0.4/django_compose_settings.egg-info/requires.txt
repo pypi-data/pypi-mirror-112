@@ -1,0 +1,7 @@
+
+[release]
+wheel
+zest.releaser
+
+[tests]
+flake8
