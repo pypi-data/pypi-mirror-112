@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: mw-aiohttp-security
+Version: 0.1.6
+Summary: maxwin aiohttp security
+Home-page: https://bitbucket.org/maxwin-inc/mw-aiohttp-security/src
+Author: cxhjet
+Author-email: cxhjet@qq.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://bitbucket.org/maxwin-inc/auth/issues?status=new&status=open
+Project-URL: Funding, https://donate.pypi.org
+Project-URL: Say Thanks!, http://saythanks.io/to/example
+Project-URL: Source, https://bitbucket.org/maxwin-inc/mw_aiohttp_security/src
+Description: UNKNOWN
+Keywords: maxwin commonlib security check_auth check_permission
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
