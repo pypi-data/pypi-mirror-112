@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: django-koldar-utils
+Version: 2.23.2
+Summary: Some stuff that i used when developing with django
+Home-page: https://github.com/Koldar/django-koldar-common-apps
+Author: Massimo Bono
+Author-email: massimobono1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires: setuptools
+Requires: wheel
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+License-File: PASSWORD
+License-File: pmakeup-cache.json
+License-File: PMakeupfile.py
+License-File: README.md
+License-File: requirements.txt
+License-File: setup.py
+License-File: TWINE_PYPI_PASSWORD
+Requires-Dist: aniso8601 (>=8.1.1)
+Requires-Dist: arrow (>=1.1.0)
+Requires-Dist: asgiref (>=3.3.4)
+Requires-Dist: certifi (>=2021.5.30)
+Requires-Dist: chardet (>=4.0.0)
+Requires-Dist: decorator (>=4.4.2)
+Requires-Dist: Django (>=3.2.3)
+Requires-Dist: django-currentuser (>=0.5.3)
+Requires-Dist: django-filter (>=2.4.0)
+Requires-Dist: django-graphql-jwt (>=0.3.2)
+Requires-Dist: django-polymorphic (>=3.0.0)
+Requires-Dist: djangorestframework (>=3.12.4)
+Requires-Dist: graphene (>=3.0b7)
+Requires-Dist: graphene-django (>=3.0.0b7)
+Requires-Dist: graphene-django-extras (>=0.5.1)
+Requires-Dist: graphql-core (>=3.1.5)
+Requires-Dist: graphql-relay (>=3.1.0)
+Requires-Dist: idna (>=2.10)
+Requires-Dist: inflect (>=5.3.0)
+Requires-Dist: inflection (>=0.5.1)
+Requires-Dist: networkx (>=2.5.1)
+Requires-Dist: promise (>=2.3)
+Requires-Dist: pydot (>=1.4.2)
+Requires-Dist: PyJWT (>=2.1.0)
+Requires-Dist: pyparsing (>=2.4.7)
+Requires-Dist: python-dateutil (>=2.8.1)
+Requires-Dist: pytz (>=2021.1)
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: Rx (>=1.6.1)
+Requires-Dist: singledispatch (>=3.6.1)
+Requires-Dist: six (>=1.16.0)
+Requires-Dist: sqlparse (>=0.4.1)
+Requires-Dist: stringcase (>=1.2.0)
+Requires-Dist: text-unidecode (>=1.3)
+Requires-Dist: urllib3 (>=1.26.5)
+Provides-Extra: doc
+Provides-Extra: test
+
+# Introduction
+
+Generic django providing models and function used to better developer other apps.
+In itself, this is **not** a django app 
+
+```
+pip install django-koldar-utils
+```
+
+# Capabilities
+
+ * `AbstractModelMetaclass` which can be used to create django models with abc capabilities;
+ * `AbstractPermissionMixin` which does not rely on `groups` and `permissions` relationships;
+ * `Orm` class that provides the creation of popular django fields, just for your convenience;
+ * `ArrowAuditMixin` for providing `created_at` and  `updated_at` fields using `arrow` project;
+ * convenience class to easily create django backends, middlesware, validators;
+ * `ArrowField` implementation (taken from `django-arrow-field`);
+ * convenience methods to interact with django framework without remembering how to do certain tasks;
+ * classes used to create graphql CRUD operation easily;
+
+# Upload new version
+
+```
+# pmakeup is a Massimo Bono project used to automatize the build; per se it is not necessary
+pip install pmakeup 
+add in TWINE_PYPI_PASSWORD the pypi password
+pmakeup update-version-patch build upload-to-pypi
+```
+
