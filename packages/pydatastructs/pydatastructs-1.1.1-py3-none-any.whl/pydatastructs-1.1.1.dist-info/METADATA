@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: pydatastructs
+Version: 1.1.1
+Summary: A package that contains common data structures
+Home-page: https://github.com/yoshiohasegawa/python-data-structures
+Author: Yoshio Hasegawa
+Author-email: yoshio.seisuke.hasegawa@gmail.com
+License: MIT
+Download-URL: https://github.com/yoshiohasegawa/python-data-structures/archive/refs/tags/v1.1.1.tar.gz
+Keywords: Python,Data Structures,Collections,Stack,Queue,Tree,Binary Search Tree,Heap,Linked List
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: typing
+
+<h1 align="center">Python Data Structures</h1>
+<h3 align="center">⚠️ This package is currently in development ⚠️</h3>
+
+# About
+A Python package that contains common data structures.
+
+# Getting Started
+## Installation
+To get started, install the package:
+```console
+user@machine:~/$ pip install pydatastructs
+```
+
+Then, import it into your project:
+```python
+from pydatastructs import Stack, Queue, Tree, BinarySearchTree, LinkedList
+my_stack = Stack(collection=[1, '2', {'3': 3}])
+my_queue = Queue(collection=[4.4, [5], (6)])
+my_tree = Tree(value='I am Groot')
+my_binarysearchtree = BinarySearchTree(value=10)
+my_linkedlist = LinkedList(value='HEAD')
+```
+
+# Data Structures
+## Stack
+Information about the stack data structure...
+## Queue
+Information about the queue data structure...
+## Tree
+Information about the tree data structure...
+## Binary Search Tree
+Information about the binary search tree data structure...
+## Linked List
+Information about the linkedlist data structure...
+
+# Contact
+For support, feedback or, to report a bug, you may contact the maintainer:
+- Yoshio Hasegawa: [GitHub](https://github.com/yoshiohasegawa), [LinkedIn](https://www.linkedin.com/in/yoshiohasegawa/)
+
+## License
+Distributed under the MIT License.
+
