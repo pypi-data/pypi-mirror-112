@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: cvtk
+Version: 0.3.14
+Summary: computer vision toolkit of pytorch
+Home-page: https://github.com/flystarhe/cvtk
+Author: flystarhe
+Author-email: flystarhe@qq.com
+License: UNKNOWN
+Keywords: computer vision,machine learning
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Requires-Dist: albumentations (>=0.5.2)
+Requires-Dist: hiplot (>=0.1.23)
+Requires-Dist: lxml (==4.6.2)
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: opencv-python-headless (>=4.5.1)
+Requires-Dist: pandas
+Requires-Dist: pillow (>=8.1.2)
+Requires-Dist: requests
+Requires-Dist: simplejson
+Requires-Dist: scikit-image (>=0.18.1)
+Requires-Dist: scikit-learn (>=0.24.1)
+Requires-Dist: tqdm
+
+# cvtk
+computer vision toolkit of pytorch
+
+* PyTorch 1.7+
+
+## packaging
+```sh
+# pip install --upgrade setuptools wheel
+# pip install --upgrade twine
+
+python setup.py sdist bdist_wheel
+twine upload dist/*
+
+rm -rf build dist *.egg-info
+```
+
+## installation
+```sh
+pip install cvtk
+# https://pip.pypa.io/en/latest/reference/pip_install/#git
+pip install git+https://github.com/flystarhe/cvtk.git@hash
+pip install git+https://github.com/flystarhe/cvtk.git@main
+pip install git+https://github.com/flystarhe/cvtk.git@v1.0
+```
+
+
