@@ -1,0 +1,13 @@
+mycroft-messagebus-client
+pexpect
+pyxdg
+PyYAML
+kthread
+json_database
+requests
+inflection
+
+[extras]
+phoneme_guesser
+colour
+rapidfuzz
