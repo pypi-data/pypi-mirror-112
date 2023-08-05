@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: mend
+Version: 0.4.0
+Summary: Mend, update, and repair git repositories.
+Home-page: https://github.com/jessemyers/mend
+Author: Jesse Myers
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click (>=8.0.1)
+Requires-Dist: jinja2 (>=3.0.1)
+Provides-Extra: dist
+Requires-Dist: bumpversion (>=0.6.0) ; extra == 'dist'
+Requires-Dist: pip (>=21.1.3) ; extra == 'dist'
+Requires-Dist: setuptools (>=57.1.0) ; extra == 'dist'
+Requires-Dist: twine (>=3.4.1) ; extra == 'dist'
+Requires-Dist: wheel (>=0.36.2) ; extra == 'dist'
+Provides-Extra: lint
+Requires-Dist: flake8 (>=3.9.2) ; extra == 'lint'
+Requires-Dist: flake8-isort (>=4.0.0) ; extra == 'lint'
+Requires-Dist: flake8-print (>=4.0.0) ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest (>=6.2.4) ; extra == 'test'
+Provides-Extra: types
+Requires-Dist: mypy (>=0.910.0) ; extra == 'types'
+Requires-Dist: types-setuptools (>=57.0.0) ; extra == 'types'
+
+# mend
+
+Mend, update, and repair git repositories.
+
+
+## Design
+
+Provides a semi-generic mechanism to produce changes -- using a `Generator` -- and
+and apply them to repositories -- using a `Plugin`:
+
+ - `generators` produce one or more files.
+
+   Generator may produce files from templates or programmatic manipulations of existing
+   files (in some git repository).
+
+ - `plugins` apply the files produced by a generator to something.
+
+   Plugins may simply output planned changes or may apply them a repository in some way.
+
+
+## CLI
+
+Both generators and plugins use `setuptools` `entry_points` for extensibility: the `mend`
+CLI reflects the known instances of both types and allows `Generator` and `Plugin` implementations
+to provide custom CLI parameters.
+
+For example, the `.circlci/config.yml` file in this repo was generated using:
+
+```sh
+mend circleci --project mend copy --path .
+```
+
+
