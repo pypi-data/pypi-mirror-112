@@ -1,0 +1,11 @@
+eventloop/__init__.py,sha256=MTuzNbjTLcF8cLdJUdJzzxR6N8dkeXMblNJ0ae3LfFU,3273
+eventloop/__main__.py,sha256=UmBpGfFPkFul8QrSIsLvkJ3kn5C5sZOMURFtfXh5bEo,2214
+eventloop/base.py,sha256=KKYhCwgVpIzjd09sNXDM9SSWIRySCoxkF7FBqlO5qfY,1114
+eventloop/common.py,sha256=dMuq2-szMmkNIssjEysl-ZibPxQxuxZQHa8pjDu0hMo,1898
+eventloop/qt.py,sha256=zdZYQBYOhhEKXmbdI7Jd4Y5BaGlXMw44mGkvHb48zpE,2285
+eventloop/uv.py,sha256=j_QsVA1iXNgibLHSIREzIFCg6OqKc31AMeu27dEmOS0,2615
+eventloop-0.0.9.dist-info/LICENSE,sha256=p5_2lGiDlTYb_HIuYAIoSQtmW7oxQn9SOirkkd8OW4o,1095
+eventloop-0.0.9.dist-info/METADATA,sha256=J_7LBE83_ZfnP_RdJsdN-s34CBDo2gbO5y7ICpertzM,3288
+eventloop-0.0.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+eventloop-0.0.9.dist-info/top_level.txt,sha256=SVjnqcN-FSY-DGnHxuZb316QKIrg-BnWZtfWL1bc2lw,10
+eventloop-0.0.9.dist-info/RECORD,,
