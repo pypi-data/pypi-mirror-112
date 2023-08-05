@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+urchintai_client/__init__.py
+urchintai_client/constants.py
+urchintai_client/request_sender.py
+urchintai_client/session_manager.py
+urchintai_client/ur_client.py
+urchintai_client/ur_parser.py
+urchintai_client.egg-info/PKG-INFO
+urchintai_client.egg-info/SOURCES.txt
+urchintai_client.egg-info/dependency_links.txt
+urchintai_client.egg-info/requires.txt
+urchintai_client.egg-info/top_level.txt
