@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: cartesio
+Version: 0.0.1
+Summary: A short description
+Home-page: UNKNOWN
+Author: Kevin Cortacero
+Author-email: kevin.cortacero@inserm.fr
+License: MIT
+Description: <h1 align="center"> Cartesio </h1>
+        <h5 align="center"> Python Package for Cartesian Genetic Programming for Image Processing </h5>
+        
+        
+        ## Package Description
+        #### Install
+        ```bash
+        $ pip install cartesio
+        ```
+        #### src/cartesio
+        all source files
+        
+        #### Notebooks
+        Jupyter Notebooks with concrete and complete examples
+        
+        #### Examples
+        Many examples of custom implementations (metrics, callback, etc...)
+        
+        ## Cartesian Genetic Programming for Image Processing
+        TODO
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
