@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: odoo14-addons-oca-hr-attendance
+Version: 14.0.20210706.0
+Summary: Meta package for oca-hr-attendance Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo14-addon-hr-attendance-autoclose
+Requires-Dist: odoo14-addon-hr-attendance-modification-tracking
+Requires-Dist: odoo14-addon-hr-attendance-reason
+
+UNKNOWN
+
