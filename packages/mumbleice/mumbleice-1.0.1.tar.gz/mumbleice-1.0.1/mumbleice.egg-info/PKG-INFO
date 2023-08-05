@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: mumbleice
+Version: 1.0.1
+Summary: Mumble bot for streaming to Icecast
+Home-page: https://gitlab.com/bitcast/mumbleice
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: A Mumble bot that will stream a room to a pre-configured icecast mount-point
+Keywords: mumble audio icecast streaming
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Other Audience
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Communications
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
