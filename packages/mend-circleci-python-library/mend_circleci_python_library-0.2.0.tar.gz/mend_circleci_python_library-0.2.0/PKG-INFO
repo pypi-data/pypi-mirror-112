@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mend_circleci_python_library
+Version: 0.2.0
+Summary: Mend generator for CircleCI python libraries.
+Home-page: https://github.com/jessemyers/mend-circleci-python-library
+Author: Jesse Myers
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dist
+Provides-Extra: lint
+Provides-Extra: test
+Provides-Extra: types
+License-File: LICENSE
+
+# mend-circleci-python-library
+
+Mend generator for CircleCI python libraries.
+
+

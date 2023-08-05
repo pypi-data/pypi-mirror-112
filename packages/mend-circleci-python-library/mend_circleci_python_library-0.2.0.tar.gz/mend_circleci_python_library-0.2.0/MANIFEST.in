@@ -1,0 +1,1 @@
+recursive-include mend_circleci_python_library/templates *.jinja *.yml

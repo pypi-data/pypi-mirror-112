@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mend_circleci_python_library/__init__.py
+mend_circleci_python_library/generator.py
+mend_circleci_python_library.egg-info/PKG-INFO
+mend_circleci_python_library.egg-info/SOURCES.txt
+mend_circleci_python_library.egg-info/dependency_links.txt
+mend_circleci_python_library.egg-info/entry_points.txt
+mend_circleci_python_library.egg-info/not-zip-safe
+mend_circleci_python_library.egg-info/requires.txt
+mend_circleci_python_library.egg-info/top_level.txt
+mend_circleci_python_library/templates/_circleci.jinja
+mend_circleci_python_library/templates/.circleci/config.yml
