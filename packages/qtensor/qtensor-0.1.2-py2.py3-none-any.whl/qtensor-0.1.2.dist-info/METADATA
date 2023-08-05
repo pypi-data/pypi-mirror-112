@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: qtensor
+Version: 0.1.2
+Summary: Framework for efficient quantum circuit simulations
+Home-page: https://github.com/danlkv/qtensor
+Author: D. Lykov, et al.
+Author-email: dan@qtensor.org
+License: Apache
+Keywords: quantum_circuit quantum_algorithms
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: networkx (>=2.3)
+Requires-Dist: matplotlib
+Requires-Dist: google-api-core[grpc] (<=1.14.0)
+Requires-Dist: cirq
+Requires-Dist: qiskit
+Requires-Dist: pyrofiler (>=0.1.5)
+Requires-Dist: loguru
+Requires-Dist: tqdm
+Requires-Dist: click
+Requires-Dist: qtensor-qtree
+Requires-Dist: lazy-import
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow (<=1.15) ; extra == 'tensorflow'
+
+UNKNOWN
+
+
