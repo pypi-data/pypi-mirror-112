@@ -1,0 +1,11 @@
+models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+models/Avto.py,sha256=lw-J0rdk2gToWB19rVVdRPv0o5jhrmivTwHu6BrNF0c,7253
+models/Information.py,sha256=KO-ty1ZrfrhPV6_teNVzT1fzSfWdcrbhTOrynRKtD2A,1520
+models/Vin.py,sha256=tKETnk2RQyIQgpZkd9R866s5Yos1QvdgghEl0Q5Ul5k,484
+models/VinAirBags.py,sha256=FExOl7S5AKIJIoKsHYWSOM6RmulEKbrDHfxNHEWD8LQ,1069
+models/VinComfort.py,sha256=NDUmYPjC_C_f-y2Nfl2MHns9FfaFkdD4tcqYnmbWb-E,1660
+models/VinSafety.py,sha256=KkWNg_MNlxVDrQ6bmjFrM-qLxHa_kkyY9L3pg156frg,2862
+models/VinSpec.py,sha256=RcdiT6ZGgwaD8bbUDrAlPqN7FYdIF4E5c1WOD6x28Jk,3185
+django_vehicle_models-0.1.12.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+django_vehicle_models-0.1.12.dist-info/METADATA,sha256=qjAHULR7mYXpLoCOWOEo-6DpURMgPFYQT4B45RPvGic,384
+django_vehicle_models-0.1.12.dist-info/RECORD,,
