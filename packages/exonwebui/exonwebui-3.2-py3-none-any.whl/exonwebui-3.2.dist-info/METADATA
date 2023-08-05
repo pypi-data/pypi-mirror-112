@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: exonwebui
+Version: 3.2
+Summary: Web libraries for UI web applications.
+Home-page: https://bitbucket.org/exonlabs/exonwebui
+Author: ExonLabs
+License: BSD
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: exonutils (>=4.2)
+Requires-Dist: flask (>=2.0)
+Requires-Dist: Jinja2 (>=3.0)
+Requires-Dist: Babel (>=2.9)
+Requires-Dist: flask-babelex (>=0.9)
+
+# ExonWebUi #
+
+Web libs for UI web applications.
+
+
+## Installing ##
+
+Install and update using `pip`:
+
+```bash
+pip install -U exonwebui
+```
+
+## License ##
+
+**copyright :**  2021, ExonLabs. All rights reserved.
+
+**license :**  BSD, see LICENSE for more details.
+
+
