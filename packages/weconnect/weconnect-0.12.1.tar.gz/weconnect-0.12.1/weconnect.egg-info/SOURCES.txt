@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+weconnect/__init__.py
+weconnect/__version.py
+weconnect/addressable.py
+weconnect/elements.py
+weconnect/errors.py
+weconnect/util.py
+weconnect/weconnect.py
+weconnect.egg-info/PKG-INFO
+weconnect.egg-info/SOURCES.txt
+weconnect.egg-info/dependency_links.txt
+weconnect.egg-info/requires.txt
+weconnect.egg-info/top_level.txt
