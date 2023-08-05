@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+jmath/__init__.py
+jmath/discrete.py
+jmath/exceptions.py
+jmath/linearalgebra.py
+jmath/uncertainties.py
+jmath.egg-info/PKG-INFO
+jmath.egg-info/SOURCES.txt
+jmath.egg-info/dependency_links.txt
+jmath.egg-info/top_level.txt
