@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: SteamPyKey
+Version: 0.0.1
+Summary: Very simple library to make random keys in canvas like steam does!
+Home-page: UNKNOWN
+Author: Piotr Kobylorz
+Author-email: kacper@horsefucker.org
+License: MIT
+Description: Very simple library to make random keys in canvas like steam does!
+        
+        CHANGE LOG
+        ==========
+        
+        0.1 (06.07.2021)
+        First realese
+Keywords: steam
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
