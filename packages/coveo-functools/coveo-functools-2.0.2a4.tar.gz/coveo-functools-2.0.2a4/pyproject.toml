@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "coveo-functools"
+version = "2.0.2a4"
+description = "Generic function tooling helpers"
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/coveooss/coveo-python-oss/tree/main/coveo-functools"
+authors = ["Jonathan Piché <tools@coveo.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+inflection = "*"
+typing_extensions = "*"
+
+
+[tool.poetry.dev-dependencies]
+attrs = "*"
+black = { version = "21.6b0", allow-prereleases = true }
+coveo-testing = { path = "../coveo-testing/", develop = true }
+mypy = "0.812"
+
+
+[tool.stew.ci]
+pytest = true
+offline-build = true
+black = true
+
+
+[tool.black]
+line-length = 100
+
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
