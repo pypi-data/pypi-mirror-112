@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: ecas
+Version: 0.1.0
+Summary: A CLI to directly read your PR status
+Home-page: UNKNOWN
+Author: Pierre Valentin
+Author-email: pievalentin@gmail.com
+License: MIT
+Project-URL: repository, https://github.com/pievalentin/ecas
+Platform: UNKNOWN
+Requires-Python: ==3.*,>=3.8.0
+Provides-Extra: dev
+License-File: LICENSE
+
+
+Ecas RP automation script
+=========================
+
+Getting started
+---------------
+
+First get this code on your machine with
+
+.. code-block:: bash
+
+   git clone git@github.com:pievalentin/ecas.git && cd ecas
+
+Run this command to install the dependencies:
+
+.. code-block:: bash
+
+   pip3 install .
+
+Restart your terminal, you can now:
+
+.. code-block:: bash
+
+   ecas Lastname iuc_number Birthday<YYYY-MM-DD> birth_country_code<xxx>
+
+For example for france:
+
+.. code-block:: bash
+
+   ecas Dupont 112245589 "2001-01-01" 022
+
+Find your country code
+----------------------
+
+To find your country code, you can look it up `in this file </country_code.html>`_
+
+
