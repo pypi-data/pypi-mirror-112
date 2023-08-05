@@ -1,0 +1,15 @@
+#
+# Please do not manually update this file since the requirements are managed
+# by pipenv through Pipfile and Pipfile.lock .
+#
+# This file is created and managed automatically by the template and it is left
+# here only for backwards compatibility reasons with python's ecosystem.
+#
+# Please use Pipfile to update the requirements.
+#
+emaillib>=1.0.0
+stopit>=1.1.2
+jinja2>=3.0.1
+sleekxmpp>=1.3.3
+python-telegram-bot>=13.7
+requests>=2.25.1
