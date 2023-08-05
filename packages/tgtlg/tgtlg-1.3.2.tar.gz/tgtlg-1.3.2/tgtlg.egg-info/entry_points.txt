@@ -1,0 +1,3 @@
+[console_scripts]
+tgtlg = bot.__main__:main
+
