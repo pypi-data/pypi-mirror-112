@@ -1,0 +1,8 @@
+include requirements.txt
+include LICENSE.txt
+recursive-include src *
+include trapeza/__cache__/*
+exclude trapeza/tests/*
+exclude trapeza/profiling/*
+exclude .gitignore
+recursive-exclude doc *
