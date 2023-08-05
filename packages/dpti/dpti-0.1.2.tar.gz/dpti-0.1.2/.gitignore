@@ -1,0 +1,23 @@
+*~
+iter*
+task*
+dpti.egg-info/
+!tests/benchmark_hti/*/*/task*
+!tests/benchmark_hti/*/task*
+!tests/benchmark_ti/*/task*
+!tests/benchmark_hti_liq/*/*/task*/
+!tests/benchmark_hti_ice/*/*/task*/
+!tests/benchmark_hti_water/*/*/task*/
+!tests/benchmark_ti_water/*/task*
+# *.pb
+# !tests/graph.pb
+__pycache__
+tests/origin_files/
+_version.py
+deepti.egg-info/
+build/
+dist/
+.eggs/
+tests/tmp
+dpdispatcher.log
+dpdisp.log
