@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "cadabra"
+version = "0.1.1-dev.0"
+description = ""
+authors = ["Nikia <barinov.nikita49@gmail.com>"]
+
+packages = [
+    { include="cadabra", from="." },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
