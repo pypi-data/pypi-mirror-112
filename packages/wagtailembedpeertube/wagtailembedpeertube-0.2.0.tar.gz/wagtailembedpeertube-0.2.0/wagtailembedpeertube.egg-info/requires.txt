@@ -1,0 +1,9 @@
+wagtail>=2.0
+
+[test]
+black
+coverage
+flake8-black
+flake8-isort
+flake8>=3.5
+isort>=5.0

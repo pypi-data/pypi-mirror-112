@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools >=42", "wheel", "setuptools_scm[toml] >=3.4"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+
+[tool.isort]
+profile = 'black'
+line_length = 80
+known_django = 'django'
+known_wagtail = 'wagtail'
+sections = [
+  'FUTURE', 'STDLIB', 'DJANGO', 'WAGTAIL', 'THIRDPARTY', 'FIRSTPARTY', 'LOCALFOLDER'
+]
+
+[tool.coverage.run]
+branch = true
+source = ['wagtailembedpeertube']
+
+[tool.coverage.report]
+exclude_lines = ['# pragma: no cover', 'raise NotImplementedError']
+show_missing = true
