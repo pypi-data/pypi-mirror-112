@@ -1,0 +1,12 @@
+watcher/__init__.py,sha256=6hxBEmJx3Wmakha9IKYCNpdEnWia2gLNRr1CIsnWLEM,1004
+watcher/dispatcher.py,sha256=58fMxY00899Rvq1Zs7UlJTMy37v5KU0h4V4u3GgH9mM,1172
+watcher/updaters.py,sha256=sedKKxcnb6VZLrkckMG8u737yWIL81Hj_L7RU--uYW8,3699
+watcher/watcher.py,sha256=M12zEnbgTtHLsp87ycidRNTFMsV5p1Z4j0NOwGVt37k,2733
+watcher/events/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+watcher/events/event.py,sha256=tHeHYcRliJVBKKSnyLO1ULIm7vWUNbncl3_BlRcC59A,986
+watcher/events/quora.py,sha256=TLBUOs-Kexb79qgFl1n6M5HGOsNfsJu1yuS6qM0cmDY,1837
+profile_watcher-1.0.0.dist-info/LICENSE,sha256=NL8_3pab8fycOq2lBR6yKKoovYLfkTEUHUj6umWUu0Q,34514
+profile_watcher-1.0.0.dist-info/METADATA,sha256=0rUkWx3jZynpDjX87Te7zt8fs1-ONmcE4r_2Sfl6fy0,1153
+profile_watcher-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+profile_watcher-1.0.0.dist-info/top_level.txt,sha256=O2B7Sbzshq5s-tZxb2a7VETvMDiJItSYieAiJ6Jm5yY,8
+profile_watcher-1.0.0.dist-info/RECORD,,
