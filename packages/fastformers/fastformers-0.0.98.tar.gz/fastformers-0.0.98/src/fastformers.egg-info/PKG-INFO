@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: fastformers
+Version: 0.0.98
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: datarootlabs
+Author-email: dev@datarootlabs.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Lib
+Before the major release we will put a few lines for ourselves on how to do the lib updates :)
+1. Install twine if needed: `pip install build twine`
+2. `python -m build`
+3. `python -m twine upload dist/*`
+
+
