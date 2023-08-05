@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Scraping_Perlverity_Python
+Version: 1.0.2
+Summary: pip install Success!! pip install でライブラリインストールでWebスクレイピング起動可能。
+Home-page: https://github.com/Perlverity/Python_Scraping_pip_install
+Author: Perlverity
+Author-email: perlverity@gmail.com
+License: MIT
+Description: # pip install Success!!
+        
+        ## pip install でライブラリインストールで
+        ## Webスクレイピング起動可能。
+        
+        ```
+        pip install Scraping
+        ```
+Keywords: sample setuptools development
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
