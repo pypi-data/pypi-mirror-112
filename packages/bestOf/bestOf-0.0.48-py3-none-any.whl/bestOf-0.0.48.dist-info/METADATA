@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: bestOf
+Version: 0.0.48
+Summary: A module that uses machine learning to chose the best image in groups
+Home-page: https://github.com/apangasa/bestof
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: tensorflow
+Requires-Dist: PyQt5
+Requires-Dist: mtcnn
+Requires-Dist: Pillow
+Requires-Dist: matplotlib
+Requires-Dist: opencv-python
+
+UNKNOWN
+
+
