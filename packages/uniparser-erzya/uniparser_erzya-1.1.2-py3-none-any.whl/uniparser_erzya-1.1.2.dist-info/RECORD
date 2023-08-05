@@ -1,0 +1,16 @@
+uniparser_erzya/__init__.py,sha256=DM8f7_yFhcYWOPF0tmsbO-SihnAfzvwUNdfy81wAM3g,2479
+uniparser_erzya/data_nodiacritics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uniparser_erzya/data_nodiacritics/bad_analyses.txt,sha256=YJYEsBYbnLf_EqkFloXVXE7mg2X6ogX2yUkPRQObV7w,1755
+uniparser_erzya/data_nodiacritics/lex_rules.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uniparser_erzya/data_nodiacritics/lexemes.txt,sha256=9K7wdWLFwqmySav5809_xmCT5XvWf7Zzb4K-a2bpB28,4492914
+uniparser_erzya/data_nodiacritics/paradigms.txt,sha256=HgZk-IYSV6SSzRMuJTAJbR1DNfihH1Z1gIvuYmM-XtQ,95487
+uniparser_erzya/data_strict/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uniparser_erzya/data_strict/bad_analyses.txt,sha256=YJYEsBYbnLf_EqkFloXVXE7mg2X6ogX2yUkPRQObV7w,1755
+uniparser_erzya/data_strict/lex_rules.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uniparser_erzya/data_strict/lexemes.txt,sha256=WJxPvN_xGrvJdYIht8kmxGfLI_Bvy6KxTBMmXK3aHpM,4472853
+uniparser_erzya/data_strict/paradigms.txt,sha256=UVIUTXUDI8-RxudH3OMwiD5WoebvUWxwBRXcXmLqdBw,95070
+uniparser_erzya-1.1.2.dist-info/LICENSE,sha256=OdtjoivBLh5-UalhDq9WpqjdjqR9qAGwQqh6ld0kofg,1152
+uniparser_erzya-1.1.2.dist-info/METADATA,sha256=0YDMAl_CTcjUZkiX2OLo1hL6zwTqt1f_lQ0kCBcl7ks,4214
+uniparser_erzya-1.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+uniparser_erzya-1.1.2.dist-info/top_level.txt,sha256=j0ca1E1_5QpYVkoyLflwpsilyGopAEA5pILzxfnpMr0,16
+uniparser_erzya-1.1.2.dist-info/RECORD,,
