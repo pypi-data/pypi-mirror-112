@@ -1,0 +1,45 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+# Copyright (C) 2019  David Arroyo Menéndez
+
+# Author: David Arroyo Menéndez <davidam@gnu.org>
+# Maintainer: David Arroyo Menéndez <davidam@gnu.org>
+
+# This file is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3, or (at your option)
+# any later version.
+
+# This file is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with damepandas; see the file LICENSE.  If not, write to
+# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+# Boston, MA 02110-1301 USA,
+
+from unittest import TestCase
+
+import numpy as np
+import pandas as pd
+
+
+class TestBasics(TestCase):
+
+    def test_json(self):
+        df = pd.DataFrame([['a', 'b'], ['c', 'd']],
+                          index=['row 1', 'row 2'],
+                          columns=['col 1', 'col 2'])
+        string1 = '{"columns":["col 1","col 2"],'
+        string1 = string1 + '"index":["row 1","row 2"],'
+        string1 = string1 + '"data":[["a","b"],["c","d"]]}'
+        self.assertEqual(df.to_json(orient='split'), string1)
+        string2 = '{"row 1":{"col 1":"a","col 2":"b"},'
+        string2 = string2 + '"row 2":{"col 1":"c","col 2":"d"}}'
+        self.assertEqual(df.to_json(orient='index'), string2)
+        string3 = '[{"col 1":"a","col 2":"b"},'
+        string3 = string3 + '{"col 1":"c","col 2":"d"}]'
+        self.assertEqual(df.to_json(orient='records'), string3)
