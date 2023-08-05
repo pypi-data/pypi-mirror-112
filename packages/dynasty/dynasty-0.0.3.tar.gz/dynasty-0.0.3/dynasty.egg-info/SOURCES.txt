@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+dynasty/__init__.py
+dynasty/dynasty.py
+dynasty/utils.py
+dynasty.egg-info/PKG-INFO
+dynasty.egg-info/SOURCES.txt
+dynasty.egg-info/dependency_links.txt
+dynasty.egg-info/requires.txt
+dynasty.egg-info/top_level.txt
