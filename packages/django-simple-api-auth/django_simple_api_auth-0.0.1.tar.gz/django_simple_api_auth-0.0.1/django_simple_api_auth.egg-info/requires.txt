@@ -1,0 +1,14 @@
+Django>=3.2
+djangorestframework>=3.12
+graphene-django>=2.15
+django-graphql-extensions>=0.0.7
+social-auth-app-django>=4.0
+
+[dev]
+twine>=3.4.1
+pytest-django>=4.4.0
+coverage>=5.5
+
+[test]
+pytest-django>=4.4.0
+coverage>=5.5

@@ -1,0 +1,25 @@
+{% extends 'emails/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <table>
+        <tr>
+            <td align="center">
+                <div>Hemos recibido una solicitud de cambio de contraseña.</div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <div>Si es así, haz clic aquí para crear una nueva:</div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <a href="{{ protocol }}://{{ domain }}/{{ REMEMBER_PASSWORD_URL }}/{{ uid }}/{{ token }}/"
+                   target="_blank">
+                    Cambiar mi contraseña </a>
+            </td>
+        </tr>
+    </table>
+{% endblock content %}

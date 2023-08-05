@@ -1,0 +1,157 @@
+Metadata-Version: 2.1
+Name: django_simple_api_auth
+Version: 0.0.1
+Summary: Django Simple Api Auth is a Django app to help developers with the Session auth of a rest or graphql api in Django.
+Home-page: https://github.com/mrmilu/django-simple-api-auth-example
+Author: p02diada
+Author-email: p02diada@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.9
+Provides-Extra: test
+Provides-Extra: dev
+License-File: LICENSE
+
+Django Simple Api Auth
+########################
+
+
+Django Simple Api Auth is a Django app to help developers with the Session auth of a rest or graphql api in Django
+
+Features
+*********
+
+
+- Login
+- Logout
+- Social login
+- Get user data (Me)
+- Recover user password
+- Overwrite emails
+- Overwrite Me fields
+- Reset password vía API
+
+Overview
+*********
+
+You should read about the CSRF protection in `django <https://docs.djangoproject.com/en/3.2/ref/csrf/>`_
+
+* You have to send X-CSRFToken token in headers
+* Rest framework disable csrf in views using csrf_exempt, and adding the validation to the SessionAuthentication
+* Graphene don't do anything with the csrf validation, so you have to exempt them when it makes sense. You can use the view of this `example <https://github.com/mrmilu/django-simple-api-auth-example/blob/master/graphqls/views.py>`_ or create your own. Don't disable it for all the endpoints.
+
+Quick start
+************
+
+
+
+Add django_simple_api_auth and dependencies to your INSTALLED_APPS setting like this::
+
+
+    INSTALLED_APPS = [
+        ...
+        'rest_framework',
+        'graphene_django',
+        'social_django',
+        'django_simple_api_auth',
+    ]
+
+
+Rest framework
+***************
+
+You can add the main ViewSet that has all the permissions and features implemented to your router::
+
+    router.register(r'users', UserApiViewSet, 'users')
+
+Or you can use mixins to create your own viewset::
+
+    class UserCompleteViewSet(UserCreateMixin, UserLoginMixin, UserMeMixin, UserPasswordRecoveryMixin, UserLogoutMixin, UserSocialLoginMixin):
+        pass
+
+Graphene
+*********
+
+You can add the user queries and mutations to your schema::
+
+    from django_simple_api_auth.api.graphql.mutations import UsersMutation
+    from django_simple_api_auth.api.graphql.queries import UserQuery
+
+
+    class Query(UserQuery, graphene.ObjectType):
+        pass
+
+
+    class Mutation(UsersMutation, graphene.ObjectType):
+        pass
+
+
+    schema = graphene.Schema(
+        query=Query,
+        mutation=Mutation
+    )
+
+
+or you can create your own query and mutation.
+
+Social login
+*************
+
+We have the endpoints available to use the `social-app-django <https://github.com/python-social-auth/social-app-django>`_ so read their doc to use it.
+
+
+Recover user password
+**********************
+
+By default, email sent to recover user password has a link to 's/accounts/reset'. The easiest way of handle this is to use the django admin views but you can overwrite the REMEMBER_PASSWORD_URL to send to another location.
+If you want to use the default  link you have to add admin views to your project:
+
+add to your settings::
+
+    REMEMBER_PASSWORD_URL = 'front-endpoint'
+
+
+add to your views::
+
+    path('accounts/', include('django.contrib.auth.urls')),
+
+If you handle de remember password in your frontend, you can use the reset-password endpoint.
+
+Overwrite emails
+*****************
+
+You can overwrite emails templates adding new templates to your project::
+
+
+    - project_name/
+        - project_name/
+        - templates/
+            emails/
+                password_recovery/
+                    email.html
+                    subject.txt
+          manage.py
+
+
+Overwrite Me fields
+********************
+
+You can overwrite default fields that the rest and graphql endpoint returns for an authenticated user updating the ME_FIELDS settings::
+
+    ME_FIELDS = ("id", "email",)
+
+
