@@ -1,0 +1,402 @@
+Metadata-Version: 2.1
+Name: design.plone.policy
+Version: 2.3.0
+Summary: Pacchetto per creare un sito Agid su Plone
+Home-page: https://github.com/collective/design.plone.policy
+Author: RedTurtle Technology
+Author-email: sviluppo@redturtle.it
+License: GPL version 2
+Project-URL: PyPI, https://pypi.python.org/pypi/design.plone.policy
+Project-URL: Source, https://github.com/RedTurtle/design.plone.policy
+Project-URL: Tracker, https://github.com/RedTurtle/design.plone.policy/issues
+Description: ===================
+        Design Plone Policy
+        ===================
+        
+        Pacchetto di policy per un sito Plone AGID.
+        
+        |python| |version| |ci|
+        
+        .. |python| image:: https://img.shields.io/pypi/pyversions/design.plone.policy.svg
+          :target: https://pypi.python.org/pypi/design.plone.policy/
+        
+        .. |version| image:: http://img.shields.io/pypi/v/design.plone.policy.svg
+          :target: https://pypi.python.org/pypi/design.plone.policy
+        
+        .. |ci| image:: https://github.com/RedTurtle/design.plone.policy/actions/workflows/test.yml/badge.svg
+          :target: https://github.com/RedTurtle/design.plone.policy/actions
+        
+        
+        Features
+        ========
+        
+        Installando questo pacchetto, si inizializza un sito Plone Agid.
+        
+        Creazione struttura del sito
+        ============================
+        
+        All'installazione di questo prodotto, oltre che l'installazione di tutte le dipendenze,
+        viene anche eseguita la creazione in automatico di una serie di cartelle utili per la 
+        gestione dei contenuti richiesta da Agid.
+        
+        Tipi ricercabili
+        ================
+        
+        Installando questo prodotto, si disabilitano alcuni tipi ricercabili (così non vengon mostrati in @search-filters).
+        
+        
+        Endpoint per plone.restapi
+        ==========================
+        
+        @search-filters
+        ---------------
+        
+        Questo endpoint serve al frontend di Volto, per popolare il menu e i filtri per la ricerca::
+        
+            > curl -i http://localhost:8080/Plone/@search-filters -H 'Accept: application/json'
+        
+        Ritorna un json con le sezioni principali, la lista degli argomenti e i tipi di contenuto ricercabili (tradotti)::
+        
+            {
+                "sections":{
+                    "amministrazione":{
+                        "@id": "",
+                        "path": "",
+                        "title": "",
+                        "items": [
+                            {
+                                "@id": "",
+                                "path": "",
+                                "title": "",
+                            },
+                            ...
+                        ]
+                    }
+                    "documenti-e-dati": {...}
+                    "novita": {...}
+                    "servizi": {...}
+                },
+                "topics": [
+                    {
+                        "@id": "",
+                        "path": "",
+                        "title": "",
+                    },
+                    ...
+                ],
+                "portal_types": [
+                    ...
+                    {
+                      "label": "Document",
+                      "id": "Page"
+                    }
+                    ...
+                ]
+            }
+        
+        @search-bandi-filters
+        ---------------------
+        
+        Questo endpoint serve al frontend di Volto, per popolare il menu e i filtri per la ricerca dei bandi::
+        
+            > curl -i http://localhost:8080/Plone/@search-bandi-filters -H 'Accept: application/json'
+        
+        Ritorna un json con la lista degli uffici (UO) referenziati da almeno un Bando e la lista delle parole chiave utilizzate dai Bandi::
+        
+            {
+              "offices": [
+                {
+                  "key": "87bb96d90b6e42ee9db01ab2ab7543d5",
+                  "label": "uo 1"
+                }
+              ],
+              "subjects": [
+                "bar",
+                "foo"
+              ]
+            }
+        
+        @send-action-form
+        -----------------
+        
+        Questo endpoint va chiamato su un contesto con i blocchi abilitati e
+        serve al frontend di Volto, per inviare via mail il form compilato::
+        
+            > curl -i -X POST http://localhost:8080/Plone/document/@send-action-form -H 'Accept: application/json' -H 'Content-Type: application/json' --data-raw '{"from": "john@doe.com", "message": "Just want to say hi.", "block_id": "123456"}'
+        
+        All'endpoint vanno passati i seguenti parametri:
+        
+        - **block_id** [*obbligatorio*]: l'id del blocco di tipo "*form*" che è stato compilato
+        - **message** [*obbligatorio*]: il messaggio da inviare
+        - **from**: l'indirizzo email del mittente. Se non presente, viene utilizzato il campo *default_from* del blocco
+        - **subject**: l'oggetto della mail. Se non presente, viene utilizzato il campo *default_subject* del blocco
+        - **attachments**: eventuali allegati riferiti a campi "file upload" inseriti nel form.
+        
+        La struttura degli attachments è la seguente::
+        
+            {
+                "block_id": "foo",
+                ...
+                "attachments": {
+                    "field_id": {
+                        "data": "the content of the file",
+                        "content-type": "application/pdf",
+                        "filename": "example.pdf"
+                    }
+                }
+            }
+        
+        Se l'invio va a buon fine, viene tornata una risposta con `204`.
+        
+        @twitter-feed
+        -------------
+        
+        Endpoint per poter visualizzare una serie di tweet.
+        
+        Per poterla utilizzare, bisogna creare un'app su Twitter e impostare il token Bearer dentro al registry Plone nella entry *design.plone.policy.twitter_token*.
+        
+        Per fare la ricerca, utilizza l'endpoint `recent`_ che permette di visualizzare solo i tweet dell'ultima settimana.
+        
+        .. _recent: https://developer.twitter.com/en/docs/twitter-api/tweets/search/introduction
+        
+        Come parametri accetta i seguenti:
+        
+        - **authors**: una lista di username tra cui ricercare gli ultimi Tweet.
+        - **max_results**: un numero tra 10 e 100.
+        
+        Esempio di chiamata::
+        
+            > curl -i -X GET http://localhost:8080/Plone/@twitter-feed?authors=foo&authors=bar -H 'Accept: application/json' -H 'Content-Type: application/json'
+        
+        La risposta è una lista di tweet con le informazioni necessarie per essere renderizzati::
+        
+            [
+                {
+                    "author": {
+                    "id": "12345678",
+                    "name": "John Doe",
+                    "profile_image_url": "https://pbs.twimg.com/profile_images/xxx/xxx_normal.jpg",
+                    "username": "jdoe"
+                    },
+                    "id": "xxxxx",
+                    "like_count": 1,
+                    "reply_count": 0,
+                    "retweet_count": 0,
+                    "text": "stringa html"
+                },
+                ...
+            ]
+        
+        Il campo `text` contiene già eventuali link ad hashtag, menzioni e link esterni dentro ad un tag <a/>.
+        
+        **Per evitare troppe chiamate al servizio (c'è un limite di 500000 tweet al mese), c'è della cache: per ogni query
+        i risultati rimangono in cache per mezz'ora.**
+        
+        
+        Amministrazione trasparente
+        ===========================
+        
+        La vista "crea_area_trasparenza" crea la struttura per l'area "Amministrazione Trasparente".
+        Si può lanciare dalla root del sito.
+        
+        
+        Installazione
+        =============
+        
+        Per installare design.plone.policy bisogna per prima cosa aggiungerlo al buildout::
+        
+            [buildout]
+        
+            ...
+        
+            eggs =
+                design.plone.policy
+        
+        
+        e poi lanciare il buildout con ``bin/buildout``.
+        
+        Successivamente va installato dal pannello di controllo di Plone.
+        
+        Test con Volto standalone
+        -------------------------
+        
+        Si può usare questo prodotto anche da solo, per fare delle demo veloci di Volto, senza
+        dover per forza creare un nuovo progetto/buildout.
+        
+        E' presente un file `buildout.cfg` anche in questo prodotto, quindi basta lanciare il buildout ed avviare l'istanza.
+        
+        Il sito Plone sarà esposto sulla porta standard (**8080**) ed è già configurato per accettare chiamate dalla porta **3000**
+        (quindi Volto dovrà girare su quella porta, che poi è il suo default).
+        
+        
+        Contribuisci
+        ============
+        
+        - Issue Tracker: https://github.com/redturtle/design.plone.policy/issues
+        - Codice sorgente: https://github.com/redturtle/design.plone.policy
+        
+        
+        Licenza
+        =======
+        
+        Questo progetto è rilasciato con licenza GPLv2.
+        
+        Autori
+        ======
+        
+        Questo progetto è stato sviluppato da **RedTurtle Technology**.
+        
+        .. image:: https://avatars1.githubusercontent.com/u/1087171?s=100&v=4
+           :alt: RedTurtle Technology Site
+           :target: http://www.redturtle.it/
+        
+        
+        Contributors
+        ============
+        
+        - RedTurtle Technology, sviluppo@redturtle.it
+        
+        
+        Changelog
+        =========
+        
+        
+        2.3.0 (2021-07-07)
+        ------------------
+        
+        - Install collective.volto.subsites by default and add a set of colors.
+          [cekk]
+        
+        
+        2.2.0 (2021-06-08)
+        ------------------
+        
+        - [new] @search-bandi-filters endpoint.
+          [cekk]
+        
+        
+        2.1.2 (2021-05-14)
+        ------------------
+        
+        - [new] Content type 'Bando' is admitted by default in 'Documenti e dati' folder.
+          [arsenico13]
+        
+        
+        2.1.1 (2021-05-04)
+        ------------------
+        
+        - Fix upgrade-step.
+          [cekk]
+        
+        
+        2.1.0 (2021-05-04)
+        ------------------
+        
+        - Handle multiple twitter accounts in twitter endpoint.
+          [cekk]
+        - Change twitter token field in registry (now is managed with interface).
+          [cekk]
+        
+        
+        2.0.0 (2021-04-30)
+        ------------------
+        
+        - Update with new settings values from design.plone.contenttypes (version 3.0.0).
+          [cekk]
+        - [dev] Fix CI
+          [arsenico13]
+        - Add custom image scales
+          [nzambello]
+        - **search-filters** endpoint now return also a list of searchable portal_types.
+          [cekk]
+        - Disable some types from *types_not_searched*.
+          [cekk]
+        
+        1.1.0 (2021-03-24)
+        ------------------
+        
+        - Remove form route and add **collective.volto.formsupport** dependency.
+          [cekk]
+        
+        
+        1.0.8 (2021-02-25)
+        ------------------
+        
+        - On install, set default search sections.
+          [cekk]
+        
+        
+        1.0.7 (2021-02-19)
+        ------------------
+        
+        - Fix typo.
+          [cekk]
+        
+        
+        1.0.6 (2021-02-19)
+        ------------------
+        
+        - Do not run dependencies when upgrading plone.app.registry.
+          [cekk]
+        
+        1.0.5 (2021-02-11)
+        ------------------
+        
+        - Install collective.volto.socialsettings by default.
+          [cekk]
+        
+        
+        1.0.4 (2021-02-05)
+        ------------------
+        
+        - Add collective.volto.secondarymenu dependency.
+          [cekk]
+        - Enable sitemap by default.
+          [cekk]
+        
+        
+        1.0.3 (2021-01-28)
+        ------------------
+        
+        - Handle Unauthorized in search-filters endpoint.
+          [cekk]
+        
+        
+        1.0.2 (2021-01-11)
+        ------------------
+        
+        - Manage also attachments in @send-action-form endpoint.
+          [cekk]
+        
+        
+        1.0.1 (2020-12-18)
+        ------------------
+        
+        - Added view to create trasparenza structure.
+          [daniele]
+        
+        - Fixed folders creation when installing.
+          [daniele]
+        
+        - Add twitter-feed endpoint.
+          [cekk]
+        
+        1.0.0 (2020-12-07)
+        ------------------
+        
+        - Initial release.
+          [cekk]
+        
+Keywords: Python Plone
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: Addon
+Classifier: Framework :: Plone :: 5.2
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Requires-Python: >=3.7
+Provides-Extra: test
