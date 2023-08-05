@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: corgy
+Version: 1.0.0b2
+Summary: Elegant command line parsing
+Home-page: https://github.com/jayanthkoushik/corgy
+License: MIT
+Author: Jayanth Koushik
+Author-email: jnkoushik@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/jayanthkoushik/corgy
+Description-Content-Type: text/markdown
+
+# corgy
+
+Elegant command line parsing for Python.
+
