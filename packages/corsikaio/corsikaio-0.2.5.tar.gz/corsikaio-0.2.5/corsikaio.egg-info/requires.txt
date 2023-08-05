@@ -1,0 +1,11 @@
+numpy
+
+[all]
+zstandard
+pytest
+
+[tests]
+pytest
+
+[zstd]
+zstandard
