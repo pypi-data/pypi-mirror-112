@@ -1,0 +1,3 @@
+[console_scripts]
+freya-admin = Freya_alerce.freya:Main.main
+
