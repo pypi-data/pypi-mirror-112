@@ -1,0 +1,7 @@
+bleak==0.11.0
+construct>=2.10
+wrapt>=1.12.1
+requests
+rich>=9
+protobuf>=3
+betterproto
