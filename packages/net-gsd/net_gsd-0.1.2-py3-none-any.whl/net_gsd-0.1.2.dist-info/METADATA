@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: net-gsd
+Version: 0.1.2
+Summary: Network Get Stuff Done
+Author: Ryan Bradshaw
+Author-email: ryan@rbradshaw.dev
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: asyncssh (>=2.7.0,<3.0.0)
+Requires-Dist: genie (==21.4)
+Requires-Dist: pyats (==21.4)
+Requires-Dist: scrapli (>=2021.1.30,<2022.0.0)
