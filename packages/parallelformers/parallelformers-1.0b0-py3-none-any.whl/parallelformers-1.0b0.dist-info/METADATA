@@ -1,0 +1,253 @@
+Metadata-Version: 2.1
+Name: parallelformers
+Version: 1.0b0
+Summary: Easy to use parallel computing toolkit for language models based on Huggingface Transformers asnMegatron LM.
+Home-page: https://github.com/tunib-ai/parallelformers
+Author: TUNiB
+Author-email: kevin.ko@tunib.ai
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: transformers
+
+<br>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/38183241/123533463-d7a1e900-d750-11eb-8d28-44aa0f9f3d37.png" width=340>
+</p>
+<p align="center">
+<a href="https://github.com/tunib-ai/parallelformers/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/tunib-ai/parallelformers.svg" /></a> <a href="https://github.com/tunib-ai/parallelformers/blob/master/LICENSE"><img alt="Apache 2.0" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" /></a> <a href="https://github.com/tunib-ai/parallelformers/issues"><img alt="Issues" src="https://img.shields.io/github/issues/tunib-ai/parallelformers" /></a>
+
+</p>
+<br>
+
+- Parallelformers is easy to use parallel computing toolkit for language models based on Megatron LM.
+- You can parallelize your huggingface transformers model to multiple GPUs with **just one line of code.**
+- Parallelformers **only supports inference**. training related feature will be implemented in the future.
+
+<br><br>
+
+## 1. Installation
+- Parallelformers easily can be installed using `pip` package manager.
+- Several dependencies (`torch`, `transformers`) will be installed together.
+```console
+pip install parallelformers
+```
+
+<br>
+
+## 2. Usage
+### 2.1. Create your Huggingface transformers model
+- **You don't need to call `.half()` or `.cuda()`**, It will be invoked automatically.
+- It's more memory-efficient to start parallelizing with the model on the CPU.
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-neo-2.7B")
+tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-neo-2.7B")
+```
+<br>
+
+### 2.2. Parallelize your model with just one line of code
+- Just put the model in the parallelize function and it's all done.
+```python
+from parallelformers import parallelize
+
+parallelize(model, gpus=[0, 1], fp16=True, verbose='detail')
+```
+- Since `nvidia-smi` shows the reserved cache area, it's difficult to check the exact allocated memory.
+- To check allocated memory state, **you can set `verbose='detail'` or `verbose='simple'`.** (default is `None`)
+
+```
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |    2721 MB |    2967 MB |    2967 MB |  251905 KB |
+|       from large pool |    2720 MB |    2966 MB |    2966 MB |  251904 KB |
+|       from small pool |       1 MB |       1 MB |       1 MB |       1 KB |
+|---------------------------------------------------------------------------|
+
+GPU:0 => 2.72GB
+```
+```
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 1                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |    2721 MB |    2967 MB |    2967 MB |  251905 KB |
+|       from large pool |    2720 MB |    2966 MB |    2966 MB |  251904 KB |
+|       from small pool |       1 MB |       1 MB |       1 MB |       1 KB |
+|---------------------------------------------------------------------------|
+
+GPU:1 => 2.72GB
+```
+<br><br>
+
+### 2.3. Do Inference the same way you did before.
+- Similarly when creating input tokens, you don't need to call `.cuda()`.
+- **You must input both input tokens and attention masking to model.**
+- `**inputs` is best way to put model both tokens and masking together.
+```python
+inputs = tokenizer("Parallelformers is", return_tensors="pt")
+
+outputs = model.generate(
+    **inputs,
+    num_beams=5,
+    no_repeat_ngram_size=4,
+    max_length=15,
+)
+
+print(f"Output: {tokenizer.batch_decode(outputs)[0]}")
+```
+- Why Haskell??? It's written in Python...  🤣
+```
+Output: Parallelformers is an open-source library for parallel programming in Haskell
+```
+<br>
+
+### 2.4. Deploy model to the server the same way you did before.
+- If you want to deploy model to web server, **you can implement it in the same way you did before.**
+- Since the parallelization process is automatically synchronized, it does not affect the web server.
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/generate_text/<text>")
+def generate_text(text):
+    inputs = tokenizer(text, return_tensors="pt")
+
+    outputs = model.generate(
+        **inputs,
+        num_beams=5,
+        no_repeat_ngram_size=4,
+        max_length=15,
+    )
+
+    outputs = tokenizer.batch_decode(
+        outputs,
+        skip_special_tokens=True,
+    )
+
+    return {
+        "inputs": text,
+        "outputs": outputs[0],
+    }
+
+
+app.run(host="0.0.0.0", port=5000)
+```
+- You can send a request to the web server like below.
+```
+$ curl -X get "YOUR_IP:5000/generate_text/Messi"
+```
+- And the following result is returned.
+```
+{"inputs": "Messi", "outputs": "Messi is the best player in the world right now. He is the"}
+```
+<br><br>
+
+### 2.5. Manage the model parallelization state easily.
+- You can use `cuda()`, `cpu()` and `to()` that were supported by PyTorch.
+- So, **you can easily break up model parallelization by calling these functions.**
+```python
+model.cuda()
+
+print(torch.cuda.memory_summary(0))
+print(torch.cuda.memory_summary(1))
+```
+- Check the allocated memory status using `torch.cuda.memory_summary()`.
+```
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |    5121 MB |    5121 MB |    5121 MB |    1024 B  |
+|       from large pool |    5120 MB |    5120 MB |    5120 MB |       0 B  |
+|       from small pool |       1 MB |       1 MB |       1 MB |    1024 B  |
+|---------------------------------------------------------------------------|
+
+GPU0 => 5.12GB
+```
+```
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 1                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |    1024 B  |    1024 B  |    1024 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |    1024 B  |    1024 B  |    1024 B  |
+|---------------------------------------------------------------------------|
+
+GPU1 => 0.00GB
+```
+- When you switch to CPU mode, it works like below.
+```python
+model.cpu()
+
+print(torch.cuda.memory_summary(0))
+print(torch.cuda.memory_summary(1))
+```
+```
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |    5121 MB |    5121 MB |    5121 MB |
+|       from large pool |       0 B  |    5120 MB |    5120 MB |    5120 MB |
+|       from small pool |       0 B  |       1 MB |       1 MB |       1 MB |
+|---------------------------------------------------------------------------|
+
+GPU0 => 0.00GB
+```
+```
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 1                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |    1024 B  |    1024 B  |    1024 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |    1024 B  |    1024 B  |    1024 B  |
+|---------------------------------------------------------------------------|
+
+GPU1 => 0.00GB
+```
+<br><br>
+
+## 3. How it works?
+- TODO
+
+
