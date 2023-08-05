@@ -1,0 +1,19 @@
+from .daemon_base import DaemonBase as DaemonBase, DaemonState as DaemonState, MainThread as MainThread
+from .http_request_mapper import HttpRequestMapper as HttpRequestMapper, RequestHandle as RequestHandle
+from .service_registry import ServiceRegistry as ServiceRegistry
+from .telemetry_environment import TelemetryEnvironment as TelemetryEnvironment
+from .time_keeper import TimeKeeper as TimeKeeper
+from http.server import BaseHTTPRequestHandler
+from typing import Any, Tuple, Type
+
+LOG: Any
+
+class HttpDaemon(DaemonBase):
+    server: Any
+    closed: bool
+    def __init__(self, name: str, address: Tuple[str, int] = ..., handler_class: Type[BaseHTTPRequestHandler] = ..., env: TelemetryEnvironment = ..., time_keeper: TimeKeeper = ...) -> None: ...
+    def get_base_url(self) -> str: ...
+    def add_handler(self, request_type: str, path: str, handle: RequestHandle, description: str = ..., data: dict = ..., response_type: str = ...) -> None: ...
+    def close(self) -> bool: ...
+    def serve(self, *args, main_thread: MainThread = ..., **kwargs) -> int: ...
+    def run(self, *_, **kwargs) -> None: ...

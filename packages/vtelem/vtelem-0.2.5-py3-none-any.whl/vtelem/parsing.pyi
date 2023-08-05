@@ -1,0 +1,6 @@
+from .classes import ID_PRIM as ID_PRIM, TIMESTAMP_PRIM as TIMESTAMP_PRIM
+from .classes.byte_buffer import ByteBuffer as ByteBuffer
+from .classes.channel_registry import ChannelRegistry as ChannelRegistry
+
+def parse_data_frame(obj: dict, buf: ByteBuffer, registry: ChannelRegistry) -> None: ...
+def parse_event_frame(obj: dict, buf: ByteBuffer, registry: ChannelRegistry) -> None: ...
