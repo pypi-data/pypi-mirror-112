@@ -1,0 +1,11 @@
+README.md
+setup.py
+classification_reportzr/reporterzr.py
+classification_reportzr.egg-info/PKG-INFO
+classification_reportzr.egg-info/SOURCES.txt
+classification_reportzr.egg-info/dependency_links.txt
+classification_reportzr.egg-info/not-zip-safe
+classification_reportzr.egg-info/requires.txt
+classification_reportzr.egg-info/top_level.txt
+tests/__init__.py
+tests/test_reporterzr.py
