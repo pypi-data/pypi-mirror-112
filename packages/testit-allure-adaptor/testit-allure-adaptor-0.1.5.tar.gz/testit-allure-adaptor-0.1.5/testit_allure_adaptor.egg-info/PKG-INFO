@@ -1,0 +1,42 @@
+Metadata-Version: 1.1
+Name: testit-allure-adaptor
+Version: 0.1.5
+Summary: Allure report adaptor for Test IT
+Home-page: https://pypi.org/project/testit-allure-adaptor/
+Author: Pavel Butuzov
+Author-email: pavel.butuzov@testit.software
+License: Apache-2.0
+Description: Allure report adaptor for Test IT
+        ==================================
+        .. image:: https://img.shields.io/pypi/v/testit-allure-adaptor?style=plastic
+                :target: https://pypi.org/project/testit-allure-adaptor/
+        
+        .. image:: https://img.shields.io/pypi/dm/testit-allure-adaptor?style=plastic
+                :target: https://pypi.org/project/testit-allure-adaptor/
+        
+        .. image:: https://img.shields.io/pypi/pyversions/testit-allure-adaptor?style=plastic
+                :target: https://pypi.org/project/testit-allure-adaptor/
+        
+        Installation
+        =============
+        Clone this project and open the console in the project directory:
+        
+        .. code:: bash
+        
+            $ pip install testit-allure-adaptor
+        
+        Usage
+        ======
+        
+        .. code:: bash
+        
+            $ testit --resultsdir allure-results
+        
+            $ testit --help
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9

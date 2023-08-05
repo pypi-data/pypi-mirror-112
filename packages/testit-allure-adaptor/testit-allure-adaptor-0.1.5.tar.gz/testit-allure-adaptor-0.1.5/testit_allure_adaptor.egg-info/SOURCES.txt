@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+setup.py
+src/__init__.py
+src/__main__.py
+src/reader.py
+src/utils.py
+src/../connection_config.ini
+testit_allure_adaptor.egg-info/PKG-INFO
+testit_allure_adaptor.egg-info/SOURCES.txt
+testit_allure_adaptor.egg-info/dependency_links.txt
+testit_allure_adaptor.egg-info/entry_points.txt
+testit_allure_adaptor.egg-info/requires.txt
+testit_allure_adaptor.egg-info/top_level.txt
