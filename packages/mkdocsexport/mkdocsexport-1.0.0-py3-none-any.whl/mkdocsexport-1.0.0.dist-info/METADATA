@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: mkdocsexport
+Version: 1.0.0
+Summary: Export documents to a single file. It makes use of a template so the format can be whatever you want (JSON, CSV, One big HTML file, what-ever)
+Home-page: https://github.com/philips-labs/MkdocsExportPlugin
+Author: Simon de Turck
+Author-email: simon.de.turck@philips.com
+License: MIT
+Keywords: mkdocs python markdown export
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: mkdocs (>=1.1)
+Requires-Dist: jinja2
+
+# Export docs
+
+**Description**:  Export documents to a single file. It makes use of a template so the format can be whatever you want (JSON, CSV, One big HTML file, what-ever).
+
+## Dependencies
+
+mkdocs > 1.1
+
+## Configuration
+Configuration options:
+export_filename: Name of the exported file. Defaults to `docs.json`
+export_folder: Folder to save export into. Defaults the global `site_dir` setting (works with `mkdocs serve` as well)
+export_template: Path to the file which contains the template for the export page. It is `None` by default, which means that the package-provided template is used. It can be an absolute path, or relative to the folder in which `mkdocs` is run.
+
+Add configuration to mkdocs.yml
+
+```python
+plugins:
+  - mkdocsexport:
+    export_filename = "filename.ext"
+    export_folder = "path/to/folder"
+    export_template = "path/to/template"
+```
+
+## Usage
+
+Install this plugin (it will also install mkdocs if required)
+
+```shell
+pip install mkdocsexport
+```
+
+or
+
+```shell
+pip install git+https://github.com/philips-labs/MkdocsExportPlugin.git
+```
+
+### Customization
+
+The layout of the exported page is a jinja2 template file. The package provides such a template by default, with the following content:
+
+```markdown
+[
+    {% for page in pages %}
+    {
+        "title": "{{page.title}}",
+        "file": "{{page.file.name}}",
+        "content":"{{page.content|escape}}"
+    }{%if loop.nextitem %},{%endif%}
+    {% endfor %}
+]
+```
+
+You can also provide your own template. The `page` object contains all the metadata in a mkdocs page, and in addition a `.filename` attribute, which contains the file name of the source of the page (relative to the docs folder), which can be used to link to that page.
+
+
