@@ -1,0 +1,32 @@
+[
+  {
+    "tyyppi": "muutos",
+    "tunnus": "fe9b1f96aaaf74e79a617780156c04656c6d785c",
+    "versio": "0.1.3",
+    "kuvaus": "Korjattu rivinvaihtojen esitys ilmoitustekstiss\u00e4"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "2e172ea18142eff183713deed263414d2206a09f",
+    "versio": "0.1.2",
+    "kuvaus": "PEP 517/8 -asennusm\u00e4\u00e4ritys"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "dcc89a95bd2e94e637f5a0f7d4c4d104f4490652",
+    "versio": "0.1.1",
+    "kuvaus": "Poistettu turhaa toistoa"
+  },
+  {
+    "tyyppi": "julkaisu",
+    "tunnus": "8381ac6e5bf7969a2824e4368046a89460d95006",
+    "versio": "0.1",
+    "kuvaus": "Versio 0.1"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "93ad6ffea7b2f64e9add75fc7cd3b0d2ef4da978",
+    "versio": "0.1",
+    "kuvaus": "Alustava toteutus"
+  }
+]
