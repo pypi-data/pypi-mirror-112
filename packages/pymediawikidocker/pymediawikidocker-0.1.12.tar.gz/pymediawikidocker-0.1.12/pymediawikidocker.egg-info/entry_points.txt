@@ -1,0 +1,3 @@
+[console_scripts]
+mwcluster = mwdocker.mwcluster:main
+
