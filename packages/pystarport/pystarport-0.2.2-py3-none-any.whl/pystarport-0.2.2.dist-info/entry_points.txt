@@ -1,0 +1,3 @@
+[console_scripts]
+pystarport=pystarport.cli:main
+
