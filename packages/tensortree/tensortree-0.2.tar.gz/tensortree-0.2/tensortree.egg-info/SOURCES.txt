@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+tensortree/__init__.py
+tensortree/collate.py
+tensortree/integrations.py
+tensortree/iterators.py
+tensortree/operations.py
+tensortree/render.py
+tensortree/tree.py
+tensortree/utils.py
+tensortree.egg-info/PKG-INFO
+tensortree.egg-info/SOURCES.txt
+tensortree.egg-info/dependency_links.txt
+tensortree.egg-info/requires.txt
+tensortree.egg-info/top_level.txt

@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: tensortree
+Version: 0.2
+Summary: Represent trees with tensors and perform fast calculations and modifications.
+Home-page: https://github.com/villmow/tensortree
+Author: Johannes Villmow
+Author-email: johannes.villmow@hs-rm.de
+License: MIT
+Download-URL: https://github.com/villmow/tensortree/archive/refs/tags/v0.2.tar.gz
+Description: UNKNOWN
+Keywords: tree,tensor,pytorch,pytorch tree,tensor tree
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
