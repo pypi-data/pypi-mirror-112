@@ -1,0 +1,19 @@
+{% macro job_header(name, image) %}
+  {{ name }}:
+    working_directory: ~/repo
+    docker:
+      - image: {{ image }}
+{%- endmacro -%}
+
+{% macro python_command_job(project, command, name, image) %}
+{{ job_header(name, image) }}
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: "Run {{ command }}"
+          command: |
+            . venv/bin/activate
+            {{ command }} {{ project }}
+
+{%- endmacro -%}

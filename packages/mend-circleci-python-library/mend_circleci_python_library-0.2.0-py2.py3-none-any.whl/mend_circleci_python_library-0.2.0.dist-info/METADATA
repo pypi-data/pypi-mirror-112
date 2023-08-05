@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: mend-circleci-python-library
+Version: 0.2.0
+Summary: Mend generator for CircleCI python libraries.
+Home-page: https://github.com/jessemyers/mend-circleci-python-library
+Author: Jesse Myers
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mend (>=0.4.0)
+Provides-Extra: dist
+Requires-Dist: bumpversion (>=0.6.0) ; extra == 'dist'
+Requires-Dist: pip (>=21.1.3) ; extra == 'dist'
+Requires-Dist: setuptools (>=57.1.0) ; extra == 'dist'
+Requires-Dist: twine (>=3.4.1) ; extra == 'dist'
+Requires-Dist: wheel (>=0.36.2) ; extra == 'dist'
+Provides-Extra: lint
+Requires-Dist: flake8 (>=3.9.2) ; extra == 'lint'
+Requires-Dist: flake8-isort (>=4.0.0) ; extra == 'lint'
+Requires-Dist: flake8-print (>=4.0.0) ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest (>=6.2.4) ; extra == 'test'
+Provides-Extra: types
+Requires-Dist: mypy (>=0.910.0) ; extra == 'types'
+Requires-Dist: types-setuptools (>=57.0.0) ; extra == 'types'
+
+# mend-circleci-python-library
+
+Mend generator for CircleCI python libraries.
+
+

@@ -1,0 +1,3 @@
+[mend.generators]
+circleci-python-library = mend_circleci_python_library.generator:CircleCIGenerator
+
