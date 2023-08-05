@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: propsettings
+Version: 0.1.8
+Summary: A python package to define how a class member should be rendered in a UI.
+Home-page: https://github.com/mnicolas94/propsettings
+Author: Miguel Nicolás-Díaz
+Author-email: miguelcok27@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# propsettings
+
+This packages enables you to decorate class member variables as a Setting. A Setting is a kind of property that let you define some characteristics of the variable that are taken into account by a user interface code to render that variable properly.
+
