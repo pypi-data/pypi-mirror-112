@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: swh.loader.cvs
+Version: 0.0.0
+Summary: Software Heritage CVS Loader
+Home-page: https://forge.softwareheritage.org/diffusion/swh-loader-cvs
+Author: Software Heritage developers
+Author-email: swh-devel@inria.fr
+License: UNKNOWN
+Project-URL: Bug Reports, https://forge.softwareheritage.org/maniphest
+Project-URL: Funding, https://www.softwareheritage.org/donate
+Project-URL: Source, https://forge.softwareheritage.org/source/swh-loader-cvs
+Project-URL: Documentation, https://docs.softwareheritage.org/devel/swh-loader-cvs
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: swh.core[http] (>=0.3)
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+
+Software Heritage - CVS loader
+==============================
+
+The Software Heritage CVS Loader is a tool and a library to walk
+<https://savannah.nongnu.org/projects/cvs>`_ repositories and inject into the SWH
+dataset all contained files that weren't known before.
+
+

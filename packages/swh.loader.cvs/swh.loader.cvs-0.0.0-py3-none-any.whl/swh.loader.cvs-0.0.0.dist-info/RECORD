@@ -1,0 +1,12 @@
+swh/__init__.py,sha256=vdWJoO0gFRfiZq1Ec6iGK2JWzuC2DTRHG7QZUa97eqo,111
+swh/foo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+swh/foo/bar.py,sha256=s1C_RuUtW3Ie9fM39Rus-q9o8G5qtSPI7a4jFzwh4MQ,246
+swh/foo/py.typed,sha256=bWew9mHgMy8LqMu7RuqQXFXLBxh2CRx0dUbSx-3wE48,27
+swh/foo/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+swh/foo/tests/test_nothing.py,sha256=GJJ1uQX9pGP121MrAModRagNGwJQQU8uUIn_Gtt11jA,85
+swh.loader.cvs-0.0.0.dist-info/AUTHORS,sha256=MmT2SW7uS3mtvAybAy0CJeZ5Hr8lG0SVctPbokdcdzM,112
+swh.loader.cvs-0.0.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+swh.loader.cvs-0.0.0.dist-info/METADATA,sha256=ZQIk7HurQ5jx5veS21p5doRnmh2SFii_9tydJ9ykT5k,1303
+swh.loader.cvs-0.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+swh.loader.cvs-0.0.0.dist-info/top_level.txt,sha256=8XlamXOHbQHPR7Tn7kZa8F4ufiLuK-BL_bZje5MY9hw,4
+swh.loader.cvs-0.0.0.dist-info/RECORD,,
