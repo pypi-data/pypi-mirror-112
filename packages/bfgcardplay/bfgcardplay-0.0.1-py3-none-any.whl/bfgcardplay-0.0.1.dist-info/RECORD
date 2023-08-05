@@ -1,0 +1,14 @@
+bfgcardplay/__init__.py,sha256=KRQoVHaeirZmKjxkbdk8b6BnI2R34MyYeryLQUCAgfs,133
+bfgcardplay/_version.py,sha256=07NzQXBgNlnw5kSN6ZYxE9By-_RuH3Jyy58Z74sIio0,21
+bfgcardplay/source/__init__.py,sha256=4W8VliAYUP1KY2gLJ_YDy2TmcXYVm-PY7XikQD_bFwA,2
+bfgcardplay/source/card_player_components.py,sha256=UNK7HBN6lIjzq7TQzkzRBy2S1rwhDAkv6laueMXvPU4,3801
+bfgcardplay/source/opening_lead.py,sha256=HJ0ZP9cpnoInmqwOontFo3p31J1QcfM-20_Ke5mDQ90,514
+bfgcardplay/source/opening_lead_card.py,sha256=YSwCDboPRNwIYac2irtf-wd-yTXMpOdZrsUcYxjKZWk,3952
+bfgcardplay/source/opening_lead_suit.py,sha256=S14LitnAYAKwbsiuhtXh3HPIpob2OgR2BIiAIISu3rM,40462
+bfgcardplay/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bfgcardplay/test/test_opening_lead_card.py,sha256=9Tf0poNzkgTTvAs0-EHOOFJU2NtCBecF3qWhragwngM,4101
+bfgcardplay/test/test_opening_lead_suit.py,sha256=LfTEOoSuvKDZn_5iC5F5_3fF9S4vPrpBL93CZQObFvQ,14110
+bfgcardplay-0.0.1.dist-info/METADATA,sha256=D-p3B8EW9Icc6UIC7umJJWaIgXf7cOuvyDV_MCAE_kY,621
+bfgcardplay-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bfgcardplay-0.0.1.dist-info/top_level.txt,sha256=2Orqk5O-2b-5EEFK8hXN24Wpx0QlYAeshlwUWOSPVQo,12
+bfgcardplay-0.0.1.dist-info/RECORD,,
