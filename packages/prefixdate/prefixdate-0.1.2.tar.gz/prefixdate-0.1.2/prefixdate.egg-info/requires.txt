@@ -1,0 +1,7 @@
+
+[dev]
+pytest
+pytest-cov
+bump2version
+wheel>=0.29.0
+twine
