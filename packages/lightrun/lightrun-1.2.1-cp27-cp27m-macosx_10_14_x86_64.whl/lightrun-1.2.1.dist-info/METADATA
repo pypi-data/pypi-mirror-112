@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: lightrun
+Version: 1.2.1
+Summary: Python Cloud Debugger
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Apache License, Version 2.0
+Keywords: Lightrun
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Intended Audience :: Developers
+Requires-Dist: httplib2 (>=0.19.1)
+Requires-Dist: cryptography (>=2.1.0)
+Requires-Dist: psutil (>=5.5.1)
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: pyyaml
+
+UNKNOWN
+
+
