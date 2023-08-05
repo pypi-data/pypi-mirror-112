@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cdk_fargate_patterns/__init__.py
+src/cdk_fargate_patterns/py.typed
+src/cdk_fargate_patterns.egg-info/PKG-INFO
+src/cdk_fargate_patterns.egg-info/SOURCES.txt
+src/cdk_fargate_patterns.egg-info/dependency_links.txt
+src/cdk_fargate_patterns.egg-info/requires.txt
+src/cdk_fargate_patterns.egg-info/top_level.txt
+src/cdk_fargate_patterns/_jsii/__init__.py
+src/cdk_fargate_patterns/_jsii/cdk-fargate-patterns@0.1.8.jsii.tgz
