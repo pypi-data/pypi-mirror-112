@@ -1,0 +1,12 @@
+README.md
+setup.py
+aadb/__init__.py
+aadb/adb.py
+aadb/device.py
+aadb/events.py
+aadb/transport.py
+aadb.egg-info/PKG-INFO
+aadb.egg-info/SOURCES.txt
+aadb.egg-info/dependency_links.txt
+aadb.egg-info/top_level.txt
+test/test_connect.py
