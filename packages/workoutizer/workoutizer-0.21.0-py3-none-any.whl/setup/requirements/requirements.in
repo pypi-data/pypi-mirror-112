@@ -1,0 +1,20 @@
+bokeh==1.4.0            # pinned due to CustomJS "use_strict" mode, will break my CustomJS
+coloredlogs
+click
+dask[distributed]
+django>=3.1.8
+django-colorfield
+djangorestframework
+fitparse==1.1.0         # pinned because 1.2.0 changed its API (altitude data changed)
+geopy>=2.1.0
+gpxpy
+huey
+pandas
+psutil
+requests
+sportgems==0.6.0        # pinned to avoid unexpected issues because of interface not being stable yet
+luddite
+tenacity
+django-eventstream
+channels
+pyudev

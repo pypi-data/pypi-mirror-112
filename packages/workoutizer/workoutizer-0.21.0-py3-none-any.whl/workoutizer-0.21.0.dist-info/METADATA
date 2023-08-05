@@ -1,0 +1,241 @@
+Metadata-Version: 2.1
+Name: workoutizer
+Version: 0.21.0
+Summary: 🏋️ Browser based Sport and Workout Organizer 🏃‍♀️
+Home-page: https://github.com/fgebhart/workoutizer
+Author: Fabian Gebhart
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.2
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: asgiref (==3.3.4)
+Requires-Dist: attrs (==21.2.0)
+Requires-Dist: autobahn (==21.3.1)
+Requires-Dist: automat (==20.2.0)
+Requires-Dist: bokeh (==1.4.0)
+Requires-Dist: certifi (==2021.5.30)
+Requires-Dist: cffi (==1.14.5)
+Requires-Dist: channels (==3.0.3)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: click (==8.0.1)
+Requires-Dist: cloudpickle (==1.6.0)
+Requires-Dist: coloredlogs (==15.0.1)
+Requires-Dist: constantly (==15.1.0)
+Requires-Dist: cryptography (==3.4.7)
+Requires-Dist: daphne (==3.0.2)
+Requires-Dist: dask[distributed] (==2021.06.0)
+Requires-Dist: distributed (==2021.06.0)
+Requires-Dist: django (==3.2.4)
+Requires-Dist: django-colorfield (==0.4.1)
+Requires-Dist: django-eventstream (==4.2.0)
+Requires-Dist: django-grip (==3.0.0)
+Requires-Dist: djangorestframework (==3.12.4)
+Requires-Dist: fitparse (==1.1.0)
+Requires-Dist: fsspec (==2021.6.0)
+Requires-Dist: geographiclib (==1.50)
+Requires-Dist: geopy (==2.1.0)
+Requires-Dist: gpxpy (==1.4.2)
+Requires-Dist: gripcontrol (==4.1.0)
+Requires-Dist: heapdict (==1.0.1)
+Requires-Dist: huey (==2.3.2)
+Requires-Dist: humanfriendly (==9.2)
+Requires-Dist: hyperlink (==21.0.0)
+Requires-Dist: idna (==2.10)
+Requires-Dist: incremental (==21.3.0)
+Requires-Dist: jinja2 (==3.0.1)
+Requires-Dist: locket (==0.2.1)
+Requires-Dist: luddite (==1.0.1)
+Requires-Dist: markupsafe (==2.0.1)
+Requires-Dist: msgpack (==1.0.2)
+Requires-Dist: numpy (==1.20.3)
+Requires-Dist: packaging (==20.9)
+Requires-Dist: pandas (==1.2.4)
+Requires-Dist: partd (==1.2.0)
+Requires-Dist: pillow (==8.2.0)
+Requires-Dist: psutil (==5.8.0)
+Requires-Dist: pubcontrol (==3.2.0)
+Requires-Dist: pyasn1 (==0.4.8)
+Requires-Dist: pyasn1-modules (==0.2.8)
+Requires-Dist: pycparser (==2.20)
+Requires-Dist: pyjwt (==2.1.0)
+Requires-Dist: pyopenssl (==20.0.1)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2021.1)
+Requires-Dist: pyudev (==0.22.0)
+Requires-Dist: pyyaml (==5.4.1)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: service-identity (==21.1.0)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: sortedcontainers (==2.4.0)
+Requires-Dist: sportgems (==0.6.0)
+Requires-Dist: sqlparse (==0.4.1)
+Requires-Dist: tblib (==1.7.0)
+Requires-Dist: tenacity (==7.0.0)
+Requires-Dist: toolz (==0.11.1)
+Requires-Dist: tornado (==6.1)
+Requires-Dist: twisted[tls] (==21.2.0)
+Requires-Dist: txaio (==21.2.1)
+Requires-Dist: urllib3 (==1.26.5)
+Requires-Dist: werkzeug (==0.16.1)
+Requires-Dist: zict (==2.0.0)
+Requires-Dist: zope.interface (==5.4.0)
+Provides-Extra: testing
+Requires-Dist: appdirs (==1.4.4) ; extra == 'testing'
+Requires-Dist: attrs (==21.2.0) ; extra == 'testing'
+Requires-Dist: backcall (==0.2.0) ; extra == 'testing'
+Requires-Dist: black (==21.6b0) ; extra == 'testing'
+Requires-Dist: cfgv (==3.3.0) ; extra == 'testing'
+Requires-Dist: click (==8.0.1) ; extra == 'testing'
+Requires-Dist: coverage (==5.5) ; extra == 'testing'
+Requires-Dist: decorator (==5.0.9) ; extra == 'testing'
+Requires-Dist: distlib (==0.3.2) ; extra == 'testing'
+Requires-Dist: execnet (==1.9.0) ; extra == 'testing'
+Requires-Dist: filelock (==3.0.12) ; extra == 'testing'
+Requires-Dist: flake8 (==3.9.2) ; extra == 'testing'
+Requires-Dist: identify (==2.2.10) ; extra == 'testing'
+Requires-Dist: iniconfig (==1.1.1) ; extra == 'testing'
+Requires-Dist: ipdb (==0.13.9) ; extra == 'testing'
+Requires-Dist: ipython-genutils (==0.2.0) ; extra == 'testing'
+Requires-Dist: ipython (==7.24.1) ; extra == 'testing'
+Requires-Dist: isort (==5.8.0) ; extra == 'testing'
+Requires-Dist: jedi (==0.18.0) ; extra == 'testing'
+Requires-Dist: lxml (==4.6.3) ; extra == 'testing'
+Requires-Dist: matplotlib-inline (==0.1.2) ; extra == 'testing'
+Requires-Dist: mccabe (==0.6.1) ; extra == 'testing'
+Requires-Dist: mypy-extensions (==0.4.3) ; extra == 'testing'
+Requires-Dist: nodeenv (==1.6.0) ; extra == 'testing'
+Requires-Dist: packaging (==20.9) ; extra == 'testing'
+Requires-Dist: parso (==0.8.2) ; extra == 'testing'
+Requires-Dist: pathspec (==0.8.1) ; extra == 'testing'
+Requires-Dist: pep517 (==0.10.0) ; extra == 'testing'
+Requires-Dist: pexpect (==4.8.0) ; extra == 'testing'
+Requires-Dist: pickleshare (==0.7.5) ; extra == 'testing'
+Requires-Dist: pip-tools (==6.1.0) ; extra == 'testing'
+Requires-Dist: pluggy (==0.13.1) ; extra == 'testing'
+Requires-Dist: pre-commit (==2.13.0) ; extra == 'testing'
+Requires-Dist: prompt-toolkit (==3.0.18) ; extra == 'testing'
+Requires-Dist: ptyprocess (==0.7.0) ; extra == 'testing'
+Requires-Dist: py (==1.10.0) ; extra == 'testing'
+Requires-Dist: pycodestyle (==2.7.0) ; extra == 'testing'
+Requires-Dist: pyflakes (==2.3.1) ; extra == 'testing'
+Requires-Dist: pygments (==2.9.0) ; extra == 'testing'
+Requires-Dist: pyparsing (==2.4.7) ; extra == 'testing'
+Requires-Dist: pytest-cov (==2.12.1) ; extra == 'testing'
+Requires-Dist: pytest-django (==4.4.0) ; extra == 'testing'
+Requires-Dist: pytest-forked (==1.3.0) ; extra == 'testing'
+Requires-Dist: pytest-html (==3.1.1) ; extra == 'testing'
+Requires-Dist: pytest-metadata (==1.11.0) ; extra == 'testing'
+Requires-Dist: pytest-xdist (==2.2.1) ; extra == 'testing'
+Requires-Dist: pytest (==6.2.4) ; extra == 'testing'
+Requires-Dist: pyyaml (==5.4.1) ; extra == 'testing'
+Requires-Dist: regex (==2021.4.4) ; extra == 'testing'
+Requires-Dist: rope (==0.19.0) ; extra == 'testing'
+Requires-Dist: selenium (==3.141.0) ; extra == 'testing'
+Requires-Dist: six (==1.16.0) ; extra == 'testing'
+Requires-Dist: toml (==0.10.2) ; extra == 'testing'
+Requires-Dist: traitlets (==5.0.5) ; extra == 'testing'
+Requires-Dist: urllib3 (==1.26.5) ; extra == 'testing'
+Requires-Dist: virtualenv (==20.4.7) ; extra == 'testing'
+Requires-Dist: wcwidth (==0.2.5) ; extra == 'testing'
+
+# Workoutizer
+
+[![PyPI](https://badge.fury.io/py/workoutizer.svg)](https://badge.fury.io/py/workoutizer)
+[![Python](https://img.shields.io/pypi/pyversions/workoutizer.svg?style=plastic)](https://badge.fury.io/py/workoutizer)
+[![Build Status](https://github.com/fgebhart/workoutizer/actions/workflows/matrix_test.yml/badge.svg)](https://github.com/fgebhart/workoutizer/actions/workflows/matrix_test.yml)
+[![Setup on Raspberry Pi](https://github.com/fgebhart/workoutizer/actions/workflows/raspberry_pi_test.yml/badge.svg)](https://github.com/fgebhart/workoutizer/actions/workflows/raspberry_pi_test.yml)
+[![Coverage Badge](https://raw.githubusercontent.com/fgebhart/workoutizer/master/.github/badges/coverage.svg)](https://raw.githubusercontent.com/fgebhart/workoutizer/master/.github/badges/coverage.svg)
+[![Downloads](https://img.shields.io/pypi/dm/workoutizer.svg?label=Pypi%20downloads)](https://pypi.org/project/workoutizer/)
+[![workoutizer](https://snyk.io/advisor/python/workoutizer/badge.svg)](https://snyk.io/advisor/python/workoutizer)
+
+Workoutizer is a simple web application for organizing your workouts and sports activities. It is designed to work
+locally on any UNIX-like system running Python.
+
+Track your activities to get an overview of your overall training, similar to platforms like
+[strava](https://www.strava.com/) or [garmin connect](https://connect.garmin.com/) - but without
+uploading all your sensitive health data to some 3rd party cloud.
+
+
+## Features
+
+* Automatic import of Garmin `.fit` files and `.gpx` files
+* Automatic naming of activities based on daytime, sport and geo location
+* Render your activity gps data on different OSM maps
+* Plot your activity specific data e.g. heart rate, pace, temperature, cadence and altitude
+* Integrate laps into both plots and maps
+* Connected plots and map via mouse hovering
+* Find sections with highest speed and max altitude gain using [sportgems](https://github.com/fgebhart/sportgems) and
+  highlight on map
+* Add untracked activities manually via the GUI
+* Export activities as `.gpx` files
+* Add as many different sports as you want
+
+
+## Status
+
+Workoutizer is still in a somewhat experimental phase. Things might change a lot from one version to another. However,
+I'm happy to receive bug reports and feedback.
+
+
+## Getting Started
+
+Install workoutizer using pip
+```
+pip install workoutizer
+```
+
+Initialize workoutizer to provide some demo data and run it:
+```
+wkz init --demo
+wkz run
+```
+
+See the help description of the CLI with `wkz --help` and subcommands, e.g.: `wkz manage --help`. 
+
+In case you want to run workoutizer on a Raspberry Pi in your local network, follow the 
+[Raspberry Pi setup instructions](https://github.com/fgebhart/workoutizer/tree/master/setup).
+
+
+## Gallery 
+
+ Dashboard             |  Sport Page
+:-------------------------:|:-------------------------:
+![](https://i.imgur.com/3CUCGC8.png)  |  ![](https://i.imgur.com/p5FcrHz.png)
+
+ Activity Page 1/2             |  Activity Page 2/2
+:-------------------------:|:-------------------------:
+![](https://i.imgur.com/FnVFz9P.png)  |  ![](https://i.imgur.com/zp8iQcm.png)
+
+
+## Changelog
+
+See [Changelog](https://github.com/fgebhart/workoutizer/blob/main/CHANGELOG.md).
+
+
+## Contributing
+
+Contributions are welcome - check out the [Contribution Guidelines](https://github.com/fgebhart/workoutizer/blob/main/CONTRIBUTING.md).
+
+
+## Thanks
+
+Libraries and other tools used by Workoutizer:
+* [leaflet-ui](https://github.com/Raruto/leaflet-ui) by [Raruto](https://github.com/Raruto)
+* [django-colorfield](https://github.com/fabiocaccamo/django-colorfield) by [Fabio Caccamo](https://github.com/fabiocaccamo)
+* [python-fitparse](https://github.com/dtcooper/python-fitparse) by [dtcooper](https://github.com/dtcooper)
+* [leaflet-color-markers](https://github.com/pointhi/leaflet-color-markers) by [pointhi](https://github.com/pointhi)
+* [Font Awesome Icons](https://fontawesome.com/)
+* [Paper-Dashboard Pro](https://www.creative-tim.com/product/paper-dashboard-2-pro) by [Creative Tim](https://www.creative-tim.com/)
+
+
