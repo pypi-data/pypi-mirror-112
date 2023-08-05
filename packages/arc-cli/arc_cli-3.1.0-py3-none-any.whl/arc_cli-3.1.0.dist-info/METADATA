@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: arc-cli
+Version: 3.1.0
+Summary: A Regular CLI
+Home-page: https://github.com/seanrcollings/arc
+License: MIT
+Keywords: CLI,extendable,easy,arc
+Author: Sean Collings
+Author-email: seanrcollings@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Documentation, https://github.com/seanrcollings/arc/wiki
+Description-Content-Type: text/markdown
+
+# ARC: A Regular CLI
+A tool for building declartive, and highly extendable CLI systems for Python 3.9
+
+# ARC Features
+- Automatic type convertsion
+- Command Namespacing
+- Help Documentation Generation
+- User-extension via Dynamic namespace loading
+
+# Docs
+- [Docs](http://arc.seanrcollings.com)
+- [Wiki](https://github.com/seanrcollings/arc/wiki)
+- [Changelog](https://github.com/seanrcollings/arc/wiki/Changelog)
+
+# Installation
+
+```
+$ pip install arc-cli
+```
+
+Clone for development
+```
+$ git clone https://github.com/seanrcollings/arc
+$ poetry install
+```
+
+
+# Quick Start
+
+```py
+from arc import CLI
+
+cli = CLI()
+
+@cli.command()
+def hello():
+    print("Hello, World!")
+
+cli()
+```
+
+```
+$ python example.py hello
+Hello, World!
+```
+Reference [getting started](https://github.com/seanrcollings/arc/wiki) for more info
+
+# Tests
+Tests are written with `pytest`
+```
+$ pytest
+```
+
+
