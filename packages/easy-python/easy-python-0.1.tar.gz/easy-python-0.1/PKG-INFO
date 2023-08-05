@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: easy-python
+Version: 0.1
+Summary: Esta es la descripcion de mi paquete
+Home-page: https://github.com/PinaYTTT/easy_python
+Author: PinaYT
+Author-email: pinacomandos@gmail.com
+License: MIT
+Download-URL: https://github.com/PinaYTTT/easy_python/tree/0.1
+Description: # Easy python
+        This tool is for news in python lenguage programming, the commands are in spanish to help the spanish comunnity
+        
+        # Functions
+        This is a beta. Here are the functions
+        
+        **Console Functions:**<br /> 
+        â€¢ print = consola.escribir('parameters')<br /> 
+        â€¢ input = consola.recibir('input parameters')
+        
+        
+        **Extra functions:**<br /> 
+        â€¢ Timezone = You can see the Timezone in your pc, you can customize it how this example: "extras.tiempo('%d-%m-%Y %H:%M:%S')" if you dont want to customize it, you can place how this "extras.tiempo()" 
+        
+        
+        ## Future
+        **Numbers functions:**<br /> 
+        â€¢ + (sum) = numeros.sumar(number,number,number,etc...) <br /> 
+        â€¢ - (subtract) = numeros.restar(number,number,number,etc...) <br /> 
+        â€¢ * (multiply) = numeros.multiplicar(number,number,number,etc..) <br /> 
+        â€¢ / (divide) = numeros.dividir(arg1, arg2) 'Only you can divide 2 numbers' <br /> 
+Keywords: testing,logging,example
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
