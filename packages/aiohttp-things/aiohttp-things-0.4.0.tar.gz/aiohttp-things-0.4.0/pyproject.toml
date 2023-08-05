@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "aiohttp-things"
+version = "0.4.0"
+description = "Modest utility collection for development with AIOHTTP framework."
+authors = [
+    "Ruslan Ilyasovich Gilfanov <ri.gilfanov@yandex.ru>",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: AsyncIO",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Internet",
+    "Topic :: Internet :: WWW/HTTP",
+    "Typing :: Typed",
+]
+keywords = ["aiohttp", "asyncio"]
+license = "MIT License"
+readme = "README.rst"
+
+documentation = "https://aiohttp-things.readthedocs.io/"
+repository = "https://github.com/ri-gilfanov/aiohttp-things"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+aiohttp = "^3.7.4.post0"
+
+[tool.poetry.dev-dependencies]
+aiohttp_jinja2 = "*"
+flake8 = ">=3.9.2"
+isort = ">=5.9.1"
+mypy = ">=0.902"
+pytest = ">=6.2.4"
+pytest-cov = ">=2.12.1"
+Sphinx = ">=4.0.2"
+sphinx_rtd_theme = ">=0.5.2"
+types-toml = ">=0.1.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+known_first_party = ["aiohttp_things"]
+known_third_party = ["aiohttp"]
+profile = "wemake"
+src_paths = ["aiohttp_things", "tests"]
+extend_skip = ["example.py"]
+
+[tool.mypy]
+files = [
+    "aiohttp_things",
+    "tests",
+]
