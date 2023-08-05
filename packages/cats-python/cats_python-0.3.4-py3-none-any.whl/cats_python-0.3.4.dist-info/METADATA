@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: cats-python
+Version: 0.3.4
+Summary: Cifrazia Action Transport System for Python
+Home-page: https://github.com/AdamBrianBright/cats-python
+License: MIT
+Keywords: cifrazia,tcp,rpc,cats,tornado
+Author: Bogdan Parfenov
+Author-email: adam.brian.bright@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: 
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Russian
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: django
+Provides-Extra: djantic
+Provides-Extra: pydantic
+Requires-Dist: Django (>=2.0,<3.0); extra == "django" or extra == "djantic"
+Requires-Dist: djangorestframework (>=3.12.4); extra == "django"
+Requires-Dist: djantic (>=0.3.3); extra == "djantic"
+Requires-Dist: orjson (>=3.5.4,<4.0.0)
+Requires-Dist: pydantic (>=1.8.2); extra == "pydantic" or extra == "djantic"
+Requires-Dist: pytz (>=2021.1,<2022.0)
+Requires-Dist: sentry-sdk (>=1.1.0,<2.0.0)
+Requires-Dist: tornado (>=6.1,<7.0)
+Project-URL: Bug Tracker, https://github.com/AdamBrianBright/cats-python/issues
+Project-URL: Contact Author, https://vk.com/adam_bright
+Project-URL: Documentation, https://github.com/AdamBrianBright/cats-python/wiki
+Project-URL: Repository, https://github.com/AdamBrianBright/cats-python.git
+Description-Content-Type: text/markdown
+
+# CATS Python
+
+## Cifrazia Action Transport System
+
+### Requirements
+
++ Python `^3.9`
++ Tornado `^6.1`
++ Sentry SDK `^1.1.0`
++ uJSON `^4.0.2`
++ PyTZ `^2021.1`
+
+**Extras**
+
++ `django`
+  + Django `^2.2` (optional)
+  + Django Rest Framework `^3.12.4` (optional)
+
+### Installation
+
+**Install via Poetry**
+
+```shell
+poetry add cats-python
+```
+
+With `Django` support:
+
+```shell
+poetry add cats-python[django]
+```
+
+# [WIP] Protocol declaration
+
+## Compression
+
+### Compression algorithms
+
+`0x00` **No compression**
+
+All payload in not compressed (unless the payload itself is a compressed data)
+
+`0x01` **GZip**
+
+Payload compressed with GZip at level 6
+
+`0x02` **ZLib**
+
+Payload compressed with ZLib DEFLATE method at level 6
+
+Additional header with **Adler32** checksum provided `{"Adler32": 1235323}` 
