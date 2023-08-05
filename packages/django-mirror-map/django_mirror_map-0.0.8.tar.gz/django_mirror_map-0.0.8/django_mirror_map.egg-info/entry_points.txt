@@ -1,0 +1,6 @@
+[console_scripts]
+attr2map = django_mirror_map:attr2map
+unix2day = django_mirror_map:unix2day
+unix2yymmdd = django_mirror_map:unix2yymmdd
+useattr = django_mirror_map:useattr
+
