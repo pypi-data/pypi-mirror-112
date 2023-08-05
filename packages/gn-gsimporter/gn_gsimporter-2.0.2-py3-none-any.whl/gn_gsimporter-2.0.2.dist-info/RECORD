@@ -1,0 +1,10 @@
+gsimporter/__init__.py,sha256=njb4T1J6W4kesqeZGA2209tqycoo7v0fpM7VvJix8fE,112
+gsimporter/_util.py,sha256=wrBqKGtIAHbwLIHYyUOFJC_7SwMNfLKSv4i5eWB7CR4,605
+gsimporter/api.py,sha256=Xrzl4U0mqJErAsvLo26Ww535ZmwNZJz0JR9Tp-wgQwY,16179
+gsimporter/client.py,sha256=Q08yf4wX-nFHBwrZOih9hiziQ1vU12n3_5UjOnpYuEg,11774
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/uploadtests.py,sha256=kf4xsWVDDRTeGkQ6k4qKcLsWEyYsrFCdY3aY-eekt5w,20844
+gn_gsimporter-2.0.2.dist-info/METADATA,sha256=xIDE7x4AbxEnwvbEAGaN5SAPJnho91BeiGFSgTOzEQo,1328
+gn_gsimporter-2.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gn_gsimporter-2.0.2.dist-info/top_level.txt,sha256=5bX3KWFdkCRF84dmVkEN_Abzz6VuW2vyBb7bS3FbHUs,16
+gn_gsimporter-2.0.2.dist-info/RECORD,,
