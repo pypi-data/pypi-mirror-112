@@ -1,0 +1,14 @@
+pyhailing/__init__.py,sha256=W1QAFRpjGI1mtzE4-9dUFVKSuKifjycGPrirnKkNyBw,104
+pyhailing/core.py,sha256=W_oxeTzs8W5YLXwOhdyrMZAPoE_gnBMz-JKKnFWRlSk,24020
+pyhailing/ridehail_env.py,sha256=BXfQ7LVYXQjqBco26qDAP0rJQKtX-qh7sID6_Tg1_xk,58257
+pyhailing/data/lots.csv,sha256=bmEE241VPZvH6qGReajAeoiIeRD7rR3Kf_epboyGe2E,13401
+pyhailing/data/speeds.csv,sha256=kT9tLBwsDD3iOQHN7SakuKZSiBHv4MQzYgc-LVIhug4,3882532
+pyhailing/data/taxizones.geojson,sha256=jQL6u1AZKZ8NnIE6vc9fFLUzJAgcPnI7ZcmehKMEKQQ,839180
+pyhailing/data/trips.csv,sha256=HUHerE8m0nWfqa0eVqZVQqvHVEodh5ceOGuK8m_0bz4,25923486
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_ridehail_env.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyhailing-0.0.5.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+pyhailing-0.0.5.dist-info/METADATA,sha256=CsNA-5O8FAGZ7f557kTh0OYr7H9sMaQ38Nzk3N2pL7c,8705
+pyhailing-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyhailing-0.0.5.dist-info/top_level.txt,sha256=Mfa5XOpaD4iSZhyaA4htUl3BnFqhGwXXbvfApimD3u0,16
+pyhailing-0.0.5.dist-info/RECORD,,
