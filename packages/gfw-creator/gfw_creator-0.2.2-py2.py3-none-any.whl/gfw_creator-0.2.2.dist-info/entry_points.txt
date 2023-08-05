@@ -1,0 +1,6 @@
+[console_scripts]
+gfw_creator = gfw_creator.cli:main
+
+[esm_tools.plugins]
+create_hosing_files = gfw_creator.esm_tools_plugin:create_hosing_files
+
