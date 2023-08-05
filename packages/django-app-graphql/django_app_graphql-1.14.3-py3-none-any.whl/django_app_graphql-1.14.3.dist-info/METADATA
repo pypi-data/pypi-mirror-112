@@ -1,0 +1,191 @@
+Metadata-Version: 2.1
+Name: django-app-graphql
+Version: 1.14.3
+Summary: Some stuff that i used when developing with django
+Home-page: https://github.com/Koldar/django-koldar-common-apps
+Author: Massimo Bono
+Author-email: massimobono1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires: setuptools
+Requires: wheel
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+License-File: pmakeup-cache.json
+License-File: PMakeupfile.py
+License-File: README.md
+License-File: requirements.txt
+License-File: setup.py
+License-File: TWINE_PYPI_PASSWORD
+Requires-Dist: aniso8601 (>=8.1.1)
+Requires-Dist: arrow (>=1.1.0)
+Requires-Dist: asgiref (>=3.3.4)
+Requires-Dist: certifi (>=2021.5.30)
+Requires-Dist: chardet (>=4.0.0)
+Requires-Dist: decorator (>=4.4.2)
+Requires-Dist: Django (>=3.2.4)
+Requires-Dist: django-appconf (>=1.0.4)
+Requires-Dist: django-currentuser (>=0.5.3)
+Requires-Dist: django-filter (>=2.4.0)
+Requires-Dist: django-graphql-jwt (>=0.3.2)
+Requires-Dist: django-koldar-utils (>=2.8.1)
+Requires-Dist: django-polymorphic (>=3.0.0)
+Requires-Dist: djangorestframework (>=3.12.4)
+Requires-Dist: graphene (>=3.0b7)
+Requires-Dist: graphene-django (>=3.0.0b7)
+Requires-Dist: graphene-django-extras (>=0.5.1)
+Requires-Dist: graphql-core (>=3.1.5)
+Requires-Dist: graphql-relay (>=3.1.0)
+Requires-Dist: idna (>=2.10)
+Requires-Dist: inflect (>=5.3.0)
+Requires-Dist: inflection (>=0.5.1)
+Requires-Dist: jsonpath-ng (>=1.5.2)
+Requires-Dist: networkx (>=2.5.1)
+Requires-Dist: ply (>=3.11)
+Requires-Dist: promise (>=2.3)
+Requires-Dist: pydot (>=1.4.2)
+Requires-Dist: PyJWT (>=2.1.0)
+Requires-Dist: pyparsing (>=2.4.7)
+Requires-Dist: python-dateutil (>=2.8.1)
+Requires-Dist: pytz (>=2021.1)
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: Rx (>=1.6.1)
+Requires-Dist: singledispatch (>=3.6.2)
+Requires-Dist: six (>=1.16.0)
+Requires-Dist: sqlparse (>=0.4.1)
+Requires-Dist: stringcase (>=1.2.0)
+Requires-Dist: text-unidecode (>=1.3)
+Requires-Dist: urllib3 (>=1.26.5)
+Provides-Extra: doc
+Provides-Extra: test
+
+# Introduction
+
+Django app that expose a graphql schema as well as a graphiql interface.
+
+# install
+
+```
+pip install django-app-graphql
+```
+
+# Configuration
+
+in `INSTALLED_APPS` you need to add:
+
+```
+'graphene_django',
+'django_filters',
+```
+
+**After all your apps you need to use this app** (this is important otherwise some models won't be detected at all!):
+
+```
+'django_app_graphql',
+```
+
+The first thing you need to do is determine if you want your grpahql server setupped using `graphene` or uysing `ariadne`.
+In settings, write:
+
+```
+DJANGO_APP_GRAPHQL = {
+    "BACKEND_TYPE": "ariadne|graphene"
+}
+```
+
+and select either *ariadne* or *graphene*.
+
+## You have chosen graphene
+
+The app needs to be deploy for last because otherwise it cannot detect all the Django models and their types.
+You also need to configure the authentication proces. Hence you need t add "AUTHENTICATION_BACKENDS" in the `settings.py`:
+
+```
+AUTHENTICATION_BACKENDS = [
+    "graphql_jwt.backends.JSONWebTokenBackend",
+    "django.contrib.auth.backends.ModelBackend"
+]
+```
+
+After that, you need to properly configure the graphene, graphenedjango-extras and graphene-jwt. Add all these in your `settings.py`:
+
+```
+GRAPHENE={
+    "SCHEMA": "django_app_graphql.graphene.schema.schema",
+    'SCHEMA_OUTPUT': 'graphql-schema.json',
+    'SCHEMA_INDENT': 2,
+    'MIDDLEWARE': [
+        "graphql_jwt.middleware.JSONWebTokenMiddleware",
+        "django_app_graphql.middleware.GraphQLStackTraceInErrorMiddleware",
+    ],
+}
+
+GRAPHENE_DJANGO_EXTRAS = {
+    'DEFAULT_PAGINATION_CLASS': 'graphene_django_extras.paginations.LimitOffsetGraphqlPagination',
+    'DEFAULT_PAGE_SIZE': 20,
+    'MAX_PAGE_SIZE': 50,
+    'CACHE_ACTIVE': True,
+    'CACHE_TIMEOUT': 300  # seconds
+}
+
+# see https://django-graphql-jwt.domake.io/en/latest/refresh_token.html
+GRAPHQL_JWT = {
+    # This configures graphql-jwt to add "token" input at each request to be authenticated
+    'JWT_ALLOW_ARGUMENT': True,
+    'JWT_ARGUMENT_NAME': "token",
+    'JWT_VERIFY_EXPIRATION': True,
+    'JWT_EXPIRATION_DELTA': timedelta(minutes=30),
+    'JWT_ALGORITHM': "HS256",
+    'JWT_REFRESH_EXPIRATION_DELTA': timedelta(days=7),
+    'JWT_AUTH_HEADER_PREFIX': "Bearer",
+}
+```
+
+## You have chosen ariadne
+
+In `settings.py` add:
+
+```
+INSTALLED_APPS = [
+    ...
+    "ariadne.contrib.django",
+]
+```
+
+Add templates (otherwise the playground won't work):
+
+```
+TEMPLATES = [
+    {
+        ...,
+        'APP_DIRS': True,
+        ...
+    },
+]
+```
+
+## Generic tweaks
+
+Finally you can configure this app, for instance:
+
+```
+DJANGO_APP_GRAPHQL = {
+    "BACKEND_TYPE": "graphene",
+    "EXPOSE_GRAPHIQL": True,
+    "GRAPHQL_SERVER_URL": "",
+    "ENABLE_GRAPHQL_FEDERATION": True,
+    "SAVE_GRAPHQL_SCHEMA": "output/schema.graphql"
+}
+```
+
+
+# Update new version (only for developers)
+
+```
+pmakeup update-version-patch build upload-to-pypi
+```
+
