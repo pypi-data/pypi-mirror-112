@@ -1,0 +1,9 @@
+django>=1.8
+django-ckeditor>=5.0
+
+[dev]
+flake8
+pytest
+pytest-django
+pytest-pythonpath
+twine
