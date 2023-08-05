@@ -1,0 +1,6 @@
+[cms.djangoapp]
+
+
+[lms.djangoapp]
+edx_sysadmin = edx_sysadmin.apps:EdxSysAdminConfig
+
