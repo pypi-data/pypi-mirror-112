@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+sap_rfc_data_collector/__init__.py
+sap_rfc_data_collector/connection.py
+sap_rfc_data_collector/sap.py
+sap_rfc_data_collector.egg-info/PKG-INFO
+sap_rfc_data_collector.egg-info/SOURCES.txt
+sap_rfc_data_collector.egg-info/dependency_links.txt
+sap_rfc_data_collector.egg-info/requires.txt
+sap_rfc_data_collector.egg-info/top_level.txt
