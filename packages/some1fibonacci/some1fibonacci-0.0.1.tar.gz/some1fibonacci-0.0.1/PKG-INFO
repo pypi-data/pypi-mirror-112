@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: some1fibonacci
+Version: 0.0.1
+Summary: Fibonacci series program using function
+Home-page: UNKNOWN
+Author: Sneha
+Author-email: kawales543@gmail.com
+License: MIT
+Keywords: fibonacci
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+This is very simple program that take number and print in Fibonacci series.
+
+
+Change Log
+=============
+
+0.0.1 (07/07/2021)
+------------------
+- First release
+
+
