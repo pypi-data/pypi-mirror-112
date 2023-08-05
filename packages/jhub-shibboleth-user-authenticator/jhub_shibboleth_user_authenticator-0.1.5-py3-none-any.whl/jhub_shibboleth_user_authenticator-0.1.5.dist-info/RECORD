@@ -1,0 +1,9 @@
+jhub_shibboleth_user_authenticator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jhub_shibboleth_user_authenticator/shibboleth_user_auth.py,sha256=F4swYa2Bn0-c8kLemanwFowTUcAxQ-8H1fO69PxNflk,3889
+jhub_shibboleth_user_authenticator-0.1.5.data/data/share/jupyterhub/templates/login_shibboleth.html,sha256=ho-te301kVxJqocjz9U2g6kvac4VxL8OEKqe0b59KdY,617
+jhub_shibboleth_user_authenticator-0.1.5.data/data/share/jupyterhub/templates/logout_shibboleth.html,sha256=pzC_iXgPbINhDaHoN9WxD-iN8KA04aRBNLLBRF5vz4g,889
+jhub_shibboleth_user_authenticator-0.1.5.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+jhub_shibboleth_user_authenticator-0.1.5.dist-info/METADATA,sha256=Wz-gmep6R7Rgw02sl6tvZTDE5ZIOPCn2u3TRg_Sjkac,2775
+jhub_shibboleth_user_authenticator-0.1.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jhub_shibboleth_user_authenticator-0.1.5.dist-info/top_level.txt,sha256=4K5INJ0QbttpJEsmg0hyqVaFJTLieZGbGV5DmxM3LwA,35
+jhub_shibboleth_user_authenticator-0.1.5.dist-info/RECORD,,
