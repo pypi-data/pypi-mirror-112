@@ -1,0 +1,149 @@
+CHANGES
+=======
+
+v7.0.0
+------
+
+* # OpenModule \* rpc client resource filter only applies if resource in message \* all zmq messages now use utc timestamps
+
+v6.1.6
+------
+
+* 6.1.6
+
+v6.1.5
+------
+
+* bug fix test cases
+* rpc-client refactor + kv\_redis
+* rpc-client
+* added default zmq.LINGER for context to be more compatible with OMv1 socket creation
+* wait for rpc assertion
+
+v6.1.4
+------
+
+* Resource Filter in RPC Server + removed urljoin from ApiMocker
+
+v6.1.3
+------
+
+* fixes a unicode issue
+
+v6.1.2
+------
+
+* count message uses lazy settings resource, import cleanup
+* fixes a timezone issue where the timezone of the local system would change results
+* removed double entry from merge
+* merge from branch feature/recurrence
+* removed print
+* settings module now module instead of path, developer errors removed from non openmodule test
+* migration notice for tox.ini change [skip ci]
+* allow externals bash added for tox v4, and if fixed
+* updated tox to check for openmodule\_test imports
+* rebase on master
+* session wrapper for database session, do not allow access to 'closed' sessions
+
+v6.1.1
+------
+
+* interrupt test mixin rework
+
+v6.1.0
+------
+
+* docs [skip-ci]
+* relative path fix again
+* relative path fix
+* lazy config
+* openmodule config
+* docs [skip ci]
+
+v6.0.1
+------
+
+* allow import of checking module
+* documentation [skip ci]
+
+v6.0.0
+------
+
+* requirements
+* known issues
+* fixes an issue with .timestamp() and testing
+* name function which has no doc string in assertion
+* why did i do that?
+* recurrence allows empty strings again now, wait\_for\_reject raises an assertion instead of timeout error if the barrier actually opened
+* testcase for datetime-naive saves
+* git stash popMerge branch 'timezone\_checks' of gitlab.com:arivo-public/device-python/openmodule into timezone\_checks
+* why was this ignored?
+* developer error, test gate
+* check on migration/make\_migration if DateTime is used + testcase, custom types are now imported correctly
+* fix in timezone validator for optional fields
+* v6 breaking changes, added timezone / datetime checks
+* added database flush and a known issues list
+
+v5.0.1
+------
+
+* fixes a bug in the database code, which swallowed exceptions during commit()
+* api changes
+
+v5.0.0
+------
+
+* breaking changes in alert handler, see migration.md
+
+v4.0.0
+------
+
+* log message changes in backend, docs improvements for update/delete\_query
+* fixed test case
+* api saves response in excpetion if possible
+* migrations readme
+* migrations as markdown [skip-ci]
+* changed default database folder to /data/sqlite
+* 4.0 migration guide
+* breaking changes: changes Enums Category to AccessCategory, Medium to MediumType. All members are lowercase
+
+v3.1.0
+------
+
+* pinned sentry version, since the sentry-shipper only supports 0.7 style messages
+* some cleanup /refactor
+* fixes an issue which prevented a database from beeing migrated multiple times within one process
+* fixes a bug in the sqlite test mixin
+* make Database callable and expire on commit can be optionally passed, added testcase for this
+* fixed tags for schema
+* typos
+
+v3.0.5
+------
+
+* test case fix + readme
+* bug fix + tags for paths
+* sort components by name + index title
+* Schema file in interrupt test mixin + doc string bug
+* bug fix decorator
+* Rpc + message schemas
+* implemented simple, non-recurrent access checks
+* removed duplicate code from unittests
+* implemented a stricter recurrence check, removed logical errors from testcases
+
+v3.0.4
+------
+
+* schema creation
+* added missing \_\_init\_\_ file, and removed unnecessary dict key in a unittest [skip ci]
+
+v3.0.3
+------
+
+* always change the current vehicle, regardless of vehicle id change
+
+v3.0.2
+------
+
+* interrupts thread based
+* moved interrupt
