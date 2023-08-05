@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: denovo
+Version: 0.1.0
+Summary: handy tools and classes for a new python package
+Home-page: https://github.com/WithPrecedent/fiat
+License: Apache-2.0
+Author: Corey Rayburn Yung
+Author-email: coreyrayburnyung@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: more-itertools (>=8.8.0,<9.0.0)
+Project-URL: Documentation, https://fiat.readthedocs.io
+Project-URL: Repository, https://github.com/WithPrecedent/fiat
+Description-Content-Type: text/markdown
+
+
