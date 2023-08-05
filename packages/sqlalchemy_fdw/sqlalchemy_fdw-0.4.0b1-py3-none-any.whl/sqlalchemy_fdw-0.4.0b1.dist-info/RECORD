@@ -1,0 +1,7 @@
+sqlalchemy_fdw/__init__.py,sha256=XkQhtWMvYMA6RaAkhyjW4HDHsP-7Dp8D7oI-1epw_E8,7401
+sqlalchemy_fdw/dialect.py,sha256=EvZKj7nwTqaev7T5vv1H4XXblmstoBr2eM-o3X9pou4,6792
+sqlalchemy_fdw/util.py,sha256=WcyhYOm6J7URWlFnR4MlUekHKFmi7uqEZ_L6pPt2XTM,346
+sqlalchemy_fdw-0.4.0b1.dist-info/entry_points.txt,sha256=duMuJCP8F0-O_q31TOypIInwVVA2lppQmKTd_-3HyIs,60
+sqlalchemy_fdw-0.4.0b1.dist-info/WHEEL,sha256=o-Q2E8s7BKkCJ1EC2uQdaymZVVu2aUt1e8uTTFpzHVs,81
+sqlalchemy_fdw-0.4.0b1.dist-info/METADATA,sha256=huk600adqRPkrLpi-QVJohEQzVqwn-UBEt2morvEHIs,220
+sqlalchemy_fdw-0.4.0b1.dist-info/RECORD,,
