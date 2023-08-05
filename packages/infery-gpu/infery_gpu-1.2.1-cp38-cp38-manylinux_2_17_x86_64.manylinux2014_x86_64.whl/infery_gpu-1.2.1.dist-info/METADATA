@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: infery-gpu
+Version: 1.2.1
+Summary: Deci Run-Time Engine
+Home-page: https://deci.ai
+Author: Deci AI
+Author-email: rnd@deci.ai
+License: Apache License v2.0
+Keywords: Deci,AI,Inference,Deep Learning
+Platform: UNKNOWN
+Requires-Python: >=3.7.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic (==1.8.1)
+Requires-Dist: requests
+Requires-Dist: onnx
+Requires-Dist: torch (>=1.8.1)
+Requires-Dist: openvino (==2021.4.0)
+Requires-Dist: numpy
+Requires-Dist: cryptography (==3.4.7)
+Requires-Dist: GPUtil (==1.4.0)
+Requires-Dist: nvidia-pyindex (==1.0.8)
+Requires-Dist: nvidia-tensorrt (==7.2.3.4)
+Requires-Dist: onnxruntime-gpu
+Requires-Dist: tensorflow-gpu (==2.5.0)
+Requires-Dist: pycuda (>=2021.1)
+
+# infery
+
+## Introduction
+
+Infery - runtime inference package.
+
+
+
+
+
+
