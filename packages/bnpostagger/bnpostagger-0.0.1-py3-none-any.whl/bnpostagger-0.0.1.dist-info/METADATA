@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: bnpostagger
+Version: 0.0.1
+Summary: bengali postagger
+Home-page: https://github.com/kaisarmasum/https://github.com/kaisarmasum/Bengali-Pos-Tagger-Using-Indian-Corpus
+Author: Abu Kaisar Mohammad Masum
+Author-email: abukaisar24@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+﻿Bengali Pos Tagger
+===================
+
+Installation
+-------------
+
+    pip install bnpostagger==0.0.1
+
+Quick Start
+-------------
+After installation, using bengali postager should be fairly straight forward:
+
+**Text Preprocess**
+
+    from bnpostagger import bn_postagger
+    
+    text = "তবে ওষুধের নমুনা পরীক্ষা করা, নমুনা পরীক্ষায় তা উত্তীর্ণ হলে আমদানির জন্য ঋণপত্র (এলসি) খোলা, দেশে আনার পর আরেক দফা ওষুধ পরীক্ষার পর তা ছিটানোর উপযোগী করার মতো কাজগুলো সম্পন্ন করতে এ মাসের পুরোটা লেগে যেতে পারে।"
+    output =  bn_postagger(text)
+    print(output)
+    
+
+
