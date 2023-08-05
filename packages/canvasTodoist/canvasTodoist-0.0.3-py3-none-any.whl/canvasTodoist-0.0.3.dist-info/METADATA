@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: canvasTodoist
+Version: 0.0.3
+Summary: A command line application to transfer canvas assignments to todoist
+Home-page: https://github.com/lukew3/canvasTodoist
+Author: Luke Weiler
+Author-email: lukew25073@gmail.com
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: todoist-python
+Requires-Dist: requests
+
+UNKNOWN
+
