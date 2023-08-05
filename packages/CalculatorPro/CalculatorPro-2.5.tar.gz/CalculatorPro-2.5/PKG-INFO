@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: CalculatorPro
+Version: 2.5
+Summary: Fully integrated and packaged library for all sorts of mathematical equations and common problems, series.
+Home-page: UNKNOWN
+Author: codechamp2006 (Sagnik Ray)
+Author-email: sagnikraycoder27@gmail.com
+License: UNKNOWN
+Description: For detailed and full documentation, visit https://github.com/codechamp2006/Calculator
+        
+        
+        
+        
+Keywords: python,calculator,mentalMaths
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
