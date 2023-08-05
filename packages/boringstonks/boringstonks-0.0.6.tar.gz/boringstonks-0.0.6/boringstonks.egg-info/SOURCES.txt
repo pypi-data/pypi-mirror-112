@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+boringstonks/__init__.py
+boringstonks/api.py
+boringstonks.egg-info/PKG-INFO
+boringstonks.egg-info/SOURCES.txt
+boringstonks.egg-info/dependency_links.txt
+boringstonks.egg-info/requires.txt
+boringstonks.egg-info/top_level.txt
