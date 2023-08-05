@@ -1,0 +1,44 @@
+{
+    "src": [
+        "{{project_slug}}/__init__.py",
+        "{{project_slug}}/log.py",
+        "{{project_slug}}/main.py"
+    ],
+    "tests": [
+        "tests/__init__.py",
+        "tests/test_{{project_slug}}.py"
+    ],
+    "make": [
+        "Makefile"
+    ],
+    "setuptools": [
+        "MANIFEST.in",
+        "setup.py",
+        "requirements.txt"
+    ],
+    "docker": [
+        ".dockerignore",
+        "Dockerfile",
+        "entrypoint.sh"
+    ],
+    "git": [
+        ".gitignore"
+    ],
+    "readme": [
+        "README.md"
+    ],
+    "sonar": [
+        "sonarqube/README.md",
+        "sonarqube/docker-compose.yml"
+    ],
+    "mongo": [
+        "mongodb/README.md",
+        "mongodb/docker-compose.yml",
+        "mongodb/mongo_sample.py"
+    ],
+    "mlflow": [
+        "mlflow/README.md",
+        "mlflow/docker-compose.yml",
+        "mlflow/mlflow_sample.py"
+    ]
+}
