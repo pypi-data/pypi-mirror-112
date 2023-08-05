@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: dvc-adapter
+Version: 0.0.1
+Summary: OpenDataDiscovery DVC Adapter.
+Home-page: https://github.com/opendatadiscovery/odd-dvc-adapter
+Author: Provectus team
+License: MIT
+Description: OpenDataDiscovery DVC Adapter
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
