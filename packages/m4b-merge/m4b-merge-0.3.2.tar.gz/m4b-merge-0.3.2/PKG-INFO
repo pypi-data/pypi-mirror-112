@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: m4b-merge
+Version: 0.3.2
+Summary: A tool to standardize audiobook files into single m4b files with clean metadata based on Audible and chapters.
+Home-page: https://github.com/djdembeck/m4b-merge
+Author: David Dembeck
+Author-email: dembeck.david@protonmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/djdembeck/m4b-merge/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+```
+usage: m4b-merge [-h] -i INPUTS [INPUTS ...] [--log_level LOG_LEVEL]
+
+m4b-merge cli
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUTS [INPUTS ...], --inputs INPUTS [INPUTS ...]
+                        Input paths to process
+  --log_level LOG_LEVEL
+                        Set logging level
+```
+  - Check the user editable variables in [config.py](m4bmerge/config.py), and see if there's anything you need to change.
+
+  - On first run, you will be prompted to signin to Audible. This is a one-time process that will be saved to the `config` folder.
+
