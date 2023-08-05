@@ -1,0 +1,145 @@
+# Instructions here: https://docs.gitlab.com/ee/ci/yaml/
+# Linter here: https://gitlab.com/tsfpga/tsfpga/-/ci/lint
+
+stages:
+  - test
+  - build_documentation
+  - deploy
+
+
+workflow:
+  rules:
+    # Run pipeline for scheduled (nightly master runs), for merge requests, and
+    # when triggered manually on the web.
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+    # Pushes to master (a successful merge request is also a "push") should run so
+    # that new website is deployed.
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "master"'
+    # PyPI deploy should be run only when there is a tag. However a $CI_COMMIT_TAG is
+    # set only on the $CI_PIPELINE_SOURCE = "push" event (not on merge_request_event
+    # or schedule). So allow the pipeline to run for this as well.
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_TAG != null'
+
+
+default:
+  # Use docker image from ghdl project
+  # Available at https://hub.docker.com/r/ghdl/vunit/
+  # Configured at https://github.com/ghdl/docker/
+  # Note that the mcode image is much smaller than the gcc image.
+  image: ghdl/vunit:mcode-master
+  before_script:
+    - export PYTHONPATH=$(pwd)/tsfpga
+    - echo $CI_COMMIT_TAG
+    - echo $CI_COMMIT_BRANCH
+    - echo $CI_PIPELINE_SOURCE
+    - echo $CI_COMMIT_REF_NAME
+
+
+pytest:
+  stage: test
+  script:
+    - apt-get update -qq > /dev/null
+    - apt-get install -y -qq git g++ > /dev/null
+    # Upgrade pip to make install of "cryptography" work. TODO remove when base docker image is updated.
+    - python3 -m pip install --upgrade pip > /dev/null
+    - python3 -m pip install --requirement requirements_develop.txt > /dev/null
+    - python3 -m pylint --version
+    - python3 -m pycodestyle --version
+    - python3 -m pytest -v --cov tsfpga --cov-report xml:generated/python_coverage.xml --cov-report html:generated/python_coverage_html
+      --ignore=tsfpga/test/functional/vivado --ignore=tsfpga/test/functional/commercial_simulators
+      tsfpga
+  artifacts:
+    paths:
+      - generated/python_coverage.xml
+      - generated/python_coverage_html
+
+
+simulate:
+  stage: test
+  # Code coverage needs the gcc backend.
+  image: ghdl/vunit:gcc-master
+  script:
+    - apt-get update -qq > /dev/null
+    - apt-get install -y -qq git > /dev/null
+    - python3 -m pip install GitPython tomlkit > /dev/null
+    - ghdl --version
+    # Run minimal simulation subset for merge requests
+    - if [ $CI_PIPELINE_SOURCE == "merge_request_event" ]; then export SIMULATE_FLAGS="--git-minimal"; fi;
+    - python3 examples/simulate.py --num-threads 4 --vivado-skip $SIMULATE_FLAGS
+  artifacts:
+    paths:
+      - generated/vhdl_coverage.xml
+      - generated/vhdl_coverage_html
+
+
+build_pypi:
+  stage: test
+  script:
+    - apt-get update -qq > /dev/null
+    - apt-get install -y -qq git > /dev/null
+    - python3 -m pip install GitPython tomlkit > /dev/null
+    - python3 setup.py sdist
+  artifacts:
+    paths:
+      - dist
+
+
+formal:
+  stage: test
+  image: tsfpga/formal
+  script:
+    - ghdl --version
+    - python3 examples/formal.py --num-threads 4
+
+
+build_pages:
+  # Uses coverage artifacts from the pytest and simulate jobs in the previous stage
+  stage: build_documentation
+  script:
+    - apt-get update -qq > /dev/null
+    - apt-get install -y -qq git graphviz > /dev/null
+    # Upgrade pip to make install of "cryptography" work. TODO remove when base docker image is updated.
+    - python3 -m pip install --upgrade pip > /dev/null
+    - python3 -m pip install --requirement requirements_develop.txt > /dev/null
+    # For merge requests, the VHDL coverage report is not relevant, since only a subset of tests are run.
+    # So skip VHDL coverage in this case.
+    - if [ $CI_PIPELINE_SOURCE == "merge_request_event" ]; then export DOC_FLAGS="--no-vhdl-coverage"; fi;
+    - python3 tools/build_docs.py $DOC_FLAGS
+  artifacts:
+    paths:
+      - generated/sphinx_html
+
+
+deploy_pypi:
+  # Deploy artifacts from the build_pypi job run in the previous stage
+  stage: deploy
+  rules:
+    - if: '$CI_COMMIT_TAG != null'
+  variables:
+    TWINE_USERNAME: __token__
+    TWINE_PASSWORD: $PYPI_API_TOKEN
+  script:
+    - apt-get update -qq > /dev/null
+    - apt-get install -y -qq git > /dev/null
+    # Upgrade pip to make install of "cryptography" work. TODO remove when base docker image is updated.
+    - python3 -m pip install --upgrade pip > /dev/null
+    - python3 -m pip install twine > /dev/null
+    - python3 -m twine upload dist/*
+
+
+pages:
+  # Job name "pages" is magic in gitlab. Will deploy content of the "public" folder to the website.
+  # Uses artifacts from the build_pages job run in the previous stage.
+  stage: deploy
+  # Use a minimal image, so no CI time is wasted fetching a larger image. This step does not need
+  # anything special.
+  image: alpine
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+  script:
+    - mv generated/sphinx_html public
+  artifacts:
+    paths:
+      - public
