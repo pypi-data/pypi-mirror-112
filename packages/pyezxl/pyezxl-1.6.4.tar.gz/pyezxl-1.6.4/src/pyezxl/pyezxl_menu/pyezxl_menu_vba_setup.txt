@@ -1,0 +1,4 @@
+0, VBA_추가하기, Insert, nofaceid
+	7, VBA_메세지 박스 보여주기 (테스트용), show_msgbox1, nofaceid,,,,,
+0, VBA_바꾸기, nofaceid, nofaceid
+	7, VBA_메세지 박스 보여주기 (테스트용), show_msgbox2, nofaceid,,,,,

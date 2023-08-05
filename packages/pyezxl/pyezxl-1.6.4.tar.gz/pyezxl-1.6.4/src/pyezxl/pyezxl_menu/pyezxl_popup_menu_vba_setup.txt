@@ -1,0 +1,15 @@
+0, popup_vba, Insert, nofaceid, none
+	1, n번째행마다 글자추가, pyezxl_100_add_text_n_step_01.py, nofaceid, none
+	1, 세로행 1개씩 추가, pyezxl_100_insert_column_new_01.py, nofaceid, none
+	1, 가로열 n개씩 추가, pyezxl_100_insert_newrow_n_times_01.py, nofaceid, none
+	1, 채워넣기 : 빈셀 위의것으로 채워넣기, pyezxl_110_fill_empty_cell_as_above_value_01.py, nofaceid, none
+0, popup_vba, change, nofaceid, none
+	1, 전부 소문자로, pyezxl_120_change_text_all_small_01.py, nofaceid, none
+	1, 대문자<->소문자 변경 (전부), pyezxl_120_change_text_swap_small_capital_01.py, nofaceid, none
+	1, 한꺼번에 여러개 바꾸기, pyezxl_120_replace_values_many_words_at_once_01.py, nofaceid, none
+0, popup_vba, del, nofaceid, none
+	1, 고유한 자료만 남기고 삭제 (위치는 그대로), pyezxl_130_delete_samedata_at_same_position_01.py, nofaceid, none
+	1, 연속된 같은자료만 삭제 (위치는 그대로), pyezxl_130_delete_continious_samevalue_02.py, nofaceid, none
+	1, 특정 문자사이의 모든글자 삭제, pyezxl_130_delete_values_between_specific_words_01.py, nofaceid, none
+	1, 각셀마다 왼쪽에서 N번째까지의 글자 삭제, pyezxl_130_delete_from_n_words_01.py, nofaceid, none
+	1, N번째의 가로값 지우기(선택영역), pyezxl_130_delete_n_step_01.py, nofaceid, none

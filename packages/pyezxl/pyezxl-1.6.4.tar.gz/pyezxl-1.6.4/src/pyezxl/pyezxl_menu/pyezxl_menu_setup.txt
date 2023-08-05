@@ -1,0 +1,62 @@
+0, 추가/채워넣기, Insert, nofaceid, none
+	1, 문자열 추가 (왼쪽에), pyezxl_100_add_text_at_left_01.py, nofaceid, none
+	1, 문자열 추가 (오른쪽에), pyezxl_100_add_text_at_right_01.py, nofaceid, none
+	1, n번째행마다 글자추가, pyezxl_100_add_text_n_step_01.py, nofaceid, none
+	1, 세로행 1개씩 추가, pyezxl_100_insert_column_new_01.py, nofaceid, none
+	1, 가로열 n개씩 추가, pyezxl_100_insert_newrow_n_times_01.py, nofaceid, none
+	1, 채워넣기 : 빈셀 위의것으로 채워넣기, pyezxl_110_fill_empty_cell_as_above_value_01.py, nofaceid, none
+0, 바꾸기, nofaceid, nofaceid, none
+	1, 전부 소문자로, pyezxl_120_change_text_all_small_01.py, nofaceid, none
+	1, 모두 대문자로, pyezxl_120_change_text_to_cap_01.py, nofaceid, none
+	1, 첫글자만 대문자로, pyezxl_120_change_text_first_capital_01.py, nofaceid, none
+	1, 대문자<->소문자 변경 (전부), pyezxl_120_change_text_swap_small_capital_01.py, nofaceid, none
+	1, 한꺼번에 여러개 바꾸기, pyezxl_120_replace_values_many_words_at_once_01.py, nofaceid, none
+0, 삭제/지우기, del, nofaceid, none
+	1, 빈행 삭제, pyezxl_130_delete_empty_line_01.py, nofaceid, popup
+	1, 공백 삭제 (왼쪽과 오른쪽), pyezxl_130_delete_space_both_side_01.py, nofaceid, none
+	1, 공백 삭제 (왼쪽만), pyezxl_130_delete_space_left_side_01.py, nofaceid, none
+	1, 공백 삭제 (오른쪽만), pyezxl_130_delete_space_right_side_01.py, nofaceid, none
+	1, 이름삭제 (입력받은 한개만), pyezxl_130_delete_name_one_01.py, nofaceid, none
+	1, 고유한 자료만 남기고 삭제 (위치는 그대로), pyezxl_130_delete_samedata_at_same_position_01.py, nofaceid, none
+	1, 연속된 같은자료만 삭제 (위치는 그대로), pyezxl_130_delete_continious_samevalue_02.py, nofaceid, none
+	1, 특정 문자사이의 모든글자 삭제, pyezxl_130_delete_values_between_specific_words_01.py, nofaceid, none
+	1, 각셀마다 왼쪽에서 N번째까지의 글자 삭제, pyezxl_130_delete_from_n_words_01.py, nofaceid, none
+	1, 여러 줄에서 같을때 가로열을 삭제, pyezxl_130_delete_line_when_same_multi_columns_01.py, nofaceid, none
+	1, N번째의 가로값 지우기(선택영역), pyezxl_130_delete_n_step_01.py, nofaceid, none
+	1, 모든 선 삭제하기 (선택영역), pyezxl_130_delete_all_line_drawing_01.py, nofaceid, none
+0, 갯수세기, Count, nofaceid, none
+	1, 빈셀 색칠하고 갯수세기, pyezxl_200_count_paint_empty_cell_01.py, nofaceid, none
+	1, 색 없애기, pyezxl_200_delete_all_line_color_001.py, nofaceid, none
+	1, 선택값들이 반복되는 횟수를 새로운 행2개에 나타내기, pyezxl_200_count_repeat_no_at_new_sheet_01.py, nofaceid, none
+	1, 두행의 자료를 새로운행에 하나씩 곂쳐서 옮기기, pyezxl_200_switch_datas_01.py, nofaceid, none
+0, 그리기_색칠, dwg, nofaceid, none
+	1, 자주사용하는 윤곽선, pyezxl_300_draw_line_well_used_01.py, nofaceid, none
+	1, RGB값으로 색칠 (선택영역), pyezxl_300_paint_rgb_color_01.py, nofaceid, none
+	1, Grid를 on- Off하기, pyezxl_300_draw_toggle_grid_onoff_01.py, nofaceid, none
+0, 찾기/바꾸기, Search, nofaceid, none
+	1, 최대값에 색칠 (선택영역), pyezxl_400_search_paint_max_num_01.py, nofaceid, popup
+	1, 최소값에 색칠 (선택영역), pyezxl_400_search_paint_min_num_01.py, nofaceid, none
+	1, 빈셀처럼 보이는 Space들어간 셀 색칠하기, pyezxl_400_search_real_empty_cell_01.py, nofaceid, none
+	1, 여러 단어가 동시에 들어있는 셀 찾기, pyezxl_400_find_many_wod_in_cell_01.py, nofaceid, none
+	1, 특정문자가 있는 셀에 색칠, pyezxl_400_search_paint_specific_text_01.py, nofaceid, none
+	1, 영역중 고유한값 찾아서 새로운행에 쓰기, pyezxl_400_search_unique_and_write_at_new_col_01.py, nofaceid, none
+	1, 최소값에 색깔 (각열에서), pyezxl_400_paint_min_vaue_at_each_row_01.py, nofaceid, none
+	1, 2번이상 반복되는것만 색칠, pyezxl_400_delete_samedata_03.py, nofaceid, none
+0, 분리/추출, Search, nofaceid, none
+	1, (한줄만선택) 특별한문자나 글자사이의 내용을 추출, pyezxl_700_move_values_between_specific_words_01.py, nofaceid, none
+	1, 분리 : 입력받은 문자를 기준으로 분리하기(새로운행 추가), pyezxl_700_split_as_special_string_01.py, nofaceid, none
+	1, (한줄만선택) n~m까지의 글자를 추출하여 새로운 시트에 쓰기, pyezxl_700_splite_from_n_to_m_each_cell_value_01.py, nofaceid, none
+0, 이동/복사, Move, nofaceid, none
+	1, N번째 자료를 (좌로 X 우로 Y)만큼 옮기기, pyezxl_800_move_data_001_01.py, nofaceid, none
+	1, 빈셀이 없도록 아랫것을 끌어 올리기, pyezxl_800_move_value_without_empty_cell_01.py, nofaceid, none
+	1, 현재 가로 한줄을 특정시트의 첫번째 열에 복사, pyezxl_800_copy_one_line_to_another_sheet_01.py, nofaceid, none
+0, 기타, Etc, nofaceid, none
+	1, 모든 숨겨진 시트를 전부 보여주는것, pyezxl_900_etc_show_all_hidden_sheets_01.py, nofaceid, none
+	1, 자주사용하는 글씨체/크기등, pyezxl_900_setup_well_used_font_01.py, nofaceid, none
+	1, 입력받은 폴더안의 화일이름 갖고오기, pyezxl_900_etc_get_filenames_in_folder_01.py, nofaceid, none
+	1, 선택영역에 난수 발생하는것, pyezxl_900_etc_nansu_01.py, nofaceid, none
+	1, 현재의 마우스 위치 알아내기, pyezxl_900_current_mouse_position_001.py, nofaceid, none
+	1, 테트리스흉내내기, pyezxl_900_example_tetris_step_01.py, nofaceid, none
+0, Help_Update, nofaceid, nofaceid, none
+	1, 나는 누구일까요, pyezxl_990_who_am_i.py, nofaceid, none
+	1, 간단 설명서, pyezxl_990_short_manual.py, nofaceid, none

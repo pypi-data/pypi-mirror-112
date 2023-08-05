@@ -1,0 +1,11 @@
+include LICENSE
+include README.md
+include requirements.txt
+include src/pyezxl/excel_addin/*.*
+include src/pyezxl/pyezxl_code/*.*
+include src/pyezxl/pyezxl_game/*.*
+include src/pyezxl/pyezxl_history/*.*
+include src/pyezxl/pyezxl_manual/*.*
+include src/pyezxl/pyezxl_menu/*.*
+include src/pyezxl/user_code/*.*
+include src/pyezxl/user_menu/*.*
