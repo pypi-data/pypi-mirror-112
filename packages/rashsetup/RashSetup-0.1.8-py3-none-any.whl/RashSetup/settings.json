@@ -1,0 +1,15 @@
+{
+    "general": {
+        "name": "RashSetup",
+        "hosted": "https://github.com/RahulARanger/RashSetup",
+        "version": "0.0.8",
+        "pip": "RashSetup",
+        "modules": {
+            "Rash": "https://github.com/RahulARanger/Rash/tree/master/Rash"
+        }
+    },
+    "user": {
+        "modules": {},
+        "pth": {}
+    }
+}
