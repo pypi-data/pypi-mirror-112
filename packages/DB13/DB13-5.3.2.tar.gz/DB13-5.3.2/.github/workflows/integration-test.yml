@@ -1,0 +1,21 @@
+name: Integration Test
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: ${{ startsWith(github.ref, 'refs/tags/v') }}
+          
+    steps:  
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+    
+    - uses: dawidd6/action-download-artifact@v2
+      with:
+        workflow: python2-3-app.yml
+        name: Integration test
+    
+    - name: Comparing results
+      run: bash integrationtest.sh
