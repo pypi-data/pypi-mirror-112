@@ -1,0 +1,11 @@
+LICENSE.txt
+README
+setup.cfg
+setup.py
+coordinate_geometry/equations.py
+coordinate_geometry/point.py
+coordinate_geometry/triangle.py
+coordinate_geometry.egg-info/PKG-INFO
+coordinate_geometry.egg-info/SOURCES.txt
+coordinate_geometry.egg-info/dependency_links.txt
+coordinate_geometry.egg-info/top_level.txt
