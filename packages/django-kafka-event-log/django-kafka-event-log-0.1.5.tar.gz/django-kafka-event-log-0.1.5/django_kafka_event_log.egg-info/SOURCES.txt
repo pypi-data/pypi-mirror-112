@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+django_kafka_event_log.egg-info/PKG-INFO
+django_kafka_event_log.egg-info/SOURCES.txt
+django_kafka_event_log.egg-info/dependency_links.txt
+django_kafka_event_log.egg-info/top_level.txt
