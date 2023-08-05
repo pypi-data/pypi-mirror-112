@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+wehoop/__init__.py
+wehoop/config.py
+wehoop/dl_utils.py
+wehoop/errors.py
+wehoop/wbb/__init__.py
+wehoop/wnba/__init__.py
+wehoop_py.egg-info/PKG-INFO
+wehoop_py.egg-info/SOURCES.txt
+wehoop_py.egg-info/dependency_links.txt
+wehoop_py.egg-info/requires.txt
+wehoop_py.egg-info/top_level.txt
