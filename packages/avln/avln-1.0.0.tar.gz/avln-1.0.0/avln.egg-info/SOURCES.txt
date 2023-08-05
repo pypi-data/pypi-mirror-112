@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+avln.egg-info/PKG-INFO
+avln.egg-info/SOURCES.txt
+avln.egg-info/dependency_links.txt
+avln.egg-info/not-zip-safe
+avln.egg-info/requires.txt
+avln.egg-info/top_level.txt
+avln/emptypackage/__init__.py
