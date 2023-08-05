@@ -1,0 +1,4 @@
+[console_scripts]
+install-libs=splunk_add_on_ucc_framework:install_requirements
+ucc-gen=splunk_add_on_ucc_framework:main
+
