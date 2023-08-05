@@ -1,0 +1,5 @@
+[console_scripts]
+alnstats = spacemake.alnstats:cmdline
+preprocess = spacemake.preprocess:cmdline
+spacemake = spacemake.smk:cmdline
+
