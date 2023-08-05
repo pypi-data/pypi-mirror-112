@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+_metadata.py
+setup.py
+pytket/extensions/ionq/__init__.py
+pytket/extensions/ionq/_metadata.py
+pytket/extensions/ionq/backends/__init__.py
+pytket/extensions/ionq/backends/config.py
+pytket/extensions/ionq/backends/ionq.py
+pytket/extensions/ionq/backends/ionq_convert.py
+pytket_ionq.egg-info/PKG-INFO
+pytket_ionq.egg-info/SOURCES.txt
+pytket_ionq.egg-info/dependency_links.txt
+pytket_ionq.egg-info/not-zip-safe
+pytket_ionq.egg-info/requires.txt
+pytket_ionq.egg-info/top_level.txt
