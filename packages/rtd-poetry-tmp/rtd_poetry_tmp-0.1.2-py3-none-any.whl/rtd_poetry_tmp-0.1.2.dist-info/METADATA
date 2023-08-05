@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: rtd-poetry-tmp
+Version: 0.1.2
+Summary: Execute poetry install with dev dependencies on RTD
+Author: Chris Hunt
+Author-email: chrahunt@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
