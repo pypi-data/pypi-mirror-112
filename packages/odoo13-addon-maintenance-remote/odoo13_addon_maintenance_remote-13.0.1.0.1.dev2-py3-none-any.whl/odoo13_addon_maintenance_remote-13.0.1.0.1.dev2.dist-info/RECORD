@@ -1,0 +1,16 @@
+odoo/addons/maintenance_remote/README.rst,sha256=sWsd2KaoPC2uPc9Qa3KjAAQykDYzZPcsEkw7zX1umjw,2711
+odoo/addons/maintenance_remote/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/maintenance_remote/__manifest__.py,sha256=TDd5_awBsWdcSh6Bhjh7q37t2NmnyQPc8gHi133HDFk,463
+odoo/addons/maintenance_remote/i18n/maintenance_remote.pot,sha256=IpJi-P0g-_oismg-5-1HemVdHI_lbnW2ulOgrO_taOQ,657
+odoo/addons/maintenance_remote/i18n/pt_BR.po,sha256=WNAM4mtz5vzaZ7aC4WIkd3jRt1JdwNB7ZWYgJvlRT2Q,847
+odoo/addons/maintenance_remote/models/__init__.py,sha256=6aQIMHgs3ry9Q6xsiDdcKBL16q_A2KqCNxieDyNl9Iw,34
+odoo/addons/maintenance_remote/models/maintenance_request.py,sha256=bPFPpE9iqaLBnJWiP0G3dXtLiZR4RBS3UPEX6aMR9DY,403
+odoo/addons/maintenance_remote/readme/CONTRIBUTORS.rst,sha256=okC5oUytz6l8wtkSnOgx_v81TJU3bDNcExRpiEuD0dM,41
+odoo/addons/maintenance_remote/readme/DESCRIPTION.rst,sha256=TGIQFZgET4CZrWlDiwPNYeU7mSaqzrf9-a8tF1Dgqos,132
+odoo/addons/maintenance_remote/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/maintenance_remote/static/description/index.html,sha256=1B9xm_OaZshheN902dJGayIQyxD3SKLA4KktbUSczgU,11823
+odoo/addons/maintenance_remote/views/maintenance_request.xml,sha256=VHqzvPExyKuUy0y2NHc7thr5BqM0LpSWZS-_I-fnB7U,1221
+odoo13_addon_maintenance_remote-13.0.1.0.1.dev2.dist-info/METADATA,sha256=Z0FO1oC57UDy5EPTygTBkkh6xDKSAmo4vDNoqQBXY34,3270
+odoo13_addon_maintenance_remote-13.0.1.0.1.dev2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+odoo13_addon_maintenance_remote-13.0.1.0.1.dev2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo13_addon_maintenance_remote-13.0.1.0.1.dev2.dist-info/RECORD,,
