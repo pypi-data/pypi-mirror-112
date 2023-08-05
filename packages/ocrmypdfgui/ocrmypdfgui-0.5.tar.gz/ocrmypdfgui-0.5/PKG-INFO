@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ocrmypdfgui
+Version: 0.5
+Summary: Hobby Project GUI for the Python Program 'OCRmyPDF' by James R. Barlow
+Home-page: https://github.com/alexanderlanganke/ocrmypdfgui
+Author: Alexander Langanke
+Author-email: alexlanganke@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/alexanderlanganke/ocrmypdfgui/issues
+Description: # ocrmypdfgui
+        I use James R. Barlow's OCRmyPDF heavily in my paperless Office and have created this Python Project as a GUI wrapper to run batch jobs on my filesystem. This is strictly a Hobby Project and is not "official". Feel free to use it if you like.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
