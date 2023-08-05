@@ -1,0 +1,76 @@
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | foo.py           # also separately exclude a file named foo.py in
+                     # the root of the project
+)
+'''
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[tool.mypy]
+follow_imports = "silent"
+strict_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_any_generics = true
+check_untyped_defs = true
+no_implicit_reexport = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+show_column_numbers = true
+
+
+[tool.poetry]
+authors = ["Reid Hochstedler <reidhoch@gmail.com>"]
+description = "OEIS Integer sequences implemented in Python"
+license = "MIT"
+name = "oeis-seq"
+packages = [{ include = "oeis" }]
+repository = "https://github.com/reidhoch/oeis-seq"
+version = "0.1.5"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+black = "21.6b0"
+flake8 = "^3.9"
+flake8-bugbear = "^21.4"
+flake8-commas = "^2.0"
+flake8-docstrings = "^1.6"
+flake8-import-order = "^0.18"
+flake8-pytest-style = "^1.5"
+hypothesis = "^6.14"
+isort = "^5.9.1"
+matplotlib = "^3.4"
+mypy = "^0.910"
+pre-commit = "^2.13"
+pytest = "^6.2"
+pytest-cov = "^2.11"
+pytest-profiling = "^1.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
