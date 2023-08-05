@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+mangopy/__init__.py
+mangopy/mango.py
+mangopy/mosaic.py
+mangopy.egg-info/PKG-INFO
+mangopy.egg-info/SOURCES.txt
+mangopy.egg-info/dependency_links.txt
+mangopy.egg-info/not-zip-safe
+mangopy.egg-info/requires.txt
+mangopy.egg-info/top_level.txt
