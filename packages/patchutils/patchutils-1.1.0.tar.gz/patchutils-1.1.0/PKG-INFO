@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: patchutils
+Version: 1.1.0
+Summary: A simple utility for working with patches on strings
+Home-page: https://github.com/xcodz-dot/patchutils
+License: MIT
+Author: xcodz-dot
+Author-email: 71920621+xcodz-dot@users.noreply.github.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/xcodz-dot/patchutils
