@@ -1,0 +1,3 @@
+soda-sql-core==2.1.0b11
+soda-sql-postgresql==2.1.0b11
+boto3>=1.15.18
