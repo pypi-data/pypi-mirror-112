@@ -1,0 +1,15 @@
+black
+flake8
+isort
+ipdb
+IPython
+lxml>=4.6.3
+pip-tools
+pre-commit
+pytest
+pytest-django
+pytest-xdist
+pytest-cov
+pytest-html
+rope
+selenium
