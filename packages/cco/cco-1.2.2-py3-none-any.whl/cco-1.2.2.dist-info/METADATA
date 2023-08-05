@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: cco
+Version: 1.2.2
+Summary: CKAN Cloud Kubernetes operator
+Home-page: https://github.com/datopian/ckan-cloud-operator
+Author: Viderum
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: httpagentparser
+Requires-Dist: boto3
+Requires-Dist: coverage
+Requires-Dist: psycopg2
+Requires-Dist: pyyaml (<5.3,>=5)
+Requires-Dist: kubernetes
+Requires-Dist: click
+Requires-Dist: toml
+Requires-Dist: awscli
+Requires-Dist: urllib3 (<1.25)
+Requires-Dist: ruamel.yaml (<1)
+Requires-Dist: requests (==2.21)
+Requires-Dist: python-dateutil (<3)
+Requires-Dist: botocore
+
+UNKNOWN
+
