@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: funcat2
+Version: 0.4.3a0
+Summary: Funcat2保持与funcat兼容;Funcat 将同花顺、通达信、文华财经等的公式移植到了 Python 中。同花顺、通达信、文华财经麦语言等公式的表达十分简洁，适合做技术分析。苦于 Python 缺乏这种领域特定语言的表达能力，所以用 Python 基于 numpy 实现了一套。Funcat2增加QUANTAXIS的支持
+Home-page: https://github.com/pchaos/funcat2
+Author: Hua Liang, p19992003
+Author-email: p19992003@gmail.com
+License: Apache License v2
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: six
+Requires-Dist: pandas
+Requires-Dist: lxml
+Requires-Dist: requests
+Requires-Dist: TA-Lib
+Requires-Dist: cached-property
+Requires-Dist: tqdm
+Requires-Dist: py-singleton
+Requires-Dist: backtrader
+Requires-Dist: ipython
+
+UNKNOWN
+
