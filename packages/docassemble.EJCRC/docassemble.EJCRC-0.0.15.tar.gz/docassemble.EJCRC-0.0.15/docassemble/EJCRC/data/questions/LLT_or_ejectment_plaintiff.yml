@@ -1,0 +1,97 @@
+event: call_number
+question: |
+  Please call (215) 686-7027 for assistance.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: consult_atty
+question: |
+  This tool should not be used if you are represented by an attorney. Please consult your lawyer.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: on_error
+question: |
+  Please call (215) 686-7027 for assistance. You did it!
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+mandatory: true
+code: |
+  lawyer
+  if lawyer == False:
+    represent
+    if represent == True:
+      doconly
+      if doconly == True:
+        owner
+        if owner != True:
+          call_number
+      if doconly == False:
+        call_number
+    if represent == False:
+      call_number
+  if lawyer == True:
+    consult_atty
+---
+id: lawyer
+field: lawyer
+question: |
+  Are you currently represented by an attorney?
+yesno: lawyer
+---
+question: |
+   Are you planning on representing yourself in court?
+field: represent
+buttons:
+  - "Yes, I plan to represent myself": True
+  - "No, I am looking for an attorney to represent me": False  
+---  
+mandatory: True
+code: |
+  if represent == False:
+    call_number
+---
+field: doconly
+question: |
+  Do you understand that this website only guides you through the process of filling out the necessary legal documents, and you will still need to file these documents with the court?  
+subquestion: |
+  [Click here](https://www.courts.phila.gov/pdf/manuals/civil-trial/FJD_Civil_E-Filing_User_Manual.pdf) for instructions on how to file your legal documents. We will also provide this instruction after you have filled out your document(s).
+buttons: 
+  - "I understand": True
+  - "I do not understand": False 
+---
+mandatory: true
+question: |
+  Are you the owner or the administrator of the property or home?
+subquestion: |
+  Press one of the following buttons:
+yesnomaybe: owner
+---
+mandatory: true
+code: | 
+  if owner == None:
+    call_number
+  if owner == False:
+    call_number
+---
+mandatory: true
+need: 
+  - owner
+question: |
+  Do you have a lease with the person you are trying to remove from this property?
+subquestion: |
+  % if owner == True:
+  A lease is an agreement between the property owner (landlord) and renter (tenant).  
+  
+  The lease sets the terms of the landlord and tenant’s relationship, including rent payments and maintenance.
+  %endif
+  
+  ${ action_button_html("https://www.google.com", label="Yes", color="primary", size="md") } ${ action_button_html(interview_url(i='docassemble.EJCRC:data/questions/ejectment_plaintiff.yml'), label="No", color="primary", size="md") }
+---
+ 
+
+  
