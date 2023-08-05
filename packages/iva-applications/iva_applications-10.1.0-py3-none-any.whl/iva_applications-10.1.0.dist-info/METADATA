@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: iva-applications
+Version: 10.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: IVA Technologies
+Author-email: engineering@iva-tech.ru
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: Pillow
+Requires-Dist: scikit-build
+Requires-Dist: opencv-python
+Requires-Dist: scipy (==1.4.1)
+Requires-Dist: scikit-image
+Requires-Dist: keras (==2.2.4)
+Requires-Dist: pydrive
+Requires-Dist: pandas
+Requires-Dist: transformers
+Requires-Dist: sentencepiece
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow (==2.4.1) ; extra == 'tensorflow'
+Provides-Extra: transformers
+Requires-Dist: transformers (==4.5.1) ; extra == 'transformers'
+
+UNKNOWN
+
