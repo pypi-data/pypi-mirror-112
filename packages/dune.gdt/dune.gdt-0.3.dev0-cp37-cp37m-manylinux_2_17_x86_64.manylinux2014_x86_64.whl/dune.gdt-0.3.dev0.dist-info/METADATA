@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dune.gdt
+Version: 0.3.dev0
+Summary: Python for Dune-Gdt
+Home-page: https://github.com/dune-community/dune-gdt
+Author: The dune-gdt devs
+Author-email: dune-gdt-dev@listserv.uni-muenster.de
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE.txt
+Requires-Dist: jinja2
+Requires-Dist: where
+Requires-Dist: codecov
+
+UNKNOWN
+
