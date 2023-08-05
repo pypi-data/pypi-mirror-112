@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: tecoradors-elunico
+Version: 4.1.1
+Summary: A small collection of decorators I like to use often
+Home-page: https://github.com/elunico/tecoradors
+Author: Thomas Povinelli
+Author-email: tompov227@gmail.com
+License: UNKNOWN
+Description: # Tecoradors
+        
+        Python decorators that I like to use a lot.
+        
+        [Find the github repo here](https://github.com/elunico/tecoradors)
+        
+        [Find the pypi package here](https://pypi.org/project/tecoradors-elunico/)
+        
+        Named based on my name which starts with a T.
+        
+        ### Decorators are 
+          *  accepts
+          *  json_serializable
+          *  spread
+          *  timed
+          *  squash
+          *  stringable
+          *  equatable
+          *  hashable
+          *  dataclass
+          *  final
+          *  freeze
+          *  deprecated 
+          *  log
+          *  synchronized
+          *  count_calls
+        
+        ### Support from 
+          *  Self (class)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
