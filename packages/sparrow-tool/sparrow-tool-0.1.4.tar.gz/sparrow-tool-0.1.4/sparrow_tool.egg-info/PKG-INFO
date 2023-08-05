@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: sparrow-tool
+Version: 0.1.4
+Summary: Python Common Function Tool Set.
+Home-page: https://github.com/beidongjiedeguang/sparrow
+Author: K.y
+Author-email: beidongjiedeguang@gmail.com
+License: MIT
+Description: # sparrow-tool
+        [![image](https://img.shields.io/badge/Pypi-0.1.4-green.svg)](https://pypi.org/project/sparrow-tool)
+        [![image](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/)
+        [![image](https://img.shields.io/badge/license-GNU_GPL--v3-blue.svg)](LICENSE)
+        [![image](https://img.shields.io/badge/author-kunyuan-orange.svg?style=flat-square&logo=appveyor)](https://github.com/beidongjiedeguang)
+        
+        ## Requirements
+        ```python
+        pyyaml
+        numpy
+        colour
+        pendulum
+        twine
+        ```
+        
+        -------------------------
+        ## Install
+        ```bash
+        pip install sparrow-tool
+        ```
+        
+        ## Usage
+        TODO
+Keywords: Tools,Mathematics,Machine Learning
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
