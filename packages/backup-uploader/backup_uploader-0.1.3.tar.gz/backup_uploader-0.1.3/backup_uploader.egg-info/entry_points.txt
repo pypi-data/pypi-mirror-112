@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    backup_uploader=backup_uploader.cli:main
+    
