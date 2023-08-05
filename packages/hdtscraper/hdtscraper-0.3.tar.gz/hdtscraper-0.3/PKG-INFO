@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: hdtscraper
+Version: 0.3
+Summary: Automatic scraper for hdtorrent website
+Home-page: https://github.com/vittoriopippi/hdtscraper
+Author: Vittorio Pippi
+Author-email: vittoriopippi97@gmail.com
+License: MIT
+Download-URL: https://github.com/vittoriopippi/hdtscraper/archive/0.3.tar.gz
+Description: UNKNOWN
+Keywords: scrape,website,hdtorrents
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
