@@ -1,0 +1,3 @@
+[spacy_cli]
+huggingface-hub = spacy_huggingface_hub.push:huggingface_hub_push_cli
+
