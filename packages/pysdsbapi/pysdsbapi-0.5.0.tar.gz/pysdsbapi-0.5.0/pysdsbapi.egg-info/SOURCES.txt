@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+pysdsbapi/__init__.py
+pysdsbapi/auth.py
+pysdsbapi/bridge.py
+pysdsbapi/bridgeAPI.py
+pysdsbapi/module.py
+pysdsbapi/user.py
+pysdsbapi.egg-info/PKG-INFO
+pysdsbapi.egg-info/SOURCES.txt
+pysdsbapi.egg-info/dependency_links.txt
+pysdsbapi.egg-info/requires.txt
+pysdsbapi.egg-info/top_level.txt
