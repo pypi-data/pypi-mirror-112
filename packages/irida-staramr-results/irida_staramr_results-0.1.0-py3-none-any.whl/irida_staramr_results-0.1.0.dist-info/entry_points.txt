@@ -1,0 +1,3 @@
+[console_scripts]
+irida-staramr-results = irida_staramr_results.cli:main
+
