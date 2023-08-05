@@ -1,0 +1,10 @@
+prefix=build/lib.linux-x86_64-3.8/libceed
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: CEED
+Description: Code for Efficient Extensible Discretization
+Version: 0.9.0
+Cflags: -I${includedir}
+Libs: -L${libdir} -lceed
+Libs.private: 
