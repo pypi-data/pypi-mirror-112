@@ -1,0 +1,30 @@
+from setuptools import setup, Extension
+
+with open("README.md",'r') as fh:
+    long_description=fh.read()
+
+setup(
+  name = 'RangeDisplay',         # How you named your package folder (MyLib)
+  packages = ['RangeDisplay'],   # Chose the same as "name"
+  version = '2021.7.1',      # Start with a small number and increase it with every change you make
+  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
+  description = '2D Fractional display widget for Python Tkinter GUI developement',   # Give a short description about your library
+  author = 'Harsh Agarwal',                   # Type in your name
+  author_email = 'harshvinay752@gmail.com',      # Type in your E-Mail
+  url = 'https://github.com/harshvinay752/RangeDisplay',   # Provide either the link to your github or to your website
+  download_url = 'https://github.com/harshvinay752/RangeDisplay/archive/refs/tags/2021.7.1.tar.gz',    # I explain this later on
+  keywords = ['Python','tkinter','range','display','widget'],   # Keywords that define your package best
+  install_requires=[],
+  long_description=long_description,
+  long_description_content_type="text/markdown",
+  classifiers=[
+    'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
+    'Intended Audience :: Developers',      # Define that your audience are developers
+    'Topic :: Software Development :: Build Tools',
+    'License :: OSI Approved :: MIT License',   # Again, pick a license
+    'Programming Language :: Python :: 3',      #Specify which pyhton versions that you want to support
+    'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+  ],
+)
