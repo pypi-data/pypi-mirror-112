@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: feyn
+Version: 2.0.4
+Summary: Feyn is the high level Python interface to interact with an Abzu QLattice.
+Home-page: https://abzu.ai
+Author: Abzu
+Author-email: support@abzu.ai
+License: CC BY-ND 4.0
+Project-URL: Documentation, https://docs.abzu.ai
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: urllib3 (>=1.26)
+Requires-Dist: numpy (>=1.18)
+Requires-Dist: pandas
+Requires-Dist: svgwrite
+Requires-Dist: matplotlib
+Requires-Dist: ipython
+
+# Feyn
+
+## Quick start
+
+`Feyn` is available as Python3.6+ package [through `pip`](https://pypi.org/project/feyn/). You can install it with the following command:
+
+```bash
+richard@feyn:~$ pip3 install feyn
+```
+
+Once installed, go to your preferred `Python` environment and follow along with this example.
+
+## Connect to a QLattice
+
+If you're using the community edition of a `QLattice` then you can get connected to it by:
+
+```python
+import feyn
+
+ql = feyn.connect_qlattice()
+```
+
+## Auto run
+
+The quickest way to get started is to use the `auto_run` function on the `QLattice`. First we will make a classification problem with `feyn.datasets.make_classification`.
+
+
+```python
+from feyn.datasets import make_classification
+
+train, test = make_classification()
+models = ql.auto_run(train, output_name = 'y', kind = 'classification')
+```
+
+This returns a list of fitted models that are the best the `QLattice` has sampled, sorted by ascending loss.
+
+## Evaluate
+
+The model with the lowest loss is `models[0]`. We can evaluate that model with the `plot` function and it's ROC curve.
+
+```python
+best = models[0]
+best.plot(train, test)
+best.plot_roc_curve(test)
+```
+
