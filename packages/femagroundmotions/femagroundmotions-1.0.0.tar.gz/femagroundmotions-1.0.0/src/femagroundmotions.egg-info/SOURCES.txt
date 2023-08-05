@@ -1,0 +1,13 @@
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/femagroundmotions/__init__.py
+src/femagroundmotions/__version__
+src/femagroundmotions/atcparse.py
+src/femagroundmotions/hdf5.py
+src/femagroundmotions.egg-info/PKG-INFO
+src/femagroundmotions.egg-info/SOURCES.txt
+src/femagroundmotions.egg-info/dependency_links.txt
+src/femagroundmotions.egg-info/requires.txt
+src/femagroundmotions.egg-info/top_level.txt
