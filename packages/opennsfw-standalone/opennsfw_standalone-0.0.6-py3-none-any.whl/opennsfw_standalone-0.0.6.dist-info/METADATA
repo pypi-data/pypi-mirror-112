@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: opennsfw-standalone
+Version: 0.0.6
+Summary: Stand-alone wrapper for Yahoo's OpenNSFW model using ONNX.
+Home-page: https://github.com/SectorLabs/opennsfw-standalone
+Author: Sector Labs
+Author-email: open-source@sectorlabs.ro
+License: MIT License
+Keywords: nsfw,machine learning,opennsfw,yahoo
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: Pillow (<9.0.0,>=8.2.0)
+Requires-Dist: onnxruntime (<2.0.0,>=1.7.0)
+Provides-Extra: analysis
+Requires-Dist: black (==20.8b1) ; extra == 'analysis'
+Requires-Dist: flake8 (==3.9.0) ; extra == 'analysis'
+Requires-Dist: autoflake (==1.4) ; extra == 'analysis'
+Requires-Dist: autopep8 (==1.5.5) ; extra == 'analysis'
+Requires-Dist: isort (==5.7.0) ; extra == 'analysis'
+Requires-Dist: docformatter (==1.4) ; extra == 'analysis'
+Provides-Extra: test
+Requires-Dist: pytest (==6.2.2) ; extra == 'test'
+Requires-Dist: pytest-cov (==2.11.1) ; extra == 'test'
+Requires-Dist: tox (==3.23.0) ; extra == 'test'
+
+# opennsfw-standalone
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![PyPi](https://badge.fury.io/py/opennsfw-standalone.svg)](https://pypi.python.org/pypi/opennsfw-standalone)
+[![CircleCI](https://circleci.com/gh/SectorLabs/opennsfw-standalone/tree/master.svg?style=svg&circle-token=503a819a6a1ebb58a426cca67f742b37d6e5591c)](https://circleci.com/gh/SectorLabs/opennsfw-standalone/tree/master)
+
+A small library for intergrating [`yahoo/open_nsfw`](https://github.com/yahoo/open_nsfw) model directly into an application.
+
+This library uses the [ONNX Runtime](https://github.com/microsoft/onnxruntime) to run inference against Open NSFW. The conversion from the original Caffe model provided by [`yahoo/open_nsfw`](https://github.com/yahoo/open_nsfw) was done as following:
+
+1. Convert from Caffe to Tensorflow using [ethereon/caffe-tensorflow](https://github.com/ethereon/caffe-tensorflow).
+2. Convert from Tensorflow to ONNX using [onnx/tensorflow-onnx](https://github.com/onnx/tensorflow-onnx).
+
+The image pre-processing routine was approximated and is implemented using [Pillow](https://github.com/python-pillow/Pillow).
+
+## Prerequisites
+* ONNX Runtime 1.x
+* NumPy 1.x
+
+## Installation
+
+    $ pip install opennsfw-standalone
+
+## Usage
+### Python
+
+```python
+import sys
+
+from opennsfw_standalone import OpenNSFWInferenceRunner
+
+
+inference_runner = OpenNSFWInferenceRunner.load()
+
+for image_filename in sys.argv[1:]:
+    with open(image_filename, "rb") as fp:
+        nsfw_score = inference_runner.infer(fp.read())
+        print(image_filename, nsfw_score)
+```
+
+### CLI
+
+```shell
+$ python -m opennsfw_standalone myimage.jpeg mysecondimage.jpeg
+myimage.jpg 0.9997739
+mysecondimage.jpg 0.9984438
+```
+
+## License
+Although this repository is MIT licensed, the model itself is subject to the [BSD 2-Clause license](./opennsfw_standalone/model/LICENSE.md) Yahoo provided.
+
+

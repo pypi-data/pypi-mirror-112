@@ -1,0 +1,11 @@
+opennsfw_standalone/__init__.py,sha256=-TSr6koZe9Zxl8BsM-unjMwpMFxnKuGBeMfDEhFKb-I,100
+opennsfw_standalone/__main__.py,sha256=XFSJePmhxLrKy4-q8lgVRMlktXORy-7Qe9XsQP5mVYU,458
+opennsfw_standalone/inference_runner.py,sha256=1dfWlX9gsdKMO0soQRM2d1V2hUDdHr2B-rXZeHqI4ec,3058
+opennsfw_standalone/open-nsfw.onnx,sha256=hkuze_iGNWS4frMwq4x4Wnmnc_TnxDy5bbUu2GETBfo,23590724
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_inference_runner.py,sha256=OPqrZN4IYGFWs5HuYds9uiikUbixfT91mc9HJg0DMno,1207
+opennsfw_standalone-0.0.6.dist-info/LICENSE,sha256=q1D-5xoESYW0qW1Owdutvhp9EOifNQVxGUNgknXii_U,1068
+opennsfw_standalone-0.0.6.dist-info/METADATA,sha256=TJS5Q9w39Xu9NVm3geY1d0oBkYkbOJidqPwGO44ZDC8,3180
+opennsfw_standalone-0.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+opennsfw_standalone-0.0.6.dist-info/top_level.txt,sha256=4EUKI-J58lyfDTf0hXLuEulCG-emAOTx1gcys2jIzQw,26
+opennsfw_standalone-0.0.6.dist-info/RECORD,,
