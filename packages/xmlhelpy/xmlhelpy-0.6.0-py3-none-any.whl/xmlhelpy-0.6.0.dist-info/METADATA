@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: xmlhelpy
+Version: 0.6.0
+Summary: CLI wrapper for the xmlhelp interface.
+Home-page: https://gitlab.com/iam-cms/workflows/xmlhelpy
+Author: Karlsruhe Institute of Technology
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click (<8.0.0,>=7.1.0)
+Requires-Dist: lxml (<5.0.0,>=4.6.0)
+Provides-Extra: dev
+Requires-Dist: black (==21.6b0) ; extra == 'dev'
+Requires-Dist: pre-commit (<3.0.0,>=2.13.0) ; extra == 'dev'
+Requires-Dist: pylint (<2.10.0,>=2.9.0) ; extra == 'dev'
+Requires-Dist: tox (<4.0.0,>=3.23.0) ; extra == 'dev'
+
+# xmlhelpy
+
+CLI wrapper library based on [Click](https://github.com/pallets/click) for
+Python tools adding (part of) the *xmlhelp* interface and a few other helpful
+options. The *xmlhelp* interface can be used to obtain a machine readable
+representation of any command line tool and its parameters.
+
+The following options are supported:
+
+* `--xmlhelp`: The main option which implements the *xmlhelp* interface itself.
+* `--version`: Prints the version of a tool, if specified.
+* `--commands`: Prints a list of all subcommands a group command contains.
+
+The library can be installed via pip by running `pip install xmlhelpy`. A usage
+example can be found in `examples/example.py`.
+
+
