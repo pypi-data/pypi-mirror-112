@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: calculatorpython
+Version: 0.0.4b1
+Summary: A very simple calculator.
+Home-page: UNKNOWN
+Author: Advait Shiralkar
+Author-email: advaitshiralkar2@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: Calculator
+Requires-Dist: printhelloworld
+
+This is a calculator. It has all basic operations
+
