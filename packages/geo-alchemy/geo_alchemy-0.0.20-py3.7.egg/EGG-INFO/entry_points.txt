@@ -1,0 +1,3 @@
+[console_scripts]
+geo-alchemy = geo_alchemy.cmd:geo_alchemy
+
