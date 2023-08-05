@@ -1,0 +1,12 @@
+README.md
+setup.py
+ac_app_deploy/__init__.py
+ac_app_deploy/deploy.py
+ac_app_installer/__init__.py
+ac_app_installer/install.py
+appfire_connect_sdk.egg-info/PKG-INFO
+appfire_connect_sdk.egg-info/SOURCES.txt
+appfire_connect_sdk.egg-info/dependency_links.txt
+appfire_connect_sdk.egg-info/entry_points.txt
+appfire_connect_sdk.egg-info/requires.txt
+appfire_connect_sdk.egg-info/top_level.txt
