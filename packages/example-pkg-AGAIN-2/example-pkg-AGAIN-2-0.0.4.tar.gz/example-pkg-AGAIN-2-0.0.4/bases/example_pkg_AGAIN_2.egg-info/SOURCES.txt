@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+bases/example_package_1_1/__init__.py
+bases/example_package_1_1/example.py
+bases/example_package_2_2/__init__.py
+bases/example_package_2_2/example_2.py
+bases/example_pkg_AGAIN_2.egg-info/PKG-INFO
+bases/example_pkg_AGAIN_2.egg-info/SOURCES.txt
+bases/example_pkg_AGAIN_2.egg-info/dependency_links.txt
+bases/example_pkg_AGAIN_2.egg-info/requires.txt
+bases/example_pkg_AGAIN_2.egg-info/top_level.txt
