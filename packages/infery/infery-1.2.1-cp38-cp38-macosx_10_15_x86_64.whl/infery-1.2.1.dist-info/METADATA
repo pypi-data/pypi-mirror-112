@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: infery
+Version: 1.2.1
+Summary: Deci Run-Time Engine
+Home-page: https://deci.ai
+Author: Deci AI
+Author-email: rnd@deci.ai
+License: Apache License v2.0
+Keywords: Deci,AI,Inference,Deep Learning
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic (==1.8.1)
+Requires-Dist: requests
+Requires-Dist: onnx
+Requires-Dist: torch (>=1.8.1)
+Requires-Dist: openvino (==2021.4.0)
+Requires-Dist: numpy
+Requires-Dist: cryptography (==3.4.7)
+Requires-Dist: onnxruntime
+Requires-Dist: tensorflow (>=2.4.0)
+
+# infery
+
+## Introduction
+
+Infery - runtime inference package.
+
+
+
+
+
+
