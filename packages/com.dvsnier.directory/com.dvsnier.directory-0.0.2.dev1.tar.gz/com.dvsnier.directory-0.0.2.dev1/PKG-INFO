@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: com.dvsnier.directory
+Version: 0.0.2.dev1
+Summary: this is dvsnier directory.
+Home-page: https://github.com/Alinvor/Python-DeMo
+Author: dvsnier
+Author-email: dovsnier@qq.com
+License: MIT
+Project-URL: Bug_Tracker, https://github.com/Alinvor/Python-DeMo/issues
+Project-URL: Documentation, https://packaging.python.org/tutorials/distributing-packages/
+Project-URL: Funding, https://donate.pypi.org
+Project-URL: Wiki, https://github.com/Alinvor/Python-DeMo/wiki
+Project-URL: Source, https://github.com/Alinvor/Python-DeMo
+Keywords: directory,development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=2.7, <4
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
+License-File: LICENSE.txt
+
+# README
+
+this is dir modules.
+
+## describe
+
+This is a package component that simply handles directories and specific text.
+
+```bash
+NAME
+    common_dir
+
+FUNCTIONS
+    generate_complex_file_name(output_dir_name, file_name)
+        the generate complex file name
+
+    generate_complex_or_fmt_file_name(output_dir_name, file_name, fmt='%Y%m%d_%H%M%S')
+        the generate out complex or fmt file name
+
+    generate_file_name(output_dir_name, file_name)
+        the generate out file name
+
+    generate_file_name_only(output_dir_name, file_name)
+        the generate file name only
+
+    generate_fmt_file_name(output_dir_name, file_name, fmt='%Y%m%d_%H%M%S')
+        the generate out with fmt file name
+
+    mk_children_dir(output_dir_name, sub_dir_name)
+        the initialize children dir
+
+    mk_dir(output_dir_name)
+        the initialize global output dir
+
+    mk_output_dir(output_dir_name)
+        the initialize output dir
+```
+
+
