@@ -1,0 +1,2 @@
+include DESCRIPTION LICENSE NEWS uunet/data/*.mpx
+global-include CMakeLists.txt VERSION *.cmake *.cpp *.hpp *.ipp *.c *.h
