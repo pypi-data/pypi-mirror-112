@@ -1,0 +1,10 @@
+requests
+pydantic
+gcsfs
+cryptography
+fastapi
+firebase_admin
+pymongo
+loguru
+starlette
+scikit-learn==0.22.2.post1
