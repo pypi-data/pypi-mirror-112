@@ -1,0 +1,3 @@
+[console_scripts]
+style-doc = style_doc:cli_main
+
