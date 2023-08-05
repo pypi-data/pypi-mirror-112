@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data/data_file
+src/pyfinlab.egg-info/PKG-INFO
+src/pyfinlab.egg-info/SOURCES.txt
+src/pyfinlab.egg-info/dependency_links.txt
+src/pyfinlab.egg-info/entry_points.txt
+src/pyfinlab.egg-info/requires.txt
+src/pyfinlab.egg-info/top_level.txt
+src/sample/__init__.py
+src/sample/data_api.py
+src/sample/package_data.dat
+src/sample/simple.py
