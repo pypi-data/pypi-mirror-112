@@ -1,0 +1,10 @@
+README.rst
+setup.py
+watch_ui.egg-info/PKG-INFO
+watch_ui.egg-info/SOURCES.txt
+watch_ui.egg-info/dependency_links.txt
+watch_ui.egg-info/entry_points.txt
+watch_ui.egg-info/requires.txt
+watch_ui.egg-info/top_level.txt
+watchui/__init__.py
+watchui/__main__.py
