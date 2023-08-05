@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ctpros
+Version: 0.1.0
+Summary: Computed Tomography Processing Registration Open Sourced
+Home-page: https://gitlab.com/caosuna/ctpros
+Author: Carlos Osuna
+Author-email: charlie@caosuna.com
+License: UNKNOWN
+Description: # ctpros: Computed Tomography Processing & Registration - Open Sourced
+        See the [project homepage](https://gitlab.com/caosuna/ctpros) for details.
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
