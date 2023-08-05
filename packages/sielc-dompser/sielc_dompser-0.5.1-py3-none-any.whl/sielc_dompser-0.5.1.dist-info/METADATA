@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: sielc-dompser
+Version: 0.5.1
+Summary: This is an unofficial Python package to interface with SIELC Technologies, Inc products through DOMP (Device Objected Manager Protocol) serial communication. We are not affiliated with SIELC.
+Home-page: https://gitlab.com/heingroup/sielc_dompser
+Author: Veronica Lai // Hein Group
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: ftdi-serial
+
+# Sielc Dompser
+
+This is an  unofficial Python package to interface with SIELC Technologies, Inc products through DOMP (Device Objected Manager Protocol) serial communication. We are not affiliated with SIELC.
+
+Products supported:
+* Miniature autosampler
+  * Based on the Autosampler serial protocol Rev. 110. See [this document](sielc_dompser/autosampler/Autosampler_Protocol_for_editing.pdf) for details
+
+## Miniature autosampler
+See [here](examples/autosampler.py) for an example of how to interface and control a miniature autosampler
+
+Note that not all the functionality as specified in the protocol document has been implemented, and on testing, some
+protocols did not work.
+
