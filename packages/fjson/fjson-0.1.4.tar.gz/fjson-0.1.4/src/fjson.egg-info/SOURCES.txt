@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/fjson/__about__.py
+src/fjson/__init__.py
+src/fjson/main.py
+src/fjson.egg-info/PKG-INFO
+src/fjson.egg-info/SOURCES.txt
+src/fjson.egg-info/dependency_links.txt
+src/fjson.egg-info/requires.txt
+src/fjson.egg-info/top_level.txt
