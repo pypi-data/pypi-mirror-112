@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: prod-monitoring-nsxt
+Version: 1.0.2.post7
+Summary: Implements nodes for remote monitoring of NSX-T devices.
+Home-page: UNKNOWN
+Author: The_Crazy_Sys_Admin
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7.5, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: library-nsxt (<2,>=1.0.2)
+Requires-Dist: proc-monitoring (<2,>=1.0.1)
+
+
+# Monitorización
+Este proyecto incluye un módulo empaquetado "**prod_monitoring_nsxt**", el cual está preparado para envíar métricas de monitorización de sistemas NSX-T hacia sistemas kafka para su posterior recolección en BBDD. Una vez las métricas estén en BBDD serán accesibles desde el **dashboard** de Grafana. Funciona creando instancias paralelas que recolectan las métricas de cada uno de los nodos a monitorizar, definidos en el fichero "**configuration.yaml**"
+
+## Requisitos
+Los requisitos para instalar y ejecutar el proyecto son:
+- Un IDE o un editor de código:
+  - IDE: *PyCharm*
+  - Editores de Código: *Visual Studio Code*, *Notepad++*, *VIM*
+  
+
+- Un entorno de *Python 3.6.8* mínimo con las siguientes librerías:
+  - library-nsxt
+  - proc-monitoring
+
+
+- Si se utiliza en Windows, también instalar los paquetes:
+  - win-inet-python
+
+
+- Opcionalmente, si se requiere ejecutar un entorno local de kafka para realizar pruebas, se pueden utilizar las siguientes imágenes docker para construir el entorno:
+  - `confluentinc/cp-zookeeper`
+  - `confluentinc/cp-kafka`  
+  En el directorio "**docker**" hay un fichero para construir el entorno local de kafka con docker.
+
+## Instalación
+Para instalar el programa localmente o en un Linux remoto:
+
+1. Descargar o clonar el proyecto desde el repositorio.
+2. Asegurarse de tener un entorno de Python funcional con la versión requerida y los paquetes necesarios.
+3. Modificar el fichero `configuration.yaml` para recolectar las métricas de los nodos deseados y configurar el sistema kafka al que se van a envíar.
+4. Ejecutar el siguiente comando desde nuestro entorno de python para no tener problemas en la localización de las clases desde el fichero "**configuration.yaml**":
+~~~
+python setup.py install.
+~~~
+5. Ejecutar el script "**executor.py**" con el fichero de configuración (**configuration.yaml**).
+6. Opcionalmente podemos definir un servicio para ejecutar la recolección de métricas en segundo plano.
+
+> Se puede instalar docker y ejecutar el comando `docker-compose up` en el directorio "**docker**" para crear un entorno de pruebas con Kafka instalado y así depurar fallos en el envío de métricas a Kafka.
+
+## Configuración
+Para configurar los nodos a monitorizar o modificar el servidor Kafka al que se envían las métricas, modificar el fichero `configuration.yaml`.
+Este fichero está dividido en 3 objetos principales, "**nodos**", "**argumentos**" y "**conexiones**":
+
+- **Nodos(`nodes`)**: En esta sección los nodos son declarados y configurados. Para añadir un nodo, simplemente añadir una entrada a la lista de nodos, con el parámetro `type` especificando el nombre completo de la clase a la que debería de ser instanciada, y el parámetro `args` especificando el diccionario de argumentos que se pasaría a la clase. Cada tipo de nodo que se defina en un futuro, debería de estar documentado en el directorio `docs`.
+
+- **Argumentos(`args`)**: En esta sección los argumentos son creados y definidos. El valor de estos argumentos, es obtenido posteriormente desde la clase nodo concreta para ser utilizado.
+
+- **Conexiones(`connection_refs`)**: En esta sección se definen las conexiones necesarias para recabar métricas y enviarlas, como por ejemplo, la uri de la API de NSX y sus credenciales, o la IP del servidor Kafka al que se van a envíar las métricas. Posteriormente se accede a estás conexiones definidas desde la sección `args` de cada nodo.
+
