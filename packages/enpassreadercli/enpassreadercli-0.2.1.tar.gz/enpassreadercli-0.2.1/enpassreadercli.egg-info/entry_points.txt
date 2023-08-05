@@ -1,0 +1,3 @@
+[console_scripts]
+enpass-reader = enpassreadercli.enpassreadercli:main
+
