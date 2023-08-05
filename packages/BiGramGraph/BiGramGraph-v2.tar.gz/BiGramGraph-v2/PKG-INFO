@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: BiGramGraph
+Version: v2
+Summary: Implementations of concepts presented in the paper "On Bi Gram Graph attributes"
+Home-page: https://github.com/MuteJester/BiGramGraph
+Author: Thomas Konstantinovsky and Matan Mizrachi
+Author-email: thomaskon90@gmail.com, matt8ac@gmail.com
+License: MIT
+Download-URL: https://github.com/MuteJester/BiGramGraph/archive/refs/tags/v2.tar.gz
+Description: UNKNOWN
+Keywords: NLP,Machine Learning,Graph Theory,Text Generation,Metrics
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
