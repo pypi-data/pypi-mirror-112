@@ -1,0 +1,13 @@
+posecamera/__init__.py,sha256=5uXpNM_4hoWzvI8BXJ6DkkwLqU3MCGPxZBN7DOnRiFk,57
+posecamera/cli.py,sha256=t8kPodbL4J17EZUYpQfnXlwjW0c2AO_gtrepokW7dI8,1415
+posecamera/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+posecamera/modules/file_providers.py,sha256=Q3u_uGSDJDUB-5ggGbR1Ta3p7u1F5BVnmWH-VzmuYdU,1175
+posecamera/modules/hand_tracker.py,sha256=dU2__wANxEZavGeZss7CAKol8IFcWnSu7lUF3pCsUFg,16023
+posecamera/modules/one_euro_filter.py,sha256=MHHKfHbpmPYG48kBcuO7UjgeDt5Nx3NzKNoOSReKMus,1468
+posecamera/modules/pose_tracker.py,sha256=z0zCWv2reAd2qGbUpJxB-PKo763S-VOr382VCdVfP4Q,2258
+posecamera-2.1.2.dist-info/LICENSE,sha256=933_2bgQ4rxBGR_6PcU9IPh9f4sZumQU-rLZQJQ0OQY,11541
+posecamera-2.1.2.dist-info/METADATA,sha256=8Ek0wgUMmgERJ6Tt_nPF1KT8Ych2lr9ORQq-oSM5D3U,3816
+posecamera-2.1.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+posecamera-2.1.2.dist-info/entry_points.txt,sha256=nYPJrHtC62TCABJqK5k9gdN-llZAqi-rFHDK6oB3Rto,52
+posecamera-2.1.2.dist-info/top_level.txt,sha256=2zMCzlmU2oCmcpBmKbjPrf9h4A3f4seiIDAB5wJqQXo,11
+posecamera-2.1.2.dist-info/RECORD,,
