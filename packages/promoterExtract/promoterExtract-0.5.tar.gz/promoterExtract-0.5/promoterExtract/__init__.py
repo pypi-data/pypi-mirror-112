@@ -1,0 +1,1 @@
+from promoterExtract.promoter import get_promoter
