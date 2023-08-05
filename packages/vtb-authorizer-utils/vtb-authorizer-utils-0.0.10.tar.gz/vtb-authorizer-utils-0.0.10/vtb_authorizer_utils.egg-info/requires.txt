@@ -1,0 +1,11 @@
+vtb_http_interaction
+singleton3
+
+[test]
+pytest
+pytest-cov
+pytest-aiohttp
+pytest-mock
+pylint
+pytest-dotenv
+envparse
