@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: yashi
+Version: 1.0.1
+Summary: namespace package for yashihq.com
+Home-page: UNKNOWN
+Author: Qiangning Hong
+Author-email: hongqn@yashihq.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.3
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+
+A placeholder for namespace package `yashi`.
+
+

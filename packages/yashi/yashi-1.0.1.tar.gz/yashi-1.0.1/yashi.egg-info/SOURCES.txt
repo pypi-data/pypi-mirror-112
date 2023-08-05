@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+yashi.egg-info/PKG-INFO
+yashi.egg-info/SOURCES.txt
+yashi.egg-info/dependency_links.txt
+yashi.egg-info/not-zip-safe
+yashi.egg-info/requires.txt
+yashi.egg-info/top_level.txt
+yashi/emptypackage/__init__.py
