@@ -1,0 +1,14 @@
+spacy_conll/SpacyConllParser.py,sha256=XcfImh7UWWYgu960JF92DbpCWCwH5iT1gLd8C3VogcQ,6143
+spacy_conll/__init__.py,sha256=kRRDpATcXM7eUAOzWoUVwCY0UUVH3QYEsjbNmnJBf8I,100
+spacy_conll/__main__.py,sha256=05TGGnzKcY-EizpMlRA9tUKspAiq2qMp_Dw6pDx6YgI,10501
+spacy_conll/formatter.py,sha256=b303QjHvVKQIscKXWHnCBH7OqEbDTW9SUHhgIefCCV4,9965
+spacy_conll/parser.py,sha256=Fw0NMzx5jhEf8v12cXgvlRRX12FaHkjHQ_wzmI6S-wM,6848
+spacy_conll/utils.py,sha256=QIASj3QIS-0qUIGh4R2LdT7llnwruYbX6ha859pLg9k,4769
+spacy_conll/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spacy_conll/cli/parse.py,sha256=iKTyKvU2vypCplSvgLodVNplCGAbZC3cLgjRXgjImcM,6655
+spacy_conll-3.0.0rc2.dist-info/LICENSE,sha256=LNMtBHGaTAJYNkOS5LfSOH3CVeDOVVa5ATq7z__CUb8,1364
+spacy_conll-3.0.0rc2.dist-info/METADATA,sha256=EG_JCvh460hjY5510_DuhlPMpWDGwOLh6yhYUyBoiVU,18462
+spacy_conll-3.0.0rc2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+spacy_conll-3.0.0rc2.dist-info/entry_points.txt,sha256=uhWfyzHZBzJHpHdzT0lQmqgnz4B-YSsaFEmJIZYnHyk,63
+spacy_conll-3.0.0rc2.dist-info/top_level.txt,sha256=QGFs5TpRfJcr22ehZOUyUW3yJ61DFkiFETofMqg1f2g,12
+spacy_conll-3.0.0rc2.dist-info/RECORD,,
