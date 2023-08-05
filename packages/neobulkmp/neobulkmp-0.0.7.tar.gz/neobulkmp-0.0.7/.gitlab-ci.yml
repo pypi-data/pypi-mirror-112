@@ -1,0 +1,45 @@
+image: python:3
+
+stages:
+  - test
+  - deploy
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - python -V # Print out python version for debugging
+  - pip install virtualenv
+  - virtualenv venv
+  - source venv/bin/activate
+
+test-job:
+  stage: test
+  variables:
+    CI_DB_HOST: db4
+    CI_CACHE_HOST: cache
+    NEO4J_dbms_default__listen__address: 0.0.0.0
+    NEO4J_AUTH: none
+  services:
+    - name: neo4j:4.2
+      alias: db4
+    - name: redis:latest
+      alias: cache
+
+  script:
+    - pip install .[test]
+    - python tests/helpers/wait-for-neo4j.py
+    - python tests/smoketest.py
+
+deploy-job:
+  stage: deploy
+  only:
+    - tags
+  script:
+    - pip install .
+    - python setup.py sdist bdist_wheel
+    - pip install twine
+    #- TWINE_PASSWORD=${CI_JOB_TOKEN} TWINE_USERNAME=gitlab-ci-token python -m twine upload --repository-url ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi dist/*
+    - TWINE_PASSWORD=${PYPI_TOKEN} TWINE_USERNAME=__token__ python -m twine upload dist/*
