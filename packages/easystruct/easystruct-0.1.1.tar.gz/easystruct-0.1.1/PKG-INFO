@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: easystruct
+Version: 0.1.1
+Summary: A Python library to make the usage of struct from the stdlib a little bit easier.
+Home-page: https://github.com/zocker-160/simple-struct
+License: WTFPL
+Author: zocker_160
+Author-email: zocker1600@posteo.net
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/zocker-160/simple-struct
+Description-Content-Type: text/markdown
+
+# easystruct
+A Python library to make the usage of struct from the stdlib a little bit easier.
+
+## Installation
+
+```bash
+pip3 install easystruct
+```
+
