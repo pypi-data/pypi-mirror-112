@@ -1,0 +1,3 @@
+[console_scripts]
+tosca-metrics = toscametrics.command_line:cli
+
