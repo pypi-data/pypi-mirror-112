@@ -1,0 +1,13 @@
+LICENSE.rst
+MANIFEST.in
+README.rst
+setup.py
+version.py
+rstdiff/__init__.py
+rstdiff.egg-info/PKG-INFO
+rstdiff.egg-info/SOURCES.txt
+rstdiff.egg-info/dependency_links.txt
+rstdiff.egg-info/entry_points.txt
+rstdiff.egg-info/requires.txt
+rstdiff.egg-info/top_level.txt
+rstdiff/treediff/__init__.py
