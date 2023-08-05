@@ -1,0 +1,16 @@
+.gitignore
+AUTHORS.rst
+HISTORY.rst
+LICENSE
+README.md
+pyproject.toml
+setup.py
+.github/workflows/python-publish.yml
+pySESL/__init__.py
+pySESL/historical.py
+pySESL/io.py
+pySESL.egg-info/PKG-INFO
+pySESL.egg-info/SOURCES.txt
+pySESL.egg-info/dependency_links.txt
+pySESL.egg-info/requires.txt
+pySESL.egg-info/top_level.txt
