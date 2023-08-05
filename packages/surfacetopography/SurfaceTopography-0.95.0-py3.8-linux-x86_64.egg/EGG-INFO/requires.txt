@@ -1,0 +1,10 @@
+NuMPI>=0.1.4
+Pillow
+defusedxml
+h5py
+igor
+muFFT>=0.12.0
+numpy>=1.11.0
+numpyencoder
+pyyaml
+requests
