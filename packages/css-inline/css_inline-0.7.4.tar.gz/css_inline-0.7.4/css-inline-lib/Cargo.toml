@@ -1,0 +1,40 @@
+[package]
+name = "css-inline"
+version = "0.7.4"
+authors = ["Dmitry Dygalo <dadygalo@gmail.com>"]
+edition = "2018"
+license = "MIT"
+readme = "../README.md"
+description = "A crate for inlining CSS into 'style' HTML attributes."
+repository = "https://github.com/Stranger6667/css-inline"
+keywords = ["html", "css", "css-inline", "email"]
+exclude = [".github", ".pre-commit-config.yaml", ".yamllint", ".gitignore", "tests"]
+categories = ["web-programming"]
+
+[[bin]]
+name = "css-inline"
+
+[features]
+default = ["cli"]
+cli = ["pico-args", "rayon"]
+
+[dependencies]
+cssparser = "0.28"
+kuchiki = "0.8"
+attohttpc = { version = "0", default-features = false, features = ["compress", "tls-rustls"] }
+url = "2"
+smallvec = "1"
+ahash = "0.7"
+pico-args = { version = "0.3", optional = true }
+rayon = { version = "1.5", optional = true }
+
+[dev-dependencies]
+criterion = ">= 0.1"
+
+[[bench]]
+name = "inliner"
+harness = false
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
