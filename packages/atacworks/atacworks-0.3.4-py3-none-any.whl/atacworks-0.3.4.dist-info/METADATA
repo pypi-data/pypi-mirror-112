@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: atacworks
+Version: 0.3.4
+Summary: NVIDIA genomics python libraries and utiliites
+Home-page: https://github.com/clara-genomics/AtacWorks
+Author: NVIDIA Corporation
+License: UNKNOWN
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.5
+Requires-Dist: configargparse (~=1.2.3)
+Requires-Dist: Cython (~=0.29.13)
+Requires-Dist: h5py (~=3.1.0)
+Requires-Dist: numpy (~=1.19.4)
+Requires-Dist: pandas (~=1.2.0)
+Requires-Dist: pyBigWig (~=0.3.17)
+Requires-Dist: pytest (~=6.2.1)
+Requires-Dist: pyyaml (~=5.3.1)
+Requires-Dist: scipy (~=1.6.0)
+Requires-Dist: termcolor (~=1.1.0)
+Requires-Dist: torch (~=1.7.1)
+Requires-Dist: torchvision (~=0.8.2)
+Requires-Dist: scikit-learn (~=0.21.3)
+Requires-Dist: setuptools (~=51.1.1)
+Requires-Dist: sphinx (~=3.4.2)
+Requires-Dist: recommonmark (~=0.7.1)
+Requires-Dist: sphinx-rtd-theme (~=0.5.0)
+Requires-Dist: jupyterlab (~=3.0.0)
+
+Python libraries and utilities for manipulating genomics data
+
+
