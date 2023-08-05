@@ -1,0 +1,10 @@
+tencentcloud/__init__.py,sha256=f1CPDvZ3s5306aXRyAj_snvQJT5bFRP1Uipw6UHc7BQ,630
+tencentcloud/apigateway/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/apigateway/v20180808/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/apigateway/v20180808/apigateway_client.py,sha256=YUa0paG3orP2a1UeTvEf0RLOkcw1RASj2MtezgYRllY,87192
+tencentcloud/apigateway/v20180808/errorcodes.py,sha256=-P2hbBXyElTBOmmiNiIEzqG7C7La_3fAYAPt6VZDrDE,16341
+tencentcloud/apigateway/v20180808/models.py,sha256=ugjfF-INMRsEn-qjurbPB6sF7j_WbDl-PKxGfep2wAY,283175
+tencentcloud_sdk_python_apigateway-3.0.437.dist-info/METADATA,sha256=CKYN2xCvIYABQQT5sJuy7e1x-D8TmNDoOpDo-rIZ10U,1467
+tencentcloud_sdk_python_apigateway-3.0.437.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+tencentcloud_sdk_python_apigateway-3.0.437.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_apigateway-3.0.437.dist-info/RECORD,,
