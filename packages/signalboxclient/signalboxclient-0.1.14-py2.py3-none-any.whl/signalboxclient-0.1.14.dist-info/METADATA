@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: signalboxclient
+Version: 0.1.14
+Summary: A library used as a Four2/SignalBox client.
+Home-page: https://www.four2.ai
+Author: Rian Finnegan
+Author-email: rian@four2.ai
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+
+```sh
+conda activate signalbox
+```
