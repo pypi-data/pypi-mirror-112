@@ -1,0 +1,4 @@
+[console_scripts]
+appfire = ac_app_deploy.deploy:process
+create-appfire-app = ac_app_installer.install:process
+
