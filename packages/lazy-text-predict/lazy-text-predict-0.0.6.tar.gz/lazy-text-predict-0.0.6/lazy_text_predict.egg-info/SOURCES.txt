@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+lazy_text_predict.egg-info/PKG-INFO
+lazy_text_predict.egg-info/SOURCES.txt
+lazy_text_predict.egg-info/dependency_links.txt
+lazy_text_predict.egg-info/requires.txt
+lazy_text_predict.egg-info/top_level.txt
+lazytextpredict/__init__.py
+lazytextpredict/basic_classification.py
+lazytextpredict/example_code.py
