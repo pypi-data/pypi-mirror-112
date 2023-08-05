@@ -1,0 +1,5 @@
+prune *
+graft opentimspy
+add LICENCE README README.md MANIFEST.in pyproject.toml setup.toml setup.py
+recursive-include opentims++ *.c *.cpp *.h *.hpp
+global-exclude *.R *.o *.pyc *.png
