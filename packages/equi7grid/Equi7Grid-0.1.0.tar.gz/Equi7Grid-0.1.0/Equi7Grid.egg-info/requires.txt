@@ -1,0 +1,7 @@
+pytileproj>=0.0.16
+geographiclib
+
+[test]
+pytest-cov
+pytest
+nose
