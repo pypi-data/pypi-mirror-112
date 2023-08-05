@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: build-with-cython
+Version: 0.0.3
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: setuptools
+Requires-Dist: cython (>=0.29.21)
+Requires-Dist: wheel
+Requires-Dist: modulegraph
+
+UNKNOWN
+
+

@@ -1,0 +1,3 @@
+[distutils.commands]
+cbuild = build_with_cython.cbuild:CBuild
+
