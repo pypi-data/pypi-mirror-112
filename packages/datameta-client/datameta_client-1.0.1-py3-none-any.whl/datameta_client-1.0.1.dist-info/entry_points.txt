@@ -1,0 +1,3 @@
+[console_scripts]
+dmclient = datameta_client.__main__:app
+
