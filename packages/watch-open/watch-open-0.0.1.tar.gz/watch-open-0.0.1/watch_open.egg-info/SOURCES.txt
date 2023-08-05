@@ -1,0 +1,10 @@
+README.rst
+setup.py
+watch_open.egg-info/PKG-INFO
+watch_open.egg-info/SOURCES.txt
+watch_open.egg-info/dependency_links.txt
+watch_open.egg-info/entry_points.txt
+watch_open.egg-info/requires.txt
+watch_open.egg-info/top_level.txt
+watchopen/__init__.py
+watchopen/__main__.py
