@@ -1,0 +1,3 @@
+[console_scripts]
+kdrive-upload = kdrive_upload.__main__:main
+
