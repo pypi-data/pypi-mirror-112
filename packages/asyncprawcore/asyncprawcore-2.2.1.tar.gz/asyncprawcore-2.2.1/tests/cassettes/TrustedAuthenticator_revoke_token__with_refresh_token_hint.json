@@ -1,0 +1,63 @@
+{
+  "interactions": [
+    {
+      "request": {
+        "body": [
+          [
+            "token",
+            "dummy token"
+          ],
+          [
+            "token_type_hint",
+            "refresh_token"
+          ]
+        ],
+        "headers": {
+          "AUTHORIZATION": [
+            "Basic <BASIC_AUTH>"
+          ],
+          "Connection": [
+            "close"
+          ],
+          "User-Agent": [
+            "asyncprawcore:test (by /u/Lil_SpazJoekp) asyncprawcore/2.1.1.dev0"
+          ]
+        },
+        "method": "POST",
+        "uri": "https://www.reddit.com/api/v1/revoke_token"
+      },
+      "response": {
+        "body": {
+          "string": ""
+        },
+        "headers": {
+          "Accept-Ranges": "bytes",
+          "Cache-Control": "max-age=0, must-revalidate",
+          "Connection": "close",
+          "Content-Length": "0",
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Tue, 15 Jun 2021 17:15:36 GMT",
+          "Server": "snooserv",
+          "Set-Cookie": "edgebucket=Dl27FUKEWFMWGachte; Domain=reddit.com; Max-Age=63071999; Path=/;  secure",
+          "Strict-Transport-Security": "max-age=15552000; includeSubDomains; preload",
+          "Via": "1.1 varnish",
+          "X-Clacks-Overhead": "GNU Terry Pratchett",
+          "X-Moose": "majestic",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "x-ratelimit-remaining": "192",
+          "x-ratelimit-reset": "264",
+          "x-ratelimit-used": "108",
+          "x-xss-protection": "1; mode=block"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://www.reddit.com/api/v1/revoke_token"
+      }
+    }
+  ],
+  "recorded_at": "2021-06-15T12:15:36",
+  "version": 1
+}
