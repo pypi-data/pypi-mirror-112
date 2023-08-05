@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+canvasTodoist.egg-info/PKG-INFO
+canvasTodoist.egg-info/SOURCES.txt
+canvasTodoist.egg-info/dependency_links.txt
+canvasTodoist.egg-info/entry_points.txt
+canvasTodoist.egg-info/requires.txt
+canvasTodoist.egg-info/top_level.txt
+src/__init__.py
+src/main.py
