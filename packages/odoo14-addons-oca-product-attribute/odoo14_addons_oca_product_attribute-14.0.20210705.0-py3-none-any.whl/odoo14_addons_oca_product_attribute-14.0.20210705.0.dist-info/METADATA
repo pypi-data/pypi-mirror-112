@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: odoo14-addons-oca-product-attribute
+Version: 14.0.20210705.0
+Summary: Meta package for oca-product-attribute Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo14-addon-base-product-mass-addition
+Requires-Dist: odoo14-addon-packaging-uom
+Requires-Dist: odoo14-addon-pos-product-cost-security
+Requires-Dist: odoo14-addon-product-assortment
+Requires-Dist: odoo14-addon-product-attribute-archive
+Requires-Dist: odoo14-addon-product-bom-revision
+Requires-Dist: odoo14-addon-product-category-code
+Requires-Dist: odoo14-addon-product-category-product-link
+Requires-Dist: odoo14-addon-product-code-mandatory
+Requires-Dist: odoo14-addon-product-code-unique
+Requires-Dist: odoo14-addon-product-cost-security
+Requires-Dist: odoo14-addon-product-dimension
+Requires-Dist: odoo14-addon-product-logistics-uom
+Requires-Dist: odoo14-addon-product-manufacturer
+Requires-Dist: odoo14-addon-product-multi-category
+Requires-Dist: odoo14-addon-product-order-noname
+Requires-Dist: odoo14-addon-product-packaging-dimension
+Requires-Dist: odoo14-addon-product-packaging-type
+Requires-Dist: odoo14-addon-product-packaging-type-pallet
+Requires-Dist: odoo14-addon-product-pricelist-direct-print
+Requires-Dist: odoo14-addon-product-seasonality
+Requires-Dist: odoo14-addon-product-secondary-unit
+Requires-Dist: odoo14-addon-product-sequence
+Requires-Dist: odoo14-addon-product-state
+Requires-Dist: odoo14-addon-product-stock-state
+Requires-Dist: odoo14-addon-product-template-tags
+Requires-Dist: odoo14-addon-product-total-weight-from-packaging
+Requires-Dist: odoo14-addon-product-weight
+Requires-Dist: odoo14-addon-product-weight-logistics-uom
+
+UNKNOWN
+
