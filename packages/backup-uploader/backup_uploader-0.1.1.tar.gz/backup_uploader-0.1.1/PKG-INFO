@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: backup_uploader
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/aspedrosa/BackupsUploader
+Author: André Pedrosa
+Author-email: aspedr0sa@protonmail.com
+License: MIT
+Keywords: backup,uploader
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Utilities
+Provides-Extra: dropbox
+Provides-Extra: mega
+License-File: LICENSE
+
+UNKNOWN
+
