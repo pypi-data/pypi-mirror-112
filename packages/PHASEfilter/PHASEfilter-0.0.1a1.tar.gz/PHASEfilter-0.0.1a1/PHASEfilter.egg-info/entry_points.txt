@@ -1,0 +1,6 @@
+[console_scripts]
+best_alignment = PHASEfilter.bin.best_alignment:main
+phasefilter = PHASEfilter.bin.phasefilter:main
+reference_statistics = PHASEfilter.bin.reference_statistics:main
+synchronize_genomes = PHASEfilter.bin.synchronize_genomes:main
+
