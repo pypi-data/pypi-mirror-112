@@ -1,0 +1,75 @@
+[tool.poetry]
+name = "meilisearch-fastapi"
+version = "0.5.1"
+description = "MeiliSearch integration with FastAPI"
+authors = ["Paul Sanders <psanders1@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/sanders41/meilisearch-fastapi"
+homepage = "https://github.com/sanders41/meilisearch-fastapi"
+documentation = "https://github.com/sanders41/meilisearch-fastapi"
+keywords = ["meilisearch", "fastapi", "async", "search"]
+classifiers=[
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+include = ["meilisearch_fastapi/py.typed"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fastapi = ">=0.65.1,<0.67.0"
+pydantic = {version = "^1.8.2", extras = ["dotenv"]}
+meilisearch-python-async = "^0.10.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.6b0"
+flake8 = "^3.9.2"
+isort = "^5.9.1"
+mypy = "^0.910"
+pre-commit = "^2.12.1"
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+tox = "^3.23.0"
+uvicorn = "^0.14.0"
+pytest-asyncio = "^0.15.1"
+httpx = "^0.18.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.egg
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.nox
+  | \.tox
+  | \.venv
+  | \venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | setup.py
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+src_paths = ["meilisearch_fastapi", "tests"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov=meilisearch_fastapi"
+
+[tool.mypy]
+disallow_untyped_defs = true
