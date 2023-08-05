@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/gcm/__init__.py
+src/gcm/gcm.py
+src/gcm/edge_selectors/__init__.py
+src/gcm/edge_selectors/bernoulli.py
+src/gcm/edge_selectors/dense.py
+src/gcm/edge_selectors/distance.py
+src/gcm/edge_selectors/self_edge.py
+src/gcm/edge_selectors/temporal.py
+src/graph_conv_memory.egg-info/PKG-INFO
+src/graph_conv_memory.egg-info/SOURCES.txt
+src/graph_conv_memory.egg-info/dependency_links.txt
+src/graph_conv_memory.egg-info/requires.txt
+src/graph_conv_memory.egg-info/top_level.txt
