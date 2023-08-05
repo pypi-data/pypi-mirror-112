@@ -1,0 +1,9 @@
+celery
+Django
+django-mongoengine
+djangorestframework
+lxml==4.6.3
+mock
+mongoengine
+core-main-app==1.16.*
+xml-utils==1.14.*
