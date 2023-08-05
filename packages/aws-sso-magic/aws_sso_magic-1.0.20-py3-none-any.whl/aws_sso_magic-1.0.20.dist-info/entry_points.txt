@@ -1,0 +1,3 @@
+[console_scripts]
+aws-sso-magic=aws_sso_magic.cli:cli
+
