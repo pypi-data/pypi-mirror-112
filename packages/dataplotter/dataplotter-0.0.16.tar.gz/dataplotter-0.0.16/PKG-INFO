@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: dataplotter
+Version: 0.0.16
+Summary: Generate plots from data
+Home-page: UNKNOWN
+Author: Everyone
+Author-email: 
+License: MIT
+Description: 
+        ## Installation
+        
+        Anywhere with python:
+        
+        ```sh
+        pip install dataplotter
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
