@@ -1,0 +1,13 @@
+{{- basename | e | heading }}
+
+Summary
+^^^^^^^
+.. automodsumm:: {{ qualname }}
+   :functions-only:
+
+Details
+^^^^^^^
+.. automodule:: {{ qualname }}
+{%- for option in automodule_options %}
+   :{{ option }}:
+{%- endfor %}
