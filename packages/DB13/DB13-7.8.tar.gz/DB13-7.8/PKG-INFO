@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: DB13
+Version: 7.8
+Summary: DIRAC Benchmark 2012
+Home-page: https://github.com/pypa/DIRACGrid/DB12
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pypa/DIRACGrid/DB12/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# DB12
+DIRAC benchmark 2012 is a really quick benchmark by Ricardo Graciani that uses wrapper functions by Andrew McNab to run multiple copies in parallel. 
+The (dirac_benchmark.py) file is intended to be the ultimate upstream shared by different users of the DIRAC Benchmark 2012 (DB12). 
+
+It's distributed from https://github.com/DIRACGrid/DB12.
+
+
+# Installing
+
+To install the DB12 package, run:
+
+    pip install DB12
+
+# Using
+
+After installation, the package can be imported by typing `from DIRACbenchmark import dirac_benchmark`. 
+
+It can also be used directly from the terminal by executing the command `db12`.
+
+
