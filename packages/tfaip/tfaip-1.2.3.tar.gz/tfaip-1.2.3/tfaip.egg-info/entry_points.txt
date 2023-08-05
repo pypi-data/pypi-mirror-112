@@ -1,0 +1,10 @@
+[console_scripts]
+tfaip-evaluate = tfaip.scripts.evaluate:run
+tfaip-experimenter = tfaip.scripts.experimenter:main
+tfaip-lav = tfaip.scripts.lav:run
+tfaip-multi-lav = tfaip.scripts.lav_multi:run
+tfaip-predict = tfaip.scripts.predict:run
+tfaip-resume-training = tfaip.scripts.resume_training:main
+tfaip-train = tfaip.scripts.train:run
+tfaip-train-from-params = tfaip.scripts.train_from_params:main
+
