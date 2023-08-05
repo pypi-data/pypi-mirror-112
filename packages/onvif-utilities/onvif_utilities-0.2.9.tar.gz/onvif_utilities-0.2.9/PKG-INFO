@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: onvif-utilities
+Version: 0.2.9
+Summary: 
+Author: MohammadHossein
+Author-email: hos1377@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: httpx (>=0.17.1,<0.18.0)
+Requires-Dist: wsdiscovery (>=2.0.0,<3.0.0)
+Requires-Dist: zeep (>=4.0.0,<5.0.0)

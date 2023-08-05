@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "onvif_utilities"
+version = "0.2.9"
+description = ""
+authors = ["MohammadHossein <hos1377@gmail.com>"]
+include = ["wsdl/*"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+wsdiscovery = "^2.0.0"
+zeep = "^4.0.0"
+httpx = "^0.17.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
