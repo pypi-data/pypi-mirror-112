@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: photonqat
+Version: 0.2.3
+Summary: Library for photonic continuous variable quantum programming
+Home-page: https://github.com/Blueqat/Photonqat
+Author: The Photonqat Developers
+Author-email: nagairic@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: numpy (>=1.19)
+Requires-Dist: scipy (>=1.5)
+Requires-Dist: matplotlib (>=3.2)
+Requires-Dist: sympy (>=1.5)
+Requires-Dist: thewalrus
+
+UNKNOWN
+
+
