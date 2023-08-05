@@ -1,0 +1,130 @@
+Metadata-Version: 2.1
+Name: b4rpipe
+Version: 0.1.3
+Summary: Pipeline reduction tools for B4R (2mm heterodyne reciver) on LMT 50m @Mexico
+Home-page: https://github.com/LMT-heterodyne-dev/b4rpipe
+Author: astroysmr
+Author-email: astro.yoshimura@gmail.com
+License: MIT
+Keywords: B4R LMT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: astropy
+Requires-Dist: matplotlib
+Requires-Dist: netcdf4
+Requires-Dist: python-casacore
+Requires-Dist: tqdm
+Requires-Dist: sklearn
+
+# b4rpipe
+
+[![](https://img.shields.io/pypi/v/b4rpipe.svg?label=PyPI&style=flat-square)](https://pypi.org/pypi/b4rpipe/)
+[![](https://img.shields.io/pypi/pyversions/b4rpipe.svg?label=Python&color=yellow&style=flat-square)](https://pypi.org/pypi/b4rpipe/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?label=License&style=flat-square)](LICENSE)
+
+Pipeline reduction tools for B4R/LMT data.
+
+**************************************************************
+Installation
+**************************************************************
+
+```terminal
+$ pip install b4rpipe
+```
+
+**************************************************************
+Usage
+**************************************************************
+
+### Reduce individual data
+
+```terminal
+$ python
+$ >>> import b4rpipe as Bp
+$ >>> Bp.globBaseDir = '/home/hoge/b4r'
+$ >>> Bp.globLogDir = '/home/hoge/b4r/logv1'
+$ >>> Bp.PipelineAnalysis(86420)
+```
+
+This example shows a pipeline analysis for the data obsid 86420.
+
+### Reduce all data (for database)
+
+```terminal
+$ python
+$ >>> import b4rpipe as Bp
+$ >>> Bp.globBaseDir = '/home/hoge/b4r'
+$ >>> Bp.globLogDir = '/home/hoge/b4r/logv1'
+$ >>> Bp.PipelineAnalysisBatchRun()
+```
+
+You need to specify following pathes.
+#### b4pipe.globBaseDir
+* The path where "xffts" and "lmttpm" directorys are located.
+* XFFTS binary data (e.g., xffts20181003111006.xfftsx.01) should be stored under the "xffts" directory.
+* LMT antenna log data (e.g., lmttpm_2018-04-22_075858_01_0000.nc) should be stored under the "lmttpm" directory.
+
+#### b4rpipe.globLogDir
+* The path where outputs are created.
+* Anywhere you like is OK.
+
+**************************************************************
+Products
+**************************************************************
+The script create following outputs (if possible).
+
+* Continuum Map Qlook (Pointing offset, efficiency (only for uranus), etc.)
+* Line (SiO) Map Qlook (Pointing offset, etc.)
+* Spectrum Qlook (with auto-flag)
+* Time series spectrum of PSW data (numpy readable format)
+* GoDec calibration results (see Taniguch et al. 2021)
+* MS2 (CASA readable format)
+
+**************************************************************
+Data query and download (only for internal use now)
+**************************************************************
+If you are in the NAOJ or IoA (U. Tokyo) local network, you can access the B4R ftp server.
+
+```terminal
+$ python
+$ >>> import b4rpipe as Bp
+$ >>> Bp.PipelineAnalysis(86420,DataDownload=True,username='hogehoge',password='*****')
+```
+
+Then "rawdata" and "calibrated" directory appears at the current directory.
+
+```terminal
+$ ls
+raw calibrated
+$ ls rawdata
+lmttpm xffts
+$ls calibrated
+86420
+```
+
+**************************************************************
+Correspondence
+**************************************************************
++ B4R 2018/2019 (obsnum<=087433) data <-> CASA MS2
+
+| Name | B4R | CASA MS2 |
+| --- | --- | --- |
+| polarization | A | (correlation or stokes) YY |
+| polarization | B | (correlation or stokes) XX |
+| sideband | LSB | spw 0 |
+| sideband | USB | spw 1 |
+
+**************************************************************
+Information
+**************************************************************
+* B4R webpage: http://lmtgtm.org/b4r/?lang=en
+* Contact: Yuki Yoshimura
+  (email: astro.yoshimura(_at_)gmail.com)
+
+
