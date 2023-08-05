@@ -1,0 +1,10 @@
+setup.py
+dvc-adapter/__init__.py
+dvc-adapter/adapter.py
+dvc-adapter/logger.py
+dvc_adapter.egg-info/PKG-INFO
+dvc_adapter.egg-info/SOURCES.txt
+dvc_adapter.egg-info/dependency_links.txt
+dvc_adapter.egg-info/entry_points.txt
+dvc_adapter.egg-info/not-zip-safe
+dvc_adapter.egg-info/top_level.txt
