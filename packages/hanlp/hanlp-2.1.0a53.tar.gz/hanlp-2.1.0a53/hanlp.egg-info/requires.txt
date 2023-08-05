@@ -1,0 +1,17 @@
+alnlp
+hanlp-common>=0.0.9
+hanlp-downloader
+hanlp-trie>=0.0.2
+pynvml
+sentencepiece>=0.1.91torch>=1.6.0
+termcolor
+toposort==1.5
+transformers>=4.1.1
+
+[full]
+bert-for-tf2==0.14.6
+fasttext==0.9.1
+params-flow==0.8.2
+penman==0.6.2
+py-params==0.9.7
+tensorflow==2.3.0
