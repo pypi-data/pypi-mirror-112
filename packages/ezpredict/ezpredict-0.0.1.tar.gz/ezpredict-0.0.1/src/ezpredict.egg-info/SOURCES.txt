@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/example_package/__init__.py
+src/example_package/predict.py
+src/ezpredict.egg-info/PKG-INFO
+src/ezpredict.egg-info/SOURCES.txt
+src/ezpredict.egg-info/dependency_links.txt
+src/ezpredict.egg-info/top_level.txt
