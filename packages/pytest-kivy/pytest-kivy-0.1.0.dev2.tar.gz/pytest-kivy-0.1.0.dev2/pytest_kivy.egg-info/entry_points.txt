@@ -1,0 +1,3 @@
+[pytest11]
+kivy = pytest_kivy.plugin
+

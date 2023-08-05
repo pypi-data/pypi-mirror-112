@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pytest-kivy
+Version: 0.1.0.dev2
+Summary: Kivy GUI tests fixtures using pytest
+Home-page: https://github.com/matham/pytest-kivy
+Author: Matthew Einhorn
+Author-email: moiein2000@gmail.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/matham/pytest-kivy/issues
+Project-URL: Source, https://github.com/matham/pytest-kivy
+Description: pytest-kivy
+        ===========
+        
+        Provides pytest fixtures to more easily test Kivy GUI apps.
+        
+        For more information: https://matham.github.io/pytest-kivy/index.html
+        
+        
+        .. image:: https://coveralls.io/repos/github/matham/pytest-kivy/badge.svg?branch=master
+            :target: https://coveralls.io/github/matham/pytest-kivy?branch=master
+            :alt: Coverage status
+        
+        
+        .. image:: https://github.com/matham/pytest-kivy/workflows/Python%20application/badge.svg
+            :target: https://github.com/matham/pytest-kivy/actions
+            :alt: Github action status
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Testing
+Classifier: Framework :: Pytest
+Provides-Extra: dev
+Provides-Extra: trio
+Provides-Extra: asyncio

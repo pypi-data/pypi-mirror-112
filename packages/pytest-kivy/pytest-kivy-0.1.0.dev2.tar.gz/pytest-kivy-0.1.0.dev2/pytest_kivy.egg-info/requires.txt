@@ -1,0 +1,15 @@
+pytest>=3.6
+kivy>=1.11.1
+
+[asyncio]
+pytest_asyncio
+
+[dev]
+pytest-cov
+flake8
+sphinx-rtd-theme
+coveralls
+
+[trio]
+trio
+pytest-trio
