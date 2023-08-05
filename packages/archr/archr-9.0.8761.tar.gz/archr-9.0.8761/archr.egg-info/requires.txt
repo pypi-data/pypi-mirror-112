@@ -1,0 +1,12 @@
+shellphish_qemu>=0.12.2
+pygdbmi
+docker
+nclib>=1.0.0rc3
+patchelf-wrapper
+cle==9.0.8761
+
+[angr]
+angr==9.0.8761
+
+[qtrace]
+qtrace
