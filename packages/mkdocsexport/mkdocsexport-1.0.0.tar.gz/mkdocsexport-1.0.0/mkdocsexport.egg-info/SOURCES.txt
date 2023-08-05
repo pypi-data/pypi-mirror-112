@@ -1,0 +1,14 @@
+LICENSE.md
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+mkdocsexport/__init__.py
+mkdocsexport/plugin.py
+mkdocsexport.egg-info/PKG-INFO
+mkdocsexport.egg-info/SOURCES.txt
+mkdocsexport.egg-info/dependency_links.txt
+mkdocsexport.egg-info/entry_points.txt
+mkdocsexport.egg-info/requires.txt
+mkdocsexport.egg-info/top_level.txt
+mkdocsexport/templates/export.json.template
