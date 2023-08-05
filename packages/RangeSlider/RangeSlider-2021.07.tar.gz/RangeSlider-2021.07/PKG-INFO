@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: RangeSlider
+Version: 2021.07
+Summary: Python tkinter widget for range selection in slider widget structure with two handles
+Home-page: https://github.com/harshvinay752/RangeSlider
+Author: Harsh Agarwal
+Author-email: harshvinay752@gmail.com
+License: MIT
+Download-URL: https://github.com/harshvinay752/RangeSlider/archive/refs/tags/2021.07.tar.gz
+Description: UNKNOWN
+Keywords: Python,tkinter,range,slider,two handle,selector,widget
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
