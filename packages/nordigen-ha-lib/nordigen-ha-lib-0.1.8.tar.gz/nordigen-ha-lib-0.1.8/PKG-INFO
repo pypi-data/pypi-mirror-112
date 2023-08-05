@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: nordigen-ha-lib
+Version: 0.1.8
+Summary: Home Assistant lib for integration with Nordigen banking API's using nordigen-python
+Home-page: https://github.com/dogmatic69/nordigen-ha-lib
+Author: Carl Sutton (dogmatic69)
+Author-email: dogmatic69@gmail.com
+License: MIT
+Description: # Nordigen Home Assistant Integration Lib
+        
+        Nordigen is a (always*) free banking API that takes advantage of the EU PSD2
+        regulations. They connect to banks in over 30 countries using real banking
+        API's (no screen scraping).
+        
+        This lib uses the generic [Nordigen client lib](https://github.com/dogmatic69/nordigen-python) to
+        provide all the logic required for the Home Assistant integration.
+        
+        This lib was created to make unit testing easy whilst following the layout formats
+        required for HACS to function correctly.
+Keywords: nordigen,banking,home hassistant,hassio
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: production
+Provides-Extra: test
+Provides-Extra: lint
+Provides-Extra: docs
+Provides-Extra: dev
+Provides-Extra: deploy
