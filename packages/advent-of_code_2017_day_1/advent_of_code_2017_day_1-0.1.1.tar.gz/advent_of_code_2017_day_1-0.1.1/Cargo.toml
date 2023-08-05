@@ -1,0 +1,13 @@
+[package]
+name = "advent_of_code_2017_day_1"
+version = "0.1.1"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib", "rlib"]
+#crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.14.1"
+features = ["extension-module"]
