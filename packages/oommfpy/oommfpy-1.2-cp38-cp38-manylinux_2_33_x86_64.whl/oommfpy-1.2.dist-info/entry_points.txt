@@ -1,0 +1,4 @@
+[console_scripts]
+omf2vtk=oommfpy.tools.omf2vtk:omf2vtk_cli
+plot_omf=oommfpy.tools.plot_slices:plot_omf_slices_cli
+
