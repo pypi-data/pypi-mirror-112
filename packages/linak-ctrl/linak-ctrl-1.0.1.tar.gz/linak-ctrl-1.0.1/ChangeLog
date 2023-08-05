@@ -1,0 +1,26 @@
+CHANGES
+=======
+
+1.0.1
+-----
+
+* Readme update
+
+1.0.0
+-----
+
+* Detach kernel driver before doing anything with device
+* DRY. Simplifying get\_status method
+* Added installation bits
+
+0.9.0
+-----
+
+* Added initialization part
+* Rearranged argument parsing
+* Handle keyboard interrupt exception for status with loop
+* Changed param name from height to position for consistency
+* Added usage section
+* Added linak\_ctrl module
+* Added README
+* Added license
