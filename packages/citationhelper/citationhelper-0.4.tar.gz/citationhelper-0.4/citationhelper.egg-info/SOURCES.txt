@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+citationhelper/__init__.py
+citationhelper/citationhelper.py
+citationhelper.egg-info/PKG-INFO
+citationhelper.egg-info/SOURCES.txt
+citationhelper.egg-info/dependency_links.txt
+citationhelper.egg-info/entry_points.txt
+citationhelper.egg-info/not-zip-safe
+citationhelper.egg-info/top_level.txt
+tests/__init__.py
+tests/test_citationhelper.py
