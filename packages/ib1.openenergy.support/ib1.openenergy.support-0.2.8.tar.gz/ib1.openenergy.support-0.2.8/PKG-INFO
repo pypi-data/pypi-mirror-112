@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: ib1.openenergy.support
+Version: 0.2.8
+Summary: Flask and Requests extensions to support data providers and clients within the open energy ecosystem
+Home-page: https://github.com/icebreakerone/open-energy-python-infrastructure
+Author: Tom Oinn
+Author-email: tom.oinn@icebreakerone.org
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: Flask
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Security
+Classifier: Topic :: Scientific/Engineering
