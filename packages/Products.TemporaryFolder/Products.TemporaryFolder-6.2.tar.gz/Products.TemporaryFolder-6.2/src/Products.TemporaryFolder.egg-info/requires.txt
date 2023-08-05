@@ -1,0 +1,8 @@
+setuptools
+AccessControl
+Acquisition
+six
+tempstorage>=5.2
+Products.ZODBMountPoint
+ZODB
+Zope>=4.0b5
