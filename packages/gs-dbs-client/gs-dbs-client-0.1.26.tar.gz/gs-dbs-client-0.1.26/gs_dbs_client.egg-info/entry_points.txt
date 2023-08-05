@@ -1,0 +1,3 @@
+[console_scripts]
+realpython = client.__main__:main
+
