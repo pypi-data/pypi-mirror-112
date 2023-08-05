@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pyfurc
+Version: 0.1.7
+Summary: AUTO-07p made accessible through python.
+License: WTFPLv2
+Author: klunkean
+Author-email: klunkean@posteo.de
+Maintainer: klunkean
+Maintainer-email: klunkean@posteo.de
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: appdirs
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pydata-sphinx-theme
+Requires-Dist: sphinx
+Requires-Dist: sympy
+Project-URL: Documentation, https://pyfurc.readthedocs.io/
+Project-URL: Website, https://github.com/klunkean/pyfurc
