@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+tinta/__init__.py
+tinta/__main__.py
+tinta/colors.ini
+tinta/tinta.py
+tinta.egg-info/PKG-INFO
+tinta.egg-info/SOURCES.txt
+tinta.egg-info/dependency_links.txt
+tinta.egg-info/not-zip-safe
+tinta.egg-info/requires.txt
+tinta.egg-info/top_level.txt
