@@ -1,0 +1,99 @@
+[tool.poetry]
+name = "erin"
+version = "0.1.0-alpha.3"
+description = "Fully Fledged Discord Bot Framework"
+authors = ["Taven <taven@outlook.in>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/OpenDebates/Erin"
+repository = "https://github.com/OpenDebates/Erin"
+documentation = "https://erin.readthedocs.io"
+keywords = [
+    "discord",
+    "bot",
+    "api",
+    "framework",
+    "cog"
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+	"Environment :: Console",
+	"Framework :: AsyncIO",
+	"Intended Audience :: Developers",
+	"License :: OSI Approved :: Apache Software License",
+	"Natural Language :: English",
+	"Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Communications :: Chat"
+]
+packages = [
+    { include = "erin" }
+]
+include = [
+    ".appveyor.yml",
+    ".bumpversion.cfg",
+    ".coveragerc",
+    ".editorconfig",
+    ".readthedocs.yml",
+    "AUTHORS.rst",
+    "CODE_OF_CONDUCT.md",
+    "MANIFEST.in",
+    "docs/*",
+    "tests/*",
+    "tox.ini",
+    "poetry.lock"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+toml = "^0.10.2"
+motor = "^2.4.0"
+"discord.py" = "^1.7.3"
+verboselogs = "^1.7"
+cookiecutter = "^1.7.3"
+schema = "^0.7.4"
+dnspython = "^2.1.0"
+PyNaCl = {version = "^1.4.0", optional = true}
+
+[tool.poetry.dev-dependencies]
+Sphinx = "^4.0.2"
+sphinx-rtd-theme = "^0.5.2"
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+tox = "^3.23.1"
+check-manifest = "^0.46"
+pylama = "^7.7.1"
+readme-renderer = {extras = ["md"], version = "^29.0"}
+Pygments = "^2.9.0"
+isort = "^5.9.1"
+twine = "^3.4.1"
+codecov = "^2.1.11"
+bump2version = "^1.0.1"
+
+[tool.poetry.scripts]
+erin = 'erin.__main__:main'
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra --strict-markers --ignore=docs/conf.py --ignore=setup.py --ignore=ci --ignore=.eggs --doctest-modules --doctest-glob=/*.rst --tb=short"
+norecursedirs = [
+	".git",
+	".tox",
+	".env",
+	"dist",
+	"build",
+	"migrations"
+]
+testpaths = [
+    "tests"
+]
+python_files = [
+	"test_*.py",
+	"*_test.py",
+	"tests.py"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
