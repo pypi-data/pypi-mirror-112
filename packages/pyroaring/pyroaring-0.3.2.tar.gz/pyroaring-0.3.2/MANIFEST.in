@@ -1,0 +1,3 @@
+include pyroaring/roaring.h
+include LICENSE
+exclude pyproject.toml
