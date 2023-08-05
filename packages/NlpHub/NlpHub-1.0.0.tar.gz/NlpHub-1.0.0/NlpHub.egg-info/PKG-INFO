@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: NlpHub
+Version: 1.0.0
+Summary: A wrapper around Spacy, NLTK and uses some other libraries to perform Simple NLP tasks with less code.
+Home-page: https://github.com/shahid017/NlpHub
+Author: Muhammad Shahid Sharif
+Author-email: chshahidhamdam@gmail.com
+License: UNKNOWN
+Description: # NlpHub
+        
+        A wrapper around Spacy, NLTK and also uses some other libraries. 
+        Read details here, https://github.com/shahid017/NlpHub
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
