@@ -1,0 +1,8 @@
+setup.py
+megazord/__init__.py
+megazord/conftest.py
+megazord/interpret.py
+megazord.egg-info/PKG-INFO
+megazord.egg-info/SOURCES.txt
+megazord.egg-info/dependency_links.txt
+megazord.egg-info/top_level.txt
