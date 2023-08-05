@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: auto_tensorflow
+Version: 1.0.1
+Summary: Build automated ML models using Tensorflow
+Home-page: https://github.com/rafiqhasan/auto-tensorflow
+Author: Hasan Rafiq
+Author-email: rafiqhasan@gmail.com
+License: Apache License 2.0
+Project-URL: Bug Tracker, https://github.com/rafiqhasan/auto-tensorflow.git/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# auto-tensorflow
+Library to create Automated ML models on Tensorflow
+
+
