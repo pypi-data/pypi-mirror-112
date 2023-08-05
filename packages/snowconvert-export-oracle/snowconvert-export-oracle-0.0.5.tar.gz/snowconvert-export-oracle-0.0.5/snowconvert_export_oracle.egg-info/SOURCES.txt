@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+sc-oracle-export
+setup.cfg
+snowconvert_export_oracle.egg-info/PKG-INFO
+snowconvert_export_oracle.egg-info/SOURCES.txt
+snowconvert_export_oracle.egg-info/dependency_links.txt
+snowconvert_export_oracle.egg-info/top_level.txt
