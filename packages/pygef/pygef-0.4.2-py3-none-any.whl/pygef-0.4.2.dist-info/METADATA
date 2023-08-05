@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pygef
+Version: 0.4.2
+Summary: UNKNOWN
+Home-page: https://www.ritchievink.com
+Author: Ritchie Vink
+Author-email: ritchie46@gmail.com
+License: mit
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: pandas (>=1.1.5)
+Requires-Dist: matplotlib (>=3.4.2)
+
+UNKNOWN
+
+
