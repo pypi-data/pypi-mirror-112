@@ -1,0 +1,16 @@
+recipys/App.py,sha256=AHGmdVxCTDxlZLza9AnVyY8keHH4_6kzha8tIrl7UiA,513
+recipys/ArgParser.py,sha256=DAnx3iVu8usnPhSmBPAIS09D1PEcaAGKH6DKDLzyUXQ,1557
+recipys/ConfigFile.py,sha256=FXrOmo0ae1Z33XtwblBWbVpxf6q2cD3gWq7SeWkxEjE,4082
+recipys/ConsolePrinter.py,sha256=xPZDN4_0cFBtJ-gdICWj1uYOY54fIvtSJRJwejG0J9k,523
+recipys/RecipeFetcher.py,sha256=Bp4UXclTzi3OWGgg_1RwV26Okz_J5g6pBLB-UJUUd-0,4262
+recipys/Scraper.py,sha256=xLNV1or04vZ5yUY6W2GL1rqKuLWy61ME7N51OgasZjI,3339
+recipys/__init__.py,sha256=FXlust9HWAE08XykwaOSWlTLPEAIUUM4lXwZAJY7B-4,49
+recipys/constants.py,sha256=n9MDRmP7PrSoW0zFencl85mtJqvfzyFwbz4VkKMhruk,261
+recipys/request_wait.py,sha256=oEnaoBQImNRMsFVD9XAeku9aaba9kvBo-FsH3v25U3I,574
+recipys/types.py,sha256=wJbzL58hY8tDhVHIrZGihvo1Vj7l28YzERuQfHbCx3o,435
+recipys-0.0.3.dist-info/LICENSE,sha256=DKZCDQXBwQCErh8PWnEnYZ8bNHq-F3Aw7JOm4PNdAtw,1061
+recipys-0.0.3.dist-info/METADATA,sha256=tR_FKK3c3BaNPSFIIhjXCpFkoIKyN7R2QXG70TaOpTw,2706
+recipys-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+recipys-0.0.3.dist-info/entry_points.txt,sha256=0wA7w9OdvqBlCtxE4Bgjo42V-8yW2oF1kqoG0YFVGjE,46
+recipys-0.0.3.dist-info/top_level.txt,sha256=aoSBVXxn5toticrVI-8zVNNOLeccKdC6S9WHB0b9Q80,8
+recipys-0.0.3.dist-info/RECORD,,
