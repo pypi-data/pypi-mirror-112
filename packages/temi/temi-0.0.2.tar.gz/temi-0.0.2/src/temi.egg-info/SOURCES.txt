@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/temi/__init__.py
+src/temi/api.py
+src/temi.egg-info/PKG-INFO
+src/temi.egg-info/SOURCES.txt
+src/temi.egg-info/dependency_links.txt
+src/temi.egg-info/top_level.txt
