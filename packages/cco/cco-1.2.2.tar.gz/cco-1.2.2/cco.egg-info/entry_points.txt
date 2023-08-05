@@ -1,0 +1,4 @@
+[console_scripts]
+cco = ckan_cloud_operator.cli:main
+ckan-cloud-operator = ckan_cloud_operator.cli:main
+
