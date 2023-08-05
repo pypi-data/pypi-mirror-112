@@ -1,0 +1,9 @@
+include LICENSE
+include requirements.txt
+include *.md
+include *.txt
+include *.ini
+exclude .gitignore
+exclude .gitreview
+
+global-exclude *.pyc
