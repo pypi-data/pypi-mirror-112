@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: ipynb_autograde
+Version: 0.0.35
+Summary: Autograde for ipynb
+Home-page: https://github.com/alexlopespereira/ipynb-autograde
+Author: Alex Lopes Pereira
+Author-email: alexlopespereira@gmail.com
+License: GNU Lesser General Public License v3.0
+Download-URL: https://github.com/alexlopespereira/ipynb-autograde/archive/0.0.35.tar.gz
+Description: UNKNOWN
+Keywords: ipynb,notebook,autograde,colab,jupyter
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Education :: Computer Aided Instruction (CAI)
+Classifier: Topic :: Education :: Testing
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
