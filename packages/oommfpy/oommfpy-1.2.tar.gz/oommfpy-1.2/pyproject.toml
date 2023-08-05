@@ -1,0 +1,30 @@
+# Adding build.py is an experimental feature, so it might change in future
+# We need it here to compile the Cython modules
+[tool.poetry]
+name = "oommfpy"
+version = "1.2"
+description = "Minimal Python lib to process OOMMF format output files"
+authors = ["David Cortés-Ortuño <d.i.cortes@uu.nl>"]
+license = "BSD-2-Clause"
+readme = "README.md"
+keywords = ["oommf", "omf", "python"]
+repository = "https://github.com/davidcortesortuno/oommfpy"
+build = 'build.py'
+
+[tool.poetry.dependencies]
+python = "^3.8,<3.10"
+Cython = "^0.29.23"
+numpy = "^1.20.3"
+click = "^7.1"
+matplotlib = "^3.3.4"
+scipy = "^1.6.3"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+plot_omf = "oommfpy.tools.plot_slices:plot_omf_slices_cli"
+omf2vtk = "oommfpy.tools.omf2vtk:omf2vtk_cli"
+
+[build-system]
+requires = ["setuptools", "poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
