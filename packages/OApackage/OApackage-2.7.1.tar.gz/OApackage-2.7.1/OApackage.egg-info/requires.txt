@@ -1,0 +1,12 @@
+numpy>=1.17
+python-dateutil
+
+[GUI]
+qtpy
+matplotlib
+
+[doc]
+sphinx
+sphinxcontrib.bibtex
+sphinxcontrib.napoleon
+breathe
