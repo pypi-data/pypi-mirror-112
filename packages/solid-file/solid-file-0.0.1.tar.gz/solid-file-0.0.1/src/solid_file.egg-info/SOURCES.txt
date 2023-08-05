@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/solid/__init__.py
+src/solid/solid_api.py
+src/solid/utils/__init__.py
+src/solid/utils/api_util.py
+src/solid/utils/folder_utils.py
+src/solid_file.egg-info/PKG-INFO
+src/solid_file.egg-info/SOURCES.txt
+src/solid_file.egg-info/dependency_links.txt
+src/solid_file.egg-info/top_level.txt
