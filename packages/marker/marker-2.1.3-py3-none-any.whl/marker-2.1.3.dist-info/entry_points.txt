@@ -1,0 +1,3 @@
+[console_scripts]
+marker = marker.repl.repl:main
+
