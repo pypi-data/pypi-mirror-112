@@ -1,0 +1,8 @@
+[console_scripts]
+sktk=snektalk.cli:main
+snektalk=snektalk.cli:main
+
+[snektalk.analyzer]
+monitor=snektalk.analyze:MonitorAnalyzer
+putvar=snektalk.analyze:PutvarAnalyzer
+
