@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: latticeconstructor
+Version: 0.2.2
+Summary: <Enter a one-sentence description of this project here.>
+Home-page: https://github.com/tomerten/latticeconstructor
+License: MIT
+Keywords: packaging,poetry
+Author: Tom Mertens
+Author-email: your.email@whatev.er
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: LatticeJSON (>=0.1.5,<0.2.0)
+Requires-Dist: ipykernel (>=5.5.4,<6.0.0)
+Requires-Dist: ipython (>=7.23.1,<8.0.0)
+Requires-Dist: matplotlib (>=3.4.2,<4.0.0)
+Requires-Dist: nbsphinx (>=0.8.4,<0.9.0)
+Requires-Dist: pandas (>=1.2.4,<2.0.0)
+Requires-Dist: pandoc (>=1.0.2,<2.0.0)
+Project-URL: Repository, https://github.com/tomerten/latticeconstructor
+Description-Content-Type: text/x-rst
+
+==================
+latticeconstructor
+==================
+
+
+
+Package to build accelerator lattice tables based on elements and their
+definitions. Supposed to be combined with the `latticeadaptor <https://github.com/tomerten/latticeadaptor>`_
+Package.
+
+* Free software: MIT license
+* Documentation: https://latticeconstructor.readthedocs.io.
+
+
+Features
+--------
+
+* Construct accelerator element table manually
+* Edit accelerator element tables
+* Load definitions and lattice from: Elegant, Madx sequence file, Madx Line definition file. 
+
+Non-standard Dependency
+-----------------------
+
+* `latticejson <https://github.com/nobeam/latticejson>`_
