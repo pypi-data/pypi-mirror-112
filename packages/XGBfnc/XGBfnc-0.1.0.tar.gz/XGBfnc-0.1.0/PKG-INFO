@@ -1,0 +1,32 @@
+Metadata-Version: 1.1
+Name: XGBfnc
+Version: 0.1.0
+Summary: Flat, node classification model
+Home-page: https://github.com/omicas/P5/tree/master/miguel/code/xgb-python-flat
+Author: Miguel Romero
+Author-email: romeromiguelin@gmail.com
+License: XGBstrc is a node classification model to verify whether structural
+properties of the graph improve the prediction performance.
+Copyright (C) 2020  Miguel Romero
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6

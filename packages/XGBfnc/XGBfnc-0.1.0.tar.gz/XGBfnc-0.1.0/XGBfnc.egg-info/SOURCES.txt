@@ -1,0 +1,14 @@
+README.rst
+setup.py
+XGBfnc.egg-info/PKG-INFO
+XGBfnc.egg-info/SOURCES.txt
+XGBfnc.egg-info/dependency_links.txt
+XGBfnc.egg-info/requires.txt
+XGBfnc.egg-info/top_level.txt
+model/__init__.py
+model/data.py
+model/plots.py
+model/xgbfnc.py
+test/test_a.py
+test/test_b.py
+test/test_c.py
