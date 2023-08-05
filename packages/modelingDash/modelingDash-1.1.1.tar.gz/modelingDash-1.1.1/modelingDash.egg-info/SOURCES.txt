@@ -1,0 +1,12 @@
+README.md
+setup.py
+modelingDash/__init__.py
+modelingDash/appModeling.py
+modelingDash/configModelisation.py
+modelingDash/electricMotor.py
+modelingDash/explorePumpTrialsDash.py
+modelingDash.egg-info/PKG-INFO
+modelingDash.egg-info/SOURCES.txt
+modelingDash.egg-info/dependency_links.txt
+modelingDash.egg-info/requires.txt
+modelingDash.egg-info/top_level.txt
