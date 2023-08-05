@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: GSAToolKit
+Version: 0.0.2
+Summary: Systems are supposed to be tested
+Home-page: UNKNOWN
+Author: Joe
+Author-email: alex.riddell88@gmail.com
+License: UNKNOWN
+Keywords: python,GSA
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+
+This is a package to mess with and get around systems
+
+
