@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: library-nsxt
+Version: 1.0.7.post4
+Summary: Implements methods and models for interacting with a NSXT cluster.
+Home-page: UNKNOWN
+Author: The_Crazy_Sys_Admin
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6.8, <4
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: core-commons (<2,>=1.0.3)
+
+Implements methods and models for interacting with a NSXT cluster.
+
+
