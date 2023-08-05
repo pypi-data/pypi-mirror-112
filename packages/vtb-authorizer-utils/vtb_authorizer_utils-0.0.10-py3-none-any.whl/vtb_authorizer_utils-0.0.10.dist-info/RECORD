@@ -1,0 +1,13 @@
+vtb_authorizer_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vtb_authorizer_utils/authorizer_schema_builder.py,sha256=u8xU6ESm1V9PRHYnoyRHD4jGdSZdESe2UxJmtsxH2lc,4708
+vtb_authorizer_utils/config.py,sha256=pQN5imLVyXWoTvr8z83Si4b9TZ4HpWv5K8UOf5hwj6Q,5282
+vtb_authorizer_utils/converters.py,sha256=sRxG6yvczkaGkRHgDLIkZSNWyyGUyVo7QC_WXdKM8V4,2688
+vtb_authorizer_utils/data_objects.py,sha256=V6atVl00_Ar3WnDCN_B69ucGXezjmrrLrylzahW5r14,2110
+vtb_authorizer_utils/decorators.py,sha256=igAo9OIvr1-jOeyQ6-1J7Cpw3v6wdnNWeVInOxrCu9k,1747
+vtb_authorizer_utils/errors.py,sha256=ymySeSDfgRtWdf75RBbpXG1iqVAdQNGyHc6tU9AzoN4,677
+vtb_authorizer_utils/gateway.py,sha256=ynM4-ls0IMmvmXffA_nu8oP4-ghv_Q-iC9N99AzcTzc,11355
+vtb_authorizer_utils/utils.py,sha256=sjmt9MqvTwfZ5FbmtK4IL_ZhU3HUgjTnx1heS42NvJA,1849
+vtb_authorizer_utils-0.0.10.dist-info/METADATA,sha256=-wcH6fsfzCyFkGNrvhn4kDnHUYRAA5wK9YOQ1N1d0XQ,968
+vtb_authorizer_utils-0.0.10.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+vtb_authorizer_utils-0.0.10.dist-info/top_level.txt,sha256=Q3J6Pimlmh9CUhIEFDIf7aH-j3OddwGobi2PfAT9IcY,21
+vtb_authorizer_utils-0.0.10.dist-info/RECORD,,
