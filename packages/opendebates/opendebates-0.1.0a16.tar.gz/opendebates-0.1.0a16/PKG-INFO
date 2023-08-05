@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: opendebates
+Version: 0.1.0a16
+Summary: Rating System Bot for Open Debates Discord Server
+Home-page: https://opendebates.net
+License: Apache-2.0
+Keywords: discord,bot,debate,elo,cog
+Author: Taven
+Author-email: taven@outlook.in
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Communications :: Chat
+Requires-Dist: erin (>=0.1.0-alpha.3,<0.2.0)
+Project-URL: Documentation, https://docs.opendebates.net
+Project-URL: Repository, https://github.com/OpenDebates/OpenDebates
+Description-Content-Type: text/markdown
+
+<h1 align="center">OpenDebates for Discord</h1>
+<p align="center">
+    <a href="https://opendebates.rtfd.io"><img width="100" src="https://i.imgur.com/SxX5wQF.png"/></a>
+</p>
+<p align="center">
+    <br>
+    <br>
+    <a href="https://github.com/OpenDebates/OpenDebates/actions/workflows/main.yml">
+        <img src="https://github.com/OpenDebates/OpenDebates/actions/workflows/main.yml/badge.svg"/>
+    </a>
+    <a href="https://opendebates.readthedocs.io/en/latest/?badge=latest">
+        <img src="https://readthedocs.org/projects/opendebates/badge/?version=latest" alt='Documentation Status'/>
+    </a>
+</p>
+<hr>
+<h4>What is OpenDebates for Discord?</h4>
+    <p>It is a bot for discord, that allows users to participate in debates that are ranked by ELO ratings.</p>
+

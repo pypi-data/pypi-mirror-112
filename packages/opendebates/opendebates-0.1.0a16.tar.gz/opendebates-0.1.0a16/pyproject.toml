@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "opendebates"
+version = "0.1.0-alpha.16"
+description = "Rating System Bot for Open Debates Discord Server"
+authors = ["Taven <taven@outlook.in>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://opendebates.net"
+repository = "https://github.com/OpenDebates/OpenDebates"
+documentation = "https://docs.opendebates.net"
+keywords = [
+    "discord",
+    "bot",
+    "debate",
+    "elo",
+    "cog"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+	"Environment :: Console",
+	"Framework :: AsyncIO",
+	"Intended Audience :: End Users/Desktop",
+	"License :: OSI Approved :: Apache Software License",
+	"Natural Language :: English",
+	"Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Communications :: Chat"
+]
+packages = [
+    { include = "opendebates"}
+]
+include = [
+    ".bumpversion.cfg",
+    ".editorconfig",
+    ".readthedocs.yml",
+    "AUTHORS.rst",
+    "CODE_OF_CONDUCT.md",
+    "MANIFEST.in",
+    "plugins/*",
+    "docs/*",
+    "tox.ini",
+    "poetry.lock"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+erin = "^0.1.0-alpha.3"
+
+[tool.poetry.dev-dependencies]
+Sphinx = "^4.0.2"
+sphinx-rtd-theme = "^0.5.2"
+bump2version = "^1.0.1"
+tox = "^3.23.1"
+check-manifest = "^0.46"
+readme-renderer = {extras = ["md"], version = "^29.0"}
+twine = "^3.4.1"
+black = "^21.6b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
