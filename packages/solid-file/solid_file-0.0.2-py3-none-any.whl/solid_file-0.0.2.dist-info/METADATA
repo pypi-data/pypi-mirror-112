@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: solid-file
+Version: 0.0.2
+Summary: Solid Python library (http://solidproject.org)
+Home-page: https://github.com/twonote/solid-file-python
+Author: hrchu
+Author-email: petertc.chu@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/twonote/solid-file-python/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# solid-file-python
+solid-file-python
+
+
