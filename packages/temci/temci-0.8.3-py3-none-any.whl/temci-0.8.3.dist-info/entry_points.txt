@@ -1,0 +1,5 @@
+
+        [console_scripts]
+        temci=temci.scripts.run:run
+        temci_completion=temci.scripts.temci_completion:cli
+    
