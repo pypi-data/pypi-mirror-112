@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: AICovidVN 2021
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/Tson99/AICovidVN
+Author: Do Tuan Son
+Author-email: dotuansondn@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Tson99/AICovidVN/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+![visitors](https://visitor-badge.glitch.me/badge?page_id=Tson99.AICovidVN)
+## 1. Working tree
+```
+└── AICovidVN
+    ├── data
+    │   ├── aicv115m_public_test
+    │   └── aicv115m_public_train
+    ├── models
+    ├── results
+    ├── venv
+    │   ├── bin
+    │   ├── include
+    │   ├── lib
+    │   └── lib64 -> lib
+    ├── requirements.txt
+    ├── resnet50.py
+    ├── predict.py
+    ├── README.md
+    ├── models.py
+    ├── Training_AICovidVN_notebook.ipynb
+    ├── Training_AICovidVN_resnetish18_notebook.ipynb
+    └── .gitignore
+```
+## 2. Install packages:
+> pip install -r requirements
+## 3. Dependencies
+> Python 3.7
+## 4. Datasets
+* [Train set](https://drive.google.com/file/d/1MPhz3zYl2yefCq-J5XySbFJt99BfKIZD/view)
+* [Test set](https://drive.google.com/file/d/1UrMudzopA3CyR1Ih2J63Kfi2mY_0uhRK/view)
+## 5. Running
+* Training colab: `Training_AICovidVN_notebook.ipynb`
+* Print result: `python predict.py` 
+
+
+
