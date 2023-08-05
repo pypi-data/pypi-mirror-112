@@ -1,0 +1,110 @@
+#!/usr/bin/python3
+# coding: utf8
+
+"""ReSuber {} - Software toolbox to re-synchronize and/or translate SRT subtitles from a movie.
+
+ReSuber is an automatic tool to re-synchronize any SRT subtitles, using its corresponding vocal audio WAV stream from a movie.
+It uses machine learning techniques to perform language agnostic re-synchronization, by checking the signal correlation
+between the vocal audio stream and the corrected subtitle signal.
+ReSuber also provide different utilities, including vocal audio extraction, subtitle/video file merging into containers and
+automatic translation of SRT subtitles with the Google Cloud Translation API (no API key required).
+
+License MIT.
+
+See https://github.com/polak0v/ReSuber for source code and documentation.
+"""
+
+import os
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
+import sys
+import shutil
+import glob
+import subprocess
+import time
+import matplotlib.pyplot as plt
+from scipy.io import wavfile
+import numpy as np
+import resuber.utils as utils
+import resuber.calculus as calculus
+
+start_time = time.time()
+
+# parameters
+codecs = []
+input_dir = "./"
+# Get the list of all files in directory tree at given path
+all_videos = list()
+for (dirpath, dirnames, filenames) in os.walk(input_dir):
+    all_videos += [os.path.join(dirpath, input_file) for input_file in filenames]
+
+# making output dir
+output_dir = os.path.join(input_dir, "resuber")
+debug_dir = os.path.join(output_dir, "spleeter")
+if not os.path.exists(debug_dir):
+    os.makedirs(debug_dir)
+# copying all subtitles files into output dir
+files = glob.iglob(input_dir + "*.srt")
+for file in files:
+    if os.path.isfile(file):
+        shutil.copy2(file, output_dir)
+
+# loop to all videos files
+for input_file in all_videos:
+    ext = input_file.split(".")[-1]
+    if (ext == "mp4") | (ext == "mkv") | (ext == "avi"):
+        input_audio = os.path.join(debug_dir, ".".join(os.path.basename(input_file).split(".")[:-1]) + "_original.wav")
+        output_vocal = os.path.join(output_dir, ".".join(os.path.basename(input_file).split(".")[:-1]) + ".wav")
+        if not os.path.exists(output_vocal):
+            # extract the audio stream from movie
+            if not os.path.exists(input_audio):
+                print("Extracting audio signal from: {}".format(input_file))
+                process = subprocess.Popen(["ffmpeg", "-y", "-i", input_file, "-ac", "2", input_audio], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                print(process.stdout.read().decode("utf-8"))
+
+            # get audio duration
+            process = subprocess.Popen(["ffprobe"
+                                        , "-v"
+                                        , "error"
+                                        , "-show_entries"
+                                        , "format=duration"
+                                        , "-of"
+                                        , "default=noprint_wrappers=1:nokey=1"
+                                        , input_audio]
+                                    , stdout=subprocess.PIPE
+                                    , stderr=subprocess.PIPE)
+            duration_audio_in_ms = int(float(process.stdout.read().decode("utf-8"))*1000)
+
+            # the audio is processed into several parts because Spleeter uses a lot of RAM
+            vocal_file = input_audio[:-4] + "/vocals_{}.wav"
+            max_duration_in_ms = 600000
+            vocal_offset = 0
+            nb_iter = int(duration_audio_in_ms/max_duration_in_ms)
+            full_vocal = np.array([], dtype=np.int16)
+            print("Pulling vocals from: {}".format(input_audio))
+            for i in range(nb_iter + 1):
+                if not os.path.exists(vocal_file.format(i)):
+                    process = subprocess.call(["python3"
+                                            , "-m"
+                                            , "spleeter"
+                                            , "separate"
+                                            , input_audio
+                                            , "-p"
+                                            , "spleeter:2stems"
+                                            , "--offset"
+                                            , str(vocal_offset)
+                                            , "-d"
+                                            , str(max_duration_in_ms/1000)
+                                            , "-f"
+                                            , "{filename}/{instrument}_" + str(i) +".wav"
+                                            , "-o"
+                                            , os.path.dirname(input_audio)]
+                                            , stdout=subprocess.PIPE)
+                vocal_offset = vocal_offset + int(max_duration_in_ms/1000)
+                
+                # reading vocal stems
+                vocal, fs = calculus.signal.read_audio(vocal_file.format(i), target_fs=44100)
+                full_vocal = np.concatenate((full_vocal, vocal))
+            # saving full vocal file
+            calculus.signal.save_audio(full_vocal, output_vocal, fs)
+print("spleeter2resuber duration {} s".format(time.time() - start_time))
+print("###")
