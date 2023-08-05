@@ -1,0 +1,10 @@
+gaussquality
+numpy
+scipy
+pandas
+matplotlib==3.4.2
+tk
+ttkthemes
+scikit-image
+scikit-learn
+pytest

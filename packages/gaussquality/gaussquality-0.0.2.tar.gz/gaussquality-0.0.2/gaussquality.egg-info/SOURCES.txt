@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+gaussquality/__init__.py
+gaussquality/gaussquality_calc.py
+gaussquality/gaussquality_fitting.py
+gaussquality/gaussquality_gui.py
+gaussquality/gaussquality_io.py
+gaussquality/gaussquality_visuals.py
+gaussquality.egg-info/PKG-INFO
+gaussquality.egg-info/SOURCES.txt
+gaussquality.egg-info/dependency_links.txt
+gaussquality.egg-info/requires.txt
+gaussquality.egg-info/top_level.txt
+test/test_gaussquality_fitting.py
+test/test_gaussquality_io.py
