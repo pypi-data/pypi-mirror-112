@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: autowrapt-logger
+Version: 1.6
+Summary: logging by environment
+Home-page: https://github.com/eunchong/autowrapt-logger
+Author: eunchong
+License: BSD
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
+Requires-Dist: autowrapt (>=1.0)
+
+================
+autowrapt-logger
+================
+
+A Python module logging the elapsed time of methods to ``stdout``. The methods can be specified with ``module:method`` env.
+Without modifying your application, you are able to activate this feature.
+
+============
+Installation
+============
+::
+
+    pip install autowrapt-logger
+
+=====
+Usage
+=====
+::
+
+    AUTOWRAPT_BOOTSTRAP=autowrapt_logger INSTRUMENT_LIST="worker:logic_a,worker:logic_b,worker:get_db_data,worker:job" python3 example.py
+
