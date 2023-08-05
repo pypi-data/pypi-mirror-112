@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: any-face
+Version: 2.3.13
+Summary: Anonymize human faces with Multi-Cascaded CNN
+Home-page: UNKNOWN
+Author: Serene
+Author-email: serenetech90@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: Click
+Requires-Dist: matplotlib
+Requires-Dist: mtcnn
+Requires-Dist: opencv-python
+Requires-Dist: tensorflow
+
+UNKNOWN
+
+
