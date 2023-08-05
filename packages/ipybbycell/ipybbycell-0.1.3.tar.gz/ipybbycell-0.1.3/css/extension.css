@@ -1,0 +1,132 @@
+#bxy-outer-control-panel {
+  position: absolute;
+  padding: 6px 6px 6px 4px;
+  top: 120px;
+  right: 16px;
+  background-color: rgba(245, 245, 245, 0.9);
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  z-index: 110;
+  user-select: none;
+}
+
+#bxy-inner-control-panel {
+  display: flex;
+  /* cursor: grab; */
+}
+
+/* #bxy-inner-control-panel:active {
+  cursor: grabbing;
+} */
+
+/* 
+http://www.patternify.com/
+*/
+.bxy-small-dot-pattern {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAF0lEQVQYV2NkYGD4z8DAwMgAI0AMDA4AI3EBBMY7CTgAAAAASUVORK5CYII=)
+    repeat;
+}
+
+#bxy-drag-handle {
+  cursor: grab;
+  margin-left: 0px;
+  margin-right: 4px;
+  width: 10px;
+}
+
+#bxy-drag-handle:active {
+  cursor: grabbing;
+}
+
+.bxy-control-panel {
+  display: none;
+  margin-top: 4px;
+}
+
+.bxy-control-panel .btn {
+  padding: 3px 4px;
+}
+
+#bxy-notifier {
+  max-width: 160px;
+  font-size: 0.9em;
+}
+
+#bxy-control-panel-title {
+  /* cursor: grab; */
+  display: flex;
+  align-items: center;
+  color: #666;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 0.8em;
+}
+
+/* #bxy-control-panel-title:active {
+  cursor: grabbing;
+} */
+
+/* #bxy-control-panel-title div {
+  margin-right: 5px;
+} */
+
+#bxy-control-panel-title #bxy-logo-text {
+  /* transform: scale(1.05, 1.25); */
+  /* margin-left: 6px; */
+  /* margin-top: -4px; */
+  /* letter-spacing: 0.9em; */
+  width: 100%;
+  text-align-last: justify;
+}
+
+#bxy-control-panel-title img {
+  width: 22px;
+  padding: 0 2px 0 2px;
+}
+
+.bxy-config-title {
+  font-weight: bold;
+  /* font-size: 15px; */
+}
+
+.bxy-form-item {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  max-width: 200px;
+}
+
+.bxy-form-item span {
+  white-space: nowrap;
+  margin-right: 4px;
+}
+
+.bxy-sticker-inner {
+  /*  border:2px dashed red;*/
+  pointer-events: none;
+}
+
+.bxy-sticker-inner div {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.bxy-right-side-marker {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#bxy-config-btns {
+  display: flex;
+  justify-content: center;
+}
+
+#bxy-config-btns button {
+  margin: 4px 4px 0;
+}
