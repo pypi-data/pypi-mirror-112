@@ -1,0 +1,14 @@
+celery
+Django
+django-mongoengine
+djangorestframework
+django-rest-framework-mongoengine
+django-simple-menu
+future
+mongoengine
+mock
+requests
+core-main-app==1.16.*
+core-oaipmh-common-app==1.16.*
+signals-utils==1.10.*
+xml-utils==1.14.*
