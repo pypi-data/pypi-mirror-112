@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+django_postalcode.egg-info/PKG-INFO
+django_postalcode.egg-info/SOURCES.txt
+django_postalcode.egg-info/dependency_links.txt
+django_postalcode.egg-info/requires.txt
+django_postalcode.egg-info/top_level.txt
+postal_code/__init__.py
+postal_code/choices.py
+postal_code/utils.py
