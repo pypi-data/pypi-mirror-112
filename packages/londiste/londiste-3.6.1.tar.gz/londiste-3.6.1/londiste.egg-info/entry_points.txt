@@ -1,0 +1,3 @@
+[console_scripts]
+londiste = londiste.cli:main
+
