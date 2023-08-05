@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: CraftPy
+Version: 1.1.2
+Summary: Controlling minecraft with python
+Home-page: UNKNOWN
+Author: Zylops
+Author-email: zainaazeez787@gmail.com
+License: UNKNOWN
+Description: # CraftPy
+        A package that allows to use functions to control minecraft built on pyautogui.
+        
+        To make an instance of the player class, use:
+        
+            CraftPy.Player({version_number}, {Cheats (True if enabled)})
+        
+        # Player methods:
+        
+        + def __init__(self, Float: version, Boolean: cheats)
+        
+        + def walk(self, Integer: seconds)
+        
+        + def hit(self)
+        
+        + def interact(self)
+        
+        + def look(self, String: direction, Integer: pixels)
+        
+        + def jump(self)
+        
+        + def sneak(self, Boolean: toggle)
+        
+        + def sprint(self, Boolean: toggle)
+        
+        + def crit(self)
+        
+        + def switchitem(self, Integer: slot)
+        
+        + def shield(self, Boolean: toggle)
+        
+        + def bow(self, Integer: load)
+        
+        + def mine(self, Boolean: toggle)
+        
+        + def throw(self)
+        
+        + def chat(self, String: message)
+        
+        + def inventory(self)
+        
+        + def offhand(self)
+        
+        + def perspective(self)
+        
+        + def reloadchunks(self)
+        
+        + def gamemode(self)
+        
+        + def chunkborders(self)
+        
+        + def togglehitboxes(self)
+        
+        + def coordinates(self)
+        
+        + def clearchat(self)
+        
+        + def renderdistance(self, Boolean: increase)
+Keywords: python,gaming,mc,control,pyautogui,minecraft
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
