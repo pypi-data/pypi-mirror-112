@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: nerdpool-client
+Version: 0.0.1
+Summary: A client for Nerdpool-Api
+Home-page: https://github.com/acdh-oeaw/nerdpool-client
+Author: Peter Andorfer
+Author-email: peter.andorfer@oeaw.ac.at
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
