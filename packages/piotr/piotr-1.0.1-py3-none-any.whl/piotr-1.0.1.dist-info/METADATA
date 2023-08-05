@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: piotr
+Version: 1.0.1
+Summary: Piotr is an instrumentation tool for qemu-system-arm able to emulate ARM-based embedded devices.
+Home-page: https://github.com/virtualabs/piotr
+Author: virtualabs
+Author-email: virtualabs@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.5
+License-File: LICENSE
+Requires-Dist: blessings
+Requires-Dist: psutil
+Requires-Dist: pyyaml
+
+Piotr provides an easy way to create, run and share virtual IoT devices. It is suitable for
+trainings (especially remote trainings) where embedded device emulation is required. 
+
+Piotr provides a set of useful command-line utilities to manage the emulated devices and interact with them,
+and a Python API to allow automation. Thus, it is easy to spawn an emulated device, interact with its system,
+remotely debug a specific process and exploit some vulnerabilities for instance.
+
