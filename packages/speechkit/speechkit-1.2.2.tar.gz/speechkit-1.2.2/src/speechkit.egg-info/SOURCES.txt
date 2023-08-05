@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/speechkit/__init__.py
+src/speechkit/speechkit.py
+src/speechkit.egg-info/PKG-INFO
+src/speechkit.egg-info/SOURCES.txt
+src/speechkit.egg-info/dependency_links.txt
+src/speechkit.egg-info/top_level.txt
