@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pydatastructs/__init__.py
+pydatastructs/binarysearchtree.py
+pydatastructs/linkedlist.py
+pydatastructs/queue.py
+pydatastructs/stack.py
+pydatastructs/tree.py
+pydatastructs.egg-info/PKG-INFO
+pydatastructs.egg-info/SOURCES.txt
+pydatastructs.egg-info/dependency_links.txt
+pydatastructs.egg-info/requires.txt
+pydatastructs.egg-info/top_level.txt
