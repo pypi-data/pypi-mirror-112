@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+bamr/__init__.py
+bamr/bamr.py
+bamr.egg-info/PKG-INFO
+bamr.egg-info/SOURCES.txt
+bamr.egg-info/dependency_links.txt
+bamr.egg-info/not-zip-safe
+bamr.egg-info/top_level.txt

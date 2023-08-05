@@ -1,0 +1,2 @@
+# bamr
+lightweight bam reader
