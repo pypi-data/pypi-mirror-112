@@ -1,0 +1,3 @@
+[console_scripts]
+unipipeline = unipipeline.main:main
+
