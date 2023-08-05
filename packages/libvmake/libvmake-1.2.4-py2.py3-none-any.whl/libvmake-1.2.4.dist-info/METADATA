@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: libvmake
+Version: 1.2.4
+Summary: "A library for vmake tool which include global functions for project management"
+Home-page: https://github.com/uforgetmenot/libvmake
+Author: uforgetmenot
+Author-email: uforgetmenot@yuhuans.cn
+License: MIT
+Project-URL: Bug Tracker, https://github.com/uforgetmenot/libvmake/issues
+Project-URL: Changelog, https://github.com/uforgetmenot/libvmake/blob/master/CHANGELOG.md
+Keywords: vmake
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: !=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: distro (>=1.5.0)
+Requires-Dist: jinja2 (>=3.0.1)
+Requires-Dist: PyYAML (>=5.4.1)
+Requires-Dist: requests (>=2.21.0)
+Requires-Dist: pycryptodome (>=3.10.1)
+
+# Libvmake
+
+> `A library for vmake tool which include project tasks runner that can run in multi platform(linux, windows)`
+
+## Install
+
+You can install this from [PYPI]()();
+
+```bash
+python3 -m pip install --no-input libvmake
+```
+
+## Build
+
+```
+# Pack 
+python3 setup.py bdist_wheel --universal
+
+# Upload
+python3 -m twine upload --repository pypi dist/*
+```
+
+## Usage
+
+```bash
+# init vmake project
+python3 -m libvmake init
+
+# view vmake module help
+python3 -m libvmake help
+
+# view help
+vmake.cmd help
+
+# Then customize vmake.py to define tasks, enjoy!
+```
+
+

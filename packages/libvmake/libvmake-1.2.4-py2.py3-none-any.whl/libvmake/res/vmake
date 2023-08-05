@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd "$(dirname $0)"
+
+export ROOT=$(pwd)
+
+if python -c "import sys; sys.exit(0 if sys.version_info.major >= 3 else 1)" >& /dev/null;then
+    syspython=python
+elif python3 -c "import sys; sys.exit(0 if sys.version_info.major >= 3 else 1)" >& /dev/null;then
+    syspython=python3
+else
+    echo "Error: no python3 found" >& 2
+    exit 1
+fi
+
+${syspython} ./vmake.py $*
