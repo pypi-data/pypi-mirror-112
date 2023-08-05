@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: sencyber-tools
+Version: 0.1.5
+Summary: Sencyber Tools
+Home-page: https://github.com/Ag-elf/sencyber-tools
+Author: shigure_hotaru
+Author-email: lrscct@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Ag-elf/sencyber-tools/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+```
+sencyberApps
+>>> .io
+    ==> connection
+        --> CassandraLoader     :class
+        --> Oss2Connector       :class
+        --> jsonLoader          :function
+    ==> geo
+        --> GeoPoint            :class
+        --> radians             :function
+        --> heading             :function
+        --> distance            :function
+==> demo
+    --> running                 :function
+
+==> quanternion
+
+==> tools
+    --> PositionAHRS            :class
+    --> ConcurrentHandler       :class
+    --> SencyberLogger          :class
+    --> SencyberLoggerReceiver  :class
+    
+```
+
+```
+1. >>>: package
+2. ==>: module
+3. -->: functions & classes
+```
+
+```python
+# For Example
+from sencyberApps.io.connection import CassandraLoader
+from sencyberApps.io.geo import GeoPoint
+from sencyberApps.tools import ConcurrentHandler
+```
+
