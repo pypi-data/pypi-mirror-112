@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+target-version = ['py37', 'py38']
+include = '\.pyi?$'
+exclude = '''
+(
+    \.eggs
+  | \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | venv
+  | _build/
+  | build/
+  | dist/
+)
+'''
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = "line-too-long,invalid-name,too-few-public-methods,too-many-instance-attributes,too-many-arguments,missing-docstring"
+output-format = "text"
+reports = "no"
+
+[tool.coverage.run]
+branch = true
+source = ["libbiomedit"]
+
+[tool.tox]
+legacy_tox_ini = '''
+[tox]
+envlist = clean,py{36,37,38,39},report
+
+[testenv]
+depends =
+    {py36,py37,py38,py39}: clean
+    report: py36,py37,py38,py39
+deps =
+    coverage[toml]
+commands =
+    coverage run --append -m unittest discover -s test -v
+
+[testenv:report]
+skip_install = true
+commands =
+    coverage report
+
+[testenv:clean]
+skip_install = true
+commands = coverage erase
+'''
