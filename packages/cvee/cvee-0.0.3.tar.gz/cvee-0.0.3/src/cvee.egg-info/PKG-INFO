@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: cvee
+Version: 0.0.3
+Summary: A set of tools for CV researchers
+Home-page: https://github.com/leoyejl/cvee
+Author: Jianglong Ye
+Author-email: jianglong.ye.leo@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/leoyejl/cvee/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# cvee
+
+A set of tools for CV researchers.
+
+## Installation
+
+### Install locally
+
+```bash
+pip install -e .
+```
+
+## Develop
+
+### Format
+
+*maybe add a file watcher in pycharm*
+
+```bash
+yapf -ir src/cvee
+yapf -ir tests
+```
+
+### Lint
+
+```bash
+pylint src/cvee
+```
+
+### Test
+
+```bash
+pytest
+```
+
+### Build
+
+```bash
+
+```
+
+
