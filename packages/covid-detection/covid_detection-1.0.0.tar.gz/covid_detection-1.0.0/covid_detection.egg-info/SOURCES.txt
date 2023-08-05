@@ -1,0 +1,9 @@
+setup.py
+covid_detection/__init__.py
+covid_detection/covid19.py
+covid_detection/test.py
+covid_detection.egg-info/PKG-INFO
+covid_detection.egg-info/SOURCES.txt
+covid_detection.egg-info/dependency_links.txt
+covid_detection.egg-info/requires.txt
+covid_detection.egg-info/top_level.txt
