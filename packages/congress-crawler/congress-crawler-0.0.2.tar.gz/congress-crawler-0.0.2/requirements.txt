@@ -1,0 +1,11 @@
+pyyaml
+python-dateutil
+lxml>=2.2
+pytz
+cssselect
+scrapelib
+mechanize
+BeautifulSoup4
+xmltodict
+rtyaml
+requests
