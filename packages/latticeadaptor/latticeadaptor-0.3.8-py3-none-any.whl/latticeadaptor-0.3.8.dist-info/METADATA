@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: latticeadaptor
+Version: 0.3.8
+Summary: <Enter a one-sentence description of this project here.>
+Home-page: https://github.com/tomerten/latticeadaptor
+License: MIT
+Keywords: packaging,poetry
+Author: Tom Mertens
+Author-email: your.email@whatev.er
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: LatticeJSON (>=0.1.5,<0.2.0)
+Requires-Dist: cpymad (>=1.8.1,<2.0.0)
+Requires-Dist: ipykernel (>=5.5.5,<6.0.0)
+Requires-Dist: ipython (>=7.23.1,<8.0.0)
+Requires-Dist: lark (>=0.11.3,<0.12.0)
+Requires-Dist: latticeconstructor (>=0.2.2,<0.3.0)
+Requires-Dist: matplotlib (>=3.4.1,<4.0.0)
+Requires-Dist: nbsphinx (>=0.8.5,<0.9.0)
+Requires-Dist: pandas (>=1.2.4,<2.0.0)
+Requires-Dist: pandoc (>=1.0.2,<2.0.0)
+Requires-Dist: termcolor (>=1.1.0,<2.0.0)
+Project-URL: Repository, https://github.com/tomerten/latticeadaptor
+Description-Content-Type: text/x-rst
+
+==============
+latticeadaptor
+==============
+
+.. image:: https://readthedocs.org/projects/latticeadaptor/badge/
+    :alt: Documentation Status
+    :scale: 100%
+    :target: http://latticeadaptor.readthedocs.io
+
+
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/tomerten/latticeadaptor/main?filepath=docs%2Fnotebook%2FTutorial.ipynb
+
+
+This package is used to convert a table of accelerator lattice elements and their arguments 
+to various accelerator lattice formats. Currently covered are:
+
+- MadX (Sequence and Line format)
+- Elegant
+- Tracy
+
+* Free software: MIT license
+* Documentation: https://latticeadaptor.readthedocs.io.
+
+
+Features
+--------
+
+* Fast lattice comparison by plotting element locations against eachother.
+* Fast settings compare by comparing magnet settings.
+* Quick twiss plotting.
+* Quick lattice element plotting.
+* Conversion from table to standard formats.
+
+Tutorial on Binder
+------------------
+
+https://mybinder.org/v2/gh/tomerten/latticeadaptor/main?filepath=docs%2Fnotebook%2FTutorial.ipynb
+
+
