@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: youtube-thumbnail
+Version: 0.1.0
+Summary: CLI tool to download YouTube thumbnails
+Home-page: https://github.com/animesh-chouhan/youtube_thumbnail
+Author: Animesh Singh Chouhan
+Author-email: animeshsingh.iitkgp@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/animesh-chouhan/youtube_thumbnail/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# youtube_thumbnail
+CLI tool to download YouTube thumbnails
+
+
