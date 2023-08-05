@@ -1,0 +1,56 @@
+TAG,MIN,MAX,UNITE,DESCRIPTION,TYPE
+SIS-CL-01-XM00,0,100,%,Couverture nuageuse,INT
+SIS-CL-02-XM00,0,100,%,Prévision couverture nuageuse à T+1,INT
+SIS-CL-03-XM00,0,100,%,Prévision couverture nuageuse à T+0,INT
+SIS-CL-04-XM00,0,100,%,Prévision couverture nuageuse à T+2,INT
+SIS-CL-05-XM00,0,100,%,Prévision couverture nuageuse à T+3,INT
+SIS-CL-06-XM00,0,100,%,Prévision couverture nuageuse à T+4,INT
+SIS-CL-07-XM00,0,100,%,Prévision couverture nuageuse à T+5,INT
+SIS-CL-08-XM00,0,100,%,Prévision couverture nuageuse à T+6,INT
+SIS-CL-09-XM00,0,100,%,Prévision couverture nuageuse à T+7,INT
+SIS-CL-10-XM00,0,100,%,Prévision couverture nuageuse à T+8,INT
+SIS-CL-11-XM00,0,100,%,Prévision couverture nuageuse à T+9,INT
+SIS-DP-01-XM00,-50,80,°C,Point de rosée,INT
+SIS-DP-02-XM00,-50,80,°C,Prévision point de rosée à T+0,INT
+SIS-DP-03-XM00,-50,80,°C,Prévision point de rosée à T+1,INT
+SIS-DP-04-XM00,-50,80,°C,Prévision point de rosée à T+2,INT
+SIS-DP-05-XM00,-50,80,°C,Prévision point de rosée à T+3,INT
+SIS-DP-06-XM00,-50,80,°C,Prévision point de rosée à T+4,INT
+SIS-DP-07-XM00,-50,80,°C,Prévision point de rosée à T+5,INT
+SIS-DP-08-XM00,-50,80,°C,Prévision point de rosée à T+6,INT
+SIS-DP-09-XM00,-50,80,°C,Prévision point de rosée à T+7,INT
+SIS-DP-10-XM00,-50,80,°C,Prévision point de rosée à T+8,INT
+SIS-DP-11-XM00,-50,80,°C,Prévision point de rosée à T+9,INT
+SIS-HU-01-XM00,0,100,%,Humité ambiante,INT
+SIS-HU-02-XM00,0,100,%,Prévision humidité à T+0,INT
+SIS-HU-03-XM00,0,100,%,Prévision humidité à T+1,INT
+SIS-HU-04-XM00,0,100,%,Prévision humidité à T+2,INT
+SIS-HU-05-XM00,0,100,%,Prévision humidité à T+3,INT
+SIS-HU-06-XM00,0,100,%,Prévision humidité à T+4,INT
+SIS-HU-07-XM00,0,100,%,Prévision humidité à T+5,INT
+SIS-HU-08-XM00,0,100,%,Prévision humidité à T+6,INT
+SIS-HU-09-XM00,0,100,%,Prévision humidité à T+7,INT
+SIS-HU-10-XM00,0,100,%,Prévision humidité à T+8,INT
+SIS-HU-11-XM00,0,100,%,Prévision humidité à T+9,INT
+SIS-PT-02-XM00,800,1200,mbara,Prévision Pression à T+0,INT
+SIS-PT-03-XM00,800,1200,mbara,Prévision Pression à T+1,INT
+SIS-PT-04-XM00,800,1200,mbara,Prévision Pression à T+2,INT
+SIS-PT-05-XM00,800,1200,mbara,Prévision Pression à T+3,INT
+SIS-PT-06-XM00,800,1200,mbara,Prévision Pression à T+4,INT
+SIS-PT-07-XM00,800,1200,mbara,Prévision Pression à T+5,INT
+SIS-PT-08-XM00,800,1200,mbara,Prévision Pression à T+6,INT
+SIS-PT-09-XM00,800,1200,mbara,Prévision Pression à T+7,INT
+SIS-PT-10-XM00,800,1200,mbara,Prévision Pression à T+8,INT
+SIS-PT-11-XM00,800,1200,mbara,Prévision Pression à T+9,INT
+SIS-PT-01-XM00,800,1200,mbara,Pression atmosphérique,INT
+SIS-TT-01-XM00,-50,80,°C,Température ambiante,INT
+SIS-TT-02-XM00,-50,80,°C,Prévision température à T+0,INT
+SIS-TT-03-XM00,-50,80,°C,Prévision température à T+1,INT
+SIS-TT-04-XM00,-50,80,°C,Prévision température à T+2,INT
+SIS-TT-05-XM00,-50,80,°C,Prévision température à T+3,INT
+SIS-TT-06-XM00,-50,80,°C,Prévision température à T+4,INT
+SIS-TT-07-XM00,-50,80,°C,Prévision température à T+5,INT
+SIS-TT-08-XM00,-50,80,°C,Prévision température à T+6,INT
+SIS-TT-09-XM00,-50,80,°C,Prévision température à T+7,INT
+SIS-TT-10-XM00,-50,80,°C,Prévision température à T+8,INT
+SIS-TT-11-XM00,-50,80,°C,Prévision température à T+9,INT

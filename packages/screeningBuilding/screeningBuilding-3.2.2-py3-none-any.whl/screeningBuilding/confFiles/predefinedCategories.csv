@@ -1,0 +1,9 @@
+predefinedCategories,Pattern,Unit
+sylfen puissance,B001.+[0-9s]-JTW$,kW
+Puissances SLS,\w+-[A-Z][0-9]+-+.+sys-JTW$,kW
+compteur sylfen,B001.+JTWH,J
+Compteurs SLS,H-JTWH,J
+Puissance total,EM_VIRTUAL.+[0-9s]-JTW,kW
+Temperature le Cheylas,,°C
+Pression le Cheylas,,mbara
+Couverture nuageuse le Cheylas ,,%
