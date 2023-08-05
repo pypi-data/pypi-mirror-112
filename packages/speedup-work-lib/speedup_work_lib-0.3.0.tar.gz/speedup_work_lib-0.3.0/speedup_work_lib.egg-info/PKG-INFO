@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: speedup-work-lib
+Version: 0.3.0
+Summary: A Python library to speed up work
+Home-page: https://github.com/mndarren/Speedup-Work-Lib.git
+Author: Darren Xie
+Author-email: mndarren@gmail.com
+License: Apache
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Speedup-Work-Lib
+
+This repo is a library for speed up work
+
+## Get Started
+> There are **3 COMPONENTS** in Speedup Work Lib:<br/>
+> - file_tool.py contain functions for dealing with file.<br/>
+> - simple_log.py contain functions for a simple log.<br/>
+> - ssh_client.py contain functions for creating SSH client to perform function on the remote computer.<br/>
+
+## How to Deploy Package to Pypi Manually
+bash
+pip freeze > requirements.txt
+python setup.py sdist bdist_wheel
+twine check dist/*
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+twine upload dist/*
+
+
+&copy; 2021
+
+
