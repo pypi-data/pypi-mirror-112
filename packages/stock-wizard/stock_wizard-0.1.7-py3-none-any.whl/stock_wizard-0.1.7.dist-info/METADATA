@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: stock-wizard
+Version: 0.1.7
+Summary: Tracks and analyzes the performance of stocks
+Home-page: UNKNOWN
+Author: Hailu Teju
+Author-email: hailuteju@gmail.com
+License: UNKNOWN
+Keywords: python,stock,stock tracker,bollinger bands
+Platform: UNKNOWN
+Requires-Dist: pandas (>=1.3.0)
+Requires-Dist: plotly (>=5.1.0)
+Requires-Dist: matplotlib (>=3.4.2)
+Requires-Dist: yfinance (>=0.1.60)
+
+Tracks and analyzes the performance of stocks
+
