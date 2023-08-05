@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: P_CombiningPValuesFinal
+Version: 0.1.4
+Summary: Functions within this module allow for the use of multiple test statistics
+Home-page: https://github.com/StatsGirl/Master2021
+Author: Breya McGlown
+Author-email: bswlker2@memphis.edu
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+
+# P_CombiningPValuesFinal
+
+This is a new release of 0.1.4 P_CombiningPValuesFinal. New additions include new functionality 
+that returns the combined p value of the test statistic selected.
+Updates to Tippett and George Method. Also InfinitePs in no SumOfPs
