@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: enhaaancedLists
+Version: 0.70
+Summary: Lists with extended / enhanced in-place capabilities - using a new operator notation, closely resembling mathematical conditions
+Home-page: https://www.blackward.de
+Author: Dominik Niedenzu
+Author-email: pyadaaah@blackward.de
+Maintainer: Dominik Niedenzu
+License: Proprietary License
+Platform: any platform which provides python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Requires-Python: >= 2.2
+Description-Content-Type: text/markdown
+
+This library in particular comprises the 'EnhList' class, which is 
+a list with extended / enhanced IN-PLACE capabilities.
+
+Together with the 'elem' term, some of its methods (also) allow using 
+a NEW OPERATOR NOTATION, closely resembling mathematical conditions.
+
+( Note that '&' resp. '|' are 'abused' as 'logical resp. or' in this
+context (and NOT bitwise!) ).
+
+
+Examples for said ADDITIONAL capabilities (standard list operations work too) are:
+
+
+#convert a parameter list to an enhanced list 
+eL = EnhList(1,3,5,7)                                       #eL: [1,3,5,7]
+
+#push single as well as multiple elements into the list
+eL.push(9)                                  ==> None        #eL: [1,3,5,7,9]
+eL.push(11,13,15)                           ==> None        #eL: [1,3,5,7,9,11,13,15]
+
+#pop single as well as multiple elements from the list - 
+#note that push/pop implements a FIFO - in contrast to the standard list (LIFO)
+eL.pop()                                    ==> 1           #eL: [3,5,7,9,11,13,15]
+eL.pop( (elem > 3) & (elem < 11), single )  ==> 5           #eL: [3,7,9,11,13,15]
+eL.pop( (elem > 3) & (elem < 11)         )  ==> [7,9]       #eL: [3,11,13,15]      
+
+#get items from list
+eL[ elem >= 10         ]                    ==> [11,13,15]  #eL: unchanged
+eL[ elem >= 10, single ]                    ==> 11          #eL: unchanged
+eL[ elem <  3,  single ]                    ==> None        #eL: unchanged
+
+#check whether list contains items
+( elem <  3 ) in eL                         ==> False       #eL: unchanged
+( elem >= 3 ) in eL                         ==> True        #eL: unchanged
+
+#delete items from list
+del eL[ elem < 12, single ]                 ==> ---         #eL: [11,13,15]
+del eL[ elem > 12         ]                 ==> ---         #eL: [11]
+
+eL = EnhList(1,3,5,7)                                       #eL: [1,3,5,7]
+#check whether all element meet a condition
+eL.areAll( elem % 2 == 1 )                  ==> True        #eL: unchanged
+eL.areAll( elem     >= 3 )                  ==> False       #eL: unchanged
+
+#map function on elements / work with items of elements
+eL.mapIf( lambda x: dict(a=x) )                          
+                    ==> None        #eL: [{'a':1},{'a':3},{'a':5},{'a':7}]
+eL.mapIf( lambda x: x['a'] + 1, elem['a'] > 3)           
+                    ==> None        #eL: [{'a':1},{'a':3},6,8]
+
+#work with attributes of elements
+class Attr(object):
+    def __init__(self, value):
+        self.a = value
+    def __repr__(self):
+        return ".a=%s" % self.a
+eL.mapIf( lambda x: Attr(x), lambda x: type(x) ==  int ) 
+                    ==> None        #eL: [{'a':1},{'a':3},.a=6,.a=8]
+
+More examples can be found in the source code of the selftest function
+of the module and the methods called from there.
+
+Please take the doc/help-texts of each revised mlist ethod into account too.
+
+Also note, that 'elem' just is an alias defined as follows:
+
+elem = ConditionFunction(lambda x: x)
+
+Meaning that more informations about 'elem' also can be found in the doc/help-text
+belonging to the class 'ConditionFunction', which, by the way, is inherited from
+functools.partial.
+
+Further infomations and links can be found on my homepage (see the link on the left hand).
+
