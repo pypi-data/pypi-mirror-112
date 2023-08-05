@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+textrank4ch/TextRank4Keyword.py
+textrank4ch/__init__.py
+textrank4ch/main.py
+textrank4ch/segment.py
+textrank4ch/util.py
+textrank4ch/utils.py
+textrank4ch.egg-info/PKG-INFO
+textrank4ch.egg-info/SOURCES.txt
+textrank4ch.egg-info/dependency_links.txt
+textrank4ch.egg-info/requires.txt
+textrank4ch.egg-info/top_level.txt
