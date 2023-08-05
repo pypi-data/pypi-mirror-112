@@ -1,0 +1,10 @@
+README.md
+setup.py
+schemachange/__init__.py
+schemachange/cli.py
+schemachange.egg-info/PKG-INFO
+schemachange.egg-info/SOURCES.txt
+schemachange.egg-info/dependency_links.txt
+schemachange.egg-info/entry_points.txt
+schemachange.egg-info/requires.txt
+schemachange.egg-info/top_level.txt
