@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: qlibs_cyan
+Version: 0.1.0
+Summary: C modules for qlibs
+Home-page: https://github.com/IntQuant/qlibs-cyan/
+Author: IQuant
+Author-email: quant3234@gmail.com
+License: MIT
+Description: # QLibs Cyan
+        
+        Reimplements some qlibs modules in C. Those are preferred by qlibs over their python counterparts.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
