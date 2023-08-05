@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+bytexpy/_init_.py
+bytexpy/bytexpy.py
+bytexpy/graphics.py
+bytexpy.egg-info/PKG-INFO
+bytexpy.egg-info/SOURCES.txt
+bytexpy.egg-info/dependency_links.txt
+bytexpy.egg-info/not-zip-safe
+bytexpy.egg-info/top_level.txt
