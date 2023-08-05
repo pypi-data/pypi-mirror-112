@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "staff_ocr"
+version = "1.0.3"
+description = ""
+authors = ["JimZhang <zzl22100048@gmail.com>"]
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+[tool.poetry.dependencies]
+python = "^3.7"
+hanlp-downloader = "~0.0.22"
+termcolor = "~1.1.0"
+numpy = "^1.19.5"
+opencv-python = "~4.5.2"
+onnxruntime = "~1.8.0"
+shapely = "^1.7.1"
+pyclipper = "^1.2.1"
+pillow = "~8.2.0"
+loguru = "^0.5.3"
+
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+environs = "^9.3.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
