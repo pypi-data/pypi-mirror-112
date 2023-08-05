@@ -1,0 +1,5 @@
+[console_scripts]
+oe_check_metadata = ib1.openenergy.support.metadata_harvester:check_metadata
+oe_harvest = ib1.openenergy.support.metadata_harvester:harvest
+oe_install_cacerts = ib1.openenergy.support.cacert:main
+
