@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: http-token-auth
+Version: 0.0.1a6
+Summary: Python implementation of token backend for HTTP and Oauth sessions
+Home-page: https://gitlab.com/defalsify/python-http-hoba-auth
+Author: Louis Holbrook
+Author-email: dev@holbrook.no
+License: GPL3
+Keywords: http,internet,authentication
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Internet
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+UNKNOWN
+

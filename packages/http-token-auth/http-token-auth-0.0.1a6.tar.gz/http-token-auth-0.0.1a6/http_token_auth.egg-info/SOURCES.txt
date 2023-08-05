@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+http_token_auth/__init__.py
+http_token_auth/base.py
+http_token_auth/error.py
+http_token_auth/fetcher_deprecated.py
+http_token_auth/session.py
+http_token_auth.egg-info/PKG-INFO
+http_token_auth.egg-info/SOURCES.txt
+http_token_auth.egg-info/dependency_links.txt
+http_token_auth.egg-info/top_level.txt
