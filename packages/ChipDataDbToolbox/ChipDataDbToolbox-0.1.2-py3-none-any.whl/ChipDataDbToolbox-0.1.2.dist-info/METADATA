@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ChipDataDbToolbox
+Version: 0.1.2
+Summary: Database utility scripts to be reused across projects.          Use it to connect to your databases.     
+Home-page: UNKNOWN
+Author: Bernard Louis Alecu
+Author-email: louis.alecu@getchip.uk
+License: LICENSE
+Platform: UNKNOWN
+Requires-Dist: sqlalchemy
+Requires-Dist: psycopg2
+
+This is a package to help us connect to databases and run SQL queries against them
+
+
