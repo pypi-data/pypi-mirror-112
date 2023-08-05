@@ -1,0 +1,10 @@
+include VERSION
+include unimatrix/ext/crypto/package.json
+include requirements.txt
+include README.md
+recursive-include unimatrix **.html
+recursive-include unimatrix **.j2
+recursive-include unimatrix **.json
+recursive-include unimatrix **.yaml
+recursive-include unimatrix **.xml
+recursive-include unimatrix **.rsa

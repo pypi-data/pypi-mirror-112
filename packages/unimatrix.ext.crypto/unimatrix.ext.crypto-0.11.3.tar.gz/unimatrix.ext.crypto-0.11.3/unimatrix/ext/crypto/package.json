@@ -1,0 +1,62 @@
+{
+  "description": "Enter a description for this Unimatrix package",
+  "author": "Cochise Ruhulessin",
+  "author_email": "cochise.ruhulessin@wizardsofindustry.com",
+  "url": "https://gitlab.com/unimatrixone/libraries/python-unimatrix",
+  "licenses": "GPLv3",
+  "entry_points": {
+    "ioc.providers": [
+      "unimatrix.ext.crypto == unimatrix.ext.crypto.__boot__"
+    ],
+    "unimatrix.runtime": [
+      "unimatrix.ext.crypto == unimatrix.ext.crypto.__boot__"
+    ]
+  },
+  "extras_require": {
+    "all": [
+      "aiohttp",
+      "azure-identity",
+      "azure-keyvault",
+      "azure-keyvault-keys",
+      "django>=3.1",
+      "fastapi",
+      "google-cloud-kms>=2.0.0",
+      "google-cloud-secret-manager>=2.0.0",
+      "pyjwt<2.0.0",
+      "secp256k1",
+      "unimatrix.ext.django"
+    ],
+    "azure": [
+      "aiohttp",
+      "azure-identity",
+      "azure-keyvault",
+      "azure-keyvault-keys"
+    ],
+    "fastapi": [
+      "fastapi"
+    ],
+    "google": [
+      "google-cloud-kms>=2.0.0",
+      "google-cloud-secret-manager>=2.0.0"
+    ],
+    "django": [
+      "django>=3.1",
+      "unimatrix.ext.django"
+    ],
+    "test": [
+      "pyjwt<2.0.0"
+    ]
+  },
+  "classifiers": [
+     "Development Status :: 4 - Beta",
+     "Intended Audience :: Developers",
+     "License :: OSI Approved :: GNU General Public License (GPL)",
+     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+     "Operating System :: POSIX",
+     "Operating System :: POSIX :: Linux",
+     "Programming Language :: Python :: 3.7",
+     "Programming Language :: Python :: 3.8",
+     "Programming Language :: Python :: 3 :: Only",
+     "Topic :: Software Development :: Libraries"
+  ]
+}

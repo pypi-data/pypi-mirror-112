@@ -1,0 +1,4 @@
+cryptography>=3.1.1
+python-ioc
+unimatrix>=0.9.1
+unimatrix.ext.model>=0.3.1
