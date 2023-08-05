@@ -1,0 +1,14 @@
+LICENSE.md,sha256=OY7vPmVXX1bkDGiExjp_wGj8OeXRBYgkmx6U1ZkntSY,1060
+README.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+beancount_rabobank/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+beancount_rabobank/rabobank.py,sha256=6aecoN5N36cHo6tFRaaa-xsycWhnHQieuUxrZhSLi9o,4264
+beancount_rabobank/rabobank_test.py,sha256=NihzJbcsgM0SuNjnNjt3aAFcVsV7EOsWi_e420O11xI,394
+beancount_rabobank/test_files/CSV_A_20201231_162236.csv,sha256=2Q_8c2Auj3hEguKFX6cDut3TFbL1hgGqyk82FOAyS00,1889
+beancount_rabobank/test_files/CSV_A_20201231_162236.csv.extract,sha256=SL_DCeAzzyMDpn4v84Gm57xE-9fYPqzSAPbg9gqfs04,766
+beancount_rabobank/test_files/CSV_A_20201231_162236.csv.file_account,sha256=ourDd60fIp4YwCioqG2IojmIIvKF9ri_25S3YZbsw2U,26
+beancount_rabobank/test_files/CSV_A_20201231_162236.csv.file_date,sha256=9ZRHTfd8dLTeLrw1VT3LVych7RGmkhtQQU3Ywxeoxq0,11
+beancount_rabobank/test_files/CSV_A_20201231_162236.csv.file_name,sha256=kL2MSk6-uYAP-ic2SfT-oYP-AIgT7_pXLJn0E0V769A,35
+beancount_rabobank-0.1.0.dist-info/LICENSE.md,sha256=OY7vPmVXX1bkDGiExjp_wGj8OeXRBYgkmx6U1ZkntSY,1060
+beancount_rabobank-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+beancount_rabobank-0.1.0.dist-info/METADATA,sha256=vKcYIZ78TkAFBB6pLmiFmdNm4QVKNLvjANYpq_JI3Eo,498
+beancount_rabobank-0.1.0.dist-info/RECORD,,
