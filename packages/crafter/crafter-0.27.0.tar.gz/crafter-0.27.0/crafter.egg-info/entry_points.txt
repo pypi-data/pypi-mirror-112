@@ -1,0 +1,3 @@
+[console_scripts]
+crafter = crafter.run_gui:main
+
