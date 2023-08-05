@@ -1,0 +1,38 @@
+{% extends "templates/page.html" %}
+
+{% block login_widget %}
+{% endblock %}
+
+{% block main %}
+<div id="login-main" class="container">
+	<div class="service-login">
+		<a role="button" class='btn btn-jupyter btn-lg' href='{{ authenticator_login_url }}'>
+		Sign in with {{ login_service }}
+		</a>
+	</div>
+</div>
+
+<div class="login-footer container text-center footer">
+</div>
+{% endblock %}
+
+{% block stylesheet %}
+{{ super() }}
+<style>
+	#login-main {
+		height: 30vh;
+	}
+
+	#login-main form {
+		margin: 0px;
+	}
+
+	.login-greeting {
+		font-size: larger;
+	}
+
+	.login-footer {
+		font-size: larger;
+	}
+</style>
+{% endblock %}
