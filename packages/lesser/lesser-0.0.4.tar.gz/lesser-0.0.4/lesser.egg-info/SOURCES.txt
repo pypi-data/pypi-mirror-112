@@ -1,0 +1,11 @@
+.gitignore
+README.md
+lesser.py
+setup.py
+test_lesser.py
+lesser.egg-info/PKG-INFO
+lesser.egg-info/SOURCES.txt
+lesser.egg-info/dependency_links.txt
+lesser.egg-info/top_level.txt
+old_functional/lesser.py
+old_functional/old_test_lesser.py
