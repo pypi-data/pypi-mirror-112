@@ -1,0 +1,65 @@
+Metadata-Version: 1.2
+Name: firepit
+Version: 1.0.11
+Summary: Columnar storage for STIX 2.0 observations.
+Home-page: https://github.com/IBM/firepit
+Author: IBM Security
+Author-email: pcoccoli@us.ibm.com
+License: Apache Software License 2.0
+Description: ===============================
+        Firepit - STIX Columnar Storage
+        ===============================
+        
+        
+        .. image:: https://img.shields.io/pypi/v/firepit.svg
+                :target: https://pypi.python.org/pypi/firepit
+        
+        .. image:: https://readthedocs.org/projects/firepit/badge/?version=latest
+                :target: https://firepit.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        Columnar storage for STIX 2.0 observations.
+        
+        
+        * Free software: Apache Software License 2.0
+        * Documentation: https://firepit.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * Transforms STIX Observation SDOs to a columnar format
+        * Inserts those transformed observations into SQL (currently sqlite3 and PostgreSQL)
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        1.0.0 (2021-05-18)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: firepit
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
