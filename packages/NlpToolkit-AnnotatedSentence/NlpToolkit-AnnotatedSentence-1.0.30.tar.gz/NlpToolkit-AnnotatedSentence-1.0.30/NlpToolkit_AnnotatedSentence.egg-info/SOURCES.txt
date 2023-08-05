@@ -1,0 +1,13 @@
+README.md
+setup.py
+AnnotatedSentence/AnnotatedCorpus.py
+AnnotatedSentence/AnnotatedPhrase.py
+AnnotatedSentence/AnnotatedSentence.py
+AnnotatedSentence/AnnotatedWord.py
+AnnotatedSentence/ViewLayerType.py
+AnnotatedSentence/__init__.py
+NlpToolkit_AnnotatedSentence.egg-info/PKG-INFO
+NlpToolkit_AnnotatedSentence.egg-info/SOURCES.txt
+NlpToolkit_AnnotatedSentence.egg-info/dependency_links.txt
+NlpToolkit_AnnotatedSentence.egg-info/requires.txt
+NlpToolkit_AnnotatedSentence.egg-info/top_level.txt
