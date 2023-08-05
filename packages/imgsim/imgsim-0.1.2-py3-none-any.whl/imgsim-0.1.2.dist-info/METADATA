@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: imgsim
+Version: 0.1.2
+Summary: This is an easy-to-use package for calculating the similarities between pictures.
+Home-page: https://github.com/chenmingxiang110/AugNet
+Author: Chen, Mingxiang
+Author-email: chenmingxiang110@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: opencv-python
+
+UNKNOWN
+
+
