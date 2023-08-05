@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+aiclub/AiService.py
+aiclub/__init__.py
+aiclub/constants.py
+aiclub/utils.py
+aiclub.egg-info/PKG-INFO
+aiclub.egg-info/SOURCES.txt
+aiclub.egg-info/dependency_links.txt
+aiclub.egg-info/requires.txt
+aiclub.egg-info/top_level.txt
