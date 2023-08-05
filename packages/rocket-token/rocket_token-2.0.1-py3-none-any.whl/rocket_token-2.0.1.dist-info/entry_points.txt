@@ -1,0 +1,5 @@
+[console_scripts]
+rt_dev_web_token = rocket_token.cli:generate_developer_web_token
+rt_new_keys = rocket_token.cli:generate_keys
+rt_web_token = rocket_token.cli:generate_web_token
+
