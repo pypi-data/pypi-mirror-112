@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: pycolorprint
+Version: 1.0.1
+Summary: Colorful pretty printer for python!
+Home-page: UNKNOWN
+Author: Alexander Steffen
+Author-email: alexsteffen55@gmail.com
+License: UNKNOWN
+Description: A python pretty printer that uses ANSI characters to make terminal output colorful.
+        
+                            (5/10/2021) cprint_iter now returns the ANSI colored string that is printed to console.
+        
+                            (7/5/2021) cprint_iter has been deprecated, cprint can handle all var types now and all ANSI commands, text colors, and highlight colors are all exported in __init__.py for use outside of cprint                    (7/6/2021) cprint now has the optional color arg that can change the color or highlight of non iterable primitives when printed and returned
+Keywords: python,pretty printer,print,colorful,color,color printer,color print
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
