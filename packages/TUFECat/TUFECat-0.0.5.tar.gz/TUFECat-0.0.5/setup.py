@@ -1,0 +1,46 @@
+# -*- coding: utf-8 -*-
+
+from distutils.core import setup
+from setuptools import find_packages
+ 
+setup(name = 'TUFECat',     # 包名
+      version = '0.0.5',  # 版本号
+      description = '',
+      long_description = 'Built by Dai Mingwei and his team. For student from TUFE and other colleges.\
+          This version is still a test development version, which can be used for TextAnalysisCat, a kitten that can now complete the work when text sentimental tendency is scored with word cloud drawing. At the end of July, another kitten named TimeSeriseCat will be developed.\
+              TimeSeriseCat will build on The Prophet, a time series prediction algorithm developed by Facebook, to provide a simpler, easier-to-operate function interface.\
+                  When TimeSeriseCat is developed, TUFECat will enter the 0.1.0 phase. At 0. Each update in the X.X phase means that a new kitten has been developed or that individual kittens have learned new skills.', 
+      author = 'Dai Mingwei',
+      author_email = '',
+      url = '',
+      license = '',
+      install_requires = ['wordcloud>=1.8.1',
+                          'jieba>=0.42.1',
+                          'matplotlib>=3.3.2',
+                          'pandas>=1.1.3',
+                          'fbprophet>=0.7.1',
+                          'numpy>=1.19.2',
+                          'plotly>=4.14.3',
+                          'plotly-express>=0.4.1'],
+      classifiers = [
+        'Intended Audience :: Developers',
+        'Operating System :: OS Independent',
+        'Natural Language :: Chinese (Simplified)',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.5',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.2',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Topic :: Utilities'
+      ],
+      keywords = '',
+      packages = find_packages('src'),  # 必填，就是包的代码主目录
+      package_dir = {'':'src'},         # 必填
+      include_package_data = True,
+)
+

@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: TUFECat
+Version: 0.0.5
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Dai Mingwei
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: Built by Dai Mingwei and his team. For student from TUFE and other colleges.          This version is still a test development version, which can be used for TextAnalysisCat, a kitten that can now complete the work when text sentimental tendency is scored with word cloud drawing. At the end of July, another kitten named TimeSeriseCat will be developed.              TimeSeriseCat will build on The Prophet, a time series prediction algorithm developed by Facebook, to provide a simpler, easier-to-operate function interface.                  When TimeSeriseCat is developed, TUFECat will enter the 0.1.0 phase. At 0. Each update in the X.X phase means that a new kitten has been developed or that individual kittens have learned new skills.
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Utilities
