@@ -1,0 +1,5 @@
+coloredlogs>=15.0.1
+requests>=2.25.1
+cachetools>=4.2.2
+dateparser>=1.0.0
+backoff>=1.10.0
