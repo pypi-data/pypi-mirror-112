@@ -1,0 +1,4 @@
+include requirements.txt
+include lims/.config.ini
+include lims/banner.txt
+include lims/version.json

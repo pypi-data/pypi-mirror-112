@@ -1,0 +1,3 @@
+[console_scripts]
+lims = lims.bin.main:main
+
