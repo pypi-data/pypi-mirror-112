@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: openscienceplot-matplotlib
+Version: 0.2.2
+Summary: Store data from a matplotlib plot.
+Home-page: https://github.com/tdegeus/openscienceplot_matplotlib
+Author: Tom de Geus
+Author-email: tom@geus.me
+License: MIT
+Keywords: matplotlib,hdf5,h5py
+Platform: UNKNOWN
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: h5py
+
+Store data from a matplotlib plot.
+
+
