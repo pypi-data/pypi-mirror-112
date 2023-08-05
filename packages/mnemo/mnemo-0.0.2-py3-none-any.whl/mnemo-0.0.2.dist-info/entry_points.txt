@@ -1,0 +1,4 @@
+[console_scripts]
+mnemo=mnemo.scripts.assistant:__main
+mnemo-autocomplete=mnemo.scripts.autocomplete:__main
+

@@ -1,0 +1,5 @@
+% if not session.has_users:
+{{!session.create_first_user(request)}}
+% else:
+{ "response" : "skipped", "success" : false}
+% end

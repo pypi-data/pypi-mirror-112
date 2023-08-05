@@ -1,0 +1,22 @@
+<!-- LOGOUT BUTTON -->
+<a href="" class="text-danger mnemo-logout text-decoration-none" data-toggle="tooltip" data-placement="bottom"
+    title="Logout">
+    <span class="material-icons-outlined">
+        door_front
+    </span>
+</a>
+<script type="text/javascript">
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        $(".mnemo-logout").click(function (e) {
+            e.preventDefault();
+            $.get("/logout", function (data) {
+                if (data.success == true) {
+                    location.reload();
+                } else {
+                    console.log(data);
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,27 @@
+% rebase('base.html', title="Mnemo Assistant - Profile")
+% if session.is_logged:
+% import time
+% user_data = session.get_logged_user_data()
+<!-- PROFILE -->
+<div class="container">
+    <h1 class="main-title">
+        Hello {{ user_data["name"] }}!
+        % include includes/main-menu.html
+    </h1>
+    <br />
+    <p>
+        <b>Name:</b> {{ user_data["name"] }}
+        (<a href="" class="edit-button text-danger" data-target-field="name">edit</a>)
+    </p>
+    <p>
+        <b>Email:</b> {{ user_data["email"] }}
+        (<a href="" class="edit-button text-danger" data-target-field="email">edit</a>, <small>this operation will log
+            you out</small>)
+    </p>
+    <p><b>Last action:</b> {{ time.strftime('%m/%d/%Y %H:%M:%S', time.gmtime(float(user_data["last_touch"]))) }}</p>
+    <p>
+        % include forms/password-edit.html
+    </p>
+</div>
+
+<script src="/js/page.profile.js"></script>
