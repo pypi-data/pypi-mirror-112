@@ -1,0 +1,11 @@
+mako
+numpy>=1.17.5
+pkgconfig
+setuptools
+h5py
+packaging
+tz
+matplotlib
+scipy
+digital_rf
+mpi4py
