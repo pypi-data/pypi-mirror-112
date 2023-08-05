@@ -1,0 +1,2 @@
+include readability_transformers/features/lf/AdvancedSemantic/model/*
+include readability_transformers/features/lf/LexicoSemantic/resources/*
