@@ -1,0 +1,3 @@
+[console_scripts]
+db12 = DIRACbenchmark.dirac_benchmark:__main__
+
