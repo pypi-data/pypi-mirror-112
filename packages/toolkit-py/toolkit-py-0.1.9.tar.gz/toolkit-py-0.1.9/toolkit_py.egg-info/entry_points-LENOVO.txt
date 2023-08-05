@@ -1,0 +1,8 @@
+[console_scripts]
+cc = scripts:cclear
+chs = scripts:script_chs
+gua = scripts:script_gua
+myip = scripts:external_ip
+myipx = scripts:external_proxy_ip
+rpd = scripts:reproduce
+

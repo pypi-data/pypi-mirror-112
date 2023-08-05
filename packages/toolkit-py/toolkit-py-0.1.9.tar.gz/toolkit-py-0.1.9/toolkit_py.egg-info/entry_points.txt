@@ -1,0 +1,6 @@
+[console_scripts]
+chs = scripts:script_chs
+gua = scripts:script_gua
+kieng = scripts:script_kieng
+rpd = scripts:script_rpd
+
