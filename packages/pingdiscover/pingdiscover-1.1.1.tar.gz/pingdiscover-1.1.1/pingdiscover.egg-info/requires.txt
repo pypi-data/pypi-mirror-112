@@ -1,0 +1,6 @@
+aiodns==3.0.0
+aioping==0.3.1
+async-timeout==3.0.1
+cffi==1.14.5
+pycares==4.0.0
+pycparser==2.20
