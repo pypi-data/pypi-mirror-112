@@ -1,0 +1,4 @@
+[console_scripts]
+git_building = git_writing.build:main
+git_writing = git_writing.init_repo:main
+

@@ -1,0 +1,4 @@
+include git_writing/assets/templates/*/*.tex
+include git_writing/assets/templates/*/*.yaml
+include git_writing/assets/templates/*/*.md
+include git_writing/assets/csl/*.csl
