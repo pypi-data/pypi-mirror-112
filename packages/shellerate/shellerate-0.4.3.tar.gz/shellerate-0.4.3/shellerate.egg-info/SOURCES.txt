@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+bin/shellerate
+shellerate/__init__.py
+shellerate/asm_x86.py
+shellerate/egg_hunter.py
+shellerate/encoder.py
+shellerate/math.py
+shellerate/not_encoder.py
+shellerate/strings.py
+shellerate/xority.py
+shellerate.egg-info/PKG-INFO
+shellerate.egg-info/SOURCES.txt
+shellerate.egg-info/dependency_links.txt
+shellerate.egg-info/top_level.txt
