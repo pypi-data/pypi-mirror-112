@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: hedera-cli
+Version: 0.1.0
+Summary: Hedera CLI in Python
+Home-page: https://github.com/wensheng/hedera-cli-py
+Author: Wensheng Wang
+Author-email: wenshengwang@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/wensheng/hedera-cli-py/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# hedera-cli-py
+[Hedera](https://hedera.com/) CLI in Python
+
+It relys on [Hedera SDK in Python](https://github.com/wensheng/hedera-sdk-py).
+
+## Install
+
+    pip install hedera-cli
+
+## How to Use
+
+Just run:
+
+    hedera-cli
+
+Since hedera-cli depends on hedera-sdk-py, which require Java >= 11, please make sure your JAVA_HOME environment is set up correctly.
+
+You can run `setup` inside hedera-cli and enter your account ID and private key.  You can also put them in an .env file to be read automatically at hedera-cli startup.  To use a different env file, just use the filename as the argument for hedera-cli.  For example:
+
+    hedera-cli mainnet.env
+
+A sample env file `sample.env` is provided.
+
+
