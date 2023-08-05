@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: Saika
+Version: 0.1.6
+Summary: A simple web framework base on Flask.
+Home-page: https://github.com/HsOjo/Saika/
+Author: HsOjo
+Author-email: hsojo@qq.com
+License: UNKNOWN
+Keywords: hsojo python3 flask web
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Flask (==1.1.4)
+Requires-Dist: Flask-Cors
+Requires-Dist: Flask-Migrate (==2.7.0)
+Requires-Dist: Flask-Script
+Requires-Dist: Flask-SocketIO (==4.3.2)
+Requires-Dist: Flask-Sockets
+Requires-Dist: Flask-SQLAlchemy
+Requires-Dist: Flask-WTF
+Requires-Dist: wtforms-json
+Requires-Dist: itsdangerous
+Requires-Dist: termcolor
+
+# Saika
+
+* A simple web framework base on Flask.
+
+
