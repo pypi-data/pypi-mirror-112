@@ -1,0 +1,16 @@
+gibson>=0.7.5
+PyYaml
+termcolor
+trimesh
+shapely
+numpy
+opencv-python
+scikit-image
+generic-dataset
+stub-generator
+pandas
+
+[test]
+pytest
+pytest-cov
+opencv-python
