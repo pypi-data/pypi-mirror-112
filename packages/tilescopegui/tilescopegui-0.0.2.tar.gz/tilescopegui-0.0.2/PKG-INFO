@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: tilescopegui
+Version: 0.0.2
+Summary: A graphical user interface for TileScope.
+Home-page: https://github.com/PermutaTriangle/TileScopeGUI
+Author: Permuta Triangle
+Author-email: permutatriangle@gmail.com
+License: GPLv3
+Project-URL: Source, https://github.com/PermutaTriangle/TileScopeGUI
+Project-URL: Tracker, https://github.com/PermutaTriangle/TileScopeGUI/issues
+Description: ************
+        TileScopeGui
+        ************
+        
+        A web based GUI for expanding permutation classes and finding specifications.
+        
+        Run
+        ###
+        See the scripts in ``./scripts``. They should be run from the root directory.
+Keywords: gui permutation tiling tilescope flask
+Platform: UNKNOWN
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst

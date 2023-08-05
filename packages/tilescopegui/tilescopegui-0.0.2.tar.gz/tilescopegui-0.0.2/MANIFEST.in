@@ -1,0 +1,2 @@
+include tilescopegui/py.typed
+recursive-include tilescopegui/static *
