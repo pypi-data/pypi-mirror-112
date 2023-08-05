@@ -1,0 +1,3 @@
+[console_scripts]
+tgtlg = tgtlg.__main__:main
+
