@@ -1,0 +1,3 @@
+[console_scripts]
+dvc-adapter = dvc_adapter.adapter:main
+
