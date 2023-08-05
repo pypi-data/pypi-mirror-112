@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pytoolskar
+Version: 0.0.1
+Summary: PyTools is an consecutive module that is used for making advanced Python tools.
+Home-page: https://github.com/kareemsaf/pytools
+Author: kareemPypi
+Author-email: s4830866@mkhg.moe.gov.sa
+License: UNKNOWN
+Project-URL: Bug Detector, https://github.com/kareemsaf/pytools/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+PyTools is online and offline ability. It gives consequences
+and great style. For PyTools, the only version is the only nice.
+
