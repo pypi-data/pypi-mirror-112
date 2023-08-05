@@ -1,0 +1,40 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope">
+
+  <utility
+      name="imio.smartweb.vocabulary.PublikProcedures"
+      component=".vocabularies.RemoteProceduresVocabulary"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      />
+
+  <utility
+      name="imio.smartweb.vocabulary.CurrentFolderPages"
+      component=".vocabularies.CurrentFolderPagesVocabulary"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      />
+
+  <utility
+      name="imio.smartweb.vocabulary.BootstrapCSS"
+      component=".vocabularies.BootstrapCSSVocabulary"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      />
+
+  <utility
+      name="imio.smartweb.vocabulary.SubsiteDisplayMode"
+      component=".vocabularies.SubsiteDisplayModeVocabulary"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      />
+
+  <utility
+      name="imio.smartweb.vocabulary.ContactBlocks"
+      component=".vocabularies.ContactBlocksVocabulary"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      />
+
+  <utility
+    name="imio.smartweb.vocabulary.RemoteContacts"
+    component=".vocabularies.RemoteContactsVocabulary"
+    provides="zope.schema.interfaces.IVocabularyFactory"
+    />
+
+</configure>
