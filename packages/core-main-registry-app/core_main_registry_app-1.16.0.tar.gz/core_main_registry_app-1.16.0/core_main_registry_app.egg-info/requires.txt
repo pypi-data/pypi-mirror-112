@@ -1,0 +1,8 @@
+Django
+django-mptt==0.11.0
+django-extensions==3.1.1
+drf-yasg
+core-main-app==1.16.*
+core_parser_app==1.16.*
+xml-utils==1.14.*
+signals-utils==1.10.*
