@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: congo-lab
+Version: 0.7.9
+Summary: Real-time laboratory automation and monitoring in Python.
+Home-page: https://github.com/gar-syn/congo-lab
+Author: Richard Ingham, Gary Short
+License: UNKNOWN
+Description: # ConGo Lab
+        
+        A fork of the Octopus project [LINK](https://github.com/richardingham/octopus) stripped down to only the octopus python library.
+        
+        ## Documentation
+        
+        [Legacy documentation](doc/Octopus%20Documentation.md)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
