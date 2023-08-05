@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/termplotlib/__init__.py
+src/termplotlib/barh.py
+src/termplotlib/figure.py
+src/termplotlib/helpers.py
+src/termplotlib/hist.py
+src/termplotlib/plot.py
+src/termplotlib/subplot.py
+src/termplotlib.egg-info/PKG-INFO
+src/termplotlib.egg-info/SOURCES.txt
+src/termplotlib.egg-info/dependency_links.txt
+src/termplotlib.egg-info/requires.txt
+src/termplotlib.egg-info/top_level.txt
