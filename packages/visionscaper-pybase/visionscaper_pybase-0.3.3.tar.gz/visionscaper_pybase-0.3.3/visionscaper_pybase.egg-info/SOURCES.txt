@@ -1,0 +1,12 @@
+README.md
+setup.py
+basics/__init__.py
+basics/base.py
+basics/base_utils.py
+basics/logging.py
+basics/logging_utils.py
+basics/validation_utils.py
+visionscaper_pybase.egg-info/PKG-INFO
+visionscaper_pybase.egg-info/SOURCES.txt
+visionscaper_pybase.egg-info/dependency_links.txt
+visionscaper_pybase.egg-info/top_level.txt
