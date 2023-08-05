@@ -1,0 +1,3 @@
+[console_scripts]
+recc = recc.app.entrypoint:main
+
