@@ -1,0 +1,422 @@
+# Arabic translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-07-04 14:33+0200\n"
+"PO-Revision-Date: 2019-11-10 00:20+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+msgid "* all types allowed, max file size: 1MB"
+msgstr "* يسمح بجميع الأنواع ، الحد الأقصى لحجم الملف: 1MB"
+
+msgid "* example with input append"
+msgstr "* مثال مع إلحاق الإدخال"
+
+msgid "* example with input prepend"
+msgstr "* مثال مع الإدخال المسبق"
+
+msgid "* help text for field"
+msgstr "* نص المساعدة للحقل"
+
+msgid "AND"
+msgstr "و"
+
+msgid "Add group"
+msgstr "إضافة مجموعة"
+
+msgid "Add rule"
+msgstr "إضافة قاعدة"
+
+msgid "Alerts"
+msgstr "تحذيرات"
+
+msgid "All"
+msgstr "الكل"
+
+msgid "Browse"
+msgstr "تصفح"
+
+msgid "Checkbox"
+msgstr "خانة اختيار"
+
+msgid "Columns"
+msgstr "الأعمدة"
+
+msgid "Confirm"
+msgstr "تأكيد"
+
+msgid "Datagrid"
+msgstr "جدول بيانات"
+
+msgid "Datagrid Title"
+msgstr "عنوان جدول البيانات"
+
+msgid "Date"
+msgstr "تاريخ"
+
+msgid "Date & Time"
+msgstr "التاريخ و الوقت"
+
+msgid "Delete"
+msgstr "أمسح"
+
+msgid "Empty Result"
+msgstr "نتائج خالية"
+
+msgid "Empty value"
+msgstr "قيمة خالية"
+
+msgid "Export"
+msgstr "تصدير"
+
+msgid "Extra detailed long help for fields"
+msgstr "مساعدة طويلة مفصلة للغاية للحقول"
+
+msgid "Failed loading data"
+msgstr "فشل في تحميل البيانات"
+
+msgid "Got it"
+msgstr "فهمتك"
+
+msgid "Group Label"
+msgstr "تسمية المجموعة"
+
+msgid "Home"
+msgstr "الصفحه الرئيسية"
+
+msgid "Input Form"
+msgstr "نموذج الإدخال"
+
+msgid "Input Form Title"
+msgstr "عنوان نموذج الإدخال"
+
+msgid "Invalid date format ({0})"
+msgstr "تنسيق التاريخ غير صحيح ({0})"
+
+msgid "Invalid format ({0})"
+msgstr "تنسيق غير صحيح ({0})"
+
+msgid "Invalid username or password"
+msgstr "خطأ في اسم المستخدم أو كلمة السر"
+
+msgid "Invalid values, {0} is greater than {1}"
+msgstr "قيمة غير صحيحة {0} أكبر من {1}"
+
+msgid "Invert"
+msgstr "أعكس"
+
+msgid "Load with Progress update"
+msgstr "تحميل مع تحديث التقدم"
+
+msgid "Login"
+msgstr "تسجيل دخول"
+
+msgid "Login Page"
+msgstr "صفحه تسجيل الدخول"
+
+msgid "Loginpage"
+msgstr "صفحه تسجيل الدخول"
+
+msgid "Must be a multiple of {0}"
+msgstr "يجب أن يكون من مضاعفات {0}"
+
+msgid "Must be after {0}"
+msgstr "يجب أن يكون بعد {0}"
+
+msgid "Must be before {0}"
+msgstr "يجب أن يكون قبل {0}"
+
+msgid "Must be greater than {0}"
+msgstr "يجب أن يكون أكبر من {0}"
+
+msgid "Must be lower than {0}"
+msgstr "يجب أن يكون أقل من {0}"
+
+msgid "Must contain at least {0} characters"
+msgstr "يجب أن يحتوي على {0} من الأحرف على الأقل"
+
+msgid "Must not contain more than {0} characters"
+msgstr "يجب ألا يحتوي على أكثر من {0} حرف"
+
+msgid "NOT"
+msgstr "ليس"
+
+msgid "No"
+msgstr "لا"
+
+msgid "No data available"
+msgstr "لا تتوافر بيانات"
+
+msgid "No filter selected"
+msgstr "لم يتم تحديد أي قواعد تصفية"
+
+msgid "No matching records found"
+msgstr "لم يتم العثور على سجلات مطابقة"
+
+msgid "No value selected"
+msgstr "لم يتم تحديد قيمة"
+
+msgid "Not a boolean"
+msgstr "ليست قيمة منطقية"
+
+msgid "Not a number"
+msgstr "ليس رقمًا"
+
+msgid "Not a real number"
+msgstr "ليس رقم حقيقي"
+
+msgid "Not an integer"
+msgstr "ليس عددًا صحيحًا"
+
+msgid "Notifications"
+msgstr "تنبيهات"
+
+msgid "OR"
+msgstr "أو"
+
+msgid "Operator ({1}) cannot accept multiple values"
+msgstr "عامل التشغيل ({1}) لا يمكنه قبول قيم متعددة"
+
+msgid "Option 1"
+msgstr "الخيار 1"
+
+msgid "Option 2"
+msgstr "الخيار 2"
+
+msgid "Option 3"
+msgstr "الخيار 3"
+
+msgid "Option 4"
+msgstr "الخيار 4"
+
+msgid "Option 5"
+msgstr "الخيار 5"
+
+msgid "Optional Field"
+msgstr "حقل اختياري"
+
+msgid "Page Loader"
+msgstr "تحميل الصفحة"
+
+msgid "Password"
+msgstr "كلمة السر"
+
+msgid "Password 1"
+msgstr "كلمة المرور 1"
+
+msgid "Password 2"
+msgstr "كلمة المرور 2"
+
+msgid "Password 3"
+msgstr "كلمة المرور 3"
+
+msgid "Please correct invalid fields"
+msgstr "يرجى تصحيح الحقول غير الصحيحة"
+
+msgid "Please enter username and password"
+msgstr "برجاء إدخال أسم المستخدم و كلمة السر"
+
+msgid "Please fill all required fields"
+msgstr "يرجى تعبئة جميع الحقول المطلوبة"
+
+msgid "Query Builder"
+msgstr "منشئ القواعد"
+
+msgid "Quick Guide"
+msgstr "مرشد سريع"
+
+msgid "Radio"
+msgstr "زر الراديو"
+
+msgid "Reload"
+msgstr "إعادة تحميل"
+
+msgid "Required Field"
+msgstr "حقل مطلوب"
+
+msgid "Reset"
+msgstr "إعادة تعيين"
+
+msgid "Sample Portal"
+msgstr "موقع تجريبي"
+
+msgid "Search"
+msgstr "بحث"
+
+msgid "Select"
+msgstr "تحديد"
+
+msgid "Select 1"
+msgstr "تحديد 1"
+
+msgid "Select 2"
+msgstr "تحديد 2"
+
+msgid "Select Operation"
+msgstr "أختر عملية"
+
+msgid "Select files"
+msgstr "اختر الملفات"
+
+msgid "Select multiple"
+msgstr "اختر متعدد"
+
+msgid "Server side validation"
+msgstr "التحقق من جانب الخادم"
+
+msgid "Show / Hide"
+msgstr "إظهار / إخفاء"
+
+msgid "Showing _START_-_END_ of _TOTAL_"
+msgstr "عرض _START_-_END_ من _TOTAL_"
+
+msgid "Submit"
+msgstr "إرسال"
+
+msgid "Submited Data:"
+msgstr "البيانات المقدمة:"
+
+msgid "Textarea"
+msgstr "منطقة النص"
+
+msgid "The group is empty"
+msgstr "المجموعة فارغة"
+
+msgid "Time"
+msgstr "الوقت"
+
+msgid "Toggle Menu"
+msgstr "افتح القائمة"
+
+msgid "Too Large File"
+msgstr "ملف كبير جدًا"
+
+msgid "Toogle boards"
+msgstr "تبديل الواجهة"
+
+msgid "UI Components"
+msgstr "مكونات الواجهة"
+
+msgid "Upload File"
+msgstr "تحميل ملف"
+
+msgid "Upload Multiple"
+msgstr "تحميل ملفات"
+
+msgid "Username"
+msgstr "أسم المستخدم"
+
+msgid "Validation"
+msgstr "التحقق"
+
+msgid "Welcome"
+msgstr "أهلا بكم"
+
+msgid "Yes"
+msgstr "نعم"
+
+msgid "allowed types"
+msgstr "الأنواع المسموح بها"
+
+msgid "begins with"
+msgstr "يبدأ ب"
+
+msgid "between"
+msgstr "ما بين"
+
+msgid "contains"
+msgstr "يحتوي على"
+
+msgid "csv"
+msgstr "csv"
+
+msgid "does not begin with"
+msgstr "لا يبدأ بـ"
+
+msgid "does not contain"
+msgstr "لا يحتوي"
+
+msgid "does not end with"
+msgstr "لا ينتهي بـ"
+
+msgid "ends with"
+msgstr "ينتهي بـ"
+
+msgid "equal"
+msgstr "يساوي"
+
+msgid "error"
+msgstr "خطأ"
+
+msgid "excel"
+msgstr "excel"
+
+msgid "greater"
+msgstr "أكبر"
+
+msgid "greater or equal"
+msgstr "أكبر من أو يساوي"
+
+msgid "in"
+msgstr "في"
+
+msgid "info"
+msgstr "معلومه"
+
+msgid "is empty"
+msgstr "فارغ"
+
+msgid "is not empty"
+msgstr "ليس فارغا"
+
+msgid "is not null"
+msgstr "هو ليس لاشيء"
+
+msgid "is null"
+msgstr "هو لاشيء"
+
+msgid "less"
+msgstr "أقل"
+
+msgid "less or equal"
+msgstr "أقل أو متساوي"
+
+msgid "loaded after delay"
+msgstr "تم التحميل بعد فترة تأخير"
+
+msgid "message"
+msgstr "رسالة"
+
+msgid "not between"
+msgstr "ليس بين"
+
+msgid "not equal"
+msgstr "ليس متساوي"
+
+msgid "not in"
+msgstr "ليس في"
+
+msgid "print"
+msgstr "طباعة"
+
+msgid "showing notifications"
+msgstr "إظهار التنبيهات"
+
+msgid "success"
+msgstr "تم بنجاح"
+
+msgid "warning"
+msgstr "تحذير"
+

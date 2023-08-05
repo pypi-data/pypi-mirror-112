@@ -1,0 +1,5 @@
+exonutils>=4.2
+flask>=2.0
+Jinja2>=3.0
+Babel>=2.9
+flask-babelex>=0.9
