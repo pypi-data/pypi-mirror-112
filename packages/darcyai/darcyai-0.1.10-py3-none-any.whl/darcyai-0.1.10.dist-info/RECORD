@@ -1,0 +1,13 @@
+darcyai/__init__.py,sha256=KHaf0bvSD05_tE99fK8bIr0_AgsI99wGUdl5BcN0Nxc,47
+darcyai/config.py,sha256=8gcTCCH4hU_U8E9DIEo5Sy7qwEJz05dvjYKWyJZFjYk,5521
+darcyai/darcyai.py,sha256=59qLtR1vpI4kkgw3r8N33m0czk3UOU7Ix9vKA_nf-i4,33367
+darcyai/detection_engine.py,sha256=V-nsjzjI5vNxozGRIBW4xqkvIAajklztoQwEpE0GB-Y,2519
+darcyai/object.py,sha256=yw97GSv69v_kHoitqp0p0FGrAhiEJOmOPCF2zSmPNzc,88
+darcyai/person.py,sha256=dRZgolS-u0creCeNQTUyio4VQYpeQttzpnkaEUgXQTE,58
+darcyai/pose_engine.py,sha256=YWb_ybuj5_UJa6lVUjZt6K5I-UtSdZoQjIxhJtm8E_4,5178
+darcyai/models/posenet.tflite,sha256=c4N5ArhDEiOGEzpRenMrXDiHz90h-mrkrB20th2igxg,1680872
+darcyai-0.1.10.dist-info/LICENSE,sha256=7JwN1m_-1nJkGm1_NoxwI5lyB-JG74_9cclLKd7fhns,1078
+darcyai-0.1.10.dist-info/METADATA,sha256=yiJnpKURzjPTF5VgO8wiXeDZkhJ3u7TixvlmT3GB4Ro,745
+darcyai-0.1.10.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+darcyai-0.1.10.dist-info/top_level.txt,sha256=h7maXcTJHq60vvJXShwIk-Mlt_cTK-Ls99aYrQ6nC4k,8
+darcyai-0.1.10.dist-info/RECORD,,
