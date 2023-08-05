@@ -1,0 +1,8 @@
+{% extends 'graphs.html' %}
+{% block graph_body %}
+<h2>{% trans %}File count{% endtrans%}</h2>
+<p>
+{% trans %}Number of files excluding history data.{% endtrans %}
+</p>
+{% line_chart data.filecount %}
+{% endblock %}
