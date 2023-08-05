@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: robotframework-processcube
+Version: 1.1.0b1
+Summary: Robot Framework Keywords for processcube workflow engine.
+Home-page: https://github.com/atlas-engine-contrib/robotframework-processcube
+Author: 5Minds IT-Solutions GmbH & Co. KG
+Author-email: processcube@5minds.de
+License: MIT Licence
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Robot Framework
+Description-Content-Type: text/markdown
+
+# README for ProcessCubeLibrary
+
+
+

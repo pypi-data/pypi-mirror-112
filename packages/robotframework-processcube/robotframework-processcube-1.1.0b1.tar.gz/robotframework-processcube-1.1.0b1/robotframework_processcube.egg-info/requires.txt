@@ -1,0 +1,5 @@
+atlas-engine-client==2.0.0b1
+docker==5.0.0
+requests==2.24.0
+robotframework>=4.0.0
+six==1.16.0
