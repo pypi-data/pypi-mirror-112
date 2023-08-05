@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: didas
+Version: 0.1
+Summary: Python Commons for Didas
+Home-page: https://github.com/freenet-group/didas/
+Author: DiDas
+Author-email: tech.di.das@md.de
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/freenet-group/didas/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# didas
+

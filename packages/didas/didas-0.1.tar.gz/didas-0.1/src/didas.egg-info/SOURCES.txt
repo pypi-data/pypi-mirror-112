@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+src/didas/__init__.py
+src/didas.egg-info/PKG-INFO
+src/didas.egg-info/SOURCES.txt
+src/didas.egg-info/dependency_links.txt
+src/didas.egg-info/top_level.txt
