@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: convolvecl
+Version: 2021.7.6
+Summary: convolution of angular power spectra
+Home-page: https://github.com/ntessore/convolvecl
+Maintainer: Nicolas Tessore
+Maintainer-email: n.tessore@ucl.ac.uk
+License: MIT
+Description: 
+        convolvecl
+        ==========
+        
+        **convolution of angular power spectra**
+        
+        This is a minimal Python package for convolution of angular power spectra, in
+        order to compute the angular power spectrum of a product of spherical functions.
+        Computation is currently limited to the mixing matrix.
+        
+        The package can be installed using pip:
+        
+            pip install convolvecl
+        
+        Then import the `mixmat` function from the package:
+        
+            from convolvecl import mixmat
+        
+        For more information, please see the [documentation].
+        
+        Current functionality covers the absolutely minimal use case.  Please open an
+        issue on GitHub if you would like to see anything added.
+        
+        [documentation]: https://cltools.readthedocs.io/convolvecl/
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
