@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: slcpy
+Version: 0.1.4
+Summary: Python package to decode Amira 3D coordinate spatial graphs into semantic label mask
+Home-page: https://github.com/RRobert92/Semantic_Label_Creator
+Author: Robert Kiewisz
+Author-email: robert.kiewisz@gmail.com
+License: GNU General Public License v3
+Keywords: slcpy
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+==============================
+Semantic Label Creator [slcpy]
+==============================
+
+.. image:: https://img.shields.io/github/v/release/RRobert92/Semantic_Label_Creator
+        :target: https://img.shields.io/github/v/release/RRobert92/Semantic_Label_Creator
+
+.. image:: https://readthedocs.org/projects/semantic-label-creator/badge/?version=latest
+        :target: https://semantic-label-creator.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+.. image:: https://www.codefactor.io/repository/github/rrobert92/semantic_label_creator/badge
+        :target: https://img.shields.io/github/v/release/RRobert92
+
+Python package to decode Amira 3D coordinate spatial graphs into semantic label mask.
+
+* Documentation: https://semantic-label-creator.readthedocs.io/en/latest/
+
+
+Features
+--------
+* Load Amira spatial graph to transform 3D coordinates into semantic label mask
+
+Credits
+-------
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
