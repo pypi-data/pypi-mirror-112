@@ -1,0 +1,10 @@
+requests
+cookiecutter~=1.7.2
+click~=7.1.2
+pyyaml
+terminaltables
+cloudshell-rest-api>=8.2.3.1
+colorama
+giturlparse.py
+ruamel.yaml
+cryptography
