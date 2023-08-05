@@ -1,0 +1,10 @@
+
+[checking]
+black
+flake8
+isort
+mdformat
+
+[optional]
+
+[testing]
