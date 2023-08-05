@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: opstools
+Version: 0.0.6
+Summary: Opsy type tools I use everyday that you might find useful
+Home-page: https://github.com/afrazkhan/opstools
+Author: Afraz
+Author-email: afrazkhan@gmail.com
+License: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# opstools
+
+Silly ops things you do repeatedly, but can't be bothered to script :)
+
+## Installation
+
+`pip3 install opstools`
+
+
