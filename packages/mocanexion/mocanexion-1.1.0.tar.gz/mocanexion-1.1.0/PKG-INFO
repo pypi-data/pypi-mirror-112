@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mocanexion
+Version: 1.1.0
+Summary: A Python connection to MOCA
+Home-page: https://github.com/chainreaktive/mocanexion
+Author: Nick Saway
+Author-email: nick.saway@chainreaktive.com
+License: The Unlicense
+Keywords: moca wms
+Platform: UNKNOWN
+Requires-Python: >=3
+License-File: LICENSE.txt
+
+UNKNOWN
+
