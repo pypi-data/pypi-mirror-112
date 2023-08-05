@@ -1,0 +1,10 @@
+[console_scripts]
+hint = dofast.sli_entry:_hint_wubi
+jsonify = dofast.sli_entry:jsonify
+oss = dofast.sli_entry:secure_oss
+pxy = dofast.sli_entry:pxy
+sli = dofast.sli_entry:main
+snc = dofast.sli_entry:_sync
+weather = dofast.weather:entry
+websurf = dofast.nsq.websurf:run
+
