@@ -1,0 +1,21 @@
+Variable,description
+L1-JTVA,L1 puissance active
+L2-JTVA,L2 puissance active
+L3-JTVA,L3 puissance active
+sys-JTVA,puissance active
+L1-JTW,L1 puissance
+L2-JTW,L2 puissance
+L3-JTW,L3 puissance
+dmd-JTW,quezaco
+sys-JTW,puissance
+(-)-JTWH,quezaco2
+L1-JTWH,L1 energie
+L2-JTWH,L2 energie
+L3-JTWH,L3 energie
+JTWH,energie
+L1-JTVar,L1 puissance reactive
+L2-JTVar,L2 puissance reactive
+L3-JTVar,L3 puissance reactive
+sys-JTVar,puissance reactive
+(-)-JTVarH,quezaco3
+JTVarH,quezaco4

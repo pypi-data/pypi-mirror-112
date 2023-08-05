@@ -1,0 +1,312 @@
+TAG,UNITE,DESCRIPTION
+C00000001-A003-1-kVA L1-JTVA,kW,Altitude commerciale (la conserverie)
+C00000001-A003-1-kVA L2-JTVA,kW,Altitude commerciale (la conserverie)
+C00000001-A003-1-kVA L3-JTVA,kW,Altitude commerciale (la conserverie)
+C00000001-A003-1-kVA sys-JTVA,kW,Altitude commerciale (la conserverie)
+C00000001-A003-1-kW L1-JTW,kW,Altitude commerciale (la conserverie)
+C00000001-A003-1-kW L2-JTW,kW,Altitude commerciale (la conserverie)
+C00000001-A003-1-kW L3-JTW,kW,Altitude commerciale (la conserverie)
+C00000001-A003-1-kW sys-JTW,kW,Altitude commerciale (la conserverie)
+C00000001-A003-1-kWh (-)-JTWH,J,Altitude commerciale (la conserverie)
+C00000001-A003-1-kWh-JTWH,J,Altitude commerciale (la conserverie)
+C00000001-A003-1-kvar L1-JTVar,kW,Altitude commerciale (la conserverie)
+C00000001-A003-1-kvar L2-JTVar,kW,Altitude commerciale (la conserverie)
+C00000001-A003-1-kvar L3-JTVar,kW,Altitude commerciale (la conserverie)
+C00000001-A003-1-kvar sys-JTVar,kW,Altitude commerciale (la conserverie)
+C00000001-A003-1-kvarh-JTVarH,J,Altitude commerciale (la conserverie)
+C00000002-B007-2-kVA L1-JTVA,kW,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kVA L2-JTVA,kW,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kVA L3-JTVA,kW,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kVA sys-JTVA,kW,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kW L1-JTW,kW,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kW L2-JTW,kW,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kW L3-JTW,kW,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kW sys-JTW,kW,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kWh (-)-JTWH,J,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kWh-JTWH,J,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kvar L1-JTVar,kW,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kvar L2-JTVar,kW,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kvar L3-JTVar,kW,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kvar sys-JTVar,kW,Sibuet atelier (hall A billettes)
+C00000002-B007-2-kvarh-JTVarH,J,Sibuet atelier (hall A billettes)
+C00000003-B001-3-kVA L1-JTVA,kW,Sylfen
+C00000003-B001-3-kVA L2-JTVA,kW,Sylfen
+C00000003-B001-3-kVA L3-JTVA,kW,Sylfen
+C00000003-B001-3-kVA sys-JTVA,kW,Sylfen
+C00000003-B001-3-kW L1-JTW,kW,Sylfen
+C00000003-B001-3-kW L2-JTW,kW,Sylfen
+C00000003-B001-3-kW L3-JTW,kW,Sylfen
+C00000003-B001-3-kW dmd-JTW,kW,Sylfen
+C00000003-B001-3-kW sys-JTW,kW,Sylfen
+C00000003-B001-3-kWh (-)-JTWH,J,Sylfen
+C00000003-B001-3-kWh L1-JTWH,J,Sylfen
+C00000003-B001-3-kWh L2-JTWH,J,Sylfen
+C00000003-B001-3-kWh L3-JTWH,J,Sylfen
+C00000003-B001-3-kWh-JTWH,J,Sylfen
+C00000003-B001-3-kvar L1-JTVar,kW,Sylfen
+C00000003-B001-3-kvar L2-JTVar,kW,Sylfen
+C00000003-B001-3-kvar L3-JTVar,kW,Sylfen
+C00000003-B001-3-kvar sys-JTVar,kW,Sylfen
+C00000003-B001-3-kvarh (-)-JTVarH,J,Sylfen
+C00000003-B001-3-kvarh-JTVarH,J,Sylfen
+C00000004-A002-4-kVA L1-JTVA,kW,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kVA sys-JTVA,kW,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kW L1-JTW,kW,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kW sys-JTW,kW,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kWh (-) L1-JTWH,J,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kWh (-)-JTWH,J,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kWh L1-JTWH,J,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kWh-JTWH,J,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kvar L1-JTVar,kW,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kvar sys-JTVar,kW,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kvarh (-) L1-JTVarH,J,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kvarh (-)-JTVarH,J,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kvarh L1-JTVarH,J,Bureaux et communs administratif centraux rez de chaussée
+C00000004-A002-4-kvarh-JTVarH,J,Bureaux et communs administratif centraux rez de chaussée
+C00000005-A001-5-kVA L1-JTVA,kW,"coffret ""local pompes"""
+C00000005-A001-5-kVA sys-JTVA,kW,"coffret ""local pompes"""
+C00000005-A001-5-kW L1-JTW,kW,"coffret ""local pompes"""
+C00000005-A001-5-kW sys-JTW,kW,"coffret ""local pompes"""
+C00000005-A001-5-kWh (-) L1-JTWH,J,"coffret ""local pompes"""
+C00000005-A001-5-kWh (-)-JTWH,J,"coffret ""local pompes"""
+C00000005-A001-5-kWh L1-JTWH,J,"coffret ""local pompes"""
+C00000005-A001-5-kWh-JTWH,J,"coffret ""local pompes"""
+C00000005-A001-5-kvar L1-JTVar,kW,"coffret ""local pompes"""
+C00000005-A001-5-kvar sys-JTVar,kW,"coffret ""local pompes"""
+C00000005-A001-5-kvarh (-) L1-JTVarH,J,"coffret ""local pompes"""
+C00000005-A001-5-kvarh (-)-JTVarH,J,"coffret ""local pompes"""
+C00000005-A001-5-kvarh L1-JTVarH,J,"coffret ""local pompes"""
+C00000005-A001-5-kvarh-JTVarH,J,"coffret ""local pompes"""
+C00000006-B006-6-kVA L1-JTVA,kW,Carrossier 
+C00000006-B006-6-kVA L2-JTVA,kW,Carrossier 
+C00000006-B006-6-kVA L3-JTVA,kW,Carrossier 
+C00000006-B006-6-kVA sys-JTVA,kW,Carrossier 
+C00000006-B006-6-kW L1-JTW,kW,Carrossier 
+C00000006-B006-6-kW L2-JTW,kW,Carrossier 
+C00000006-B006-6-kW L3-JTW,kW,Carrossier 
+C00000006-B006-6-kW dmd-JTW,kW,Carrossier 
+C00000006-B006-6-kW sys-JTW,kW,Carrossier 
+C00000006-B006-6-kWh (-)-JTWH,J,Carrossier 
+C00000006-B006-6-kWh L1-JTWH,J,Carrossier 
+C00000006-B006-6-kWh L2-JTWH,J,Carrossier 
+C00000006-B006-6-kWh L3-JTWH,J,Carrossier 
+C00000006-B006-6-kWh-JTWH,J,Carrossier 
+C00000006-B006-6-kvar L1-JTVar,kW,Carrossier 
+C00000006-B006-6-kvar L2-JTVar,kW,Carrossier 
+C00000006-B006-6-kvar L3-JTVar,kW,Carrossier 
+C00000006-B006-6-kvar sys-JTVar,kW,Carrossier 
+C00000006-B006-6-kvarh (-)-JTVarH,J,Carrossier 
+C00000006-B006-6-kvarh-JTVarH,J,Carrossier 
+C00000007-B005-7-kVA L1-JTVA,kW,Cascade
+C00000007-B005-7-kVA L2-JTVA,kW,Cascade
+C00000007-B005-7-kVA L3-JTVA,kW,Cascade
+C00000007-B005-7-kVA sys-JTVA,kW,Cascade
+C00000007-B005-7-kW L1-JTW,kW,Cascade
+C00000007-B005-7-kW L2-JTW,kW,Cascade
+C00000007-B005-7-kW L3-JTW,kW,Cascade
+C00000007-B005-7-kW dmd-JTW,kW,Cascade
+C00000007-B005-7-kW sys-JTW,kW,Cascade
+C00000007-B005-7-kWh (-)-JTWH,J,Cascade
+C00000007-B005-7-kWh L1-JTWH,J,Cascade
+C00000007-B005-7-kWh L2-JTWH,J,Cascade
+C00000007-B005-7-kWh L3-JTWH,J,Cascade
+C00000007-B005-7-kWh-JTWH,J,Cascade
+C00000007-B005-7-kvar L1-JTVar,kW,Cascade
+C00000007-B005-7-kvar L2-JTVar,kW,Cascade
+C00000007-B005-7-kvar L3-JTVar,kW,Cascade
+C00000007-B005-7-kvar sys-JTVar,kW,Cascade
+C00000007-B005-7-kvarh (-)-JTVarH,J,Cascade
+C00000007-B005-7-kvarh-JTVarH,J,Cascade
+C00000008-B003-8-kVA L1-JTVA,kW,K2M
+C00000008-B003-8-kVA L2-JTVA,kW,K2M
+C00000008-B003-8-kVA L3-JTVA,kW,K2M
+C00000008-B003-8-kVA sys-JTVA,kW,K2M
+C00000008-B003-8-kW L1-JTW,kW,K2M
+C00000008-B003-8-kW L2-JTW,kW,K2M
+C00000008-B003-8-kW L3-JTW,kW,K2M
+C00000008-B003-8-kW dmd-JTW,kW,K2M
+C00000008-B003-8-kW sys-JTW,kW,K2M
+C00000008-B003-8-kWh (-)-JTWH,J,K2M
+C00000008-B003-8-kWh L1-JTWH,J,K2M
+C00000008-B003-8-kWh L2-JTWH,J,K2M
+C00000008-B003-8-kWh L3-JTWH,J,K2M
+C00000008-B003-8-kWh-JTWH,J,K2M
+C00000008-B003-8-kvar L1-JTVar,kW,K2M
+C00000008-B003-8-kvar L2-JTVar,kW,K2M
+C00000008-B003-8-kvar L3-JTVar,kW,K2M
+C00000008-B003-8-kvar sys-JTVar,kW,K2M
+C00000008-B003-8-kvarh (-)-JTVarH,J,K2M
+C00000008-B003-8-kvarh-JTVarH,J,K2M
+C00000009-A004-9-kVA L1-JTVA,kW,Locaux socio de Sibuet 
+C00000009-A004-9-kVA sys-JTVA,kW,Locaux socio de Sibuet 
+C00000009-A004-9-kW L1-JTW,kW,Locaux socio de Sibuet 
+C00000009-A004-9-kW sys-JTW,kW,Locaux socio de Sibuet 
+C00000009-A004-9-kWh (-) L1-JTWH,J,Locaux socio de Sibuet 
+C00000009-A004-9-kWh (-)-JTWH,J,Locaux socio de Sibuet 
+C00000009-A004-9-kWh L1-JTWH,J,Locaux socio de Sibuet 
+C00000009-A004-9-kWh-JTWH,J,Locaux socio de Sibuet 
+C00000009-A004-9-kvar L1-JTVar,kW,Locaux socio de Sibuet 
+C00000009-A004-9-kvar sys-JTVar,kW,Locaux socio de Sibuet 
+C00000009-A004-9-kvarh (-) L1-JTVarH,J,Locaux socio de Sibuet 
+C00000009-A004-9-kvarh (-)-JTVarH,J,Locaux socio de Sibuet 
+C00000009-A004-9-kvarh L1-JTVarH,J,Locaux socio de Sibuet 
+C00000009-A004-9-kvarh-JTVarH,J,Locaux socio de Sibuet 
+C0000000a-D002-10-kVA L1-JTVA,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kVA L2-JTVA,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kVA L3-JTVA,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kVA sys-JTVA,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kW L1-JTW,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kW L2-JTW,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kW L3-JTW,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kW dmd-JTW,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kW sys-JTW,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kWh (-)-JTWH,J,rez de chaussée aile chartreuse
+C0000000a-D002-10-kWh L1-JTWH,J,rez de chaussée aile chartreuse
+C0000000a-D002-10-kWh L2-JTWH,J,rez de chaussée aile chartreuse
+C0000000a-D002-10-kWh L3-JTWH,J,rez de chaussée aile chartreuse
+C0000000a-D002-10-kWh-JTWH,J,rez de chaussée aile chartreuse
+C0000000a-D002-10-kvar L1-JTVar,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kvar L2-JTVar,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kvar L3-JTVar,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kvar sys-JTVar,kW,rez de chaussée aile chartreuse
+C0000000a-D002-10-kvarh (-)-JTVarH,J,rez de chaussée aile chartreuse
+C0000000a-D002-10-kvarh-JTVarH,J,rez de chaussée aile chartreuse
+C0000000b-D001-11-kVA L1-JTVA,kW,Clim sweetair
+C0000000b-D001-11-kVA L2-JTVA,kW,Clim sweetair
+C0000000b-D001-11-kVA L3-JTVA,kW,Clim sweetair
+C0000000b-D001-11-kVA sys-JTVA,kW,Clim sweetair
+C0000000b-D001-11-kW L1-JTW,kW,Clim sweetair
+C0000000b-D001-11-kW L2-JTW,kW,Clim sweetair
+C0000000b-D001-11-kW L3-JTW,kW,Clim sweetair
+C0000000b-D001-11-kW dmd-JTW,kW,Clim sweetair
+C0000000b-D001-11-kW sys-JTW,kW,Clim sweetair
+C0000000b-D001-11-kWh (-)-JTWH,J,Clim sweetair
+C0000000b-D001-11-kWh L1-JTWH,J,Clim sweetair
+C0000000b-D001-11-kWh L2-JTWH,J,Clim sweetair
+C0000000b-D001-11-kWh L3-JTWH,J,Clim sweetair
+C0000000b-D001-11-kWh-JTWH,J,Clim sweetair
+C0000000b-D001-11-kvar L1-JTVar,kW,Clim sweetair
+C0000000b-D001-11-kvar L2-JTVar,kW,Clim sweetair
+C0000000b-D001-11-kvar L3-JTVar,kW,Clim sweetair
+C0000000b-D001-11-kvar sys-JTVar,kW,Clim sweetair
+C0000000b-D001-11-kvarh (-)-JTVarH,J,Clim sweetair
+C0000000b-D001-11-kvarh-JTVarH,J,Clim sweetair
+C0000000c-A005-12-kVA L1-JTVA,kW,Poste de garde 
+C0000000c-A005-12-kVA L2-JTVA,kW,Poste de garde 
+C0000000c-A005-12-kVA L3-JTVA,kW,Poste de garde 
+C0000000c-A005-12-kVA sys-JTVA,kW,Poste de garde 
+C0000000c-A005-12-kW L1-JTW,kW,Poste de garde 
+C0000000c-A005-12-kW L2-JTW,kW,Poste de garde 
+C0000000c-A005-12-kW L3-JTW,kW,Poste de garde 
+C0000000c-A005-12-kW dmd-JTW,kW,Poste de garde 
+C0000000c-A005-12-kW sys-JTW,kW,Poste de garde 
+C0000000c-A005-12-kWh (-)-JTWH,J,Poste de garde 
+C0000000c-A005-12-kWh L1-JTWH,J,Poste de garde 
+C0000000c-A005-12-kWh L2-JTWH,J,Poste de garde 
+C0000000c-A005-12-kWh L3-JTWH,J,Poste de garde 
+C0000000c-A005-12-kWh-JTWH,J,Poste de garde 
+C0000000c-A005-12-kvar L1-JTVar,kW,Poste de garde 
+C0000000c-A005-12-kvar L2-JTVar,kW,Poste de garde 
+C0000000c-A005-12-kvar L3-JTVar,kW,Poste de garde 
+C0000000c-A005-12-kvar sys-JTVar,kW,Poste de garde 
+C0000000c-A005-12-kvarh (-)-JTVarH,J,Poste de garde 
+C0000000c-A005-12-kvarh-JTVarH,J,Poste de garde 
+C0000000d-B008-13-kVA L1-JTVA,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kVA L2-JTVA,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kVA L3-JTVA,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kVA sys-JTVA,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kW L1-JTW,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kW L2-JTW,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kW L3-JTW,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kW dmd-JTW,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kW sys-JTW,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kWh (-)-JTWH,J,Atelier mécanique cheylas
+C0000000d-B008-13-kWh L1-JTWH,J,Atelier mécanique cheylas
+C0000000d-B008-13-kWh L2-JTWH,J,Atelier mécanique cheylas
+C0000000d-B008-13-kWh L3-JTWH,J,Atelier mécanique cheylas
+C0000000d-B008-13-kWh-JTWH,J,Atelier mécanique cheylas
+C0000000d-B008-13-kvar L1-JTVar,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kvar L2-JTVar,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kvar L3-JTVar,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kvar sys-JTVar,kW,Atelier mécanique cheylas
+C0000000d-B008-13-kvarh (-)-JTVarH,J,Atelier mécanique cheylas
+C0000000d-B008-13-kvarh-JTVarH,J,Atelier mécanique cheylas
+C0000000e-B002-14-kVA L1-JTVA,kW,Auto passion
+C0000000e-B002-14-kVA L2-JTVA,kW,Auto passion
+C0000000e-B002-14-kVA L3-JTVA,kW,Auto passion
+C0000000e-B002-14-kVA sys-JTVA,kW,Auto passion
+C0000000e-B002-14-kW L1-JTW,kW,Auto passion
+C0000000e-B002-14-kW L2-JTW,kW,Auto passion
+C0000000e-B002-14-kW L3-JTW,kW,Auto passion
+C0000000e-B002-14-kW dmd-JTW,kW,Auto passion
+C0000000e-B002-14-kW sys-JTW,kW,Auto passion
+C0000000e-B002-14-kWh (-)-JTWH,J,Auto passion
+C0000000e-B002-14-kWh L1-JTWH,J,Auto passion
+C0000000e-B002-14-kWh L2-JTWH,J,Auto passion
+C0000000e-B002-14-kWh L3-JTWH,J,Auto passion
+C0000000e-B002-14-kWh-JTWH,J,Auto passion
+C0000000e-B002-14-kvar L1-JTVar,kW,Auto passion
+C0000000e-B002-14-kvar L2-JTVar,kW,Auto passion
+C0000000e-B002-14-kvar L3-JTVar,kW,Auto passion
+C0000000e-B002-14-kvar sys-JTVar,kW,Auto passion
+C0000000e-B002-14-kvarh (-)-JTVarH,J,Auto passion
+C0000000e-B002-14-kvarh-JTVarH,J,Auto passion
+C0000000f-B004-15-kVA L1-JTVA,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kVA L2-JTVA,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kVA L3-JTVA,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kVA sys-JTVA,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kW L1-JTW,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kW L2-JTW,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kW L3-JTW,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kW dmd-JTW,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kW sys-JTW,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kWh (-)-JTWH,J,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kWh L1-JTWH,J,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kWh L2-JTWH,J,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kWh L3-JTWH,J,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kWh-JTWH,J,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kvar L1-JTVar,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kvar L2-JTVar,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kvar L3-JTVar,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kvar sys-JTVar,kW,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kvarh (-)-JTVarH,J,local W (Local à papier derrière Sylfen) + local Antoine2
+C0000000f-B004-15-kvarh-JTVarH,J,local W (Local à papier derrière Sylfen) + local Antoine2
+C00000010-EM_VIRTUAL-16-kVA L1-JTVA,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kVA L2-JTVA,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kVA L3-JTVA,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kVA dmd-JTVA,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kVA sys-JTVA,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kVAh L1-JTVAH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kVAh L2-JTVAH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kVAh L3-JTVAH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kVAh-JTVAH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kW L1-JTW,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kW L2-JTW,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kW L3-JTW,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kW dmd-JTW,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kW sys-JTW,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kWh (-) L1-JTWH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kWh (-) L2-JTWH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kWh (-) L3-JTWH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kWh (-)-JTWH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kWh L1-JTWH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kWh L2-JTWH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kWh L3-JTWH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kWh-JTWH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kvar L1-JTVar,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kvar L2-JTVar,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kvar L3-JTVar,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kvar dmd-JTVar,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kvar sys-JTVar,kW,Total puissance
+C00000010-EM_VIRTUAL-16-kvarh (-) L1-JTVarH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kvarh (-) L2-JTVarH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kvarh (-) L3-JTVarH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kvarh (-)-JTVarH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kvarh (C)-JTVarH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kvarh (L)-JTVarH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kvarh L1-JTVarH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kvarh L2-JTVarH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kvarh L3-JTVarH,J,Total puissance
+C00000010-EM_VIRTUAL-16-kvarh-JTVarH,J,Total puissance
+C00000011-EM_DC_VIRTUAL-17-kW-JTW,kW,unkown Tag
+C00000011-EM_DC_VIRTUAL-17-kWh-JTWH,J,unkown Tag
