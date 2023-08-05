@@ -1,0 +1,18 @@
+CHANGES
+=======
+
+0.4.14
+------
+
+* hotfix for 14.6, tested
+* fix 14.6 image missing bug, not tested
+* fix bug of retrieve image 12.5
+* do some fix for #116
+* retry and qq group id
+* fix again image retrieve ref #108
+* little modify merge request
+* support 14.6 developer image, ref #108
+* support 14.6 developer image, ref #108
+* Add env option for wdaproxy cmd
+* fix signal.pause not exists in windows error, ref#78
+* fix 13.7 developer image mount error
