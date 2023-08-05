@@ -1,0 +1,14 @@
+---
+draft: true
+mainfont: Minion Pro
+# Prints table of contents if true.
+toc: true
+colorlinks: true
+linkcolor: red
+urlcolor: red
+urlmono: true
+monofont: Courier New
+numbersections: false
+highlight-style: zenburn
+monofontoptions: 'Scale=0.7'
+...
