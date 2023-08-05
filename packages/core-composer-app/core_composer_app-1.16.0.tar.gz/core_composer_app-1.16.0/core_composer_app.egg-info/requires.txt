@@ -1,0 +1,9 @@
+Django
+django-mongoengine
+djangorestframework
+django-rest-framework-mongoengine
+django-simple-menu
+mock
+mongoengine
+core-main-app==1.16.*
+xml-utils==1.14.*
