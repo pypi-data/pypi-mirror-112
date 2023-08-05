@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: progen-transformer
+Version: 0.0.33
+Summary: Protein Generation (ProGen)
+Home-page: https://github.com/lucidrains/progen
+Author: Phil Wang
+Author-email: 
+License: MIT
+Keywords: artificial intelligence,deep learning,protein language model
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE
+Requires-Dist: biopython
+Requires-Dist: click
+Requires-Dist: click-option-group
+Requires-Dist: cloudpickle
+Requires-Dist: einops (>=0.3)
+Requires-Dist: dagster
+Requires-Dist: dagit
+Requires-Dist: dm-haiku
+Requires-Dist: google-cloud-storage
+Requires-Dist: humanize
+Requires-Dist: jax
+Requires-Dist: jaxlib
+Requires-Dist: joblib
+Requires-Dist: Jinja2
+Requires-Dist: jmp
+Requires-Dist: omegaconf
+Requires-Dist: optax (>=0.0.9)
+Requires-Dist: python-dotenv
+Requires-Dist: tensorflow
+Requires-Dist: tqdm
+Requires-Dist: wandb
+
+UNKNOWN
+
