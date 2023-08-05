@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: fexact
+Version: 0.0.8
+Summary: Exact Fisher test for nxm contingency matrix based on fortran acm 643 and R
+Home-page: https://github.com/boussoffara/fexact
+Author: A. Boussoffara
+Author-email: boussoffara@me.com
+Maintainer: boussoffara@me.com
+License: GPLv3
+Project-URL: Source Code, https://github.com/boussoffara/fexact
+Keywords: fisher, fishertest, fisherexact,
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Requires-Dist: numpy ; extra == 'test'
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: tox ; extra == 'test'
+Requires-Dist: setuptools (>=38.0) ; extra == 'test'
+
+UNKNOWN
+
+
