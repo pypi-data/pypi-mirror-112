@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/PySDTest.egg-info/PKG-INFO
+src/PySDTest.egg-info/SOURCES.txt
+src/PySDTest.egg-info/dependency_links.txt
+src/PySDTest.egg-info/top_level.txt
+src/PySDtest.egg-info/PKG-INFO
+src/PySDtest.egg-info/SOURCES.txt
+src/PySDtest.egg-info/dependency_links.txt
+src/PySDtest.egg-info/top_level.txt
+src/pysdtest/__init__.py
+src/pysdtest/pysdtest.py
