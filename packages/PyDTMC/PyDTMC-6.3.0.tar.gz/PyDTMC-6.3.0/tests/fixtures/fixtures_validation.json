@@ -1,0 +1,1716 @@
+{
+  "validate_extract_data": [
+    {
+      "value": [],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": [null, null, null],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": [0.33, 0.97, 0.13],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": [-5, 0, -5],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": [true, false, true],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": [[], [], []],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": [["NaN"], ["Infinity"], ["NaN"]],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": [["A", "B"], ["C", "D"], ["E", "F"]],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": {"V1": 0.0, "V2": 0.0, "V3": 7.5, "V4": 0.0},
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": "tuple(['A', 'B', 'C'])",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": "set([2, 4, 6, 6])",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": "frozenset([2, 4, 6, 6])",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": "range(10)",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": "(i**3.0 for i in range(1,10,2))",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": null,
+      "evaluate": false,
+      "is_valid": false
+    },
+    {
+      "value": "abcdefg",
+      "evaluate": false,
+      "is_valid": false
+    },
+    {
+      "value": 345.72,
+      "evaluate": false,
+      "is_valid": false
+    },
+    {
+      "value": "bytes.fromhex('2EF0 F1F2')",
+      "evaluate": true,
+      "is_valid": false
+    },
+    {
+      "value": "bytearray.fromhex('2EF0 F1F2')",
+      "evaluate": true,
+      "is_valid": false
+    },
+    {
+      "value": "lambda x, y, z: x + (y * z)",
+      "evaluate": true,
+      "is_valid": false
+    }
+  ],
+  "validate_extract_as_numeric_data": [
+    {
+      "value": [],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": [[], [], []],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": [0.81, 0.84, 0.46, 0.73],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": [145, 297, 189, 23, 47, 582],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": [["NaN", 0.4, 0.4], [0.1, "Infinity", 0.3], ["NaN", 0.0, 0.7]],
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": {"V1": 0.0, "V2": 0.0, "V3": 7.5, "V4": 0.0},
+      "evaluate": false,
+      "is_valid": true
+    },
+    {
+      "value": "tuple([5, 8, 0])",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": "set([-4, -4, 1, 6, -4, 0])",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": "frozenset([10, 100, 1000, float('inf')])",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": "range(25)",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": "np.asarray([[2, 3], [3, 2], [2, 3]])",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": "spsp.coo_matrix((np.asarray([4, 5, 7, 9]), (np.asarray([0, 3, 1, 0]), np.asarray([0, 3, 1, 2]))), shape=(4, 4))",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": "spsp.csr_matrix(np.asarray([[1, 0, 0, 1, 0, 0], [0, 0, 2, 0, 0, 1], [0, 0, 0, 2, 0, 0]]))",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": "pd.Series([0.5, 14.7, 10.1, float('nan'), 6.0, 8.3])",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": "pd.DataFrame([{'a': 1, 'b': 2}, {'a': 5, 'b': 10, 'c': 20}])",
+      "evaluate": true,
+      "is_valid": true
+    },
+    {
+      "value": null,
+      "evaluate": false,
+      "is_valid": false
+    },
+    {
+      "value": 12.26668,
+      "evaluate": false,
+      "is_valid": false
+    },
+    {
+      "value": "mnopq",
+      "evaluate": false,
+      "is_valid": false
+    },
+    {
+      "value": [null, null],
+      "evaluate": false,
+      "is_valid": false
+    },
+    {
+      "value": [true, false, false, true],
+      "evaluate": false,
+      "is_valid": false
+    },
+    {
+      "value": [["A", "B"], ["C", "D"], ["E", "F"]],
+      "evaluate": false,
+      "is_valid": false
+    },
+    {
+      "value": {"1": "A", "2": "B", "3": "C"},
+      "evaluate": false,
+      "is_valid": false
+    },
+    {
+      "value": "tuple(['A', None, 'B'])",
+      "evaluate": true,
+      "is_valid": false
+    },
+    {
+      "value": "set(['A', 4, 8, 11])",
+      "evaluate": true,
+      "is_valid": false
+    },
+    {
+      "value": "frozenset([3, 3, 1, 'Z', None])",
+      "evaluate": true,
+      "is_valid": false
+    },
+    {
+      "value": "bytes.fromhex('A034 E1C0')",
+      "evaluate": true,
+      "is_valid": false
+    },
+    {
+      "value": "bytearray.fromhex('A034 E1C0')",
+      "evaluate": true,
+      "is_valid": false
+    },
+    {
+      "value": "lambda x, y, z: x + (y * z)",
+      "evaluate": true,
+      "is_valid": false
+    },
+    {
+      "value": "np.asarray([[True, 'A'], [False, 'B']])",
+      "evaluate": true,
+      "is_valid": false
+    },
+    {
+      "value": "pd.DataFrame({'Name': ['Jack', 'Rick', 'Steve', 'Vicky'], 'Age': [28, 34, 29, 42]})",
+      "evaluate": true,
+      "is_valid": false
+    }
+  ],
+  "validate_boolean_data": [
+    {
+      "value": false,
+      "is_valid": true
+    },
+    {
+      "value": true,
+      "is_valid": true
+    },
+    {
+      "value": null,
+      "is_valid": false
+    },
+    {
+      "value": 0.0,
+      "is_valid": false
+    },
+    {
+      "value": 1.0,
+      "is_valid": false
+    },
+    {
+      "value": 0,
+      "is_valid": false
+    },
+    {
+      "value": 1,
+      "is_valid": false
+    },
+    {
+      "value": "False",
+      "is_valid": false
+    },
+    {
+      "value": "true",
+      "is_valid": false
+    },
+    {
+      "value": "Y",
+      "is_valid": false
+    }
+  ],
+  "validate_boundary_condition_data": [
+    {
+      "value": 0.0,
+      "is_valid": true
+    },
+    {
+      "value": 0.47,
+      "is_valid": true
+    },
+    {
+      "value": 1.0,
+      "is_valid": true
+    },
+    {
+      "value": 0,
+      "is_valid": true
+    },
+    {
+      "value": 1,
+      "is_valid": true
+    },
+    {
+      "value": "absorbing",
+      "is_valid": true
+    },
+    {
+      "value": null,
+      "is_valid": false
+    },
+    {
+      "value": 4.73,
+      "is_valid": false
+    },
+    {
+      "value": true,
+      "is_valid": false
+    },
+    {
+      "value": "boundary",
+      "is_valid": false
+    }
+  ],
+  "validate_dictionary_data": [
+    {
+      "dictionary_elements": [
+        ["A", "A", 0.5],
+        ["A", "B", 0.5],
+        ["B", "A", 0.25],
+        ["B", "B", 0.75]
+      ],
+      "key_tuple": true,
+      "is_valid": true
+    },
+    {
+      "dictionary_elements": [
+        ["A", "A", 1],
+        ["A", "B", 0],
+        ["B", "A", 0],
+        ["B", "B", 1]
+      ],
+      "key_tuple": true,
+      "is_valid": true
+    },
+    {
+      "dictionary_elements": [
+        ["A", null, 1],
+        ["A", "B", 0],
+        ["B", "A", 0],
+        ["B", "B", 1]
+      ],
+      "key_tuple": true,
+      "is_valid": false
+    },
+    {
+      "dictionary_elements": [
+        ["A", 0.8],
+        ["B", 0.2]
+      ],
+      "key_tuple": false,
+      "is_valid": false
+    },
+    {
+      "dictionary_elements": [
+        ["A", "A", 1.0],
+        ["B", "B", 1.0],
+        ["C", "C", 1.0],
+        ["D", "D", 1.0]
+      ],
+      "key_tuple": true,
+      "is_valid": false
+    },
+    {
+      "dictionary_elements": [
+        ["A", "A", "1", 1],
+        ["A", "B", "2", 0],
+        ["B", "A", "3", 0],
+        ["B", "B", "4", 1]
+      ],
+      "key_tuple": true,
+      "is_valid": false
+    },
+    {
+      "dictionary_elements": [
+        ["A", "A", 3.7],
+        ["A", "B", -5.3],
+        ["B", "A", 4.1],
+        ["B", "B", -2.3]
+      ],
+      "key_tuple": true,
+      "is_valid": false
+    },
+    {
+      "dictionary_elements": [
+        ["A", "A", 1],
+        ["A", "B", "0"],
+        ["B", "A", 0],
+        ["B", "B", 1]
+      ],
+      "key_tuple": true,
+      "is_valid": false
+    },
+    {
+      "dictionary_elements": [
+        ["A", "A", 0.3],
+        ["A", "B", 0.7],
+        ["B", "B", 1.0]
+      ],
+      "key_tuple": true,
+      "is_valid": false
+    },
+    {
+      "dictionary_elements": null,
+      "key_tuple": false,
+      "is_valid": false
+    }
+  ],
+  "validate_distribution_data": [
+    {
+      "value": 5,
+      "size": null,
+      "is_valid": true
+    },
+    {
+      "value": [[1, 0, 0], [0, 1, 0], [0, 0, 1]],
+      "size": 3,
+      "is_valid": true
+    },
+    {
+      "value": [[0.45, 0.05, 0.5], [1.0, 0.0, 0.0], [0.3, 0.2, 0.5]],
+      "size": 3,
+      "is_valid": true
+    },
+    {
+      "value": [[0.3, 0.0, 0.0, 0.7], [0.0, 0.0, 1.0, 0.0], [0.5, 0.3, 0.1, 0.1], [0.2, 0.4, 0.2, 0.2]],
+      "size": 6,
+      "is_valid": false
+    },
+    {
+      "value": [["NaN", 0.6, 0.4], [0.33, 0.33, 0.34], [0.2, 0.6, 0.2]],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": [[0.4, 0.4, 0.3], [0.3, 0.35, 0.35], [0.4, 0.7, 0.0]],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": [["A", "J", "F"], ["N", "K", "D"], ["C", "E", "M"]],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": -1,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "size": 0,
+      "is_valid": false
+    }
+  ],
+  "validate_dpi_data": [
+    {
+      "value": 75,
+      "is_valid": true
+    },
+    {
+      "value": 150,
+      "is_valid": true
+    },
+    {
+      "value": 200,
+      "is_valid": true
+    },
+    {
+      "value": null,
+      "is_valid": false
+    },
+    {
+      "value": 0,
+      "is_valid": false
+    },
+    {
+      "value": 201,
+      "is_valid": false
+    },
+    {
+      "value": 500,
+      "is_valid": false
+    },
+    {
+      "value": 75.0,
+      "is_valid": false
+    },
+    {
+      "value": true,
+      "is_valid": false
+    },
+    {
+      "value": "200",
+      "is_valid": false
+    }
+  ],
+  "validate_enumerator_data": [
+    {
+      "value": "a",
+      "possible_values": ["a", "b", "c"],
+      "is_valid": true
+    },
+    {
+      "value": "C",
+      "possible_values": ["A", "B", "C"],
+      "is_valid": true
+    },
+    {
+      "value": null,
+      "possible_values": ["a", "b", "c"],
+      "is_valid": false
+    },
+    {
+      "value": 6.34,
+      "possible_values": ["a", "b", "c"],
+      "is_valid": false
+    },
+    {
+      "value": 17,
+      "possible_values": ["a", "b", "c"],
+      "is_valid": false
+    },
+    {
+      "value": true,
+      "possible_values": ["a", "b", "c"],
+      "is_valid": false
+    },
+    {
+      "value": "A",
+      "possible_values": ["a", "b", "c"],
+      "is_valid": false
+    },
+    {
+      "value": "V1",
+      "possible_values": ["V1", "V2", null, "V3", -3.8],
+      "is_valid": false
+    },
+    {
+      "value": [""],
+      "possible_values": ["a", "b", "c"],
+      "is_valid": false
+    },
+    {
+      "value": ["a"],
+      "possible_values": ["a", "b", "c"],
+      "is_valid": false
+    }
+  ],
+  "validate_float_data": [
+    {
+      "value": 0.0,
+      "lower_limit": [0.0, false],
+      "upper_limit": [1.0, false],
+      "is_valid": true
+    },
+    {
+      "value": 0.5,
+      "lower_limit": [0.0, false],
+      "upper_limit": [1.0, false],
+      "is_valid": true
+    },
+    {
+      "value": 1.0,
+      "lower_limit": [0.0, false],
+      "upper_limit": [1.0, false],
+      "is_valid": true
+    },
+    {
+      "value": 75.0,
+      "lower_limit": null,
+      "upper_limit": null,
+      "is_valid": true
+    },
+    {
+      "value": 0.0,
+      "lower_limit": [0.0, true],
+      "upper_limit": null,
+      "is_valid": false
+    },
+    {
+      "value": 1.0,
+      "lower_limit": null,
+      "upper_limit": [1.0, true],
+      "is_valid": false
+    },
+    {
+      "value": -5.0,
+      "lower_limit": [0.0, false],
+      "upper_limit": null,
+      "is_valid": false
+    },
+    {
+      "value": 5.0,
+      "lower_limit": null,
+      "upper_limit": [1.0, false],
+      "is_valid": false
+    },
+    {
+      "value": 50,
+      "lower_limit": null,
+      "upper_limit": null,
+      "is_valid": false
+    },
+    {
+      "value": "Infinity",
+      "lower_limit": null,
+      "upper_limit": null,
+      "is_valid": false
+    }
+  ],
+  "validate_graph_data": [
+    {
+      "graph_data": [[0.3, 0.7], [0.5, 0.5]],
+      "is_valid": true
+    },
+    {
+      "graph_data": [[5, 3], [9, 2]],
+      "is_valid": true
+    },
+    {
+      "graph_data": [[1, 0, 1, 0], [1, 1, 1, 1], [0, 0, 1, 1], [0, 0, 0, 1]],
+      "is_valid": true
+    },
+    {
+      "graph_data": ["N1", "N2"],
+      "is_valid": true
+    },
+    {
+      "graph_data": ["N1", "N2", "N3"],
+      "is_valid": true
+    },
+    {
+      "graph_data": [1, 2],
+      "is_valid": false
+    },
+    {
+      "graph_data": [[2.0, 1.8], [-0.5, 3.5]],
+      "is_valid": false
+    },
+    {
+      "graph_data": ["N"],
+      "is_valid": false
+    },
+    {
+      "graph_data": [null, null],
+      "is_valid": false
+    },
+    {
+      "graph_data": null,
+      "is_valid": false
+    }
+  ],
+  "validate_hyperparameter_data": [
+    {
+      "value": [[4, 12, 6], [4, 9, 34], [11, 8, 9]],
+      "size": 3,
+      "is_valid": true
+    },
+    {
+      "value": [[4.0, 12.0, 6.0], [4.0, 9.0, 34.0], [11.0, 8.0, 9.0]],
+      "size": 3,
+      "is_valid": true
+    },
+    {
+      "value": [[24, 7, 7], [1, 41, 19], [97, 3, 14]],
+      "size": 5,
+      "is_valid": false
+    },
+    {
+      "value": [[1.2, 2.9, 3.2], [4.7, 5.1, 6.1], [7.5, 8.4, 9.7]],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": [[0, 9, -1, 3], [3, -5, 0, 1], [0, 8, 0, 0], [-2, -1, -1, 6]],
+      "size": 4,
+      "is_valid": false
+    },
+    {
+      "value": [4, 3, 7],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": [[2, 1, 14], [23, 1, 49], [15, 11, 3], [34, 6, 6]],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": [["A", "Z", "J"], ["A", "K", "A"], ["P", "R", "B"]],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "size": 0,
+      "is_valid": false
+    }
+  ],
+  "validate_integer_data": [
+    {
+      "value": 0,
+      "lower_limit": [0, false],
+      "upper_limit": [1, false],
+      "is_valid": true
+    },
+    {
+      "value": 1,
+      "lower_limit": [0, false],
+      "upper_limit": [1, false],
+      "is_valid": true
+    },
+    {
+      "value": 50,
+      "lower_limit": null,
+      "upper_limit": null,
+      "is_valid": true
+    },
+    {
+      "value": 0,
+      "lower_limit": [0, true],
+      "upper_limit": null,
+      "is_valid": false
+    },
+    {
+      "value": 1,
+      "lower_limit": null,
+      "upper_limit": [1, true],
+      "is_valid": false
+    },
+    {
+      "value": -10,
+      "lower_limit": [0, false],
+      "upper_limit": null,
+      "is_valid": false
+    },
+    {
+      "value": 20,
+      "lower_limit": null,
+      "upper_limit": [10, false],
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "lower_limit": null,
+      "upper_limit": null,
+      "is_valid": false
+    },
+    {
+      "value": 25.0,
+      "lower_limit": null,
+      "upper_limit": null,
+      "is_valid": false
+    },
+    {
+      "value": true,
+      "lower_limit": null,
+      "upper_limit": null,
+      "is_valid": false
+    }
+  ],
+  "validate_interval_data": [
+    {
+      "value": [0, 10],
+      "is_valid": true
+    },
+    {
+      "value": [5.0, 50.0],
+      "is_valid": true
+    },
+    {
+      "value": [2, 6.5],
+      "is_valid": true
+    },
+    {
+      "value": [8.5, 4.5],
+      "is_valid": false
+    },
+    {
+      "value": [-5, 5],
+      "is_valid": false
+    },
+    {
+      "value": [5.0, "Infinity"],
+      "is_valid": false
+    },
+    {
+      "value": [10, 20, 30],
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "is_valid": false
+    },
+    {
+      "value": [false, true],
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "is_valid": false
+    }
+  ],
+  "validate_markov_chain_data": [
+    {
+      "value": "MarkovChain([[0.33, 0.67], [0.61, 0.39]])",
+      "is_valid": true
+    },
+    {
+      "value": "range(10)",
+      "is_valid": false
+    },
+    {
+      "value": "BaseClass('Test', (), [])",
+      "is_valid": false
+    },
+    {
+      "value": "TypeError()",
+      "is_valid": false
+    },
+    {
+      "value": "nx.DiGraph()",
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "is_valid": false
+    },
+    {
+      "value": 10,
+      "is_valid": false
+    },
+    {
+      "value": false,
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "is_valid": false
+    },
+    {
+      "value": {},
+      "is_valid": false
+    }
+  ],
+  "validate_mask_data": [
+    {
+      "value": [["NaN", 0.5, "NaN"], [1.0, 0.0, 0.0], [0.3, "NaN", 0.2]],
+      "size": 3,
+      "is_valid": true
+    },
+    {
+      "value": [["NaN", "NaN", "NaN"], ["NaN", "NaN", "NaN"], ["NaN", "NaN", "NaN"]],
+      "size": 3,
+      "is_valid": true
+    },
+    {
+      "value": [[0, 1, 0], [0, 0, 1], [1, 0, 0]],
+      "size": 3,
+      "is_valid": true
+    },
+    {
+      "value": [[0.2, 0.5, 0.1, "NaN"], [0.1, 0.5, 0.2, 0.2], [0.8, "NaN", "NaN", "NaN"]],
+      "size": 4,
+      "is_valid": false
+    },
+    {
+      "value": [[0.0, "NaN", 0.7, 0.3], [0.8, "NaN", 0.2, "NaN"], ["NaN", "NaN", "NaN", "NaN"], ["NaN", "NaN", "NaN", "NaN"]],
+      "size": 5,
+      "is_valid": false
+    },
+    {
+      "value": [["Infinity", 0.5, "Infinity"], [0.25, 0.25, "Infinity"], [0.2, 0.1, "Infinity"]],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": [["NaN", "NaN", "NaN"], [0.0, 0.45, 0.55], [1.0, "NaN", 0.2]],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": true,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": [[], []],
+      "size": 2,
+      "is_valid": false
+    }
+  ],
+  "validate_matrix_data": [
+    {
+      "value": [[1.0, 0.0], [0.5, 0.5]],
+      "is_valid": true
+    },
+    {
+      "value": [[2, 7, 3], [11, 3, 0], [0, 7, 7]],
+      "is_valid": true
+    },
+    {
+      "value": [[-4.4, 9.2], [6.3, 3.6]],
+      "is_valid": false
+    },
+    {
+      "value": [[12, 8, 0], [0, 0, 1], [9, 4, 2], [9, 4, 2]],
+      "is_valid": false
+    },
+    {
+      "value": [5],
+      "is_valid": false
+    },
+    {
+      "value": [0, 0, 0, 0, 1],
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "is_valid": false
+    },
+    {
+      "value": "matrix",
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "is_valid": false
+    },
+    {
+      "value": [[], []],
+      "is_valid": false
+    }
+  ],
+  "validate_partitions_data": [
+    {
+      "value": [["A", "B"], ["C"]],
+      "current_states": ["A", "B", "C"],
+      "is_valid": true
+    },
+    {
+      "value": [["A", "B"], ["C", "D"]],
+      "current_states": ["A", "B", "C", "D"],
+      "is_valid": true
+    },
+    {
+      "value": [[0], [1, 2]],
+      "current_states": ["A", "B", "C"],
+      "is_valid": true
+    },
+    {
+      "value": [["A", "B", "C", "D"]],
+      "current_states": ["A", "B", "C", "D"],
+      "is_valid": false
+    },
+    {
+      "value": [[1, 2], [3]],
+      "current_states": ["A", "B", "C"],
+      "is_valid": false
+    },
+    {
+      "value": [true, [0, 1, 2]],
+      "current_states": ["A", "B", "C", "D"],
+      "is_valid": false
+    },
+    {
+      "value": [["A"], ["B", "D"]],
+      "current_states": ["A", "B", "C"],
+      "is_valid": false
+    },
+    {
+      "value": [[0], [true, 2], [3]],
+      "current_states": ["A", "B", "C", "D"],
+      "is_valid": false
+    },
+    {
+      "value": [["A"], ["C", "D"], ["E"]],
+      "current_states": ["A", "B", "C", "D", "E"],
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "current_states": [],
+      "is_valid": false
+    }
+  ],
+  "validate_rewards_data": [
+    {
+      "value": [-2, 0, 2],
+      "size": 3,
+      "is_valid": true
+    },
+    {
+      "value": [0.5, 8.6, -2.5, 0.0, 0.0, 6.3],
+      "size": 6,
+      "is_valid": true
+    },
+    {
+      "value": [0.0, 11.4],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": ["Infinity", 2.3, -0.9, "Infinity"],
+      "size": 4,
+      "is_valid": false
+    },
+    {
+      "value": [[0.3, 0.8, 0.1], [0.2, 0.0, -0.6], [-0.25, 0.4, -0.3]],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": [[3.5], [-4.4], [9.4]],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": 3,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "size": 0,
+      "is_valid": false
+    },
+    {
+      "value": [[], []],
+      "size": 0,
+      "is_valid": false
+    }
+  ],
+  "validate_state_data": [
+    {
+      "value": 0,
+      "current_states": ["1", "2"],
+      "is_valid": true
+    },
+    {
+      "value": 1,
+      "current_states": ["1", "2"],
+      "is_valid": true
+    },
+    {
+      "value": "D",
+      "current_states": ["A", "B", "C", "D", "E"],
+      "is_valid": true
+    },
+    {
+      "value": -1,
+      "current_states": ["1", "2", "3", "4"],
+      "is_valid": false
+    },
+    {
+      "value": 4,
+      "current_states": ["1", "2", "3", "4"],
+      "is_valid": false
+    },
+    {
+      "value": "8",
+      "current_states": ["1", "2", "3", "4"],
+      "is_valid": false
+    },
+    {
+      "value": "b",
+      "current_states": ["A", "B", "C"],
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "current_states": ["1", "2", "3", "4"],
+      "is_valid": false
+    },
+    {
+      "value": true,
+      "current_states": ["1", "2", "3"],
+      "is_valid": false
+    },
+    {
+      "value": "",
+      "current_states": ["1", "2", "3", "4"],
+      "is_valid": false
+    }
+  ],
+  "validate_state_names_data": [
+    {
+      "value": ["1", "2", "3"],
+      "size": 3,
+      "is_valid": true
+    },
+    {
+      "value": ["A", "B", "C"],
+      "size": null,
+      "is_valid": true
+    },
+    {
+      "value": ["S4", "S1", "S9", "S6", "S5"],
+      "size": null,
+      "is_valid": true
+    },
+    {
+      "value": ["S4", "S1", "S9", "S6", "S5"],
+      "size": 7,
+      "is_valid": false
+    },
+    {
+      "value": ["1", "2", "2", "3"],
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": ["1", "", "2"],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": [false, true, 2],
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": "A",
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "size": 0,
+      "is_valid": false
+    }
+  ],
+  "validate_states_data": [
+    {
+      "value": 0,
+      "current_states": ["1", "2"],
+      "states_type": "regular",
+      "flex": true,
+      "is_valid": true
+    },
+    {
+      "value": 1,
+      "current_states": ["1", "2"],
+      "states_type": "regular",
+      "flex": true,
+      "is_valid": true
+    },
+    {
+      "value": "B",
+      "current_states": ["A", "B", "C", "D", "E"],
+      "states_type": "regular",
+      "flex": true,
+      "is_valid": true
+    },
+    {
+      "value": "D",
+      "current_states": ["A", "B", "C", "D", "E"],
+      "states_type": "regular",
+      "flex": true,
+      "is_valid": true
+    },
+    {
+      "value": ["A", "B", "D"],
+      "current_states": ["A", "B", "C", "D"],
+      "states_type": "regular",
+      "flex": true,
+      "is_valid": true
+    },
+    {
+      "value": "1",
+      "current_states": ["1", "2", "3"],
+      "states_type": "subset",
+      "flex": true,
+      "is_valid": true
+    },
+    {
+      "value": [0],
+      "current_states": ["1", "2"],
+      "states_type": "regular",
+      "flex": false,
+      "is_valid": true
+    },
+    {
+      "value": ["2", "4"],
+      "current_states": ["1", "2", "3", "4"],
+      "states_type": "regular",
+      "flex": false,
+      "is_valid": true
+    },
+    {
+      "value": ["2", "3"],
+      "current_states": ["1", "2", "3"],
+      "states_type": "subset",
+      "flex": false,
+      "is_valid": true
+    },
+    {
+      "value": ["2", "3", "1", "1", "1", "1", "1", "3", "2", "4"],
+      "current_states": ["1", "2", "3", "4"],
+      "states_type": "walk",
+      "flex": false,
+      "is_valid": true
+    },
+    {
+      "value": -3,
+      "current_states": ["1", "2"],
+      "states_type": "regular",
+      "flex": true,
+      "is_valid": false
+    },
+    {
+      "value": 2,
+      "current_states": ["1", "2"],
+      "states_type": "regular",
+      "flex": true,
+      "is_valid": false
+    },
+    {
+      "value": "a",
+      "current_states": ["A", "B", "C", "D"],
+      "states_type": "regular",
+      "flex": true,
+      "is_valid": false
+    },
+    {
+      "value": "E",
+      "current_states": ["A", "B", "C", "D"],
+      "states_type": "regular",
+      "flex": true,
+      "is_valid": false
+    },
+    {
+      "value": ["A", "C"],
+      "current_states": ["1", "2", "3", "4"],
+      "states_type": "regular",
+      "flex": true,
+      "is_valid": false
+    },
+    {
+      "value": [true, false],
+      "current_states": ["1", "2", "3", "4"],
+      "states_type": "regular",
+      "flex": true,
+      "is_valid": false
+    },
+    {
+      "value": [0, 2, 6],
+      "current_states": ["A", "B", "C"],
+      "states_type": "regular",
+      "flex": false,
+      "is_valid": false
+    },
+    {
+      "value": ["1", "5"],
+      "current_states": ["1", "2", "3", "4"],
+      "states_type": "regular",
+      "flex": false,
+      "is_valid": false
+    },
+    {
+      "value": ["A", "B", "A", "C", "A", "B", "B"],
+      "current_states": ["A", "B", "C"],
+      "states_type": "regular",
+      "flex": false,
+      "is_valid": false
+    },
+    {
+      "value": [0, true, 2, 3],
+      "current_states": ["1", "2", "3", "4"],
+      "states_type": "regular",
+      "flex": false,
+      "is_valid": false
+    },
+    {
+      "value": ["A", "B", "C"],
+      "current_states": ["A", "B", "C"],
+      "states_type": "subset",
+      "flex": false,
+      "is_valid": false
+    },
+    {
+      "value": 1,
+      "current_states": ["A", "B", "C"],
+      "states_type": "walk",
+      "flex": true,
+      "is_valid": false
+    },
+    {
+      "value": "A",
+      "current_states": ["A", "B", "C"],
+      "states_type": "walk",
+      "flex": true,
+      "is_valid": false
+    },
+    {
+      "value": ["2"],
+      "current_states": ["1", "2", "3"],
+      "states_type": "walk",
+      "flex": true,
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "current_states": ["A", "B", "C", "D", "E"],
+      "states_type": "regular",
+      "flex": false,
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "current_states": ["A", "B", "C"],
+      "states_type": "regular",
+      "flex": false,
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "current_states": ["1", "2"],
+      "states_type": "subset",
+      "flex": false,
+      "is_valid": false
+    },
+    {
+      "value": ["A"],
+      "current_states": ["A", "B"],
+      "states_type": "walk",
+      "flex": false,
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "current_states": ["1", "2"],
+      "states_type": "subset",
+      "flex": false,
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "current_states": ["1", "2", "3"],
+      "states_type": "walk",
+      "flex": false,
+      "is_valid": false
+    }
+  ],
+  "validate_status_data": [
+    {
+      "value": 0,
+      "current_states": ["1", "2", "3"],
+      "is_valid": true
+    },
+    {
+      "value": "C",
+      "current_states": ["A", "B", "C", "D"],
+      "is_valid": true
+    },
+    {
+      "value": [0.0, 0.5, 0.5],
+      "current_states": ["1", "2", "3"],
+      "is_valid": true
+    },
+    {
+      "value": 4,
+      "current_states": ["1", "2", "3"],
+      "is_valid": false
+    },
+    {
+      "value": "E",
+      "current_states": ["A", "B", "C", "D"],
+      "is_valid": false
+    },
+    {
+      "value": [0.4, 0.1, 0.1, 0.5],
+      "current_states": ["A", "B", "C", "D"],
+      "is_valid": false
+    },
+    {
+      "value": [0.4, 1.2],
+      "current_states": ["1", "2"],
+      "is_valid": false
+    },
+    {
+      "value": [0.2, 0.2, 0.2, 0.2, 0.2],
+      "current_states": ["A", "B", "C", "D"],
+      "is_valid": false
+    },
+    {
+      "value": [[0.35, 0.25], [0.35, 0.25], [0.35, 0.25]],
+      "current_states": ["A", "B"],
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "current_states": [],
+      "is_valid": false
+    }
+  ],
+  "validate_time_points_data": [
+    {
+      "value": 5,
+      "is_valid": true
+    },
+    {
+      "value": [100, 1000],
+      "is_valid": true
+    },
+    {
+      "value": [0, 2, 4, 6, 8, 10],
+      "is_valid": true
+    },
+    {
+      "value": -3,
+      "is_valid": false
+    },
+    {
+      "value": [-1, 0, 1],
+      "is_valid": false
+    },
+    {
+      "value": [3, 6, 6, 6, 9],
+      "is_valid": false
+    },
+    {
+      "value": [1.4, 3.3, 4.7],
+      "is_valid": false
+    },
+    {
+      "value": ["10", "20"],
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "is_valid": false
+    }
+  ],
+  "validate_transition_function_data": [
+    {
+      "value": "def f(x_index, x_value, y_index, y_value): return 0",
+      "is_valid": true
+    },
+    {
+      "value": "def f(x_index: int, x_value: float, y_index: int, y_value: float) -> float: return (x_value * 2) + y_index",
+      "is_valid": true
+    },
+    {
+      "value": "lambda x_index, x_value, y_index, y_value: 3.14",
+      "is_valid": true
+    },
+    {
+      "value": "lambda x_index, x_value, y_index, y_value: x_value + y_value",
+      "is_valid": true
+    },
+    {
+      "value": "def f(x, y): return x * y",
+      "is_valid": false
+    },
+    {
+      "value": "def f(a, b, c, d): return a + b + c + d",
+      "is_valid": false
+    },
+    {
+      "value": "lambda x_index, x_value, y_index, y_value: None",
+      "is_valid": false
+    },
+    {
+      "value": "lambda x_index, x_value, y_index, y_value: float('inf')",
+      "is_valid": false
+    },
+    {
+      "value": "lambda x_index, x_value, y_index, y_value: 'RESULT'",
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "is_valid": false
+    }
+  ],
+  "validate_transition_matrix_data": [
+    {
+      "value": [[0.35, 0.65], [0.85, 0.15]],
+      "is_valid": true
+    },
+    {
+      "value": [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+      "is_valid": true
+    },
+    {
+      "value": [[0.7, 0.3], [0.1, 0.9], [0.8, 0.3]],
+      "is_valid": false
+    },
+    {
+      "value": [[0.2, 0.1, 0.7], [0.3, 0.3, 0.4], [0.4, 0.3, 1.3]],
+      "is_valid": false
+    },
+    {
+      "value": [[0.9, 0.9, 0.1], [0.5, 0.2, 0.3], [0.1, 0.1, 0.8]],
+      "is_valid": false
+    },
+    {
+      "value": [[0.1, 0.1, "Infinity"], [0.8, 0.05, "Infinity"], ["Infinity", "Infinity", "Infinity"]],
+      "is_valid": false
+    },
+    {
+      "value": [[1.0]],
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "is_valid": false
+    },
+    {
+      "value": [[], []],
+      "is_valid": false
+    }
+  ],
+  "validate_vector_data": [
+    {
+      "value": 0.3,
+      "vector_type": "unconstrained",
+      "flex": true,
+      "size": 4,
+      "is_valid": true
+    },
+    {
+      "value": 1,
+      "vector_type": "unconstrained",
+      "flex": true,
+      "size": 3,
+      "is_valid": true
+    },
+    {
+      "value": 0.275,
+      "vector_type": "unconstrained",
+      "flex": true,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": 0,
+      "vector_type": "stochastic",
+      "flex": true,
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": [0.15, 0.45, 0.9, 0.65],
+      "vector_type": "unconstrained",
+      "flex": false,
+      "size": 4,
+      "is_valid": true
+    },
+    {
+      "value": [0, 1, 1, 0, 1, 1, 1],
+      "vector_type": "unconstrained",
+      "flex": false,
+      "size": 7,
+      "is_valid": true
+    },
+    {
+      "value": [[0, 1, 1, 0, 1, 1, 1]],
+      "vector_type": "unconstrained",
+      "flex": false,
+      "size": 7,
+      "is_valid": true
+    },
+    {
+      "value": [0.4, 0.1, 0.1],
+      "vector_type": "unconstrained",
+      "flex": false,
+      "size": 4,
+      "is_valid": false
+    },
+    {
+      "value": [[0.0], [0.45], [0.75]],
+      "vector_type": "unconstrained",
+      "flex": false,
+      "size": 3,
+      "is_valid": false
+    },
+    {
+      "value": ["NaN", 0.3],
+      "vector_type": "unconstrained",
+      "flex": false,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": [1.25, 0.6, 0.2, 0.6, 0.2],
+      "vector_type": "unconstrained",
+      "flex": false,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": [true, false, true, true, false],
+      "vector_type": "unconstrained",
+      "flex": false,
+      "size": 5,
+      "is_valid": false
+    },
+    {
+      "value": null,
+      "vector_type": "unconstrained",
+      "flex": false,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": [],
+      "vector_type": "unconstrained",
+      "flex": false,
+      "size": 0,
+      "is_valid": false
+    },
+    {
+      "value": [0.0, 0.25, 0.5, 0.75],
+      "vector_type": "annihilation",
+      "flex": false,
+      "size": null,
+      "is_valid": true
+    },
+    {
+      "value": [0.25, 0.5, 0.75, 0.0],
+      "vector_type": "annihilation",
+      "flex": false,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": [0, 1, 1, 1, 0],
+      "vector_type": "creation",
+      "flex": false,
+      "size": null,
+      "is_valid": true
+    },
+    {
+      "value": [0.0, 0.5, 1.0, 1.0],
+      "vector_type": "creation",
+      "flex": false,
+      "size": null,
+      "is_valid": false
+    },
+    {
+      "value": [0.2, 0.2, 0.6],
+      "vector_type": "stochastic",
+      "flex": false,
+      "size": 3,
+      "is_valid": true
+    },
+    {
+      "value": [0.3, 0.4, 0.9],
+      "vector_type": "stochastic",
+      "flex": false,
+      "size": 3,
+      "is_valid": false
+    }
+  ]
+}
