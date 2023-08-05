@@ -1,0 +1,5 @@
+#!python
+
+from arena import auth
+
+auth.permissions()
