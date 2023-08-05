@@ -1,0 +1,8 @@
+typer
+datameta-client-lib<2,>=1.4.0
+pyyaml
+requests
+
+[testing]
+pytest
+pytest-cov
