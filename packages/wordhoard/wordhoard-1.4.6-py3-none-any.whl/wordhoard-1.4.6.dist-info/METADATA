@@ -1,0 +1,272 @@
+Metadata-Version: 2.1
+Name: wordhoard
+Version: 1.4.6
+Summary: A comprehensive lexical discovery application that is useful for finding semantic relationships between words including a word's synonyms, synonyms, hypernyms, hyponyms and homophones.
+Home-page: https://github.com/johnbumgarner/wordhoard
+Author: John Bumgarner
+Author-email: wordhoardproject@gmail.com
+License: LICENSE.txt
+Keywords: antonyms,synonyms,hypernyms,hyponyms,homophones,definitions,lexicon,semantic relationships,natural language processing
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: bs4
+Requires-Dist: deep-translator
+Requires-Dist: lxml
+Requires-Dist: requests
+Requires-Dist: urllib3
+
+# Overview
+
+<p align="justify">
+The Oxford Dictionary defines <i>wordhoard</i> as a supply of words or a lexicon. <i>Wordhoard</i> is a <span style="color:red; font-weight: bold; font-style: italic">Python 3 module</span> that can be used to obtain antonyms, synonyms, hypernyms, hyponyms, homophones and definitions for words. 
+<p>
+
+# Primary Use Case
+<p align="justify"> 
+Textual analysis is a broad term for various research methodologies used to qualitatively describe, interpret and understand text data. These methodologies are mainly used in academic research to analyze content related to media and communication studies, popular culture, sociology, and philosophy. Textual analysis allows these researchers to quickly obtain relevant insights from unstructured data. All types of information can be gleaned from textual data, especially from social media posts or news articles. Some of this information includes the overall concept of the subtext, symbolism within the text, assumptions being made and potential relative value to a subject (e.g. data science). In some cases it is possible to deduce the relative historical and cultural context of a body of text using analysis techniques coupled with knowledge from different disciplines, like linguistics and semiotics.
+
+Word frequency is the technique used in textual analysis to measure the frequency of a specific word or word grouping within unstructured data. Measuring the number of word occurrences in a corpus allows a researcher to garner interesting insights about the text. A subset of word frequency is the correlation between a given word and that word's relationship to either antonyms and synonyms within the specific corpus being analyzed. Knowing these relationships is critical to improving word frequencies and topic modeling.
+
+<i>Wordhoard</i> was designed to assist researchers performing textual analysis to build more comprehensive lists of antonyms, synonyms, hypernyms, hyponyms and homophones.
+</p>
+
+# Installation
+
+<p align="justify"> 
+   Install the distribution via pip:
+</p>
+
+```python
+pip3 install wordhoard
+```
+
+# Antonyms Module Usage
+
+<p align="justify"> 
+  An <i>antonym</i> is word that has the exact opposite meaning of another word or its antonym.
+
+Antonym examples:
+
+- bad and good
+- fast and slow
+- stop and go
+</p>
+
+```python
+from wordhoard import Antonyms
+
+antonym = Antonyms('mother')
+antonym_results = antonym.find_antonyms()
+print(antonym_results)
+['abort', 'begetter', 'brush', 'brush aside', 'brush off', 'child', 'dad', 'daughter', 'descendant', 
+ 'effect', 'end','father', 'follower', 'forget', 'ignore', 'lose', 'male parent', 'miscarry', 
+ 'neglect', 'offspring', 'overlook', 'result', 'slight']
+```
+
+## Antonyms written to Python dictionary
+```python
+from wordhoard import Antonyms
+
+antonyms_results = {}
+list_of_words = ['mother', 'daughter', 'father', 'son']
+
+for word in list_of_words:
+    antonym = Antonyms(word)
+    results = antonym.find_antonyms()
+    antonyms_results[word] = results
+
+for key, value in antonyms_results.items():
+    print(key, value)
+
+    mother ['abort', 'begetter', 'brush', 'brush aside', 'brush off', 'child', 'dad', 'daughter', 
+            'descendant', 'effect', 'end', 'father', 'follower', 'forget', 'ignore', 'lose', 
+            'male parent', 'miscarry', 'neglect', 'offspring', 'overlook', 'result', 'slight']
+
+    daughter ['ben', 'boy', 'child', 'dad', 'dependents', 'father', 'fils', 'male', 'male offspring', 
+              'mom', 'mother', 'parent', 'parents', 'son']
+
+    father ['child', 'children', 'classical', 'daughter', 'descendant', 'destroy', 'effect', 'end', 
+            'family', 'female parent', 'finish', 'halt', 'heir', 'inheritor', 'issue', 'kill', 'lineage', 
+            'mom', 'mother', 'offspring', 'posterity', 'progeny', 'result', 'ruin', 'scion', 'seed', 
+            'son', 'stay', 'stock', 'stop', 'successor', 'supporter']
+
+    son ['child', 'dad', 'daughter', 'father', 'female', 'female offspring', 'girl', 'parent']
+```
+
+
+# Synonyms Module Usage
+<p align="justify">
+ A <i>synonym</i> is a word or phrase that means exactly or nearly the same as another word or phrase in the same language.
+
+Synonym examples:
+- happy, joyful, elated, cheerful
+- bad, evil, rotten, corrupt  
+- cold, chilly, freezing, frosty
+</p>
+
+```python
+from wordhoard import Synonyms
+
+synonym = Synonyms('mother')
+synonym_results = synonym.find_synonyms()
+print(synonym_results)
+['ancestor', 'antecedent', 'architect', 'author', 'begetter', 'beginning', 'child-bearer', 'creator', 'dam',
+ 'female parent', 'forebearer', 'forefather', 'foster mother', 'founder', 'fount', 'fountain', 'fountainhead',
+ 'genesis', 'inspiration', 'inventor', 'lady', 'ma', 'maker', 'mam', 'mama', 'mamma', 'mammy', 'mater', 'materfamilias',
+ 'matriarch', 'mom', 'momma', 'mommy', 'mother-in-law', 'mum', 'mummy', 'nurse', 'old lady', 'old woman', 'origin',
+ 'originator', 'para I', 'parent', 'predecessor', 'primipara', 'procreator', 'producer', 'progenitor', 'provenience',
+ 'puerpera', 'quadripara', 'quintipara', 'sire', 'source', 'spring', 'start', 'stimulus', 'supermom',
+ 'surrogate mother', 'wellspring']
+```
+
+## Synonyms written to Python dictionary
+
+```python
+from wordhoard import Synonyms
+
+synonyms_results = {}
+list_of_words = ['mother', 'daughter', 'father', 'son']
+
+for word in list_of_words:
+    synonym = Synonyms(word)
+    results = synonym.find_synonyms()
+    synonyms_results[word] = results
+
+for key, value in synonyms_results.items():
+    print(key, value)
+
+    mother['female parent', 'ma', 'mama', 'mamma', 'mammy', 'mater', 'mom', 'momma', 'mommy', 
+           'mother-in-law', 'mum', 'mummy', 'para I', 'parent', 'primipara', 'puerpera', 
+           'quadripara', 'quintipara', 'supermom', 'surrogate mother']
+
+    daughter['female offspring', 'girl', "mother's daughter"]
+
+    father['begetter', 'dad', 'dada', 'daddy', 'father-in-law', 'male parent', 'old man', 'pa', 'papa', 
+           'pappa', 'parent', 'pater', 'pop']
+
+    son['Jnr', 'Jr', 'Junior', 'boy', 'male offspring', "mama's boy", "mamma's boy", 'man-child', "mother's boy"]
+```
+
+# Hypernyms Module Usage
+
+<p align="justify">
+
+Hypernym: (semantics) A word or phrase whose referents form a set including as a subset the referents of a subordinate term.
+Musical instrument is a hypernym of "guitar" because a guitar is a musical instrument.
+
+ A <i>hypernym</i> is a word with a broad meaning that more specific words fall under.
+Other names for hypernym include umbrella term and blanket term.
+
+Hypernym examples:
+- diamond is a hypernym of gem
+- eagle is a hypernym of bird 
+- red is a hypernym of color
+</p>
+
+```python
+from wordhoard import Hypernyms
+
+hypernym = Hypernyms('red')
+hypernym_results = hypernym.find_hypernyms()
+print(hypernym_results)
+['amount', 'amount of money', 'card games', 'chromatic color', 'chromatic colour', 'color', 
+ 'colour', 'cooking', 'geographical name', 'hair', 'hair color', 'lake', 'person', 'radical', 
+ 'rainbow', 'river', 'spectral color', 'spectral colour', 'sum', 'sum of money']
+```
+
+# Hyponyms Module Usage
+<p align="justify">
+A <i>hyponym</i> is a word of more specific meaning than a general or superordinate term applicable to it.
+
+Hyponym examples:
+- horse is a hyponym of animal
+- table is a hyponym of furniture
+- maple is a hyponym of tree
+
+</p>
+
+```python
+from wordhoard import Hyponyms
+
+hyponym = Hyponyms('horse')
+hyponym_results = hyponym.find_hyponyms()
+print(hyponym_results)
+['american saddlebred', 'andalusian horse', 'arabian horse', 'azteca horse', 'barb horse', 'belgian horse',
+ 'belgian warmblood', 'clydesdale horse', 'coldblood trotter', 'curly horse', 'dutch warmblood', 'ethiopian horses',
+ 'falabella', 'fjord horse', 'friesian horse', 'gypsy horse', 'lusitano', "przewalski's horse", 'shire horse',
+ 'wild horse']
+```
+
+# Homophones Module Usage
+<p align="justify">
+A <i>homophone</i> is a word that is pronounced the same as another word but differs in meaning.
+
+Homophone examples:
+- one is a homophone of won
+- ate is a homophone of eight
+- meet is a homophone of meat
+
+</p>
+
+```python
+from wordhoard import Homophones
+
+homophone = Homophones('horse')
+homophone_results = homophone.find_homophones()
+print(homophone_results)
+['horse is a homophone of hoarse']
+```
+
+# Definitions Module Usage
+<p align="justify">
+A <i>definition</i> is a statement of the exact meaning of a word, especially in a dictionary.
+</p>
+
+```python
+from wordhoard import Definitions
+
+definition = Definitions('mother')
+definition_results = definition.find_definitions()
+print(definition_results)
+["a person's own mother", 'a woman who has given birth to a child (also used as a term of address to your mother)',
+ 'female person who has borne children']
+```
+
+# Additional Features
+<p align="justify">
+<i>wordhoard</i> uses an in-memory cache, which helps prevent redundant queries to an individual resource for the same word.  This application also uses <i>Python logging</i> to both the terminal and to the logfile <i>wordhoard_error.yaml</i>.
+<p>
+
+
+# Dependencies
+
+<p align="justify">
+This package has these dependencies:
+
+1. <b>BeautifulSoup</b>
+2. <b>deep-translator</b>
+3. <b>lxml</b>
+4. <b>requests</b>
+5. <b>urllib3</b>
+<p>
+
+
+# License
+
+<p align="justify">
+The MIT License (MIT).  Please see <a href="https://github.com/johnbumgarner/wordhoard/blob/main/LICENSE">License File</a> for more information.
+<p>
+
