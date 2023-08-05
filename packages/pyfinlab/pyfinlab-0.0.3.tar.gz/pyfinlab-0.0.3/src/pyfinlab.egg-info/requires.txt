@@ -1,0 +1,8 @@
+yfinance>=0.1.60
+tia>=0.3.0
+
+[dev]
+check-manifest
+
+[test]
+coverage
