@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pormalizer/__init__.py
+pormalizer/pormalizer.py
+pormalizer.egg-info/PKG-INFO
+pormalizer.egg-info/SOURCES.txt
+pormalizer.egg-info/dependency_links.txt
+pormalizer.egg-info/not-zip-safe
+pormalizer.egg-info/top_level.txt
