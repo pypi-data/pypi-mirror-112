@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: fsleyes-plugin-mrs
+Version: 0.0.5
+Summary: FSLeyes extension for viewing MRS(I) data formatted as NIfTI-MRS.
+Home-page: UNKNOWN
+Author: William Clarke, University of Oxford
+Author-email: william.clarke@ndcn.ox.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: fsleyes (>=1.0.10)
+
+UNKNOWN
+
+
