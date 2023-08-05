@@ -1,0 +1,17 @@
+weightGIS/FormatExternal.py,sha256=w9tRp5-BtU--RsKhYNgf5JSI1DtZI_EjSOKjhuO-Gj0,36498
+weightGIS/GeoLookup.py,sha256=GD3T8KWOfhyL9lM5lIJVjgJixpGjEchfn7LU8VZOxfI,4370
+weightGIS/PlaceReference.py,sha256=aI3tJlWe0ec6KUUZbq6ojPRJOR9-7MzbzI4hrwjSKVg,19517
+weightGIS/__init__.py,sha256=Ourxv4RB13Z4ZMZ6KhxoD7XfmvufPc40E_zDL83CKwE,723
+weightGIS/id_assignment.py,sha256=vk7R2DXU1zrkIu2LJi9UTWpsjb5oDSejf-B9WH7Yq4A,5542
+weightGIS/weighting/AdjustWeights.py,sha256=pjhabQPgfBNu8H2mtDJ289K0qG7BQVi7EbQOL4W_bh0,8635
+weightGIS/weighting/AssignWeights.py,sha256=VOS01Z-QzCCHSSJczACNbX8pZ4YCVbUoKfVNBazZA7M,11380
+weightGIS/weighting/ConstructWeights.py,sha256=xF3EJq4l6qhWGLxmwLIrMUwd51JbBzO3qeSmet4Oo34,22985
+weightGIS/weighting/WeightExternal.py,sha256=MA4onxoi9m0Hn2XNMhf9xWVvOKjxhlgi0WS4XeUc564,15639
+weightGIS/weighting/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+weightGIS/weighting/Access/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+weightGIS/weighting/Access/access_weighted.py,sha256=bmfQeykJE7CAkvuHBvyw60UN8F8BNkmjn3iKsCSpuAY,2290
+weightGIS-0.11.0.dist-info/LICENSE,sha256=m6Hmim3NNA-_y97X6yarvaf6IUerwLQFF3hlCXsc0KI,1090
+weightGIS-0.11.0.dist-info/METADATA,sha256=MudIrPQr54Lre4psPfDxL_Buy0CQPB2kE2KKCCwPcyM,2703
+weightGIS-0.11.0.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+weightGIS-0.11.0.dist-info/top_level.txt,sha256=QnofQIgp0VHzBoyUFbrAeVTIbQRrzdL0O9rdMH7C994,10
+weightGIS-0.11.0.dist-info/RECORD,,
