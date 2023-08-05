@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: soxyproxy
+Version: 0.4.0
+Summary: Pure Python SOCKS proxy server implementation
+Home-page: https://github.com/shpaker/soxyproxy
+Author: Aleksandr Shpak
+Author-email: shpaker@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pydantic (>=1.8.2,<2.0.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)
+Project-URL: Repository, https://github.com/shpaker/soxyproxy
+Description-Content-Type: text/markdown
+
+# SoxyProxy
+
+## Getting Started
+
+### Installing
+
+SoxyProxy can be installed using pip:
+
+```bash
+pip install soxyproxy
+```
+
+## Usage
+
+To test that installation was successful, try:
+
+```bash
+python -m soxyproxy --help
+```
+
+## Features
+
+### Protocols
+
+- [x] SOCKS4
+
+- [x] SOCKS5
+
+  * Protocols
+    * [x] TCP
+    * [ ] UDP
+
+  * Auth
+    * [x] None
+    * [x] Login/Password
+    * [ ] GSSAPI
+
+  * CMC
+    * [x] Connect
+    * [ ] Bind
+    * [ ] ASSOCIATE
+
+  * ADDR
+    * [x] IPv4
+    * [x] IPv6
+    * [x] Domain
+
+### Rulesets
+
