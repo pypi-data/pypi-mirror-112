@@ -1,0 +1,18 @@
+[udata.apis]
+gouvfr_oembed = udata_gouvfr.views.oembed
+
+[udata.front]
+gouvfr = udata_gouvfr.frontend
+
+[udata.harvesters]
+maaf = udata_gouvfr.harvesters.maaf:MaafBackend
+
+[udata.models]
+gouvfr = udata_gouvfr.models
+
+[udata.tasks]
+gouvfr = udata_gouvfr.tasks
+
+[udata.themes]
+gouvfr = udata_gouvfr.theme.gouvfr
+
