@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: tap-dbt-artifacts
+Version: 0.0.2
+Summary: `tap-dbt-artifacts` is a Singer tap for dbt artifacts, built with the Meltano SDK for Singer Taps.
+License: Apache 2.0
+Author: Prratek Ramchandani
+Author-email: prratek.95@gmail.com
+Requires-Python: >=3.6.2,<3.9
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: singer-sdk (>=0.2.0,<0.3.0)
