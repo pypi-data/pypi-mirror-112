@@ -1,0 +1,13 @@
+CHANGES.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+pychonet/__init__.py
+pychonet/eojx.py
+pychonet/epc.py
+pychonet/functions.py
+pychonet.egg-info/PKG-INFO
+pychonet.egg-info/SOURCES.txt
+pychonet.egg-info/dependency_links.txt
+pychonet.egg-info/top_level.txt
