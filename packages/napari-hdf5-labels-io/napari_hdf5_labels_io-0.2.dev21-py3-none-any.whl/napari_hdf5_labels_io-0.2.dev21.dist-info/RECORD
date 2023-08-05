@@ -1,0 +1,13 @@
+napari_hdf5_labels_io/__init__.py,sha256=d_DAqsX_LIZBIkSMZlWiFDnOCnJCLE1ZLyw_yEu16o0,253
+napari_hdf5_labels_io/_reader.py,sha256=oeTDwce1DLXCVuo9cEo4a9aKifckxpK5g15HU4-WG7I,3677
+napari_hdf5_labels_io/_version.py,sha256=pCqo-KAf-9lNo2RDCGsBVUTYpH2YEbpOgFNcvDS_Z6c,191
+napari_hdf5_labels_io/_writer.py,sha256=Gdhyp8FgUGvF69U1D3QPk3QLbxVciF_eWFjDKMACoVo,5138
+napari_hdf5_labels_io/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_hdf5_labels_io/_tests/test_reader.py,sha256=G0rG5lsza6VCkxJxdNcv4bdW0zxJMqaaLzMSuUN2dbA,1370
+napari_hdf5_labels_io/_tests/test_writer.py,sha256=9eKoqFeFFIyZYKPAABfN4AtJmVW4Pj_WaUrcUhAwvZA,946
+napari_hdf5_labels_io-0.2.dev21.dist-info/LICENSE,sha256=N0P3pKtRMvfb64jmgJdlerg3TnS0a2QC776AzPsbZIg,35128
+napari_hdf5_labels_io-0.2.dev21.dist-info/METADATA,sha256=hr7JGCaJ1zLh5gQAlrR-5DSxHyYPdV0EfYR1AK7lT8g,4583
+napari_hdf5_labels_io-0.2.dev21.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+napari_hdf5_labels_io-0.2.dev21.dist-info/entry_points.txt,sha256=4xKA_s9eIbhhjI-tFhMIR4gloVJqQXleAzkm8jQYSDA,63
+napari_hdf5_labels_io-0.2.dev21.dist-info/top_level.txt,sha256=CVW1HBr_BKyOtx_pq4QEZc_KvfINyuse2pxNpq0I6LM,22
+napari_hdf5_labels_io-0.2.dev21.dist-info/RECORD,,
