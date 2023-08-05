@@ -1,0 +1,3 @@
+[console_scripts]
+baguette=baguette_bi.cli:app
+
