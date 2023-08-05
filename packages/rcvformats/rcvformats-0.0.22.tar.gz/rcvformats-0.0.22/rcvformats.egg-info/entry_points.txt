@@ -1,0 +1,3 @@
+[console_scripts]
+rcvformats = rcvformats.bin.cli:main
+
