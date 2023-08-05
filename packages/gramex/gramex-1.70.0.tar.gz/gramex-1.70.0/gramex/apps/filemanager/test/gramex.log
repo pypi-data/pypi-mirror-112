@@ -1,0 +1,69 @@
+INFO    15-Jun 16:45:53 __init__ PORT Gramex 1.69.2 | D:\site\gramener.com\viz\async-gramex\gramex\apps\filemanager\test | Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)]
+DEBUG   15-Jun 16:45:53 config PORT Loading config: d:\site\gramener.com\viz\async-gramex\gramex\gramex.yaml
+DEBUG   15-Jun 16:45:53 config PORT Loading config: D:\site\gramener.com\viz\async-gramex\gramex\apps\filemanager\test\gramex.yaml
+DEBUG   15-Jun 16:45:53 config PORT Loading config: d:\site\gramener.com\viz\async-gramex\gramex\apps\ui\gramex.yaml
+DEBUG   15-Jun 16:45:53 config PORT Loading config: d:\site\gramener.com\viz\async-gramex\gramex\apps\filemanager\gramex.yaml
+DEBUG   15-Jun 16:45:53 config PORT Loading config: d:\site\gramener.com\viz\async-gramex\gramex\apps\ui\gramex.yaml
+DEBUG   15-Jun 16:45:53 config PORT Loading config: d:\site\gramener.com\viz\async-gramex\gramex\apps\filemanager\gramex.yaml
+DEBUG   15-Jun 16:45:53 config PORT Loading config: d:\site\gramener.com\viz\async-gramex\gramex\apps\ui\gramex.yaml
+DEBUG   15-Jun 16:45:53 __init__ PORT Loading service: version
+DEBUG   15-Jun 16:45:53 __init__ PORT Loading service: mime
+DEBUG   15-Jun 16:45:53 __init__ PORT Loading service: threadpool
+DEBUG   15-Jun 16:45:53 __init__ PORT Loading service: cache
+DEBUG   15-Jun 16:45:53 __init__ PORT Loading service: handlers
+DEBUG   15-Jun 16:45:53 __init__ PORT Loading service: log
+DEBUG   15-Jun 16:45:53 __init__ PORT Loading service: eventlog
+DEBUG   15-Jun 16:45:53 __init__ PORT Loading service: app
+DEBUG   15-Jun 16:45:53 __init__ PORT Loading service: schedule
+INFO    15-Jun 16:45:53 __init__ PORT Initialising schedule:gramex_update
+DEBUG   15-Jun 16:45:53 scheduler PORT Scheduling gramex_update after 26046s
+DEBUG   15-Jun 16:45:53 __init__ PORT Loading service: url
+DEBUG   15-Jun 16:45:53 __init__ PORT url: apps/ui/theme-jVZGb (FileHandler) 
+DEBUG   15-Jun 16:45:53 __init__ PORT Gramex update ran recently. Deferring check.
+DEBUG   15-Jun 16:45:54 config PORT Loading config: d:\site\gramener.com\viz\async-gramex\gramex\apps.yaml
+DEBUG   15-Jun 16:45:54 config PORT Loading config: C:\Users\anand\AppData\Local\Gramex Data\apps\apps.yaml
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/ui/theme-ANgmE (FileHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/ui/bootstrap4-vBC9E (FunctionHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/ui/bootstrap4-4X3mD (FunctionHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/ui/theme-ON1M8 (FileHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/ui/static-eyDbg (FileHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/ui/static-cgFSv (FileHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/ui/bootstrap4-SpyzX (FunctionHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/filemanager/home-AynBQ (FileHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/filemanager/help-T0hUK (FileHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/filemanager/home-UIfG3 (FileHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/filemanager/help-NeeZs (FileHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/ui/static-AOIiQ (FileHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/filemanager/home-static-Jm8mR (FileHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: apps/filemanager/home-static-acoqf (FileHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: default-drive (FormHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: drive1 (DriveHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: drive2 (DriveHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: drive-empty (DriveHandler) 
+DEBUG   15-Jun 16:45:54 __init__ PORT url: favicon (FileHandler) -90
+DEBUG   15-Jun 16:45:54 __init__ PORT url: default (FileHandler) -100
+DEBUG   15-Jun 16:45:54 __init__ PORT Running callback: app
+INFO    15-Jun 16:45:54 __init__ PORT Listening on port 9999
+INFO    15-Jun 16:45:54 __init__ 9999 <Ctrl-B> opens the browser. <Ctrl-D> starts the debugger.
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /test-filemanager.html (::1) 4.00ms default
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /ui/bootstrap/dist/css/bootstrap.min.css (::1) 5.00ms apps/ui/static-AOIiQ
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /ui/lodash/lodash.min.js (::1) 5.00ms apps/ui/static-AOIiQ
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /ui/moment/min/moment.min.js (::1) 5.03ms apps/ui/static-AOIiQ
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /ui/g1/dist/g1.min.js (::1) 4.00ms apps/ui/static-AOIiQ
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /ui/dropzone/dist/min/dropzone.min.js (::1) 9.00ms apps/ui/static-AOIiQ
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /ui/numeral/min/numeral.min.js (::1) 2.02ms apps/ui/static-AOIiQ
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /filemanager/filemanager.js (::1) 3.00ms apps/filemanager/home-static-Jm8mR
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /tape.js (::1) 11.99ms default
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /tape-stream.js (::1) 2.00ms default
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /ui/bootstrap/dist/js/bootstrap.bundle.min.js (::1) 6.00ms apps/ui/static-AOIiQ
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /ui/jquery/dist/jquery.min.js (::1) 6.00ms apps/ui/static-AOIiQ
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /ui/font-awesome/css/font-awesome.min.css (::1) 3.00ms apps/ui/static-AOIiQ
+INFO    15-Jun 16:45:55 __init__ 9999 200 POST /drive1 (::1) 146.00ms drive1
+INFO    15-Jun 16:45:55 __init__ 9999 200 POST /drive2 (::1) 108.01ms drive2
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /drive1?c=delete&c=file&c=date&c=size&_limit=100&_format=json&_meta=y (::1) 8.00ms drive1
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /drive2?c=delete&c=file&c=date&c=size&_limit=100&_format=json&_meta=y (::1) 8.99ms drive2
+INFO    15-Jun 16:45:55 __init__ 9999 200 GET /default?c=file&c=size&c=mime&c=date&c=delete&c=tags&_limit=100&_format=json&_meta=y (::1) 6.00ms default-drive
+INFO    15-Jun 16:45:56 __init__ 9999 200 GET /default?c=file&c=size&c=mime&c=date&c=delete&c=tags&_limit=1&_format=json&_meta=y (::1) 3.00ms default-drive
+INFO    15-Jun 16:45:56 __init__ 9999 200 GET /default?c=file&c=size&c=mime&c=date&c=delete&c=tags&_limit=2&_format=json&_meta=y (::1) 3.03ms default-drive
+INFO    15-Jun 16:45:56 __init__ 9999 200 GET /drive-empty?c=file&c=size&c=mime&c=date&c=delete&c=tags&_limit=100&_format=json&_meta=y (::1) 7.99ms drive-empty
+INFO    15-Jun 16:45:56 __init__ 9999 304 GET /default?c=file&c=size&c=mime&c=date&c=delete&c=tags&_limit=100&_format=json&_meta=y (::1) 2.00ms default-drive
