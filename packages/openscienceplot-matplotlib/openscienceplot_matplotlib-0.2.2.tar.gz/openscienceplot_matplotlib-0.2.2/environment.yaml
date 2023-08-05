@@ -1,0 +1,8 @@
+channels:
+  - conda-forge
+dependencies:
+  # dependencies
+  - python
+  - matplotlib
+  - numpy
+  - h5py
