@@ -1,0 +1,9 @@
+target_name,provider_name,device,model,quantum,hybrid,max_size
+braket_rigetti_8,Braket,Rigetti,Aspen-8,True,True,31
+braket_rigetti,Braket,Rigetti,Aspen-9,True,True,31
+braket_ionq,Braket,IonQ,IonQ Device,True,True,11
+braket_dwave_2000Q,Braket,D-Wave Systems,DW_2000Q_6,True,False,2048
+braket_dwave_advantage,Braket,D-Wave Systems,Advantage_system1.1,True,False,5760
+braket_simulator,Braket,Amazon Braket,SV1,False,True,34
+braket_simulator_tn1,Braket,Amazon Braket,TN1,False,True,50
+csample,QCI,csample,96_core,False,False,50000
