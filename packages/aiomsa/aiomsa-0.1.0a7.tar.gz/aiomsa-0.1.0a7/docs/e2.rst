@@ -1,0 +1,22 @@
+.. _aiomsa-e2:
+
+==
+E2
+==
+
+.. currentmodule:: aiomsa.abc
+
+All communication with the E2T is done through the :class:`~.E2Client`. Its methods are
+asynchronous and entirely abstract -- to be implemented in the portability layer by RIC
+platform developers.
+
+.. autoclass:: E2Client
+   :members:
+   :special-members: __aenter__, __aexit__
+
+The :class:`~.Subscription` class can be iterated over to yield indication messages on
+active E2T subscriptions.
+
+.. autoclass:: Subscription
+   :members:
+   :special-members: __aiter__, __anext__
