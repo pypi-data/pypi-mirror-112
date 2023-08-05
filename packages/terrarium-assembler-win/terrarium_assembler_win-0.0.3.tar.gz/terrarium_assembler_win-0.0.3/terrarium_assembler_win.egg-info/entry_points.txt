@@ -1,0 +1,3 @@
+[console_scripts]
+terrarium_assembler_win = terrarium_assembler_win.cli:main
+

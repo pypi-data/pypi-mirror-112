@@ -1,0 +1,16 @@
+README.rst
+setup.py
+terrarium_assembler_win/__init__.py
+terrarium_assembler_win/cli.py
+terrarium_assembler_win/nuitkaflags.py
+terrarium_assembler_win/ta.py
+terrarium_assembler_win/utils.py
+terrarium_assembler_win/wheel_utils.py
+terrarium_assembler_win/windows-builder.py
+terrarium_assembler_win.egg-info/PKG-INFO
+terrarium_assembler_win.egg-info/SOURCES.txt
+terrarium_assembler_win.egg-info/dependency_links.txt
+terrarium_assembler_win.egg-info/entry_points.txt
+terrarium_assembler_win.egg-info/not-zip-safe
+terrarium_assembler_win.egg-info/requires.txt
+terrarium_assembler_win.egg-info/top_level.txt
