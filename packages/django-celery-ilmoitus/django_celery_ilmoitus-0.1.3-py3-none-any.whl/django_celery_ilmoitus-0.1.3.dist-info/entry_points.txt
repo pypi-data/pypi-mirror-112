@@ -1,0 +1,6 @@
+[django.osoitteet]
+ilmoitus = ilmoitus.nakyma
+
+[django.sovellus]
+ilmoitus = ilmoitus.sovellus:Ilmoitus
+
