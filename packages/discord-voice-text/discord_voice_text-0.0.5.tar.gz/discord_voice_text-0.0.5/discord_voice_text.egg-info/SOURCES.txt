@@ -1,0 +1,10 @@
+README.md
+setup.py
+discord_voice/__init__.py
+discord_voice/ctx.py
+discord_voice/embed.py
+discord_voice_text.egg-info/PKG-INFO
+discord_voice_text.egg-info/SOURCES.txt
+discord_voice_text.egg-info/dependency_links.txt
+discord_voice_text.egg-info/requires.txt
+discord_voice_text.egg-info/top_level.txt
