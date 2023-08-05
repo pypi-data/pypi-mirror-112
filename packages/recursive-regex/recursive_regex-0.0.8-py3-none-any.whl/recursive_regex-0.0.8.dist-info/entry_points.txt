@@ -1,0 +1,4 @@
+[console_scripts]
+recursive_regex = recursive_regex.recursive_regex:main
+recursive_regex_sample_config = recursive_regex.sample_config:sample_config
+

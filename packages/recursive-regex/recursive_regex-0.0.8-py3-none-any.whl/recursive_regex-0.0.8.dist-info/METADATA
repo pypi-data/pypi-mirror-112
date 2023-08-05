@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: recursive-regex
+Version: 0.0.8
+Summary: Search an regular expresion recursively in a folder and substitute.
+Home-page: https://github.com/isidroas/recursive_regex
+Author: Isidro Arias
+Author-email: isidroariass@hotmail.es
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/isidroas/recursive_regex/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyYAML
+
+# Recursive REGEX
+
+Search an regular expresion recursively in a folder and substitute.
+
+## Installation
+```bash
+pip install recursive_regex
+```
+
+### From source
+```bash
+git clone https://github.com/isidroas/recursive_regex
+cd recursive_regex
+# Install in editable mode
+pip install -e .
+```
+
+
