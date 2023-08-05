@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: bamr
+Version: 0.1.1
+Summary: bamr is a lightweight python library for reading bam files
+Home-page: https://github.com/cschu/bamr
+Author: Christian Schudoma
+Author-email: cschu1981@gmail.com
+License: MIT
+Download-URL: https://github.com/cschu/bamr/archive/refs/tags/v0.1.1.tar.gz
+Description: UNKNOWN
+Keywords: bam reading light-weight library
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
