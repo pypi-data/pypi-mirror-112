@@ -1,0 +1,4 @@
+include LICENSE
+include MANIFEST.in
+include analytics_sdk/analysis-wrapper/*
+include analytics_sdk/analysis-wrapper/media/*

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: opsramp-analytics-utils
+Version: 1.3.0
+Summary: OpsRamp Analytics SDK
+Home-page: https://github.com/opsramp/analytics-sdk
+Author: Donald Lafranchi
+Author-email: it.corridor051@gmail.com
+License: UNKNOWN
+Description: # OpsRamp Analytics Utilities
+        
+        This is a SDK for writing OpsRamp analytics reports. It is based on [dash](https://plotly.com/dash/), and it has utility functions.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
