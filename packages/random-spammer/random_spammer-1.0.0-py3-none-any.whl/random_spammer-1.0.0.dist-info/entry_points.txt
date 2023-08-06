@@ -1,0 +1,3 @@
+[console_scripts]
+random_spammer = random_spammer.__init__:main
+
