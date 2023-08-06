@@ -1,0 +1,7 @@
+acct>=5
+aiohttp>=3.6.1
+asyncssh>=1.18.0
+pop>=16.4
+pyyaml>=5.1.2
+rend>=6
+ClusterShell>=1.8.1

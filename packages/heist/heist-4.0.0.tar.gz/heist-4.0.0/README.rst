@@ -1,0 +1,75 @@
+=====
+Heist
+=====
+
+Heist creates network tunnels for distributing and managing agents. While it has
+been originally built to deploy and manage Salt Minions, it can be used to
+distribute and manage other agents or plugins if extended to do so.
+
+Using Heist is very easy, Start by downloading Heist. Just install via
+`pip`:
+
+.. code-block:: bash
+
+        pip install heist
+
+
+Heist Manager
+=============
+
+In order to run Heist you will need to specify a Heist manager. By default the `grains`
+heist manager is available when installing heist. Another example of a heist manager is
+`salt.minion` but this will require a user to install the `heist-salt` project:
+
+.. code-block:: bash
+
+        pip install heist-salt
+
+
+Making Your Roster
+==================
+
+A Roster is a file used by Heist to map login information to the
+systems in your environment. This file can be very simple and just
+needs to tell Heist where your systems are and how to log into them
+via ssh. Open a file called `roster.cfg` and add the data needed to connect
+to a remote system via ssh:
+
+.. code-block:: yaml
+
+    system_name:
+      host: 192.168.4.4
+      username: fred
+      password: freds_password
+
+.. note::
+
+    This example is very simple, heist supports virtually all available authentication
+    options for ssh.
+
+
+The roster files typically all live inside of a roster directory. But to get
+started we will execute a single roster file with `heist` using the `grains` Heist
+manager:
+
+.. code-block:: bash
+
+    heist grains -R roster.cfg
+
+Assuming your roster is correct, heist will now connect to the remote
+system, deploy a the grains binary and return the grains data.
+
+
+Tear Down
+=========
+
+Heist is able to automatically clean up as well! Just soft kill
+your heist application and it will reach out to all connections, tell them to
+remove the deployed artifacts from the target systems and stop the service!
+Like a proper heist these should be no evidence left behind!
+
+
+Using Heist to Deploy Salt Minions
+==================================
+If you want to use Heist to deploy and manage Salt, you will need to install
+heist-salt`.
