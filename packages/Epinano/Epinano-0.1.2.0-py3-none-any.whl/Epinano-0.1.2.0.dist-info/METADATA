@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: Epinano
+Version: 0.1.2.0
+Summary: call variants, compute variants frequencies from bam file and use the frequencies to predict RNA base modifications
+Home-page: https://github.com/enovoa/EpiNano
+Author: Huanle Liu && Eva Novoa
+Author-email: huanle.liu@crg.eu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: atomicwrites (==1.4.0)
+Requires-Dist: attrs (==21.2.0)
+Requires-Dist: biopython (==1.76)
+Requires-Dist: cloudpickle (==1.6.0)
+Requires-Dist: dask (==2.5.2)
+Requires-Dist: fsspec (==2021.6.1)
+Requires-Dist: future (==0.17.1)
+Requires-Dist: h5py (==2.10.0)
+Requires-Dist: importlib-metadata (==4.6.1)
+Requires-Dist: locket (==0.2.1)
+Requires-Dist: mlpy (==3.5.0)
+Requires-Dist: more-itertools (==8.8.0)
+Requires-Dist: numpy (==1.17.2)
+Requires-Dist: pandas (==0.24.2)
+Requires-Dist: partd (==1.2.0)
+Requires-Dist: pluggy (==0.13.1)
+Requires-Dist: py (==1.10.0)
+Requires-Dist: pysam (==0.15.3)
+Requires-Dist: pytest (==4.4.1)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2021.1)
+Requires-Dist: scikit-learn (==0.20.2)
+Requires-Dist: scipy (==1.5.4)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: toolz (==0.11.1)
+Requires-Dist: typing-extensions (==3.10.0.0)
+Requires-Dist: zipp (==3.5.0)
+
+Epinano_Varaints: Call Variants, Compute Variants Frequencies and use them detect RNA base modifications.
+
+Please visit https://github.com/enovoa/EpiNano for more details.
+
+
+
