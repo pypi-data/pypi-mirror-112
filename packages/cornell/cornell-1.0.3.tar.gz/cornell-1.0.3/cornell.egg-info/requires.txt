@@ -1,0 +1,14 @@
+flask>=2.0.0
+yarl
+requests
+structlog
+toolz
+vcrpy~=4.0
+xmltodict
+click
+blinker
+
+[dev]
+pylint>=2.6.0
+requests-mock>=1.8.0
+pytest>=6.2.2
