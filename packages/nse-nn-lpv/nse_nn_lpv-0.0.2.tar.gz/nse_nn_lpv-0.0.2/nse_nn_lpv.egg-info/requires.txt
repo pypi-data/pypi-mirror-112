@@ -1,0 +1,4 @@
+numpy
+scipy
+dolfin_navier_scipy>=1.1.2
+multidim_galerkin_pod>=1.0.3
