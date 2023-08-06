@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+bubble_sorter.egg-info/PKG-INFO
+bubble_sorter.egg-info/SOURCES.txt
+bubble_sorter.egg-info/dependency_links.txt
+bubble_sorter.egg-info/top_level.txt
