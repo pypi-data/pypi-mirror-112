@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+pytorch_gan_metrics/__init__.py
+pytorch_gan_metrics/calc_fid_stats.py
+pytorch_gan_metrics/calc_metrics.py
+pytorch_gan_metrics/core.py
+pytorch_gan_metrics/inception.py
+pytorch_gan_metrics/utils.py
+pytorch_gan_metrics.egg-info/PKG-INFO
+pytorch_gan_metrics.egg-info/SOURCES.txt
+pytorch_gan_metrics.egg-info/dependency_links.txt
+pytorch_gan_metrics.egg-info/requires.txt
+pytorch_gan_metrics.egg-info/top_level.txt
+test/test.py
