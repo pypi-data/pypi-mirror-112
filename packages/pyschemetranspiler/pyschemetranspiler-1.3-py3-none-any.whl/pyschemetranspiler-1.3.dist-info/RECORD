@@ -1,0 +1,16 @@
+pyschemetranspiler/__init__.py,sha256=obg_THd7EBGpJMNEYBKFnNqM1F5FgSpO6A4UgSVoNn8,733
+pyschemetranspiler/__main__.py,sha256=9TS7-ZBZNygjyEzWfClEC2ejcwjiprlVyEz9SJ0NSSs,763
+pyschemetranspiler/builder.py,sha256=9QJl74y_DeNI0kvGaCnC8P_AoDQStrSDyjcbjtzr7Ac,83019
+pyschemetranspiler/coloring.py,sha256=wgQjRREA63LUAob0YMFbiX4lbGAxt_rTlEKAaey6wS4,1206
+pyschemetranspiler/converter.py,sha256=fQmOkBsBXX3soJvHt_yXRFuhRBJBQTB7VLbswoAUu20,4189
+pyschemetranspiler/exceptions.py,sha256=SEY3kXsYuoeJSU353VAjClIh40dqHUOTQ-_GIfYUIlU,2388
+pyschemetranspiler/extraCodes.py,sha256=nAdua9c_TlGLbQS_DJqz_KNRRmuT_53aeXSjaEo1JPs,4655
+pyschemetranspiler/parser.py,sha256=cXLRp9Vdgp-3mkvgDGFbYmhETizDdMGq0R8HGTntwRw,946
+pyschemetranspiler/run.py,sha256=n0LnlmLAaujdLlePPQjLDku2rwnp8S9AcpgFJoeR7js,2382
+pyschemetranspiler/shared.py,sha256=nN7kVvg4XQdqO9l5RlbQt2aZOhrYLuyz28YfpYjufQ0,771
+pyschemetranspiler-1.3.dist-info/LICENSE,sha256=QyiQdnLfvr9AGdpmFDDBUPI-clOjTb2J8V8SaDKOuJU,32402
+pyschemetranspiler-1.3.dist-info/METADATA,sha256=voBkAERR1DXNlxAMMRwQHyCiE9ZX7Rk_I1jo-04Ov7Q,5501
+pyschemetranspiler-1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyschemetranspiler-1.3.dist-info/entry_points.txt,sha256=b1U-O7X6EAhg_j1XsMyS0HHQpJ7hWaBQGzUJXMKqJUs,62
+pyschemetranspiler-1.3.dist-info/top_level.txt,sha256=PjO8PoiMR7EHPHh92R7Qds5p7IsLhRiwVTuT-QUwfNo,19
+pyschemetranspiler-1.3.dist-info/RECORD,,
