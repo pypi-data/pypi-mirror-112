@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: argumentative-question-classifier
+Version: 0.86
+Summary: question classifier for argumentative questions in python.
+Home-page: UNKNOWN
+Author: Yamen Ajjour
+Author-email: yajjour@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-learn (==0.24.2)
+Requires-Dist: spacy (==3.1.0)
+Requires-Dist: pandas (==1.3)
+
+UNKNOWN
+
