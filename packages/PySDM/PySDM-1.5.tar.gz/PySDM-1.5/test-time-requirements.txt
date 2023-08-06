@@ -1,0 +1,7 @@
+# test-time requirements
+matplotlib>=3.2.2
+ghapi
+pytest
+
+# note: if cloning both PySDM and PySDM examples, consider "pip install -e"
+PySDM-examples @ git+git://github.com/atmos-cloud-sim-uj/PySDM-examples@0b7c0a8#egg=PySDM-examples
