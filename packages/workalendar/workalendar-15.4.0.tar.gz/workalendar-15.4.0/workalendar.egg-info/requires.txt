@@ -1,0 +1,13 @@
+skyfield
+skyfield-data
+python-dateutil
+lunardate
+pyCalverter
+pyluach
+setuptools>=1.0
+
+[:platform_system == "Windows"]
+tzdata
+
+[:python_version < "3.9"]
+backports.zoneinfo
