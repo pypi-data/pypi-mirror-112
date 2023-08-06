@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+api/__init__.py
+api/client.py
+api/conf.py
+api/sids.py
+api/utils.py
+api/benchmarks/__init__.py
+api/benchmarks/benchmarks.py
+sparclclient.egg-info/PKG-INFO
+sparclclient.egg-info/SOURCES.txt
+sparclclient.egg-info/dependency_links.txt
+sparclclient.egg-info/requires.txt
+sparclclient.egg-info/top_level.txt
