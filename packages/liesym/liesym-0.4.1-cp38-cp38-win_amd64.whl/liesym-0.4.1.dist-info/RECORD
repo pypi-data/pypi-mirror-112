@@ -1,0 +1,17 @@
+liesym/__init__.py,sha256=Ei3OG-gOgNZl7p2l0hG6029Tt004lQbNpe8to27Rayk,645
+liesym/liesym.cp38-win_amd64.pyd,sha256=VWaSf3hBYaZuzPat4yavWF9uoyrD2lOkBjDlESA_OOc,667136
+liesym/algebras/__init__.py,sha256=xKHaXiYiI9lMRwTwXxTfnM4QjTtsrciKt80iY3XigJc,224
+liesym/algebras/_backend.py,sha256=N5ItSRnMn2Bh2X9biaYswlieOMrNEnyPfNoZlFv5pxk,3578
+liesym/algebras/_base.py,sha256=a4jJrmSDTGIXN6QzfjRAJqqZaB1frcUVSVP2XdMCwCA,20859
+liesym/algebras/_classic.py,sha256=A70SSO8tLe6ayq1iUyqjjFGKcWwPMkj_1MG3DFC0920,6081
+liesym/algebras/_exceptionals.py,sha256=o1iE1ASpmHMWuPz9qJhE8fPO0qWT9zImnMh4V4xlLz4,3870
+liesym/algebras/_methods.py,sha256=cotEHFIMVOv-enaUZqlukEsQKKESX0VWjT6j-MLDCQY,2589
+tests/__init__.py,sha256=GCiuLzpQl7mLjd1JHLlyV93wsngwHgUP6mOgyz8rDjo,90
+tests/test_backend.py,sha256=8_rchf_CAIXnEWLPShFLWrejKMiECQ2UquFTLBp-pd4,3929
+tests/test_classic.py,sha256=CjBqmDLT2MVdqO_5zVi8E5e6PcJUQKsEcILomS8PwFY,12432
+tests/test_exceptionals.py,sha256=nB1uFhPEQaY4_FII-EXF93e-bBJ7ArCStUzWBhGQCNg,10450
+liesym-0.4.1.dist-info/LICENSE,sha256=WIxrBftRIeLQgtkQL7ykU-QPKcFC0ZlodlNRCbBDglY,1095
+liesym-0.4.1.dist-info/METADATA,sha256=Fw02tADwpMV9ABXHwuLWjUCW5m2D4soGtMoa93P_qoo,4546
+liesym-0.4.1.dist-info/WHEEL,sha256=HLtxc_HoM-kGM7FPJVPSnTt0Nv2G3fZEAjT3ICdG8uY,100
+liesym-0.4.1.dist-info/top_level.txt,sha256=437LYk_-wdRgHDZNLokSy4BtPc2diiIZnL0Bt4IIiqo,13
+liesym-0.4.1.dist-info/RECORD,,
