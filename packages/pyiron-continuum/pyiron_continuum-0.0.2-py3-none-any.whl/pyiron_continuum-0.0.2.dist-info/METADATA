@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pyiron-continuum
+Version: 0.0.2
+Summary: Repository for user-generated plugins to the pyiron IDE.
+Home-page: https://github.com/pyiron/pyiron_continuum
+Author: Max-Planck-Institut für Eisenforschung GmbH - Computational Materials Design (CM) Department
+Author-email: huber@mpie.de
+License: BSD
+Keywords: pyiron
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE
+Requires-Dist: matplotlib (>=3.4.2)
+Requires-Dist: numpy (>=1.21.0)
+Requires-Dist: pyiron-base (>=0.2.19)
+Provides-Extra: fenics
+Requires-Dist: fenics (>=2019.1.0) ; extra == 'fenics'
+Requires-Dist: mshr (>=2019.1.0) ; extra == 'fenics'
+
+http://pyiron.org
+
