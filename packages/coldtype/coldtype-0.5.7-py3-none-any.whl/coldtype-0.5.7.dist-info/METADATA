@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: coldtype
+Version: 0.5.7
+Summary: Functions for manual vectorized typesetting
+Home-page: https://github.com/goodhertz/coldtype
+Author: Rob Stenson / Goodhertz
+Author-email: rob@goodhertz.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: lxml
+Requires-Dist: fonttools[ufo]
+Requires-Dist: fontPens
+Requires-Dist: more-itertools
+Requires-Dist: easing-functions
+Requires-Dist: timecode
+Requires-Dist: mido
+Requires-Dist: defcon
+Requires-Dist: freetype-py
+Requires-Dist: uharfbuzz (>=0.14.0)
+Requires-Dist: unicodedata2
+Requires-Dist: python-bidi
+Requires-Dist: rich
+Provides-Extra: c
+Requires-Dist: srt ; extra == 'c'
+Requires-Dist: noise ; extra == 'c'
+Provides-Extra: experimental
+Requires-Dist: pynput ; extra == 'experimental'
+Requires-Dist: pyaudio ; extra == 'experimental'
+Requires-Dist: rtmidi ; extra == 'experimental'
+Requires-Dist: noise ; extra == 'experimental'
+Provides-Extra: skia
+Requires-Dist: skia-python (>=86.0) ; extra == 'skia'
+Provides-Extra: viewer
+Requires-Dist: glfw ; extra == 'viewer'
+Requires-Dist: PyOpenGL ; extra == 'viewer'
+Requires-Dist: PyOpenGL-accelerate ; extra == 'viewer'
+Requires-Dist: skia-python (>=86.0) ; extra == 'viewer'
+Requires-Dist: skia-pathops ; extra == 'viewer'
+Requires-Dist: SimpleWebSocketServer ; extra == 'viewer'
+Requires-Dist: watchdog (<2.0.0) ; extra == 'viewer'
+Requires-Dist: noise ; extra == 'viewer'
+Requires-Dist: ufo2ft ; extra == 'viewer'
+Requires-Dist: numpy ; extra == 'viewer'
+Provides-Extra: webviewer
+Requires-Dist: SimpleWebSocketServer ; extra == 'webviewer'
+Requires-Dist: watchdog (<2.0.0) ; extra == 'webviewer'
+
+
+# Coldtype
+
+### Programmatic display typography
+
+More info available at: [coldtype.goodhertz.com](https://coldtype.goodhertz.com)
+
+
