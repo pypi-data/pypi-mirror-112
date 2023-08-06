@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: trading-com-dados
+Version: 0.0.4
+Summary: Pacote trading com dados teste
+Home-page: UNKNOWN
+Author: Fabio Minutti Teixeira
+Author-email: fabiomt92@hotmail.com
+License: MIT License
+Description: Exemplo:
+        
+        from trading_com_dados import listarOpcoes
+        
+        df=listarOpcoes('ABEV3')
+Platform: UNKNOWN
