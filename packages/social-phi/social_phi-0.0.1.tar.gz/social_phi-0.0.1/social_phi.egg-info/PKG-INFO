@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: social-phi
+Version: 0.0.1
+Summary: a python package to calculate temporal integrated information of a group of people based on their temporal activites as time series
+Home-page: https://github.com/s-omranpour/Social-Phi
+Author: Soroush Omranpour
+Author-email: soroush.333@gmail.com
+License: MIT license
+Project-URL: Bug Reports, https://github.com/s-omranpour/Social-Phi/issues
+Project-URL: Source, https://github.com/s-omranpour/Social-Phi
+Description: UNKNOWN
+Keywords: information theory,integrated information,consciousness,social network
+Platform: UNKNOWN
+Requires-Python: >=3.7, <4
