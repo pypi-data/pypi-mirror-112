@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "nd_math"
+version = "0.1.1"
+
+description = "Math package for Numerical Design company"
+authors = ["NumDes <info@numdes.com>",
+    "kozorukov <kozorukov@icloud.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+mypy = "^0.910"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
