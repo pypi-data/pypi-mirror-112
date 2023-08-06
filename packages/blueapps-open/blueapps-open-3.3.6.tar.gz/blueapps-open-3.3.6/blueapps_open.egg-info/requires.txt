@@ -1,0 +1,11 @@
+Django==2.2.6
+mysqlclient==1.4.4
+MarkupSafe==1.1.1
+Mako<2.0,>=1.0.6
+requests==2.22.0
+python-json-logger==0.1.7
+whitenoise==3.3.0
+six==1.11.0
+pycrypto==2.6.1
+PyJWT==1.7.1
+cryptography==2.7
