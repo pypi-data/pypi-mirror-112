@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: python-architecture-linter-cli
+Version: 0.1.2
+Summary: An example distribution built with Pants.
+Home-page: UNKNOWN
+Author: Pantsbuild
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (<9.0.0,>=8.0.1)
+Requires-Dist: python-architecture-linter (==0.1.3)
+
+UNKNOWN
+
+
