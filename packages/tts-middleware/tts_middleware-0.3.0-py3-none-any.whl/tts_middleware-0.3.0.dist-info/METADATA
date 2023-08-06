@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tts-middleware
+Version: 0.3.0
+Summary: 
+Author: Abhinav Tushar
+Author-email: abhinav@lepisma.xyz
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pyquery (>=1.4.3,<2.0.0)
+Requires-Dist: sox (>=1.4.1,<2.0.0)
