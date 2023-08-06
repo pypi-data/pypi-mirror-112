@@ -1,0 +1,9 @@
+import yaml
+
+class NodeListClass(list): ...
+class NodeStrClass(str): ...
+
+class Input:
+    name: str
+    @classmethod
+    def from_node(cls, loader: yaml.Loader, node: yaml.nodes.Node) -> Input: ...
