@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/MovieHelper/MovieLink.py
+src/MovieHelper/__init__.py
+src/MovieHelper.egg-info/PKG-INFO
+src/MovieHelper.egg-info/SOURCES.txt
+src/MovieHelper.egg-info/dependency_links.txt
+src/MovieHelper.egg-info/top_level.txt
