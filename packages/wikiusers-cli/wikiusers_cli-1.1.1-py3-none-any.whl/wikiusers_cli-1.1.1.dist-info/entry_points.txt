@@ -1,0 +1,3 @@
+[console_scripts]
+wikiusers=wikiusers_cli:run
+
