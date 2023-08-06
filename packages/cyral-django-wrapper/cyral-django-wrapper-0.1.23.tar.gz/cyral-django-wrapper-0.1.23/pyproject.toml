@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "cyral-django-wrapper"
+version = "0.1.23"
+description = "Enriches your Django database queries with user identity information"
+authors = ["Cyral <support@cyral.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6.2"
+
+[tool.poetry.dev-dependencies]
+black = "^21.6b0"
+flake8 = "^3.9.2"
+isort = "^5.8.0"
+mypy = "^0.902"
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+pytest-django = "^4.4.0"
+typing-extensions = "^3.10.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
