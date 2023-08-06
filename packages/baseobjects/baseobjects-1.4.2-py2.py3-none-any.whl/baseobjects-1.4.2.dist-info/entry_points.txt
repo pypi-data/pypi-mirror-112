@@ -1,0 +1,3 @@
+[console_scripts]
+baseobjects = baseobjects.cli:main
+
