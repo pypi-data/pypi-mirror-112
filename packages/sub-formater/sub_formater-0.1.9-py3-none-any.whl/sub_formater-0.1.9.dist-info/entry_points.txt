@@ -1,0 +1,3 @@
+[console_scripts]
+subfmt=sub_formater.entry:main
+
