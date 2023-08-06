@@ -1,0 +1,5 @@
+[console_scripts]
+nf-dev = norskfaktura.cmd:dev
+nf-install-icons = norskfaktura.cmd:install_icons
+norskfaktura = norskfaktura.cmd:main
+

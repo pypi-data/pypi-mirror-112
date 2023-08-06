@@ -1,0 +1,46 @@
+CHANGELOG.md
+CONTRIBUTORS.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+norskfaktura/__init__.py
+norskfaktura/cmd.py
+norskfaktura/common.py
+norskfaktura/compat.py
+norskfaktura/config.py
+norskfaktura/customer.py
+norskfaktura/invoice.py
+norskfaktura/pdf.py
+norskfaktura/schema.sql
+norskfaktura/sqlloader.py
+norskfaktura.egg-info/PKG-INFO
+norskfaktura.egg-info/SOURCES.txt
+norskfaktura.egg-info/dependency_links.txt
+norskfaktura.egg-info/entry_points.txt
+norskfaktura.egg-info/not-zip-safe
+norskfaktura.egg-info/requires.txt
+norskfaktura.egg-info/top_level.txt
+norskfaktura/assets/norskfaktura-big.png
+norskfaktura/assets/norskfaktura.desktop
+norskfaktura/assets/norskfaktura.png
+norskfaktura/assets/norskfaktura.svg
+norskfaktura/fonts/clear_sans/ClearSans-Bold.ttf
+norskfaktura/fonts/clear_sans/ClearSans-BoldItalic.ttf
+norskfaktura/fonts/clear_sans/ClearSans-Italic.ttf
+norskfaktura/fonts/clear_sans/ClearSans-Light.ttf
+norskfaktura/fonts/clear_sans/ClearSans-Medium.ttf
+norskfaktura/fonts/clear_sans/ClearSans-MediumItalic.ttf
+norskfaktura/fonts/clear_sans/ClearSans-Regular.ttf
+norskfaktura/fonts/clear_sans/ClearSans-Thin.ttf
+norskfaktura/fonts/courier_prime/Courier Prime Bold Italic.ttf
+norskfaktura/fonts/courier_prime/Courier Prime Bold.ttf
+norskfaktura/fonts/courier_prime/Courier Prime Italic.ttf
+norskfaktura/fonts/courier_prime/Courier Prime.ttf
+norskfaktura/gui/__init__.py
+norskfaktura/gui/configurationview.py
+norskfaktura/gui/customerview.py
+norskfaktura/gui/invoiceview.py
+norskfaktura/gui/mainview.py
+norskfaktura/gui/mainwindow.py
+norskfaktura/gui/signaling.py
