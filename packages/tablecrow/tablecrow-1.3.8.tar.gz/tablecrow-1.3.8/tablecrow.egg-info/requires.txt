@@ -1,0 +1,16 @@
+psycopg2-binary
+pyproj
+python-dateutil
+shapely
+spatialite
+sshtunnel
+
+[development]
+flake8
+isort
+oitnb
+
+[testing]
+pytest
+pytest-cov
+pytest-xdist
