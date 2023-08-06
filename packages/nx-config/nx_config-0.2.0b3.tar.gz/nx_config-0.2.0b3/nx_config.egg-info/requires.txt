@@ -1,0 +1,14 @@
+python-dateutil<3,>=2.8.1
+pyyaml<6,>=5.4.1
+
+[coverage]
+coverage<6,>=5.4
+
+[docs]
+sphinx<5,>=4.0.2
+python-docs-theme<2022,>=2021.5
+
+[tests]
+
+[tox]
+tox<4,>=3.21.4
