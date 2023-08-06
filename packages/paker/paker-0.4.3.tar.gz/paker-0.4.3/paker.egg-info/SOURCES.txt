@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+paker/__init__.py
+paker/__main__.py
+paker/utils.py
+paker.egg-info/PKG-INFO
+paker.egg-info/SOURCES.txt
+paker.egg-info/dependency_links.txt
+paker.egg-info/entry_points.txt
+paker.egg-info/not-zip-safe
+paker.egg-info/top_level.txt
+paker/exceptions/__init__.py
+paker/importers/__init__.py
+paker/importers/_tempimporter.py
+paker/importers/jsonimporter.py
