@@ -1,0 +1,8 @@
+aiobotocore>=1.0.1
+fsspec==2021.07.0
+
+[awscli]
+aiobotocore[awscli]
+
+[boto3]
+aiobotocore[boto3]
