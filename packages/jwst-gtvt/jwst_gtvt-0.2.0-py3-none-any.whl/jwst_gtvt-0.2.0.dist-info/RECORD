@@ -1,0 +1,17 @@
+jwst_gtvt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jwst_gtvt/astro_funcx.py,sha256=E3DyB8GDh-4bHzkZsuGPOLRur9f67Fv5VjAs_w3-uic,1216
+jwst_gtvt/ephemeris_old2x.py,sha256=zfEXxoneiqhV4qXPp55Z1pJnwnAGu1Vzr2YMAKgWJR0,10011
+jwst_gtvt/find_tgt_info.py,sha256=gCVMXqcY1IFd5mfe2beVfwNZagRLMbj315d5ax00ZY0,43106
+jwst_gtvt/horizons_EM_jwst_wrt_sun_2020-2024.txt,sha256=8hqWjtVXxz65oOsZrv7egmvkhlcMHG_-fm_3RsIpKh8,288475
+jwst_gtvt/math_extensionsx.py,sha256=5ObY6uPdSStU89KfH2ihusCrWUgAD_gx4dF31TO8sPc,26272
+jwst_gtvt/rotationsx.py,sha256=ASLvn0o7BMIeS_6mIRxJzJv69BwW-GZgaE0kPk38sGA,32522
+jwst_gtvt/time_extensionsx.py,sha256=3jgMv0I-PgWS03g16EZEtasq4uUXkSmXcK-xx9seAkY,9438
+jwst_gtvt/utils.py,sha256=hHRx7R6R3ne6JgdQLqDRe_PzKdKutJJktxJ7LJswfPY,1042
+jwst_gtvt-0.2.0.data/scripts/delete_cache,sha256=DzZ0EJWFYKlAHCxBNzaoK7-8beGmdzYXTt_qKbesGaA,135
+jwst_gtvt-0.2.0.data/scripts/jwst_gtvt,sha256=H0ndrK_lB3DxKksuBD1ms1rHnYupZ053KY0eeKcY_8w,1740
+jwst_gtvt-0.2.0.data/scripts/jwst_mtvt,sha256=S5VIcwNc9-_ytqZfPHGe6wM_oJ2UnqxA4ggqpDydRbU,1716
+jwst_gtvt-0.2.0.dist-info/LICENSE,sha256=1IvQWBCmL76zkgI9W2SUaJmmg9iRfi9iXoonX_eKPIM,1462
+jwst_gtvt-0.2.0.dist-info/METADATA,sha256=Ph0KsVxn6S3sMpHv8PBWX07yo-e8xHNmG7M7xzGjwbc,687
+jwst_gtvt-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jwst_gtvt-0.2.0.dist-info/top_level.txt,sha256=zyBGCd9dsVLTnQD7xjYwfNUSnm3FWFbCwbGHm-PVkhw,10
+jwst_gtvt-0.2.0.dist-info/RECORD,,
