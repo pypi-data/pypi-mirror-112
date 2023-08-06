@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "twacapic"
+version = "0.7.0"
+description = "A Twitter Academic API Client"
+authors = ["Felix Victor Münch <f.muench@leibniz-hbi.de>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Leibniz-HBI/twacapic"
+classifiers = [
+		"Development Status :: 3 - Alpha",
+		"Environment :: Console",
+		"Intended Audience :: Science/Research",
+]
+exclude = [
+		"twacapic/twacapic_credentials.txt",
+		"*/.pytest_cache/*",
+		"twitter_keys.yaml",
+		"results"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+PyYAML = "^5.4.1"
+TwitterAPI = "^2.6.9"
+loguru = "^0.5.3"
+schedule = "^1.0.0"
+yagmail = "^0.14.245"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+coverage = "^5.5"
+pytest-console-scripts = "^1.1.0"
+pytest-timeout = "^1.4.2"
+python-language-server = {extras = ["all"], version = "^0.36.2"}
+
+[tool.poetry.scripts]
+twacapic = 'twacapic.main:run'
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--timeout=30"
+testpaths = [
+    "tests",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
