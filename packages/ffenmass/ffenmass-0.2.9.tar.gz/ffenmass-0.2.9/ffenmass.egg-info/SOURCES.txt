@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+bin/ffenmass
+ffenmass.egg-info/PKG-INFO
+ffenmass.egg-info/SOURCES.txt
+ffenmass.egg-info/dependency_links.txt
+ffenmass.egg-info/requires.txt
+ffenmass.egg-info/top_level.txt
