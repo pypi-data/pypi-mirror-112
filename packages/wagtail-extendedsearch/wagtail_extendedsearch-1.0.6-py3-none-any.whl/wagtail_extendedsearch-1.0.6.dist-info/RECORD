@@ -1,0 +1,17 @@
+extendedsearch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extendedsearch/backend.py,sha256=2Ophkv0UCCXC0SJ1YBx8UG-34ltotk0eJDw5ZnGwlOI,21715
+extendedsearch/backends.py,sha256=u0UOs5TyowtY2PTnGsJJ8c1b2xKSuatLn94p6JxFQGA,87
+extendedsearch/commands.py,sha256=AttgECkGFMNY8Ek7DXFoV3diJdfq7s2ddGJ5DOBc8SU,137
+extendedsearch/errors.py,sha256=u_tfjFvMiqvUWd5LjAX7SR-vzIjR4C1wooPb4JkAYwM,41
+extendedsearch/index.py,sha256=_hporQJ8eCnLt1sy6FyXBtAuvI0t0X1hPvGCHuG-lg4,395
+extendedsearch/models.py,sha256=ikTwhMuc8PwEzcGLnqUX1nlRjpZ6z6C5Sv01L-YJHI4,72
+extendedsearch/query.py,sha256=kBHCnK4CBYa9BXV1YztlbjBvH2Gs1ul3_gE9Ec-7DtE,74
+extendedsearch/settings.py,sha256=dll7Y1--5GeaJsdZmzPh8zi7-uvBHj7Q8j3sQZbJneM,712
+extendedsearch/signal_handlers.py,sha256=ixypgNDlkR-NUZD_dZ31P-ehKsb2OdEivywApqHFxkc,102
+extendedsearch/utils.py,sha256=JQnenGZhKzILNGcHQC_Tj5EPTtvMMCSO05B_LocN-os,3142
+wagtail_extendedsearch-1.0.6.dist-info/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+wagtail_extendedsearch-1.0.6.dist-info/METADATA,sha256=MolKyXGdlBk0XBxJAixE32L8rVpvNvEaiy7HhkDhSfo,3967
+wagtail_extendedsearch-1.0.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+wagtail_extendedsearch-1.0.6.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+wagtail_extendedsearch-1.0.6.dist-info/top_level.txt,sha256=PV1-Ck1B2IfJvAFpjwRP1kVadXDCaSGZxIxY4lzHLpw,15
+wagtail_extendedsearch-1.0.6.dist-info/RECORD,,
