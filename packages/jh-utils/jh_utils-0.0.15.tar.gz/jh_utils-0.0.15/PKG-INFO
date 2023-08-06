@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: jh_utils
+Version: 0.0.15
+Summary: Some simple functions to all projects
+Home-page: https://github.com/JohnHolz/jh_utils
+Author: joao holz
+Author-email: joaopaulo.paivaholz@gmail.com
+License: MIT
+Description: # My python lib
+        
+        Python lib with utils to help me in day by day tasks
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
