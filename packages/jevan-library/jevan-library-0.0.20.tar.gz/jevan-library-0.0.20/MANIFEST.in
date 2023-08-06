@@ -1,0 +1,10 @@
+recursive-include users/templates *
+recursive-include users/templates/account *
+recursive-include users/templates/registration *
+recursive-include users/templates/reports *
+recursive-include users/static *
+recursive-include users/blueprints *
+include *.j2
+include *.txt
+include *.md
+include *.ini
