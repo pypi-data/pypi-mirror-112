@@ -1,0 +1,13 @@
+lsfb_dataset/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lsfb_dataset/datasets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lsfb_dataset/datasets/lsfb_isol_dataset.py,sha256=FKRlAiUCTKtJMrudi2RDw4dx9O9bfp-qb-4kVE1RmtU,3270
+lsfb_dataset/transforms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lsfb_dataset/transforms/video_transforms.py,sha256=cHZLOjVlKYWIUV6frpcWiKGxhN3uj0vkizs4CtBGHcI,6424
+lsfb_dataset/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lsfb_dataset/utils/dataset_loader.py,sha256=JXIUpU4HFbz6PEaVd8KN2nMVpJT_RY5W-a5wD9YC7GE,2704
+lsfb_dataset/utils/video_utils.py,sha256=flXzCGmM82osOMOtgGr9w06k6d9yZkxmyqvAjejOqNA,2404
+lsfb_dataset-0.0.1.dist-info/LICENSE,sha256=aCiuqeNviUyb97qLPm3e733E1j9ufRAyXrLKIXvONeU,1052
+lsfb_dataset-0.0.1.dist-info/METADATA,sha256=oWYmq5W005c5NOhlXa5E10tRevr_GsNDs-Do1kz_dU4,4747
+lsfb_dataset-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+lsfb_dataset-0.0.1.dist-info/top_level.txt,sha256=O40I0rZ8lfJ1f3bAtCH-TtPKXwikFj754vcEDrkQR9c,13
+lsfb_dataset-0.0.1.dist-info/RECORD,,
