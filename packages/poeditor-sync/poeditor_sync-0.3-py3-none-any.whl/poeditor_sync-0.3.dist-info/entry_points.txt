@@ -1,0 +1,3 @@
+[console_scripts]
+poeditor = poeditor_sync.cmd:poeditor
+
