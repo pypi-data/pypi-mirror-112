@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: res-birdnet
+Version: 0.0.6
+Summary: This model has been trained on Resnet50 and tested on AUC with 9e% accuracy. The pretrained model can be accessed on res_birdnet.model_uac93
+Home-page: https://github.com/tobysuwindra/res-birdnet
+Author: Toby Suwindra
+Author-email: tsuwindra@gmail.com
+License: UNKNOWN
+Description: # Birdnet
+        Model Similarity Bird
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
