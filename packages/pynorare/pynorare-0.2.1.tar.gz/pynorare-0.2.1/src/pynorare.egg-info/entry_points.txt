@@ -1,0 +1,3 @@
+[console_scripts]
+norare = pynorare.__main__:main
+

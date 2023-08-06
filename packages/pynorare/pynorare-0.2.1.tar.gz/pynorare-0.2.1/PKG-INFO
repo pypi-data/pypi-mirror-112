@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pynorare
+Version: 0.2.1
+Summary: A Python library to handle NoRaRe data
+Home-page: https://github.com/concepticon/pynorare
+Author: Johann-Mattis List and Robert Forkel
+Author-email: mattis.list@lingpy.org
+License: Apache 2.0
+Description: # pynorare
+        Python package for the NoRaRe collection
+        
+        [![Build Status](https://github.com/concepticon/pynorare/workflows/tests/badge.svg)](https://github.com/concepticon/pynorare/actions?query=workflow%3Atests)
+        [![codecov](https://codecov.io/gh/concepticon/pynorare/branch/master/graph/badge.svg)](https://codecov.io/gh/concepticon/pynorare)
+        [![PyPI](https://img.shields.io/pypi/v/pynorare.svg)](https://pypi.org/project/pynorare)
+        
+        
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
