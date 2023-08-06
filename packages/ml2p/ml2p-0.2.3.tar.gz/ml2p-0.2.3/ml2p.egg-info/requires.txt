@@ -1,0 +1,17 @@
+boto3
+click<8
+Flask==1.1.4
+Flask-API<2
+PyYAML
+
+[dev]
+black==19.10b0
+bumpversion
+coverage
+flake8
+isort
+pytest
+pytest-cov
+radon[flake8]
+tox
+moto
