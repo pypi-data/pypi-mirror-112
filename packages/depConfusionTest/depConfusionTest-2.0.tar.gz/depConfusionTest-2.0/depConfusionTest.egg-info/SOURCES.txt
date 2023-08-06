@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+depConfusionTest/__init__.py
+depConfusionTest/foo.py
+depConfusionTest.egg-info/PKG-INFO
+depConfusionTest.egg-info/SOURCES.txt
+depConfusionTest.egg-info/dependency_links.txt
+depConfusionTest.egg-info/top_level.txt
