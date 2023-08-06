@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "discord_basic_bridge"
+version = "0.1.1"
+description = "Discord Basic Bridge"
+authors = ["Krish Yadav <7krishyadav@gmail.com>"]
+readme = "README.md"
+classifiers = [
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Operating System :: Unix",
+        "Operating System :: MacOS :: MacOS X",
+        "Operating System :: Microsoft :: Windows",
+        "Topic :: Software Development :: Libraries"
+    ]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.25.1"
+urllib3 = "^1.26.6"
+lxml = "^4.6.3"
+bs4 = "^0.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
