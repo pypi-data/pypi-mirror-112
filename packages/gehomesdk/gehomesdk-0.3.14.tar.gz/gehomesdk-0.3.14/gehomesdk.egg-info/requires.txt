@@ -1,0 +1,7 @@
+aiohttp
+bidict
+requests
+websockets
+
+[XMPP]
+slixmpp==1.5.2
