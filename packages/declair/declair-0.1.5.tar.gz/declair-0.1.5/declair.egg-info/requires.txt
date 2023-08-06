@@ -1,0 +1,7 @@
+sacred>=0.8.2
+hyperopt>=0.2.4
+pymongo
+pyyaml
+tblib
+GitPython
+wrapt
