@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: MultiInputTimeseriesGenerator
+Version: 0.0.4
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Dara Sravan Kumar
+Author-email: <sravandara007@gmail.com>
+License: UNKNOWN
+Keywords: Multi Input,Timeseries Generator,multi input timeseries generator
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tensorflow
+Requires-Dist: numpy
+
+
+# hi hello
+
+
