@@ -1,0 +1,11 @@
+icd10/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+icd10/chapter_block.py,sha256=_P3XYo61nn1mZK5vDudgNRovLmLlrn11HtB-mdNzeGo,876
+icd10/data/byomei_id2disease.json.gz,sha256=uR6rPAKrDAk3KAnIDfkw0hTlnq2PBkHT30GBK7_PUlU,957394
+icd10/data/icd_code2byomei_ids_or_icd_codes.json.gz,sha256=7KjqoXwUZ1u8CiiUp9mYkEuV_teo0qNW-C03DEUdQNY,143832
+icd10/data/icd_code2category.json.gz,sha256=yCy3paiFFyxH9cKBNo3YZ7NGMFCFKNKzmC__z-cQCe0,182978
+icd10/data/index_word2icd.json.gz,sha256=zzeBgGeu98NdDRRD_toJgtRf9DlxPtTUrg9Fzx8thqk,833162
+icd10/icd.py,sha256=Iy1F5ADLMOdNncIR_N3Co4hzC-ZevCf_EwLVsYC5Z8E,7019
+icd10/util.py,sha256=PaH3AamSrQxk_vcIWrOCqfrROod_5KBNbEfNzOeGESk,756
+ja_icd10-0.1.2.post20210701.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+ja_icd10-0.1.2.post20210701.dist-info/METADATA,sha256=zdcv60mF5EdrT0A1-884lYSPp6I4RVgx8HMyJf2_8kI,5613
+ja_icd10-0.1.2.post20210701.dist-info/RECORD,,
