@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: trend-app-protect
+Version: 4.5.3
+Summary: Trend Micro Cloud One Application Security
+Home-page: https://www.trendmicro.com/en_us/business/products/hybrid-cloud/cloud-one-application-security.html
+Author: Trend Micro
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Framework :: Flask
+Classifier: Framework :: Pyramid
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security
+Description-Content-Type: text/markdown
+Requires-Dist: cffi
+
+# Trend Micro Cloud One Application Security for Python
+
+## What is it?
+Trend Micro Cloud One - Application Security provides real-time application security as a service for modern applications, APIs, serverless and other computing platforms. When Application Security is deployed, threats to your web applications will be detected and protected against, minimizing your risk.
+
+## Features
+Application Security detects and protects against a wide range of attacks at runtime within your entire application, including:
+SQL injections
+Remote command execution 
+Illegal file access 
+Malicious file uploads
+Malicious payloads
+URL redirects
+And more
+
+
+## Installation
+
+Add the Trend Micro Application Security package to *requirements.txt*:
+
+```
+trend_app_protect
+```
+
+Run pip to install the package:
+
+```sh
+pip install -r requirements.txt
+```
+
+Import the `trend_app_protect.start` module at the top of your WSGI script:
+
+```python
+import trend_app_protect.start
+```
+
+## Configuration
+
+The agent key and secret can be configured via the `TREND_AP_KEY` and `TREND_AP_SECRET` environment variables.
+
+Optionally, you can provide a configuration in the file *trend_app_protect.ini* under the root of the project or under */etc* but the environment variables will still take precedence:
+
+```ini
+[trend_app_protect]
+key = my-key
+secret = my-secret
+```
+
+## Support
+
+- Python 3.4+
+- Django 1.11, 2.0, 2.1, 2.2
+- Flask 0.11+
+- Pyramid 1.6+
+
+| Feature                       | Required Component       |
+| ------------------------------| ------------------------ |
+| All features                  | WSGI based web-server |
+| File Access                   | *N/A* |
+| RCE                           | *N/A* |
+| SQLi                          | mysqldb, psycopg2, pymssql, pymysql, sqlite2, sqlite3 |
+| Redirects                     | Django, Flask |
+| HTTP params                   | Django, Werkzeug |
+
+## Internal dependencies
+
+- functools_lru_cache @ https://github.com/jaraco/backports.functools_lru_cache
+
+
