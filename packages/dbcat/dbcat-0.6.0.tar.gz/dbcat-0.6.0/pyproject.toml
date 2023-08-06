@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "dbcat"
+version = "0.6.0"
+description = "Tokern Data Catalog"
+authors = ["Tokern <info@tokern.io>"]
+license = "MIT"
+classifiers = [
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Topic :: Database",
+        "Topic :: Software Development",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords=["data-catalog","postgres","snowflake","redshift","glue"]
+readme="README.md"
+homepage="https://tokern.io/"
+repository="https://github.com/tokern/dbcat/"
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "*"
+PyYAML = "*"
+amundsen-databuilder = {extras = ["athena", "bigquery", "glue", "rds", "snowflake"], version = "^5.2.0"}
+psycopg2 = "^2.9.1"
+alembic = "^1.6.5"
+
+[tool.poetry.dev-dependencies]
+black = "==19.10b0"
+flake8 = "*"
+isort = "*"
+mypy = "*"
+pre-commit = "*"
+pytest = "*"
+pytest-cov = "*"
+PyMySQL = "^1.0.2"
+types-PyYAML = "^5.4.3"
+types-PyMySQL = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+dbcat = "dbcat.__main__:main"
