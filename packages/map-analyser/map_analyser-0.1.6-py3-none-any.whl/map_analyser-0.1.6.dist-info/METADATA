@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: map-analyser
+Version: 0.1.6
+Summary: 
+Home-page: https://github.com/maischon/Bc
+Author: Simon Navratil
+Author-email: navratil.simon@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Mosek (>=9.2.37,<10.0.0)
+Requires-Dist: Pillow (>=8.1.0,<9.0.0)
+Requires-Dist: cvxopt (>=1.2.5,<2.0.0)
+Requires-Dist: cvxpy (>=1.1.10,<2.0.0)
+Requires-Dist: func-timeout (>=4.3.5,<5.0.0)
+Requires-Dist: numpy (>=1.20.1,<2.0.0)
+Requires-Dist: pyclipper (>=1.2.1,<2.0.0)
+Requires-Dist: scipy (>=1.6.0,<2.0.0)
+Requires-Dist: sect (>=0.5.0,<0.6.0)
+Requires-Dist: tripy (>=1.0.0,<2.0.0)
+Project-URL: Repository, https://github.com/maischon/Bc

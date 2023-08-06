@@ -1,0 +1,3 @@
+[console_scripts]
+cli_script=map_analyser.__main__:main
+
