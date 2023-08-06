@@ -1,0 +1,9 @@
+semver~=2.10
+kedro>=0.16.0
+ipython<8.0,>=7.0.0
+fastapi<1.0,>=0.63.0
+aiofiles==0.6.0
+uvicorn~=0.13.4
+
+[:python_version == "3.6"]
+dataclasses==0.8
