@@ -1,0 +1,4 @@
+[console_scripts]
+mac = macrame.app:app_run
+macrame = macrame.app:app_run
+
