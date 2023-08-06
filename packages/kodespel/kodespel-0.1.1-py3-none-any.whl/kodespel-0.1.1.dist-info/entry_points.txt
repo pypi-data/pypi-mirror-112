@@ -1,0 +1,3 @@
+[console_scripts]
+kodespel = kodespel.__main__:main
+
