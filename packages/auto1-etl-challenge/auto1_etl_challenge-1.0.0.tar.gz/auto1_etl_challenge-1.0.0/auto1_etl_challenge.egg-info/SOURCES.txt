@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+auto1_etl_challenge/__init__.py
+auto1_etl_challenge/constants.py
+auto1_etl_challenge/etl.py
+auto1_etl_challenge/transformation_errors.py
+auto1_etl_challenge/utils.py
+auto1_etl_challenge.egg-info/PKG-INFO
+auto1_etl_challenge.egg-info/SOURCES.txt
+auto1_etl_challenge.egg-info/dependency_links.txt
+auto1_etl_challenge.egg-info/top_level.txt
