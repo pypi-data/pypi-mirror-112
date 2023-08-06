@@ -1,0 +1,15 @@
+Metadata-Version: 1.0
+Name: vltk
+Version: 1.0.1
+Summary: The Vision-Language Toolkit (VLTK)
+Home-page: UNKNOWN
+Author: Antonio Mendoza
+Author-email: antonio36764@gmail.com
+License: UNKNOWN
+Description: # vltk
+        to install (add editable for personal custimization)
+        ```
+        git clone https://github.com/eltoto1219/vltk.git && cd vltk && pip install -e .
+        ```
+        
+Platform: UNKNOWN
