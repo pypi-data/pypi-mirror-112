@@ -1,0 +1,3 @@
+[console_scripts]
+ykman-repl=yubikey_manager_repl:main
+
