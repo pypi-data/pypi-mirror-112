@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/gitdataminer/__init__.py
+src/gitdataminer.egg-info/PKG-INFO
+src/gitdataminer.egg-info/SOURCES.txt
+src/gitdataminer.egg-info/dependency_links.txt
+src/gitdataminer.egg-info/requires.txt
+src/gitdataminer.egg-info/top_level.txt
+src/gitdataminer/gitlogs/__init__.py
+src/gitdataminer/gitlogs/main.py
