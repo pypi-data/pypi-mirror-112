@@ -1,0 +1,8 @@
+requests~=2.25
+tenacity~=7.0.0
+
+[gym]
+gym~=0.18.0
+
+[lint]
+pylint~=2.7.4
