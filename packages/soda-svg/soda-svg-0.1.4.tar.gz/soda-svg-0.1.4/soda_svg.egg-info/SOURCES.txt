@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+soda/__init__.py
+soda/__version__.py
+soda/tags.py
+soda_svg.egg-info/PKG-INFO
+soda_svg.egg-info/SOURCES.txt
+soda_svg.egg-info/dependency_links.txt
+soda_svg.egg-info/not-zip-safe
+soda_svg.egg-info/top_level.txt
