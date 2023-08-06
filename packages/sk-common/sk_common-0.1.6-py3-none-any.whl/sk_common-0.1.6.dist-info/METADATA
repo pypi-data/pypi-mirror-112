@@ -1,0 +1,422 @@
+Metadata-Version: 2.1
+Name: sk-common
+Version: 0.1.6
+Summary: common kit.
+Home-page: https://github.com/me/myproject
+Author: huoxin
+Author-email: huoxin@mastercom.cn
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  
+
+- [1	db package](#1%09db-package)
+  - [1.1   db.db_helper.module](#11-dbdb_helpermodule)
+  - [1.2	db.sqlserver_in_out module](#12%09dbsqlserver_in_out-module)
+- [2 file package](#2-file-package)
+  - [2.1	file.file_reader module](#21%09filefile_reader-module)
+  - [2.2	file.file_writer module](#22%09filefile_writer-module)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+
+<div class="section" id="db-package">
+<h1>1	db package<a class="headerlink" href="#db package:  数据库模块包" title="Permalink to this headline"></a></h1>
+
+## 1.1 db.db_helper.module
+
+​	连接sql server 或者mysql数据库，进行sql语句操作，可读取数据到pandas dataframe
+
+1.1.1 class	db.db_helper.DBHelper(db_kind, <em class="sig-param"><span class="n"><span class="pre">driver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pwd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span></em>, port='0'
+
+​    	   Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code>
+
+
+
+1.1.2 conn_commit<span class="sig-paren">(</span><span class="sig-paren">)</span>
+
+​		  执行建表或删表等操作后，做connection commit
+
+
+
+<dl class="py method">
+	<dt class="sig sig-object py" id="db.db_helper.DBHelper.destroy">
+	<span class="sig-name descname"><span class="pre">1.1.3		destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/db/db_helper.html#DBHelper.destroy"><span class="viewcode-link"><span class="pre"></span></span></a><a class="headerlink" href="#db.db_helper.DBHelper.destroy" title="Permalink to this definition"></a></dt>
+<dd><p>关闭cursor和connection</p>
+</dd></dl>
+
+
+
+
+<dl class="py method">
+<dt class="sig sig-object py" id="db.db_helper.DBHelper.get_cursor">
+<span class="sig-name descname"><span class="pre">1.1.4	get_cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sql</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/db/db_helper.html#DBHelper.get_cursor"><span class="viewcode-link"><span class="pre"></span></span></a><a class="headerlink" href="#db.db_helper.DBHelper.get_cursor" title="Permalink to this definition"></a></dt>
+<dd><p>执行sql语句，返回对应cursor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sql</strong> – 要执行的sql语句</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>对应cursor</p>
+</dd>
+</dl>
+</dd></dl>
+
+
+
+<dl class="py method">
+<dt class="sig sig-object py" id="db.db_helper.DBHelper.read_table_to_df">
+<span class="sig-name descname"><span class="pre">1.1.5	read_table_to_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sql</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/db/db_helper.html#DBHelper.read_table_to_df"><span class="viewcode-link"><span class="pre"></span></span></a><a class="headerlink" href="#db.db_helper.DBHelper.read_table_to_df" title="Permalink to this definition"></a></dt>
+<dd><p>读取数据库表并存为pandas dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sql</strong> – sql查询语句</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pandas dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+
+
+<div class="section" id="module-db.sqlserver_in_out">
+<span id="db-sqlserver-in-out-module"></span><h2>1.2	db.sqlserver_in_out module<a class="headerlink" href="#module-db.sqlserver_in_out" title="Permalink to this headline"></a></h2>
+    <dd><p>对sql server数据库bcp导入和导出批量数据</p></dd>
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.sqlserver_in_out.bcp_in">
+<span class="sig-prename descclassname"><span class="pre">1.2.1	db.sqlserver_in_out.</span></span><span class="sig-name descname"><span class="pre">bcp_in</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pwd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/db/sqlserver_in_out.html#bcp_in"><span class="viewcode-link"><span class="pre"></span></span></a><a class="headerlink" href="#db.sqlserver_in_out.bcp_in" title="Permalink to this definition"></a></dt>
+<dd><p>bcp导入txt文件到sql server数据库表，表需要提前创建好</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>server</strong> – str, 服务器ip</p></li>
+<li><p><strong>user</strong> – str, 账号</p></li>
+<li><p><strong>pwd</strong> – str, 密码</p></li>
+<li><p><strong>file_path</strong> – str, 导入的txt文件地址</p></li>
+<li><p><strong>table_name</strong> – str，导入到数据库的表名</p></li>
+<li><p><strong>port</strong> – str，端口号，默认’0’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.sqlserver_in_out.bcp_out">
+<span class="sig-prename descclassname"><span class="pre">1.2.2	db.sqlserver_in_out.</span></span><span class="sig-name descname"><span class="pre">bcp_out</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pwd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'table'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/db/sqlserver_in_out.html#bcp_out"><span class="viewcode-link"><span class="pre"></span></span></a><a class="headerlink" href="#db.sqlserver_in_out.bcp_out" title="Permalink to this definition"></a></dt>
+<dd><p>bcp导出数据库表或查询结果到txt文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – str，’table’或者’query’, 若为’table’导出整个表数据，若为’query’导出查询结果，默认’table’</p></li>
+<li><p><strong>server</strong> – str, 服务器ip</p></li>
+<li><p><strong>user</strong> – str, 账号</p></li>
+<li><p><strong>pwd</strong> – str, 密码</p></li>
+<li><p><strong>file_path</strong> – str, 导出的txt文件地址</p></li>
+<li><p><strong>content_out</strong> – str，表名或者sql 查询语句，例如：’[MTNOH_APP_SameCoverage].[dbo].[TB_同覆盖基础能力_数据_同覆盖小区_test] ‘</p></li>
+<li><p><strong>port</strong> – str，端口号，默认’0’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+
+
+  <div class="section" id="file-package">
+<h1>2 file package<a class="headerlink" href="#file-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="module-file.file_reader">
+<span id="file-file-reader-module"></span><h2>2.1	file.file_reader module<a class="headerlink" href="#module-file.file_reader" title="Permalink to this headline"></a></h2>
+<dd><p>用于读取不同格式的数据，
+    包括txt, csv，excel, HDF5 , json</p></dd>
+<dl class="py function">
+<dt class="sig sig-object py" id="file.file_reader.read_csv_txt_to_df">
+<span class="sig-prename descclassname"><span class="pre">2.1.1	file.file_reader.</span></span><span class="sig-name descname"><span class="pre">read_csv_txt_to_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath_or_buffer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">','</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'infer'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunksize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'infer'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/file/file_reader.html#read_csv_txt_to_df"><span class="viewcode-link"><span class="pre"></span></span></a><a class="headerlink" href="#file.file_reader.read_csv_txt_to_df" title="Permalink to this definition"></a></dt>
+<dd><p>
+读取csv或txt等文件数据到pandas DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath_or_buffer</strong> – str, 读取的文件路径,URL（包含http,ftp,s3）链接等。</p></li>
+<li><p><strong>encoding</strong> – str, default None, 指定字符集编码类型，通常指定为’utf-8’。</p></li>
+<li><p><strong>sep</strong> – str, 文件分割符。</p></li>
+<li><p><strong>delimiter</strong> – str, default None，定界符，备选分隔符（如果指定该参数，则sep参数失效）。</p></li>
+<li><p><strong>header</strong> – int or list of ints, default ‘infer’，
+指定行数用来作为列名，数据开始行数。如果文件中没有列名，则默认为0，否则设置为None。</p></li>
+<li><p><strong>index_col</strong> – int or sequence or False, default None,
+用作行索引的列编号或者列名，如果给定一个序列则有多个行索引。</p></li>
+<li><p><strong>chunksize</strong> – int, default None，文件块的大小。</p></li>
+<li><p><strong>prefix</strong> – str, default None, 在没有列标题时，给列添加前缀。</p></li>
+<li><p><strong>dtype</strong> – type, default None, 每列数据的数据类型。</p></li>
+<li><p><strong>engine</strong> – {‘c’, ‘python’}, optional
+使用的分析引擎, 可以选择C或者是python, C引擎快但是Python引擎功能更加完备。</p></li>
+<li><p><strong>compression</strong> – <dl class="simple">
+<dt>{‘infer’,‘gzip’, ‘bz2’, ‘zip’, ‘xz’, None}, default ‘infer’</dt><dd><p>直接使用磁盘上的压缩文件。如果使用infer参数，则使用 gzip, bz2, zip或者解压文件名中以</p>
+</dd>
+</dl>
+<p>‘.gz’, ‘.bz2’, ‘.zip’, or ‘xz’这些为后缀的文件，否则不解压</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="file.file_reader.read_excel_to_df">
+<span class="sig-prename descclassname"><span class="pre">2.1.2	file.file_reader.</span></span><span class="sig-name descname"><span class="pre">read_excel_to_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">io</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheet_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usecols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skiprows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nrows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">na_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_default_na</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/file/file_reader.html#read_excel_to_df"><span class="viewcode-link"><span class="pre"></span></span></a><a class="headerlink" href="#file.file_reader.read_excel_to_df" title="Permalink to this definition"></a></dt>
+<dd><p>读取excel数据到pandas DataFrame，
+支持从本地文件系统或URL读取的xls，xlsx，xlsm，xlsb和odf文件扩展名。 支持读取单一sheet或几个sheet。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>io</strong> – str, bytes, ExcelFile, xlrd.Book, path object, or file-like object。</p></li>
+<li><p><strong>encoding</strong> – str, 数据集的字符编码，默认’utf-8’。</p></li>
+<li><p><strong>sheet_name</strong> – str, int, list, None, default 0，
+默认为0，表示不输入sheet_name的参数下，默认引用第一张sheet的数据。</p></li>
+<li><p><strong>header</strong> – int, list of int, default 0，表示用第几行作为表头，
+默认header=0，即默认第一行为表头。None表示不使用数据源中的表头。</p></li>
+<li><p><strong>names</strong> – array-like, default None，表示自定义表头的名称，需要传递数组参数。</p></li>
+<li><p><strong>index_col</strong> – int, list of int, default None，
+指定列为索引列，默认为None，也就是索引为0的列用作DataFrame的行标签。</p></li>
+<li><p><strong>usecols</strong> – int, str, list-like, or callable default None，
+需要解析的列，默认为None，解析所有列。</p></li>
+<li><p><strong>dtype</strong> – type, default None，指定列的数据类型，默认为None，不改变数据类型。</p></li>
+<li><p><strong>engine</strong> – str, default None，支持参数有“ xlrd”，“ openpyxl”或“ odf”，用于使用第三方的库去解析excel文件。</p></li>
+<li><p><strong>skiprows</strong> – int,list, defalut None, 跳过指定的行</p></li>
+<li><p><strong>nrows</strong> – int, default None，指定需要读取前多少行，通常用于较大的数据文件中。</p></li>
+<li><p><strong>na_values</strong> – scalar, str, list-like, or dict, default None，指定某些列的某些值为NaN。</p></li>
+<li><p><strong>keep_default_na</strong> – bool, default True，表示导入数据时是否导入空值。</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="file.file_reader.read_h5_to_dict">
+<span class="sig-prename descclassname"><span class="pre">2.1.3	file.file_reader.</span></span><span class="sig-name descname"><span class="pre">read_h5_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/file/file_reader.html#read_h5_to_dict"><span class="viewcode-link"><span class="pre"></span></span></a><a class="headerlink" href="#file.file_reader.read_h5_to_dict" title="Permalink to this definition"></a></dt>
+<dd><p>读取HDF5文件数据到字典</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_path</strong> – str, HDF5文件路径。</p></li>
+<li><p><strong>name_list</strong> – list, default None, 所需key的数组，默认为None，则包含所有key。</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>存储hdf5数据字典。</p>
+</dd>
+</dl>
+</dd></dl>
+
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="file.file_reader.read_json_to_dict">
+<span class="sig-prename descclassname"><span class="pre">2.1.4	file.file_reader.</span></span><span class="sig-name descname"><span class="pre">read_json_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/file/file_reader.html#read_json_to_dict"><span class="viewcode-link"><span class="pre"></span></span></a><a class="headerlink" href="#file.file_reader.read_json_to_dict" title="Permalink to this definition"></a></dt>
+<dd><p>读取json文件数据到字典</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_path</strong> – str, json文件路径。</p></li>
+<li><p><strong>encoding</strong> – str, default ‘utf-8’, 指定字符集编码类型，默认为’utf-8’。</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>json数据存储字典</p>
+</dd>
+</dl>
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="file.file_reader.read_txt_to_list">
+<span class="sig-prename descclassname"><span class="pre">2.1.5	file.file_reader.</span></span><span class="sig-name descname"><span class="pre">read_txt_to_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">','</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/file/file_reader.html#read_txt_to_list"><span class="viewcode-link"><span class="pre"></span></span></a><a class="headerlink" href="#file.file_reader.read_txt_to_list" title="Permalink to this definition"></a></dt>
+<dd><p>读取txt文件数据到list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple"> 
+<li><p><strong>file_path</strong> – str, 文件路径。</p></li>
+<li><p><strong>encoding</strong> – str, default ‘utf-8’, 指定字符集编码类型，通常指定为’utf-8’。</p></li>
+<li><p><strong>line_strip</strong> – str, default ',' 行分割符，默认','</p></li>
+<li><p><strong>sep</strong> – str default ‘,’, 每行中字段分隔符, 默认’,’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>多维数组，每一维为每行数据，维度为文件的数据行数</p>
+</dd>
+</dl>
+</dl>
+
+
+
+<div class="section" id="module-file.file_writer">
+<span id="file-file-writer-module"></span><h2>2.2	file.file_writer module</h2>
+<dd><p>用于将数据写入不同格式文件
+    包括txt, csv，excel, HDF5 , json</p></dd>
+<dl class="py function">
+<dt class="sig sig-object py" id="file.file_writer.write_df_to_csv_txt">
+<span class="sig-prename descclassname"><span class="pre">2.2.1	file.file_writer.</span></span><span class="sig-name descname"><span class="pre">write_df_to_csv_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'w'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">','</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'infer'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_terminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunksize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>存入dataframe数据到csv或txt文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – pandas dataframe，需要写入的dataframe数据。</p></li>
+<li><p><strong>file_path</strong> – str, 文件目标路径。</p></li>
+<li><p><strong>index</strong> – bool， default False, 是否显示索引，默认False，不显示index。</p></li>
+<li><p><strong>encoding</strong> – str ，数据集的字符编码，默认’utf-8’。</p></li>
+<li><p><strong>mode</strong> – str, 写入模式，默认为 ‘w’。</p></li>
+<li><p><strong>header</strong> – bool, list， default True 写出列名。如果给定字符串列表，则假定它是列名称的别名。</p></li>
+<li><p><strong>sep</strong> – str, default “,” , 输出文件的字段分隔符,默认”,”。</p></li>
+<li><p><strong>columns</strong> – list，选择需要输出的的列名数组。默认None。</p></li>
+<li><p><strong>index_label</strong> – str, default None,设置索引列的列名。</p></li>
+<li><p><strong>compression</strong> – str，表示压缩模式，默认’infer’。</p></li>
+<li><p><strong>line_terminator</strong> – str，输出文件中使用的换行符或字符序列。</p></li>
+<li><p><strong>chunksize</strong> – int，写入的批次个数，默认 None，一次性写入。</p></li>
+<li><p><strong>date_format</strong> – str，日期时间对象的格式字符串，默认None。</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bool 是否写入成功，成功为True，失败为False。</p>
+</dd>
+</dl>
+</dd></dl>
+
+​    
+
+<dl class="py function">
+<dt class="sig sig-object py" id="file.file_writer.write_df_to_excel">
+<span class="sig-prename descclassname"><span class="pre">2.2.2	file.file_writer.</span></span><span class="sig-name descname"><span class="pre">write_df_to_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheet_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Sheet1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">na_rep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>存入dataframe数据到excel文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – pandas dataframe，需要写入excel的dataframe数据。</p></li>
+<li><p><strong>file_path</strong> – str, excel文件目标路径。</p></li>
+<li><p><strong>sheet_name</strong> – str, default “Sheet1”，excel表名命名。</p></li>
+<li><p><strong>na_rep</strong> – int, str, default “”, 缺失值填充,默认值为空字符串。</p></li>
+<li><p><strong>columns</strong> – list，选择需要输出的的列名数组。</p></li>
+<li><p><strong>header</strong> – bool, list， default True 写出列名。如果给定字符串列表，则假定它是列名称的别名。</p></li>
+<li><p><strong>index</strong> – bool， default False, 是否显示索引，默认False，不显示index。</p></li>
+<li><p><strong>index_label</strong> – str, default None,设置索引列的列名。</p></li>
+<li><p><strong>engine</strong> – str, default None, 所使用的写引擎。</p></li>
+<li><p><strong>encoding</strong> – str ，数据集的字符编码，默认’utf-8’。</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bool 是否写入成功，成功为True，失败为False</p>
+</dd>
+</dl>
+</dd></dl>
+
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="file.file_writer.write_df_to_multi_sheet">
+<span class="sig-prename descclassname"><span class="pre">2.2.3	file.file_writer.</span></span><span class="sig-name descname"><span class="pre">write_df_to_multi_sheet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheet_name_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">na_rep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>将dataframe数组写入excel多张sheet中</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_path</strong> – str, excel文件目标路径。</p></li>
+<li><p><strong>df_list</strong> – list，存储多个dataframe。</p></li>
+<li><p><strong>sheet_name_list</strong> – list，包含每张表的表名。</p></li>
+<li><p><strong>na_rep</strong> – int, str, default “”, 缺失值填充,默认值为空字符串。</p></li>
+<li><p><strong>columns</strong> – list，选择需要输出的的列名数组。</p></li>
+<li><p><strong>header</strong> – bool, list， default True 写出列名。如果给定字符串列表，则假定它是列名称的别名。</p></li>
+<li><p><strong>index</strong> – bool， default False, 是否显示索引，默认False，不显示index。</p></li>
+<li><p><strong>index_label</strong> – str, default None,设置索引列的列名。</p></li>
+<li><p><strong>engine</strong> – str, default None, 所使用的写引擎</p></li>
+<li><p><strong>encoding</strong> – str ，数据集的字符编码，默认’utf-8’。</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bool 是否写入成功，成功为True，失败为False</p>
+</dd>
+</dl>
+</dd></dl>
+
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="file.file_writer.write_dict_to_json">
+<span class="sig-prename descclassname"><span class="pre">2.2.4	file.file_writer.</span></span><span class="sig-name descname"><span class="pre">write_dict_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/file/file_writer.html#write_dict_to_json"><span class="viewcode-link"><span class="pre"></span></span></a><a class="headerlink" href="#file.file_writer.write_dict_to_json" title="Permalink to this definition"></a></dt>
+<dd><p>写入字典数据到json文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dict</strong> – 字典，需写入json文件的数据。</p></li>
+<li><p><strong>file_path</strong> – str，json文件目标路径。</p></li>
+<li><p><strong>encoding</strong> – str ，数据集的字符编码，默认’utf-8’。</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bool 是否写入成功，成功为True，失败为False。</p>
+</dd>
+</dl>
+</dd></dl>
+
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="file.file_writer.write_list_to_h5">
+<span class="sig-prename descclassname"><span class="pre">2.2.5	file.file_writer.</span></span><span class="sig-name descname"><span class="pre">write_list_to_h5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>将data数据和key数组一一对应写入目标h5文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_list</strong> – list，需要写入h5文件的数据数组</p></li>
+<li><p><strong>name_list</strong> – list，需要写入h5文件的key数组</p></li>
+<li><p><strong>file_path</strong> – str，h5文件目标路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bool 是否写入成功，成功为True，失败为False。</p>
+</dd>
+</dl>
+</dd></dl>
+
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="file.file_writer.write_list_to_txt">
+<span class="sig-prename descclassname"><span class="pre">2.2.6	file.file_writer.</span></span><span class="sig-name descname"><span class="pre">write_list_to_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">','</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/file/file_writer.html#write_list_to_txt"><span class="viewcode-link"><span class="pre"></span></span></a></dt>
+<dd><p>将数组写入txt文件中</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_list</strong> – list，需要写入txt的数据，格式为[[a,b,c],[d,e,f],…..],每一维写入同一行。</p></li>
+<li><p><strong>file_path</strong> – str, txt文件目标路径。</p></li>
+<li><p><strong>encoding</strong> – str ，数据集的字符编码，默认’utf-8’。</p></li>
+<li><p><strong>line_strip</strong> – str ，default '\n',行分隔符，默认'\n' 。</p></li>
+<li><p><strong>sep</strong> – str default ‘,’, 每行中字段分隔符, 默认’,’。</p></li>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bool 是否写入成功，成功为True，失败为False。</p>
+</dd>
+
+
