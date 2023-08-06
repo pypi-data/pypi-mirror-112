@@ -1,0 +1,77 @@
+set complete=k
+
+inoremap <Tab> <C-n>
+
+nnoremap <Tab> <C-w>w
+nnoremap <S-Tab> <C-w>W
+inoremap <Tab> <Esc><C-w>wi
+inoremap <S-Tab> <Tab>
+nnoremap <Up> <C-w>k
+inoremap <Up> <Esc><C-w>ki
+nnoremap <Down> <C-w>j
+inoremap <Down> <Esc><C-w>ji
+nnoremap <Left> <C-w>h
+inoremap <Left> <Esc><C-w>hi
+nnoremap <Right> <C-w>l
+inoremap <Right> <Esc><C-w>li
+
+autocmd BufRead tags inoremap <buffer> <Tab> <C-n>
+autocmd BufRead tags inoremap <buffer> <CR> <C-y>
+autocmd BufRead tags inoremap <buffer> <expr> j pumvisible() ? '<C-n>' : 'j'
+autocmd BufRead tags inoremap <buffer> <expr> k pumvisible() ? '<C-p>' : 'k'
+
+autocmd BufRead image_front,image_back inoremap <buffer> <expr> <Tab> pumvisible() ? '<C-n>' : '<C-x><c-f>'
+autocmd BufRead image_front,image_back inoremap <buffer> <CR> <C-y>
+autocmd BufRead image_front,image_back inoremap <buffer> <Space> <C-y>
+autocmd BufRead image_front,image_back inoremap <buffer> <expr> j pumvisible() ? '<C-n>' : 'j'
+autocmd BufRead image_front,image_back inoremap <buffer> <expr> k pumvisible() ? '<C-p>' : 'k'
+
+autocmd BufRead audio_front,audio_back inoremap <buffer> <expr> <Tab> pumvisible() ? '<C-n>' : '<C-x><c-f>'
+autocmd BufRead audio_front,audio_back inoremap <buffer> <CR> <C-y>
+autocmd BufRead audio_front,audio_back inoremap <buffer> <Space> <C-y>
+autocmd BufRead audio_front,audio_back inoremap <buffer> <expr> j pumvisible() ? '<C-n>' : 'j'
+autocmd BufRead audio_front,audio_back inoremap <buffer> <expr> k pumvisible() ? '<C-p>' : 'k'
+
+au BufRead front vnoremap <buffer> z c ... <Esc>uggyG<c-r><c-w>wp
+" I could implement the map-operator g@ system to allow cloze to accept a motion
+" Use B to bold text
+vnoremap B <Esc>`<i*<Esc>`>la*<Esc>
+vnoremap S <Esc>`<i{<Esc>`>la}<Esc>
+" one option would be to just use combinable attributes like {red,spell,bold:word}
+
+nnoremap <CR> :xa<CR>
+
+set shortmess+=F
+
+" colorscheme is green (2) on black (16)
+hi StatusLine cterm=none
+hi StatusLine ctermbg=16
+hi StatusLine ctermfg=1
+hi StatusLineNC cterm=none
+hi StatusLineNC ctermbg=16
+hi StatusLineNC ctermfg=2
+hi VertSplit cterm=none
+hi VertSplit ctermbg=16
+hi VertSplit ctermfg=2
+
+fun! VincaStatus(filename)
+	" The command
+	" set statusline=%{VincaStatus(expand(\"\%:t:r\"))}
+	" will apply this format
+	" Create a status which looks like ----- filename ------ "
+	let line = "  " . a:filename . "  "
+	while strlen(line) < winwidth(0) - 1
+		let line = "-" . line . "-"
+	endwhile	
+	if strlen(line) == winwidth(0) - 1
+		let line = line . "-"
+	endif
+	return line
+endfun
+set statusline=%{VincaStatus(expand(\"\%:t:r\"))}
+
+" hide the blue tildes which are normally seen at the end of each file
+set fillchars=eob:\ ,
+" use a pipe character to do a vertical split
+set fillchars+=vert:\|
+
