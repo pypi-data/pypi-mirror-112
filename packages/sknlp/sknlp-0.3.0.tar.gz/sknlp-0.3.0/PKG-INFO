@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: sknlp
+Version: 0.3.0
+Summary: 
+License: MIT
+Author: nanaya
+Author-email: nanaya100@gmail.com
+Requires-Python: >=3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: jieba (>=0.42.1,<0.43.0)
+Requires-Dist: keras-tuner (>=1.0.2,<2.0.0)
+Requires-Dist: numpy (<1.20.0)
+Requires-Dist: pandas (==1.0.4)
+Requires-Dist: scikit-learn (>=0.24.2,<0.25.0)
+Requires-Dist: tabulate (>=0.8.6,<0.9.0)
+Requires-Dist: tensorflow (==2.5.0)
+Requires-Dist: tensorflow-addons (==0.13.0)
+Requires-Dist: tensorflow-text (==2.5.0)
+Requires-Dist: tf-models-official (==2.5.0)
