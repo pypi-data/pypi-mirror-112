@@ -1,0 +1,6 @@
+locale = 'zh'
+pickle_path = 'login.pickle'
+sqlite_path = 'data.sqlite'
+voice_path = 'voice'
+music_path = 'music'
+log_path = 'log.txt'
