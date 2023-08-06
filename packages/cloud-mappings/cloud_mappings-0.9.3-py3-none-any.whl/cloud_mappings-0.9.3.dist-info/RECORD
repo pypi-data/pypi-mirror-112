@@ -1,0 +1,15 @@
+cloudmappings/__init__.py,sha256=G8jDwgUCGyMmHro-lPdmmDCQhg0lWAT3jjU1fwCO_9Q,216
+cloudmappings/cloudstoragemapping.py,sha256=BxoD2Q5_mAuLmt0C9oujWbgSiGU5QJuDmfd64Ls9fMQ,4143
+cloudmappings/errors.py,sha256=hCWKfUFFCczfVjvuvFBhDrPSERpUoc1KPEGu70v-zFg,563
+cloudmappings/wrappers.py,sha256=c8RGRIbgLXzi9n3ba7Q8SZ8AaSIfBl6U8UL_AIMMVsc,1781
+cloudmappings/storageproviders/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudmappings/storageproviders/awss3.py,sha256=sDxLTiqBxYCqKQxaLMNMLcAjeTCSvpvyFD5vuTycRtQ,4998
+cloudmappings/storageproviders/azureblobstorage.py,sha256=ORHfKVx4PJPhJEebSX3u6lbSYlpdXMp2-eOK1_CHP0E,3597
+cloudmappings/storageproviders/azuretablestorage.py,sha256=QANpKZuFyPqXJgQsr_twHHqA02ZCFxRFoygkOBrtEpg,5275
+cloudmappings/storageproviders/googlecloudstorage.py,sha256=-tGBvyBqWgoz6ypXI2YHpuDDUH4De_MPkbBbcLlQNCI,2939
+cloudmappings/storageproviders/storageprovider.py,sha256=Xn5EYYAO0CM3KMkBTDOzzvIq2tIGOZ2F9cbNyoo3UMk,2851
+cloud_mappings-0.9.3.dist-info/LICENSE,sha256=PkAWXBSwT1BDvwpsKwIvNAl47evgw-S0rjHO5qBas4Q,1077
+cloud_mappings-0.9.3.dist-info/METADATA,sha256=i-jB6VK_HPtsH2ZcaU_tS4g47gXt-L_XvoWHdq-01SA,6744
+cloud_mappings-0.9.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cloud_mappings-0.9.3.dist-info/top_level.txt,sha256=rJ0-rdHoBJuJgG2qjBG7H80nwcPlyMl9zuCDDIN5GRo,14
+cloud_mappings-0.9.3.dist-info/RECORD,,
