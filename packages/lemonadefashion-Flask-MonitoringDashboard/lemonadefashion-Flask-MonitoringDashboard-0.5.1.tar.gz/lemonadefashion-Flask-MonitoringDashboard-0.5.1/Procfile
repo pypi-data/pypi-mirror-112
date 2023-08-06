@@ -1,0 +1,1 @@
+web: pip install gunicorn && gunicorn lemonadefashion_flask_monitoringdashboard.main:app --log-file=-
