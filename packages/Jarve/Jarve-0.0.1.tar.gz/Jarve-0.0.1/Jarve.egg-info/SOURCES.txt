@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+Jarve.egg-info/PKG-INFO
+Jarve.egg-info/SOURCES.txt
+Jarve.egg-info/dependency_links.txt
+Jarve.egg-info/top_level.txt
+jarve/__init__.py
+jarve/simplechat.py
