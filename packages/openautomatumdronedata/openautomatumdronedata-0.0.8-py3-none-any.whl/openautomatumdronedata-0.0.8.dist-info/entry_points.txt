@@ -1,0 +1,3 @@
+[console_scripts]
+automatum_vis = openautomatumdronedata.automatumBokehSever:main
+
