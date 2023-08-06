@@ -1,0 +1,98 @@
+Changelog
+=========
+
+Changes in Flask-Restless-NG
+============================
+
+Version 2.1.1
+-------------
+- Only fetch primary keys from a database for relationships when no filtering is required
+
+
+Version 2.1.0
+-------------
+- Re-added FunctionsAPI until the next major release to let users to implement an alternative #23
+
+
+Version 2.0.3
+--------------
+- Fix: #26 - selectinload is broken for models that have primary keys other than 'id'. Disabled until a new schema is
+             implemented
+- Make 'primary_key' optional again #25 (by @tanj)
+
+
+Version 2.0.2
+--------------
+- Fixed import for SQLAlchemy 1.3 #22
+
+
+Version 2.0.0
+--------------
+
+Refactored fetching resource collections:
+- SQL query optimizations for 'include' and 'relationship' objects, using `selectinload`
+  (3x-5x performance improvement when tested on large datasets)
+
+- New parameter 'include_links' which controls should relationship objects include links. They are not required by
+  JSON API, and disabling them significantly improves performance
+
+- New interfaces for Serializer and Deserializer classes.
+
+- APIManager requires Serializer/Deserializer objects instead of functions for `serializer`/`deserializer` options
+
+Deprecations:
+- 'single' parameter is no longer supported - makes code complicated, is not defined in JSON API specs and can be easily
+  replicated on a client side
+
+- 'group' parameter is not longer supported - not defined in JSON API specifications, confusing and broken for PostrgeSQL
+
+- JSONP callbacks are no longer supported - please reach out if you have a use case for them
+
+
+Version 1.0.6
+-------------
+- Prevent redundant SQL queries during pagination and resource inclusion
+
+Version 1.0.5
+-------------
+- #16 - Fix: including child of empty relationship (by @sharky98)
+
+Version 1.0.4
+-------------
+- #15: Support SQLAlchemy 1.4.x
+
+Version 1.0.2
+-------------
+- #1, #13: Fix for relationship updates not being committed (by @sharky98)
+- #12: Fix for 500 when trying to include Null/None relationship
+- Added TSQuery operator (by @augustin)
+
+Version 1.0.1
+-------------
+- #4: `id` is an optional attribute as long as Model has a primary key
+- #6: Fix for `flask_restless.views` not being included in the installed package.
+
+Version 1.0.0
+-------------
+- Performance improvement: url_for() changed to build url locally instead of delegating it to Flask
+- This is the last release that is backward compatible with the original Flask-Restless API.
+
+
+Version 0.0.2
+-------------
+- New serializer (2-3x faster)
+- Added lru_cache to helpers to reduce number of recursive calls (better performance)
+
+
+Version 0.0.1
+-------------
+
+- Fixed 1.0+ compatibility
+- Fix for hybrid_property
+
+
+Original Flask-Restless
+=======================
+You can find the full `changelog`_ in the original repo
+
+.. _changelog: https://github.com/jfinkels/flask-restless/blob/master/CHANGES
