@@ -1,0 +1,7 @@
+setuptools>=38.4
+numpy
+pandas
+openpyxl
+scipy
+holoviews
+bokeh
