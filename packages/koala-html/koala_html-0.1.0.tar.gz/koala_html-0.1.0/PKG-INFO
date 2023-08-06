@@ -1,0 +1,46 @@
+Metadata-Version: 1.1
+Name: koala_html
+Version: 0.1.0
+Summary: A simple HTML page generator
+Home-page: https://github.com/GregoryAshton/koala_html
+Author: Greg Ashton
+Author-email: gregory.ashton@ligo.org
+License: MIT
+Description: ==========
+        Koala HTML
+        ==========
+        
+        Package containing simple tools for html page generation.
+        
+        
+        Installation
+        ------------
+        
+        Release version
+        
+        .. code-block:: console
+        
+           $ pip install koala_html
+        
+        
+        From source
+        
+        .. code-block:: console
+        
+           $ python setup.py install
+        
+        Usage
+        -----
+        
+        See
+        
+        .. code-block:: console
+        
+           $ koala_table --help
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
