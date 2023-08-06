@@ -1,0 +1,3 @@
+[console_scripts]
+mijn-simpel = mijn_simpel.cli:main
+

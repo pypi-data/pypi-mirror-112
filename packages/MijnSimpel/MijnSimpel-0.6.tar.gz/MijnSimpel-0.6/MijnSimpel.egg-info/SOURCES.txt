@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+MijnSimpel.egg-info/PKG-INFO
+MijnSimpel.egg-info/SOURCES.txt
+MijnSimpel.egg-info/dependency_links.txt
+MijnSimpel.egg-info/entry_points.txt
+MijnSimpel.egg-info/requires.txt
+MijnSimpel.egg-info/top_level.txt
+mijn_simpel/__init__.py
+mijn_simpel/cli.py
+mijn_simpel/client.py
+mijn_simpel/utils.py

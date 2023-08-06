@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: MijnSimpel
+Version: 0.6
+Summary: Python Client to Mijn Simpel
+Home-page: https://github.com/aleksandr-vin/mijn-simpel-python-client
+Author: Aleksandr Vinokurov
+Author-email: aleksandr.vin@gmail.com
+License: MIT
+Download-URL: https://github.com/aleksandr-vin/mijn-simpel-python-client/archive/v0.5.tar.gz
+Description: Mijn Simpel (Python) Client
+        ===========================
+        
+        Access `mijn.simpel.nl`_ from Python and command line.
+        
+        .. _mijn.simpel.nl: https://mijn.simpel.nl
+        
+        
+        Supported API / resources
+        -------------------------
+        
+          =============================  ===================================
+          Command                        Description
+          =============================  ===================================
+          subscriptions                  List subscriptions.
+          cdrs                           Show cdrs.
+          ceiling                        Show ceiling.
+          correction-for-billing-period  Show correction for billing period.
+          dashboard                      Show dashboard.
+          latest-invoice                 Show latest invoice.
+          other-costs                    Show other costs.
+          products                       Show products.
+          usage-summary                  Show usage summary.
+          =============================  ===================================
+          
+          
+        Installation
+        ------------
+        
+        This will install the cli and the Python module ``mijn_simpel``::
+        
+            pip install .
+        
+        
+        Using CLI
+        ---------
+        
+        The cli goes with a *--help*, so try::
+        
+            mijn-simpel --help
+        
+        It also recognize these environment variables:
+        
+        * *MIJN_SIMPEL_USERNAME*
+        * *MIJN_SIMPEL_PASSWORD*
+        * *MIJN_SIMPEL_SUBSCRIPTION_ID*
+        * *MIJN_SIMPEL_COOKIE_JAR*
+        
+        
+        Using in Python
+        ---------------
+        
+        Please check `mijn_simpel/cli.py`_ for the example.
+        
+        .. _mijn_simpel/cli.py: mijn_simpel/cli.py
+        
+        
+        Hacking
+        -------
+        
+        Try installing with::
+        
+            pip install -e .
+        
+        And then you can modify the source code and use it right away.
+        
+Keywords: scraping,mijn-simpel,telecom,usage,cli,client,simpel,nl
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Customer Service
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: Topic :: Software Development
+Classifier: Topic :: Communications :: Telephony
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Internet
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: System :: Monitoring
+Classifier: Natural Language :: Dutch
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
