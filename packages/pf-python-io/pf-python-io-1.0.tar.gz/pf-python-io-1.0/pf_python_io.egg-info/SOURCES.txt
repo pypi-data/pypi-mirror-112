@@ -1,0 +1,14 @@
+LICENSE
+setup.py
+pf_archive/__init__.py
+pf_archive/pf_zip_archive.py
+pf_file_content/__init__.py
+pf_file_content/pf_string_util.py
+pf_file_content/pf_text_file.py
+pf_file_dir/__init__.py
+pf_file_dir/pf_fd_util.py
+pf_python_io.egg-info/PKG-INFO
+pf_python_io.egg-info/SOURCES.txt
+pf_python_io.egg-info/dependency_links.txt
+pf_python_io.egg-info/not-zip-safe
+pf_python_io.egg-info/top_level.txt
