@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: rf-lighthouselibrary
+Version: 1.0a11
+Summary: Lighthouse Library
+Home-page: https://github.com/MainSystemDev/rf-lighthouselibrary
+Author: Shiela Buitizon
+Author-email: shiela.buitizon@mnltechnology.com
+License: Type license() to see the full license text
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Testing
+Classifier: Framework :: Robot Framework
+Classifier: Framework :: Robot Framework :: Library
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (==1.2.5)
+Requires-Dist: pycodestyle
+Requires-Dist: pyppeteer (==0.2.5)
+
+LighthouseLibrary
+=================
+
+
+
+Authors:
+* __Shiela Buitizon | email:shiela.buitizon@mnltechnology.com__
+
+Company: [__Spiralworks Technologies Inc.__](http://www.spiralwrks.com/)
+
+
