@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+test/test_write_in_blob.py
+write_in_blob.egg-info/PKG-INFO
+write_in_blob.egg-info/SOURCES.txt
+write_in_blob.egg-info/dependency_links.txt
+write_in_blob.egg-info/requires.txt
+write_in_blob.egg-info/top_level.txt
+writeinblob/__init__.py
+writeinblob/name_convention.py
+writeinblob/trivial_handler.py
+writeinblob/write_in_blob.py
