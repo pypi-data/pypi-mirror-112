@@ -1,0 +1,14 @@
+airzone/__init__.py,sha256=uVsRDdmt-BwAi7CYAv8O36wGKSVKoUaM7F2jwlLlyaM,1462
+airzone/aido.py,sha256=LtFwXkfBuCxmaqlcUnGAPmbxbQU6h0JkzLQE-zqalTE,4162
+airzone/innobus.py,sha256=5kasx-s0HInoFKTyfyTXt0HcQWXqaRGqhGrcxOxVx2E,12253
+airzone/localapi.py,sha256=j3cbHZ0UzsqUy2BETV8n_igRQUBE5swhA_RXVDghnoE,6467
+airzone/protocol.py,sha256=t6KuyY_pntkqeDgpR1dNdcBVSfvOoVcB-2sUSg6Ubpc,4255
+airzone/utils.py,sha256=18MHt9ggQCPD4CGnxgYU0tDnBYF2owp3dBf0fwax2-o,1092
+python_airzone-0.8.0.data/scripts/airzone_cli.py,sha256=yUOXyP93xB3XeGChDu-sNyd7UO6QMz0IX9JhDPQAUd8,1198
+tests/__init__.py,sha256=K8CcUaKJ3_Ur2YUta6wxLUNDken4MSbWOWAd6KAOr0Q,41
+tests/test_localapi.py,sha256=asrz-L57HiAGHhz59_Cg828zxhodiCgieeP0CGl-NnY,920
+python_airzone-0.8.0.dist-info/LICENSE,sha256=yibVT1VHH0-gOGdZXQ1mgDdbk7diKiBsxwcd6rZb67s,1071
+python_airzone-0.8.0.dist-info/METADATA,sha256=V4ErEuFyjBropBrISWIZS2hf3RhwqLgIST7GLQ-x-qU,1570
+python_airzone-0.8.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+python_airzone-0.8.0.dist-info/top_level.txt,sha256=duaIYRrnQCwv-k7ghxiOz16F4THr1_cf0XCoN1YNBso,14
+python_airzone-0.8.0.dist-info/RECORD,,
