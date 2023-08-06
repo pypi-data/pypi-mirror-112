@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/entropymethod/__init__.py
+src/entropymethod/entropy_score.py
+src/entropymethod/find_stable_k.py
+src/entropymethod/pw_assoc_probs.py
+src/entropymethod/safe_entropy.py
+src/entropymethod/tests.py
+src/entropymethod/visual_tests.py
+src/entropymethod.egg-info/PKG-INFO
+src/entropymethod.egg-info/SOURCES.txt
+src/entropymethod.egg-info/dependency_links.txt
+src/entropymethod.egg-info/top_level.txt
