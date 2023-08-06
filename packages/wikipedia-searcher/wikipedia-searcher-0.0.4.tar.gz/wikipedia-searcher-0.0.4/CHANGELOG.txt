@@ -1,0 +1,24 @@
+CHANGELOG
+==========
+
+0.0.1 (07/02/2021)
+------------------
+- First Release
+
+0.0.2 (07/02/2021)
+
+Changed
+
+- removed redundant codes
+
+0.0.3 (07/03/2021)
+
+Changed
+
+- fix install without dependencies
+
+0.0.4 (07/9/2021)
+
+Added
+
+- added verbose parameter to the search function
