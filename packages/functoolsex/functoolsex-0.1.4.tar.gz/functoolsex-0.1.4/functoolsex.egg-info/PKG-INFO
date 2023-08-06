@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: functoolsex
+Version: 0.1.4
+Summary: ex(pyrsistent, fn, pytoolz, ...) and faster on CPython and PyPy
+Home-page: https://github.com/aymazon/functools-ex
+Author: Tony L. Fan
+Author-email: aymazon@gmail.com
+License: MIT
+Keywords: fn pyrsistent pytoolz functional utility itertools functools
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+
+UNKNOWN
+
