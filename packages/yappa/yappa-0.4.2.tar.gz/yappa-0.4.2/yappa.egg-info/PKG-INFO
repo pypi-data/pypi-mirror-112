@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: yappa
+Version: 0.4.2
+Summary: Easy serverless deploy of python web applications
+Home-page: UNKNOWN
+Author: Egor Korovin
+Author-email: kbkor@yandex.ru
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >3.8.0
+Description-Content-Type: text/markdown
+
+# Simple and Easy serverless deploy of python web-apps Yandex Cloud
+
+1. create account at Yandex Cloud
+2. use Yappa:
+```shell
+$ yappa setup
+$ yappa deploy
+ ``` 
+
+## that's it!
+
+
+
