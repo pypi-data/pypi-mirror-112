@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: wezbxsrv-cfomp
+Version: 0.0.1
+Summary: Wxwork callback service for zabbix
+Home-page: UNKNOWN
+Author: chenhp
+Author-email: chenhp@shchinaforutne.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: flask
+Requires-Dist: zabbix-api
+Requires-Dist: weworkapi-cfomp
+
+UNKNOWN
+
+
