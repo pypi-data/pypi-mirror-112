@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+superpipe/__init__.py
+superpipe.egg-info/PKG-INFO
+superpipe.egg-info/SOURCES.txt
+superpipe.egg-info/dependency_links.txt
+superpipe.egg-info/top_level.txt
