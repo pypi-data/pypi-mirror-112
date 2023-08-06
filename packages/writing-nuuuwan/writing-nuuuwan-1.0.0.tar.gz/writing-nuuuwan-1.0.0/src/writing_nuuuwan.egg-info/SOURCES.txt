@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+src/writing/__init__.py
+src/writing/audio.py
+src/writing/docjson.py
+src/writing/translate.py
+src/writing/video.py
+src/writing_nuuuwan.egg-info/PKG-INFO
+src/writing_nuuuwan.egg-info/SOURCES.txt
+src/writing_nuuuwan.egg-info/dependency_links.txt
+src/writing_nuuuwan.egg-info/requires.txt
+src/writing_nuuuwan.egg-info/top_level.txt
