@@ -1,0 +1,10 @@
+README.md
+setup.py
+pytest_motor/__init__.py
+pytest_motor/plugin.py
+pytest_motor.egg-info/PKG-INFO
+pytest_motor.egg-info/SOURCES.txt
+pytest_motor.egg-info/dependency_links.txt
+pytest_motor.egg-info/entry_points.txt
+pytest_motor.egg-info/requires.txt
+pytest_motor.egg-info/top_level.txt
