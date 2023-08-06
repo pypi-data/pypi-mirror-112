@@ -1,0 +1,11 @@
+.gitignore
+README.md
+requirements.txt
+setup.py
+archivy_static_site_gen/__init__.py
+archivy_static_site_gen.egg-info/PKG-INFO
+archivy_static_site_gen.egg-info/SOURCES.txt
+archivy_static_site_gen.egg-info/dependency_links.txt
+archivy_static_site_gen.egg-info/entry_points.txt
+archivy_static_site_gen.egg-info/requires.txt
+archivy_static_site_gen.egg-info/top_level.txt
