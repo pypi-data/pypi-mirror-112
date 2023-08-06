@@ -1,0 +1,11 @@
+setup.py
+y_disc_math/__init__.py
+y_disc_math/first_order_logic.py
+y_disc_math/test_and.py
+y_disc_math/test_or.py
+y_disc_math/test_xor.py
+y_disc_math.egg-info/PKG-INFO
+y_disc_math.egg-info/SOURCES.txt
+y_disc_math.egg-info/dependency_links.txt
+y_disc_math.egg-info/not-zip-safe
+y_disc_math.egg-info/top_level.txt
