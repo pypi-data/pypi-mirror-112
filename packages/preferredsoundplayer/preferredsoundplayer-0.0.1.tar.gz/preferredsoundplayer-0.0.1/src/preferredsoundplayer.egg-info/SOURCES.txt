@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/preferredsound/__init__.py
+src/preferredsound/preferredsoundplayer.py
+src/preferredsoundplayer.egg-info/PKG-INFO
+src/preferredsoundplayer.egg-info/SOURCES.txt
+src/preferredsoundplayer.egg-info/dependency_links.txt
+src/preferredsoundplayer.egg-info/top_level.txt
