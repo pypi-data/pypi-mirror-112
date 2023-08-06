@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: everyaction-client
+Version: 0.2.8
+Summary: A client for EveryAction implemented in Python3.8+
+Home-page: https://github.com/partiallyderived/everyaction-client
+Author: Bobbey Reese
+Author-email: bobbeyreese@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://partiallyderived.github.io/everyaction-client
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: makefun (>=1.11.3)
+Requires-Dist: requests (>=2.25.1)
+Provides-Extra: doc
+Requires-Dist: sphinx (>=3.4.3) ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: pytest (>=6.2.2) ; extra == 'test'
+Requires-Dist: http-router (>=2.0.3) ; extra == 'test'
+
+UNKNOWN
+
