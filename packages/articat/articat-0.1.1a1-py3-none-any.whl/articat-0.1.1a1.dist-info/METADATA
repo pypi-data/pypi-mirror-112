@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: articat
+Version: 0.1.1a1
+Summary: articat: data artifact catalog
+Home-page: https://github.com/related-sciences/articat
+Author: Related Sciences LLC
+Author-email: rav@related.vc
+License: Apache
+Keywords: data,catalog,metadata,data-discovery,data-catalog
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gcsfs (>=0.6.0)
+Requires-Dist: google-cloud-bigquery (==2.13.1)
+Requires-Dist: google-cloud-datastore (==1.15.0)
+Requires-Dist: papermill (==2.3.3)
+Requires-Dist: pydantic (>=1.8.0)
+
+# articat
+[![CI](https://github.com/related-sciences/articat/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/related-sciences/articat/actions/workflows/build.yml)
+[![PYPI](https://img.shields.io/pypi/v/articat.svg)](https://pypi.org/project/articat/)
+
+Minimal metadata catalog to store and retrieve metadata about data artifacts.
+
+High level features:
+ * set of predefined metadata models
+ * flexible metadata (arbitrary key-values)
+ * no long running services (low maintenance)
+ * IO/data format agnostic
+ * immutable metadata
+
+## Example:
+
+To publish a file system Artifact:
+
+```python
+from articat.fs_artifact import FSArtifact
+from pathlib import Path
+from datetime import date
+
+with FSArtifact.partitioned(id="foo", partition=date.today()) as fsa:
+    tmp_file = fsa.joinpath("answer.txt")
+    Path(tmp_file).write_text("42")
+    fsa.metadata.description = "Answer to the Ultimate Question of Life, the Universe, and Everything"
+```
+
+To retrieve metadata about the Artifact above:
+
+```python
+from articat.fs_artifact import FSArtifact
+from datetime import date
+
+FSArtifact.partitioned(id="foo", partition=date.today()).fetch()
+```
+
+## Artifact flavours
+
+Currently available Artifact flavours:
+ * File System Artifact: FSArtifact
+ * BigQuery Artifact: BQArtifact
+ * Notebook Artifact: NotebookArtifact
+
+
