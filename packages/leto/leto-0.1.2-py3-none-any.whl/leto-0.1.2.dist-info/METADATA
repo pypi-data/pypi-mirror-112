@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: leto
+Version: 0.1.2
+Summary: A crawler framework.
+Home-page: https://leesoar.com
+Author: leesoar
+Author-email: secure@tom.com
+License: MIT
+Keywords: scrapy,leto,crawler,spider
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.3.0
+Description-Content-Type: text/markdown
+Requires-Dist: markdown
+Requires-Dist: anole
+Requires-Dist: certifi
+Requires-Dist: chardet
+Requires-Dist: clickhouse-driver
+Requires-Dist: crack
+Requires-Dist: Faker
+Requires-Dist: idna
+Requires-Dist: psycopg2-binary
+Requires-Dist: pycryptodome
+Requires-Dist: PyMySQL
+Requires-Dist: pymongo
+Requires-Dist: pysodium
+Requires-Dist: python-dateutil
+Requires-Dist: redis
+Requires-Dist: requests
+Requires-Dist: retrying
+Requires-Dist: selenium
+Requires-Dist: six
+Requires-Dist: text-unidecode
+Requires-Dist: urllib3
+
+
+## LeTo
+
+A crawler framework.
+
