@@ -1,0 +1,111 @@
+#
+# SOME DESCRIPTIVE TITLE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE 1.0\n"
+"POT-Creation-Date: 2021-02-24 23:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Lingua 3.10.dev0\n"
+
+#: src/pyams_skin/interfaces/__init__.py:44
+msgid "Inherit parent skin?"
+msgstr "Hériter du skin parent ?"
+
+#: src/pyams_skin/interfaces/__init__.py:45
+msgid "Should we reuse parent skin?"
+msgstr "Indique si l'on doit hériter du thème graphique du niveau supérieur"
+
+#: src/pyams_skin/interfaces/__init__.py:49
+msgid "Don't inherit parent skin?"
+msgstr "Ne pas hériter du skin parent ?"
+
+#: src/pyams_skin/interfaces/__init__.py:50
+msgid "Should we override parent skin?"
+msgstr ""
+"Indique que l'on ne doit pas hériter du thème graphique du niveau supérieur"
+
+#: src/pyams_skin/interfaces/__init__.py:56
+msgid "Custom graphic theme"
+msgstr "Thème graphique spécifique"
+
+#: src/pyams_skin/interfaces/__init__.py:57
+msgid "This theme will be used to handle graphic design (colors and images)"
+msgstr ""
+"Ce thème graphique sera utilisé pour prendre en charge tous les aspects "
+"graphiques"
+
+#: src/pyams_skin/interfaces/__init__.py:71
+msgid "Custom stylesheet"
+msgstr "Feuille de style spécifique"
+
+#: src/pyams_skin/interfaces/__init__.py:72
+msgid "This custom stylesheet will be used to override selected theme styles"
+msgstr ""
+"Cette feuille de style spécifique pourra être utilisée pour surcharger les "
+"styles graphiques fournis par le thème sélectionné"
+
+#: src/pyams_skin/interfaces/__init__.py:76
+msgid "Editor stylesheet"
+msgstr "Feuille de style éditeur"
+
+#: src/pyams_skin/interfaces/__init__.py:77
+msgid "Styles defined into this stylesheet will be available into HTML editor"
+msgstr ""
+"Les styles définis dans cette feuille de style seront disponibles dans "
+"l'éditeur HTML"
+
+#: src/pyams_skin/interfaces/__init__.py:81
+msgid "Custom script"
+msgstr "Script spécifique"
+
+#: src/pyams_skin/interfaces/__init__.py:82
+msgid ""
+"This custom javascript file will be used to add dynamic features to selected "
+"theme"
+msgstr ""
+"Ce script spécifique pourra être utilisé pour ajouter des comportements à "
+"ceux définis par par le thème graphique"
+
+#: src/pyams_skin/interfaces/__init__.py:66
+msgid "You must select a custom skin or inherit from parent!"
+msgstr ""
+"Vous devez sélectionner un thème graphique spécifique si vous n'héritez pas "
+"du niveau supérieur"
+
+#: src/pyams_skin/interfaces/templates/time-input.pt:9
+#: src/pyams_skin/interfaces/templates/date-input.pt:9
+#: src/pyams_skin/interfaces/templates/datetime-input.pt:9
+msgid "Show calendar"
+msgstr "Afficher le calendrier"
+
+#: src/pyams_skin/interfaces/templates/time-input.pt:59
+#: src/pyams_skin/interfaces/templates/date-input.pt:59
+#: src/pyams_skin/interfaces/templates/datetime-input.pt:58
+msgid "Remove selected value"
+msgstr "Supprimer la valeur sélectionnée"
+
+#: src/pyams_skin/interfaces/templates/http-method-input.pt:10
+#: src/pyams_skin/interfaces/templates/http-method-display.pt:8
+msgid "(no selection)"
+msgstr "(pas de sélection)"
+
+#: src/pyams_skin/interfaces/templates/form.pt:10
+msgid "Back to previous page"
+msgstr "Revenir à la page précédente"
+
+#: src/pyams_skin/interfaces/templates/dates-range-input.pt:7
+msgid "from"
+msgstr "à partir du"
+
+#: src/pyams_skin/interfaces/templates/dates-range-input.pt:9
+msgid "to"
+msgstr "et avant le"
