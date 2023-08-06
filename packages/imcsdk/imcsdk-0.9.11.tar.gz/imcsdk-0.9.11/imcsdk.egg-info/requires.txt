@@ -1,0 +1,11 @@
+pyparsing
+setuptools
+six
+
+[docs]
+sphinx<1.3
+sphinx_rtd_theme
+sphinxcontrib-napoleon
+
+[ssl]
+pyOpenSSL
