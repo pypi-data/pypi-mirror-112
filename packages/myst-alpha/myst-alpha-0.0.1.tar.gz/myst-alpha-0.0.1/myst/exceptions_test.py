@@ -1,0 +1,25 @@
+import unittest
+
+from myst.exceptions import MystAPIError, UnAuthenticatedError
+
+
+class ErrorsTest(unittest.TestCase):
+    def test_un_authenticated_error(self):
+        error = UnAuthenticatedError("UnAuthenticated.")
+
+        def _raise_error():
+            raise error
+
+        self.assertRaises(UnAuthenticatedError, _raise_error)
+        self.assertEqual(error.message, "UnAuthenticated.")
+
+    def test_myst_api_error(self):
+        error = MystAPIError(status_code=404, message="Not found.")
+
+        def _raise_error():
+            raise error
+
+        self.assertRaises(MystAPIError, _raise_error)
+        self.assertEqual(error.status_code, 404)
+        self.assertEqual(error.message, "Not found.")
+        self.assertEqual(str(error), "Not found.")
