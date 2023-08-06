@@ -1,0 +1,3 @@
+[console_scripts]
+bic = bagit_create.cli:cli
+
