@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+import argparse
+from GoogleScholarReport.collector import command_line_parser, gsr
+
+if __name__ == "__main__":
+
+    args = command_line_parser()
+    
+    print(args.admin)
+
+    print(args.output)
+    
+    # sys.exit('check')
+
+    url = str(args.url)
+
+    if args.email and args.password:
+
+        email = args.email
+
+        password = args.password
+
+        if args.admin:
+
+            admin = args.admin
+
+            print(admin)
+
+            if args.output:
+
+                output = args.output
+
+                gsr(url, email, password, output, admin)
+
+            else:
+
+                gsr(url, email, password, admin=admin)
+
+        else:
+
+            if args.output:
+
+                output = args.output
+
+                gsr(url, email, password,output=output)
+
+            else:
+
+                gsr(url, email, password)
+    
+    else:
+
+        if args.output:
+
+            output = args.output
+
+            gsr(url,output=output)
+
+        else:
+
+            gsr(url)
