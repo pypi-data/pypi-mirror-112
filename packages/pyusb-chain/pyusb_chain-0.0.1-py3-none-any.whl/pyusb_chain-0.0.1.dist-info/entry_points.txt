@@ -1,0 +1,3 @@
+[console_scripts]
+pyusb-chain = pyusb_chain.__main__:main
+
