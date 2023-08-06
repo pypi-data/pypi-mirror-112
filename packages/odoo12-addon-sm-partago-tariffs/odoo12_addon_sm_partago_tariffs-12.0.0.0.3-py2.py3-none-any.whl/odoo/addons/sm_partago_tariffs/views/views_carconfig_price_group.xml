@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+    <record id="view_carconfig_price_group_window" model="ir.actions.act_window">
+      <field name="name">Price groups</field>
+      <field name="res_model">smp.sm_carconfig_price_group</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record id="view_carconfig_price_group_list" model="ir.ui.view">
+      <field name="name">smp.carconfig_price_group.list</field>
+      <field name="model">smp.sm_carconfig_price_group</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="id"/>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+    <record id="view_carconfig_price_group_form" model="ir.ui.view">
+      <field name="name">smp.carconfig_price_group.form</field>
+      <field name="model">smp.sm_carconfig_price_group</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit carconfig price group" version="7.0" delete="false">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="name"/>
+                  <field name="applied_carconfigs_id" widget="one2many_list">
+                    <tree string="Applied Carconfig">
+                      <field name="name"/>
+                    </tree>
+                  </field>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <menuitem name="Carconfigs Price Groups" id="sm_partago_tariffs.menu_carconfig_pricegroups" 
+      parent="sm_partago_tariffs.tariffs_main" action="view_carconfig_price_group_window"/>
+  </data>
+</odoo>

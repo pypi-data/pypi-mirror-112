@@ -1,0 +1,127 @@
+<odoo>
+  <data>
+    <record id="view_check_description_workflow" model="ir.actions.server">
+      <field name="name">Check tariffs descriptions</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_smp_sm_carsharing_tariff"/>
+      <field name="binding_model_id" ref="model_smp_sm_carsharing_tariff"/>
+      <field name="state">code</field>
+      <field name="code">action = model.search_descriptions()</field>
+    </record>
+
+
+    <record id="view_tariff_mark_as_abouttoexpire_notified_workflow" model="ir.actions.server">
+      <field name="name">Mark as about to expire notified</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_smp_sm_carsharing_tariff"/>
+      <field name="binding_model_id" ref="model_smp_sm_carsharing_tariff"/>
+      <field name="state">code</field>
+      <field name="code">action = model.mark_as_notified()</field>
+    </record>
+
+    <record id="view_tariff_recompute_pb_tariff_workflow" model="ir.actions.server">
+      <field name="name">Recompute pocketbook tariff</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_smp_sm_carsharing_tariff"/>
+      <field name="binding_model_id" ref="model_smp_sm_carsharing_tariff"/>
+      <field name="state">code</field>
+      <field name="code">action = model.recompute_pb_tariff()</field>
+    </record>
+
+    <record id="view_tariff_window" model="ir.actions.act_window">
+      <field name="name">User Tariffs</field>
+      <field name="res_model">smp.sm_carsharing_tariff</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_tariff_search" model="ir.ui.view">
+      <field name="name">smp.tariff.search</field>
+      <field name="model">smp.sm_carsharing_tariff</field>
+      <field name="type">search</field>
+      <field name="arch" type="xml">
+        <search string="DB tariffs search">
+          <field name="name"/>
+          <field name="tariff_type"/>
+          <field name="related_member_id"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="view_tariff_list" model="ir.ui.view">
+      <field name="name">smp.tariff.list</field>
+      <field name="model">smp.sm_carsharing_tariff</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="id"/>
+          <field name="name"/>
+          <field name="reason"/>
+          <field name="tariff_type"/>
+          <field name="date_valid"/>
+          <field name="related_member_id"/>
+          <field name="tariff_model_id"/>
+          <field name="description"/>
+          <field name="abouttoexpire"/>
+          <field name="closed"/>
+          <field name="abouttoexpire_member_notified"/>
+        </tree>
+      </field>
+    </record>
+    <record id="view_tariff_form" model="ir.ui.view">
+      <field name="name">smp.tariff.form</field>
+      <field name="model">smp.sm_carsharing_tariff</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit tariff" version="7.0" delete="false">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="name"/>
+                  <field name="reason"/>
+                  <field name="related_member_id"/>
+                  <field name="tariff_model_id"/>
+                  <field name="tariff_type"/>
+                  <field name="date"/>
+                  <field name="date_active"/>
+                  <field name="date_valid" 
+                    attrs="{'invisible': [('tariff_type','!=','time_frame')]}"/>
+                  <field name="related_carconfig_id" 
+                    attrs="{'invisible': [('tariff_type','!=','rel_car')]}"/>
+                  <field name="time_restricted" 
+                    attrs="{'invisible': [('tariff_type','!=','rel_car')]}"/>
+                  <field name="carconfig_availability" 
+                    attrs="{'required':[('time_restricted','=',True)], 'invisible': [('time_restricted','!=',True)]}"/>
+                  <field name="extra_tariff_model_id" 
+                    attrs="{'required':[('time_restricted','=',True)], 'invisible': [('time_restricted','!=',True)]}"/>
+                  <field name="pocketbook_initial" 
+                    attrs="{'invisible': [('tariff_type','!=','pocketbook')]}" />
+                  <field name="pocketbook_threshold" 
+                    attrs="{'invisible': [('tariff_type','!=','pocketbook')]}"/>
+                  <field name="pocketbook" 
+                    attrs="{'invisible': [('tariff_type','!=','pocketbook')]}"/>
+                  <field name="description"/>
+                  <field name="closed"/>
+                  <field name="abouttoexpire"/>
+                  <field name="abouttoexpire_member_notified"/>
+                  <field name="tariff_history_ids" widget="one2many_list">
+                    <tree string="Tariff history" create="false" edit="false" delete="true"
+                        open="true">
+                      <field name="name"/>
+                      <field name="date"/>
+                      <field name="amount"/>
+                      <field name="obs"/>
+                    </tree>
+                  </field>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <menuitem name="User Tariffs" id="sm_partago_tariffs.menu_tariffs" 
+      parent="sm_partago_tariffs.tariffs_main" action="view_tariff_window"/>
+
+  </data>
+</odoo>

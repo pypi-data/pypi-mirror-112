@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="tariffs_res_config_settings_view_form" model="ir.ui.view">
+    <field name="name">tariffs.res.config.settings.view.form.inherit.base.setup</field>
+    <field name="model">res.config.settings</field>
+    <field name="priority" eval="100"/>
+    <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//div[hasclass('settings')]" position="inside">
+        <div class="app_settings_block" data-string="CS Tariffs" string="CS Tariffs" data-key="cs_tariffs">
+          <div class="sm_tariff_config">
+            <h2>Tariff config</h2>
+            <div class="row mt16 o_settings_container">
+              <group>
+                <field name="tariff_default_model_id"/>
+                <field name="welcome_tariff_model_id"/>
+                <field name="pocketbook_threshold"/> 
+                <field name="welcome_default"/>
+              </group>
+            </div>
+            <h2>Mail Templates</h2>
+            <div class="row mt16 o_settings_container">
+              <group>
+                <field name="notification_tariff_creation_id"/>
+                <field name="abouttoexpire_mail_template_id"/>
+              </group>
+            </div>
+          </div>
+        </div>
+      </xpath>
+    </field>
+  </record>
+</odoo>

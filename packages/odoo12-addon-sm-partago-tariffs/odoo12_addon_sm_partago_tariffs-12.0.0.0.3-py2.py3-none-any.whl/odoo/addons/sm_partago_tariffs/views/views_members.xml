@@ -1,0 +1,130 @@
+<odoo>
+  <data>
+    <record id="view_tariff_members_form" model="ir.ui.view">
+      <field name="name">sm_partago_tariffs.members.form</field>
+      <field name="model">res.partner</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="sm_partago_user.view_smp_members_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//notebook" position="inside">
+          <page name='tariffs' string="Tariffs">
+            <group name="tariffs">
+              <field name="default_tariff_model_id"/>
+              <field name="cs_tariffs_id" widget="one2many_list">
+                <tree string="Tariffs" create="true" edit="true" delete="true" open="true">
+                  <field name="name"/>
+                  <field name="date"/>
+                  <field name="date_active"/>
+                  <field name="date_valid"/>
+                  <field name="related_carconfig_id"/>
+                  <field name="pocketbook"/>
+                  <field name="closed"/>
+                </tree>
+                <form>
+                  <sheet>
+                    <notebook>
+                      <page string="General">
+                        <group>
+                          <field name="name"/>
+                          <field name="reason"/>
+                          <field name="tariff_model_id"/>
+                          <field name="tariff_type"/>
+                          <field name="date"/>
+                          <field name="date_active"/>
+                          <field name="date_valid" attrs="{'invisible': [('tariff_type','!=','time_frame')]}"/>
+                          <field name="related_carconfig_id" attrs="{'invisible': [('tariff_type','!=','rel_car')]}"/>
+                          <field name="time_restricted" attrs="{'invisible': [('tariff_type','!=','rel_car')]}"/>
+                          <field name="carconfig_availability" attrs="{'required':[('time_restricted','=',True)], 'invisible': [('time_restricted','!=',True)]}"/>
+                          <field name="extra_tariff_model_id" attrs="{'required':[('time_restricted','=',True)], 'invisible': [('time_restricted','!=',True)]}"/>
+                          <field name="pocketbook_initial" attrs="{'invisible': [('tariff_type','!=','pocketbook')]}" />
+                          <field name="pocketbook_threshold" attrs="{'invisible': [('tariff_type','!=','pocketbook')]}"/>
+                          <field name="pocketbook" attrs="{'invisible': [('tariff_type','!=','pocketbook')]}"/>
+                          <field name="description"/>
+                          <field name="closed"/>
+                          <field name="abouttoexpire"/>
+                          <field name="abouttoexpire_member_notified"/>
+                          <field name="tariff_history_ids" widget="one2many_list">
+                            <tree string="Tariff history" create="false" edit="false" delete="true" open="true">
+                              <field name="name"/>
+                              <field name="date"/>
+                              <field name="amount"/>
+                              <field name="obs"/>
+                            </tree>
+                          </field>
+                        </group>
+                      </page>
+                    </notebook>
+                  </sheet>
+                </form>
+              </field>
+            </group>
+          </page>
+        </xpath>
+      </field>
+    </record>
+    
+    <!-- SEND EMAIL TARIFF WIZARD-->
+    
+     <!--      VIEW WIZARD       -->
+    <record id="view_carsharing_send_email_tariff_wizard" model="ir.ui.view">
+      <field name="name">Create tariff</field>
+      <field name="model">sm_carsharing_send_email_tariff.wizard</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Are you sure?">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="name"/>
+                  <field name="reason"/>
+                  <field name="tariff_model_id"/>
+                  <field name="tariff_type"/>
+                  <field name="date"/>
+                  <field name="date_active"/>
+                  <field name="date_valid" 
+                    attrs="{'invisible': [('tariff_type','!=','time_frame')]}"/>
+                  <field name="related_carconfig_id" 
+                    attrs="{'invisible': [('tariff_type','!=','rel_car')]}"/>
+                  <field name="time_restricted" 
+                    attrs="{'invisible': [('tariff_type','!=','rel_car')]}"/>
+                  <field name="carconfig_availability" 
+                    attrs="{'required':[('time_restricted','=',True)], 'invisible': [('time_restricted','!=',True)]}"/>
+                  <field name="extra_tariff_model_id" 
+                    attrs="{'required':[('time_restricted','=',True)], 'invisible': [('time_restricted','!=',True)]}"/>
+                  <field name="pocketbook_initial" 
+                    attrs="{'invisible': [('tariff_type','!=','pocketbook')]}" />
+                  <field name="pocketbook_threshold" 
+                    attrs="{'invisible': [('tariff_type','!=','pocketbook')]}"/>
+                  <field name="pocketbook" 
+                    attrs="{'invisible': [('tariff_type','!=','pocketbook')]}"/>
+                  <field name="description"/>
+                  <field name="notify"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+          <footer>
+            <button name="send_email_tariff"
+                string="Yes" type="object"
+                class="btn-primary"/>
+            <button string="No"
+                class="btn-default"
+                special="cancel"/>
+          </footer>
+        </form>
+      </field>
+    </record>
+
+  <!--     END SEND EMAIL TARIFF WIZARD -->
+  <!--        ACTION           -->
+    <record id="send_email_tariff_carsharing" model="ir.actions.server">
+      <field name="name">Create tariff</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_res_partner"/>
+      <field name="binding_model_id" ref="model_res_partner"/>
+      <field name="state">code</field>
+      <field name="code">action = model.get_send_email_tariff_view()</field>
+    </record>
+  </data>
+</odoo>

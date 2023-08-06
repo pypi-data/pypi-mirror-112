@@ -1,0 +1,26 @@
+<odoo>
+  <data noupdate="1">
+    <record id="ir_cron_maintenance_welcome_tariffs_form" model="ir.cron">
+      <field name="name">Maintenance welcome tariffs</field>
+      <field eval="False" name="active"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="interval_number">1</field>
+      <field name="interval_type">days</field>
+      <field name="numbercall">-1</field>
+      <field name="model_id" ref="model_sm_partago_tariffs_smp_tariffs_cron"/>
+      <field name="state">code</field>
+      <field name="code">model.maintenance_welcome_tariffs()</field>
+    </record>
+    <record id="ir_cron_notify_members_abouttoexpire_tariffs" model="ir.cron">
+      <field name="name">Notify about-to-expire Tariffs </field>
+      <field eval="False" name="active"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="interval_number">1</field>
+      <field name="interval_type">days</field>
+      <field name="numbercall">-1</field>
+      <field name="model_id" ref="model_sm_partago_tariffs_smp_tariffs_cron"/>
+      <field name="state">code</field>
+      <field name="code">model.notify_members_abouttoexpire_tariffs()</field>
+    </record>
+  </data>
+</odoo>

@@ -1,0 +1,61 @@
+<odoo>
+  <data>
+    <record id="view_tariff_model_window" model="ir.actions.act_window">
+      <field name="name">Tariffs Models</field>
+      <field name="res_model">smp.sm_carsharing_tariff_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record id="view_tariff_model_list" model="ir.ui.view">
+      <field name="name">smp.tariff_model.list</field>
+      <field name="model">smp.sm_carsharing_tariff_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="id"/>
+          <field name="name"/>
+          <field name="description"/>
+          <field name="price_groups_id"/>
+        </tree>
+      </field>
+    </record>
+    <record id="view_tariff_model_form" model="ir.ui.view">
+      <field name="name">smp.tariff_model.form</field>
+      <field name="model">smp.sm_carsharing_tariff_model</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit tariff model" version="7.0" delete="false">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="name"/>
+                  <field name="description"/>
+                  <field name="cs_mins_product_id"/>
+                  <field name="cs_days_product_id"/>
+                  <field name="cs_mileage_product_id"/>
+                  <field name="price_groups_id" widget="one2many_list">
+                    <tree string="Price Groups">
+                    <field name="applied_carconfig_price_group_id"/>
+                    <field name="cs_mins_product_id"/>
+                    <field name="cs_days_product_id"/>
+                    <field name="cs_mileage_product_id"/>
+                    </tree>
+                  </field>
+                  <field name="rel_tariffs_id" widget="one2many_list">
+                    <tree string="Related tariffs">
+                    <field name="name"/>
+                    <field name="tariff_type"/>
+                    <field name="related_member_id"/>
+                    <field name="closed"/>
+                    </tree>
+                  </field>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <menuitem name="Tariff models" id="sm_partago_tariffs.menu_tariff_models" 
+      parent="sm_partago_tariffs.tariffs_main" action="view_tariff_model_window"/>
+  </data>
+</odoo>

@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+    <record id="view_cs_carconfig_list_inherited" model="ir.ui.view">
+      <field name="name">sm_carsharing_structure.cs_carconfig.tree.inherit</field>
+      <field name="model">sm_carsharing_structure.cs_carconfig</field>
+      <field name="inherit_id" ref="sm_carsharing_structure.view_cs_carconfig_list"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='db_carconfig_name']" position="after">
+          <field name="related_price_group_id"/>
+          <field name="initial_price"/>
+        </xpath>
+      </field>
+    </record>
+    <record id="view_cs_carconfig_form_inherited" model="ir.ui.view">
+      <field name="name">sm_carsharing_structure.cs_carconfig.form.inherit</field>
+      <field name="model">sm_carsharing_structure.cs_carconfig</field>
+      <field name="inherit_id" ref="sm_carsharing_structure.view_cs_carconfig_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//page" position="inside">
+          <group>
+            <field name="related_price_group_id"/>
+            <field name="initial_price"/>
+          </group>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

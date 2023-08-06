@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_smp_sm_carconfig_price_group,smp.sm_carconfig_price_group,model_smp_sm_carconfig_price_group,,1,1,1,0
+access_smp_sm_carsharing_tariff,smp.sm_carsharing_tariff,model_smp_sm_carsharing_tariff,,1,1,1,0
+access_smp_sm_carsharing_tariff_history,smp.sm_carsharing_tariff_history,model_smp_sm_carsharing_tariff_history,,1,1,1,0
+access_smp_sm_carsharing_tariff_model,smp.sm_carsharing_tariff_model,model_smp_sm_carsharing_tariff_model,,1,1,1,0
+access_smp_sm_reservation_compute,smp.sm_reservation_compute,model_smp_sm_reservation_compute,,1,1,1,0
+access_smp_sm_tariffmodel_price_group,smp.sm_tariffmodel_price_group,model_smp_sm_tariffmodel_price_group,,1,1,1,0

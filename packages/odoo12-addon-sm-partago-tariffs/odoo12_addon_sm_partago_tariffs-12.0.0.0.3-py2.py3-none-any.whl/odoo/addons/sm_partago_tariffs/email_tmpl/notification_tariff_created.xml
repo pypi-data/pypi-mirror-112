@@ -1,0 +1,26 @@
+<odoo>
+  <data noupdate="1">
+
+    <record id="notification_tariff_creation_template" model="mail.template">
+      <field name="name">email_tmpl_cs_tariff_created</field>
+      <field name="email_from">carsharing@sommobilitat.coop</field>
+      <field name="subject">Tarifa Som Mobilitat creada</field>
+      <field name="partner_to">${object.related_member_id.id}</field>
+      <field name="model_id" ref="sm_partago_tariffs.model_smp_sm_carsharing_tariff"/>
+      <field name="auto_delete" eval="False"/>
+      <field name="body_html"><![CDATA[
+
+<div style="font-family: helvetica;font-size: 14px;">
+<p style="margin-bottom: 0.14in;" align="justify">Hola ${object.related_member_id.name},</p>
+<p style="margin-bottom: 0.14in;" align="justify">La tarifa ${object.name} ha sigut creada correctament i activada.</p>
+<p style="margin-bottom: 0.14in;" align="justify">Per qualsevol dubte o suggeriment no dubtis en posar-te en contacte amb nosaltres.</p>
+</div>
+% if ctx.get('send_from_code'):
+  ${user.signature|safe}
+% endif
+
+      ]]></field>
+    </record>
+
+  </data>
+</odoo>

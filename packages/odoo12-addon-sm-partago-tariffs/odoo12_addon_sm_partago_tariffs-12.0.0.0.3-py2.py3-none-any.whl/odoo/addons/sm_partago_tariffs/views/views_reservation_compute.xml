@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+    <record id="view_reservation_compute_form_inherit" model="ir.ui.view">
+      <field name="name">sm_partago_usage.reservation_compute.form.inherit</field>
+      <field name="model">smp.sm_reservation_compute</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="sm_partago_usage.view_reservation_compute_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='observations']" position="before">
+          <field name="applied_tariff_id" string="Applied tariff"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+    <record id="view_tariff_history_form" model="ir.ui.view">
+      <field name="name">smp.tariff_history.form</field>
+      <field name="model">smp.sm_carsharing_tariff_history</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit tariff history" version="7.0" delete="false">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="name"/>
+                  <field name="date"/>
+                  <field name="amount"/>
+                  <field name="obs"/>
+                  <field name="related_invoice_line_id"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>

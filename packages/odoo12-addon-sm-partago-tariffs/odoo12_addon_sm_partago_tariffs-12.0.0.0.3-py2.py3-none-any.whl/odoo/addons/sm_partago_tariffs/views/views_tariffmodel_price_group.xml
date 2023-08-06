@@ -1,0 +1,30 @@
+<odoo>
+  <data>
+    <record id="view_tariffmodel_price_group_window" model="ir.actions.act_window">
+      <field name="name">Price groups</field>
+      <field name="res_model">smp.sm_tariffmodel_price_group</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record id="view_tariffmodel_price_group_form" model="ir.ui.view">
+      <field name="name">smp.tariffmodel_price_group.form</field>
+      <field name="model">smp.sm_tariffmodel_price_group</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit tariff model" version="7.0" delete="false">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="applied_carconfig_price_group_id"/>
+                  <field name="cs_mins_product_id"/>
+                  <field name="cs_days_product_id"/>
+                  <field name="cs_mileage_product_id"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>
