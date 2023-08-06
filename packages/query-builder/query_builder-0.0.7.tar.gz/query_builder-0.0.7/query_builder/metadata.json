@@ -1,0 +1,221 @@
+{
+  "src/lib/components/QueryBuilder.react.js": {
+    "description": "QueryBuilder is an QueryBuilder component.\r\nIt takes a property, `label`, and\r\ndisplays it.\r\nIt renders an input with the property `value`\r\nwhich is editable by the user.",
+    "displayName": "QueryBuilder",
+    "methods": [
+      {
+        "name": "addClick",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "createUI",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "handleChange",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "i",
+            "type": null
+          },
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "onNewsletterChange",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "i",
+            "type": null
+          },
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "handleConditionChange",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "socialName",
+            "type": null
+          },
+          {
+            "name": "i",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "handleparameterChange",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "biomarker",
+            "type": null
+          },
+          {
+            "name": "i",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "removeClick",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "i",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "handleSubmit",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "event",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "label": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "A label that will be printed when this component is rendered."
+      },
+      "value": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "The value displayed in the input."
+      },
+      "columns": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "The columns displayed in the input."
+      },
+      "Parameterarray": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "The Parameterarray displayed in the input."
+      },
+      "conditionArray": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "The conditionArray displayed in the input."
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes\r\nto Dash, to make them available for callbacks."
+      }
+    }
+  },
+  "src/lib/components/ToggleSwitch.js": {
+    "description": "",
+    "displayName": "ToggleSwitch",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": ""
+      },
+      "checked": {
+        "type": {
+          "name": "bool"
+        },
+        "required": true,
+        "description": ""
+      },
+      "onChange": {
+        "type": {
+          "name": "func"
+        },
+        "required": true,
+        "description": ""
+      },
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "optionLabels": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "[\"AND\", \"OR\"]",
+          "computed": false
+        }
+      },
+      "small": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  }
+}

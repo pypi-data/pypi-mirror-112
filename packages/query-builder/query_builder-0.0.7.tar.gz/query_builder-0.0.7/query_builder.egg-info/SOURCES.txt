@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+query_builder/QueryBuilder.py
+query_builder/ToggleSwitch.py
+query_builder/__init__.py
+query_builder/_imports_.py
+query_builder/metadata.json
+query_builder/package-info.json
+query_builder/query_builder.min.js
+query_builder/query_builder.min.js.map
+query_builder.egg-info/PKG-INFO
+query_builder.egg-info/SOURCES.txt
+query_builder.egg-info/dependency_links.txt
+query_builder.egg-info/top_level.txt

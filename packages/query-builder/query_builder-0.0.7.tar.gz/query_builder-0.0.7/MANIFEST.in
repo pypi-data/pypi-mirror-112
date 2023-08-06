@@ -1,0 +1,7 @@
+include query_builder/query_builder.min.js
+include query_builder/query_builder.min.js.map
+include query_builder/metadata.json
+include query_builder/package-info.json
+include README.md
+include LICENSE
+include package.json
