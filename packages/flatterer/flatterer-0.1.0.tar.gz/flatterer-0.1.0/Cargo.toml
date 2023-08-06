@@ -1,0 +1,37 @@
+[package]
+name = "flatterer"
+version = "0.1.0"
+authors = ["David Raznick <kindly@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yajlish = { version = "0.3", features = ["ndjson"] } 
+serde_json = "1"
+tempfile = "3"
+itertools = "0.10"
+csv = "1"
+clap = "2"
+serde = {version = "1", features = ["derive"] }
+pyo3 = {version = "0.14.1", features = ["extension-module"] }
+#xlsxwriter = {path = "../xlsxwriter-rs/libxlsxwriter"}
+xlsxwriter = "0.3.5"
+crossbeam-channel="0.5.1"
+smallvec="1.6.1"
+regex="1"
+
+[profile.release]
+debug = true
+
+[lib]
+name = "flatterer"
+path = "src/lib.rs"
+
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "flatterer-cli"
+path = "src/main.rs"
+
+
