@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: baseobjects
+Version: 1.4.0
+Summary: Basic object templates.
+Home-page: https://github.com/fonganthonym/python-baseobjects
+Author: Anthony Michael Fong
+Author-email: FongAnthonyM@gmail.com
+License: MIT
+Project-URL: Documentation, https://python-baseobjects.readthedocs.io/
+Project-URL: Changelog, https://python-baseobjects.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/fonganthonym/python-baseobjects/issues
+Description: ========
+        Overview
+        ========
+        
+        
+        
+        Basic object templates.
+        
+        * Free software: MIT license
+        
+        Installation
+        ============
+        
+        ::
+        
+            pip install baseobjects
+        
+        You can also install the in-development version with::
+        
+            pip install https://github.com/fonganthonym/python-baseobjects/archive/master.zip
+        
+        
+        Documentation
+        =============
+        
+        
+        https://python-baseobjects.readthedocs.io/
+        
+        
+        Development
+        ===========
+        
+        To run all the tests run::
+        
+            tox
+        
+        Note, to combine the coverage data from all the tox environments run:
+        
+        .. list-table::
+            :widths: 10 90
+            :stub-columns: 1
+        
+            - - Windows
+              - ::
+        
+                    set PYTEST_ADDOPTS=--cov-append
+                    tox
+        
+            - - Other
+              - ::
+        
+                    PYTEST_ADDOPTS=--cov-append tox
+        
+        
+        Changelog
+        =========
+        
+        1.0.0 (2021-05-15)
+        ------------------
+        
+        * First release on PyPI.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Provides-Extra: dev
