@@ -1,0 +1,16 @@
+indico_themes_legacy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+indico_themes_legacy/plugin.py,sha256=R9_ceDUWs1SP5zRV3T43LEmhFX9nU-FKwvVXdBAHfho,792
+indico_themes_legacy/themes-legacy.yaml,sha256=TYZ-Pwb3qEyaTjMTLsjdJLzR_srp7jZt0i2MpdPKmr4,259
+indico_themes_legacy/static/dist/manifest.json,sha256=J8mLgXicl1Zi9zCwSyHbMm3hqMf32WhfTEQiWniFYdI,329
+indico_themes_legacy/static/dist/css/themes_nicecompact.0cb1aedf.css,sha256=vLTJByfLozMRmADYAWT2GeWBkvnsMX4mT0CkkzQ4mNA,1655
+indico_themes_legacy/static/dist/css/themes_nicecompact.0cb1aedf.css.map,sha256=UEMvkftkyFWaSfOx9erkt549YHnx9zU6Cj6dpyERSuU,4023
+indico_themes_legacy/static/dist/js/themes_nicecompact.52d95faf.bundle.js,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+indico_themes_legacy/templates/compact_event.html,sha256=WBL-XSgL_IGhbCadG4v4-zFWASHWw3fYrz62bxOLi3w,2954
+indico_themes_legacy/templates/compact_timetable.html,sha256=C_6qTyJwp-XP2VoQRROwcFsf2sII8CXKb28OTZsCbbc,6786
+indico_themes_legacy/themes/.no-headers,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+indico_themes_legacy/themes/compact.scss,sha256=3oux2_DaTeEbU6M94a5ckB6iSBTWsaIa7oovyN2doHA,1668
+indico_plugin_themes_legacy-3.0rc2.dist-info/METADATA,sha256=g0IWuVEUG9L4AJs8Y7-_OJcBYaoS-W82TBbZypTMiiw,1321
+indico_plugin_themes_legacy-3.0rc2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+indico_plugin_themes_legacy-3.0rc2.dist-info/entry_points.txt,sha256=BMkQHN3tdxa7srty15EdPhciLIbgB5CXanELvpzQr7U,81
+indico_plugin_themes_legacy-3.0rc2.dist-info/top_level.txt,sha256=KPWoHFDMx0JlNRwQ52orKnO3nmuaWuTQmpilza2dzlY,21
+indico_plugin_themes_legacy-3.0rc2.dist-info/RECORD,,

@@ -1,0 +1,46 @@
+div.main { color: #000; background: #fff; font-family: helvetica, verdana, sans-serif; }
+
+div.main > div { overflow: auto; }
+
+div.main p, div.main br, div.main dl, div.main strong, div.main em, div.main h1, div.main h2, div.main a { font-family: helvetica, verdana, sans-serif; font-size: 8pt; color: #000; }
+
+div.main td { font-family: helvetica, verdana, sans-serif; font-size: 8pt; color: #000; }
+
+div.main table p { margin-top: 0; }
+
+div.main .headerselected { color: #fff; background: #006; }
+
+div.main a:visited { color: #00f; background: transparent; text-decoration: none; }
+
+div.main a:active { color: #fb3; background: transparent; }
+
+div.main a:hover { color: #fb3; background: transparent; }
+
+div.main a.img:hover { color: #00c; background: transparent; }
+
+div.main a.img:active { color: #00c; background: transparent; font-weight: normal; }
+
+div.main table.eventHeader { background: white; width: 100%; }
+
+div.main table.headerLegendsBorder { background: silver; border-spacing: 3px; border: 0; text-align: right; }
+
+div.main table.headerLegendsContent { background: white; border-spacing: 0; border: 0; width: 100%; text-align: right; }
+
+div.main td.headerLegends { text-align: right; }
+
+div.main td.sessionsLegend { background: #90c0f0; }
+
+div.main td.contribsLegendSilver { background: silver; }
+
+div.main td.contribsLegendGrey { background: #d2d2d2; }
+
+div.main td.breaksLegend { background: #fcc; }
+
+div.main table.dayList { background: white; border-spacing: 1px; border: 0; width: 100%; }
+
+div.main .titleClass { font-weight: bold; }
+
+div.main .speakerList { color: green; }
+
+
+/*# sourceMappingURL=themes_nicecompact.0cb1aedf.css.map*/
