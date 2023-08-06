@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: autoklik
+Version: 0.1.1
+Summary: Auto clicker built around xdotool.
+Home-page: https://git.walbeck.it/mwalbeck/autoklik
+Author: Magnus Walbeck
+Author-email: mw@mwalbeck.org
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://git.walbeck.it/mwalbeck/autoklik
+Description-Content-Type: text/markdown
+
+# Autoklik
+
+An auto clicker built around xdotool.
+
+## License
+
+This program is licensed under the GPLv3 or later.
+
