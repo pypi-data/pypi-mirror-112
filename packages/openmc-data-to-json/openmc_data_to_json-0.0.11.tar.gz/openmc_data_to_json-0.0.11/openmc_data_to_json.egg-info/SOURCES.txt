@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+openmc_data_to_json/__init__.py
+openmc_data_to_json/core.py
+openmc_data_to_json/openmc-data-to-json
+openmc_data_to_json.egg-info/PKG-INFO
+openmc_data_to_json.egg-info/SOURCES.txt
+openmc_data_to_json.egg-info/dependency_links.txt
+openmc_data_to_json.egg-info/requires.txt
+openmc_data_to_json.egg-info/top_level.txt
+openmc_data_to_json.egg-info/zip-safe
