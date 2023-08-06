@@ -1,0 +1,5 @@
+prompt_toolkit
+click
+pygments
+python-socketio[client]
+fire
