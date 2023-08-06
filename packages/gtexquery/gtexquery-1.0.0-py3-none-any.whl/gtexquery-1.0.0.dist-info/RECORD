@@ -1,0 +1,14 @@
+gtexquery/__init__.py,sha256=whgh5fCvOBsuj1gi-nk822mh08rgfOvVa0M2-vnCxTk,91
+gtexquery/data_handling/__init__.py,sha256=DbFkQwjIWu22vqGtx0kuv8U5yZvDOukEgxjp5DqpTyQ,59
+gtexquery/data_handling/biomart.py,sha256=wJST4MPgqiUuCaccsqbLsJvvGHV6qmm9YsShiL4pKmM,4440
+gtexquery/data_handling/process.py,sha256=YUP137W_8otpwXC0qS8rDFrgLUV0iLVDKSBNJLNr1nw,1325
+gtexquery/data_handling/request.py,sha256=xXw6RVkfAIk-zrCRLeJq0jmLC6YIQkp7wW68lpHSyeg,1552
+gtexquery/logs/__init__.py,sha256=SAIwFQKetbeMHW2P419dR2Smmi7OswQk9e-JbkNVoRQ,53
+gtexquery/logs/get_logger.py,sha256=P2VNqkISpSv0KjHq4hnRe-uhYg9pvLMgxYjZzABg8h4,1193
+gtexquery/multithreading/__init__.py,sha256=XdnSHPJVtvS8SHL5LSRHt9WRx16Vjtl5ezXNi63Nxns,78
+gtexquery/multithreading/biomart.py,sha256=YNClmzJdgWTFUVEMs9xbt7mj-Qmnh7mEf-dzbqljOvQ,2052
+gtexquery/multithreading/request.py,sha256=ngmndhDV9SnxPsqbKScP_6kyGTMaIQc8YLvRQXnucWI,4296
+gtexquery-1.0.0.dist-info/LICENSE,sha256=YUX1b0ApCJVheWfXv-Qcx_p-AjuxkrpkmQy3ZlEBpf4,1085
+gtexquery-1.0.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+gtexquery-1.0.0.dist-info/METADATA,sha256=o2nCx9xHFiYUnZH6iZBRPN7YekHA18UYH8cvHfFUFGg,3502
+gtexquery-1.0.0.dist-info/RECORD,,
