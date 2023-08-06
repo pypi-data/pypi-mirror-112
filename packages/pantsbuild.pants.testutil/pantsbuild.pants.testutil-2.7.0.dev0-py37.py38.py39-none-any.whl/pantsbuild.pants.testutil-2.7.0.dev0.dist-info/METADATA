@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: pantsbuild.pants.testutil
+Version: 2.7.0.dev0
+Summary: Test support for writing Pants plugins.
+Home-page: https://github.com/pantsbuild/pants
+License: Apache License, Version 2.0
+Project-URL: Documentation, https://www.pantsbuild.org/
+Project-URL: Source, https://github.com/pantsbuild/pants
+Project-URL: Tracker, https://github.com/pantsbuild/pants/issues
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Testing
+Description-Content-Type: text/x-rst
+Requires-Dist: pantsbuild.pants (==2.7.0.dev0)
+Requires-Dist: pytest (<6.3,>=6.0.1)
+
+Pants is an Apache2 licensed build tool written in Python.
+
+The latest documentation can be found at `pantsbuild <https://www.pantsbuild.org/>`_.
+
+
+## 2.7.0.dev0 (Jul 09, 2021)
+
+### New Features
+
+* Add skimage module mapping for dependency inference ([#12301](https://github.com/pantsbuild/pants/pull/12301))
+
+* add experimental terraform plugin with fmt and lint rules ([#11973](https://github.com/pantsbuild/pants/pull/11973))
+
+* Add support for MyPy report files ([#12271](https://github.com/pantsbuild/pants/pull/12271))
+
+* Support running tailor on subdirs. ([#12262](https://github.com/pantsbuild/pants/pull/12262))
+
+* Support building dists from preexisting setup.py. ([#12250](https://github.com/pantsbuild/pants/pull/12250))
+
+### User API Changes
+
+* Don't tailor a python_library for a solitary __init__.py. ([#12288](https://github.com/pantsbuild/pants/pull/12288))
+
+* Apply a concurrency limit to remote store/cache/execution gRPC requests ([#12256](https://github.com/pantsbuild/pants/pull/12256))
+
+### Bug fixes
+
+* Fix poetry_requirements: ignore internal projects. ([#12280](https://github.com/pantsbuild/pants/pull/12280))
+
+* Fix poetry_requirements handling of python. ([#12278](https://github.com/pantsbuild/pants/pull/12278))
+
+* Do not use `[python-setup].resolve_all_constraints` when using `platforms` ([#12268](https://github.com/pantsbuild/pants/pull/12268))
+
+* Hotfix for `poetry_requirements` not being recognized as a macro in build files ([#12263](https://github.com/pantsbuild/pants/pull/12263))
+
+* Include experimental Go backends in pantsbuild.pants ([#12290](https://github.com/pantsbuild/pants/pull/12290))
+
+### Documentation
+
+* Improve error for out-of-line Gets. ([#12305](https://github.com/pantsbuild/pants/pull/12305))
+
+
