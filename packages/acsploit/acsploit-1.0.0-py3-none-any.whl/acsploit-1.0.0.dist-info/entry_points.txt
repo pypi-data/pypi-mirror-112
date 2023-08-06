@@ -1,0 +1,4 @@
+[console_scripts]
+acsploit = acsploit.__main__:main
+acsploit-test = acsploit.test.test_acsploit:test_acsploit_init
+
