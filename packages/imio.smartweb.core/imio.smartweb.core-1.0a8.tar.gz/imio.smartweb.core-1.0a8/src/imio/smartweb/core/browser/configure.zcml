@@ -1,0 +1,82 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="imio.smartweb.core.interfaces.IImioSmartwebCoreLayer"
+      />
+
+  <include package=".banner" />
+  <include package=".footer" />
+  <include package=".minisite" />
+  <include package=".subsite" />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="imio.smartweb.core"
+      type="plone"
+      directory="static"
+      />
+
+  <browser:page
+      name="smartweb-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.SmartwebControlPanelView"
+      permission="cmf.ManagePortal"
+      />
+
+  <browser:page
+      name="utils"
+      for="*"
+      class=".utils.UtilsView"
+      permission="zope2.View"
+      layer="imio.smartweb.core.interfaces.IImioSmartwebCoreLayer"
+      />
+
+  <!-- Custom add view and form - invoked from ++add++ traverser -->
+  <adapter
+      for="Products.CMFCore.interfaces.IFolderish
+           imio.smartweb.core.interfaces.IImioSmartwebCoreLayer
+           plone.dexterity.interfaces.IDexterityFTI"
+      provides="zope.publisher.interfaces.browser.IBrowserPage"
+      factory=".forms.CustomAddView"
+      />
+  <class class=".forms.CustomAddView">
+      <require
+          permission="cmf.AddPortalContent"
+          interface="zope.publisher.interfaces.browser.IBrowserPage"
+          />
+  </class>
+
+  <!-- Custom edit view -->
+  <browser:page
+      for="plone.dexterity.interfaces.IDexterityContent"
+      name="edit"
+      class=".forms.CustomEditView"
+      permission="cmf.ModifyPortalContent"
+      layer="imio.smartweb.core.interfaces.IImioSmartwebCoreLayer"
+      />
+
+  <browser:page
+      for="*"
+      name="description"
+      class=".description.RichDescription"
+      template="description.pt"
+      permission="zope.Public"
+      layer="imio.smartweb.core.interfaces.IImioSmartwebCoreLayer"
+      />
+
+  <browser:page
+      for="*"
+      name="has_gdpr_text"
+      class=".utils.UtilsView"
+      layer="imio.smartweb.core.interfaces.IImioSmartwebCoreLayer"
+      attribute="has_gdpr_text"
+      permission="zope.Public"
+      />
+
+</configure>
