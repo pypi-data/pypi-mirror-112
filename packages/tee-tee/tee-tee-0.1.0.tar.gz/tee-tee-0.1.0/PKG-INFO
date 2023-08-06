@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: tee-tee
+Version: 0.1.0
+Summary: Truth table utility
+License: Apache 2.0
+Author: Nick Rushton
+Author-email: rushton.nicholas@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: black (>=21.6b0,<22.0)
+Requires-Dist: mypy (>=0.910,<0.911)
+Requires-Dist: pydantic (>=1.8.2,<2.0.0)
+Requires-Dist: quine-mccluskey (>=0.3,<0.4)
