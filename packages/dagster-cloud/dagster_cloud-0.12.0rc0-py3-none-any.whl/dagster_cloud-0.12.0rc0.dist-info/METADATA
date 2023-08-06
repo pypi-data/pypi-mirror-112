@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: dagster-cloud
+Version: 0.12.0rc0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Elementl
+Author-email: hello@elementl.com
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Dist: dagster (==0.12.0rc0)
+Requires-Dist: gql (<3)
+Requires-Dist: kubernetes
+Provides-Extra: docker
+Requires-Dist: docker ; extra == 'docker'
+Provides-Extra: kubernetes
+Requires-Dist: kubernetes ; extra == 'kubernetes'
+Requires-Dist: dagster-k8s (==0.12.0rc0) ; extra == 'kubernetes'
+Provides-Extra: tests
+Requires-Dist: black ; extra == 'tests'
+Requires-Dist: docker ; extra == 'tests'
+Requires-Dist: isort ; extra == 'tests'
+Requires-Dist: kubernetes ; extra == 'tests'
+Requires-Dist: mypy (==0.812) ; extra == 'tests'
+Requires-Dist: pylint ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: types-click ; extra == 'tests'
+Requires-Dist: types-PyYAML ; extra == 'tests'
+Requires-Dist: types-requests ; extra == 'tests'
+Requires-Dist: dagster-k8s (==0.12.0rc0) ; extra == 'tests'
+
+UNKNOWN
+
+
