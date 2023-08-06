@@ -1,0 +1,5 @@
+[console_scripts]
+polygenic = polygenic.polygenic:main
+polygenicmaker = polygenic.polygenicmaker:main
+vcfstat = polygenic.vcfstat:main
+
