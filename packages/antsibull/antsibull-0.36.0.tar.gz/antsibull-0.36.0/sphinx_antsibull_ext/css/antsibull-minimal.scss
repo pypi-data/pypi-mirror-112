@@ -1,0 +1,44 @@
+/* Copyright (c) Ansible and contributors */
+
+// Documentation table (for module options and return values)
+table.documentation-table {
+  // Borders and basic spacing
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+
+  td, th {
+    padding: 4px;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+  }
+
+  td.elbow-placeholder {
+    border-top: 0;
+    width: 30px;
+    min-width: 30px;
+  }
+
+  // More table formatting
+  td {
+    vertical-align: top;
+  }
+  td:first-child {
+    white-space: nowrap;
+  }
+
+  // Direct links to options / return values
+  tr {
+    .ansibleOptionLink {
+      display: inline-block;
+      visibility: hidden;
+
+      &::after {
+        content: "🔗";
+      }
+    }
+
+    &:hover .ansibleOptionLink::after {
+      visibility: visible;
+    }
+  }
+}
