@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: ezpredict
+Version: 0.0.5
+Summary: A small package for convenient predictions on fine-tuned huggingface-models
+Home-page: https://github.com/samueldomdey/ezpredict
+Author: Samuel Domdey
+Author-email: samuel.domdey@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/samueldomdey/ezpredict/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This package is meant to offer a variety of convenient inference functions, particularly for fine-tuned transformers.
+Limited to j-hartmann's fine-tuned emotion-english-distilroberta-base -> https://huggingface.co/j-hartmann/emotion-english-distilroberta-base for now.
+
+
+Installs:
+pip install numpy
+pip install torch
+pip install transformers
+
+How to use:
+
+from ezpredict import predict
+
+preds = predict.predict_input(model_name="j-hartmann/emotion-english-distilroberta-base",
+              input=["What a beautiful day!"],
+               return_values=True,
+                print_values=True)
+                
+Where:
+ model_name -> name of model to perform inference on (limited to "j-hartmann/emotion-english-distilroberta-base" for now)
+ input -> list of strings to perform predictions on
+ return_values -> True/False, True: returns predictions as list of tuples 
+ print_values -> True/False,  True: returns verbose outputs
+
+
+
+
