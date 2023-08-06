@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: todus3
+Version: 0.2.1
+Summary: ToDus client
+Home-page: https://github.com/oleksis/todus/tree/todus3
+Author: adbenitez
+Author-email: adbenitez@nauta.cu
+Maintainer: Oleksis Fraga
+Maintainer-email: oleksis.fraga@gmail.com
+License: MPL
+Description: ToDus client
+        ============
+        
+        .. image:: https://img.shields.io/pypi/v/todus3.svg
+           :target: https://pypi.org/project/todus3
+        
+        .. image:: https://img.shields.io/pypi/pyversions/todus3.svg
+           :target: https://pypi.org/project/todus3
+        
+        .. image:: https://pepy.tech/badge/todus3
+           :target: https://pepy.tech/project/todus3
+        
+        .. image:: https://img.shields.io/pypi/l/todus3.svg
+           :target: https://pypi.org/project/todus3
+        
+        .. image:: https://github.com/oleksis/todus3/actions/workflows/python-ci.yml/badge.svg
+           :target: https://github.com/oleksis/todus3/actions/workflows/python-ci.yml
+        
+        .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+           :target: https://github.com/psf/black
+        
+        Use the ToDus API in your Python projects.
+        
+        Install
+        -------
+        
+        To install run::
+        
+          pip install todus3
+        
+        
+        Usage
+        -----
+        ```bash
+        todus -- help
+        
+        python -m todus -n 53123456 login
+        
+        echo "Update TOKEN in 53123456.ini"
+        
+        python -m todus -n 53123456 download file.txt
+        ```
+        
+        ⚠️ Working downloads/uploads. ✅
+        👷🏾‍♂️ TODO: Login/Register
+        
+Keywords: todus,s3,client
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
