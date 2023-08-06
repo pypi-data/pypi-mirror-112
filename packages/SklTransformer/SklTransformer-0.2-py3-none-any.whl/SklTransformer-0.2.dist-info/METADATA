@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: SklTransformer
+Version: 0.2
+Summary: UNKNOWN
+Home-page: https://github.com/Kowsher/SklTransformer
+Author: Kowsher
+Author-email: ga.kowsher@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: transformers (==4.8.2)
+Requires-Dist: torch (==1.9.0)
+Requires-Dist: tqdm (==4.41.1)
+Requires-Dist: numpy (==1.19.5)
+Requires-Dist: sklearn
+
+# Sci-Kit Learn Transformer
+
+
+
