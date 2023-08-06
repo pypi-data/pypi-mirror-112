@@ -1,0 +1,9 @@
+Pillow
+argon2-cffi
+cffi
+colorama
+django-qrcode
+pycparser
+pyperclip
+qrcode[pil]
+six
