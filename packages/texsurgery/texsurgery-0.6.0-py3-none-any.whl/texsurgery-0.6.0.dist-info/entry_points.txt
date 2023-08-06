@@ -1,0 +1,3 @@
+[console_scripts]
+texsurgery = texsurgery.command_line:main
+
