@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: playwbot
+Version: 0.2.0
+Summary: RobotFramework wrapper of Playwright-Python
+Home-page: https://radekbednarik.github.io/playwbot/
+License: MIT
+Keywords: playwright,playwbot,playwright-python,test-automation,robot-framework
+Author: radekBednarik
+Author-email: radek.bednarik@tesena.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Robot Framework
+Classifier: Framework :: Robot Framework :: Library
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Education :: Testing
+Requires-Dist: playwright (>=1.12.1,<2.0.0)
+Requires-Dist: robotframework (>=4.0.3,<5.0.0)
+Project-URL: Documentation, https://radekbednarik.github.io/playwbot/
+Project-URL: Repository, https://github.com/radekBednarik/playwbot
+Description-Content-Type: text/markdown
+
+# playwbot
+[Playwright-python](https://github.com/microsoft/playwright-python) wrapper for [RobotFramework](https://robotframework.org/).
+
+## Installation
+
+### From the repository
+
+- clone the repo
+- easiest way is to use [poetry](https://python-poetry.org/) and run `poetry install` and then `poetry shell`
+- to be able to run the tests, install the package for the development by `python setup.py develop`
+- RF tests are run by standard command `robot <path>`
+
+### From the Pypi
+
+- if using poetry, run `poetry add playwbot` and then `poetry install`
+- if using pip, run `pip install playwbot`
+
+## Importing module into the RF suite
+
+- if you have the file directly accesible, just point directly to the location, like this
+
+```
+Library    /some/path/to/the/library/Playwbot.py    browser=<chromium|firefox|webkit>
+```
+
+- if you installed it from Pypi, then import it like this
+
+```
+Library    playwbot.Playwbot    browser=<chromium|firefox|webkit>
+```
+
+## RobotFramework-style documentation
+
+Is available here https://radekbednarik.github.io/playwbot/
+
+
