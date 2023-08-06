@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+easyflex/easyflex.egg-info/PKG-INFO
+easyflex/easyflex.egg-info/SOURCES.txt
+easyflex/easyflex.egg-info/dependency_links.txt
+easyflex/easyflex.egg-info/top_level.txt
