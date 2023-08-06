@@ -1,0 +1,12 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "signalboxclient"
+author = "Rian Finnegan"
+author-email = "rian@four2.ai"
+home-page = "https://www.four2.ai"
+classifiers = [ "License :: OSI Approved :: MIT License",]
+description-file = "README.md"
+
