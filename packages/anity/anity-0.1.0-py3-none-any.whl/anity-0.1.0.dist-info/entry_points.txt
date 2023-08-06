@@ -1,0 +1,3 @@
+[console_scripts]
+anity = anity.__main__:cli
+
