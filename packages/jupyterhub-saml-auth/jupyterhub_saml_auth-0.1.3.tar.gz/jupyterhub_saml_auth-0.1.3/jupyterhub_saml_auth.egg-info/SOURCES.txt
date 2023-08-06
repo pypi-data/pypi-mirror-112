@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+jupyterhub_saml_auth/__init__.py
+jupyterhub_saml_auth/authenticator.py
+jupyterhub_saml_auth/handlers.py
+jupyterhub_saml_auth.egg-info/PKG-INFO
+jupyterhub_saml_auth.egg-info/SOURCES.txt
+jupyterhub_saml_auth.egg-info/dependency_links.txt
+jupyterhub_saml_auth.egg-info/requires.txt
+jupyterhub_saml_auth.egg-info/top_level.txt
+test/__init__.py
+test/conftest.py
+test/jupyterhub_config.py
+test/test_acceptance.py
