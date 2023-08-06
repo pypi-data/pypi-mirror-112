@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: stko
+Version: 0.0.35
+Summary: Contains molecular optimizers and property calculators for use with stk.
+Home-page: https://github.com/JelfsMaterialsGroup/stko
+Author: Steven Bennett, Andrew Tarzia
+Author-email: s.bennett18@imperial.ac.uk
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
