@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: djanticapi
+Version: 0.0.6
+Summary: Pydantic data validation support for Django API View
+Author: Bin Wen
+Author-email: caowb@pillar-biosciences.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Django >=3.1.1
+Requires-Dist: pydantic >=1.0.0,<2.0.0
+Requires-Dist: orjson >=3.5.2
+Requires-Dist: PyJWT>=1.5.2
+
+## Requirements
+
+Python 3.6+
+
+Djanticapi stands on the shoulders of giants:
+
+* <a href="https://docs.djangoproject.com/en/3.0/" class="external-link" target="_blank">Django</a> for the web parts.
+* <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic</a> for the data parts.
+
+## Installation
+
+<div class="termy">
+
+```console
+$ pip install djanticapi
+
+---> 100%
+```
+
+</div>
+
+## Example
+
+### Create it
+
+* Create a file `api.py` with:
+
+```Python
+from django.http import HttpRequest
+from djanticapi import BaseFormModel, BaseAPIView
+
+class TestForm(BaseFormModel):
+    name: str
+
+
+class TestView(BaseAPIView):
+    def post(self, request: HttpRequest):
+        form_data = TestForm.from_request(request=request)
+        return form_data
+```
+
