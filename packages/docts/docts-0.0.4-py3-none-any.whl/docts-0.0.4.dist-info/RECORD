@@ -1,0 +1,17 @@
+docts/__init__.py,sha256=XpSwMl56uhmoTZHQXcWWhwuPjjIvwtIUCOBk8koOcxA,857
+docts/filter/F1.py,sha256=uJN3TwYQInK3K9Aqj77ZfNopbnpFQozunVqzuOTY3lU,619
+docts/filter/__init__.py,sha256=e1QnCGCvNL5AT3vBH2xVyEzxHQOjzI_S-CLItm69UNE,1125
+docts/map/M1.py,sha256=Lr7pmOXqnb3kmAcyiPzL1ZfacxADHPtBM3Cd8m1APNg,208
+docts/map/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docts/parser/XLFParser.py,sha256=kcyx4jciWT1QHBb6W766_aOEiBBfczT12vFvpDzQFug,652
+docts/parser/XLSParser.py,sha256=7a35638bG1ONu2YfFmTbTkR1PZGLuYUnjq2zuu-hrW8,855
+docts/parser/__init__.py,sha256=_VmPirTWtm3Vyih5fyIUkPPs3c-1T6gTxzeHVYHMBvE,34
+docts/writer/XLSWriter.py,sha256=CwQu2pqmVAtPzVFppmH7O7JMWyBMZac1Rxx8fCtA6Cs,1254
+docts/writer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_InstallShield.py,sha256=yG_SNO9U-NDTq8ncuuYRl6C2XAKjqHfMQMxlHYvyPsQ,1374
+docts-0.0.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+docts-0.0.4.dist-info/METADATA,sha256=-qC-c881JMHppHozcROPdyYVaxFSGNPk93Qb8cFSk5o,4679
+docts-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+docts-0.0.4.dist-info/top_level.txt,sha256=42xCFdcOs7t6H6QJFx7FU8BFT58agmTP_TdsLGbOl7M,12
+docts-0.0.4.dist-info/RECORD,,
