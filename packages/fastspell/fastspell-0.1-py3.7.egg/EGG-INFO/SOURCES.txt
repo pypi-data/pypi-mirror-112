@@ -1,0 +1,15 @@
+README.md
+setup.py
+fastspell/FastSpell.py
+fastspell/__init__.py
+fastspell/fastspell.py
+fastspell.egg-info/PKG-INFO
+fastspell.egg-info/SOURCES.txt
+fastspell.egg-info/dependency_links.txt
+fastspell.egg-info/requires.txt
+fastspell.egg-info/top_level.txt
+fastspell/config/hunspell.yaml
+fastspell/config/hunspell.yaml~
+fastspell/config/similar.yaml
+fastspell/config/tokenizers.yaml
+scripts/fastspell
