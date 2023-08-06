@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+lzip.py
+lzip_extension.cpp
+pyproject.toml
+setup.py
+lzip.egg-info/PKG-INFO
+lzip.egg-info/SOURCES.txt
+lzip.egg-info/dependency_links.txt
+lzip.egg-info/top_level.txt
+third_party/lzlib/lzlib.cpp
