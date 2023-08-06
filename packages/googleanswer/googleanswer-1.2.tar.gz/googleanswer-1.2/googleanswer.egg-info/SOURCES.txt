@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+googleanswer/__init__.py
+googleanswer.egg-info/PKG-INFO
+googleanswer.egg-info/SOURCES.txt
+googleanswer.egg-info/dependency_links.txt
+googleanswer.egg-info/requires.txt
+googleanswer.egg-info/top_level.txt
