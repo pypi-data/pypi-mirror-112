@@ -1,0 +1,11 @@
+click>=7.0
+jinja2>=2.10
+
+[test]
+black
+flake8-black
+flake8-isort
+flake8>=3.5
+isort>=5.0
+pytest
+pytest-cov
