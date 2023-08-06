@@ -1,0 +1,10 @@
+README.md
+setup.py
+cdiscount_api_client/__init__.py
+cdiscount_api_client/client.py
+cdiscount_api_client/resources.py
+cdiscount_api_client/utils.py
+cdiscount_api_client.egg-info/PKG-INFO
+cdiscount_api_client.egg-info/SOURCES.txt
+cdiscount_api_client.egg-info/dependency_links.txt
+cdiscount_api_client.egg-info/top_level.txt
