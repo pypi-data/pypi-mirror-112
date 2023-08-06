@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: indico-plugin-payment-manual
+Version: 3.0rc2
+Summary: Payment plugin for Indico that can be used for custom payment information/links
+Home-page: https://github.com/indico/indico-plugins
+Author: Indico Team
+Author-email: indico-team@cern.ch
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: ~=3.9.0
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Requires-Dist: indico (>=3.0rc2)
+
+# Manual Payment Plugin
+
+This plugin provides a "manual" payment option for Indico's payment module which
+is typically used for payments via Bank Transfer. It allows event organizers to
+define a custom text with various placeholders to provide information on how to
+make a payment or even link to an external payment service that has no deeper
+integration with Indico.
+
+## Changelog
+
+### 3.0
+
+- Initial release for Indico 3.0
+
+
