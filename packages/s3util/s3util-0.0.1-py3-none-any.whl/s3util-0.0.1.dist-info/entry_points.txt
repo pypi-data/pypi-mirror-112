@@ -1,0 +1,3 @@
+[console_scripts]
+s3util = s3util.main:main
+

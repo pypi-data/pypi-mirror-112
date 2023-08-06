@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: s3util
+Version: 0.0.1
+Summary: s3util.
+Home-page: https://github.com/karannaoh/s3util
+Author: Karan Pratap Singh
+Author-email: karanpratapsingh43@gmail.com
+License: MIT
+Keywords: s3util s3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: argcomplete
+
+s3util package
+
