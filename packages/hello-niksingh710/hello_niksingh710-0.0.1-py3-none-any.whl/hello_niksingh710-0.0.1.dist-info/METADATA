@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: hello-niksingh710
+Version: 0.0.1
+Summary: Says Hello!
+Home-page: https://github.com/niksingh710/hello_niksingh710
+Author: Nikhil Singh
+Author-email: nik.singh710@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Hello World
+
+This is an example project demonstrating how to publish a python module to PyPI.
+All Help was took from the youtube video <[How To Publish A Package On PyPI](https://youtu.be/QgZ7qv4Cd0Y)>
+
+## Installation
+
+Run the following to install:
+
+```python
+pip install hello_niksingh710
+```
+
+## Usage
+
+```python
+from hello_niksingh710 import say_hello
+
+# calling say_hello() returns a String --> "Hello, World! :)"
+
+print(say_hello())
+
+# calling say_hello("Everybody") returns a String --> "Hello, Everybody :)"
+
+print(say_hello())
+
+
+```
+
+
