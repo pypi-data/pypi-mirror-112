@@ -1,0 +1,27 @@
+type: object
+additionalProperties: false
+properties:
+  type:
+    type: string
+    const: deployment
+  name:
+    type: string
+  deployment:
+    type: string
+  aliases:
+    type: array
+    items:
+      type: string
+  endpoints:
+    type: array
+    items:
+      type: string
+  actions:
+    type: array
+    items:
+      "$ref": "./node-action.json"
+required:
+  - name
+  - deployment
+  - type
+title: DeploymentNode
