@@ -1,0 +1,16 @@
+typedpy/__init__.py,sha256=f9gjersZeDYefbLoBd7JYldHjFCsqI_zRRwexfqqxJs,1613
+typedpy/commons.py,sha256=j13wn7v9VpYSjqq4vW8kQNcvvNoE28i5OvHnBztLwu0,627
+typedpy/errors.py,sha256=1V0hgJDks3ew1Obz8lVfMNXzHVd6HW01Q8ZcE2YvXLo,2797
+typedpy/extfields.py,sha256=6MxlsK5qLqlgZ8E4CXxQkgvlsiX5NOdyvEQem_FJWwI,6392
+typedpy/fields.py,sha256=lXnAOIaWW1e1weih2fZtVQthddMXTf95rXWlOdCx6do,54500
+typedpy/json_schema_mapping.py,sha256=FhmByAIVYM53ftEDH8eMbKSZ9-37nJB0JiM5rXptm44,15491
+typedpy/mappers.py,sha256=XuU3M6jlS8BBjvDn-UKJHBZIjCGpYEnqGnTVixu9IOM,721
+typedpy/serialization.py,sha256=dDVJ-B4G9h9AaszplTKPSmrbYklvhYCLvAgTF-jAq0o,29497
+typedpy/serialization_wrappers.py,sha256=4sqlafDIqnrRHNRR-L5AuWxYvlue3SanSlmJ0I1M-nI,8922
+typedpy/structures.py,sha256=Gn5D24PT5dE3mtz6bDCjo1yBSynCrMzU5uiE1fZdaIk,43058
+typedpy/utility.py,sha256=aO7EOhbDgOZ98w_DKB6DFX787R8a6FANVCixAGyt_G4,1708
+typedpy-2.4.11.dist-info/LICENSE.txt,sha256=iZ2PoOEc4eMu4y4D_a0qOnbaYbxqvdBASuyGZFxvceE,1057
+typedpy-2.4.11.dist-info/METADATA,sha256=RHIyG5iMhnkkZxvAtxPE92UyAudwBS0W9UdHhj5ABFY,3362
+typedpy-2.4.11.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+typedpy-2.4.11.dist-info/top_level.txt,sha256=b3kz4cgV3f8Fvco57oXJVjvE7DTow18fVwAdoiTPKBM,8
+typedpy-2.4.11.dist-info/RECORD,,
