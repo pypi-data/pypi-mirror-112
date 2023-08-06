@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: lazyops
+Version: 0.0.1
+Summary: lazyops
+Home-page: http://github.com/trisongz/lazyops
+Author: Tri Songz
+Author-email: ts@growthengineai.com
+License: UNKNOWN
+Description: # lazyops
+         A collection of Lazy Python Functions (or things I keep copypasting)
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
