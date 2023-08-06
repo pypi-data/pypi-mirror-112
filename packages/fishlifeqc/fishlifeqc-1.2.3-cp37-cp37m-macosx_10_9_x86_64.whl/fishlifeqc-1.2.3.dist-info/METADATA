@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: fishlifeqc
+Version: 1.2.3
+Summary: UNKNOWN
+Home-page: https://github.com/Ulises-Rosas/fishlifeqc
+Author: Ulises Rosas
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: boldminer
+Requires-Dist: fishlifetraits (>=0.4.2)
+Requires-Dist: dendropy (==4.4.0)
+
+UNKNOWN
+
