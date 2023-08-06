@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        mangas-dl=mangas_dl.__main__:main
+    
