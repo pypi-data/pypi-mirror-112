@@ -1,0 +1,3 @@
+[console_scripts]
+envlauncher = envlauncher:launch_environment
+
