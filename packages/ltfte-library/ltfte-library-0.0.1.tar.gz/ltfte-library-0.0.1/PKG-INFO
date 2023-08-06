@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ltfte-library
+Version: 0.0.1
+Summary: Library containing the collective tooks required for Token Engineering work
+Home-page: https://github.com/longtailfinancial/te-library-publishing
+Author: Longtail Financial Token Engineering Team
+Author-email: admin@longtailfinancial.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/longtailfinancial/te-library-publishing/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+UNKNOWN
+
