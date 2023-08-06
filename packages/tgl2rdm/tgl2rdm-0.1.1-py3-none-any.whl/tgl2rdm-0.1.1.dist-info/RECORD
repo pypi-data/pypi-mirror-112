@@ -1,0 +1,17 @@
+tgl2rdm/__init__.py,sha256=ls1camlIoMxEZz9gSkZ1OJo-MXqHWwKPtdPbZJmwp7E,22
+tgl2rdm/__main__.py,sha256=WkHQe2TrHquHj_IqcQYIJBoaUtPr3H3sgYlLybPJwkg,119
+tgl2rdm/cli/__init__.py,sha256=BXIfCXEIZ0cuxo7YmnjNlAgcU_daV6UnbZzcGDcXcHI,215
+tgl2rdm/cli/config.py,sha256=Gc8jblD2YYgbgZm25_782lZczih4DYdU4Wxx5oKJZ0k,2273
+tgl2rdm/cli/main.py,sha256=0NN5ed-FukmcHJTCHsu_EjXfFYXAxV14tSyzSjxetts,5553
+tgl2rdm/cli/tgl.py,sha256=-WURZ3QKci8DrlRn75gBb8WxYAXfoFGs6707E6UdSFo,542
+tgl2rdm/cli/utils.py,sha256=iZX5TbWMxgqjTBRzKi9PHWq-iQf3nga4UAZ9cO4gpOs,1610
+tgl2rdm/config.py,sha256=yjVNbEER9lBeVkPUABieQoDVZvsFMfwD98boDTF5JaQ,717
+tgl2rdm/extract.py,sha256=euzN1TKEn87qAAm-NBTjus-WxhPrlc5oHzvZcBQUQwM,3038
+tgl2rdm/http.py,sha256=o8Q0SZmumBVTvFe0BRPpJFq1NJWen1KkVTQT64m6Ces,1114
+tgl2rdm/load.py,sha256=xG2XaQ-RVWNMmzg4DB5h55UcCvjnVi_a-i-rDiUXWBs,2159
+tgl2rdm/transform.py,sha256=U9zA0paeX23DAYWTihzggPYrBs_TKnaZiEpUwEmMb4w,1973
+tgl2rdm/utils.py,sha256=M_cThAj29hJyoQvDBc9-jKpohgtA2SOQqQn-jzimXW8,339
+tgl2rdm-0.1.1.dist-info/entry_points.txt,sha256=UMtV7OF5l9Cm4juUSbsXzBIaCMs1hLl-IEl9hch-a8g,44
+tgl2rdm-0.1.1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+tgl2rdm-0.1.1.dist-info/METADATA,sha256=cFtiAoLTFrEHWna_vNlLSKrAyN2ojnrGk5RJANBjunk,538
+tgl2rdm-0.1.1.dist-info/RECORD,,
