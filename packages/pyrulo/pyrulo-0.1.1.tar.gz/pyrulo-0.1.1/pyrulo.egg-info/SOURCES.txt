@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pyrulo/__init__.py
+pyrulo/class_imports.py
+pyrulo.egg-info/PKG-INFO
+pyrulo.egg-info/SOURCES.txt
+pyrulo.egg-info/dependency_links.txt
+pyrulo.egg-info/top_level.txt
