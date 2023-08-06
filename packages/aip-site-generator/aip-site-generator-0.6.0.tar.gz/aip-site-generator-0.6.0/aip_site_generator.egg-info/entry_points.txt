@@ -1,0 +1,4 @@
+[console_scripts]
+        aip-site-gen=aip_site.cli:publish
+        aip-site-serve=aip_site.cli:serve
+    
