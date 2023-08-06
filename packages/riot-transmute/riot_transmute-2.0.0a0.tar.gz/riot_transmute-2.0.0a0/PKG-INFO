@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: riot-transmute
+Version: 2.0.0a0
+Summary: Transmute Riot API objects to the community-defined DTO
+License: MIT
+Author: mrtolkien
+Author-email: gary.mialaret@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: lol-dto (>=2.0.0a2,<3.0.0)
