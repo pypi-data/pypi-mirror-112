@@ -1,0 +1,19 @@
+Changelog
+=========
+
+1.2.0
+-----
+ - ZODB browser script refactoring
+
+1.1.0
+-----
+ - removed support for Python < 3.7
+
+1.0.1
+-----
+ - updated Gitlab-CI configuration
+ - removed Travis-CI configuration
+
+1.0.0
+-----
+ - initial release
