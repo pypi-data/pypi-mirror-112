@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: kwik
+Version: 0.0.1
+Summary: kwik framework
+Home-page: https://github.com/sroedger/kwik
+Author: Sam Roedger
+Author-email: sroedger@gmail.com
+License: MIT
+Keywords: kwik
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# kwik
+
+kwik framework
+
+## Disclaimer
+
+<strong style="color: red;">
+<p>Development Status: 1 - Planning</p>
+<p>Under active development. APIs and structure are unstable and should not be used at this point in time.</p>
+</strong>
+
+

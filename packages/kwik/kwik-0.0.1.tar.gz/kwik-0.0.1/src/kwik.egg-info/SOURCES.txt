@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/kwik/__init__.py
+src/kwik.egg-info/PKG-INFO
+src/kwik.egg-info/SOURCES.txt
+src/kwik.egg-info/dependency_links.txt
+src/kwik.egg-info/top_level.txt
