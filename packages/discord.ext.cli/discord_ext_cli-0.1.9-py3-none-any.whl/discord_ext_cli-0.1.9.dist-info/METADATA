@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: discord-ext-cli
+Version: 0.1.9
+Summary: A CLI to talk through console.
+Home-page: UNKNOWN
+Author: Alex Hutz
+Author-email: frostiiweeb@gmail.com
+License: MIT
+Keywords: cli,discord cli
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: discord.py (>=1.7.3)
+Requires-Dist: aioconsole (>=0.3.1)
+
+## discord-ext-cli
+
+A CLI to talk through console.
+
+# Installation
+
+```shell
+python3 -m pip install discord-ext-cli
+```
+
+## Example
+
+```python
+import discord
+from discord.ext import cli
+
+# Enable gateway intents on the developer portal
+
+bot = cli.CLI(channel_id="Channel ID", intents=discord.Intents.all())
+
+bot.run("Token Here")
+
