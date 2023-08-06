@@ -1,0 +1,7 @@
+aioredis
+
+[dev]
+pytest
+pytest-asyncio
+pytest-cov
+pylint
