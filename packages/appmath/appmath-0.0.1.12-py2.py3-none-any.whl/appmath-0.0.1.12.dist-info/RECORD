@@ -1,0 +1,12 @@
+appmath/__init__.py,sha256=ODKphrYXK8vrCq_uS0X-l9g4fkYCwnmb7d5bV770_6A,57
+appmath/optimization/__init__.py,sha256=NlVPplDIt2EFXp353RiKHBw8sHnC7Cp79Ln9offvdsg,20
+appmath/optimization/uniform.py,sha256=nMuopThPZZitBk-EiQxSed314JqyaC9qlvaxZrWnKIQ,4698
+appmath/optimization/unconditional/__init__.py,sha256=VjeRdbjrHQjgqMipJrQUqqI1t2kFMQEyhy-WWo2X7xQ,16
+appmath/optimization/unconditional/zeroorder/__init__.py,sha256=cCxsvt0D7Kuux54x_cXmV_ZGkMu7C4pmH-FJR6xYHWU,21
+appmath/optimization/unconditional/zeroorder/onedimensional/__init__.py,sha256=wou-8eSAxSzHMHcGPL1vgoc1jUL_ll0Ftxr--RcjgeY,32
+appmath/optimization/unconditional/zeroorder/onedimensional/divhalf.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appmath/optimization/unconditional/zeroorder/onedimensional/uniform.py,sha256=nMuopThPZZitBk-EiQxSed314JqyaC9qlvaxZrWnKIQ,4698
+appmath-0.0.1.12.dist-info/METADATA,sha256=9c_QlxF_aj3ZB1Auz7JAogSYXO0deXD2mFwrTUH0Qhg,936
+appmath-0.0.1.12.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+appmath-0.0.1.12.dist-info/top_level.txt,sha256=WWxEsrV0EKzr69iK8H133F7U26u3b_WxvxrC2zaCOtQ,8
+appmath-0.0.1.12.dist-info/RECORD,,
