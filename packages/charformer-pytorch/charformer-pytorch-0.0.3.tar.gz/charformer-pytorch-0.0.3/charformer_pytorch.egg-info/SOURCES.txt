@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+charformer_pytorch/__init__.py
+charformer_pytorch/charformer_pytorch.py
+charformer_pytorch.egg-info/PKG-INFO
+charformer_pytorch.egg-info/SOURCES.txt
+charformer_pytorch.egg-info/dependency_links.txt
+charformer_pytorch.egg-info/requires.txt
+charformer_pytorch.egg-info/top_level.txt
