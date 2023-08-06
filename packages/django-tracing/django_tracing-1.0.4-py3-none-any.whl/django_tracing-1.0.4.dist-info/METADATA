@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: django-tracing
+Version: 1.0.4
+Summary: A Django app for tracing changes in models
+Home-page: https://github.com/dbsiavichay/django-tracing
+Author: Denis Siavichay
+Author-email: dbsiavichay@gmail.com
+License: MIT  # Example license
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: httpagentparser
+
+Tracing
+=====
+
+Tracing is a Django app to trace changes in models.
+
+Detailed documentation is in the "docs" directory.
+
+Quick start
+-----------
+
+1. Add "tracing" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...
+        'tracing',
+    ]
+
+3. Run ``python manage.py migrate`` to create the tracing migrations.
+
+4. Continue
+
