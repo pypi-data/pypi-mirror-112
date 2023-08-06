@@ -1,0 +1,15 @@
+werkzeug<=1.0.1
+
+[:python_version < "3.7"]
+aiocontextvars
+contextvars
+
+[full]
+numpy
+zarr
+python-engineio>=4.0.0
+python-socketio[client]>=5.0.4
+
+[socketio]
+python-socketio[client]>=5.0.4
+python-engineio>=4.0.0
