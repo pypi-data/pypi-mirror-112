@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/ptwt/__init__.py
+src/ptwt/conv_transform.py
+src/ptwt/learnable_wavelets.py
+src/ptwt/mackey_glass.py
+src/ptwt/matmul_transform.py
+src/ptwt/packets.py
+src/ptwt/version.py
+src/ptwt.egg-info/PKG-INFO
+src/ptwt.egg-info/SOURCES.txt
+src/ptwt.egg-info/dependency_links.txt
+src/ptwt.egg-info/requires.txt
+src/ptwt.egg-info/top_level.txt
