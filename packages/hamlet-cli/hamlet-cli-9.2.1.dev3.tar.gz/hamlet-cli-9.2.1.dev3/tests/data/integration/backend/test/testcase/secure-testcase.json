@@ -1,0 +1,6 @@
+{
+    "secure": {
+      "filename": "tests/data/integration/backend/test/cf/secure.json",
+      "cfn_nag": true
+    }
+}
