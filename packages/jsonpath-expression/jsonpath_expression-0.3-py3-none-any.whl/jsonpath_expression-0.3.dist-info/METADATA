@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: jsonpath-expression
+Version: 0.3
+Summary: jsonpath expression generate
+Home-page: https://gitee.com/ishuzf/jsonpath_expression
+Author: shuzhifu
+Author-email: ishuzf@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: jsonpath (>=0.82)
+
+jsonpath表达式提取器
+    1.传value提取
+    2.不传value提取全部
+    3.jsonpath表达式验证
+
