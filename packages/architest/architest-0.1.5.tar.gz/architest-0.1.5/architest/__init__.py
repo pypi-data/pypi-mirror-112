@@ -1,0 +1,1 @@
+from architest.architest import main, generate_plant_uml
