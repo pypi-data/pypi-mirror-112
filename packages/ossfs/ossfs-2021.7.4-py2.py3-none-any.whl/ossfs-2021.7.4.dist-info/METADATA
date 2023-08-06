@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: ossfs
+Version: 2021.7.4
+Summary: fsspec filesystem for OSS
+Home-page: UNKNOWN
+Author: Yanxiang Gao
+Author-email: gao@iterive.ai
+License: Apache-2.0 License
+Download-URL: https://github.com/iterative/ossfs
+Keywords: oss,fsspec
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: fsspec (>=2021.5.0)
+Requires-Dist: oss2 (==2.6.1)
+Provides-Extra: tests
+Requires-Dist: pytest (==6.2.4) ; extra == 'tests'
+Requires-Dist: pylint (==2.8.3) ; extra == 'tests'
+Requires-Dist: pylint-pytest (==1.0.3) ; extra == 'tests'
+Requires-Dist: mypy (==0.812) ; extra == 'tests'
+Requires-Dist: requests (==2.25.1) ; extra == 'tests'
+Requires-Dist: aliyun-python-sdk-sts (==3.0.2) ; extra == 'tests'
+
+# ossfs
+fsspec filesystem for Alibaba Cloud (Aliyun) Object Storage System (OSS)
+
+
