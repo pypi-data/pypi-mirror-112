@@ -1,0 +1,10 @@
+[kyoushi.simulation]
+ait.aecid.attacker.wpdiscuz=cr_kyoushi.statemachines.aecid_attacker:StatemachineFactory
+ait.beta_user=cr_kyoushi.statemachines.beta_user:StatemachineFactory
+ait.horde_user=cr_kyoushi.statemachines.horde_user:StatemachineFactory
+ait.owncloud_user=cr_kyoushi.statemachines.owncloud_user:StatemachineFactory
+ait.ssh_user=cr_kyoushi.statemachines.ssh_user:StatemachineFactory
+ait.web_browser=cr_kyoushi.statemachines.web_browser:StatemachineFactory
+ait.wordpress_editor=cr_kyoushi.statemachines.wordpress_editor:StatemachineFactory
+ait.wordpress_wpdiscuz=cr_kyoushi.statemachines.wordpress_wpdiscuz:StatemachineFactory
+
