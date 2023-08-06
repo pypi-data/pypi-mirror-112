@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+djangomixin/__init__.py
+djangomixin/class_mixin.py
+djangomixin/date_mixin.py
+djangomixin/mail_mixin.py
+djangomixin/mixin.py
+djangomixin/permission_mixin.py
+djangomixin.egg-info/PKG-INFO
+djangomixin.egg-info/SOURCES.txt
+djangomixin.egg-info/dependency_links.txt
+djangomixin.egg-info/top_level.txt
