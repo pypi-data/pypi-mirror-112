@@ -1,0 +1,50 @@
+Metadata-Version: 1.1
+Name: Jarve
+Version: 0.0.2
+Summary: A module for A.I
+Home-page: UNKNOWN
+Author: Kittex0/Mohammed Daniyal
+Author-email: kittex0@protonmail.com
+License: MIT
+Description: Jarve
+        
+        1. Description
+        
+        
+        Jarve is a module in python created to help developers with A.I
+        
+        
+        2. Requirements
+        
+        
+        You need to have python installed.
+        
+        
+        3. How to install Jarve
+        
+        
+        To install Jarve, simply open Command Promt(For mac or linux users in might be different) and then type:
+        
+        
+        pip install jarve
+        
+        
+        There you go! Know you have Jarve installed on your computer!
+        
+        
+        4. License
+        
+        
+        This repository and this module is under the MIT license
+        
+        
+        For more info:
+        
+        https://github.com/Kittex0/Jarve
+Keywords: A.I
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
