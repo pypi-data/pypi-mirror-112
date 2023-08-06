@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: MangasOrigines
+Version: 0.0.3
+Summary: A script for download scans on https://mangas-origines.fr/ written in Python.
+Home-page: https://github.com/Asthowen/MangasOriginesDownloader
+Author: Asthowen
+Author-email: contact@asthowen.fr
+License: GNU v3.0
+Platform: UNKNOWN
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: aiofiles
+Requires-Dist: bs4
+
+<h1 align="center">
+  MangasOriginesDownloader
+</h1>
+<p align="center">
+    <a href="https://www.python.org/">
+        <img src="https://forthebadge.com/images/badges/made-with-python.svg" alt="Made With Python">
+    </a>
+    <a href="https://github.com/Asthowen/MangasOriginesDownloader">
+        <img src="https://forthebadge.com/images/badges/uses-git.svg" alt="Uses git">
+    </a>
+    <br>
+    <a href="https://pypi.org/project/MangasOrigines/">
+        <img src="https://img.shields.io/pypi/v/MangasOrigines?style=for-the-badge" alt="PyPI version">
+    </a>
+    <a href="https://github.com/Asthowen/MangasOriginesDownloader/blob/main/LICENSE">
+        <img src="https://img.shields.io/github/license/Asthowen/MangasOriginesDownloader?style=for-the-badge" alt="License">
+    </a>
+    <a href="https://github.com/Asthowen/MangasOriginesDownloader/stargazers">
+        <img src="https://img.shields.io/github/stars/Asthowen/MangasOriginesDownloader?style=for-the-badge" alt="Stars">
+    </a>
+</p>
+<h3 align="center">
+    <strong>A script for download scans on <a href="https://mangas-origines.fr/">MangasOrigines</a> written in Python.</strong>
+</h3>
+
+## Made with
+* [**BeautifulSoup4**](https://pypi.org/project/bs4/)
+* [**aiohttp**](https://pypi.org/project/aiohttp/)
+* [**aiofiles**](https://pypi.org/project/aiofiles/)
+
+## Installation
+### Install with PyPI
+
+Install module:
+```bash
+python3 -m pip install MangasOrigines
+```
+
+### Install manually
+
+Clone the repo and switch to folder:
+```bash
+git clone https://github.com/Asthowen/MangasOriginesDownloader.git && cd MangasOriginesDownloader/
+```
+
+Install dependencies:
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+## Use
+### Installed with PyPI
+
+Start the script:
+```bash
+mangas_origines
+```
+
+Enter a link: https://mangas-origines.fr/manga/martial-peak/ for example.
+
+Enter download path: `/home/asthowen/download/scans/` for example.
+
+### Installed manually
+
+Start the script:
+```bash
+python3 run.py
+```
+
+Enter a link: https://mangas-origines.fr/manga/martial-peak/ for example.
+
+Enter download path: `/home/asthowen/download/scans/` for example.
+
+
+## Author
+[<img width="45" src="https://avatars3.githubusercontent.com/u/59535754?s=400&u=48aecdd175dd2dd8867ae063f1973b64d298220b&v=4" alt="Asthowen">](https://github.com/Asthowen)
+
+## License
+**[MangasOriginesDownloader](https://github.com/Asthowen/MangasOriginesDownloader) | [GNU General Public License v3.0](https://github.com/Asthowen/MangasOriginesDownloader/blob/main/LICENSE)**
+
