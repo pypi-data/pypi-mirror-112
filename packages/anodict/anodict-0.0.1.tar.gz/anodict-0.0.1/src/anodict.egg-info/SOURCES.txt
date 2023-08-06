@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/anodict/__init__.py
+src/anodict/anodict.py
+src/anodict/test_dict_to_class.py
+src/anodict.egg-info/PKG-INFO
+src/anodict.egg-info/SOURCES.txt
+src/anodict.egg-info/dependency_links.txt
+src/anodict.egg-info/top_level.txt
