@@ -1,0 +1,15 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+dummy.py
+requirements.txt
+setup.py
+vakantie/__init__.py
+vakantie/calendar_extractor.py
+vakantie/calendar_info.py
+vakantie.egg-info/PKG-INFO
+vakantie.egg-info/SOURCES.txt
+vakantie.egg-info/dependency_links.txt
+vakantie.egg-info/requires.txt
+vakantie.egg-info/top_level.txt
