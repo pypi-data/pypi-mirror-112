@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: toweb
+Version: 0.0.6
+Summary: a library help you show logs and data on web
+Home-page: https://github.com/Tumiz/scenario
+Author: Tumiz
+Author-email: hh11698@163.com
+License: GPL-3.0 License
+Platform: UNKNOWN
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
+Requires-Dist: tornado
+
+Toweb is a web service library, providing methods to visualize python data in web.
+
+
