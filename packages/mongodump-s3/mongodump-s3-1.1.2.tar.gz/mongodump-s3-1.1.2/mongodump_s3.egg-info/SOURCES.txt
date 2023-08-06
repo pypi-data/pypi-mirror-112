@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+mongodump_s3/__init__.py
+mongodump_s3/__main__.py
+mongodump_s3/dump.py
+mongodump_s3/helpers.py
+mongodump_s3/notifications.py
+mongodump_s3/s3.py
+mongodump_s3.egg-info/PKG-INFO
+mongodump_s3.egg-info/SOURCES.txt
+mongodump_s3.egg-info/dependency_links.txt
+mongodump_s3.egg-info/entry_points.txt
+mongodump_s3.egg-info/requires.txt
+mongodump_s3.egg-info/top_level.txt
