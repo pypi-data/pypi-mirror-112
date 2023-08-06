@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+anatools/__init__.py
+anatools/anaclient.py
+anatools/envs.py
+anatools.egg-info/PKG-INFO
+anatools.egg-info/SOURCES.txt
+anatools.egg-info/dependency_links.txt
+anatools.egg-info/requires.txt
+anatools.egg-info/top_level.txt
+tests/__init__.py
+tests/test_anaclient.py
+tests/user_tests.py
