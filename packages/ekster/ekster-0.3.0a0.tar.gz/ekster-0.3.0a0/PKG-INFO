@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: ekster
+Version: 0.3.0a0
+Summary: Ekster star formation simulations
+Home-page: https://github.com/rieder/ekster
+Author: Steven Rieder
+Author-email: steven+ekster@rieder.nl
+License: Apache License 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: C
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Fortran
+Classifier: Topic :: Scientific/Engineering :: Astronomy
