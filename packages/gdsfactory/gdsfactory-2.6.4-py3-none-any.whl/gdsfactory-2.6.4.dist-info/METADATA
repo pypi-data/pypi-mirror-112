@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: gdsfactory
+Version: 2.6.4
+Summary: python libraries to generate GDS layouts
+Home-page: https://github.com/gdsfactory/gdsfactory
+Author: gdsfactory community
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Requires-Dist: click
+Requires-Dist: gdspy (==1.6.6)
+Requires-Dist: omegaconf (==2.1.0)
+Requires-Dist: jsondiff
+Requires-Dist: klayout (==0.27.1)
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: phidl (==1.5.2)
+Requires-Dist: picwriter (==0.5)
+Requires-Dist: Pyqtree (==1.0.0)
+Requires-Dist: qrcode (==6.1)
+Requires-Dist: rectpack (==0.2.1)
+Requires-Dist: scipy
+Requires-Dist: Shapely (==1.7.1)
+Requires-Dist: networkx (==2.5.1)
+Requires-Dist: matplotlib
+Requires-Dist: pytest (==6.2.4)
+Requires-Dist: pytest-regressions (==2.2.0)
+Requires-Dist: lytest (==0.0.20)
+Requires-Dist: xmltodict (==0.12.0)
+Requires-Dist: pydantic (==1.8.2)
+Requires-Dist: scikit-image
+Requires-Dist: loguru
+
+UNKNOWN
+
+
