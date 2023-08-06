@@ -1,0 +1,9 @@
+microconventions>=0.5.1
+fakeredis
+getjson
+redis
+sortedcontainers
+numpy
+pymorton
+scipy
+pathlib
