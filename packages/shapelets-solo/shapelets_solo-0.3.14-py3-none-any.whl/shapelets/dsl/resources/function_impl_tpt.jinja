@@ -1,0 +1,95 @@
+# Copyright (c) 2021 Grumpy Cat Software S.L.
+#
+# This Source Code is licensed under the MIT 2.0 license.
+# the terms can be found in LICENSE.md at the root of
+# this project, or at http://mozilla.org/MPL/2.0/.
+
+import arrayfire as af
+import logging
+import khiva as kv
+import numpy as np
+import pandas as pd
+
+from shapelets_worker.nd_array import NDArray
+from shapelets_worker.output_list import OutputList
+from shapelets_worker.registered_function_utils import (
+    adapt_input,
+    adapt_output,
+    adapt_reducer_inputs,
+    adapt_splitter_result,
+    deflate_input_arguments_with_list,
+    register_output_util,
+)
+from shapelets_worker.ReplicatedParam import ReplicatedParam
+from shapelets_worker.shapelets_match import Match
+from shapelets_worker.shapelets_sequence import ShapeletsSequence, _ordinal_axis_proto
+from shapelets_worker.shapelets_view import View
+from shapelets_worker.view_group_entry import ViewGroupEntry
+from shapelets_worker.worker_pb2 import (
+    AxisProto,
+    BOOLEAN,
+    ColumnProto,
+    ColumnProtoEntry,
+    COMPLEX_NUMBER,
+    DENSE_IRREGULAR,
+    DENSE_REGULAR,
+    DT_INT,
+    DT_NUMERICAL,
+    FLOAT,
+    INTEGER,
+    ISAX_REPRESENTATION,
+    MATCH,
+    MULTIDIMENSIONAL,
+    ND_ARRAY,
+    NUMERIC,
+    ORDINAL_AXIS,
+    SEQUENCE,
+    SEQUENCE_ID,
+    SPARSE,
+    STRING,
+    TIME_AXIS,
+    UNIDIMENSIONAL,
+    VIEW,
+    VIEW_GROUP_ENTRY,
+)
+
+
+shapelets_logger = logging.getLogger()
+
+
+##################################
+# wrapper function
+##################################
+
+
+def register_output(result, axis):
+    return register_output_util("{{function_name}}", result, axis)
+
+
+def {{function_name}}(input_parameters):
+
+    shapelets_logger.debug(">>> {{function_name}}")
+
+    inputs = [adapt_input(v) for k, v in sorted(input_parameters.items(), key=lambda item: item[0])]
+
+    {% if function_type == "REDUCER" %}
+    inputs = adapt_reducer_inputs([{{reducer_repl_input_indices | join(', ')}}], inputs)
+    {% endif %}
+
+    res = {{function_name}}_wrapped(*inputs)
+
+    res = adapt_output(res)
+
+    {% if function_type == "SPLITTER" %}
+    ret = adapt_splitter_result([{{ result_types|join(', ') }}], res)
+    {% else %}
+    ret = [{% for index in range(result_types | length) -%}
+            ({{result_types[index]}}, res[{{index}}]),
+           {%- endfor %}]
+    {% endif %}
+    shapelets_logger.debug("<<< {{function_name}}")
+    return ret
+
+##################################
+# User functions and imports
+##################################
