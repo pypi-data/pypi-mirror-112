@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/BMAutomation/BMAutomation.py
+src/BMAutomation/__init__.py
+src/BMAutomation.egg-info/PKG-INFO
+src/BMAutomation.egg-info/SOURCES.txt
+src/BMAutomation.egg-info/dependency_links.txt
+src/BMAutomation.egg-info/requires.txt
+src/BMAutomation.egg-info/top_level.txt
