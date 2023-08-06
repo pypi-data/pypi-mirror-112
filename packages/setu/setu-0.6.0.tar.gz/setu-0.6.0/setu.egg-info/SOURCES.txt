@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+setu/__init__.py
+setu/auth.py
+setu/deeplink.py
+setu/errors.py
+setu.egg-info/PKG-INFO
+setu.egg-info/SOURCES.txt
+setu.egg-info/dependency_links.txt
+setu.egg-info/not-zip-safe
+setu.egg-info/requires.txt
+setu.egg-info/top_level.txt
