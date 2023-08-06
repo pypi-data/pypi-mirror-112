@@ -1,0 +1,9 @@
+setup.py
+rest/__init__.py
+rest/rest.py
+restwin/__init__.py
+restwin/voiceroid.py
+texttoneenc.egg-info/PKG-INFO
+texttoneenc.egg-info/SOURCES.txt
+texttoneenc.egg-info/dependency_links.txt
+texttoneenc.egg-info/top_level.txt
