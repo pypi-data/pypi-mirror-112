@@ -1,0 +1,14 @@
+restless/__init__.py,sha256=xZGusUxy_0jco6t-fwZswrs78E7-AF7N8IbcPPBXUeg,6201
+restless/errors.py,sha256=IQUzap0QUfjWUOuCbpDMLzTkOmeHxJbi9Hj9iRqFvBU,116
+restless/openapi.py,sha256=jbfA8pR5sXGDkIDS0BMRUp7z5uGyZ9LnvSTM3GYqR7I,7488
+restless/parameters.py,sha256=W558vumKQFjk5ypUnhQp1XPzalUrXaryreVNVU-pepc,519
+restless/security.py,sha256=KwgR45MTsKFvgKU4nmMaF_HFdrYsrXA7Qwdd_SsgzbY,524
+restless/util.py,sha256=uY-pT1RRw0kfM-6BgW804q52rHmy9sBHOAemS0ZOo-g,2397
+restless/interfaces/__init__.py,sha256=IU5a1ucuFSvGDtVYW_sV4H3B-EAjgyMGQ3i_GfabmUo,182
+restless/interfaces/aws.py,sha256=0vOVMduqOxMiYc5S5ZnjAFjCS1vVEEH9n1QJhxoCw30,1987
+restless/interfaces/azure.py,sha256=KhqlJr564i3deEt8OIrLGBW0hOclo-Rr6_nkfjXWlw8,2126
+restless_cloud-0.0.1.dist-info/LICENSE,sha256=611bgi8dYvn8a6ZVkgQD0RWMUKdz9fwI5vkswtYAuwg,1072
+restless_cloud-0.0.1.dist-info/METADATA,sha256=C1t6B20VlC4lJzwvscsZBytNQliBWo3JAeL-PM9fciA,650
+restless_cloud-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+restless_cloud-0.0.1.dist-info/top_level.txt,sha256=qJy6ezwyGjjcUvDXauwSsuDkl6d2kLLuobVhrohFk2I,9
+restless_cloud-0.0.1.dist-info/RECORD,,

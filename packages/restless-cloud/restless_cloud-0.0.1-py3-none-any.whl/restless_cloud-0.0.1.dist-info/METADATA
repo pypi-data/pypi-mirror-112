@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: restless-cloud
+Version: 0.0.1
+Summary: A router for AWS Lambda and Azure Functions
+Home-page: UNKNOWN
+Author: Joaquim Ventura
+Author-email: allaphor@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: jsonschema
+Requires-Dist: pydantic
+Provides-Extra: all
+Requires-Dist: pyyaml ; extra == 'all'
+Requires-Dist: requests ; extra == 'all'
+Requires-Dist: azure-functions ; extra == 'all'
+Provides-Extra: azure
+Requires-Dist: azure-functions ; extra == 'azure'
+Provides-Extra: spec
+Requires-Dist: pyyaml ; extra == 'spec'
+Provides-Extra: tests
+Requires-Dist: requests ; extra == 'tests'
+
+UNKNOWN
+
