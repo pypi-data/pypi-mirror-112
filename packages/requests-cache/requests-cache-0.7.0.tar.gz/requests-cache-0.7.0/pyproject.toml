@@ -1,0 +1,110 @@
+[tool.poetry]
+name = "requests-cache"
+version = "0.7.0"
+description = "A transparent, persistent cache for the requests library"
+authors = ["Roman Haritonov", "Jordan Cook"]
+license = "BSD License"
+readme = "README.md"
+homepage = "https://github.com/reclosedev/requests-cache"
+repository = "https://github.com/reclosedev/requests-cache"
+keywords = ["requests", "cache", "http", "persistence", "sqlite", "redis", "mongodb", "gridfs", "dynamodb"]
+include = [
+    { path = "*.md" },
+    { path = "*.yml" },
+    { path = "docs", format = "sdist" },
+    { path = "examples", format = "sdist" },
+    { path = "tests", format = "sdist" }
+]
+
+[tool.poetry.urls]
+"Documentation" = "https://requests-cache.readthedocs.io"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+attrs = "^21.2"
+itsdangerous = ">=2.0.1"
+requests = "^2.17"
+url-normalize = "^1.4"
+
+# Optional serialization dependencies
+# Note: cattrs will be a hard dependency in a future release, after dropping python 3.6 support
+bson = {version = ">=0.5", optional = true}
+cattrs = {version = "^1.7", python = "^3.7", optional = true}
+ujson = {version = ">=4.0", optional = true}
+
+# Optional backend dependencies
+boto3 = { version = "^1.17", optional = true }
+pymongo = { version = "^3.0", optional = true }
+pyyaml = {version = ">=5.4", optional = true}
+redis = { version = "^3.0", optional = true }
+
+# Documentation dependencies
+m2r2 = { version = "^0.2", optional = true }
+Sphinx = { version = "4.0.2", optional = true }
+sphinx-autodoc-typehints = { version = "^1.11", optional = true }
+sphinx-copybutton = { version = "^0.3", optional = true }
+sphinx-rtd-theme = { version = "0.5.2", optional = true }
+sphinxcontrib-apidoc = { version = "^0.3", optional = true }
+
+[tool.poetry.extras]
+all = ["boto3", "cattrs", "pymongo", "redis", "ujson"]
+bson = ["cattrs", "bson"]  # BSON comes with pymongo, and can also be used as a standalone codec
+json = ["cattrs", "ujson"]
+yaml = ["cattrs", "yaml"]
+dynamodb = ["boto3"]
+mongodb = ["cattrs", "pymongo"]
+redis = ["redis"]
+docs = ["docutils", "m2r2", "Sphinx", "sphinx-autodoc-typehints", "sphinx-copybutton",
+        "sphinx-material", "sphinx-rtd-theme", "sphinxcontrib-apidoc"]
+
+[tool.poetry.dev-dependencies]
+black = {version = "21.6b0", python = ">=3.6.2, <3.10"}
+isort = "^5.8"
+flake8 = "^3.9"
+flake8-comprehensions = "*"
+flake8-polyfill = "*"
+mypy = "^0.910"
+pre-commit = {version = "^2.12", python = "^3.6.2"}
+psutil = "^5.0"
+pytest = "^6.2"
+pytest-cov = ">=2.11"
+pytest-order = "1.0"
+pytest-xdist = ">=2.2"
+radon = "^5.0"
+requests-mock = "^1.8"
+rich = ">=10.0"
+timeout-decorator = "^0.5"
+types-pyyaml = ">=5.4.3"
+types-redis = ">=3.5.4"
+types-requests = ">=0.1.8"
+types-ujson = ">=0.1.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 105
+skip-string-normalization = true
+
+[tool.coverage.html]
+directory = 'test-reports'
+
+[tool.coverage.run]
+branch = true
+source = ['requests_cache']
+omit = [
+    'requests_cache/__init__.py',
+    'requests_cache/backends/__init__.py',
+    'requests_cache/models/__init__.py',
+    'requests_cache/serializers/__init__.py',
+]
+
+[tool.isort]
+profile = 'black'
+line_length = 105
+skip_gitignore = true
+skip = ['examples/', 'requests_cache/__init__.py']
+known_first_party = ['tests']
+# Things that are common enough they may as well be grouped with stdlib imports
+extra_standard_library = ['pytest', 'setuptools']
