@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Simple Index</title>
+</head>
+<body>
+<h1>Simple Index</h1>
+
+{% for name, normalized_name in links %}
+    <a href="{{ normalized_name }}/">{{ name }}</a><br>
+{% endfor %}
+
+</body>
+</html>
