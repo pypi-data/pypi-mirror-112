@@ -1,0 +1,9 @@
+README.md
+setup.py
+forte.gpt2.egg-info/PKG-INFO
+forte.gpt2.egg-info/SOURCES.txt
+forte.gpt2.egg-info/dependency_links.txt
+forte.gpt2.egg-info/requires.txt
+forte.gpt2.egg-info/top_level.txt
+forte/gpt2/__init__.py
+forte/gpt2/text_generation_processor.py
