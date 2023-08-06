@@ -1,0 +1,19 @@
+osxmetadata/__init__.py,sha256=rYIw2FcBJEdDhbvHed8RVmdOy-UvNzbkKdJXjUOD0bU,1100
+osxmetadata/__main__.py,sha256=Gmlv1AcOtNchbQBYluSPbwwqLT-bemo_EdjtOMWhWoc,26899
+osxmetadata/_version.py,sha256=fK41ZfU_hZedoLE5pawSL4ATqlcGue6PtIQpcS0v1UI,53
+osxmetadata/attributes.py,sha256=ofZdcSoFHPWzEO9X5eFH3onu9XYO34S0By4FGgVwU20,15886
+osxmetadata/backup.py,sha256=k3fi9eAd7eRscRUa6OdrywgL_UWsjNSyfxOMaNA2hxE,1172
+osxmetadata/classes.py,sha256=52-K98bit9bC5fjLuXopQLAaZngD8kbp6alnKlxuTAU,13107
+osxmetadata/constants.py,sha256=35XbXNMXdir1LvmZElziaJIVsLc4jvEJSY7ZB6LO2VM,3161
+osxmetadata/datetime_utils.py,sha256=gIgaliAvWQj0WQ3NFPreRrGtd91s1b70LZqLXRpHEEc,4478
+osxmetadata/debug.py,sha256=87Kum22L55MdQHZ2u3744ikKbCGu5WCvhl9UegOHkk0,724
+osxmetadata/findertags.py,sha256=5NlXkLVl8cGDSaDCQd7ULHromFDCAcgfy06cPPF__zI,6564
+osxmetadata/osxmetadata.py,sha256=uQCDJP3Ykn1BSHyk3XTDtxicgQqo2TLfXuFNwslIP0A,21730
+osxmetadata-0.99.21.dist-info/COPYING.md,sha256=ykcnXSSxn2nV-AIl_09cjq1mcxQEOKfrtUVLaIHZlvY,1367
+osxmetadata-0.99.21.dist-info/LICENSE,sha256=IrCatJ7Y9eb1gmjPPgAUl_ZfxhJPK1zWBnNA5GOmFNU,1070
+osxmetadata-0.99.21.dist-info/METADATA,sha256=YqmyrER3USS6gSFWSs4CTm9RZ0qiczLFF5YEIIPupCg,29994
+osxmetadata-0.99.21.dist-info/PKG-INFO (Rhet’s MacBook Pro's conflicted copy 2020-09-09),sha256=5WgW85vhJT9JkoIzlLlOLBitpmsoQvls7FyuwNmTMss,29075
+osxmetadata-0.99.21.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+osxmetadata-0.99.21.dist-info/entry_points.txt,sha256=9_02KVeXZv1a_HJU-K4Epe2j5DdIH_R60BrFDXAqPYg,58
+osxmetadata-0.99.21.dist-info/top_level.txt,sha256=CjCzPYuargsImC6CxhdzUGTx4-MrnLFxop-1PudktmQ,12
+osxmetadata-0.99.21.dist-info/RECORD,,
