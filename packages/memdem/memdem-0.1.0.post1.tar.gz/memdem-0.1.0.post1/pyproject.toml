@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
+
+[tool.isort]
+profile = "black"
+known_first_party = "memdem"
+known_third_party = [
+    "rasterio",
+    "morecantile"
+]
+
+[tool.pydocstyle]
+convention = "numpy"
+match_dir = "memdem"
+
+[tool.setuptools_scm]
+

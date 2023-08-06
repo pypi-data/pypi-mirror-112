@@ -1,0 +1,11 @@
+rasterio[s3]
+morecantile
+
+[dev]
+pytest
+pytest-cov
+setuptools_scm
+isort
+black
+mypy==0.910
+pydocstyle
