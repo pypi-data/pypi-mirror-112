@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gwdc-python
+Version: 0.2.0
+Summary: API for GWDC modules
+Home-page: https://github.com/gravitationalwavedc/gwdc_python
+License: MIT
+Author: Thomas Reichardt
+Author-email: treichardt@swin.edu.au
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: jwt (>=1.2.0,<2.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Project-URL: Repository, https://github.com/gravitationalwavedc/gwdc_python
+Description-Content-Type: text/x-rst
+
+GWDC Python API
+===============
+
+This package handles requests for the GWDC modules. Presently, it primarily handles the requests for `gwcloud-python <https://pypi.org/project/gwcloud-python/>`_.
