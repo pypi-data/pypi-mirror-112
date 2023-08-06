@@ -1,0 +1,7 @@
+arkindex-client==1.0.6
+peewee==3.14.4
+Pillow==8.2.0
+python-gitlab==2.7.1
+python-gnupg==0.4.7
+sh==1.14.2
+tenacity==7.0.0
