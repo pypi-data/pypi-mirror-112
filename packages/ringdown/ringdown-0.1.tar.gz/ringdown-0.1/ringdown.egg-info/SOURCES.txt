@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+ringdown/__init__.py
+ringdown/data.py
+ringdown/fit.py
+ringdown/kde_contour.py
+ringdown/qnms.py
+ringdown.egg-info/PKG-INFO
+ringdown.egg-info/SOURCES.txt
+ringdown.egg-info/dependency_links.txt
+ringdown.egg-info/requires.txt
+ringdown.egg-info/top_level.txt
+ringdown/stan/ringdown_ftau.stan
+ringdown/stan/ringdown_mchi.stan
