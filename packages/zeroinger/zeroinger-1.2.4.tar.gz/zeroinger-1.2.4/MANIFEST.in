@@ -1,0 +1,5 @@
+include README.md LICENSE
+include *.txt *.tsv *.json
+include zeroinger/pca/adcode.tsv
+include zeroinger/pca/area2street_village.json
+include zeroinger/pca/nations.txt
