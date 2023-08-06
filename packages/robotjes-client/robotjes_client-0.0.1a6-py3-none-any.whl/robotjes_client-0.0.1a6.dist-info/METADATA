@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: robotjes-client
+Version: 0.0.1a6
+Summary: Client package for the Robomind Academy Python course
+Home-page: https://github.com/Janvanoorschot/robotjes-client
+Author: Jan van Oorschot
+Author-email: info@robomindacademy.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/Janvanoorschot/robotjes-client/issues
+Project-URL: Source, https://github.com/Janvanoorschot/robotjes-client/
+Keywords: educational,learning,student,programming
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Requires-Dist: asciimatics
+Requires-Dist: requests
+Requires-Dist: pyparsing
+
+# robotjes-client
+
+The [robotjes-client](https://github.com/Janvanoorschot/robotjes-client) package
+supports development of robot software for the 
+[Robomind Academy Python Course](https://www.robomindacademy.com/navigator/storylines?course=RoboPython).
+
+On the one hand it containes a full maze simulation so the student
+can develop robot software completely locally.
+On the other hand it contains a *requests* based REST module that 
+allows communication with the Robomind Academy servers and participate
+in online mazes.
+
+
+
