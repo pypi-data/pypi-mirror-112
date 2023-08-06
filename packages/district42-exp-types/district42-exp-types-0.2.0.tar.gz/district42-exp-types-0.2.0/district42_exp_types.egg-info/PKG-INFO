@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: district42-exp-types
+Version: 0.2.0
+Summary: district42 experimental types
+Home-page: https://github.com/nikitanovosibirsk/district42-exp-types
+Author: Nikita Tsvetkov
+Author-email: nikitanovosibirsk@yandex.com
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# district42 experimental types
+
+[![Codecov](https://img.shields.io/codecov/c/github/nikitanovosibirsk/district42-exp-types/master.svg?style=flat-square)](https://codecov.io/gh/nikitanovosibirsk/district42-exp-types)
+[![PyPI](https://img.shields.io/pypi/v/district42-exp-types.svg?style=flat-square)](https://pypi.python.org/pypi/district42-exp-types/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/district42-exp-types?style=flat-square)](https://pypi.python.org/pypi/district42-exp-types/)
+[![Python Version](https://img.shields.io/pypi/pyversions/district42-exp-types.svg?style=flat-square)](https://pypi.python.org/pypi/district42-exp-types/)
+
+## Installation
+
+```sh
+pip3 install district42-exp-types
+```
+
+
