@@ -1,0 +1,13 @@
+gitcomp/__init__.py,sha256=Jmr64NxnNYLWicoW3iGHJ_aFHr3EZRpsLw25OLYLvxU,230
+gitcomp/__main__.py,sha256=ZVzW9AaCXs9D7cx1fh6SDH6qAqgBwveFiBIuVFfFM6o,3703
+gitcomp/gitcomp_core.py,sha256=jgUKenW87VS5xA2tpQksCuMs6SwLAzGBNgKVHxaOX8Y,1696
+gitcomp/net_mod.py,sha256=URQ_PgFPd7RwX_1oCr5I0wrq6Bw4F8TN3jHQXj_3DUE,3152
+gitcomp/repository.py,sha256=Xp9iFbsTokQf3No1n3_HEB52c7vUDFj3m3wLiT3bi9w,2826
+gitcomp/ser_de.py,sha256=Pg2fyJQ_2oqV-AzwWjPRJcg_YyOoK7bmjiNs7X1p_OU,5092
+gitcomp/user.py,sha256=62pznSp6BQj7o4OTWGz7GF972bsJqd65ljvZevSTlCc,2513
+gitcomp-1.0.4.dist-info/LICENSE,sha256=zQOtVjc7Y-h9RzPH-CMCdlCYZaXHsBJUYKiV-MeCvgI,1070
+gitcomp-1.0.4.dist-info/METADATA,sha256=nawLiEhChUx3b8irG1gyk3hkuNU30k5WSqxAponEGmk,5000
+gitcomp-1.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gitcomp-1.0.4.dist-info/entry_points.txt,sha256=EH1tlFZDfM9pJ6W1U4-Wy78qI3wvWFWdxVJErpjX-n4,51
+gitcomp-1.0.4.dist-info/top_level.txt,sha256=ojeMt1s9uxSBYnQ-9P2sNb65ejhHa3clgX_5wmfpRaw,8
+gitcomp-1.0.4.dist-info/RECORD,,

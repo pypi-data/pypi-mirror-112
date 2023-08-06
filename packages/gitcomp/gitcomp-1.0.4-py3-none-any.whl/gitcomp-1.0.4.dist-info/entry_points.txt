@@ -1,0 +1,3 @@
+[console_scripts]
+gitcomp = gitcomp.__main__:main
+
