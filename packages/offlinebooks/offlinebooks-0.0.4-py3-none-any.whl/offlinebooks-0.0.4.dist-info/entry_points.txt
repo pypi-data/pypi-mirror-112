@@ -1,0 +1,3 @@
+[console_scripts]
+offlinebooks = offlinebooks.main:main
+
