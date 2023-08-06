@@ -1,0 +1,9 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "license_basis.json",
+	"type": "object",
+	"title": "License Basis Schema",
+	"allOf": [{
+		"$ref": "base.json#/definitions/license_basis"
+	}]
+}
