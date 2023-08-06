@@ -1,0 +1,138 @@
+
+@import "variables";
+
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .hidden#{$infix} {
+      display: none !important;
+    }
+  }
+}
+
+
+/**
+ * Mobile / desktop classes
+ */
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .mobile-detected {
+      .hidden-mobile#{$infix} {
+        display: none !important;
+      }
+      .visible-mobile-block#{$infix} {
+        display: block !important;
+      }
+      .visible-mobile-inline#{$infix} {
+        display: inline !important;
+      }
+      .visible-mobile-inline-block#{$infix} {
+        display: inline-block !important;
+      }
+      .visible-mobile-flex#{$infix} {
+        display: flex !important;
+      }
+    }
+    .desktop-detected {
+      .hidden-desktop#{$infix} {
+        display: none !important;
+      }
+      .visible-desktop-block#{$infix} {
+        display: block !important;
+      }
+      .visible-desktop-inline#{$infix} {
+        display: inline !important;
+      }
+      .visible-desktop-inline-block#{$infix} {
+        display: inline-block !important;
+      }
+      .visible-desktop-flex#{$infix} {
+        display: flex !important;
+      }
+    }
+  }
+}
+
+
+/**
+ * Responsive sizes
+ */
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .width#{$infix}-0            { width: 0 !important; }
+    .width#{$infix}-25           { width: 25% !important; }
+    .width#{$infix}-50           { width: 50% !important; }
+    .width#{$infix}-75           { width: 75% !important; }
+    .width#{$infix}-100          { width: 100% !important; }
+
+    .width#{$infix}-50-gut       { width: calc(50% - 0.6em) !important; }
+
+    .width#{$infix}-100px        { width: 100px !important; }
+    .width#{$infix}-200px        { width: 200px !important; }
+    .width#{$infix}-300px        { width: 300px !important; }
+    .width#{$infix}-400px        { width: 400px !important; }
+
+    .height#{$infix}-0           { height: 0 !important; }
+    .height#{$infix}-25          { height: 25% !important; }
+    .height#{$infix}-50          { height: 50% !important; }
+    .height#{$infix}-75          { height: 75% !important; }
+    .height#{$infix}-100         { height: 100% !important; }
+
+    .height#{$infix}-100px        { height: 100px !important; }
+    .height#{$infix}-200px        { height: 200px !important; }
+    .height#{$infix}-300px        { height: 300px !important; }
+    .height#{$infix}-400px        { height: 400px !important; }
+  }
+}
+
+
+/**
+ * Opacity classes
+ */
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
+
+
+/**
+ * Custom classes
+ */
+
+.mouse-pointer,
+[data-ams-click-handler] {
+  cursor: pointer !important;
+}
+.mouse-move {
+  cursor: move !important;
+}
+
+
+.list-style-none {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+}
