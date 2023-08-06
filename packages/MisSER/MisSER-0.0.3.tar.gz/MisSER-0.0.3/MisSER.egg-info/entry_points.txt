@@ -1,0 +1,3 @@
+[console_scripts]
+MisSER = MisSER.run_misser:main
+
