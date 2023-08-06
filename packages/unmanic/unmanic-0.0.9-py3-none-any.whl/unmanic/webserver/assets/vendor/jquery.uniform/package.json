@@ -1,0 +1,41 @@
+{
+    "name": "jquery.uniform",
+    "title": "Uniform",
+    "description": "A jQuery plugin to make your form controls look how you want them to. Now with HTML-5 attributes!",
+    "version": "2.2.2",
+    "homepage": "http://opensource.audith.org/uniform",
+    "keywords": [
+        "uniform",
+        "uniformjs",
+        "uniform-js",
+        "uniform.js",
+        "jquery.uniform",
+        "jquery-uniform"
+    ],
+    "author": "Josh Pyles <joshpyles@gmail.com>",
+    "contributors": [
+        "Shahriyar Imanov <shehi@imanov.me>",
+        "Josh Pyles <joshpyles@gmail.com>",
+        "Tyler Akins <fidian@rumkin.com>"
+    ],
+    "maintainers": [
+        "Shahriyar Imanov <shehi@imanov.me>"
+    ],
+    "main": "lib/jquery.uniform.js",
+    "scripts": {
+        "build": "./node_modules/.bin/uglifyjs ./lib/jquery.uniform.js -o ./dist/jquery.uniform.min.js -m -c",
+        "test": "echo Coming Soon!"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AudithSoftworks/Uniform"
+    },
+    "devDependencies": {
+        "jquery": "^1.6",
+        "uglify-js": "*"
+    },
+    "bugs": {
+        "url": "https://github.com/AudithSoftworks/Uniform/issues"
+    },
+    "license": "MIT"
+}

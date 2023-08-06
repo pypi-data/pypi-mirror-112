@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "dashboard.css",
+	"sources": [
+		"../../scss/dashboard.scss"
+	],
+	"sourcesContent": [
+		"\n.worker-subtitle {\n    word-wrap: break-word;\n    /* overflow-wrap: break-word; */\n    height: 100px;\n    display: block;\n    overflow: hidden;\n}\n\n.error {\n    color: #e43a45 !important;\n}\n\n.dashboard-task-list {\n    min-height: 430px;\n}\n\n#pending-tasks-fullscreen {\n    font-family: FontAwesome;\n    color: #a0a0a0;\n    padding-top: 4px;\n}\n\n/*Hide elements that are not available for preview mode*/\ndiv.dashboard-task-list-preview .dataTables_select,\ndiv.dashboard-task-list-preview .dataTables_length,\ndiv.dashboard-task-list-preview .dataTables_info,\ndiv.dashboard-task-list-preview .dataTables_paginate,\ndiv.dashboard-task-list-preview .remove-from-task-list {\n    display: none;\n}\n\n.worker-ffmpeg-log {\n    text-align: left;\n}\n"
+	],
+	"names": [],
+	"mappings": "AACA,AAAA,gBAAgB,AAAC,CACb,SAAS,CAAE,UAAU,CAErB,MAAM,CAAE,KAAK,CACb,OAAO,CAAE,KAAK,CACd,QAAQ,CAAE,MAAM,CACnB,AAED,AAAA,MAAM,AAAC,CACH,KAAK,CAAE,kBAAkB,CAC5B,AAED,AAAA,oBAAoB,AAAC,CACjB,UAAU,CAAE,KAAK,CACpB,AAED,AAAA,yBAAyB,AAAC,CACtB,WAAW,CAAE,WAAW,CACxB,KAAK,CAAE,OAAO,CACd,WAAW,CAAE,GAAG,CACnB,AAGD,AAAA,GAAG,AAAA,4BAA4B,CAAC,kBAAkB,CAClD,GAAG,AAAA,4BAA4B,CAAC,kBAAkB,CAClD,GAAG,AAAA,4BAA4B,CAAC,gBAAgB,CAChD,GAAG,AAAA,4BAA4B,CAAC,oBAAoB,CACpD,GAAG,AAAA,4BAA4B,CAAC,sBAAsB,AAAC,CACnD,OAAO,CAAE,IAAI,CAChB,AAED,AAAA,kBAAkB,AAAC,CACf,UAAU,CAAE,IAAI,CACnB"
+}
