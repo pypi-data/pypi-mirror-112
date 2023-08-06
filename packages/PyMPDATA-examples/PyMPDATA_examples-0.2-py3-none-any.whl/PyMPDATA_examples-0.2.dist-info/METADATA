@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: PyMPDATA-examples
+Version: 0.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: https://github.com/orgs/atmos-cloud-sim-uj/people
+Author-email: UNKNOWN
+License: GPL-3.0
+Platform: UNKNOWN
+Requires-Dist: PyMPDATA
+Requires-Dist: pystrict
+Requires-Dist: matplotlib
+Requires-Dist: ipywidgets
+Requires-Dist: scipy
+Requires-Dist: pint
+Requires-Dist: joblib
+Requires-Dist: sympy
+Requires-Dist: ghapi
+
+UNKNOWN
+
+
