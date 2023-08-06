@@ -1,0 +1,17 @@
+quickai/__init__.py,sha256=5KVGdz5AdFv9xEYvLULLqhNGiWAl4zbEsF8faUqFZr4,301
+quickai/image_classification.py,sha256=sGbr1N1x_EFFx0WvJvM8XdRsFQZmohLY3Np7kRL5B-U,7480
+quickai/text_finetuning.py,sha256=_IulkZBT1iTLNhiCrjyi2HuoljVzAgf0Y58yn-_77Cs,9456
+quickai/text_inferance.py,sha256=SqtGMqIPJampDXA-B_3x9eRp9MWinj6XAzfxSaXFLN0,2795
+quickai/yolo/__init__.py,sha256=tECu3LU_uS2WVAxBotIZZC9GrWNAZO6CxYLGYaLLlfU,61
+quickai/yolo/backbone.py,sha256=oMLtQtyuT7SMAyB3hb5t5hdzG4PhKF6avKmSfj4PJR0,7950
+quickai/yolo/common.py,sha256=kT7WHfttvRlFFGN1FvjOYSUHT4OxAkNLFWIIdM63Clw,2983
+quickai/yolo/config.py,sha256=lpcSA3pJVh3gTbN6sPvAnBY93T164pqHQhDjwPN_sus,1766
+quickai/yolo/dataset.py,sha256=FZNZKkA25avaSrw_4aGpITB1l0TN6MW5M3QoY1j8K68,14397
+quickai/yolo/detect.py,sha256=qBknt3vn7odR3mj02_OfsCQHC8ct0BieZ3dmGGyGNGE,9883
+quickai/yolo/utils.py,sha256=qwITZ7q7DtA2JaVeQsjrUAumXBHfmFvCyosvzfO-ydg,13106
+quickai/yolo/yolov4.py,sha256=Z48IJyA35FiIxFdwUFMry3_XqKT6r8C5tBpfmEf1AfU,16367
+quickai-1.3.8.dist-info/LICENSE,sha256=JClTY_rjtLor3MkrGaRawPB1Rh2esRWf7fSlp9nxLQQ,1084
+quickai-1.3.8.dist-info/METADATA,sha256=GYyP6I9Tx37monk_KI0rZvz_Og0iaIZuVGFSYY-wFTo,3882
+quickai-1.3.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+quickai-1.3.8.dist-info/top_level.txt,sha256=gyViWyZxI56VgWnMf1uFlaDmCuh-2ckc9784YArFdys,9
+quickai-1.3.8.dist-info/RECORD,,
