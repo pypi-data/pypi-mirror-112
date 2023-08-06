@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: gruut_lang_fr
+Version: 1.2.1
+Summary: French language files for gruut tokenizer/phonemizer
+Home-page: https://github.com/rhasspy/gruut
+Author: Michael Hansen
+Author-email: mike@rhasspy.org
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
