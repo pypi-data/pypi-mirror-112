@@ -1,0 +1,25 @@
+# Virtual Environment
+.venv
+env
+
+# Python
+*.pyc
+__pycache__
+.coverage
+
+# Python IDE
+.idea
+.vscode
+workspace.code-workspace
+
+# MacOS
+*.DS_Store
+
+# Builds
+_build
+*.egg-info
+build
+dist
+
+# Package Version
+tnmf/_version.py
