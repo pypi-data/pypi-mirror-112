@@ -1,0 +1,13 @@
+audbackend/__init__.py,sha256=S2pMlR4TbRibLWaSt0Tb9x3piVFw-1X-40ewK0wVinw,578
+audbackend/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+audbackend/core/api.py,sha256=H1W4rDmPmVsWbHK88oJ4aaDhCNI9Q65_5BXU2drI5L4,1566
+audbackend/core/artifactory.py,sha256=522pdaS_susUrVpvMvcIqUliRb0HTn-nUXU98DwOQBU,2786
+audbackend/core/backend.py,sha256=1E_9mcu4HSgKcIQhBgZDFEGKdn53gK8JN5nEALS5lrE,13433
+audbackend/core/filesystem.py,sha256=Aeh9KMSbVWrhqv3ZYZTbTknzva8G31y4WuwZlPAH9b0,2832
+audbackend/core/repository.py,sha256=I-hEwVRe_fPB-K6z4ZiHGs_8dyOsNxg7ryiQQ86Ehv0,897
+audbackend/core/utils.py,sha256=u9g3UZRpLYBZqzMnJmCVu1skLHXrkpeIKhKO4JJ-tF4,555
+audbackend-0.3.7.dist-info/LICENSE,sha256=NR2XYchUq9pZEHC5e92UaW8PxjLowxGhW2T9SvwKS5Q,1138
+audbackend-0.3.7.dist-info/METADATA,sha256=MF5eeUQ_Rpkhlj3grFtVbaXfwBehxCldbwdHHN8hGe4,4405
+audbackend-0.3.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+audbackend-0.3.7.dist-info/top_level.txt,sha256=qIlC2TyyvCnlq6_eIiJ2Ngy4XhoZqgIErB9Le-2Ofyc,11
+audbackend-0.3.7.dist-info/RECORD,,
