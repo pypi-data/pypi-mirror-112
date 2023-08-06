@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+capparselib.egg-info/PKG-INFO
+capparselib.egg-info/SOURCES.txt
+capparselib.egg-info/dependency_links.txt
+capparselib.egg-info/requires.txt
+capparselib.egg-info/top_level.txt
+src/__init__.py
+src/parsers.py
