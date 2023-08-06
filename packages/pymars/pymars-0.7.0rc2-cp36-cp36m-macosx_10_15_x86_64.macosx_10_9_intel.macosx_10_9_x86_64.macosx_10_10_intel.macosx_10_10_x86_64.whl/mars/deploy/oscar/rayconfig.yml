@@ -1,0 +1,10 @@
+"@inherits": base_config.yml
+cluster:
+  ray:
+    supervisor:
+      standalone: no
+      sub_pool_num: 0
+session:
+  custom_log_dir: null
+storage:
+  backends: [ray]
