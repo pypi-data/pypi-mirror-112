@@ -1,0 +1,3 @@
+[console_scripts]
+mccli = mc_ssh.mccli:cli
+
