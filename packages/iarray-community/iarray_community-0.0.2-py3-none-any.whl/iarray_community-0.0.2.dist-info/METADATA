@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: iarray-community
+Version: 0.0.2
+Summary: A small example package
+Home-page: https://ironarray.io
+Author: ironArray Developers Team
+Author-email: author@example.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/ironArray/ironArray-CE/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: caterva
+Requires-Dist: numpy
+
+# ironArray-CE
+
+
