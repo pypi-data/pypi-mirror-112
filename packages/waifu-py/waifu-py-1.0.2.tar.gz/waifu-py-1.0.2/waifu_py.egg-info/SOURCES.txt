@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+waifu/__init__.py
+waifu/aioclient.py
+waifu/client.py
+waifu/exceptions.py
+waifu/utils.py
+waifu_py.egg-info/PKG-INFO
+waifu_py.egg-info/SOURCES.txt
+waifu_py.egg-info/dependency_links.txt
+waifu_py.egg-info/requires.txt
+waifu_py.egg-info/top_level.txt
