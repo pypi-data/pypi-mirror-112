@@ -1,0 +1,31 @@
+session: !Device:kamzik3.devices.deviceSession.DeviceSession
+  config:
+    attributes:
+      ? !!python/tuple
+      - Log directory
+      - Value
+      : ./server_B_log
+      ? !!python/tuple
+      - Resource directory
+      - Value
+      : ./resources
+      !!python/tuple [Allow attribute log, Value ]: False
+    server: !Device:kamzik3.devices.deviceServer.DeviceServer
+      host: 127.0.0.1
+      port: 60003
+    publisher: !Device:kamzik3.devices.devicePublisher.DevicePublisher
+      host: 127.0.0.1
+      port: 50003
+  device_id: Dummy server B
+devices:
+  Detector: !Device:kamzik3.devices.dummy.dummyDetector.DummyDetector
+    device_id: Detector
+  Chameleon: !Device:kamzik3.devices.dummy.dummyFeatureTestDevice.DummyFeatureTestDevice
+    config:
+      attributes:
+        ? !!python/tuple
+        - Test group
+        - Chameleon unit
+        - Value
+        : rpm
+    device_id: Chameleon
