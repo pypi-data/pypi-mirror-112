@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: shelfdb
+Version: 0.6.7
+Summary: Python dictionary database with asyncio server
+Home-page: https://github.com/nitipit/shelfdb
+Author: Nitipit Nontasuwan
+Author-email: nitipit@gmail.com
+License: MIT
+Keywords: dict json database
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: dill (>=0.3.3)
+Requires-Dist: uvloop (==0.14.0) ; platform_system == "Linux"
+
+Python dictionary database with asyncio server
+
