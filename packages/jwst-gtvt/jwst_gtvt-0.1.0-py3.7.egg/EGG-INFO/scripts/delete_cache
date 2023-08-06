@@ -1,0 +1,9 @@
+#!/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7
+"""
+Utility functions for package
+"""
+
+from jwst_gtvt.utils import delete_cache
+
+if __name__ == '__main__':
+    delete_cache()

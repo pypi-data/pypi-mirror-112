@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: jwst-gtvt
+Version: 0.1.0
+Summary: JWST General Target Visibility Tool
+Home-page: https://github.com/mattjhill/jwst_gtvt
+Author: Space Telescope Science Institute
+License: BSD
+Description: UNKNOWN
+Keywords: jwst astro astronomy observation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: <=3.7.0
