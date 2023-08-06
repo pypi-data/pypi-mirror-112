@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+pyanchetto/__init__.py
+pyanchetto/chess.py
+pyanchetto/chess_parser.py
+pyanchetto/driver.py
+pyanchetto/move_tree.py
+pyanchetto/perft.py
+pyanchetto/pgn_interpreter.py
+pyanchetto/pgn_parser.py
+pyanchetto.egg-info/PKG-INFO
+pyanchetto.egg-info/SOURCES.txt
+pyanchetto.egg-info/dependency_links.txt
+pyanchetto.egg-info/requires.txt
+pyanchetto.egg-info/top_level.txt
