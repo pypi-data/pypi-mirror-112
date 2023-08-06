@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: xml-builder
+Version: 0.3.0
+Summary: 
+Author: Rafa Leblic
+Author-email: rafa@notin.net
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
