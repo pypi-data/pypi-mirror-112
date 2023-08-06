@@ -1,0 +1,163 @@
+metadata:
+  title: Ten Day Notice
+  temporary session: true
+---
+attachment:
+  variable name: ten_day
+  filename: ten_day
+  docx template file: ten_day.docx
+---
+attachment:
+  variable name: ten_day1
+  filename: ten_day1
+  docx template file: ten_day1.docx
+---
+attachment:
+  variable name: ten_day2
+  filename: ten_day2
+  docx template file: ten_day2.docx
+---
+question: Thank you, ${ plaintiffname1 }!
+subquestion: |
+  Please download you ten day notice sheet below.
+  
+  YOU MUST FILE THIS NOTICE EITHER IN PERSON OR ONLINE.
+  To do so, please follow the instructuions listed here.
+attachment:
+  - name: ten_day
+    filename: ten_day
+    valid formats:
+      - pdf
+    content: |
+      ${ output_file } 
+buttons:
+  - Exit: exit
+mandatory: True
+---
+mandatory: true
+question: |
+  Please complete the information for each plaintiff in this case.
+subquestion: |
+  A plaintiff is a party who is suing/taking the defendant(s) to court.  
+fields:
+  - How many plaintiffs are there?: plaintiffnumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1   
+  - Plaintiff Name: plaintiffname1
+  - 2nd Plaintiff Name: plaintiffname2
+    js show if: |
+      val('plaintiffnumber') > 1
+  - 3rd Plaintiff Name: plaintiffname3
+    js show if: |
+      val('plaintiffnumber') > 2
+---
+need:
+  plaintiffname1
+question: | 
+  Please provide your contact information:
+fields:
+  - Street Address: plaintiffaddress1
+  - City and State: plaintiffcity1
+    default: "Philadelphia, PA"
+  - ZIP Code: plaintiffzipcode1
+  - Phone Number: plaintiffphone1
+---
+need:
+  plaintiffaddress1
+question: |
+  Please complete the information for each defendant in this case.
+subquestion: |
+  A defendant is party (individual, company, or institution) being sued. Name all of the defendants you are trying to remove from the property to the best of your ability. If you do know the names of some of the defendants, you may enter “All Occupants” in the name section.
+fields:
+  - How many defendants are party to the case?: defendantnumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1    
+  - Defendant Name: defendantname1
+  - 2nd Defendant Name: defendantname2
+    js show if: |
+      val('defendantnumber') > 1 
+  - 3rd Defendant Name: defendantname3
+    js show if: |
+      val('defendantnumber') > 2
+---
+need: 
+  defendantname1
+question: | 
+  Please provide the following information:
+fields:
+  - Do you have a 9-digit serial number?: nines
+    datatype: radio
+    choices: 
+      - Yes
+      - No
+  - Month: month
+    required: false
+    help: Please provide the month in 2 digits, e.g. January = 01, February = 02
+    js show if: |
+      val('nines') == 'No'
+  - The last two digits of the year: year
+    help: E.g., 2021 = 21
+    required: false
+    js show if: |
+      val('nines') == 'No'
+  - Case Number: casenumber
+    help: Do not provide this number if you do not have it.
+    required: false
+    js show if: |
+     val('nines') == 'No'
+  - 9-digit serial number: serial
+    required: false
+    js show if: |
+      val('nines') == 'Yes'
+---
+need:
+  nines
+question: |
+  Which defendant(s) did not reply to your notice of service and what day did you provide the original notice?
+fields:
+  - How many defendants were unresponsive?: unresponsivenumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1    
+  - Unresponsive Defendant: defendantnotice
+  - Original Notice Date: noticeday
+    datatype: date
+    default: |
+      ${ today().minus(days=20) }
+  - 2nd Unresponsive Defendant: defendantnotice1
+    js show if: |
+      val('unresponsivenumber') > '1'
+  - Original Notice Date: noticeday
+    datatype: date
+    default: |
+      ${ today().minus(days=20) }
+    js show if: |
+      val('unresponsivenumber') > '1'
+  - 3rd Unresponsive defendant: defendantnotice2
+    js show if: |
+      val('unresponsivenumber') > '2'
+  - Original Notice Date: noticeday
+    datatype: date
+    default: |
+      ${ today().minus(days=20) }
+    js show if: |
+      val('unresponsivenumber') > '2'
+---      
+code: |
+  if unresponsivenumber == '1':
+    output_file = ten_day
+  if unresponsivenumber > 1:
+    output_file = pdf_concatenate(ten_day, ten_day1)
+  if unresponsivenumber > 2:
+    output_file = pdf_concatenate(ten_day, ten_day1, ten_day2)

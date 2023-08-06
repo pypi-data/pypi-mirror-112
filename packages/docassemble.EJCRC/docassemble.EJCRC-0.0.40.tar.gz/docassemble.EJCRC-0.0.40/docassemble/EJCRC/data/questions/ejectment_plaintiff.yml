@@ -1,0 +1,99 @@
+---
+metadata:
+  title: Ejectment Action
+  temporary session: true
+---
+event: call_number
+question: |
+  Please call (215) 686-7027 for assistance.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: docket
+question: |
+  Please check the docket.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: sherriff
+question: |
+  Please call the sherriff's office
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+mandatory: true
+question: | 
+  Please select the document you need to fill out:
+subquestion: |
+  Click on the green text for definitions of the different types of forms.
+  
+  1. {Civil Complaint for an Ejectment}
+    
+    * [Click here to fill out Civil Complaint]
+  
+  2. {Return of Service Affidavit}
+    
+    * [Click here to fill out Return of Service Affidavit]
+  
+  3. {Motion for Alternative Service}
+    
+    * [Click here to fill out Motion for Alternative Service]
+  
+  4. {Notice of Praecipe to Enter Judgment by Default (more info)}
+    
+    * [Click here to fill out Notice of Praecipe to Enter Judgment by Default]
+  
+  5. {Praecipe to Enter Default Judgment for Possession}
+    
+    * [Click here to fill out Praecipe to Enter Default Judgment for Possession]
+  
+  6. {Petition to Open Default Judgment}
+  
+  * [Click here to fill out a Petition to Open Default Judgment]
+  
+  7. {Motion for Writ of Possession}
+    
+    * [Click here to fill out Motion for Writ of Possession]
+    
+  
+    [Click here to fill out Civil Complaint]: ${ interview_url(i='docassemble.EJCRC:data/questions/civil_complaint.yml') }
+    [Click here to fill out Return of Service Affidavit]: ${ interview_url(i='docassemble.EJCRC:data/questions/return_service.yml') }
+    [Click here to fill out Motion for Alternative Service]: ${ interview_url(i='docassemble.EJCRC:data/questions/alternate_service.yml') }
+    [Click here to fill out Ten-Day Notice of Service]: ${ interview_url(i='docassemble.EJCRC:data/questions/ten_day.yml') }
+    [Click here to fill out Motion for Default Judgment]: ${ interview_url(i='docassemble.EJCRC:data/questions/default_judgment.yml') }
+    [Click here to fill out Motion for Writ of Possession]: ${ interview_url(i='docassemble.EJCRC:data/questions/writ_possession.yml') }
+    
+terms:
+  Civil Complaint: |
+    The document to fill out 
+    to start the case.
+  Return of Service Affidavit: |
+    The document to fill out 
+    after serving the complaint.
+  Motion for Alternative Service: |
+    The document to fill out when 
+    you have been unable to “serve” 
+    the defendant the complaint.
+  Ten-Day Notice of Service: |
+    The document to fill out if the
+    defendant has not replied to
+    your civil case after 20 days. This
+    document notifies the defendant
+    they will lose the case by default
+    in ten days.
+    (Note: Twenty days ago was ${ today().minus(days=20) }
+  Motion for Default Judgment: |
+    The document to ask court to affirm
+    you have won your case after you
+    have filed an unanswered civil complaint.
+  Motion for Writ of Possession: |
+    The document to confirm you
+    rightfully own the property.
+
+
+
+
+

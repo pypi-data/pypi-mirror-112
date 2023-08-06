@@ -1,0 +1,226 @@
+metadata:
+  title: Motion for Alternative Service
+  temporary session: true
+---
+question: Thank you, ${ plaintiffname1 }!
+subquestion: |
+  Please download your Motion for Alternative Service sheet below.
+  
+  YOU MUST FILE THIS SHEET EITHER IN PERSON OR ONLINE.
+  To do so, please follow the instructuions listed here.
+attachment:
+  - name: Motion_Alt_Serve
+    filename: Motion_Alt_Serve
+    docx template file: alternate_service.docx
+    valid formats:
+      - pdf
+buttons:
+  - Exit: exit
+mandatory: True
+---
+mandatory: true
+question: |
+  Please complete the information for each plaintiff in this case.
+subquestion: |
+  A plaintiff is a party who is suing/taking the defendant(s) to court.  
+fields:
+  - How many plaintiffs are there?: plaintiffnumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1   
+  - Plaintiff Name: plaintiffname1
+  - 2nd Plaintiff Name: plaintiffname2
+    js show if: |
+      val('plaintiffnumber') > 1
+  - 3rd Plaintiff Name: plaintiffname3
+    js show if: |
+      val('plaintiffnumber') > 2
+---
+need:
+  plaintiffname1
+question: |
+  Please complete the information for each defendant in this case.
+subquestion: |
+  A defendant is party (individual, company, or institution) being sued. Name all of the defendants you are trying to remove from the property to the best of your ability. If you do know the names of some of the defendants, you may enter “All Occupants” in the name section.
+fields:
+  - How many defendants are party to the case?: defendantnumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1    
+  - Defendant Name: defendantname1
+  - 2nd Defendant Name: defendantname2
+    js show if: |
+      val('defendantnumber') > 1 
+  - 3rd Defendant Name: defendantname3
+    js show if: |
+      val('defendantnumber') > 2
+---
+need:
+  nines
+question: |
+  Provide information on how many defendants you could not serve. 
+fields: 
+  - How many defendants were you unable to serve?: servenumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1  
+  - Defendant Name: defendantserve1
+  - Defendant Street Address: defendantstreetaddress1
+  - Defendant City and State: defendantcity1
+    help: This should be Philadelphia, PA
+    default: Philadelphia, PA
+  - Defendant ZIP Code: defendantzipcode1
+  - Defendant Phone Number: defendantphone1
+  - 2nd Defendant Name: defendantserve2
+    js show if: |
+      val('servenumber') > 1 
+  - 2nd Defendant Street Address: defendantstreetaddress2
+    js show if: |
+      val('servenumber') > 1  
+  - 2nd Defendant City and State: defendantcity2
+    js show if: |
+      val('servenumber') > 1
+  - 2nd Defendant ZIP Code: defendantzipcode2
+    js show if: |
+      val('servenumber') > 1
+  - 2nd Defendant Phone Number: defendantphone2
+    js show if: |
+      val('servenumber') > 1  
+  - 3rd Defendant Name: defendantserve3
+    js show if: |
+      val('servenumber') > 2
+  - 3rd Defendant Street Address: defendantstreetaddress3
+    js show if: |
+      val('servenumber') > 2
+  - 3rd Defendant City and State: defendantcity3
+    js show if: |
+      val('servenumber') > 2
+  - 3rd Defendant ZIP Code: defendantzipcode3
+    js show if: |
+      val('servenumber') > 2
+  - 3rd Defendant Phone Number: defendantphone3
+    js show if: |
+      val('servenumber') > 2
+---
+need: 
+  defendantname1
+question: | 
+  Please provide the following information:
+fields:
+  - Do you have a 9-digit serial number?: nines
+    datatype: radio
+    choices: 
+      - Yes
+      - No
+      - I do not know
+  - Month: month
+    required: false
+    help: Please provide the month in 2 digits, e.g. January = 01, February = 02
+    js show if: |
+      val('nines') == 'No'
+  - The last two digits of the year: year
+    help: E.g., 2021 = 21
+    required: false
+    js show if: |
+      val('nines') == 'No'
+  - Case Number: casenumber
+    help: Do not provide this number if you do not have it.
+    required: false
+    js show if: |
+     val('nines') == 'No'
+  - 9-digit serial number: serial
+    required: false
+    js show if: |
+      val('nines') == 'Yes'
+---
+need:
+  defendantserve1
+question: |
+  What date did you file your complaint with the court?
+fields:
+  - File date: complaintdate
+    datatype: date
+---
+need:
+  complaintdate
+question: |
+  What is today's date?
+fields:
+  - Date today: today1
+    datatype: date
+    default: |
+      ${ today() }
+---
+need:
+  today1
+question: |
+  Review the following text and sign below:
+subquestion: |
+  ### MOTION COVER SHEET
+  By filing this document and signing below, the moving party certifies that this motion, petition, answer or response along with all documents filed, will be served upon all counsel and unrepresented parties as required by rules of Court (see PA. R.C.P. 206.6, Note to 208.2(a), and 440). Furthermore, moving party verifies that the answers made herein are true and correct and understands that sanctions may be imposed for inaccurate or incomplete answers.
+signature: signature1
+under: |
+  ${ plaintiffname1 }
+---
+need:
+  signature1
+question: |
+  Briefly answer the following questions
+fields:
+  - What is your name and address?: paragraph1
+    datatype: area
+  - What is your relationship with the defendant(s)?: paragraph2
+    datatype: area
+  - Why are you suing the defendant(s)?: paragraph3
+    datatype: area
+  - What solution do you want the court to provide?: paragraph4
+    datatype: area
+---
+need:
+  paragraph4
+question: |
+  Please provide additional information about your case and why you think the court shouldgrant you relief.
+fields:
+  - Provide more detail: paragraph5
+    datatype: area
+---
+need:
+  paragraph5
+question: |
+  Please provide the date you attempted to serve the complaint.
+fields:
+  - How many times have you attempted to serve the complaint?: servetimes
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1  
+  - Service date: servedate
+    datatype: date
+  - 2nd Service date: servedate2
+    datatype: date
+  - 3rd Service date: servedate3
+    datatype: date
+---
+need:
+  servedate
+question: |
+  Review the following text and sign below:
+subquestion: |
+  ### VERIFICATION
+  I, ${ plaintiffname1 }, Plaintiff, verify that the facts set forth in the foregoing are true and correct to the best of my information, knowledge and belief.
+
+  I understand that the statements contained herein are subject to the Penalties of 18 Pa.C.S.A., Section 4904 relating to unsworn falsification to authorities.
+signature: signature2
+under: |
+  ${ plaintiffname1 }

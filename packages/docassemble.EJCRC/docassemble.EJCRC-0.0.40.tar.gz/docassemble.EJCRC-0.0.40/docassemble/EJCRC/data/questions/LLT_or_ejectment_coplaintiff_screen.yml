@@ -1,0 +1,56 @@
+metadata:
+  title: Office of Judicial Records Document Assembly Tool
+  temporary session: true  
+---
+event: call_number
+question: |
+  Please call (215) 686-7027 for assistance.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: consult_atty
+question: |
+  This tool should not be used if you are represented by an attorney. Please consult your lawyer.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: find_atty
+question: |
+  Contact the [Philadelphia Bar Association Lawyer Referral Program](https://lris.philadelphiabar.org) at (215) 238-6333
+buttons:
+  - Exit: exit
+    url: https://docassemble.org    
+---
+code: |
+  lawyer
+  if lawyer == True:
+    consult_atty
+  if lawyer == False:
+    represent
+    if represent == "No, I am looking for an attorney to represent me":
+      find_atty
+    if represent == "Yes, I plan to represent myself":
+      owner
+      if owner == None:
+        call_number
+      if owner == False:
+        call_number    
+mandatory: True
+---
+field: lawyer
+question: |
+  Are you currently represented by an attorney?
+yesno: lawyer
+mandatory: True
+---
+need:
+  lawyer
+question: |
+   Are you planning on representing yourself in court?
+field: represent
+buttons:
+  - Yes, I plan to represent myself
+  - No, I am looking for an attorney to represent me  
+mandatory: True

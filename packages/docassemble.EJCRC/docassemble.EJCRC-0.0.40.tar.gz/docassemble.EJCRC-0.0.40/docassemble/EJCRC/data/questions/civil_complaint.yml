@@ -1,0 +1,288 @@
+metadata:
+  title: Civil Complaint
+  temporary session: true
+---
+attachment:
+  variable name: Civil_Complaint_for_Ejectment
+  filename: Civil_Complaint_Ejectment
+  docx template file: complaint.docx
+---
+attachment:
+  variable name: ExhibitA
+  filename: ExhibitA
+  docx template file: ExhibitA.docx
+---
+attachment:
+  variable name: ExhibitB
+  filename: ExhibitB
+  docx template file: ExhibitB.docx
+---
+question: Thank you, ${ plaintiffname1 }!
+subquestion: |
+  Please download your Civil Complaint below.
+
+  YOU MUST FILE THIS COMPLAINT TO COMMENCE YOUR LEGAL ACTION. To do so, please follow the instructions listed here.
+
+attachment:
+  - name: Compiled Civil Complaint
+    filename: Compiled_Civil_Complaint
+    valid formats:
+      - pdf
+    content: |
+      ${ output_file } 
+buttons:
+  - Exit: exit
+mandatory: True
+---
+mandatory: true
+question: |
+  Civil Complaint
+subquestion: |
+  A complaint is a legal document that can be used to start a case in court. 
+
+  Pennsylvania Rules of Civil Procedure Rule 1007 states: 
+    
+    Commencement of Action.
+    
+    * An action may be commenced by filing with the prothonotary: 
+      
+      (1) a praecipe for a writ of summons, or 
+      
+      (2) a complaint.
+continue button field: user_saw_intro
+---
+mandatory: true
+need:
+  user_saw_intro
+question: |
+  This tool will only guide me through the process of filling out certain legal documents. I understand that I will still need to file these documents with the court filing office.
+subquestion: |
+  [Click here](https://www.courts.phila.gov/pdf/manuals/civil-trial/FJD_Civil_E-Filing_User_Manual.pdf) for instructions on how to file your legal documents. We will also provide this instruction after you have filled out your document(s).
+fields:
+  - I understand: understand
+    datatype: yesnowide
+validation code: |
+  if not understand:
+    validation_error("You cannot continue until you indicate that you understand.")
+---
+need:
+  understand
+question: |
+  Please attach to deed to the property and any other supporting documents.
+subquestion: |
+  A deed is required to show that ownership of a property. Please [follow these directions](https://www.phila.gov/services/property-lots-housing/get-a-copy-of-a-deed-or-other-recorded-document/) if you need to obtain a deed to your property.
+fields:
+  - Do you have a deed to the property?: deed
+    datatype: radio
+    choices: 
+      - Yes
+      - No
+  - Is your name on the deed?: admin
+    note: If your name is not on the deed, letters of administration are needed to show that you have the legal right as the administrator of the estate of a person listed on the deed.
+    datatype: radio
+    choices: 
+      - Yes
+      - No
+    js show if: |
+      val('deed') == 'Yes'
+  - Upload deed here: deedupload
+    datatype: file
+    js show if: |
+      val('deed') == 'Yes'
+  - Upload letters of administration here: adminupload
+    datatype: file
+    js show if: |
+      val('admin') == 'No'
+validation code: |
+  if deed == 'No':
+    validation_error("You cannot continue until you upload your deed.")
+---
+code: |
+  if deed == 'Yes':
+    output_file = pdf_concatenate(Civil_Complaint_for_Ejectment, ExhibitA, deedupload)
+  if admin == 'Yes':
+    output_file = pdf_concatenate(Civil_Complaint_for_Ejectment, ExhibitA, deedupload)
+  if admin == 'No':
+    output_file = pdf_concatenate(Civil_Complaint_for_Ejectment, ExhibitA, deedupload, ExhibitB, adminupload)
+---
+need:
+  deedupload
+question: |
+  Please complete the information for each plaintiff in this case.
+subquestion: |
+  A plaintiff is a party who is suing/taking the defendant(s) to court.
+  
+  Only fields with a red asterisk are required.
+fields:
+  - How many plaintiffs are there?: plaintiffnumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1   
+  - Plaintiff Full Name: plaintiffname1
+  - Plaintiff Street Address: plaintiffstreetaddress1
+  - Plaintiff City and State: plaintiffcity1
+    help: This should be Philadelphia, PA
+    default: Philadelphia, PA
+  - Plaintiff ZIP Code: plaintiffzipcode1
+  - Email: email
+    required: False
+  - Fax Number: faxnumber
+    required: False
+  - Phone Number: phonenumber
+  - 2nd Plaintiff Full Name: plaintiffname2
+    js show if: |
+      val('plaintiffnumber') > 1
+  - 2nd Plaintiff Street Address: plaintiffstreetaddress2
+    js show if: |
+      val('plaintiffnumber') > 1
+  - 2nd Plaintiff City and State: plaintiffcity2
+    js show if: |
+      val('plaintiffnumber') > 1
+  - 2nd Plaintiff ZIP Code: plaintiffzipcode2
+    js show if: |
+      val('plaintiffnumber') > 1
+  - 3rd Plaintiff Full Name: plaintiffname3
+    js show if: |
+      val('plaintiffnumber') > 2
+  - 3rd Plaintiff Street Address: plaintiffstreetaddress3
+    js show if: |
+      val('plaintiffnumber') > 2
+  - 3rd Plaintiff City and State: plaintiffcity3
+    js show if: |
+      val('plaintiffnumber') > 2
+  - 3rd Plaintiff ZIP Code: plaintiffzipcode3
+    js show if: |
+      val('plaintiffnumber') > 2
+---
+need:
+  plaintiffname1
+question: |
+  Please complete the information for each defendant in this case.
+subquestion: |
+  A defendant is party (individual, company, or institution) being sued. Name all of the defendants you are trying to remove from the property to the best of your ability. **If you do know the names of some of the defendants, you may enter “All Occupants” in the name section.**
+  
+  Only fields with a red asterisk are required.
+fields:
+  - How many defendants are there?: defendantnumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1   
+  - Defendant Full Name: defendantname1
+  - Defendant Street Address: defendantstreetaddress1
+  - Defendant City and State: defendantcity1
+    help: This should be Philadelphia, PA
+    default: Philadelphia, PA
+  - Defendant ZIP Code: defendantzipcode1
+  - 2nd Defendant Full Name: defendantname2
+    js show if: |
+      val('defendantnumber') > 1
+  - 2nd Defendant Street Address: defendantstreetaddress2
+    js show if: |
+      val('defendantnumber') > 1  
+  - 2nd Defendant City and State: defendantcity2
+    js show if: |
+      val('defendantnumber') > 1
+  - 2nd Defendant ZIP Code: defendantzipcode2
+    js show if: |
+      val('defendantnumber') > 1
+  - 3rd Defendant Full Name: defendantname3
+    js show if: |
+      val('defendantnumber') > 2
+  - 3rd Defendant Street Address: defendantstreetaddress3
+    js show if: |
+      val('defendantnumber') > 2
+  - 3rd Defendant City and State: defendantcity3
+    js show if: |
+      val('defendantnumber') > 2
+  - 3rd Defendant ZIP Code: defendantzipcode3
+    js show if: |
+      val('defendantnumber') > 2
+---
+need:
+  defendantname1
+question: | 
+  Please provide the following information:
+fields:
+  - Today's date: date
+    datatype: date
+    default: |
+      ${ today() }
+  - Do you have a 9-digit serial number?: nines
+    datatype: radio
+    choices: 
+      - Yes
+      - No
+      - I do not know
+  - Month: month
+    required: false
+    help: Please provide the month in 2 digits, e.g. January = 01, February = 02
+    js show if: |
+      val('nines') == 'No'
+  - The last two digits of the year: year
+    help: E.g., 2021 = 21
+    required: false
+    js show if: |
+      val('nines') == 'No'
+  - Case Number: casenumber
+    help: Do not provide this number if you do not have it.
+    required: false
+    js show if: |
+     val('nines') == 'No'
+  - 9-digit serial number: serial
+    required: false
+    js show if: |
+      val('nines') == 'Yes'
+---
+need:
+  date
+question: |
+  Review the following text and sign below:
+subquestion: |
+  ### COMPLAINT IN EJECTMENT
+  1.  Plaintiff(s) is (are) ${ plaintiffname1 }
+  % if plaintiffnumber == 2:
+  , ${ plaintiffname2 } 
+  % elif plaintiffnumber == 3:
+  , ${ plaintiffname2 }, ${ plaintiffname3 }
+  % endif
+  with an  address of ${ plaintiffstreetaddress1 }, ${ plaintiffcity1 }, ${ plaintiffzipcode1 }.
+  2.  Defendants(s) is (are) ${ defendantname1 }
+  % if defendantnumber == 2:
+  , ${ defendantname2 } 
+  % elif defendantnumber == 3:
+  , ${ defendantname2 }, ${ defendantname3 }
+  % endif
+  who occupy the Property located at ${ defendantstreetaddress1 }, ${ defendantcity1 }, ${ defendantzipcode1 }.
+  3.	Plaintiff(s) is (are) the legal owner(s) of the property by virtue of the attached Deed. A complete copy of the Deed attached is the last recorded Deed. [Exhibit A – Deed]
+  4.	Defendant(s) do not have a lease and Plaintiff(s) and Defendant(s) are not Landlord(s) and Tenant(s).
+  5.	Plaintiff(s) is (are) entitled to immediate possession of the Property.
+  6.	Plaintiff(s) has (have) demanded possession of the Property from the Defendant(s) and Defendant(s) has (have) refused to deliver up possession to Plaintiff(s).
+  
+  WHEREFORE, Plaintiff(s) requests Judgment for possession of the Property.
+
+signature: signature1
+under: |
+  ${ plaintiffname1 }
+---
+need:
+  signature1
+question: |
+  Review the following text and sign below:
+subquestion: |
+  ### VERIFICATION
+  Plaintiff(s) ${ plaintiffname1 }
+  % if plaintiffnumber == 2:
+  , ${ plaintiffname2 } 
+  % elif plaintiffnumber == 3:
+  , ${ plaintiffname2 }, ${ plaintiffname3 }
+  % endif
+  hereby verify that the statements set forth in the foregoing Complaint are true and correct to the best of my knowledge, information, and belief. I understand that these statements are made subject to the penalties of 18 Pa.C.S. §4904, relating to unsworn falsification to authorities.
+signature: signature2
+under: |
+  ${ plaintiffname1 }
