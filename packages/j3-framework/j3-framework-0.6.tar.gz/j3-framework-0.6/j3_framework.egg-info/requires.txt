@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+jinja2
+colorama
+tenacity
+aioredis
+httpx
+aiofiles
+requests
