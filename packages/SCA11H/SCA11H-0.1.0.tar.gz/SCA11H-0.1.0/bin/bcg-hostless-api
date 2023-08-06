@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+import inspect
+import pkgutil
+import argparse
+import sys
+
+from SCA11H.commands.base.GetCommand import GetCommand
+from SCA11H.commands.base.PostCommand import PostCommand
+
+import SCA11H.commands.system
+import SCA11H.commands.bcg
+
+
+# NOTE:
+# Default AP password: 24681012
+# AP host = '192.168.253.1'
+
+
+def get_classes(package):
+    imported = {}
+    prefix = package.__name__ + "."
+    for importer, modname, ispkg in pkgutil.iter_modules(package.__path__, prefix):
+        if ispkg:
+            continue
+
+        imported[modname] = __import__(modname, fromlist='main')
+
+    return imported
+
+
+def collect_commands_from_modules(modules):
+    gets = set()
+    posts = set()
+    for key in modules:
+        module = modules[key]
+        for name, obj in inspect.getmembers(module):
+            if not inspect.isclass(obj):
+                continue
+
+            if name == 'GetCommand' or name == 'PostCommand':
+                continue
+
+            if issubclass(obj, GetCommand):
+                gets.add(obj)
+
+            if issubclass(obj, PostCommand):
+                posts.add(obj)
+
+    return [x for x in gets], [x for x in posts]
+
+
+def collect_commands():
+    # noinspection PyTypeChecker
+    system_modules = get_classes(package=SCA11H.commands.system)
+
+    # noinspection PyTypeChecker
+    bcg_modules = get_classes(package=SCA11H.commands.bcg)
+
+    sys_get, sys_post = collect_commands_from_modules(system_modules)
+    bcg_get, bcg_post = collect_commands_from_modules(bcg_modules)
+
+    return sys_get + bcg_get, sys_post + bcg_post
+
+
+def main():
+    gets, posts = collect_commands()
+
+    parser = argparse.ArgumentParser('SCA11H host-less API command line helper')
+    parser.add_argument('--node', required=True, help='SCA11H node address (IP/hostname)')
+    parser.add_argument('--username', default='admin', help='Node Username')
+    parser.add_argument('--password', default='admin', help='Node Password')
+
+    subparsers = parser.add_subparsers(title='command', dest='command', help='API Command')
+
+    parsers = {}
+
+    # noinspection PyTypeChecker
+    all_commands = gets + posts
+
+    for command in all_commands:
+        name = command.get_parser_name()
+        hlp = command.get_help()
+        if name is None or help is None:
+            continue
+
+        if name in parsers:
+            raise Exception('Duplicate command name: "%s", already used by "%s"' % (name, command))
+
+        parsers[name] = command
+        command_parser = subparsers.add_parser(name, help=hlp)
+        command.add_arguments(command_parser)
+
+    args = parser.parse_args()
+    if args.command is None:
+        parser.print_usage(sys.stderr)
+        print('Missing required argument: command', file=sys.stderr)
+        sys.exit(-1)
+
+    command = parsers[args.command]
+    try:
+        extras = command.parse_arguments(args)
+        print(command(username=args.username, password=args.password, host=args.node, **extras).run())
+    except Exception as e:
+        print(e)
+        sys.exit(-1)
+
+
+if __name__ == '__main__':
+    main()
