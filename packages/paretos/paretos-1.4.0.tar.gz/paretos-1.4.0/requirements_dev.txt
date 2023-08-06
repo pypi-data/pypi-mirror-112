@@ -1,0 +1,7 @@
+jupyter
+black
+isort
+coverage
+python-dotenv
+flake8
+python-dateutil
