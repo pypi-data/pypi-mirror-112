@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: dessiccate
+Version: 0.0.5
+Summary: A library to keep code DRY
+Home-page: https://github.com/mgfrantz/dessiccate/tree/master/
+Author: Mike Frantz
+Author-email: michaelgfrantz@gmail.com
+License: Apache Software License 2.0
+Keywords: DRY utilities
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pip
+Requires-Dist: packaging
+Requires-Dist: attrdict (==2.0.1)
+Requires-Dist: fastcore (==1.3.20)
+Requires-Dist: matplotlib (>=3.3)
+Provides-Extra: dev
+
+# `dessicate`: A library to stay DRY.
+> Dessiccate (*verb*): remove the moisture from (something); cause to become completely dry.
+
+
+## Install
+
+`pip install dessiccate`
+
+
