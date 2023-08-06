@@ -1,0 +1,16 @@
+simpleppt/SimplePPT.py,sha256=ix30HLo_YAcS08yzNRnqCNkFpY039MoHIrb-3ssxYEc,5357
+simpleppt/__init__.py,sha256=G7aNE8sTgxpCSSRxyYxB5Ix9Pms1hjjM4qsN5ClU-II,271
+simpleppt/load_data.py,sha256=VlTt0b8eE02d9sWu0aeWhvyV-laT5CeFnUA9722mNDk,302
+simpleppt/logging.py,sha256=lBloXbA3sIsypM28Vu6R1Zc2DC9O-SuRtAYwAFFP8Q4,4312
+simpleppt/ppt.py,sha256=xIT5E4dgXQ9icipeeL71s5jp1f89aInontFTCn0jkR8,8718
+simpleppt/project_ppt.py,sha256=oQb7j7deOtawfFUk7z8WEner8chq9kAaCJrO2qBREVQ,1642
+simpleppt/settings.py,sha256=HIlsl_DJ7cNmlp42PsB1RhYCr2SLRmGbM1sjWin59sg,637
+simpleppt/utils.py,sha256=sIMUZVlxaVtOAbRJfqBefP7aDuqGdBsDJc6bSVV10cE,2528
+simpleppt/data/diffusion.csv,sha256=vGE32_CU2U8ksAU97Gad3jhTuL5vf5sh3tseKd9sJWk,67921
+simpleppt/data/umap.csv,sha256=ccVzsfN2nEvfZRp1iWOZ0grAoMldxcMbkN9LOKqyKeo,68529
+simpleppt/tests/test_all.py,sha256=ucEH1_yGlqsCGvbiOUtIZsj5GRp-4f3aBwxSXmsZucY,621
+simpleppt-1.1.1.dist-info/LICENSE,sha256=HtIu6vTbrRuMz0BvAEikPB7qIYB8XeupNh8S05cUq3g,1518
+simpleppt-1.1.1.dist-info/METADATA,sha256=Gj6FzjlWTDURNQ3sFUX7NabyL9sbXoNzf82xS_Nsr_o,2536
+simpleppt-1.1.1.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+simpleppt-1.1.1.dist-info/top_level.txt,sha256=Hjq4JpyKEHadkYslwRuztDDONmYTI6q2oxyGOcMIvBY,10
+simpleppt-1.1.1.dist-info/RECORD,,
