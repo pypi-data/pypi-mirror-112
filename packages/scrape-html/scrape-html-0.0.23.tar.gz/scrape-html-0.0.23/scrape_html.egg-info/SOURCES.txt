@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+scrape_html.egg-info/PKG-INFO
+scrape_html.egg-info/SOURCES.txt
+scrape_html.egg-info/dependency_links.txt
+scrape_html.egg-info/requires.txt
+scrape_html.egg-info/top_level.txt
+scraping/__init__.py
+scraping/scraper.py
