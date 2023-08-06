@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+cnsyn/__init__.py
+cnsyn/__main__.py
+cnsyn/simwords.py
+cnsyn/utils_index.py
+cnsyn.egg-info/PKG-INFO
+cnsyn.egg-info/SOURCES.txt
+cnsyn.egg-info/dependency_links.txt
+cnsyn.egg-info/top_level.txt
+cnsyn/chinese_dictionary/sim_words.txt
+cnsyn/query/MAIN_WRITELOCK
+cnsyn/query/MAIN_ue7k3fkhantq7m50.seg
+cnsyn/query/_MAIN_1.toc
+cnsyn/query/words_tree_mini.m

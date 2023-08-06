@@ -1,0 +1,1 @@
+"""Cnsyn command line interface."""
