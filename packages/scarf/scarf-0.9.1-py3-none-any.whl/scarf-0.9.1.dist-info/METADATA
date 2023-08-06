@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: scarf
+Version: 0.9.1
+Summary: Scarf
+Home-page: https://github.com/parashardhapola/scarf
+Author: Parashar Dhapola
+Author-email: parashar.dhapola@gmail.com
+License: BSD 3-Clause
+Keywords: store
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: pybind11
+Requires-Dist: numpy
+Requires-Dist: loguru
+Requires-Dist: cmocean
+Requires-Dist: gensim
+Requires-Dist: sparse
+Requires-Dist: networkx
+Requires-Dist: hnswlib
+Requires-Dist: numba
+Requires-Dist: dask (<=2021.03.1)
+Requires-Dist: pandas
+Requires-Dist: zarr
+Requires-Dist: h5py
+Requires-Dist: numcodecs
+Requires-Dist: umap-learn
+Requires-Dist: scikit-learn
+Requires-Dist: scikit-network
+Requires-Dist: scipy
+Requires-Dist: statsmodels
+Requires-Dist: seaborn
+Requires-Dist: tqdm
+Requires-Dist: matplotlib
+Requires-Dist: EoN
+Requires-Dist: threadpoolctl
+Requires-Dist: setuptools
+Requires-Dist: holoviews
+Requires-Dist: datashader
+Requires-Dist: leidenalg
+Requires-Dist: packaging
+Requires-Dist: importlib-metadata
+Requires-Dist: requests
+Requires-Dist: jinja2 (~=2.11)
+Requires-Dist: kneed
+Requires-Dist: pytest
+Requires-Dist: dask[array]
+Requires-Dist: dask[dataframe]
+
+|PyPI| |Docs| |Tests|
+
+`Installation`_ | `Documentation`_ | `Tutorials`_ | `Preprint`_
+
+|IMG1|
+
+
+.. |PyPI| image:: https://img.shields.io/pypi/v/scarf.svg
+         :target: https://pypi.org/project/scarf
+.. |Docs| image:: https://readthedocs.org/projects/scarf/badge/?version=latest
+         :target: https://scarf.readthedocs.io
+.. |Tests| image:: https://circleci.com/gh/parashardhapola/scarf/tree/master.svg?style=svg
+          :target: https://circleci.com/gh/parashardhapola/scarf/tree/master
+
+.. |IMG1| image:: docs/source/logo_for_readme.png
+         :width: 100%
+
+Analyze large-scale (aka atlas-scale) single-cell genomics datasets with very low memory requirement.
+
+.. _Documentation: http://scarf.rtfd.io
+.. _Tutorials: https://scarf.readthedocs.io/en/stable/vignettes/basic_tutorial_scRNAseq.html
+.. _Preprint: https://www.biorxiv.org/content/10.1101/2021.05.02.441899v1
+.. _Installation: https://scarf.readthedocs.io/en/stable/install.html
+
+
