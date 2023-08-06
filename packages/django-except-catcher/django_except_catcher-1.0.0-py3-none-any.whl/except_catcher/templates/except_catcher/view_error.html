@@ -1,0 +1,21 @@
+{% extends "except_catcher/base.html" %}
+{% load ecatcher %}
+
+
+{% block content %}
+    {% include 'except_catcher/view_error_header.html' %}
+    <p>{{ report.date_time }} {{ report|is_solved }}</p>
+    <p>{{ report.subject|linebreaks }}</p>
+    {% with report.get_similar as list_reports %}
+        {% if list_reports %}
+            <p>Similar exceptions:</p>
+            {% include 'except_catcher/report_list.html' %}
+        {% endif %}
+    {% endwith %}
+    <hr>
+    <div class="container-box">
+    {% autoescape off %}
+        {{ report.html_message }}
+    {% endautoescape %}
+    </div>
+{% endblock content %}
