@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+versioneer.py
+msgspec/__init__.py
+msgspec/_version.py
+msgspec/core.c
+msgspec/core.pyi
+msgspec/py.typed
+msgspec.egg-info/PKG-INFO
+msgspec.egg-info/SOURCES.txt
+msgspec.egg-info/dependency_links.txt
+msgspec.egg-info/not-zip-safe
+msgspec.egg-info/top_level.txt
