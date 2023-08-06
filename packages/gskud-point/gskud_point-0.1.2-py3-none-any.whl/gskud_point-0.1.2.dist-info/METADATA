@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: gskud-point
+Version: 0.1.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: PunchyArchy
+Author-email: ksmdrmvscthny@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+
+skud_point - модуль, содержащий SkudPoint - суперкласс для всех точек доступа контроллера СКУД.
+
