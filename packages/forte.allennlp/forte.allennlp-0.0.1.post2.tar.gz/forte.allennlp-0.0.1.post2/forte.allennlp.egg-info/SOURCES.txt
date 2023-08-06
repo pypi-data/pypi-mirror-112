@@ -1,0 +1,10 @@
+README.md
+setup.py
+forte.allennlp.egg-info/PKG-INFO
+forte.allennlp.egg-info/SOURCES.txt
+forte.allennlp.egg-info/dependency_links.txt
+forte.allennlp.egg-info/requires.txt
+forte.allennlp.egg-info/top_level.txt
+forte/allennlp/__init__.py
+forte/allennlp/allennlp_processors.py
+forte/allennlp/utils_processor.py
