@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+qtterm/__init__.py
+qtterm/backend.py
+qtterm/frontend.py
+qtterm/procinfo.py
+qtterm.egg-info/PKG-INFO
+qtterm.egg-info/SOURCES.txt
+qtterm.egg-info/dependency_links.txt
+qtterm.egg-info/top_level.txt
