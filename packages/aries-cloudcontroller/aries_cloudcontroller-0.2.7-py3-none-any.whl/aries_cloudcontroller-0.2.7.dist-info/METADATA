@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: aries-cloudcontroller
+Version: 0.2.7
+Summary: A simple python package for controlling an aries agent through the admin-api interface
+Home-page: https://github.com/didx-xyz/aries-cloudcontroller-python/tree/main/aries_cloudcontroller
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.3
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp (>=3.7.4)
+Requires-Dist: appdirs (==1.4.4)
+Requires-Dist: async-timeout (==3.0.1)
+Requires-Dist: asyncio (==3.4.3)
+Requires-Dist: attrs (==21.2.0)
+Requires-Dist: black (==21.5b1)
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: click (==8.0.1)
+Requires-Dist: idna (==3.1)
+Requires-Dist: iniconfig (==1.1.1)
+Requires-Dist: multidict (==4.7.6)
+Requires-Dist: mypy-extensions (==0.4.3)
+Requires-Dist: packaging (==20.9)
+Requires-Dist: pathspec (==0.8.1)
+Requires-Dist: pluggy (==1.0.0.dev0)
+Requires-Dist: py (==1.10.0)
+Requires-Dist: pyparsing (==3.0.0b2)
+Requires-Dist: Pypubsub (==4.0.3)
+Requires-Dist: pytest (==6.2.4)
+Requires-Dist: pytest-asyncio (==0.15.1)
+Requires-Dist: regex (==2021.4.4)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: yarl (==1.6.3)
+
+[![Upload Python Package](https://github.com/didx-xyz/aries-cloudcontroller-python/actions/workflows/python-publish.yml/badge.svg)](https://github.com/didx-xyz/aries-cloudcontroller-python/actions/workflows/python-publish.yml)
+
+# Aries Cloud Controller - Python
+
+A simple pip installable package for controlling aries agents through admin API calls.
+
+# Install
+
+https://pypi.org/project/aries-cloudcontroller/
+
+## Tutorial
+
+Find out how to use this package by taking our [jupyter notebook tutorial series](https://github.com/OpenMined/PyDentity/tree/master/tutorials).
+
+
+
+
