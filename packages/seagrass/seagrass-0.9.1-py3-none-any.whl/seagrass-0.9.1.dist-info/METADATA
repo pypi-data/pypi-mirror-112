@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: seagrass
+Version: 0.9.1
+Summary: Auditing and profiling multi-tool
+Home-page: https://github.com/kernelmethod/Seagrass/
+Author: kernelmethod
+Author-email: 17100608+kernelmethod@users.noreply.github.com
+License: BSD
+Project-URL: Source Code, https://github.com/kernelmethod/Seagrass
+Project-URL: Bug Tracker, https://github.com/kernelmethod/Seagrass/issues
+Project-URL: Documentation, https://seagrass.readthedocs.io/en/latest/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typing-extensions (>=3.10.0.0) ; python_version < "3.8.0"
+
+# Seagrass
+
+[![PyPI package version](https://img.shields.io/pypi/v/seagrass.svg)](https://pypi.org/project/seagrass)
+[![Docs](https://readthedocs.org/projects/seagrass/badge/?version=latest)](https://seagrass.readthedocs.io/en/latest/?badge=latest)
+[![Build status](https://github.com/kernelmethod/Seagrass/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/kernelmethod/Seagrass/actions/workflows/CI.yml/)
+
+*A Python event auditing and profiling multitool*
+
+Seagrass is a Python library for hooking and auditing events in your Python
+code.
+
+## Installation
+
+You can install the latest version of Seagrass using `pip`:
+
+```
+pip install seagrass
+```
+
+## Getting started
+
+To learn how to use Seagrass, check out the [quick start
+guide](https://seagrass.readthedocs.io/en/latest/quickstart.html) in the library
+documentation.
+
+
