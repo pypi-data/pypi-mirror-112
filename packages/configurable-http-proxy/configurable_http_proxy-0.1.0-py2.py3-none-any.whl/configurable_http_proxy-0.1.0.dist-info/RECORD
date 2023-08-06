@@ -1,0 +1,15 @@
+configurable_http_proxy/__init__.py,sha256=TMzTN-2WksWZEdejvKG0uRtBjbdQjVbEXTOi7vT_hwU,340
+configurable_http_proxy/_version.py,sha256=AGjc5atTGK0C6tlB9W8lJ6FXUOV0uboR0y_AAkjoU9I,774
+configurable_http_proxy/cli.py,sha256=OEoNUfLMHkyNKRCRPO-7zrRO1MAcV76HICT4R8URLT0,14999
+configurable_http_proxy/configproxy.py,sha256=xtu5IE5J7hg4stCHEoVtY2bkptxE3g8SB8qd_TBgXwI,4299
+configurable_http_proxy/handlers.py,sha256=dJL8NbIu1-Ak9T5yN4oLBelvwXMiF7eEtzbBfKA5b-I,14541
+configurable_http_proxy/store.py,sha256=9H86stNJILoY3UhN2OnF1wG8jDgRWaiS8-Wdo8me6uY,1656
+configurable_http_proxy/trie.py,sha256=7vS2dURs2Zag_EIC5rXEYCYlsaF1hWnPc19PD_DspQk,2847
+configurable_http_proxy/templates/404.html,sha256=X8VjmCi7buZ_HFwMU9S7eXiq70hi0PHKg5IlU17iw_8,177
+configurable_http_proxy/templates/500.html,sha256=H4Vw4iFtRjBaoSVuB1RwVAxuWeArEQh2ACaumTqhX_0,202
+configurable_http_proxy-0.1.0.dist-info/LICENSE,sha256=jaJfclrunatq6tQ5-D9tQ900uerI7xs-ZAeq6AfEIzA,1066
+configurable_http_proxy-0.1.0.dist-info/METADATA,sha256=mR3ngbibKJvpAxoceL04X6QyUry5Pk0RN-7j4OPfU-g,322
+configurable_http_proxy-0.1.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+configurable_http_proxy-0.1.0.dist-info/entry_points.txt,sha256=BCZyvSU9t3do46wIQ8WpnFvgcQDu7uyB8jPiTIfv9ns,78
+configurable_http_proxy-0.1.0.dist-info/top_level.txt,sha256=55LASLg_JlgQ7BIOPz8kGXdV06w74fXaAcgJHFIjBI4,24
+configurable_http_proxy-0.1.0.dist-info/RECORD,,
