@@ -1,0 +1,10 @@
+tqdm
+loguru
+joblib
+fsspec>=2021.6
+pandas
+numpy
+scipy
+matplotlib
+pillow
+selfies
