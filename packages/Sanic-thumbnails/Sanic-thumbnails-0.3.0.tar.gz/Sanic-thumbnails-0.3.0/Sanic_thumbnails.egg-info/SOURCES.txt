@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+Sanic_thumbnails.egg-info/PKG-INFO
+Sanic_thumbnails.egg-info/SOURCES.txt
+Sanic_thumbnails.egg-info/dependency_links.txt
+Sanic_thumbnails.egg-info/not-zip-safe
+Sanic_thumbnails.egg-info/top_level.txt
+sanic_thumbnails/__init__.py
+sanic_thumbnails/storage_backends.py
+sanic_thumbnails/thumbnail.py
+sanic_thumbnails/utils.py
