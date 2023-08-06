@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: Epinano
+Version: 0.1.2.0
+Summary: call variants, compute variants frequencies from bam file and use the frequencies to predict RNA base modifications
+Home-page: https://github.com/enovoa/EpiNano
+Author: Huanle Liu && Eva Novoa
+Author-email: huanle.liu@crg.eu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Epinano_Varaints: Call Variants, Compute Variants Frequencies and use them detect RNA base modifications.
+
+Please visit https://github.com/enovoa/EpiNano for more details.
+
+
+
