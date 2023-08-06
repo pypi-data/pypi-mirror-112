@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: korsair
+Version: 1.0.5
+Summary: korsair pythonlib release
+Home-page: UNKNOWN
+Author: ksb98
+Author-email: qkfka9045@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: requests
+Requires-Dist: pandas
+
+# Korsair
+
+### Project description
+
+---
+
+설명을 적어야 하는데 뭐라고 적지...
+
+### Install and Import
+
+---
+
+Install with pip
+
+```jsx
+python3 -m pip install korsair
+```
+
+Import korsair
+
+```python
+import korsair
+```
+
+### **Functions**
+
+---
+
+- get_variant(chro, pos, ref, alt)
+- get_variant_id(rsid)
+- get_gene_v1(gene_id)
+- get_gene_v2(gene_id)
+- get_region_v1(chro, start, end)
+- get_region_v2(chro, start, end)
+
+### Simple Example
+
+---
+
+```python
+Gene Symbol: TP53 
+Variant format: 7-140787574-C-T
+dbSNP: rs397507456, Region: 17-7676272-7675994
+Ensembl Gene: ENSG00000133703
+Ensembl Transcript: ENST00000311936
+```
+
+1. get_variant
+
+    ```python
+    korsair.get_vaiant('chr7', 140787574, 'C', 'T')
+    ```
+
+2. get_variant_id
+
+    ```python
+    korsair.get.get_variant_id('rs397507456')
+    ```
+
+3. get_gene_v1
+
+    ```python
+    korsair.get_gene_v1('CHD8')
+    ```
+
+4. get_gene_v2
+
+    ```python
+    korsair.get_gene_v2('CHD8')
+    ```
+
+5. get_region_v1
+
+    ```python
+    korsair.get_region_v1(17, 7676272, 7675994)
+    ```
+
+6. get_region_v2
+
+    ```python
+    korsair.get_region_v2(17, 7676272, 7675994)
+    ```
+
+### Site
+
+---
+
+[KORSAIR](http://korsair.kisti.re.kr/)
+
