@@ -1,0 +1,24 @@
+{
+  "protocol": {
+    "name": "",
+    "type": "",
+    "version": 1,
+    "chain": "",
+    "endpoint": {
+      "ethereum": ""
+    }
+  },
+  "entities": {
+    "borrow": {
+      "attributes": {},
+      "query": {
+        "extra_fields": {},
+        "name": "borrows",
+        "params": {
+          "orderBy": "timestamp"
+        }
+      },
+      "transformations": {}
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "protocol": {
+    "name": "Kyber",
+    "type": "Kyber",
+    "version": 1,
+    "chain": "Ethereum",
+    "endpoint": {
+      "ethereum": "https://api.thegraph.com/subgraphs/name/protofire/kyber"
+    }
+  },
+  "entities": {
+    "swap": {
+      "attributes": {
+        "user": [
+          "trader",
+          "id"
+        ],
+        "tx_id": [
+          "id"
+        ],
+        "from_token": [
+          "src",
+          "symbol"
+        ],
+        "to_token": [
+          "desr",
+          "symbol"
+        ],
+        "from_token_amount": [
+          "rawSrcAmount"
+        ],
+        "to_token_amount": [
+          "rawDestAmount"
+        ],
+        "timestamp": [
+          "createdAtBlockTimestamp"
+        ]
+      },
+      "query": {
+        "name": "fullTrades",
+        "extra_fields": {},
+        "params": {
+          "orderBy": "createdAtBlockTimestamp"
+        }
+      },
+      "transformations": {}
+    }
+  }
+}
