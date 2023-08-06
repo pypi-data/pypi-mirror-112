@@ -1,0 +1,38 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+bin/skel
+skelgen/__init__.py
+skelgen/__main__.py
+skelgen/exception.py
+skelgen/template.py
+skelgen/version.py
+skelgen.egg-info/PKG-INFO
+skelgen.egg-info/SOURCES.txt
+skelgen.egg-info/dependency_links.txt
+skelgen.egg-info/entry_points.txt
+skelgen.egg-info/requires.txt
+skelgen.egg-info/top_level.txt
+skelgen/plugins/__init__.py
+skelgen/plugins/git.py
+skelgen/templates/cmake/CMakeLists.txt
+skelgen/templates/cmake/src/main.cpp
+skelgen/templates/python/.gitignore.___tmpl
+skelgen/templates/python/___template.py
+skelgen/templates/python/requirements.txt
+skelgen/templates/python/setup.cfg
+skelgen/templates/python/setup.py
+skelgen/templates/python-cli/.gitignore.___tmpl
+skelgen/templates/python-cli/___template.py
+skelgen/templates/python-cli/requirements.txt
+skelgen/templates/python-cli/setup.cfg
+skelgen/templates/python-cli/setup.py
+skelgen/templates/python-cli/bin/{{ project_name }}
+skelgen/templates/python-cli/{{ project_name }}/__init__.py
+skelgen/templates/python-cli/{{ project_name }}/__main__.py
+skelgen/templates/python-cli/{{ project_name }}/version.py
+skelgen/templates/python/{{ project_name }}/__init__.py
+skelgen/templates/python/{{ project_name }}/__main__.py
+skelgen/templates/python/{{ project_name }}/version.py
