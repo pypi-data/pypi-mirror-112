@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+GravityLab.egg-info/PKG-INFO
+GravityLab.egg-info/SOURCES.txt
+GravityLab.egg-info/dependency_links.txt
+GravityLab.egg-info/requires.txt
+GravityLab.egg-info/top_level.txt
+gravitylab/__init__.py
+gravitylab/example.py
+gravitylab/simulate.py
+gravitylab/solvers.cpython-38-x86_64-linux-gnu.so
+gravitylab/solvers.pyx
