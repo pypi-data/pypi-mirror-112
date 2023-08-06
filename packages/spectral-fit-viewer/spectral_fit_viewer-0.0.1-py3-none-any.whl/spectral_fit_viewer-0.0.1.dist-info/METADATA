@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: spectral-fit-viewer
+Version: 0.0.1
+Summary: Spectral Fit Viewer CLI
+Home-page: UNKNOWN
+Author: Cheyenne Nelson
+Author-email: cnelson@picarro.com
+Maintainer: Picarro
+License: Copyright Picarro internal use only
+Project-URL: Code, https://github.com/picarro/spectral-fit-viewer
+Platform: UNKNOWN
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: bokeh
+Requires-Dist: docopt
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: litho-tracktool-fitter
+
+# spectral-fit-viewer
+This repository allows for the interactive display of spectral data to a local browser through utilizing the python library Bokeh within a command line application uniquely suited for Picarro. 
+
+### For developing
+The following instructions are valid for developers who use `pip` and `virtualenv`. Developers who prefer to use Conda will have to adapt the Makefile and other scripts to be suitable for that environment.
+
+```
+make develop
+```
+
+To run the SFV, first create a 'configscripts' directory to hold baseline and fit YAML files. 
+
+```
+mkdir configscripts 
+```
+
+As well, in the 'test' folder please create a 'logs' directory to hold logs from sessions and an 'rdf_data' directory to place your h5 files. 
+
+```
+cd tests
+mkdir logs
+mkdir rdf_data
+```
+
+Once you have your config scripts and data in the approperate location pip install the SFV through the command
+
+```
+pip install spectral_fit_viewer
+```
+
+and run the SFV with given file pathway by:
+```
+spectral_fit_viewer full -f configscripts/fit_script.yaml -b configscripts/baseline.yaml -d test/rdf_data -l test/logs
+```
+
+to get less logs in terminal an option is to run:
+```
+export LOLOGGER_SERVERLESS=1
+```
+
+

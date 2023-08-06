@@ -1,0 +1,3 @@
+[console_scripts]
+spectral_fit_viewer = cli.sfv_interface:main
+
