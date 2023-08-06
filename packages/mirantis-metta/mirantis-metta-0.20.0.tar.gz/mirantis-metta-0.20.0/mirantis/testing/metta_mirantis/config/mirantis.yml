@@ -1,0 +1,22 @@
+# Include some paths to terraform plans in this package to make them easier to
+# FInd.  Just use variables from here as paths to the chart/plan.
+terraform:
+    plans:
+        # Terraform plans crated by the prodeng team.
+        prodeng:
+            aws:
+                # Early iteration of PRODENG TF chart, before spot instances
+                v4: "{{paths:metta-mirantis}}/terraform/plans/prodeng/aws/v4"
+                # Third iteration of the PRODENG TF chart using spot references
+                v8: "{{paths:metta-mirantis}}/terraform/plans/prodeng/aws/v8"
+                # Fourth iteration with MSR load balancer
+                v9: "{{paths:metta-mirantis}}/terraform/plans/prodeng/aws/v9"
+                # Fifth iteration with some cleanup and fixes
+                v10: "{{paths:metta-mirantis}}/terraform/plans/prodeng/aws/v10"
+                # sisxth iteration with fixes for ephemeral resources
+                v11: "{{paths:metta-mirantis}}/terraform/plans/prodeng/aws/v11"
+        # Launchpad example terraform charts.
+        example:
+            aws:
+                # Pretty far out of date example AWS TF chart from the launchpad repo
+                v1_2: "{{paths:metta-mirantis}}/terraform/plans/example/aws/1.2"

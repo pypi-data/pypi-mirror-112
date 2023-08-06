@@ -1,0 +1,50 @@
+
+# terraform :: metta.plugin.provisioner:
+terraform:
+    plugin_id: metta_terraform_provisioner
+
+    # Terraform will configure itself from the ./terraform.yml file
+    # This is actually its default but this demonstrates that we have
+    # the option.
+    from_config:
+        label: terraform
+        # base: some.path.in.the.file
+
+# ansible :: metta.plugin.provisioner:
+# ansible:
+#     plugin_id: metta_ansible
+#
+#     # The ansible plugin is setup to pull config from a label/base pair, but
+#     # as it currently doesn't do anything, it is just pointed to pull directly
+#     # this files.  No need for an ansible file.
+#     from_config: true
+#
+#     # we still have not config for ansible yet
+
+
+# launchpad :: metta.plugin.provisioner:
+launchpad:
+    plugin_id: metta_launchpad_provisioner
+
+    # Pass these values to the provisioner constructor.  The launchpad
+    # constructor accepts override for "where to get config".  The values
+    # here tell it to look in the launchpad.yml
+    from_config:
+        label: launchpad
+
+# Here we use a combo provisioner with  a high priority to act as a primary
+# provisioner to manage all of the others
+#
+# @NOTE you want this plugin to be a higher priority than the others
+#   so that a get_plugins(provisioner) retrieves this one first.
+combo:
+    plugin_id: combo_provisioner
+    priority: 95
+
+    # tell the plugin to load config from "here"
+    from_config: true
+
+    backends:
+    # Ordered list of instance filters
+    - instance_id: terraform
+    - instance_id: launchpad
