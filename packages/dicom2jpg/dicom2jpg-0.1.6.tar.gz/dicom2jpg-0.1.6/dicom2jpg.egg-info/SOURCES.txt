@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+dicom2jpg/__init__.py
+dicom2jpg/__version__.py
+dicom2jpg/utils.py
+dicom2jpg.egg-info/.DS_Store
+dicom2jpg.egg-info/PKG-INFO
+dicom2jpg.egg-info/SOURCES.txt
+dicom2jpg.egg-info/dependency_links.txt
+dicom2jpg.egg-info/requires.txt
+dicom2jpg.egg-info/top_level.txt
