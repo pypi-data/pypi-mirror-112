@@ -1,0 +1,4 @@
+[console_scripts]
+wikiextract = wikifile.wikiExtract:main_module_call
+wikirender = wikifile.wikiRender:main_module_call
+
