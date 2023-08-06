@@ -1,0 +1,8 @@
+cached-property
+lxml
+networkx<=2.5
+psycopg2-binary
+pymongo
+pyyaml
+requests
+retry
