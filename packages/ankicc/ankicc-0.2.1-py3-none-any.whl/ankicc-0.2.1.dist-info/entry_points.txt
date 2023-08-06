@@ -1,0 +1,3 @@
+[console_scripts]
+ankicc=ankicc.console:run
+
