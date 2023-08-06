@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: django-ideal-aligo
+Version: 0.0.1
+Summary: 알리고 API 연동을 위한 앱
+Home-page: http://idealkr.com/
+Author: Dongwon Lee
+Author-email: ceo@idealkr.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Description: =====
+        IDEAL aligo
+        =====
+        
+        Polls is a Django app to conduct Web-based polls. For each question,
+        visitors can choose between a fixed number of answers.
+        
+        Detailed documentation is in the "docs" directory.
+        
+        Quick start
+        -----------
+        
+        1. Add "polls" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'aligo',
+            ]
+        
+        
+        2. Run ``python manage.py migrate`` to create the polls models.
+        
+        3. Start the development server and visit http://127.0.0.1:8000/admin/
+           to create a poll (you'll need the Admin app enabled).
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
