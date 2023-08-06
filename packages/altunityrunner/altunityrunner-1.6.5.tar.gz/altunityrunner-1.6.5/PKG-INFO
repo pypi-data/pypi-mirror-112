@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: altunityrunner
+Version: 1.6.5
+Summary: Python Binding to allow Appium tests to be run against Unity games and apps using AltUnityTester.
+Home-page: https://gitlab.com/altom/altunity/altunitytester
+Author: Altom Consulting
+Author-email: altunitytester@altom.fi
+License: GNU GPLv3
+Project-URL: Bug Tracker, https://gitlab.com/altom/altunity/altunitytester/-/issues
+Project-URL: Documentation, https://altom.gitlab.io/altunity/altunitytester
+Project-URL: Source, https://gitlab.com/altom/altunity/altunitytester
+Description: # AltUnityTester Python Bindings
+        
+        The AltUnityTester package contains an `altunityrunner` module that will open a socket connection on the device running the Unity application and will give access to all the objects in the Unity hierarchy.
+        
+        Using this socket connection and the actions available in the AltUnity driver, we can run python tests tests against the Unity app running on iOS or Android.
+        
+        Read the documentation on https://altom.gitlab.io/altunity/altunitytester
+        
+        ## Get Started
+        
+        Check out the [Get Started](https://altom.gitlab.io/altunity/altunitytester/pages/get-started.html) guide from the documentation.
+        
+        ## Running Tests
+        
+        ### Unit Tests
+        
+        ```
+        $ pytest unit/
+        ```
+        
+        ### Integration Tests
+        
+        ```
+        $ pytest integration/
+        ```
+        
+        ## Contributing
+        
+        Check out the full contributing guide [contributing](https://altom.gitlab.io/altunity/altunitytester/pages/contributing.html).
+        
+        ## Support
+        
+        Join our Google Group for questions and discussions: https://groups.google.com/a/altom.com/forum/#!forum/altunityforum
+        
+        Join our Discord Server to chat with other members of the community: https://discord.gg/Ag9RSuS
+        
+        ## License
+        
+        Distributed under the **GNU General Public License v3.0**. See [LICENSE](https://gitlab.com/altom/altunity/altunitytester/-/blob/master/LICENSE) for more information.
+        
+Keywords: unity testing tests
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: C#
+Classifier: Programming Language :: Java
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Testing :: Acceptance
+Classifier: Topic :: Software Development :: Testing :: Unit
+Requires-Python: >=3.4.0
+Description-Content-Type: text/markdown
