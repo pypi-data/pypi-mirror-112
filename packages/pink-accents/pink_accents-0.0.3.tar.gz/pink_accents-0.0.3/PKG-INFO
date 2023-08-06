@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: pink_accents
+Version: 0.0.3
+Summary: Accent system based on string pattern matching
+Home-page: https://github.com/Fogapod/pink-accents
+Author: Fogapod
+Author-email: fogaprod@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Topic :: Text Processing
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pink-accents
+
+Accent system based on string pattern matching.
+
+This is a silly accent system inspired by Space Station 13 accents, based on popular stereotypes. There is no intent in offending anyone or any culture. Maybe this thing has other uses, we'll see.
+In it's core it's basically a re.sub call.
+
+This was a part of PINK Discord bot originally: https://github.com/Fogapod/pink
+
+Examples of accents can be found in `examples` folder.
+
+### Console interface
+TODO
+
+
