@@ -1,0 +1,9 @@
+six
+ruamel.yaml==0.16.13
+ruamel.yaml.clib==0.2.2
+Jinja2
+netaddr
+requests
+tzlocal
+redis
+configparser==3.7.4
