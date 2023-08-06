@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dvenv
+Version: 0.1.4
+Summary: 
+Author: Luke Lombardi
+Author-email: luke@slai.io
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=5.4.1,<6.0.0)
+Requires-Dist: asgiref (>=3.4.1,<4.0.0)
+Requires-Dist: click (>=8.0.1,<9.0.0)
+Requires-Dist: redis (>=3.5.3,<4.0.0)
+Requires-Dist: sdist (>=0.0.0,<0.0.1)

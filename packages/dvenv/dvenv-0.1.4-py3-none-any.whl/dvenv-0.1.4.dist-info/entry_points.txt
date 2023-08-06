@@ -1,0 +1,4 @@
+[console_scripts]
+dpython=dvenv:runner.python
+dvenv=dvenv:main.main
+
