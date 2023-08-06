@@ -1,0 +1,6 @@
+faucet==1.9.54
+grpcio-tools==1.38.1
+grpcio==1.38.1
+prometheus_client==0.9.0
+protobuf==3.17.3
+pyyaml==5.3.1
