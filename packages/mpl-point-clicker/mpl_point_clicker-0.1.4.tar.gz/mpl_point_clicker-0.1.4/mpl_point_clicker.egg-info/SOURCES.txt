@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+mpl_point_clicker/__init__.py
+mpl_point_clicker/_clicker.py
+mpl_point_clicker/_version.py
+mpl_point_clicker.egg-info/PKG-INFO
+mpl_point_clicker.egg-info/SOURCES.txt
+mpl_point_clicker.egg-info/dependency_links.txt
+mpl_point_clicker.egg-info/requires.txt
+mpl_point_clicker.egg-info/top_level.txt
