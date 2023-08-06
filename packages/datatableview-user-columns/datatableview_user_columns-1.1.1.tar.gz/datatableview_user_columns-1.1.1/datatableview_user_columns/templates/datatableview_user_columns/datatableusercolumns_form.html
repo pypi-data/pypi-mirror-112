@@ -1,0 +1,49 @@
+{% extends "base_form_tabs_excluded.html" %}
+{% load crispy_forms_tags %}
+
+{% block page_title %}Update Columns for Table{% endblock page_title %}
+
+{% block style_sheet %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/selectize{% if not debug %}.min{% endif %}.css" type="text/css" media="screen,projection"/>
+{% endblock style_sheet %}
+
+
+{% block form_content %}
+    <div class="row">
+        <div class="col-md-12"><h4>Avaliable Column Choices</h4></div>
+        <div class="col-md-12">{{ column_choices|unordered_list }}</div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-6">{{ form.columns }}</div>
+        <div class="col-md-3">
+            <button type="submit" id="id_submit" class="btn btn-primary">Submit</button>
+            {% if cancel_url %}
+                <a class="btn btn-default" href="{{ cancel_url }}">Cancel</a>
+            {% endif %}
+            &nbsp;&nbsp;&nbsp;
+            <a class="btn btn-md btn-default" href="{{ delete_url }}?next={{ next }}">Defaults</a>
+        </div>
+    </div>
+    <input type="hidden" name="next" value="{{ next }}"/>
+
+
+{% endblock form_content %}
+
+{% block form_actions %}
+{% endblock form_actions %}
+
+
+{% block javascript_tail %}
+    {{ block.super }}
+    <script type="text/javascript">
+        requirejs(['jquery', 'jquery-ui', 'selectize'], function ($, juqueryui, selectize) {
+            $('#id_columns').selectize({
+                plugins: ['drag_drop', 'remove_button'],
+                delimiter: ',',
+                create: false
+            });
+        });
+    </script>
+{% endblock javascript_tail %}

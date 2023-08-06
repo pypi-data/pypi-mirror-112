@@ -1,0 +1,2 @@
+recursive-include datatableview_user_columns/templates *
+recursive-include datatableview_user_columns/static *
