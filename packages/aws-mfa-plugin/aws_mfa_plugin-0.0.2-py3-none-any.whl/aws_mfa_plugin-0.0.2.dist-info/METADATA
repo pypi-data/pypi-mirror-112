@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: aws-mfa-plugin
+Version: 0.0.2
+Summary: An awscli plugin to authenticate and retrive AWS temporary credentials using a MFA device
+Home-page: https://github.com/prksu/aws-mfa-plugin
+Author: Ahmad Nurus S.
+Author-email: ahmadnurus.sh@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/prksu/aws-mfa-plugin/issues
+Project-URL: Source, https://github.com/prksu/aws-mfa-plugin/
+Keywords: aws,aws-mfa,aws-cli,aws-cli-plugins,aws-mfa-plugin
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: System :: Systems Administration :: Authentication/Directory
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: awscli (>=2.0.0)
+Requires-Dist: botocore (>=2.0.0dev1)
+
+# AWS MFA Plugin
+
+An awscli plugin to authenticate and retrive AWS temporary credentials using a MFA device.
+
+## Installation
+
+This plugin was published in [pypi.orig](https://pypi.org/project/aws-mfa-plugin/). So the installation can be done using pip.
+
+```shell
+$ pip3 install --user aws-mfa-plugin
+```
+
+
