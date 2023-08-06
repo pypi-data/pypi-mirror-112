@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "../../../py-models-parser"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../simple-ddl-parser"
+		},
+		{
+			"path": "../../../autoparser"
+		},
+		{
+			"path": "../../../datamodel-code-generator"
+		},
+		{
+			"path": "../../../kkr-web-backend"
+		},
+		{
+			"path": "../../../kkr-metadata"
+		}
+	],
+	"settings": {}
+}
