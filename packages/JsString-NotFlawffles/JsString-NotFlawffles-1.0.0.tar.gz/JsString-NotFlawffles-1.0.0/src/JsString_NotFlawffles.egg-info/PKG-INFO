@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: JsString-NotFlawffles
+Version: 1.0.0
+Summary: JavaScript's String Methods in python
+Home-page: UNKNOWN
+Author: notflawffles
+Author-email: hassenjasim3@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# What Is JsString
+JsString is a string object with a JavaScript's string methods made to match JavaScript string
+
+# Functions
+`charAt()`, `charCodeAt()`, `concat()`, `endsWith()`, `fromCharCode()`, `includes()`, `indexOf()`, `match()`, `repeat()`, `replace()`, `search()`, `slice()`, `split()`, `startsWith()`, `substr()`, `substring()`, `toLowerCase()`, `toUpperCase()`, `trim()`, `valueOf()`
+
+
