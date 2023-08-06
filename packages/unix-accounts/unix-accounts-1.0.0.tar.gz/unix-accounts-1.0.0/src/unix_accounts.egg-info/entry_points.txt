@@ -1,0 +1,4 @@
+[console_scripts]
+unix-accounts = unix_accounts.bin.cli:main
+unix-accounts-server = unix_accounts.bin.server:main
+
