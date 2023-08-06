@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "graphysio"
+author = "Jona JOACHIM"
+author-email = "jona@joachim.cc"
+home-page = "https://github.com/jaj42/GraPhysio"
+classifiers = [ "License :: OSI Approved :: ISC License (ISCL)",]
+description-file = "README.md"
