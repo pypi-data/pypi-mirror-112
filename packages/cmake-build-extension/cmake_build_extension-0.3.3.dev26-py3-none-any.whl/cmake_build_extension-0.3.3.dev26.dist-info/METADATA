@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: cmake-build-extension
+Version: 0.3.3.dev26
+Summary: Setuptools extension to build and package CMake projects.
+Home-page: https://github.com/diegoferigo/cmake-build-extension
+Author: Diego Ferigo
+Author-email: dgferigo@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/diegoferigo/cmake-build-extension
+Project-URL: Tracker, https://github.com/diegoferigo/cmake-build-extensionn/issues
+Keywords: setuptools,extension,cmake,build,package,pypi
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Archiving :: Packaging
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cmake
+Requires-Dist: ninja
+Requires-Dist: GitPython
+Requires-Dist: setuptools-scm
+
+UNKNOWN
+
