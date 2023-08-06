@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "volttron-client"
+version = "0.2.0"
+description = "Client for connecting to a volttron server"
+authors = ["C. Allwardt <craig.allwardt@pnnl.gov>"]
+license = "Apache 2.0"
+packages = [
+    { include = "volttron" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.6.2,<4"
+# Allows version number to be dynamically created from the
+# importlib_metadata for the wheel file.  If using python
+# 3.8 or greater this module is part of the standard library
+# as importlib.metadata.  
+#
+# See volttron/client/__init__.py
+importlib-metadata = {version = "^1.0", python = "<3.8"}
+gevent = "20.6.1"
+greenlet = "0.4.16"
+idna = "<3,>=2.5"
+zmq = "^0.0.0"
+PyYAML = ">=5,<6"
+pytz = ">=2019,<2022"
+tzlocal = ">=2,<3"
+dateutils = ">=0.6,<0.7"
+grequests = "^0.6.0"
+volttron-utils = "^0.2.1"
+#volttron-utils = { path="../volttron-utils", develop=true}
+psutil = "^5.8.0"
+toml = "^0.10.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+Sphinx = "^4.0.2"
+sphinx-rtd-theme = "^0.5.2"
+sphinx-autobuild = "^2021.3.14"
+m2r2 = "^0.2.8"
+pre-commit = "^2.13.0"
+black = "^21.6b0"
+pylint = "^2.9.3"
+mypy = "^0.910"
+toml = "^0.10.2"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+    # "integration",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
