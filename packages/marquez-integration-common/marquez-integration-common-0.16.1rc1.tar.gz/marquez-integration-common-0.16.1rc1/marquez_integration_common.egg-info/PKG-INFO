@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: marquez-integration-common
+Version: 0.16.1rc1
+Summary: Marquez common python library for integrations
+Home-page: UNKNOWN
+Author: Marquez Project
+License: UNKNOWN
+Keywords: marquez
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: bigquery
+Provides-Extra: dbt
+Provides-Extra: tests
+Provides-Extra: dev
+
+Common modules for OpenLineage integrations.
+
+
