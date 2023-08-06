@@ -1,0 +1,15 @@
+django_python3_ldap/__init__.py,sha256=GDqd-M7eShckcYgcnx69G83kXch8nRYzxr2tw6Lscbk,89
+django_python3_ldap/auth.py,sha256=rpzJeh35-P3BjulbGJHNtAPF6fHrddZcZmrCmyYkIlM,496
+django_python3_ldap/conf.py,sha256=hU8pSHchr6XQgHdbumqAqcgGfqOzgbONH_wZGSJ6-Oc,3065
+django_python3_ldap/ldap.py,sha256=Z3qcAONZvMQMf8wLrl6oaGOxtVjBP8N4LudpeiHCpyw,7405
+django_python3_ldap/tests.py,sha256=pdBww85inN47PcNCBHc3gCIgzjkkefes4G2Fmg-N_es,9237
+django_python3_ldap/utils.py,sha256=AaRXSKE5V5n5NorA1K95y6V8F0yrmDv0ob_K8HXH5wM,3520
+django_python3_ldap/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_python3_ldap/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_python3_ldap/management/commands/ldap_promote.py,sha256=-bpz0gnFfgJ8qNj9cujVqM1gKAc95c0CKJRmOgZhdwk,1247
+django_python3_ldap/management/commands/ldap_sync_users.py,sha256=ydURWPkp50h9dVzSAWU-SLtHeyOgp4YcwQBj-eyrwcI,1052
+django_python3_ldap-0.12.0.dist-info/LICENSE,sha256=CUMgqObU89ytvc5Kdhqoc0XS5Z8ZP3hJcJGtAQZdVxQ,1524
+django_python3_ldap-0.12.0.dist-info/METADATA,sha256=UycuB2ytVwLCNuW1guIYxYq-26vIR_gXrAqOGxO4cvs,829
+django_python3_ldap-0.12.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_python3_ldap-0.12.0.dist-info/top_level.txt,sha256=ZAyGVGPfKHjaFRVFv187bpWlh1Ggg-4loZJ71EdX4XE,20
+django_python3_ldap-0.12.0.dist-info/RECORD,,
