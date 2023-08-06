@@ -1,0 +1,15 @@
+duet/__init__.py,sha256=QdI1wpSW0j73oK_6MgDVK4qP6u0XJvTGXWDrD9jxmdg,16013
+duet/_version.py,sha256=2AnMXIOadLfJCYgh9wqcFmqjw1GqDZ7O5KVYOEVRK8k,604
+duet/aitertools.py,sha256=IXceTx_QMw9xUHqLn4hQsizOmGgKZt9poRrKp2kU-Uk,3543
+duet/duet_test.py,sha256=GV8yRLLjyQEJg5iRtWlzDEFf-MNDc-XEea2LQwNe07U,13229
+duet/futuretools.py,sha256=qETH3GbdoJA-D3_Q2_LNMZTCI6g2gshuiHez2ytvM4k,5958
+duet/futuretools_test.py,sha256=TXeDWKzvGaSxGK8IPgiGdd7hOO0ru7uC5PCtC3HDE5I,1657
+duet/impl.py,sha256=QkXSYyna_9kl8c3HAHB5vlXJjVU8yFJCTP54jCPllto,12041
+duet/impl_test.py,sha256=vqWNAQLz5cegd42iZbZNnzVcm5pFtog5wYUbeXmkvMw,2486
+duet/py.typed,sha256=DtCsIDq6KOv2NOEdQjTbeMWJKRh6ZEL2E-6Mf1RLeMA,59
+duet/typing.py,sha256=3VT4PP6G8le8M0DYf8H4JaWz_-OlDS1iou9lqtbIPtE,2600
+duet-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+duet-0.2.0.dist-info/METADATA,sha256=1X89N1-lw1LLLdeOR5W8oXiIb_B3tEb8fyrzQFgVHgo,2282
+duet-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+duet-0.2.0.dist-info/top_level.txt,sha256=ve-m-kbOu-0YIY5ssJyle3-ULzTtZvZolQORqRUKaWQ,5
+duet-0.2.0.dist-info/RECORD,,
