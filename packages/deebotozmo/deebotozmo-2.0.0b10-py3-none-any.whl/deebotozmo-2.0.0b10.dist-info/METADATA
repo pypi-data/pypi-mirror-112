@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: deebotozmo
+Version: 2.0.0b10
+Summary: a library for controlling certain robot vacuums
+Home-page: UNKNOWN
+Author: Andrea Liosi
+Author-email: andrea.liosi@gmail.com
+License: GPL-3.0
+Keywords: home automation vacuum robot
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Home Automation
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE.txt
+Requires-Dist: gmqtt (==0.6.9)
+Requires-Dist: numpy (==1.20.3)
+Requires-Dist: Pillow (==8.2.0)
+Requires-Dist: aiohttp (==3.7.4.post0)
+
+UNKNOWN
+
