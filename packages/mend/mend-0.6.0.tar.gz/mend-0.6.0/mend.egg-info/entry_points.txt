@@ -1,0 +1,11 @@
+[console_scripts]
+mend = mend.cli.main:main
+
+[mend.generators]
+file = mend.generators.file:FileGenerator
+
+[mend.plugins]
+copy = mend.plugins.copy:CopyPlugin
+diff = mend.plugins.diff:DiffPlugin
+github = mend.plugins.github:GitHubPlugin
+
