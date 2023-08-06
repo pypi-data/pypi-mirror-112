@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: django-vitess
+Version: 0.0.1
+Summary: Custom database driver for Vitess.io
+Home-page: https://github.com/BabisK/django-vitess
+Author: Babis Kaidos
+Author-email: ckaidos@intracom-telecom.com
+License: Apache Software License
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Database
+License-File: LICENSE
+Requires-Dist: Django (>=2.2)
+
+# django-vitess
+
