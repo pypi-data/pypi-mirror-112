@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: etta
+Version: 0.0.0
+Summary: Wrappers for the ExoFOP-TESS PHP functions.
+Home-page: https://github.com/jennywwww/etta
+Author: Weijie Wang
+Author-email: jenny.wang2000@hotmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.0
+License-File: LICENSE
+Requires-Dist: pandas (>=1.0.0)
+Requires-Dist: requests (>=2.23.0)
+Requires-Dist: setuptools (>=41.0.0)
+
+UNKNOWN
+
