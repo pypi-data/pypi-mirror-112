@@ -1,0 +1,12 @@
+README.md
+setup.py
+toweb/__init__.py
+toweb/server.py
+toweb/viewer.html
+toweb.egg-info/PKG-INFO
+toweb.egg-info/SOURCES.txt
+toweb.egg-info/dependency_links.txt
+toweb.egg-info/requires.txt
+toweb.egg-info/top_level.txt
+toweb/static/bundle.js
+toweb/static/logo.png
