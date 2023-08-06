@@ -1,0 +1,20 @@
+.. _iris.symbols:
+
+============
+iris.symbols
+============
+
+
+
+.. currentmodule:: iris
+
+.. automodule:: iris.symbols
+
+In this module:
+
+ * :py:obj:`CLOUD_COVER`
+
+
+
+.. autodata:: iris.symbols.CLOUD_COVER
+

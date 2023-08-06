@@ -1,0 +1,16 @@
+.. _iris.std_names:
+
+==============
+iris.std_names
+==============
+
+
+
+.. currentmodule:: iris
+
+.. automodule:: iris.std_names
+
+In this module:
+
+
+

@@ -1,0 +1,45 @@
+.. _iris.fileformats:
+
+================
+iris.fileformats
+================
+
+
+
+   .. toctree::
+      :maxdepth: 2
+      :titlesonly:
+      :hidden:
+
+      fileformats/abf
+      fileformats/cf
+      fileformats/dot
+      fileformats/name
+      fileformats/name_loaders
+      fileformats/netcdf
+      fileformats/nimrod
+      fileformats/nimrod_load_rules
+      fileformats/pp
+      fileformats/pp_load_rules
+      fileformats/pp_save_rules
+      fileformats/rules
+      fileformats/um.rst
+      fileformats/um_cf_map
+
+
+
+
+    
+
+.. currentmodule:: iris
+
+.. automodule:: iris.fileformats
+
+In this module:
+
+ * :py:obj:`FORMAT_AGENT`
+
+
+
+.. autodata:: iris.fileformats.FORMAT_AGENT
+
