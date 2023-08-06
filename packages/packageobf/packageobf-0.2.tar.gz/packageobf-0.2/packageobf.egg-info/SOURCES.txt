@@ -1,0 +1,7 @@
+setup.py
+packageobf/__init__.py
+packageobf/one.py
+packageobf.egg-info/PKG-INFO
+packageobf.egg-info/SOURCES.txt
+packageobf.egg-info/dependency_links.txt
+packageobf.egg-info/top_level.txt
