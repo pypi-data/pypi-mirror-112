@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: SlashPaginator
+Version: 0.0.1
+Summary: Button paginator using discord-py-interactions
+Home-page: https://github.com/DeltaXWizard/ButtonPaginator
+Author: DeltaX
+Author-email: delta@deltax.dev
+License: MIT
+Keywords: discord.py,pagination,button,components,slash,discord_slash_commands
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+
