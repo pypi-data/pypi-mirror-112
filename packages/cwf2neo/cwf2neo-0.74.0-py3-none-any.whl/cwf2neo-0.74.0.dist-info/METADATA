@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cwf2neo
+Version: 0.74.0
+Summary: cwf2neo is a Python library use to download, parse and import the NICE Cybersecurity Workforce Framework into a Neo4j graphing database, which can be used to run complex queries against.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: ckoroscil@circadence.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Dist: confuse
+Requires-Dist: progress
+Requires-Dist: py2neo
+Requires-Dist: xlrd (==1.2.0)
+
+UNKNOWN
+
+
