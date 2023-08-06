@@ -1,0 +1,7 @@
+setuptools
+requests
+ruamel.yaml<=0.16,>=0.15
+semantic-version
+pandoc-include
+cwltool
+miniwdl
