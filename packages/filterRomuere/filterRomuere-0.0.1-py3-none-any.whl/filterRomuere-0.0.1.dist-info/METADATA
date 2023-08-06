@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: filterRomuere
+Version: 0.0.1
+Summary: Pacote para aplicar filtragem por agrupamento
+Home-page: https://github.com/romuere/filterRomuere
+Author: Romuere Silva
+Author-email: romuere@ufpi.edu.br
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+filterRomuere
+=============
+
+#### Esse é um pacote que faz uma transformação em uma imagem aplicando um filtro de agrupamento.
+#### Veja o exemplo de resultado do pacote:
+
+![Imagem de entrada.](imgs/SanFrancisco.png)
+
+![Imagem de entrada.](imgs/SanFrancisco_saida.png)
+
+## Instalação:
+
+` pip install filterRomuere `
+
+## Uso:
+
+```
+import filterRomuere as fr
+img = 'imgs/imagemdeentrada.png'
+filter = fr.filterRomuere(img)
+filter.apply_filter()
+```
+
+
