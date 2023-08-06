@@ -1,0 +1,11 @@
+README.md
+setup.py
+rgb/Color.py
+rgb/Palette.py
+rgb/__init__.py
+rgb/palettes.py
+rgb/printer.py
+rgb.egg-info/PKG-INFO
+rgb.egg-info/SOURCES.txt
+rgb.egg-info/dependency_links.txt
+rgb.egg-info/top_level.txt

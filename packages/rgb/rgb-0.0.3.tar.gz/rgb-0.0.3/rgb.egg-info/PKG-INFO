@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: rgb
+Version: 0.0.3
+Summary: Grab your palette!
+Home-page: https://github.com/seungjaeryanlee/rgb
+Author: Seungjae Ryan Lee
+Author-email: seungjaeryanlee@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/seungjaeryanlee/rgb/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# rgb
+
+Grab your palette!
+
+```bash
+pip install rgb
+```
+
+
+
+## How To Use
+
+If you want to color your text in terminal:
+
+```python3
+from rgb import rgbprint
+
+
+rgbprint("Hello World", "#c0ffee")
+```
+
+If you want to simply get a color scheme ("palette"):
+
+
+```python3
+from rgb import PALETTES
+
+
+print(PALETTES[42])
+```
+
+
+
+## Giving Credit
+
+The palettes from this package come from websites that curate palettes. When appropriate, please check the metadata of your palette and credit the curator!
+
+
