@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: n3ml-python
+Version: 0.6.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: chatterboy
+Author-email: chatter0502@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib (==3.3.1)
+Requires-Dist: numpy (==1.19.1)
+Requires-Dist: scikit-learn (==0.24.1)
+
+# n3ml-python
+
+
