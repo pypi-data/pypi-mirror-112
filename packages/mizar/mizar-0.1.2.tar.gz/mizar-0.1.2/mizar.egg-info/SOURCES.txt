@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mizar/__init__.py
+mizar/api.py
+mizar/studio.py
+mizar.egg-info/PKG-INFO
+mizar.egg-info/SOURCES.txt
+mizar.egg-info/dependency_links.txt
+mizar.egg-info/requires.txt
+mizar.egg-info/top_level.txt
+mizar/tests/__init__.py
+mizar/tests/test_mizar_api.py
+mizar/tests/test_mizar_studio.py
