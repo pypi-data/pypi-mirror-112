@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: wikiusers-cli
+Version: 1.1.1
+Summary: The cli of the wikiusers python module
+License: GPL
+Author: Eugenio Vinicio Berretta
+Author-email: euberdeveloper@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=8.0.1,<9.0.0)
+Requires-Dist: prompt-toolkit (==1.0.14)
+Requires-Dist: whaaaaat (>=0.5.2,<0.6.0)
+Requires-Dist: wikiusers (>=1.1.0,<2.0.0)
