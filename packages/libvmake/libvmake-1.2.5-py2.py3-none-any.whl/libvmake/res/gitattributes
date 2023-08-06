@@ -1,0 +1,102 @@
+* text=auto
+*.sh text eol=lf
+*.cmd text eof=crlf
+*.js text eof=lf
+*.iss text eof=crlf
+*.java text eof=lf
+*.py text eof=lf
+Dockerfile text eof=lf
+*.xml text eof=lf
+*.yml text eof=lf
+*.yaml text eof=lf
+*.rpm binary
+*.deb binary
+*.hex binary
+*.bin binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.icns binary
+*.gif binary
+*.bcmap binary
+*.exe binary
+*.dll binary
+*.node binary
+*.chm binary
+*.bmp binary
+*.zip binary
+*.rar binary
+*.sys binary
+*.pdf binary
+*.jar binary
+*.class binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.vsix binary
+*.mp4 binary
+*.mp3 binary
+*.wav binary
+*.avi binary
+*.aiff binary
+*.rar binary
+*.zip binary
+*.tar binary
+*.tgz binary
+*.tar.gz binary
+*.bin binary
+*.cdr binary
+*.com binary
+*.7z binary
+*.crt binary
+*.dat binary
+*.db binary
+*.dot binary
+*.img binary
+*.iso binary
+*.ico binary
+*.mid binary
+*.so binary
+*.lib binary
+*.run binary
+*.vla binary
+*.docx binary
+*.doc binary
+*.xml binary
+*.xmlx binary
+*.ppt binary
+*.pptx binary
+*.mpg binary
+*.pcb binary
+*.pcx binary
+*.pdf binary
+*.rtf binary
+*.svg binary
+*.wps binary
+*.gzip binary
+*.bzip binary
+*.msi binary
+*.psd binary
+*.cmd text eof=crlf
+*.bat text eof=crlf
+*.ps1  text eof=crlf
+makefile  text eof=lf
+*.txt  text eof=lf
+*.bat  text eof=lf
+*.html  text eof=lf
+*.css  text eof=lf
+*.less  text eof=lf
+*.sass  text eof=lf
+*.ini  text eof=lf
+*.conf  text eof=lf
+*.md  text eof=lf
+*.sql  text eof=lf
+*.asp  text eof=lf
+*.cpp  text eof=lf
+*.c  text eof=lf
+*.go  text eof=lf
+*.json  text eof=lf
+*.yml  text eof=lf
+*.ejs text eof=lf
+*.vue text eof=lf
