@@ -1,0 +1,3 @@
+[console_scripts]
+f5-agent-auditor = f5_agent_auditor.auditor:main
+
