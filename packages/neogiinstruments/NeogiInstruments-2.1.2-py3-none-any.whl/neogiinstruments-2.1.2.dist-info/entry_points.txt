@@ -1,0 +1,3 @@
+[console_scripts]
+port_table=neogiinstruments.ports:port_table
+
