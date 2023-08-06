@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pylibvirt
+Version: 0.0.2
+Summary: Python package to orchestrate libvirt API from yaml declaration file
+Home-page: https://gitlab.com/Sevolith/Python-Libvirt/
+Author: Sevolith
+Author-email: contactsevolith@gmail.com
+Maintainer: Sevolith
+Maintainer-email: contactsevolith@gmail.com
+License: GPL-2.0-or-later
+Download-URL: https://gitlab.com/Sevolith/Python-Libvirt/
+Keywords: Libvirt automation yaml
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich (==10.5.0)
+Requires-Dist: pyyaml (==5.4.1)
+Requires-Dist: libvirt-python (==7.5.0)
+Requires-Dist: click (==8.0.1)
+
+# Python Libvirt
+
+## Requirements
+
+You need to install the following packages on your system to install python-libvirt in a virtualenv:
+- python3-devel
+- pkgconfig
+- libvirt-devel
+
+
+
+
