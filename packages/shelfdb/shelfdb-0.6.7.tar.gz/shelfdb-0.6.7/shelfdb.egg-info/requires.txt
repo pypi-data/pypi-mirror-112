@@ -1,0 +1,4 @@
+dill>=0.3.3
+
+[:platform_system == "Linux"]
+uvloop==0.14.0
