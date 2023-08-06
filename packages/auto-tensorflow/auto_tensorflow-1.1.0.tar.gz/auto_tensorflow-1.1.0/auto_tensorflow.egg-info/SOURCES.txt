@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+auto_tensorflow/tfa.py
+auto_tensorflow.egg-info/PKG-INFO
+auto_tensorflow.egg-info/SOURCES.txt
+auto_tensorflow.egg-info/dependency_links.txt
+auto_tensorflow.egg-info/requires.txt
+auto_tensorflow.egg-info/top_level.txt
