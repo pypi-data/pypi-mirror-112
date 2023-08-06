@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: tello-python
+Version: 1.1.5
+Summary: Control DJI Tello drone with Python3
+Home-page: https://github.com/cocpy/Tello-Python
+Author: C灵C
+Author-email: c0c@cocpy.com
+License: UNKNOWN
+Description: # Tello-Python
+            Control DJI Tello drone with python
+        
+        
+        ## Installation
+            pip install tello-python
+        
+        
+        ## How to import
+            import tello
+            
+            drone = tello.Tello()
+        
+        
+        ## Examples
+            import tello
+            
+            drone = tello.Tello()
+            
+            drone.takeoff()
+            
+            drone.forward(100)
+            
+            drone.cw(90)
+            
+            drone.flip('r')
+            
+            drone.streamon()
+            
+            drone.land()
+            
+        
+        ### Distance
+            Required. The distance to fly forward in cm. Has to be between 20 and 500.
+        
+        
+        ### Degrees
+            Required. The number of degrees to rotate. Has to be between 1 and 360.
+        
+        
+        ## More
+            For more commands, please refer to the methods and comments in the source code tello.py file
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
