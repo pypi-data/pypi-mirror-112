@@ -1,0 +1,11 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+src/celery_abc/__init__.py
+src/celery_abc/caller.py
+src/celery_abc/worker.py
+src/celery_abc.egg-info/PKG-INFO
+src/celery_abc.egg-info/SOURCES.txt
+src/celery_abc.egg-info/dependency_links.txt
+src/celery_abc.egg-info/top_level.txt
