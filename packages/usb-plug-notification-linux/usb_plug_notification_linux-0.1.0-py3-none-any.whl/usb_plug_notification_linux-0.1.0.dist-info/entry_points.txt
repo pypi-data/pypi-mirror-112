@@ -1,0 +1,3 @@
+[console_scripts]
+usb-plug-notification=usb_plug_notification_linux:main
+
