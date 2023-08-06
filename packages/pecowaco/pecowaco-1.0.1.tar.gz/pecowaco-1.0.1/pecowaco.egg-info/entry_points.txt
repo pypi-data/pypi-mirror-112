@@ -1,0 +1,3 @@
+[console_scripts]
+track = pecowaco.__main__:main
+
