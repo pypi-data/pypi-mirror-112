@@ -1,0 +1,1 @@
+from sani_nlu.tokenizers.vietnamese_tokenizer import VietnameseTokenizer
