@@ -1,0 +1,81 @@
+session: !Device:kamzik3.devices.deviceSession.DeviceSession
+  config:
+    attributes:
+      ? !!python/tuple
+      - Log directory
+      - Value
+      : ./server_log
+      ? !!python/tuple
+      - Resource directory
+      - Value
+      : ./resources
+    publisher_port: 50002
+    logged_attributes:
+      X: Position
+      Y: Position
+      Z: Position
+      Chameleon: Random value
+    server: !Device:kamzik3.devices.deviceServer.DeviceServer
+      host: 127.0.0.1
+      port: 60010
+    publisher: !Device:kamzik3.devices.devicePublisher.DevicePublisher
+      host: 127.0.0.1
+      port: 50010
+  device_id: Proxy server
+measurement_groups:
+- !Device:kamzik3.devices.general.measurementGroup.MeasurementGroup
+  group_id: Sample motors
+  measurement_group:
+  - - X
+    - Position
+  - - Y
+    - Position
+  - - Z
+    - Position
+devices:
+  Scanner: !Device:kamzik3.devices.dummy.dummyScanner.DummyScanner
+    device_id: Scanner
+  X: &X !Device:kamzik3.devices.deviceClient.DeviceClient
+    host: &Server 127.0.0.1
+    port: &Port 60002
+    device_id: X
+  Y: &Y !Device:kamzik3.devices.deviceClient.DeviceClient
+    host: *Server
+    port: *Port
+    device_id: Y
+  Z: &Z !Device:kamzik3.devices.deviceClient.DeviceClient
+    host: *Server
+    port: *Port
+    device_id: Z
+  Chameleon: &Chameleon !Device:kamzik3.devices.deviceClient.DeviceClient
+    host: *Server
+    port: &Port_B 60003
+    device_id: Chameleon
+  Detector: &Detector !Device:kamzik3.devices.deviceClient.DeviceClient
+    host: *Server
+    port: *Port_B
+    device_id: Detector
+  MacroServer: !Device:kamzik3.macro.macroServer.MacroServer
+    device_id: MacroServer
+  SavedAttributes: !Device:kamzik3.devices.deviceSavedAttributes.DeviceSavedAttributes
+    device_id: SavedAttributes
+    filepath: ./saved_attributes.h5
+  FlyScanner: !Device:kamzik3.devices.general.generalFlyScanner.GeneralFlyScanner
+    device_id: FlyScanner
+  VirtualDirectory: !Device:kamzik3.devices.deviceVirtualDirectory.DeviceVirtualDirectory
+    device_id: VirtualDirectory
+    drives:
+      Attribute logs:
+        path: ./server_log/Attributes/
+      Scan logs:
+        path: ./server_log/Scan_logs/
+    host: 127.0.0.1
+    port: 50004
+seesion_devices_list_tool: &id003 !Widget:kamzik3.gui.deviceListWidget.DeviceListWidgetSession
+  columns: 1
+session_window: !Widget:kamzik3.gui.sessionWindow.SessionWindow
+  config:
+    tools:
+    - - Devices
+      - *id003
+      - :/icons/icons/data-transfer.png
