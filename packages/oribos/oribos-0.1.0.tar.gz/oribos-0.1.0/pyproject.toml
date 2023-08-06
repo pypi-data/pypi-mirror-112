@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "oribos"
+version = "0.1.0"
+description = "A sample Python package"
+authors = ["A. Random Developer <author@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
