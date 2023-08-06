@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+famod.egg-info/PKG-INFO
+famod.egg-info/SOURCES.txt
+famod.egg-info/dependency_links.txt
+famod.egg-info/requires.txt
+famod.egg-info/top_level.txt

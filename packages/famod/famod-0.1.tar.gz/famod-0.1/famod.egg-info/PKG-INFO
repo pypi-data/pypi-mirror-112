@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: famod
+Version: 0.1
+Summary: A package for Facts API
+Home-page: https://elian-1.gitbook.io/facts-api/
+Author: Elian Galdamez
+Author-email: elian.galdamez510@gmail.com
+License: MIT
+Description: this is a package for Facts API, witch can get you fun facts for whatever you need
+        
+        Changes
+        =======
+        
+        0.1 (7/13/2021)
+        
+        ------------
+        
+        - First release
+Keywords: API
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

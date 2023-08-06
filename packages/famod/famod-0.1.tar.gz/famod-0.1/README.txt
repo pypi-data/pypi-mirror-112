@@ -1,0 +1,1 @@
+this is a package for Facts API, witch can get you fun facts for whatever you need
