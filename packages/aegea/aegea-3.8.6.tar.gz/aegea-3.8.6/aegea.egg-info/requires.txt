@@ -1,0 +1,11 @@
+boto3<2,>=1.16.43
+argcomplete<2,>=1.9.5
+paramiko<3,>=2.4.2
+requests<3,>=2.18.4
+tweak<2,>=1.0.3
+pyyaml<6,>=3.12
+python-dateutil<3,>=2.6.1
+babel<3,>=2.4.0
+ipwhois<2,>=1.1.0
+uritemplate<4,>=3.0.0
+chalice<2,>=1.21.7
