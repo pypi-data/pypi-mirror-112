@@ -1,0 +1,10 @@
+setup.py
+etl_package_auto1/__init__.py
+etl_package_auto1/constants.py
+etl_package_auto1/etl.py
+etl_package_auto1/transformations.py
+etl_package_auto1/utils.py
+etl_package_auto1.egg-info/PKG-INFO
+etl_package_auto1.egg-info/SOURCES.txt
+etl_package_auto1.egg-info/dependency_links.txt
+etl_package_auto1.egg-info/top_level.txt
