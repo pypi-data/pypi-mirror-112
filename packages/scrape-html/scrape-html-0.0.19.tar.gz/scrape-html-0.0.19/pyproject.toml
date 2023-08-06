@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "scrape-html"
+version = "0.1.0"
+description = "get html in string from a page"
+authors = ["AndyPythonCode <andyarciniegas24@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pydantic = "^1.8.2"
+selenium = "^3.141.0"
+
+[tool.poetry.dev-dependencies]
+build = "^0.5.1"
+twine = "^3.4.1"
+
+[build-system]
+requires = [
+    "setuptools>=54",
+    "wheel"
+]
+
+build-backend = "setuptools.build_meta"
