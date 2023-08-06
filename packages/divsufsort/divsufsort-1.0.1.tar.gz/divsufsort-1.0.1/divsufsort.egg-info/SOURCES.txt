@@ -1,0 +1,12 @@
+README.md
+setup.py
+divsufsort.egg-info/PKG-INFO
+divsufsort.egg-info/SOURCES.txt
+divsufsort.egg-info/dependency_links.txt
+divsufsort.egg-info/top_level.txt
+src/ext.cpp
+src/ext/divsufsort.c
+src/ext/sssort.c
+src/ext/trsort.c
+src/ext/utils.c
+test/test.py
