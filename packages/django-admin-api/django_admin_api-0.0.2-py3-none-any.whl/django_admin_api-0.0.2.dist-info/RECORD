@@ -1,0 +1,12 @@
+admin_api/__init__.py,sha256=bZQFeg7Zj_ukpevVgF9h28DOzPrThz6qMHN-xGG0MfM,1132
+admin_api/auth.py,sha256=_kN1QGvxMn9zCvK0WC2FaVxOzta5QhLp5NfyiFNHhKQ,5045
+admin_api/core.py,sha256=VHegT_NRGGz1WtdryrUgh3-ESh-PxpAOqhYw8gf0Rzo,1762
+admin_api/decorators.py,sha256=BZxgjWaJA3-bWym6TQGrOMj5VFerRQr1FLquNnjBYDw,171
+admin_api/exceptions.py,sha256=gAs3-JX9IRTckY9Uj7tmX0B1wPxj_IZQwcF_E48-xvM,312
+admin_api/pagination.py,sha256=L-ultstx_0bOGcaATmjdOrXdaWlhXaCNm5-wwYsc3oE,1243
+admin_api/sites.py,sha256=-vdE_8Mo4NzE3U_jXtmiR1DqX2dgoUU16V3w1hO8JSU,8083
+admin_api/viewsets.py,sha256=xvJ-BYAf6c-NluFFo0b9KytUWhagBa3gRetAsrl26oQ,10294
+django_admin_api-0.0.2.dist-info/METADATA,sha256=nqXL2Yc9cKPMHw7iAxWbfp0wLfr5ceE4YoQrNH_wOC4,2234
+django_admin_api-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_admin_api-0.0.2.dist-info/top_level.txt,sha256=t-R0VTKOmUg8rDj2-L7WW4W9nQ1pqQi-NCdvKC6nt5w,10
+django_admin_api-0.0.2.dist-info/RECORD,,
