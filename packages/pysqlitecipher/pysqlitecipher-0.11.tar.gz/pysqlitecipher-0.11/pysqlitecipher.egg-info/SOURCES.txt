@@ -1,0 +1,11 @@
+LICENSE
+LICENSE.txt
+README.md
+setup.py
+pysqlitecipher/__init__.py
+pysqlitecipher/sqlitewrapper.py
+pysqlitecipher.egg-info/PKG-INFO
+pysqlitecipher.egg-info/SOURCES.txt
+pysqlitecipher.egg-info/dependency_links.txt
+pysqlitecipher.egg-info/requires.txt
+pysqlitecipher.egg-info/top_level.txt
