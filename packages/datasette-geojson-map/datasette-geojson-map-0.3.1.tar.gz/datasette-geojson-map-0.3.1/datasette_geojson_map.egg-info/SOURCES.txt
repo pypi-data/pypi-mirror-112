@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+datasette_geojson_map/__init__.py
+datasette_geojson_map.egg-info/PKG-INFO
+datasette_geojson_map.egg-info/SOURCES.txt
+datasette_geojson_map.egg-info/dependency_links.txt
+datasette_geojson_map.egg-info/entry_points.txt
+datasette_geojson_map.egg-info/requires.txt
+datasette_geojson_map.egg-info/top_level.txt
+datasette_geojson_map/static/map.css
+datasette_geojson_map/static/map.js
