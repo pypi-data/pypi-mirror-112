@@ -1,0 +1,76 @@
+{
+  "src/lib/components/DashGallery.react.js": {
+    "description": "",
+    "displayName": "DashGallery",
+    "methods": [
+      {
+        "name": "onSelectImage",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": null
+          },
+          {
+            "name": "image",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "images": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Images to display"
+      },
+      "options": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Gallery Options",
+        "defaultValue": {
+          "value": "{lightBoxWidth: 1024, rowHeight: 100, margin: 2,\n          showImageCount: true, maxRows: null }",
+          "computed": false
+        }
+      },
+      "selected": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Selected Images",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      }
+    }
+  }
+}
