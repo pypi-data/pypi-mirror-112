@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: napari-properties-plotter
+Version: 0.2.1
+Summary: A napari plugin that automatically generates interactive plots based on layer properties.
+Home-page: https://github.com/brisvag/napari-properties-plotter
+Author: Lorenzo Gaifas
+Author-email: lorenzo.gaifas@gmail.com
+License: BSD-3
+Project-URL: Bug Tracker, https://github.com/brisvag/napari-properties-plotter/issues
+Project-URL: Documentation, https://github.com/brisvag/napari-properties-plotter#README.md
+Project-URL: Source Code, https://github.com/brisvag/napari-properties-plotter
+Project-URL: User Support, https://github.com/brisvag/napari-properties-plotter/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: napari
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# napari-properties-plotter
+
+[![License](https://img.shields.io/pypi/l/napari-properties-plotter.svg?color=green)](https://github.com/brisvag/napari-properties-plotter/raw/master/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/napari-properties-plotter.svg?color=green)](https://pypi.org/project/napari-properties-plotter)
+[![Python Version](https://img.shields.io/pypi/pyversions/napari-properties-plotter.svg?color=green)](https://python.org)
+[![tests](https://github.com/brisvag/napari-properties-plotter/workflows/tests/badge.svg)](https://github.com/brisvag/napari-properties-plotter/actions)
+[![codecov](https://codecov.io/gh/brisvag/napari-properties-plotter/branch/master/graph/badge.svg)](https://codecov.io/gh/brisvag/napari-properties-plotter)
+
+A napari plugin that automatically generates interactive plots based on layer properties.
+
+----------------------------------
+
+This [napari] plugin was generated with [Cookiecutter] using with [@napari]'s [cookiecutter-napari-plugin] template.
+
+<!--
+Don't miss the full getting started guide to set up your new package:
+https://github.com/napari/cookiecutter-napari-plugin#getting-started
+
+and review the napari docs for plugin developers:
+https://napari.org/docs/plugins/index.html
+-->
+
+## Installation
+
+You can install `napari-properties-plotter` via [pip]:
+
+    pip install napari-properties-plotter
+
+## Contributing
+
+Contributions are very welcome. Tests can be run with [tox], please ensure
+the coverage at least stays the same before you submit a pull request.
+
+## License
+
+Distributed under the terms of the [BSD-3] license,
+"napari-properties-plotter" is free and open source software
+
+## Issues
+
+If you encounter any problems, please [file an issue] along with a detailed description.
+
+[napari]: https://github.com/napari/napari
+[Cookiecutter]: https://github.com/audreyr/cookiecutter
+[@napari]: https://github.com/napari
+[MIT]: http://opensource.org/licenses/MIT
+[BSD-3]: http://opensource.org/licenses/BSD-3-Clause
+[GNU GPL v3.0]: http://www.gnu.org/licenses/gpl-3.0.txt
+[GNU LGPL v3.0]: http://www.gnu.org/licenses/lgpl-3.0.txt
+[Apache Software License 2.0]: http://www.apache.org/licenses/LICENSE-2.0
+[Mozilla Public License 2.0]: https://www.mozilla.org/media/MPL/2.0/index.txt
+[cookiecutter-napari-plugin]: https://github.com/napari/cookiecutter-napari-plugin
+[file an issue]: https://github.com/brisvag/napari-properties-plotter/issues
+[napari]: https://github.com/napari/napari
+[tox]: https://tox.readthedocs.io/en/latest/
+[pip]: https://pypi.org/project/pip/
+[PyPI]: https://pypi.org/
+
+
