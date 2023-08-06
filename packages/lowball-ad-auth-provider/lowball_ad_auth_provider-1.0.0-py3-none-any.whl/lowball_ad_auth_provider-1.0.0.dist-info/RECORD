@@ -1,0 +1,12 @@
+lowball_ad_auth_provider/__init__.py,sha256=8uAGq3kpjvIOjoKU4DTGLlzxAMmZRx9IXYs9D7um090,29
+lowball_ad_auth_provider/auth_provider.py,sha256=U0grUsiX-WaNp3XFpUL4cn9N8q6tuHw3LtD0mKvz2kg,9406
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_lowball_ad_auth_provider/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_lowball_ad_auth_provider/conftest.py,sha256=tm81l1cyEx9BgeMEbXvw7p2marTFAG0eirf7vy31jZg,5822
+tests/test_lowball_ad_auth_provider/test_auth_provider.py,sha256=sI23kzeQcVyEvO0rNqB6UvvfTr2lIMD7tBHdWe2jweo,20356
+lowball_ad_auth_provider-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+lowball_ad_auth_provider-1.0.0.dist-info/METADATA,sha256=oR693aXYXuuzda4jd3h5Lfu2XY0ZgAcKZENAvcfJ4IU,501
+lowball_ad_auth_provider-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+lowball_ad_auth_provider-1.0.0.dist-info/top_level.txt,sha256=wA9_JRQxlW_-eyO3R1hSsjaYwhsTmACfrahkfi2zd0Y,31
+lowball_ad_auth_provider-1.0.0.dist-info/RECORD,,
