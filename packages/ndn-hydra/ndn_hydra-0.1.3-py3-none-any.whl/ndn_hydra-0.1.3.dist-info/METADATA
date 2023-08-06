@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: ndn-hydra
+Version: 0.1.3
+Summary: ndn-hydra: An NDN distributed repository with resiliency coded in python.
+Home-page: https://github.com/UCLA-IRL/ndn-hydra
+Author: Justin C Presley
+Author-email: justincpresley@gmail.com
+License: Apache License 2.0
+Download-URL: https://pypi.python.org/pypi/ndn-hydra
+Project-URL: Bug Tracker, https://github.com/UCLA-IRL/ndn-hydra/issues
+Project-URL: Source Code, https://github.com/UCLA-IRL/ndn-hydra
+Keywords: NDN HYDRA
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Database
+Classifier: Topic :: Internet
+Classifier: Topic :: System :: Networking
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE.rst
+License-File: AUTHORS.rst
+Requires-Dist: ndn-svs (>=0.2.1)
+Requires-Dist: ndn-python-repo (>=0.2a5)
+Requires-Dist: python-ndn (>=0.3a1.post1)
+Requires-Dist: sphinx-autodoc-typehints (>=1.12.0)
+Requires-Dist: sphinx-rtd-theme (>=0.5.2)
+Requires-Dist: PyYAML (>=5.4.1)
+Requires-Dist: pytest (>=6.2.4)
+
+ndn-hydra: an NDN distributed repo
+==================================
+
+A Named Data Networking (NDN) Distributed Repo implementation using python-ndn_ nicknamed ``hydra``.
+
+Hydra uses ndn-python-svs_ (StateVectorSync) to communicate in a distributed environment.
+
+The implementation is on our github-repo_.
+
+Please see our documentation_.
+
+.. _python-ndn: https://github.com/named-data/python-ndn
+.. _ndn-python-svs: https://github.com/justincpresley/ndn-python-svs
+.. _documentation: https://ndn-hydra.readthedocs.io
+.. _github-repo: https://github.com/UCLA-IRL/ndn-hydra
+
+
