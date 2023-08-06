@@ -1,0 +1,14 @@
+homeassistant_api/__init__.py,sha256=KA2yhzSpRF2SX4IEIfg5ID4c9SAOI-4y_eD9I3UUXtM,38
+homeassistant_api/client.py,sha256=rAbFcUk2yXTJo3DzvX-W2wla976Ks985O6GrH51hg6I,6203
+homeassistant_api/errors.py,sha256=rgZ6QgialtUwi2sNpL4DfhzsTmCnqdlnIq7NS4t19GY,210
+homeassistant_api/rawapi.py,sha256=stQbNNQX4Trv0KUchecIBRWr4aCUl2kOmpVUh-4-j30,1741
+homeassistant_api/models/__init__.py,sha256=5aaHQ_4l8awbFSWACsukq2o70tEb9gYIra1nvskVGDs,125
+homeassistant_api/models/base.py,sha256=KSM_y3MU4wgL9g5KW5nzBFXo7YPQ-EoWY-fesbX3gss,682
+homeassistant_api/models/domains.py,sha256=Lx-Exfw5Ey4MDEyQs_nTDWM1reFhIg7NQQdBdZ2K-8c,1716
+homeassistant_api/models/entity.py,sha256=BniNx_Z_F3315ZMfZlhXUp07wBB9atmA8Lhp8TTor7Q,1609
+homeassistant_api/models/events.py,sha256=FXhYQXt0pqnDE2hgfMTAwuGpP8Teo4n5OqOEn3v2uMQ,369
+homeassistant_api/models/states.py,sha256=bnjlJYHgjd0wcbwqJPDocCiRuZGu9ZbidtV_Ejri8uM,742
+HomeAssistant_API-2.0.0a1.dist-info/METADATA,sha256=xikpsPvdyAUWWQoj4PJMh7PXrxsYtZu5BWVfCQR0wsk,3294
+HomeAssistant_API-2.0.0a1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+HomeAssistant_API-2.0.0a1.dist-info/top_level.txt,sha256=Duk4q1C54DizlUAqQMaEb3LnBOCZXuDArt7r0MeC2BE,18
+HomeAssistant_API-2.0.0a1.dist-info/RECORD,,
