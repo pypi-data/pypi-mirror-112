@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "uint16_to_img"
+version = "1.0.1"
+description = "Converts .uint16 filetypes to images"
+authors = ["Joseph Kern <jkern34@gatech.edu>"]
+repository = "https://github.com/jdkern11/uint16_to_img.git"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+numpy = "^1.2.4"
+opencv_python = "^4.5.2.54"
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
