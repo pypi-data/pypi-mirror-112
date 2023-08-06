@@ -1,0 +1,12 @@
+mongodump_s3/__init__.py,sha256=sQbNM-YfAmzc8p3fdK7mOaNcd-T3gmUsaj9cOk0gFr8,252
+mongodump_s3/__main__.py,sha256=NIePQfFfibst9S8pAA1Po1S0-clTt1LdT5rpVWJgWWg,15304
+mongodump_s3/dump.py,sha256=pGB0ATR74RjvC5ryMNotce9D_4kaBxRL1O2hchrgea8,6660
+mongodump_s3/helpers.py,sha256=2rJUE9rJEDEMXPml-OkwB080iExLC5mXa42GZ9qujrg,479
+mongodump_s3/notifications.py,sha256=vNT5DuC4_cBNM4sF0aVfOEsgPuAIJS6Oln6MhCJjTmY,2973
+mongodump_s3/s3.py,sha256=2E1sWK8GT5YK8mO5vrCtyHJRyqMt1uSYqub65rsSmVk,11206
+mongodump_s3-1.1.1.dist-info/LICENSE,sha256=78ISY87TImp3Vl6_J2ovd2rfBu2ACzHkq0FnwHBVw5g,1076
+mongodump_s3-1.1.1.dist-info/METADATA,sha256=OU76fo0bWvFdaft81565tTKlsA702LpGwXtdbMOX9Sg,5052
+mongodump_s3-1.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mongodump_s3-1.1.1.dist-info/entry_points.txt,sha256=NPyZxX2hPtAcBvIyiwRhf73ZxuFuofHkrfRkYIRNeFY,61
+mongodump_s3-1.1.1.dist-info/top_level.txt,sha256=4Uv2k-W_m-u_z7Xw21K0_2k7jETnHpOgoFOraN65K1s,13
+mongodump_s3-1.1.1.dist-info/RECORD,,
