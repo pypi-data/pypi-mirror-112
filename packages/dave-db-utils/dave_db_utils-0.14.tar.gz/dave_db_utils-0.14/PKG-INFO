@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: dave_db_utils
+Version: 0.14
+Summary: Utilities to help work with Databricks
+Home-page: https://github.com/davidglevy/dave-db-utils
+Author: David Levy
+Author-email: david.g.levy@gmail.com
+License: agpl-3.0
+Download-URL: https://github.com/davidglevy/dave-db-utils/archive/refs/heads/main.zip
+Description: UNKNOWN
+Keywords: UTILITY,DATABRICKS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
