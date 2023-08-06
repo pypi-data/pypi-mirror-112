@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: wumpus.py
+Version: 0.0.0
+Summary: An asynchronous wrapper around Discord's API.
+Home-page: https://github.com/jay3332/wumpus.py
+Author: jay3332
+License: MIT
+Project-URL: Issue tracker, https://github.com/jay3332/wumpus.py/issues
+Project-URL: Discord, https://discord.gg/FqtZ6akWpd
+Description: # wumpus.py
+        An asynchronous wrapper around Discord's API.  
+        
+        ## This project isn't finished yet!
+        This package is far from finished right now - 
+        there's still a lot to cover. We're trying our best though.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+Provides-Extra: docs
+Provides-Extra: performance
