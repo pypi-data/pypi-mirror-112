@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: tabsus
+Version: 0.0.1
+Summary: Library for processing DATASUS database files
+Home-page: https://github.com/gcms/tabsus
+Author: Gustavo Sousa
+Author-email: gustavocms@acm.org
+License: UNKNOWN
+Project-URL: Source Code, https://github.com/gcms/tabsus
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+License-File: LICENSE
+
+Biblioteca para carregar metadados de tabulação de bases de dados do DATASUS a partir de arquivos de definição (DEF) e conversão (CNV).
+
+[Notebook](./exemplo.ipynb) com exemplo de utilização.
+
+
+
