@@ -1,0 +1,144 @@
+Metadata-Version: 2.1
+Name: pyrasgo
+Version: 0.2.2
+Summary: Alpha version of the Rasgo Python interface.
+Home-page: https://www.rasgoml.com/
+Author: Patrick Dougherty
+Author-email: patrick@rasgoml.com
+License: MPL 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: more-itertools
+Requires-Dist: pandas
+Requires-Dist: pydantic
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: tqdm
+Requires-Dist: snowflake-connector-python (>=2.4.0)
+Requires-Dist: snowflake-connector-python[pandas]
+Requires-Dist: idna (<3,>=2.5)
+Requires-Dist: pyarrow (<4,>=3.0.0)
+Provides-Extra: df
+Requires-Dist: shap ; extra == 'df'
+Requires-Dist: catboost ; extra == 'df'
+Provides-Extra: snowflake
+Requires-Dist: snowflake-connector-python (>=2.4.0) ; extra == 'snowflake'
+Requires-Dist: snowflake-connector-python[pandas] ; extra == 'snowflake'
+Requires-Dist: idna (<3,>=2.5) ; extra == 'snowflake'
+Requires-Dist: pyarrow (<4,>=3.0.0) ; extra == 'snowflake'
+
+pyRasgo is a python SDK to interact with the Rasgo API. Rasgo accelerates feature engineering for Data Scientists.
+
+Visit us at https://www.rasgoml.com/ to turn your data into Features in minutes!
+
+Documentation is available at:
+https://docs.rasgoml.com/rasgo-docs/pyrasgo/
+
+
+Package Dependencies
+-------------------------------------------------------------------------------
+- idna>=2.5,<3
+- more-itertools
+- pandas
+- pyarrow>=3.0
+- pydantic
+- pyyaml
+- requests
+- snowflake-connector-python>=2.4.0
+- tqdm
+
+
+Release Notes
+-------------------------------------------------------------------------------
+
+- v0.2.2(July 14, 2021)
+   - Allow for consistency in `evaluate.feature_importance()` evaluation metrics for unchanged dataframes
+   - Allow users to control certain CatBoost parameters when running `evaluate.feature_importance()`
+
+- v0.2.1(July 01, 2021)
+   - expand `evaluate.feature_importance()` to support calculating importance for collections
+
+- v0.2.0(June 24, 2021)
+   - introduce `publish.experiment()` method to fast track dataframes to Rasgo objects
+   - fix register bug
+
+- v0.1.14(June 17, 2021)
+   - improve new user signup experience in `register()` method
+   - fix dataframe bug when experiment wasn't set
+
+- v0.1.13(June 16, 2021)
+   - intelligently run Regressor or Classifier model in `evaluate.feature_importance()`
+   - improve model performance statistics in `evaluate.feature_importance()`: include AUC, Logloss, precision, recall for classification
+
+- v0.1.12(June 11, 2021)
+   - support fqtn in `publish.source_data(table)` parameter
+   - trim timestamps in dataframe profiles to second grain
+
+- v0.1.11(June 9, 2021)
+   - hotfix for unexpected histogram output
+
+- v0.1.10(June 8, 2021)
+   - pin pyarrow dependency to < version 4.0 to prevent segmentation fault errors
+
+- v0.1.9(June 8, 2021)
+   - improve model performance in `evaluate.feature_importance()` by adding test set to catboost eval
+
+- v0.1.8(June 7, 2021)
+   - `evaluate.train_test_split()` function supports non-timeseries dataframes
+   - `evaluate.feature_importance()` function now runs on an 80% training set
+   - adds `timeseries_index` parameter to `evaluate.feature_importance()` & `prune.features()` functions
+
+- v0.1.7(June 2, 2021)
+   - expands dataframe series type recognition for profiling
+
+- v0.1.6(June 2, 2021)
+   - cleans up dataframe profiles to enhance stats and visualization for non-numeric data
+
+- v0.1.5(June 2, 2021)
+   - introduces `pip install "pyrasgo[df]"` option which will install: shap, catboost, & scikit-learn
+
+- v0.1.4(June 2, 2021)
+   - various improvements to dataframe profiles & feature_importance
+
+- v0.1.3(May 27, 2021)
+   - introduces experiment tracking on dataframes
+   - fixes errors when running feature_importance on dataframes with NaN values
+
+- v0.1.2(May 26, 2021)
+   - generates column profile automatically when running feature_importance
+
+- v0.1.1(May 24, 2021)
+   - supports sharing public dataframe profiles
+   - enforces assignment of granularity to dimensions in Publish methods based on list ordering
+
+- v0.1.0(May 17, 2021)
+   - introduces dataframe methods: evaluate, prune, transform
+   - supports free pyrago trial registration
+
+- v0.0.79(April 19, 2021)
+   - support additional datetime data types on Features
+   - resolve import errors
+
+- v0.0.78(April 5, 2021)
+   - adds include_shared param to get_collections() method
+
+- v0.0.77(April 5, 2021)
+   - adds convenience method to rename a Feature’s displayName
+   - adds convenience method to promote a Feature from Sandbox to Production status
+   - fixes permissions bug when trying to read Community data sources from a public org
+
+- v0.0.76(April 5, 2021)
+   - adds columns to DataSource primitive
+   - adds verbose error message to inform users when a Feature name conflict is preventing creation
+
+- v0.0.75(April 5, 2021)
+   - introduce interactive Rasgo primitives
+
+- v0.0.74(March 25, 2021)
+   - upgrade Snowflake python connector dependency to 2.4.0
+   - upgrade pyarrow dependency to 3.0
+
