@@ -1,0 +1,5 @@
+prune tests
+graft asyncsql
+global-exclude *.pyc
+include CHANGELOG.rst
+include LICENSE
