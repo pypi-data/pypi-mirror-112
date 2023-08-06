@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: types-Pygments
+Version: 2.9.0
+Summary: Typing stubs for Pygments
+Home-page: https://github.com/python/typeshed
+License: Apache-2.0 license
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+Requires-Dist: types-docutils
+
+## Typing stubs for Pygments
+
+This is a PEP 561 type stub package for the `Pygments` package.
+It can be used by type-checking tools like mypy, PyCharm, pytype etc. to check code
+that uses `Pygments`. The source for this package can be found at
+https://github.com/python/typeshed/tree/master/stubs/Pygments. All fixes for
+types and metadata should be contributed there.
+
+See https://github.com/python/typeshed/blob/master/README.md for more details.
+This package was generated from typeshed commit `7f320c6b9e148fb0ffc8e4e98ff207bb2fb378b7`.
+
+
