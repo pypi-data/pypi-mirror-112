@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: bijoy_to_unicode_file_converter
+Version: 1.0
+Summary: Convert your Bijoy text file to unicode text file easily.
+Home-page: https://github.com/almehady/Bijoy-to-Unicode-File-Converter
+Author: Al Mehady
+Author-email: almehady@gmail.com
+License: UNKNOWN
+Description: # Bijoy to Unicode File Converter
+        
+        If you want to convert your bijoy file to unicode you can use this package.
+        
+        ## How to use this package
+        
+        `pip install `
+        
+        
+        **Credit**
+        - bijoy2unicode
+        - langdetect
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: License :: Freely Distributable
+Description-Content-Type: text/markdown
