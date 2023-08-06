@@ -1,0 +1,24 @@
+# Releases
+
+## peodd 0.2.0 - (2021-07-11)
+
+**Performance improvements:**
+
+ * Use tomli instead of tomlkit\
+   tomli is 14x as fast as tomlkit. This change replaces existing tomlkit
+   code with the tomli methods. It also adds a condition to validate the
+   pyproject.toml file.
+
+
+## peodd 0.1.0 - (2021-07-07)
+
+**New features:**
+
+ * Add script for exporting poetry dev-dependencies to a txt file\
+   Poetry has an option to export the dependencies to a txt file. If you
+   need the dev dependencies too, then you need add `dev` flag with the
+   export command. But, there is no support to export only the dev-
+   dependencies. This script is a workaround & quick-solution to this
+   problem.  It can export the dev-dependencies to a requirements-dev.txt
+   file. Usage: ``` $ peodd -o requirements-dev.txt ```
+
