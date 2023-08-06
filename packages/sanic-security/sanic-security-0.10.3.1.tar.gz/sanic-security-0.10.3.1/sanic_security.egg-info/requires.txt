@@ -1,0 +1,7 @@
+sanic>=21.3.0
+tortoise-orm>=0.17.0
+aiofiles
+pyjwt
+captcha
+aiosmtplib
+httpx
