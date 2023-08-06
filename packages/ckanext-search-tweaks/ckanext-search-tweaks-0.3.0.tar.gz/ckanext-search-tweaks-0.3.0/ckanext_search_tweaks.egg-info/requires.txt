@@ -1,0 +1,5 @@
+freezegun
+typing_extensions
+
+[advanced-search]
+ckanext-composite-search~=0.1.3
