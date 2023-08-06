@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+example.py
+setup.cfg
+setup.py
+bitsnbytes/__init__.py
+bitsnbytes.egg-info/PKG-INFO
+bitsnbytes.egg-info/SOURCES.txt
+bitsnbytes.egg-info/dependency_links.txt
+bitsnbytes.egg-info/top_level.txt
