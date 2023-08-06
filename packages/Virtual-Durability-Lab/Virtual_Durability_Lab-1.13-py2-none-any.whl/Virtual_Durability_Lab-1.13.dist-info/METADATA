@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: Virtual-Durability-Lab
+Version: 1.13
+Summary: Virtual environnement allowed us to simulate endurance testing.
+Home-page: UNKNOWN
+Author: Valentin Chmara
+Author-email: valentinchmara@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.13.3)
+Requires-Dist: matplotlib (>=2.1.0)
+Requires-Dist: scipy (>=0.19.1)
+
+UNKNOWN
+
+
