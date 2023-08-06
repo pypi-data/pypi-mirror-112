@@ -1,0 +1,133 @@
+name: test
+
+on:
+  push:
+    paths:
+    - 'cvehound/**'
+    - 'tests/**'
+  pull_request:
+    paths:
+    - 'cvehound/**'
+    - 'tests/**'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * MON'
+
+jobs:
+  build:
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.6]
+        os: [ubuntu-latest]
+        ocaml-version: [4.07.1]
+        coccinelle-version: [system, 1.0.7, 1.0.8, 1.0.9, 1.1.0, git]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Get Date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m')"
+
+    - name: Cache Opam
+      uses: actions/cache@v2
+      if: ${{ matrix.coccinelle-version != 'system' }}
+      with:
+        path: ~/.opam
+        key: ${{ runner.os }}-opam-${{ matrix.ocaml-version }}-${{ matrix.coccinelle-version }}
+        restore-keys: |
+          ${{ runner.os }}-opam-${{ matrix.ocaml-version }}-
+
+    - name: Cache Kernel Bundle
+      uses: actions/cache@v2
+      with:
+        path: clone.bundle
+        key: linux-${{ steps.date.outputs.date }}
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Update Apt-Get Index
+      run: sudo apt-get update -qq
+
+    - name: Install system Coccinelle with apt
+      if: ${{ matrix.coccinelle-version == 'system' }}
+      run: |
+        sudo add-apt-repository ppa:npalix/coccinelle
+        sudo apt-get update -qq
+        sudo apt-get install -y coccinelle
+
+    - name: Set up Opam
+      if: ${{ matrix.coccinelle-version != 'system' }}
+      run: |
+        sudo apt-get install -y python-dev aspcud ocaml
+        wget --quiet --no-clobber https://github.com/ocaml/opam/releases/download/2.0.8/opam-2.0.8-x86_64-linux -O opam
+        chmod +x opam
+        sudo mv opam /usr/local/bin
+        opam init --auto-setup --disable-sandboxing --compiler=${{ matrix.ocaml-version }}
+        opam update
+        opam upgrade --yes
+
+    - name: Install Coccinelle with opam (${{ matrix.coccinelle-version }})
+      if: ${{ matrix.coccinelle-version != 'system' && matrix.coccinelle-version != 'git' }}
+      run: |
+        eval $(opam env)
+        opam install -y coccinelle.${{ matrix.coccinelle-version }}
+
+    - name: Install latest Coccinelle from git
+      if: ${{ matrix.coccinelle-version == 'git' }}
+      run: |
+        eval $(opam env)
+        opam install -y num camlp4 pcre pyml menhir
+        git clone https://github.com/coccinelle/coccinelle
+        cd coccinelle
+        ./autogen
+        ./configure --enable-python --enable-ocaml --enable-pcre-syntax --enable-pcre --enable-opt --disable-bytes
+        make
+        sudo make install
+
+    - name: Spatch Version
+      run: |
+        which opam >/dev/null 2>&1 && eval $(opam env)
+        spatch --version
+
+    - name: Install CVEhound
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install --upgrade pytest
+        python -m pip install -e '.[tests]'
+
+    - name: Download Linux Tree
+      run: |
+        if [[ ! -f clone.bundle ]]; then
+          sudo apt-get install -y axel
+          axel -q https://mirrors.edge.kernel.org/pub/scm/.bundles/pub/scm/linux/kernel/git/stable/linux/clone.bundle
+        fi
+        git clone clone.bundle tests/linux
+        cd tests/linux
+        git remote set-url origin git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+        git remote add next git://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git
+        git remote add stable git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+        git remote update origin
+        git fetch stable
+        git fetch next
+        cd -
+
+    - name: Test with pytest
+      run: |
+        sudo setcap cap_sys_nice,cap_sys_admin+eip $(realpath $(which python3))
+        which opam >/dev/null 2>&1 && eval $(opam env)
+        readarray RULES < <(git diff --name-only ${{ github.event.before }}..${{ github.event.after }} | grep -o 'CVE-[[:digit:]]*-[[:digit:]]*')
+        if [[ ${#RULES[@]} -gt 0 && ${#RULES[@]} -le 5 ]]; then
+          pytest --runslow $(for rule in ${RULES[@]}; do echo " --cve=$rule "; done)
+        else
+          pytest
+        fi

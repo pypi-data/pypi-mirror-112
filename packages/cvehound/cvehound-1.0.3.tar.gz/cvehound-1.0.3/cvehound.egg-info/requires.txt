@@ -1,0 +1,6 @@
+sympy
+
+[tests]
+pytest
+gitpython
+psutil
