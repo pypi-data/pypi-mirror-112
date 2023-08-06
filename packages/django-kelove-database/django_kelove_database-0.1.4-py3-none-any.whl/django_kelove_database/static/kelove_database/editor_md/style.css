@@ -1,0 +1,51 @@
+.kelove_md_editor_content {
+    width: 100%;
+    min-height: 280px;
+}
+
+.kelove_md_editor_content.editormd-fullscreen {
+    max-height: 100%;
+    z-index: 8888;
+}
+
+.editormd-menu {
+    margin: 0 !important;
+}
+
+.editormd-mask {
+    z-index: 7777 !important;
+}
+
+.editormd-dialog {
+    height: auto !important;
+    z-index: 8888 !important;
+}
+
+
+form .aligned .kelove_md_editor_content ul:not(.markdown-toc-list),
+form .aligned .kelove_md_editor_content ul:not(.markdown-toc-list) li {
+    list-style: square;
+}
+
+form .aligned .ck-editor .ck.ck-editor__main > .ck-editor__editable ol,
+form .aligned .ck-editor .ck.ck-editor__main > .ck-editor__editable ol li {
+
+}
+
+form .aligned .kelove_md_editor_content ul:not(.markdown-toc-list),
+form .aligned .kelove_md_editor_content ol {
+    margin: initial;
+    padding: initial;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+form .aligned .kelove_md_editor_content ul.markdown-toc-list {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+form .aligned .kelove_md_editor_content h2 {
+    background-color: inherit;
+    color: inherit;
+}

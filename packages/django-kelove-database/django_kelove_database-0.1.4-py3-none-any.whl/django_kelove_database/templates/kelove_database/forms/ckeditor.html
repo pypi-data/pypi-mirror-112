@@ -1,0 +1,8 @@
+<div style="width:100%;display: block;clear: both;">
+<textarea name="{{ widget.name }}"
+        {% include "django/forms/widgets/attrs.html" %}>{{ widget.value|default:"" }}</textarea>
+</div>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY/Dz8/sPAAPCAeqtgBOJAAAAAElFTkSuQmCC"
+     id="editor_ck__hidden_image_{{ widget.attrs.id }}" alt=""
+     onload="initEditorCkDjango(this.id,'{{ widget.attrs.id }}');"
+     style="width:0;height:0;border:none;margin:0;padding:0;">

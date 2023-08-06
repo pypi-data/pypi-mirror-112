@@ -1,0 +1,35 @@
+.ck-editor .ck.ck-editor__main > .ck-editor__editable {
+    min-height: 320px;
+}
+
+form .aligned .ck-editor .ck.ck-editor__main > .ck-editor__editable ul:not(.todo-list),
+form .aligned .ck-editor .ck.ck-editor__main > .ck-editor__editable ul:not(.todo-list) li {
+    list-style: square;
+}
+
+form .aligned .ck-editor .ck.ck-editor__main > .ck-editor__editable ol,
+form .aligned .ck-editor .ck.ck-editor__main > .ck-editor__editable ol li {
+
+}
+
+form .aligned .ck-editor .ck.ck-editor__main > .ck-editor__editable ul,
+form .aligned .ck-editor .ck.ck-editor__main > .ck-editor__editable ol {
+    margin: initial;
+    padding: initial;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+form .aligned .ck-editor .ck.ck-editor__main > .ck-editor__editable h2 {
+    background-color: inherit;
+    color: inherit;
+}
+
+form .aligned .ck-editor .ck.ck-editor__main > .ck-editor__editable ul.todo-list li {
+    margin: 0;
+}
+
+form .aligned .ck-editor .ck.ck-editor__main > .ck-editor__editable ul.todo-list li .todo-list__label,
+form .aligned .ck-editor .ck.ck-editor__main > .ck-editor__editable ul.todo-list li .todo-list__label > input {
+    padding: 0;
+}

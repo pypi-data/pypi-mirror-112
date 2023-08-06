@@ -1,0 +1,17 @@
+{% load static %}
+
+<div style="width: 100%;display: block;">
+    <div class="kelove_md_editor_content"
+         id="editor_md_{{ widget.attrs.id }}_content"
+         data-textarea-id="{{ widget.attrs.id }}"
+         data-lib-path="{% static 'kelove_database/editor_md/lib' %}/">
+        <textarea
+                style="display: none;"
+                name="{{ widget.name }}"
+                {% include "django/forms/widgets/attrs.html" %}>{{ widget.value|default:"" }}</textarea>
+    </div>
+</div>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY/Dz8/sPAAPCAeqtgBOJAAAAAElFTkSuQmCC"
+     id="editor_md__hidden_image_{{ widget.attrs.id }}" alt=""
+     onload="initEditorMdDjango(this.id,'{{ widget.attrs.id }}');"
+     style="width:0;height:0;border:none;margin:0;padding:0;">

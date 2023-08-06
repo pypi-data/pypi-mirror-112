@@ -1,0 +1,25 @@
+{% load static %}
+
+<input type="text" name="{{ widget.name }}"
+        {% if widget.value != None %} value="{{ widget.value|stringformat:'s' }}"{% endif %}
+        {% include "django/forms/widgets/attrs.html" %}>
+<a class="ckfinder-controller-btn related-widget-wrapper-link change-related" title="选择"
+   id="ckfinder-controller-btn-1{{ widget.attrs.id }}" onclick="selectFileWithCKFinderDjango(this,'1');">
+    <img src="{% static 'admin/img/icon-changelink.svg' %}" alt=" 选择">
+</a>
+<a class="ckfinder-controller-btn related-widget-wrapper-link add-related" title="增加"
+   id="ckfinder-controller-btn-2{{ widget.attrs.id }}" onclick="selectFileWithCKFinderDjango(this,'2');">
+    <img src="{% static 'admin/img/icon-addlink.svg' %}" alt=" 增加">
+</a>
+<a class="ckfinder-controller-btn related-widget-wrapper-link delete-related" title="删除"
+   id="ckfinder-controller-btn-3{{ widget.attrs.id }}"
+   onclick="delFileWithCKFinderDjango(this,'3')">
+    <img src="{% static 'admin/img/icon-deletelink.svg' %}" alt="删除">
+</a>
+<div class="ckfinder-image-show">
+    <img class="ckfinder-image-show-item"
+         id="{{ widget.attrs.id }}_ckfinder_img"
+         alt="预览"
+         data-error-image="{% static 'kelove_database/ckfinder/skins/neko/file-icons/256/unknow.png' %}"
+         src="{{ widget.value|stringformat:'s' }}">
+</div>

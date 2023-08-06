@@ -1,0 +1,116 @@
+Metadata-Version: 2.1
+Name: django-kelove-database
+Version: 0.1.4
+Summary: DJANGO 数据库增强插件
+Home-page: https://gitee.com/itxq/django-kelove-database
+License: Apache-2.0
+Keywords: django,django-kelove,django-kelove-database
+Author: IT小强xqitw.cn
+Author-email: mail@xqitw.cn
+Maintainer: IT小强xqitw.cn
+Maintainer-email: mail@xqitw.cn
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: django-kelove-setting (>=0.3,<0.4)
+Requires-Dist: pillow (>=8.0,<9.0)
+Project-URL: Documentation, https://gitee.com/itxq/django-kelove-database/blob/master/README.md
+Project-URL: Repository, https://gitee.com/itxq/django-kelove-database.git
+Description-Content-Type: text/markdown
+
+DJANGO 数据库增强
+================
+
+[![Django Kelove Setting Version](https://img.shields.io/badge/stable-v0.1.4-blue.svg)](https://gitee.com/itxq/django-kelove-database)
+[![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/)
+[![Django Version](https://img.shields.io/badge/Django-v3.1+-important.svg)](https://www.djangoproject.com/)
+[![LICENSE](https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg)](https://gitee.com/itxq/django-kelove-database/blob/master/LICENSE)
+
+### 主要功能
+
++ 迁移支持写入表注释及字段注释
+
++ 迁移支持写入字段默认值
+
++ 在线数据库设计文档生成
+
++ CKFinder文件上传字段集成
+
++ CKEditor编辑器字段集成
+
++ Markdown编辑器字段集成
+
++ JSON字段集成
+
+### 需要加载的应用模块
+
+```python
+INSTALLED_APPS = [
+    ...
+    # 配置管理插件
+    'django_kelove_setting',
+    # 数据库增强插件
+    'django_kelove_database',
+    ...
+]
+```
+
+### 需要添加的路由地址
+
+```python
+from django.urls import path, include
+
+urlpatterns = [
+    ...
+    # 数据库增强（主要用于ckfinder文件上传）
+    path('database/', include('django_kelove_database.urls', namespace='django_kelove_database')),
+    ...
+]
+```
+
+### MySQL配置示例
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django_kelove_database.db.backends.mysql',
+        'NAME': 'test',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
+        # 'INCLUDE_DEFAULT': True,
+        'INCLUDE_DEFAULT': lambda model, field, include_default, connection: False if field.db_parameters(
+            connection=connection
+        )['type'] in ['longtext', 'longblob'] else True,
+        'OPTIONS': {'charset': 'utf8mb4'}
+    }
+}
+```
+
+### 扩展字段使用示例
+
+```python
+from django.db import models
+
+from django_kelove_database.db import fields
+
+
+class FieldDemo(models.Model):
+
+    json_field = fields.JSONField(verbose_name='JSON演示', blank=True, null=False, default=dict)
+
+    ck_finder_field = fields.CkFinderField(verbose_name='文件上传', max_length=191, blank=True, null=False, default='')
+
+    editor_md_field = fields.EditorMdField(verbose_name='Markdown编辑器', blank=True, null=False, default='')
+
+    editor_ck_field = fields.EditorMdField(verbose_name='Ckeditor', blank=True, null=False, default='')
+```
