@@ -1,0 +1,12 @@
+GreenPonik_Atlas_Scientific_OEM_i2c/AtlasOEMI2c.py,sha256=MGMcs9hvsz6jluhZr_lOcxHdyo1cyWIkE7x60pZsnGQ,10119
+GreenPonik_Atlas_Scientific_OEM_i2c/CommonsI2c.py,sha256=_g2dPvqQcQ7V8WX17gbRZoud498j6jNRJ-Q5lJbHdY8,13765
+GreenPonik_Atlas_Scientific_OEM_i2c/ECI2c.py,sha256=DUn8pdVqFp37kA0dGLWdSJrDfL8QxYSr0MHnEaxVEkA,1752
+GreenPonik_Atlas_Scientific_OEM_i2c/PHI2c.py,sha256=l0-Jg3S3bMKJx8OpHJSBKxn_u1rhJhHh9MUaHDGXt1Q,1285
+GreenPonik_Atlas_Scientific_OEM_i2c/__init__.py,sha256=FTToafYo9ohdDZAx18Fn42zMij72BNnFCypMJaaNoSU,267
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_ECI2c.py,sha256=M0y5nIaQn-boGQHJ9OWdNn_UHxCPmPYCy5gNEPFYFo8,2271
+tests/test_PHI2c.py,sha256=2YThLy3OwPvtbbGSlYB1BNCOOvu3SiTWPc37ekhSEuc,2270
+greenponik_atlas_scientific_oem_i2c-0.0.6.dist-info/METADATA,sha256=JhCXTqqAmJD3AWHNyGlVZc65w8vXCNKSv1WA-X-dSDA,4992
+greenponik_atlas_scientific_oem_i2c-0.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+greenponik_atlas_scientific_oem_i2c-0.0.6.dist-info/top_level.txt,sha256=0rsnyj8hOXBGS8nalyLAmXuRSXuTS6LVQ61Bg9f--10,42
+greenponik_atlas_scientific_oem_i2c-0.0.6.dist-info/RECORD,,
