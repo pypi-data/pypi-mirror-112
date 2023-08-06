@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: indico-plugin-livesync
+Version: 3.0rc2
+Summary: Framework for pushing Indico event data to external services
+Home-page: https://github.com/indico/indico-plugins
+Author: Indico Team
+Author-email: indico-team@cern.ch
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: ~=3.9.0
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Requires-Dist: indico (>=3.0rc2)
+
+# LiveSync Plugin
+
+The LiveSync plugin provides a framework for exporting Indico event data to
+external services, typically to provide advanced search functionality.
+
+## Changelog
+
+### 3.0
+
+- Initial release for Indico 3.0
+- Major changes to improve efficiency and correctness of the data sent both
+  during an initial data export and during queue runs
+
+
