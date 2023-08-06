@@ -1,0 +1,3 @@
+[console_scripts]
+quickcpp=quickcpp.main:main
+
