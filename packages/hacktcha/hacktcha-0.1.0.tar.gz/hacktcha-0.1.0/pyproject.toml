@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "hacktcha"
+version = "0.1.0"
+description = ""
+authors = ["zillionare <code@jieyu.ai>"]
+
+[tool.poetry.dependencies]
+python = "^3.7.9"
+captcha = "^0.3"
+fire = "^0.4.0"
+uuid = "^1.30"
+fastai = "^2.3"
+sanic = "^21.6.0"
+aiofiles = "^0.7.0"
+numpy = "^1.21.0"
+torch = "^1.7.1"
+pillow = "^8.2"
+aiohttp = "^3.7.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
