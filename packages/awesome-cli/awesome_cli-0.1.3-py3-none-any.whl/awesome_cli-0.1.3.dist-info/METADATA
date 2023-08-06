@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: awesome-cli
+Version: 0.1.3
+Summary: Awesome CLI search
+Home-page: https://github.com/mlouielu/awesome-cli
+License: MIT
+Author: Louie Lu
+Author-email: git@louie.lu
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cleo (>=0.8.1,<0.9.0)
+Requires-Dist: colorful (>=0.5.4,<0.6.0)
+Requires-Dist: lxml (>=4.6.3,<5.0.0)
+Requires-Dist: mistune (>=0.8.4,<0.9.0)
+Description-Content-Type: text/markdown
+
+Awesome CLI
+===========
+
+Awesome List in CLI search (WIP)
+
+
+✨✨✨ *So Awesome* ✨✨✨
+
+
+Current *Awesome* Support:
+
+* [agarrharr/awesome-cli-apps](https://github.com/agarrharr/awesome-cli-apps)
+
+
+Quick Start
+-----------
+
+Show all awesome list
+
+```
+$ awesome-cli
+✨ Entertainment
+football-cli - Get live scores, fixtures, standings of almost every football competition/league.
+🔗 https://github.com/ManrajGrover/football-cli
+pockyt - Read, Manage, and Automate your Pocket collection.
+🔗 https://github.com/arvindch/pockyt
+newsboat - An extendable RSS feed reader for text terminals.
+🔗 https://github.com/newsboat/newsboat
+
+- 💥 Music
+cmus - Small, fast and powerful console music player.
+...
+```
+
+Show header only
+
+```
+$ awesome-cli -k
+✨ Entertainment
+- 💥 Music
+- 💥 Social Media
+- 💥 Video
+- 💥 Movies
+- 💥 Games
+- 💥 Books
+✨ Development
+- 💥 Text Editors
+...
+```
+
+Don't show URL
+
+```
+$ awesome-cli -u
+✨ Entertainment
+football-cli - Get live scores, fixtures, standings of almost every football competition/league.
+pockyt - Read, Manage, and Automate your Pocket collection.
+newsboat - An extendable RSS feed reader for text terminals.
+
+- 💥 Music
+cmus - Small, fast and powerful console music player.
+...
+```
+
+Install
+-------
+
+```
+$ python -m pip install awesome-cli
+```
+
+
+Prerequirements
+---------------
+
+* poetry
+
+Build
+-----
+
+```
+$ poetry build
+```
+
+TODO
+----
+
+- [ ] Support multi awesome list
+- [ ] Support search
+- [ ] Support showing specific section only
+

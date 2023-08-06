@@ -1,0 +1,14 @@
+awesome_cli/__init__.py,sha256=tw2PCN85vTcSTSv7f7lgRly66NwbpLYPNceAtKNAKJo,82
+awesome_cli/__main__.py,sha256=Q14YDvfsnyXN7tbnpiaKWGdeBu34dBQ6KAbnN5E0pPo,115
+awesome_cli/__version__.py,sha256=XEqb2aiIn8fzGE68Mph4ck1FtQqsR_am0wRWvrYPffQ,22
+awesome_cli/application.py,sha256=jfEERRw_DKUVxlv5qFHWnGzKj0JTPM4CR-wQhOr0PIo,419
+awesome_cli/awesome_parser.py,sha256=R4PEAEgeNvs8blQoFtjlqRknlO-4yVOln1yys285uvM,1613
+awesome_cli/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+awesome_cli/commands/awesome_cli_apps.py,sha256=ZtbLZk_LfjicdoLDXVw75-_ufPP4u9eJ3MGJw9XQJe8,764
+awesome_cli/config.py,sha256=0J-y4Aq4FReB9DBordx7t9CY-UDOnJSJQLT7B5djtRE,1887
+awesome_cli/data/agarrharr-awesome-cli-apps.md,sha256=3zvGqgHYWl3jfHILraZemqWKTJPtucOvdzwLALGRHu4,37126
+awesome_cli-0.1.3.dist-info/entry_points.txt,sha256=MpIVBXvVaP9pKdnjP_7BdBySolk8fs7gVN48KFOJ2z8,48
+awesome_cli-0.1.3.dist-info/LICENSE,sha256=CgY9GaDsDH-r-Z3lKlDplL3mSnyDTP1Z1Bqs8onF9Dg,1048
+awesome_cli-0.1.3.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+awesome_cli-0.1.3.dist-info/METADATA,sha256=JmzwsTCBNczvGSITVR3W6HKv0c54W2SLbvywIFY80hE,2169
+awesome_cli-0.1.3.dist-info/RECORD,,
