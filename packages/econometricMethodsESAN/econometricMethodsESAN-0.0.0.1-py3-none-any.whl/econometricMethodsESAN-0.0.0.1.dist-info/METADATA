@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: econometricMethodsESAN
+Version: 0.0.0.1
+Summary: Economic models
+Home-page: UNKNOWN
+Author: Alvin Sulca Vega
+Author-email: <alvinldf@gmail.com>
+License: UNKNOWN
+Keywords: python
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: cycler
+Requires-Dist: Cython
+Requires-Dist: joblib
+Requires-Dist: kiwisolver
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: patsy
+Requires-Dist: Pillow
+Requires-Dist: pmdarima
+Requires-Dist: pyparsing
+Requires-Dist: python-dateutil
+Requires-Dist: pytz
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: six
+Requires-Dist: statsmodels
+Requires-Dist: threadpoolctl
+Requires-Dist: urllib3
+Requires-Dist: bleach
+Requires-Dist: certifi
+Requires-Dist: cffi
+Requires-Dist: chardet
+Requires-Dist: colorama
+Requires-Dist: cryptography
+Requires-Dist: docutils
+Requires-Dist: idna
+Requires-Dist: importlib-metadata
+Requires-Dist: jeepney
+Requires-Dist: packaging
+Requires-Dist: pkginfo
+Requires-Dist: pycparser
+Requires-Dist: Pygments
+Requires-Dist: readme-renderer
+Requires-Dist: requests
+Requires-Dist: requests-toolbelt
+Requires-Dist: rfc3986
+Requires-Dist: SecretStorage
+Requires-Dist: tqdm
+Requires-Dist: twine
+Requires-Dist: webencodings
+Requires-Dist: zipp
+
+UNKNOWN
+
