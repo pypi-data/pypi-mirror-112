@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: sani-nlu
+Version: 0.0.3
+Summary: Sani-NLU is a library to implement NLU component for Sani chatbot.
+Home-page: https://github.com/phamnam-mta/sani_nlu.git
+Author: namph
+Author-email: phamnam.mta@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: sani_nlu
+Platform: UNKNOWN
+Requires-Python: >=3.6
