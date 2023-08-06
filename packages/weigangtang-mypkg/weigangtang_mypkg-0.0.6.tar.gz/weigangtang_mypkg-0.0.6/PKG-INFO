@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: weigangtang_mypkg
+Version: 0.0.6
+Summary: everyday functions for myself
+Home-page: UNKNOWN
+Author: Weigang (Victor) Tang
+Author-email: tangw5@mcmaster.ca
+License: MIT
+Keywords: basic
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: OS Independent 
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+# Package Description
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
+This pacakge is just for my self
+
+
+# Change Log 
+
+* 2021-07-07
+	* Include two function scripts
+
+* 2021-07-08
+	* bug fixed
+	* new functions added
+

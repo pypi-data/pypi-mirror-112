@@ -1,0 +1,13 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+README.txt
+setup.py
+weigangtang_mypkg/__init__.py
+weigangtang_mypkg/mktest.py
+weigangtang_mypkg/myfunc.py
+weigangtang_mypkg.egg-info/PKG-INFO
+weigangtang_mypkg.egg-info/SOURCES.txt
+weigangtang_mypkg.egg-info/dependency_links.txt
+weigangtang_mypkg.egg-info/top_level.txt
