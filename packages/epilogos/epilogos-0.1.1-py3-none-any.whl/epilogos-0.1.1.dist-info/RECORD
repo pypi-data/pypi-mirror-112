@@ -1,0 +1,17 @@
+epilogos/__init__.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+epilogos/expected.py,sha256=w2hP2pgYTrb1WCJK-zY40drhK2ylCgO6lqxuHiY1srE,10180
+epilogos/expectedCombination.py,sha256=OsrDp5DPpcKYLWgbr0HF5bstsD0bAMEiN_l_4zz__vU,1606
+epilogos/greatestHits.py,sha256=-kDqQnDD8cAaFTb26ebInZMp5q3WqYgAyX57oUU1ol4,6406
+epilogos/helpers.py,sha256=z7TgOBPa1f9cR8ayALspcBKJq_9K1Wg6kM3aSHzLcIM,7556
+epilogos/pairwiseVisual.py,sha256=AoEOMFMuNpzVTWXFEB5VU0uDsp7mtWkRnUO6KCbpLr0,47630
+epilogos/run.py,sha256=xmDqw6lD7yz4WsS_2FOjYTZbU1wTIgLArYc95TepUgU,32686
+epilogos/scores.py,sha256=8_EA2iGdsfPr7C44I9CRZcRkYHy-MM2tGu1dU2goLqI,27073
+epilogos/test.py,sha256=OtYu7vr3H3kjCxWkJ8P0LYL1v4-pqJkmo4fS6H37VBc,6612
+epilogos-0.1.1.data/scripts/download_example_data.sh,sha256=EsUqGp-lv3ijavkDCFGed7UKixr3O0q8IDtWnbZVceI,1680
+epilogos-0.1.1.data/scripts/preprocess_data_ChromHMM.sh,sha256=gL42RQDt2XuDRREC_ryKu-gLkbNZA5smNsxt8GIMmEk,2182
+epilogos-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+epilogos-0.1.1.dist-info/METADATA,sha256=rbK2LAp32Km4wvASyfKM8YEs2R6L6D8mF9CGFQI7vEw,4142
+epilogos-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+epilogos-0.1.1.dist-info/entry_points.txt,sha256=hejJiVyJ7-DN20hqxPyA5I-ysY6m7N5hWYNoEKhB40w,48
+epilogos-0.1.1.dist-info/top_level.txt,sha256=0mAzlY1mI8KS2-_Ewjmr2URDURrr54ENVMkKp4k2BS0,9
+epilogos-0.1.1.dist-info/RECORD,,

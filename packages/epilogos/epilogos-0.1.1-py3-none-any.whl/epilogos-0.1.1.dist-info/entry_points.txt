@@ -1,0 +1,3 @@
+[console_scripts]
+epilogos = epilogos.run:main
+
