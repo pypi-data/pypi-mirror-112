@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+usethatPy/__init__.py
+usethatPy/pdf2image.py
+usethatPy/punctuation_mend.py
+usethatPy/yoda.py
+usethatPy.egg-info/PKG-INFO
+usethatPy.egg-info/SOURCES.txt
+usethatPy.egg-info/dependency_links.txt
+usethatPy.egg-info/top_level.txt
