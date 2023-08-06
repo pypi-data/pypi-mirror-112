@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: tiddlyserver
+Version: 0.2.0
+Summary: A small personal server for TiddlyWiki.
+Home-page: https://github.com/mossblaser/tiddlyserver
+Author: Jonathan Heathcote
+Author-email: mail@jhnet.co.uk
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: flask ~= 2.0
+Requires-Dist: waitress ~= 2.0
+Requires-Dist: GitPython ~= 3.0

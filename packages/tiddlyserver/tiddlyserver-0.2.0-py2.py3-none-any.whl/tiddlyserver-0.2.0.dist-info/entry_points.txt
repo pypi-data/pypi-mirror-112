@@ -1,0 +1,4 @@
+[console_scripts]
+make-tiddlywiki-reenable-plugin-downloads-plugin=tiddlyserver.make_reenable_plugin_downloads_plugin:main
+tiddlyserver=tiddlyserver.server:main
+
