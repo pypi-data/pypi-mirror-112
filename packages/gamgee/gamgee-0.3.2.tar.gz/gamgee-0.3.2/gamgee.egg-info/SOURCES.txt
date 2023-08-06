@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+gamgee/__init__.py
+gamgee/args.py
+gamgee/auth.py
+gamgee/errors.py
+gamgee/parsers.py
+gamgee/types.py
+gamgee.egg-info/PKG-INFO
+gamgee.egg-info/SOURCES.txt
+gamgee.egg-info/dependency_links.txt
+gamgee.egg-info/requires.txt
+gamgee.egg-info/top_level.txt
