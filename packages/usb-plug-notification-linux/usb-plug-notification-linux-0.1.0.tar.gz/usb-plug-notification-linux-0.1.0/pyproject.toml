@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "usb-plug-notification-linux"
+version = "0.1.0"
+description = "Python script to get plug/unplug events on Linux"
+authors = ["Dick Marinus"]
+license = "GPL-3-or-later"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyudev = "^0.22.0"
+dbus-python = "^1.2.16"
+PyGObject = "^3.40.1"
+click = "^8.0.1"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+usb-plug-notification = "usb_plug_notification_linux:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

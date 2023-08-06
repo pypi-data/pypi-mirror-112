@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: usb-plug-notification-linux
+Version: 0.1.0
+Summary: Python script to get plug/unplug events on Linux
+License: GPL-3-or-later
+Author: Dick Marinus
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyGObject (>=3.40.1,<4.0.0)
+Requires-Dist: click (>=8.0.1,<9.0.0)
+Requires-Dist: dbus-python (>=1.2.16,<2.0.0)
+Requires-Dist: pyudev (>=0.22.0,<0.23.0)
