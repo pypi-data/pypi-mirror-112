@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        conditional-get=conditional_get.cli:cli
+    

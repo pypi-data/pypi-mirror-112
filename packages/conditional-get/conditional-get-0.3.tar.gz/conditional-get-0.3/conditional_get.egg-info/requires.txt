@@ -1,0 +1,6 @@
+httpx
+click
+
+[test]
+pytest
+pytest-mock
