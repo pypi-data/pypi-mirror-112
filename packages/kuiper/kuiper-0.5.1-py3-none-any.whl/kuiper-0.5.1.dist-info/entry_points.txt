@@ -1,0 +1,3 @@
+[console_scripts]
+kuiper=kuiper.main:main
+
