@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: keras-video-generators-modified
+Version: 0.1
+Summary: Keras sequence generators for video data
+Home-page: UNKNOWN
+Author: Moumita Sen
+Author-email: moumitactg@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: keras (>=2)
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: matplotlib
+
+
+# Keras Sequence Video Generators
+
+Modified version of <a href="https://pypi.org/project/keras-video-generators/"> Keras Video Generator</a>
+
