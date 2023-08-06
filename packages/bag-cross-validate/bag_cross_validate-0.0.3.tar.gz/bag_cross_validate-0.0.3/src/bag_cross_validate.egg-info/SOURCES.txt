@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/bag_cross_validate/__init__.py
+src/bag_cross_validate/bag_cross_validate.py
+src/bag_cross_validate/bag_cross_validate_example.py
+src/bag_cross_validate/bag_cross_validate_test.py
+src/bag_cross_validate.egg-info/PKG-INFO
+src/bag_cross_validate.egg-info/SOURCES.txt
+src/bag_cross_validate.egg-info/dependency_links.txt
+src/bag_cross_validate.egg-info/top_level.txt
