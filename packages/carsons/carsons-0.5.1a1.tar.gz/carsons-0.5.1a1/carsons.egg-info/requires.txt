@@ -1,0 +1,9 @@
+numpy>=1.13.1
+
+[test]
+flake8
+coveralls
+pytest>=3.6
+pytest-cov
+pytest-mypy
+pint
