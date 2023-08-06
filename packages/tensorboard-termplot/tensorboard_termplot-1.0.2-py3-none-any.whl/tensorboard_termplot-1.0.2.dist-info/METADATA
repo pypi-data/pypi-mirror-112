@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: tensorboard-termplot
+Version: 1.0.2
+Summary: View tensorboard stats inside terminal.
+Home-page: https://github.com/soraxas/tensorboard-termplot
+Author: Tin Lai (@soraxas)
+Author-email: oscar@tinyiu.com
+License: MIT
+Keywords: tui tensorboard termplot stats
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Framework :: Matplotlib
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tensorboard
+Requires-Dist: plotext
+
+# Terminal-plot for Tensorboard
+
+[![pypi](https://img.shields.io/pypi/pyversions/tensorboard-termplot?label=tensorboard-termplot)](https://pypi.org/project/tensorboard-termplot/)
+[![Master Update](https://img.shields.io/github/last-commit/soraxas/tensorboard-termplot/master.svg)](https://github.com/soraxas/tensorboard-termplot/commits/master)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License](https://img.shields.io/github/license/soraxas/sbp-env.svg)](https://github.com/soraxas/tensorboard-termplot/blob/master/LICENSE)
+
+A plotter for tensorboard, directly within your terminal. This is useful when you are training your neural network on a remote server, and you just want to quickly peek at the training curve without launching a tensorboard instance and mess with forwarding ports.
+
+## Install
+
+You can install the package published in PyPI with
+```sh
+$ pip install tensorboard-termplot
+# or install with an isolated environment
+# $ pipx install tensorboard-termplot
+```
+
+## Usage
+
+```sh
+$ tensorboard-termplot FOLDER
+```
+For example,
+```sh
+$ tensorboard-termplot ~/my_amazing_nn/runs
+```
+where `runs` is the folder that tensorboard had created.
+
+
