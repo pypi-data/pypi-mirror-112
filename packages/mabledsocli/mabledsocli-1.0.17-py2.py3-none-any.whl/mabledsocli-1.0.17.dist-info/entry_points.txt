@@ -1,0 +1,3 @@
+[console_scripts]
+mabledso = mabledsocli.cli:cli
+
