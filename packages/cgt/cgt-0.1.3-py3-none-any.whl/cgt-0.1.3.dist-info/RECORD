@@ -1,0 +1,17 @@
+cgt/__init__.py,sha256=gU90RSdE5VBXB0XJhi-f_aCwWVBHURZp1OGyGaV_db4,380
+cgt/distances.py,sha256=3Bgkg2eX-oqDKtpad5NMLHuPvdZfhYAJbHaSeDXnbPA,5591
+cgt/enums.py,sha256=yTlbuYeY4W_3Rwyqy2tD_Ox-yky0RqkY-o-fw-TFFQw,1131
+cgt/examples.py,sha256=nuUM-G-sxZhQKdk4dFoHoxWk1menosJuTu9--7GgEHY,397
+cgt/genome.py,sha256=VdtWpiZVHQmp5tO-jMbwjWxI9OD7e-BF0d_1YjzGWWQ,437
+cgt/models.py,sha256=8RC615bXvDi564odXa5u-7Y1GpVnwaO-sOO7q7j0U6M,3718
+cgt/position_paradigm.py,sha256=sF4JjnTKBTbsk4kfKpXEPvmWVJcvWq-fMFg67Kflzsw,18267
+cgt/rearrangements.py,sha256=WstUFzvTyxBNFAgS5SzFGdyQ_tdRKGnMxAz__c_CDdw,4448
+cgt/structures.py,sha256=LLZaaHGp3luSFlXtxpypComa1gHgW_ujWonfV95Huo0,611
+cgt/visualisation.py,sha256=YkAZbSgMiEWtOPYvedvebHCBJSWAjQYmZdtPrd_5JWk,2632
+cgt/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cgt/tests/test_conversions.py,sha256=DVoBcTth8fhfDr9MWv1AYuZ5pMCokDN5vK3vm1RGQvs,458
+cgt-0.1.3.dist-info/LICENSE,sha256=OvlMj2QX1MTRac2cEIgrqlHjm-4fUeudcKinza-C7FA,1073
+cgt-0.1.3.dist-info/METADATA,sha256=GFyfl9cckfabkF1yNhZf3UxY03ayjdfU06oZjh9hqBs,1496
+cgt-0.1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cgt-0.1.3.dist-info/top_level.txt,sha256=xlH4MeemuzNzEEW8J1HvfLJ8YOjPv_b-8NwfelWjMno,4
+cgt-0.1.3.dist-info/RECORD,,
