@@ -1,0 +1,3 @@
+[console_scripts]
+sway-smart-workspace = smart_workspace:main
+
