@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: powerline-treesitter
+Version: 0.2.0
+Summary: A Powerline segment for showing treesitter status.
+Home-page: https://github.com/stefansonski/powerline-treesitter
+Author: Stefan Sonski
+Author-email: s.sonski@gmail.com
+License: UNKNOWN
+Keywords: powerline treesitter nvim neovim prompt
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Terminals
+License-File: LICENSE
+
+UNKNOWN
+
