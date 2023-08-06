@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/mongodb_finance/__init__.py
+src/mongodb_finance/data_process.py
+src/mongodb_finance.egg-info/PKG-INFO
+src/mongodb_finance.egg-info/SOURCES.txt
+src/mongodb_finance.egg-info/dependency_links.txt
+src/mongodb_finance.egg-info/requires.txt
+src/mongodb_finance.egg-info/top_level.txt
