@@ -1,0 +1,3 @@
+[console_scripts]
+derp = derp.main:main
+

@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+derp/__init__.py
+derp/__main__.py
+derp/application.py
+derp/deprecation.py
+derp/main.py
+derp/version_number.py
+derp/walker.py
+derp.egg-info/PKG-INFO
+derp.egg-info/SOURCES.txt
+derp.egg-info/dependency_links.txt
+derp.egg-info/entry_points.txt
+derp.egg-info/top_level.txt
