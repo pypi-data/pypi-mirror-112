@@ -1,0 +1,14 @@
+CHANGES.rst
+LICENSE.txt
+MANIFEST.in
+README.rst
+platformdirs.py
+pyproject.toml
+setup.cfg
+setup.py
+platformdirs.egg-info/PKG-INFO
+platformdirs.egg-info/SOURCES.txt
+platformdirs.egg-info/dependency_links.txt
+platformdirs.egg-info/top_level.txt
+test/__init__.py
+test/test_api.py
