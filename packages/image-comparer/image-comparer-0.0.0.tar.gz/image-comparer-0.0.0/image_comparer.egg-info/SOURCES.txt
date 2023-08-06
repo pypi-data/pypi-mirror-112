@@ -1,0 +1,15 @@
+LICENSE
+README.md
+README.rst
+setup.py
+image_comparer/__init__.py
+image_comparer/cli.py
+image_comparer/compare.py
+image_comparer/download.py
+image_comparer/model.py
+image_comparer.egg-info/PKG-INFO
+image_comparer.egg-info/SOURCES.txt
+image_comparer.egg-info/dependency_links.txt
+image_comparer.egg-info/entry_points.txt
+image_comparer.egg-info/requires.txt
+image_comparer.egg-info/top_level.txt
