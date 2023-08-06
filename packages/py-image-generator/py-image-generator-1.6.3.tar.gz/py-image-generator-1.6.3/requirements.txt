@@ -1,0 +1,5 @@
+
+# First level requirements
+numpy>=1.16.3
+PTS>=1.4.0
+Pillow>=5.4.1
