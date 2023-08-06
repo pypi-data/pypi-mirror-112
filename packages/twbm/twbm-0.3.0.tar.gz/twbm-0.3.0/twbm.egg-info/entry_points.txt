@@ -1,0 +1,4 @@
+[console_scripts]
+twbm = twbm:app
+twbuku = twbm:main
+
