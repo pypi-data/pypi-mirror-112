@@ -1,0 +1,12 @@
+vtb_django_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vtb_django_utils/backends.py,sha256=AdDrZegj8NNAB47ZqJbw1MO7jd_PjdMwK-v18D8UM5w,5040
+vtb_django_utils/keycloak_utils.py,sha256=KmK2qh2yEOjHrx6oBXcSaegfkdLMh8ruZYMyE8R3W0c,330
+vtb_django_utils/views.py,sha256=XAICAb52TtJrcTxFEDaCyYLn7l9b8RoMDHs3kkzGQ1c,990
+vtb_django_utils/drf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vtb_django_utils/drf/auth.py,sha256=G-iWaGxvqRIF6_2OVLjVTrAPZBUcLQR0fkADsIgg5fk,2477
+vtb_django_utils/drf/max_limit_offset_pagination.py,sha256=QJ0rPeRqhJJcqHYFTEfLmX9MHcjvNT75TPOYQmWIVE8,1265
+vtb_django_utils/drf/views.py,sha256=nHW33Jopj7KIya-MQJa4bgg-MWwYMl_ntIMJF-F18TE,334
+vtb_django_utils-1.0.5.dist-info/METADATA,sha256=wCkplXo-2L7aHKM5R-QbvKe9W2b8_q1AXSs7gy2kjrY,749
+vtb_django_utils-1.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+vtb_django_utils-1.0.5.dist-info/top_level.txt,sha256=CZQnjpXRDAPRno8d7UndcansTCWwLY4yonRgFuaeLAE,17
+vtb_django_utils-1.0.5.dist-info/RECORD,,
