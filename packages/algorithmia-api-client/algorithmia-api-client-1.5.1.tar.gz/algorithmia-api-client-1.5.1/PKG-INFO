@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: algorithmia-api-client
+Version: 1.5.1
+Summary: Algorithmia Management APIs
+Home-page: UNKNOWN
+Author: Algorithmia Support Team
+Author-email: support@algorithmia.com
+License: Apache License 2.0
+Keywords: OpenAPI,OpenAPI-Generator,Algorithmia Management APIs
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+
+    APIs for managing actions on the Algorithmia platform  # noqa: E501
+    
+
