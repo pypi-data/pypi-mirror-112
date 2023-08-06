@@ -1,0 +1,56 @@
+X:
+  file:
+    tar:
+      StoreFiles:
+        RepositoryCacheTest.test_repository_cache_add_new_and_use_it.yaml:
+          to_path:
+          - metadata:
+              latency: 0
+            output:
+              filename: RepositoryCacheTest.test_repository_cache_add_new_and_use_it.yaml.python-requre_1.tar.xz
+              return_value:
+                _bare: false
+                _common_dir: null
+                _working_tree_dir: /tmp/tmp_ppblk7d/cache/python-requre
+                git_dir: /tmp/tmp_ppblk7d/cache/python-requre/.git
+                working_dir: /tmp/tmp_ppblk7d/cache/python-requre
+              target_path: /tmp/tmp_ppblk7d/cache/python-requre
+          - metadata:
+              latency: 0
+            output:
+              filename: RepositoryCacheTest.test_repository_cache_add_new_and_use_it.yaml.clone1_1.tar.xz
+              return_value:
+                _bare: false
+                _common_dir: null
+                _working_tree_dir: /tmp/tmp_ppblk7d/clone1
+                git_dir: /tmp/tmp_ppblk7d/clone1/.git
+                working_dir: /tmp/tmp_ppblk7d/clone1
+              target_path: /tmp/tmp_ppblk7d/clone1
+          - metadata:
+              latency: 0
+            output:
+              filename: RepositoryCacheTest.test_repository_cache_add_new_and_use_it.yaml.clone2_1.tar.xz
+              return_value:
+                _bare: false
+                _common_dir: null
+                _working_tree_dir: /tmp/tmp_ppblk7d/clone2
+                git_dir: /tmp/tmp_ppblk7d/clone2/.git
+                working_dir: /tmp/tmp_ppblk7d/clone2
+              target_path: /tmp/tmp_ppblk7d/clone2
+_requre:
+  DataTypes: 1
+  key_strategy: StorageKeysInspectSimple
+  version_storage_file: 3
+tempfile:
+  mkdtemp:
+  - metadata:
+      latency: 4.8160552978515625e-05
+      module_call_list:
+      - unittest.case
+      - requre.online_replacing
+      - tests_recording.test_repository_cache
+      - requre.objects
+      - requre.cassette
+      - tempfile
+      - mkdtemp
+    output: /tmp/tmp_ppblk7d
