@@ -1,0 +1,5 @@
+pandas>=1.1
+biopython>=1.77
+seqfold>=0.7.7
+joblib>=1.0.1
+tqdm>=4.60.0
