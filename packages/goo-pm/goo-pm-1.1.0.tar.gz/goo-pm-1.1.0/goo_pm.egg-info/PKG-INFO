@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: goo-pm
+Version: 1.1.0
+Summary: Plugin/dependency manager for Godot
+Home-page: https://gitlab.com/nanom_/goo
+Author: nanom
+License: 0BSD
+Description: UNKNOWN
+Keywords: godot package manager plugin plugins gd python
+Platform: UNKNOWN
+Requires-Python: >=3.0

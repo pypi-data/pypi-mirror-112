@@ -1,0 +1,3 @@
+[console_scripts]
+goo = goo.goo:__main__
+
