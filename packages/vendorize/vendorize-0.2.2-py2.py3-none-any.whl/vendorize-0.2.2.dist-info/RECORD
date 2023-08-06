@@ -1,0 +1,17 @@
+vendorize/__init__.py,sha256=d9u0RSCsMLZ0aEBV_fwt9ktHe-x5kHlHL3e51gQB_Ec,3062
+vendorize/cli.py,sha256=qST7ypT8vpPSX7wruxTmdEgjyYy0AFsuRNugEVTN7F8,465
+vendorize/files.py,sha256=u9DpW4KklfR8UrQF1kF2hZ0wW70IpZJUTDJZMDUy7q0,246
+vendorize/import_rewrite.py,sha256=MNQbST8KED_JqgWTbvilV_6umAxwAnoX9da_GLGkZI0,4390
+vendorize/python_source.py,sha256=ATauVfVWnyb8q0_I0b_7nxJvI3NK0qF1dkbPUaMv_Ks,315
+vendorize/setuptools_build.py,sha256=Eyly9NFy7pFHi3eqnzowKGyDdOmsbfhQJWGkfaso7R8,1372
+vendorize/_vendor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vendorize/_vendor/pytoml/__init__.py,sha256=PLFK235q-7F9Mmelsr_7IcAIWebDo3W9Hq_T1Vz54KA,95
+vendorize/_vendor/pytoml/core.py,sha256=W8BqMPwcme5HkPBtxkQz9VJBvhkrELje94Dh1iUfFaI,522
+vendorize/_vendor/pytoml/parser.py,sha256=amNcVofh-diqx9faK7NNwh0w-UB0ANnpuOUCcxFm35s,10641
+vendorize/_vendor/pytoml/writer.py,sha256=hn_s7jBHwPVxggwgWVvv7m5XXTTDAslYChX4x1fT49A,3706
+vendorize-0.2.2.dist-info/LICENSE,sha256=EgBli0ehQ75VuJXajrLwJQ20ld75Q_vc4rzHoEZcHKw,1307
+vendorize-0.2.2.dist-info/METADATA,sha256=mti6CYfPvUnvI2XkkfT-tMo0mMqFkd5KMhCTP3Ivir0,1934
+vendorize-0.2.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+vendorize-0.2.2.dist-info/entry_points.txt,sha256=FLvUs2D3I7BNew-piXKuNRBMG-bpgl7Q4-IvEDZoWEs,57
+vendorize-0.2.2.dist-info/top_level.txt,sha256=-n48NgEhSgKqTAwxc2IKIo-71jl5BzZ6qHbieETXdxQ,10
+vendorize-0.2.2.dist-info/RECORD,,
