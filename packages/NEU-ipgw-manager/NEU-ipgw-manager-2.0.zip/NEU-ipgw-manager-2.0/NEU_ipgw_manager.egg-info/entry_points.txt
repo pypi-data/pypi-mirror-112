@@ -1,0 +1,3 @@
+[console_scripts]
+ipgw = ipgw.cli.ipgw:main
+
