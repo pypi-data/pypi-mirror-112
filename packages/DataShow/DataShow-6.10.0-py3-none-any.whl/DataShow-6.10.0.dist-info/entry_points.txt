@@ -1,0 +1,6 @@
+[console_scripts]
+DataShow_consle = DataShow.DataShow_gui:main
+
+[gui_scripts]
+DataShow_gui = DataShow.DataShow_gui:main
+

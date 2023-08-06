@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/Sim">
+        <file>images/cycle.png</file>
+        <file>images/pause.png</file>
+        <file>images/play.png</file>
+        <file>images/logo.png</file>
+    </qresource>
+</RCC>

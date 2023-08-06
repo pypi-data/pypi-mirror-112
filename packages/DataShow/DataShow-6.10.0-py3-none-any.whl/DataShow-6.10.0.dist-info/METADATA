@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: DataShow
+Version: 6.10.0
+Summary: a tool for showing radar info
+Home-page: UNKNOWN
+Author: Andy.Yang
+Author-email: andy.yang@deftech.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+Requires-Dist: wheel
+Requires-Dist: numpy
+Requires-Dist: PyQt5
+Requires-Dist: PyQtChart
+Requires-Dist: opencv-python
+Requires-Dist: PyQt5-sip
+Requires-Dist: pyqtgraph
+Requires-Dist: python-can
+Requires-Dist: scipy
+Requires-Dist: python-dateutil
+Requires-Dist: pytz
+Requires-Dist: windows-curses
+Requires-Dist: wrapt
+Requires-Dist: pandas
+Requires-Dist: six
+Requires-Dist: pyserial
+
+# DataShow
+>author: andy.yang, lan.zhang
+>
+>email: andy.yang@deftech.com.cn lan.zhang@deftech.com.cn
+
+show the data(include detections-mem, targets-mem, warning-signal) in one ui, and
+also display the camera at the same time in the future.
+
+
+> ---------------------Attention:-----------------------------
+> 
+> the current IO is uart, so you can't use peak-can or usbcan2.
+> 
+> For user, you just obey rule one and five.
+>
+> Must: you shoudl set the baudrate of uart to 115200 in calterah sdk.
+
+## 一、environment and dependencies
+- python: 3.7.9
+- os: win10(not test in linux, but this software should be cross-platform).
+- see ./requrements.txt which is generated with the command: pip freeze > requirements.txt
+
+Besides, i use Peakcan(not can-use box) to get the data from radar.
+So in order to show data by CAN-BUS(inline or record), you also need to install Peakcan driver.
+See link: https://www.peak-system.com/
+
+
+## 二、How to install DataShow?
+1. install the Peak-Can driver. See link: https://www.peak-system.com/, and dowload, install PEAK-System_Driver-Setup.zip.
+2. pip install DataShow
+3. go to the python scripts directory and find DataShow_gui.exe, then click and enjoy it.
+
+Notice: the recorded data will be stored in C:\data_records\
+
+
+## 三、develop in virtual environment
+comply the commands below:
+
+1. python3 -m venv env
+2. set the above virtual environment as your work environment
+3. pip install -r requirements.txt
+4. create a file which its type(or suffix) should be ".pth" in ./env/Lib/site-packages.For example, the file names my.pth.
+5. fill the above file with the path of this project.For example, "C:\\Projects\\data_replay" in my PC.
+6. enjoy yourself.
+
+
+## 四、package-commands
+1. python setup.py bdist_wheel
+2. twine upload dist/*
+
+## 五、Install
+Please choose 5.1 or 5.2 depending on first install or upgrade.
+
+### 5.1 first install
+1. create a directory which name "pip" if not in path: C:\Users\andy\AppData\Roaming. notice: change the andy to your user-name
+2. create a file which name "pip.ini" in path: C:\Users\andy\AppData\Roaming\pip.notice: change the andy to your user-name
+3. write the lines below in pip.ini
+```
+[global]
+index-url = https://mirrors.aliyun.com/pypi/simple/
+[install]
+trusted-host=mirrors.aliyun.com
+```
+4. open a shell and inpurt commands: pip install --upgrade DataShow
+5. input commands: ip install -i https://pypi.org/simple --upgrade DataShow
+
+### 5.2 upgrade
+- pip install -i https://pypi.org/simple --upgrade DataShow
+
+## 六、Use
+1. go to directory: C:\Users\andy\AppData\Local\Programs\Python\Python37\Scripts.  notice: change the andy to your user-name
+2. create a desktop shortcut of DataShow_gui.exe
+3. then enjoy youself.
+
