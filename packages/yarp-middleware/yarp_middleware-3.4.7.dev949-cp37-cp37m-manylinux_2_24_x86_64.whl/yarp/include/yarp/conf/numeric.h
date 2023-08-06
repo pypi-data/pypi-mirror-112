@@ -1,0 +1,359 @@
+/*
+ * SPDX-FileCopyrightText: 2006-2021 Istituto Italiano di Tecnologia (IIT)
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+#ifndef YARP_CONFIG_NUMERIC_H
+#define YARP_CONFIG_NUMERIC_H
+
+#define YARP_HAS_SYS_TYPES_H
+
+#if defined(YARP_HAS_SYS_TYPES_H)
+# include <sys/types.h>
+#endif
+
+#include <cfloat>
+#include <cinttypes>
+#include <clocale>
+#include <cstdint>
+#include <cstddef>
+#include <cstdlib>
+#include <cstring>
+#include <limits>
+#include <sstream>
+#include <string>
+#if defined (_MSC_VER)
+# include <BaseTsd.h>
+#endif
+
+/* #undef YARP_BIG_ENDIAN */
+#define YARP_LITTLE_ENDIAN
+
+#define YARP_HAS_FLOAT128_T
+#define YARP_FLOAT32_IS_IEC559 1
+#define YARP_FLOAT64_IS_IEC559 1
+#define YARP_FLOAT128_IS_IEC559 1
+
+// Ensure that float32_t, float64_t, and float128_t are not defined by some
+// other header, included before this one.
+#if defined(float32_t)
+# undef float32_t
+#endif
+#if defined(float64_t)
+# undef float64_t
+#endif
+#if defined(float128_t)
+# undef float128_t
+#endif
+
+
+#define YARP_FLT_EXP_DIG 3
+#define YARP_DBL_EXP_DIG 4
+#define YARP_LDBL_EXP_DIG 5
+
+/*
+ * The maximum string length for a 'double' printed as a string using ("%.*g", DECIMAL_DIG) will be:
+ *  Initial +/- sign                        1 char
+ *  First digit for exponential notation    1 char
+ * '.' decimal separator char               1 char
+ *  DECIMAL_DIG digits for the mantissa     DECIMAL_DIG chars
+ * 'e+/-'                                   2 chars
+ * YARP_DBL_EXP_DIG  for the exponential    YARP_DBL_EXP_DIG chars (YARP_LDBL_EXP_DIG if 128 bit float is available)
+ * string terminator                        1 char
+ * FILLER                                   10 chars  (you know, for safety)
+ * -----------------------------------------------------
+ * TOTAL is                                 16 + DECIMAL_DIG + YARP_DBL_EXP_DIG
+ */
+#if defined(YARP_HAS_FLOAT128_T)
+#  define YARP_DOUBLE_TO_STRING_MAX_LENGTH (16 + DECIMAL_DIG + YARP_LDBL_EXP_DIG)
+#else
+#  define YARP_DOUBLE_TO_STRING_MAX_LENGTH (16 + DECIMAL_DIG + YARP_DBL_EXP_DIG)
+#endif
+
+namespace yarp {
+namespace conf {
+
+typedef float float32_t;
+typedef double float64_t;
+typedef std::int32_t vocab32_t;
+#if defined(YARP_HAS_FLOAT128_T)
+typedef long double float128_t;
+#endif
+
+#if defined (_MSC_VER)
+typedef ::SSIZE_T ssize_t;
+#else
+typedef ::ssize_t ssize_t;
+#endif
+
+// Define `clamp` algorithm, available in c++17
+template<class T>
+constexpr const T& clamp( const T& v, const T& lo, const T& hi )
+{
+    // assert( !(hi < lo) );
+    return (v < lo) ? lo : (hi < v) ? hi : v;
+}
+
+template<class T, class Compare>
+constexpr const T& clamp( const T& v, const T& lo, const T& hi, Compare comp )
+{
+    // assert( !comp(hi, lo) );
+    return comp(v, lo) ? lo : comp(hi, v) ? hi : v;
+}
+
+namespace numeric {
+
+#if !defined(SWIG)
+
+/*
+ * Converts an integer number to a string
+ */
+template <typename IntegerType,
+          std::enable_if_t<
+            std::is_integral<IntegerType>::value &&
+            !std::is_same<IntegerType, bool>::value, bool> = true>
+inline std::string to_string(IntegerType x)
+{
+    return std::to_string(x);
+}
+
+/*
+ * Converts a boolean to a string
+ */
+template <typename BoolType,
+          std::enable_if_t<std::is_same<BoolType, bool>::value, bool> = true>
+inline std::string to_string(BoolType x)
+{
+    return {x ? "true" : "false"};
+}
+
+/*
+ * Converts a floating point number to a string, dealing with locale issues
+ */
+template <typename FloatingType,
+          std::enable_if_t<std::is_floating_point<FloatingType>::value, bool> = true>
+inline std::string to_string(FloatingType x)
+{
+    char buf[YARP_DOUBLE_TO_STRING_MAX_LENGTH]; // -> see comment at the top of the file
+    std::snprintf(buf, YARP_DOUBLE_TO_STRING_MAX_LENGTH, "%.*g", DECIMAL_DIG, x);
+    std::string str(buf);
+
+    // If locale is set, the locale version of the decimal point is used.
+    // In this case we change it to the standard "."
+    // If there is no decimal point, and it is not being used the exponential
+    // notation (i.e. the number is in integer form, for example 100000 and not
+    // 1e5) we add ".0" to ensure that it will be interpreted as a double.
+    struct lconv* lc = localeconv();
+    size_t offset = str.find(lc->decimal_point);
+    if (offset != std::string::npos) {
+        str[offset] = '.';
+    } else if (str.find('e') == std::string::npos && str != "inf" && str != "-inf" && str != "nan") {
+        str += ".0";
+    }
+    return str;
+}
+
+/*
+ * Converts a string to a signed integer number
+ */
+template <typename IntegerType,
+          std::enable_if_t<
+            std::is_integral<IntegerType>::value &&
+            std::is_signed<IntegerType>::value &&
+            !std::is_same<IntegerType, bool>::value, bool> = true>
+inline IntegerType from_string(const std::string& src, IntegerType defaultValue = static_cast<IntegerType>(0))
+{
+    char *endptr = nullptr;
+    const char* startptr = src.c_str();
+    static constexpr int base = 10;
+
+    errno = 0;
+    auto ret = std::strtoll(startptr, &endptr, base);
+
+    if (errno != 0) {
+        // An error occurred
+        return defaultValue;
+    }
+
+    if (endptr == startptr) {
+        // No digits were found
+        return defaultValue;
+    }
+
+    if (endptr != startptr + src.size()) {
+        // Not all the string was interpreted
+        return defaultValue;
+    }
+
+    if (ret < std::numeric_limits<IntegerType>::min() || ret > std::numeric_limits<IntegerType>::max()) {
+        // Out of bound
+        return defaultValue;
+    }
+
+    return static_cast<IntegerType>(ret);
+}
+
+/*
+ * Converts a string to an unsigned integer number
+ */
+template <typename IntegerType,
+          std::enable_if_t<
+            std::is_integral<IntegerType>::value &&
+            !std::is_signed<IntegerType>::value &&
+            !std::is_same<IntegerType, bool>::value, bool> = true>
+inline IntegerType from_string(const std::string& src, IntegerType defaultValue = static_cast<IntegerType>(0))
+{
+    char *endptr = nullptr;
+    const char* startptr = src.c_str();
+    static constexpr int base = 10;
+
+    errno = 0;
+    auto ret = std::strtoull(startptr, &endptr, base);
+
+    if (errno != 0) {
+        // An error occurred
+        return defaultValue;
+    }
+
+    if (endptr == startptr) {
+        // No digits were found
+        return defaultValue;
+    }
+
+    if (endptr != startptr + src.size()) {
+        // Not all the string was interpreted
+        return defaultValue;
+    }
+
+    if (ret > std::numeric_limits<IntegerType>::max()) {
+        // Out of bound
+        return defaultValue;
+    }
+
+    if (ret > std::numeric_limits<long long>::max() && std::strtoll(startptr, &endptr, base) < 0) {
+        // This is a negative number silently converted to unsigned
+        return defaultValue;
+    }
+
+    return static_cast<IntegerType>(ret);
+}
+
+
+/*
+ * Converts a string to a boolean
+ */
+template <typename BoolType,
+          std::enable_if_t<std::is_same<BoolType, bool>::value, bool> = true>
+inline BoolType from_string(const std::string& src, BoolType defaultValue = false)
+{
+    if (src == "1") { return true; }
+    if (src == "true") { return true; }
+    if (src == "True") { return true; }
+    if (src == "TRUE") { return true; }
+    if (src == "yes") { return true; }
+    if (src == "Yes") { return true; }
+    if (src == "YES") { return true; }
+    if (src == "on") { return true; }
+    if (src == "On") { return true; }
+    if (src == "ON") { return true; }
+
+    if (src == "0") { return false; }
+    if (src == "false") { return false; }
+    if (src == "False") { return false; }
+    if (src == "FALSE") { return false; }
+    if (src == "no") { return false; }
+    if (src == "No") { return false; }
+    if (src == "NO") { return false; }
+    if (src == "off") { return false; }
+    if (src == "Off") { return false; }
+    if (src == "OFF") { return false; }
+
+    return defaultValue;
+}
+
+/*
+ * Converts a string to a floating point number, dealing with locale issues
+ */
+template <typename FloatingType,
+          std::enable_if_t<std::is_floating_point<FloatingType>::value, bool> = true>
+inline FloatingType from_string(const std::string& src, FloatingType defaultValue = static_cast<FloatingType>(0.0))
+{
+    if (src == "inf") {
+        return std::numeric_limits<FloatingType>::infinity();
+    }
+    if (src == "-inf") {
+        return -std::numeric_limits<FloatingType>::infinity();
+    }
+    if (src == "nan") {
+        return std::numeric_limits<FloatingType>::quiet_NaN();
+    }
+    // Need to deal with alternate versions of the decimal point.
+    // We need a copy of the string where the decimal point can be replaced.
+    std::string src_c = src;
+    size_t offset = src.find('.');
+    if (offset != std::string::npos) {
+        struct lconv* lc = localeconv();
+        src_c[offset] = lc->decimal_point[0];
+    }
+
+    char *endptr = nullptr;
+    const char* startptr = src_c.c_str();
+    auto ret = static_cast<FloatingType>(strtod(startptr, &endptr));
+
+    if (endptr == startptr) {
+        // No digits were found
+        return defaultValue;
+    }
+
+    if (endptr != startptr + src.size()) {
+        // Not all the string was interpreted
+        return defaultValue;
+    }
+
+    return ret;
+}
+
+template <typename IntegerType,
+          std::enable_if_t<
+            std::is_integral<IntegerType>::value &&
+            sizeof(IntegerType) != 1 &&
+            !std::is_same<IntegerType, bool>::value, bool> = true>
+std::string to_hex_string(IntegerType i)
+{
+    std::stringstream stream;
+    stream << std::hex << i;
+    return stream.str();
+}
+
+// FIXME C++17 use constexpr if
+template <typename IntegerType,
+          std::enable_if_t<sizeof(IntegerType) == 1, bool> = true>
+std::string to_hex_string(IntegerType i)
+{
+    // char and unsigned char are interpreted as characters, and therefore
+    // printed as the corresponding character
+    return to_hex_string<int>(static_cast<int>(static_cast<uint8_t>(i)));
+}
+
+#endif // !defined(SWIG)
+
+} // namespace numeric
+} // namespace conf
+} // namespace yarp
+
+
+#ifndef YARP_NO_DEPRECATED // since YARP 3.0.0
+#include <yarp/conf/api.h> // For YARP_DEPRECATED_TYPEDEF_MSG
+YARP_DEPRECATED_TYPEDEF_MSG("Use std::int8_t instead") std::int8_t YARP_INT8;
+YARP_DEPRECATED_TYPEDEF_MSG("Use std::int16_t instead") std::int16_t YARP_INT16;
+YARP_DEPRECATED_TYPEDEF_MSG("Use std::int32_t instead") std::int32_t YARP_INT32;
+YARP_DEPRECATED_TYPEDEF_MSG("Use std::int64_t instead") std::int64_t YARP_INT64;
+YARP_DEPRECATED_TYPEDEF_MSG("Use yarp::conf::float32_t instead") yarp::conf::float32_t YARP_FLOAT32;
+YARP_DEPRECATED_TYPEDEF_MSG("Use yarp::conf::float64_t instead") yarp::conf::float64_t YARP_FLOAT64;
+YARP_DEPRECATED_TYPEDEF_MSG("Use yarp::conf::ssize_t instead") yarp::conf::ssize_t YARP_SSIZE_T;
+#define YARP_INT32_FMT PRId32
+#define YARP_INT64_FMT PRId64
+#endif // YARP_NO_DEPRECATED
+
+
+#endif
