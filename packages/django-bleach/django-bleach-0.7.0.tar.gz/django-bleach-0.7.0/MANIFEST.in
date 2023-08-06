@@ -1,0 +1,8 @@
+include LICENSE
+include README.rst
+include CHANGELOG.md
+include docs/*.rst
+prune docs/_build
+global-exclude coverage.xml
+global-exclude .coverage
+recursive-exclude * *.pyc __pycache__ .DS_Store
