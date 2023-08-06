@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: filemanipulator
+Version: 0.0.1
+Summary: A module allowing for simple file manipulation tools, with the option to parse more sophisticated arguments for complex programming that would otherwise require many lines.
+Home-page: https://github.com/pypa/sampleproject
+Author: Daniel Wright
+Author-email: danielcgwright2@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Welcome to filemanipulator, a small module built to aid with some file operations which may be useful.
+It's a simple module, but can sometimes come in useful, particularly with file management.
+
+To update to the latest version, either set 'autoupdates' in the \__init__.py file to True, for the module
+to automatically update whenver a new version is available on GitHub, or run the \__init__.py file as its own
+script, triggering an automatic update.
+
+Please ensure file editing permissions are granted to Python for this module to work properly.
+
+
