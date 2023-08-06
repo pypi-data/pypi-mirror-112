@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+payload_automation/__init__.py
+payload_automation/artifactor.py
+payload_automation/compyler.py
+payload_automation/detemplate.py
+payload_automation/sleepy.py
+payload_automation/striker.py
+payload_automation.egg-info/PKG-INFO
+payload_automation.egg-info/SOURCES.txt
+payload_automation.egg-info/dependency_links.txt
+payload_automation.egg-info/requires.txt
+payload_automation.egg-info/top_level.txt

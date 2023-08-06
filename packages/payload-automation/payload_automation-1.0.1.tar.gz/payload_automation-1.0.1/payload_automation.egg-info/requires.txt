@@ -1,0 +1,6 @@
+javaobj-py3>=0.4.1
+pepy>=1.2.0
+ptyprocess>=0.5
+pexpect
+magicfile
+PyYAML==5.4.1
