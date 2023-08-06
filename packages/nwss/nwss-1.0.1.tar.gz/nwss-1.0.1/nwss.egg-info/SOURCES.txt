@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+nwss/__init__.py
+nwss/dump_to_jsonschema.py
+nwss/fields.py
+nwss/schemas.py
+nwss/utils.py
+nwss/validators.py
+nwss/value_sets.py
+nwss.egg-info/PKG-INFO
+nwss.egg-info/SOURCES.txt
+nwss.egg-info/dependency_links.txt
+nwss.egg-info/requires.txt
+nwss.egg-info/top_level.txt
