@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tradingsystems/__init__.py
+tradingsystems/systems.py
+tradingsystems/systems_params.py
+tradingsystems.egg-info/PKG-INFO
+tradingsystems.egg-info/SOURCES.txt
+tradingsystems.egg-info/dependency_links.txt
+tradingsystems.egg-info/requires.txt
+tradingsystems.egg-info/top_level.txt
