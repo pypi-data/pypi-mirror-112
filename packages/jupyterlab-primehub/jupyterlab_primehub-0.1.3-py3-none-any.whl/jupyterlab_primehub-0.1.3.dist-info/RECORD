@@ -1,0 +1,13 @@
+jupyterlab_primehub/__init__.py,sha256=8dN9WyRTgQc-kPqde33fLgRI95hIACy1W8bD5NEICh0,585
+jupyterlab_primehub/_version.py,sha256=azTmg52WIlEcfGLQ5PxvHblonzWk15RJXoBye4aarns,72
+jupyterlab_primehub/api.py,sha256=zMc-kRMZlZE6hze6CSvFZzTKlXjcg7nLsk7yQmCNHuk,3508
+jupyterlab_primehub/handlers.py,sha256=DSPT8JQ_Qqx0TPsLDoboBYWfDM_c3snm1MjpgOtkRVE,5013
+jupyterlab_primehub/utils.py,sha256=Rg2mfNEE4Huyc-7O1_YLu-r-r8y4A_VwOqt9_duWFDo,260
+jupyterlab_primehub/labextension/infuseai-jupyterlab-primehub-0.1.3.tgz,sha256=ZBqNrb0R2RrNuEXVDs5B63pCAtpmTgEriSLkNyXiKF8,6853
+jupyterlab_primehub-0.1.3.data/data/etc/jupyter/jupyter_notebook_config.d/jupyterlab_primehub.json,sha256=a_DDWN7PyyEGgcRbcyrBPyAnTXzwKU_hcOWOlEdGrPk,96
+jupyterlab_primehub-0.1.3.data/data/share/jupyter/lab/extensions/infuseai-jupyterlab-primehub-0.1.3.tgz,sha256=ZBqNrb0R2RrNuEXVDs5B63pCAtpmTgEriSLkNyXiKF8,6853
+jupyterlab_primehub-0.1.3.dist-info/LICENSE,sha256=7AoBWuPADwzfsnitmaG2Rg541SYxmlUxnmo_b2V7FCU,1508
+jupyterlab_primehub-0.1.3.dist-info/METADATA,sha256=ZiI4ernNt7aBoZUFvVHGqUkor6SYcOVzYzZzAbxMFB8,2733
+jupyterlab_primehub-0.1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jupyterlab_primehub-0.1.3.dist-info/top_level.txt,sha256=OVzQZDSWr3Lc5C3P80iOtTbRNBa5jTuWaACj0xzSdNU,20
+jupyterlab_primehub-0.1.3.dist-info/RECORD,,
