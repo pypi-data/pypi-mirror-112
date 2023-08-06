@@ -1,0 +1,15 @@
+govee_api_laggat/__init__.py,sha256=cMSXSe4TKPx835C0Euq_ep5-N0pmKLwa_UnUO5iLPgU,261
+govee_api_laggat/__version__.py,sha256=M3JanJaiRSKvDPlDIJYMg9wI3iri4hn6j9V8OMjN1eg,46
+govee_api_laggat/api.py,sha256=kfMOafa017pXVRUlEgUCTaMhARYc6-EH98KY94YLdBQ,28002
+govee_api_laggat/ble.py,sha256=yx5sz2j_rMRlNdSmKp0bAUCYKY6Z9sYwQp9Yop_uzas,880
+govee_api_laggat/govee_api_laggat.py,sha256=YH6DW3EvZjYidG1GuI_bqp1e1xjBVPEkR5_Ga7Tzj5c,16026
+govee_api_laggat/govee_dtos.py,sha256=-SwuDzPzOha1BaNnkfGn-SCj9oGNNapN9c1JL5VJQE8,1946
+govee_api_laggat/learning_storage.py,sha256=Y6uT5MdKFxDUK1kE6yhZrSx0lSJveiR9Hbf0GBwD8n8,2393
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/mockdata.py,sha256=9ryd-WdDcv8QYteGYIS_dTptWLhmSVAxuztbW85xb4M,6261
+tests/test_pytest.py,sha256=x3sS0fqL8yHpHiKJYieC11WRBDxt4KGnGq3qt113EWc,51606
+govee_api_laggat-0.2.1.dist-info/LICENSE,sha256=DlXC8y35SX7fPZx3F000g8Nfzmij9mf0Sq3yq3GcoLk,1076
+govee_api_laggat-0.2.1.dist-info/METADATA,sha256=SM2BOUBjt2ysau-H7AoYFaGbMzABsT6rvit-MQtk-60,2953
+govee_api_laggat-0.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+govee_api_laggat-0.2.1.dist-info/top_level.txt,sha256=fXPl1YrydxIZPTB62QUK1_ALbjO3d63ziyYTZAsSDvI,23
+govee_api_laggat-0.2.1.dist-info/RECORD,,
