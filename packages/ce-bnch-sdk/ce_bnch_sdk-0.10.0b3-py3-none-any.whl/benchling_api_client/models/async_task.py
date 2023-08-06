@@ -1,0 +1,124 @@
+from typing import Any, Dict, Type, TypeVar, Union
+
+import attr
+
+from ..extensions import NotPresentError
+from ..models.async_task_errors import AsyncTaskErrors
+from ..models.async_task_response import AsyncTaskResponse
+from ..models.async_task_status import AsyncTaskStatus
+from ..types import UNSET, Unset
+
+T = TypeVar("T", bound="AsyncTask")
+
+
+@attr.s(auto_attribs=True)
+class AsyncTask:
+    """  """
+
+    _status: AsyncTaskStatus
+    _errors: Union[Unset, AsyncTaskErrors] = UNSET
+    _message: Union[Unset, str] = UNSET
+    _response: Union[Unset, AsyncTaskResponse] = UNSET
+
+    def to_dict(self) -> Dict[str, Any]:
+        status = self._status.value
+
+        errors: Union[Unset, Dict[str, Any]] = UNSET
+        if not isinstance(self._errors, Unset):
+            errors = self._errors.to_dict()
+
+        message = self._message
+        response: Union[Unset, Dict[str, Any]] = UNSET
+        if not isinstance(self._response, Unset):
+            response = self._response.to_dict()
+
+        field_dict: Dict[str, Any] = {}
+        field_dict.update(
+            {
+                "status": status,
+            }
+        )
+        if errors is not UNSET:
+            field_dict["errors"] = errors
+        if message is not UNSET:
+            field_dict["message"] = message
+        if response is not UNSET:
+            field_dict["response"] = response
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
+        d = src_dict.copy()
+        status = AsyncTaskStatus(d.pop("status"))
+
+        errors: Union[Unset, AsyncTaskErrors] = UNSET
+        _errors = d.pop("errors", UNSET)
+        if not isinstance(_errors, Unset):
+            errors = AsyncTaskErrors.from_dict(_errors)
+
+        message = d.pop("message", UNSET)
+
+        response: Union[Unset, AsyncTaskResponse] = UNSET
+        _response = d.pop("response", UNSET)
+        if not isinstance(_response, Unset):
+            response = AsyncTaskResponse.from_dict(_response)
+
+        async_task = cls(
+            status=status,
+            errors=errors,
+            message=message,
+            response=response,
+        )
+
+        return async_task
+
+    @property
+    def status(self) -> AsyncTaskStatus:
+        return self._status
+
+    @status.setter
+    def status(self, value: AsyncTaskStatus) -> None:
+        self._status = value
+
+    @property
+    def errors(self) -> AsyncTaskErrors:
+        if isinstance(self._errors, Unset):
+            raise NotPresentError(self, "errors")
+        return self._errors
+
+    @errors.setter
+    def errors(self, value: AsyncTaskErrors) -> None:
+        self._errors = value
+
+    @errors.deleter
+    def errors(self) -> None:
+        self._errors = UNSET
+
+    @property
+    def message(self) -> str:
+        if isinstance(self._message, Unset):
+            raise NotPresentError(self, "message")
+        return self._message
+
+    @message.setter
+    def message(self, value: str) -> None:
+        self._message = value
+
+    @message.deleter
+    def message(self) -> None:
+        self._message = UNSET
+
+    @property
+    def response(self) -> AsyncTaskResponse:
+        if isinstance(self._response, Unset):
+            raise NotPresentError(self, "response")
+        return self._response
+
+    @response.setter
+    def response(self, value: AsyncTaskResponse) -> None:
+        self._response = value
+
+    @response.deleter
+    def response(self) -> None:
+        self._response = UNSET

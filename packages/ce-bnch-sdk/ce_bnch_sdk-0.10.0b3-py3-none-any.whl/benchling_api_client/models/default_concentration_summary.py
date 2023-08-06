@@ -1,0 +1,71 @@
+from typing import Any, Dict, Type, TypeVar, Union
+
+import attr
+
+from ..extensions import NotPresentError
+from ..types import UNSET, Unset
+
+T = TypeVar("T", bound="DefaultConcentrationSummary")
+
+
+@attr.s(auto_attribs=True)
+class DefaultConcentrationSummary:
+    """  """
+
+    _units: Union[Unset, str] = UNSET
+    _value: Union[Unset, float] = UNSET
+
+    def to_dict(self) -> Dict[str, Any]:
+        units = self._units
+        value = self._value
+
+        field_dict: Dict[str, Any] = {}
+        field_dict.update({})
+        if units is not UNSET:
+            field_dict["units"] = units
+        if value is not UNSET:
+            field_dict["value"] = value
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
+        d = src_dict.copy()
+        units = d.pop("units", UNSET)
+
+        value = d.pop("value", UNSET)
+
+        default_concentration_summary = cls(
+            units=units,
+            value=value,
+        )
+
+        return default_concentration_summary
+
+    @property
+    def units(self) -> str:
+        if isinstance(self._units, Unset):
+            raise NotPresentError(self, "units")
+        return self._units
+
+    @units.setter
+    def units(self, value: str) -> None:
+        self._units = value
+
+    @units.deleter
+    def units(self) -> None:
+        self._units = UNSET
+
+    @property
+    def value(self) -> float:
+        if isinstance(self._value, Unset):
+            raise NotPresentError(self, "value")
+        return self._value
+
+    @value.setter
+    def value(self, value: float) -> None:
+        self._value = value
+
+    @value.deleter
+    def value(self) -> None:
+        self._value = UNSET
