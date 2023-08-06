@@ -1,0 +1,15 @@
+cirq_ts/__init__.py,sha256=c6RuQiW_NnUX5Kqrsj7JOp7zQEkoL6atQvPGGUriGGM,584
+cirq_ts/_version.py,sha256=Tma-g84v5k6M5Ju4HVwwsaHoBYy6y4FJtF_a9YLNykw,41
+cirq_ts/dist/bloch_sphere.bundle.js,sha256=9A_w81xb-a3KCSKUIVAJF3rpkodvJuLATm8BTyNITmo,629584
+cirq_web/__init__.py,sha256=xudP6DxHUPvPJkpmk5gMx1bzNzeOibmr0r0USeW8UAk,676
+cirq_web/_version.py,sha256=Tma-g84v5k6M5Ju4HVwwsaHoBYy6y4FJtF_a9YLNykw,41
+cirq_web/widget.py,sha256=Kv15uYE0VPBodLrnSuwpJorWLb1Gi6lmk1Cb9sXN1Rk,3862
+cirq_web/widget_test.py,sha256=K5rGLgv6q-sB99lFSg-QQomk6o0T-PQuroqxZLDbaP4,2251
+cirq_web/bloch_sphere/__init__.py,sha256=fAr1sEKgO5pWDG7sQ2LT1VmsxHiqwbTnxTvr4a6w9eM,644
+cirq_web/bloch_sphere/bloch_sphere.py,sha256=I54el4-D5zi8JtvZ0EVmJ05LTqt8H5w-9e2QQxgJaG4,2014
+cirq_web/bloch_sphere/bloch_sphere_test.py,sha256=Ebinu2aGO-1nlMH6oTb9bHBplgCQ0-rpXnEQ79Lp59Q,2671
+cirq_web-0.12.0.dev20210713144931.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+cirq_web-0.12.0.dev20210713144931.dist-info/METADATA,sha256=t-aPU8IotdQs91ovTQaNC1a2B12CAQdwJ9f-NVIf-so,2745
+cirq_web-0.12.0.dev20210713144931.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cirq_web-0.12.0.dev20210713144931.dist-info/top_level.txt,sha256=Wc5HLRyL9jcL9FvA8ArO93gp3R98gMH7IhnP_ABnbdY,17
+cirq_web-0.12.0.dev20210713144931.dist-info/RECORD,,
