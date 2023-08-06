@@ -1,0 +1,94 @@
+[tool.poetry]
+name = "steamio"
+version = "0.7.2"
+description = "A Python wrapper for the Steam API"
+authors = ["Gobot1234"]
+license = "MIT"
+readme = "README.md"
+keywords = ["steam.py", "steam", "steamio", "steam-api"]
+classifiers=[
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+include = [
+    "LICENSE",
+    "steam/__metadata__.py",
+    "steam/py.typed",
+    "steam/ext/__init__.pyi",
+]
+packages = [
+    { include = "steam" },
+]
+
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = false
+
+[tool.poetry.urls]
+"Documentation" = "https://steampy.readthedocs.io/en/latest"
+"Code" = "https://github.com/Gobot1234/steam.py"
+"Bug Tracker" = "https://github.com/Gobot1234/steam.py/issues"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+aiohttp = ">=3.7.0,<3.8.0"
+beautifulsoup4 = "^4.9.0"
+rsa = "^4.6"
+betterproto = "2.0.0b3"
+typing-extensions = "3.10.0.0"
+tomli = "^1.0.0"
+
+# docs option
+sphinx = { version = "4.1.0", optional = true }
+sphinxcontrib_trio = { version = "1.1.2", optional = true }
+csscompressor = { version = "*", optional = true }
+htmlmin = { version = "*", optional = true }
+rjsmin = { version = "*", optional = true }
+
+[tool.poetry.extras]
+docs = ["sphinx", "sphinxcontrib_trio", "csscompressor", "htmlmin", "rjsmin"]
+
+[tool.poetry.dev-dependencies]
+black = "^21.5b2"
+isort = "*"
+flake8 = "*"
+pytest = "*"
+pytest-asyncio = "*"
+mypy = "^0.910"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+combine_as_imports = true
+atomic = true
+ensure_newline_before_comments = true
+
+[tool.mypy]
+ignore_missing_imports = true
+strict_optional = false
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+allow_redefinition = true
+show_error_codes = true
+warn_no_return = false
+pretty = true
+files = "steam/*.py, steam/ext/commands/*.py, steam/protobufs/__init__.py, steam/protobufs/headers.py"
+exclude = "venv, .venv"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "tomli"]
+build-backend = "poetry.core.masonry.api"
