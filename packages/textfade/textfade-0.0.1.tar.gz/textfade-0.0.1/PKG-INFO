@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: textfade
+Version: 0.0.1
+Summary: This module allows to use Pastebin API very easily.
+Home-page: https://github.com/venaxyt/textfade
+Author: Venax
+Author-email: venaxumofficial@gmail.com
+License: MIT
+Keywords: pastebin
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+> # PASTEBIN API
+```
+# Module made by @venaxyt on Github
+import textfade
+
+mytext = """
+TEXT
+TEXT
+TEXT
+"""
+textfade.fade(mytext)
+>>> Output : Faded text
+```
+
+> ### **Download** : ``pip install textfade``
+
