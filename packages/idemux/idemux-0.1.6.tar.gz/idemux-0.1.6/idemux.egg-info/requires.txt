@@ -1,0 +1,13 @@
+tqdm
+
+[:python_version < "3.7"]
+importlib_resources
+dataclasses
+
+[dev]
+pytest
+pytest-cov
+coverage
+
+[docs]
+sphinx
