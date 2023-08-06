@@ -1,0 +1,8 @@
+README.rst
+setup.py
+Json_Handling.egg-info/PKG-INFO
+Json_Handling.egg-info/SOURCES.txt
+Json_Handling.egg-info/dependency_links.txt
+Json_Handling.egg-info/top_level.txt
+json_storage_handling/__init__.py
+json_storage_handling/json_handling.py
