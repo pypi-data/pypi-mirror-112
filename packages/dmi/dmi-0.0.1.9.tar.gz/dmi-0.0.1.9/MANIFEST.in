@@ -1,0 +1,3 @@
+include pyproject.toml
+
+recursive-include src/dmi/.dbs *.sqlite
