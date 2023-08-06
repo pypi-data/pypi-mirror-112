@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: loomxpy
+Version: 0.3.1
+Summary: Top-level package for LoomXpy.
+Home-page: https://github.com/aertslab/loomxpy
+License: MIT
+Author: Maxime De Waegeneer
+Author-email: mdewaegeneer@gmail.com
+Requires-Python: >=3.7.1
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click
+Requires-Dist: dataclasses-json (>=0.5.3,<0.6.0)
+Requires-Dist: loompy (>=3.0.6,<4.0.0)
+Requires-Dist: numpy (>=1.20.2,<2.0.0)
+Requires-Dist: pandas (>=1.2.4,<2.0.0)
+Requires-Dist: pyscenic (>=0.11.1,<0.12.0)
+Requires-Dist: scikit-learn (>=0.24.2,<0.25.0)
+Description-Content-Type: text/x-rst
+
+=======
+LoomXpy
+=======
+
+Python package (compatible with SCope) to create .loom files and extend them with other data e.g.: SCENIC regulons
+
+.. image:: https://img.shields.io/pypi/v/loomxpy.svg
+        :target: https://pypi.python.org/pypi/loomxpy
+
+.. image:: https://readthedocs.org/projects/loomxpy/badge/?version=latest
+        :target: https://loomxpy.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+.. image:: https://pyup.io/repos/github/aertslab/loomxpy/shield.svg
+     :target: https://pyup.io/repos/github/aertslab/loomxpy/
+     :alt: Updates
+
+
+
+Python package containing code for Loom files generation.
+
+
+* Free software: MIT
+* Documentation: https://loomxpy.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `briggySmalls/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`briggySmalls/cookiecutter-pypackage`: https://github.com/briggySmalls/cookiecutter-pypackage
+

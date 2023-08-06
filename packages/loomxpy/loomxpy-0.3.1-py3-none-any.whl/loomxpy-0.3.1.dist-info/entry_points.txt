@@ -1,0 +1,3 @@
+[console_scripts]
+loomxpy=loomxpy.cli:main
+
