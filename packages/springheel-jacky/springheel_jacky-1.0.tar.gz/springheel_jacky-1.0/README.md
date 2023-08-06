@@ -1,0 +1,42 @@
+# Springheel Jacky
+
+This is a simple Python library and command-line tool to work with [Springheel](https://www.twinkle-night.net/Code/springheel.html) sites without scraping. When generating a site, Springheel creates a JSON endpoints file; parsing this file allows programs to request resources from the site easily, without mucking around in the HTML. It's not quite an API, but for a static site, it's close enough.
+
+springheel_jacky is compatible with Springheel sites generated with version 7.0.2 or greater.
+
+## Dependencies
+
++ [requests](https://pypi.org/project/requests/)
++ [html-text](https://pypi.org/project/html-text/)
+
+## Usage examples
+
+Get links to all pages in a chapter:
+
+    $ springheel_jacky https://www.twinkle-night.net/brutus chap_links --category Brutus --chapter 1
+    Site generated with Springheel 7.0.2.
+    https://www.twinkle-night.net/brutus/brutus_0001.html
+    https://www.twinkle-night.net/brutus/brutus_0002.html
+    https://www.twinkle-night.net/brutus/brutus_0003.html
+    ...
+
+    >>> import springheel_jacky
+    >>> json_endpoints = springheel_jacky.internet.retrieveJson("https://www.twinkle-night.net/brutus")
+    >>> springheel_jacky.links.getChapPermalinks(json_endpoints, "Brutus", "1")
+    ['https://www.twinkle-night.net/brutus/brutus_0001.html', 'https://www.twinkle-night.net/brutus/brutus_0002.html', 'https://www.twinkle-night.net/brutus/brutus_0003.html', ... ]
+
+Search for comic dialogue:
+
+    $ springheel_jacky https://www.twinkle-night.net/brutus search --query "hot dogs"
+    Site generated with Springheel 7.0.2.
+    2 results
+    URL: https://www.twinkle-night.net/brutus/brutus_0033.html
+    Matches: "There will be hot dogs."
+    ---
+    URL: https://www.twinkle-night.net/brutus/brutus_0047.html
+    Matches: "There will be hot dogs.", "I...I never ate any hot dogs..."
+    ---
+
+    >>> search_results = springheel_jacky.search.searchDialogue(json_endpoints, "hot dogs") # returns a list of comic dictionaries
+    >>> len(search_results) # 2
+    >>> search_results[0]["url"] # https://www.twinkle-night.net/brutus/brutus_0033.html

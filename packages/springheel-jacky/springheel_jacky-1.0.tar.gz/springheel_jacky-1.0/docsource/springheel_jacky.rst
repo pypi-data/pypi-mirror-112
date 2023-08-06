@@ -1,0 +1,85 @@
+springheel\_jacky package
+=========================
+
+Submodules
+----------
+
+springheel\_jacky.categories module
+-----------------------------------
+
+.. automodule:: springheel_jacky.categories
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+springheel\_jacky.chapters module
+---------------------------------
+
+.. automodule:: springheel_jacky.chapters
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+springheel\_jacky.cli module
+----------------------------
+
+.. automodule:: springheel_jacky.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+springheel\_jacky.cbz module
+----------------------------
+
+.. automodule:: springheel_jacky.cbz
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+springheel\_jacky.images module
+-------------------------------
+
+.. automodule:: springheel_jacky.images
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+springheel\_jacky.internet module
+---------------------------------
+
+.. automodule:: springheel_jacky.internet
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+springheel\_jacky.links module
+------------------------------
+
+.. automodule:: springheel_jacky.links
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+springheel\_jacky.search module
+-------------------------------
+
+.. automodule:: springheel_jacky.search
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+springheel\_jacky.strips module
+-------------------------------
+
+.. automodule:: springheel_jacky.strips
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: springheel_jacky
+   :members:
+   :undoc-members:
+   :show-inheritance:

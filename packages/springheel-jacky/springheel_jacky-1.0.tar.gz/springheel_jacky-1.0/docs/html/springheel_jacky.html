@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>springheel_jacky package &#8212; springheel_jacky 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="JSON API" aria-label="JSON API" href="api.html" />
+    <link rel="prev" title="springheel_jacky" aria-label="springheel_jacky" href="modules.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">springheel_jacky 1.0.0 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel_jacky</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel_jacky package</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="modules.html" title="springheel_jacky"
+                aria-label="previous: springheel_jacky"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="api.html" title="JSON API"
+                aria-label="next: JSON API"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="springheel-jacky-package">
+<h1>springheel_jacky package<a class="headerlink" href="#springheel-jacky-package" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-springheel_jacky.categories">
+<span id="springheel-jacky-categories-module"></span><h2>springheel_jacky.categories module<a class="headerlink" href="#module-springheel_jacky.categories" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Show data on categories.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.categories.getCatInfo">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.categories.</span></span><span class="sig-name descname"><span class="pre">getCatInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel_jacky.categories.getCatInfo" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Get information on one category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>The site JSON contents.</p>
+</dd>
+<dt><strong>cat_name</strong><span class="classifier">str</span></dt><dd><p>The name of the category.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dict or False</strong></dt><dd><p>A dictionary full of information about the category, or False if
+no such category exists.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-springheel_jacky.chapters">
+<span id="springheel-jacky-chapters-module"></span><h2>springheel_jacky.chapters module<a class="headerlink" href="#module-springheel_jacky.chapters" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Show data on chapters.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.chapters.getChapters">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.chapters.</span></span><span class="sig-name descname"><span class="pre">getChapters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel_jacky.chapters.getChapters" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Try to get chapter info for all comics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>The site JSON contents.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dict or False</strong></dt><dd><p>If existent, a dictionary mapping category names to lists of chapter number: title dictionaries.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-springheel_jacky.cli">
+<span id="springheel-jacky-cli-module"></span><h2>springheel_jacky.cli module<a class="headerlink" href="#module-springheel_jacky.cli" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Operate through the command line.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.all_images_cmd">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">all_images_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.all_images_cmd" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>List URLs of all comic image files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.all_links_cmd">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">all_links_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.all_links_cmd" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>List permalinks to all comic pages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.cat_cmd">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">cat_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.cat_cmd" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Display info on a single category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input. A string for commands.category is expected. An
+optional bool for commands.no_strips removes the <code class="docutils literal notranslate"><span class="pre">strips</span></code> key
+from output.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.cat_images_cmd">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">cat_images_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.cat_images_cmd" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>List URLs of comic image files in one category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input. A string for command.category is expected.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.cat_links_cmd">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">cat_links_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.cat_links_cmd" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>List permalinks to comic pages in one category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input. A string for command.category is expected.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.chap_images_cmd">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">chap_images_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.chap_images_cmd" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>List URLs of all comic image files in one chapter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input. Strings for commands.category and
+commands.chapter are expected.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.chap_links_cmd">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">chap_links_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.chap_links_cmd" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>List permalinks to comic pages in one chapter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input. Strings for commands.category and
+commands.chapter are expected.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.chapter_print">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">chapter_print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cd</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.chapter_print" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Pretty-print a chapter info dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cd</strong><span class="classifier">dict</span></dt><dd><p>A chapter info dictionary.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.chapters_cmd">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">chapters_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.chapters_cmd" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>List chapter information, if available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.getCommands">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">getCommands</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">argparse.Namespace</span><a class="headerlink" href="#springheel_jacky.cli.getCommands" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Extract commands from the command line.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>argparse.Namespace</strong></dt><dd><p>Command input.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.pretty_list">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">pretty_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.pretty_list" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Pretty-print a list.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.save_cmd">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">save_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.save_cmd" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Save a site.json file locally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input. An optional filename in commands.filename is
+usable but not required.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.search_cmd">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">search_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.search_cmd" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Search comic transcripts for a case-insensitive word or phrase.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input. A string for either commands.query or
+commands.tag is expected.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cli.strip_cmd">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cli.</span></span><span class="sig-name descname"><span class="pre">strip_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cli.strip_cmd" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Display info on a single strip.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input. Strings for commands.category and
+commands.page are expected.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-springheel_jacky.cbz">
+<span id="springheel-jacky-cbz-module"></span><h2>springheel_jacky.cbz module<a class="headerlink" href="#module-springheel_jacky.cbz" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Create CBZ archives from downloaded comics.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cbz.constructMeta">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cbz.</span></span><span class="sig-name descname"><span class="pre">constructMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imageurls</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#springheel_jacky.cbz.constructMeta" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a metadata dictionary to use as a zip comment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input. Optional strings include commands.category
+(to limit results to one category) and commands.chapter (to
+limit results to one chapter; does nothing without a category).</p>
+</dd>
+<dt><strong>imageurls</strong><span class="classifier">list of str</span></dt><dd><p>The list of image URLS related to this download. Used to
+estimate page count.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dict</strong></dt><dd><p>A dictionary with information about the downloaded comic.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cbz.createCbzs">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cbz.</span></span><span class="sig-name descname"><span class="pre">createCbzs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cbz.createCbzs" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Download strips from a site and save them as a CBZ archive.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Site JSON contents.</p>
+</dd>
+<dt><strong>commands</strong><span class="classifier">argparse.Namespace</span></dt><dd><p>Command input. Optional strings include commands.category
+(to limit results to one category), commands.chapter (to limit
+results to one chapter; does nothing without a category), and
+commands.filename (specifies an output filename).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cbz.createCometMeta">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cbz.</span></span><span class="sig-name descname"><span class="pre">createCometMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#springheel_jacky.cbz.createCometMeta" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Create a CoMet-formatted comic metadata file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>meta</strong><span class="classifier">dict</span></dt><dd><p>The metadata to use.</p>
+</dd>
+<dt><strong>out_dir</strong><span class="classifier">str</span></dt><dd><p>The directory where the XML file should go.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>str</strong></dt><dd><p>String containing XML data, for testing purposes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cbz.createComicInfo">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cbz.</span></span><span class="sig-name descname"><span class="pre">createComicInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#springheel_jacky.cbz.createComicInfo" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ComicInfo.xml file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>meta</strong><span class="classifier">dict</span></dt><dd><p>The metadata to use.</p>
+</dd>
+<dt><strong>out_dir</strong><span class="classifier">str</span></dt><dd><p>The directory where the XML file should go.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>str</strong></dt><dd><p>String containing XML data, for testing purposes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cbz.getFilename">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cbz.</span></span><span class="sig-name descname"><span class="pre">getFilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_fn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#springheel_jacky.cbz.getFilename" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Safely construct a filename for output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>metadata</strong><span class="classifier">dict</span></dt><dd><p>A dictionary providing information about the comic. Should at
+minimum contain the key “outname” with a string value.</p>
+</dd>
+<dt><strong>u_fn</strong><span class="classifier">str or None</span></dt><dd><p>A user-specified filename, if available.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cbz.writeCbz">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cbz.</span></span><span class="sig-name descname"><span class="pre">writeCbz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">out_fn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imagefiles</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zip_comment</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel_jacky.cbz.writeCbz" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Write a CBZ archive.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out_fn</strong><span class="classifier">str</span></dt><dd><p>The output filename.</p>
+</dd>
+<dt><strong>imagefiles</strong><span class="classifier">list of str</span></dt><dd><p>A list of image file paths to add to the zip file.</p>
+</dd>
+<dt><strong>zip_comment</strong><span class="classifier">str</span></dt><dd><p>A string to use as the zip comment.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.cbz.zipcomment">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.cbz.</span></span><span class="sig-name descname"><span class="pre">zipcomment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#springheel_jacky.cbz.zipcomment" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Create a zip comment from metadata.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>meta</strong><span class="classifier">dict</span></dt><dd><p>A metadata dictionary constructed by <a class="reference internal" href="#springheel_jacky.cbz.constructMeta" title="springheel_jacky.cbz.constructMeta"><code class="xref py py-func docutils literal notranslate"><span class="pre">constructMeta()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>str</strong></dt><dd><p>The zip comment, formatted like ComicTagger.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-springheel_jacky.images">
+<span id="springheel-jacky-images-module"></span><h2>springheel_jacky.images module<a class="headerlink" href="#module-springheel_jacky.images" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Get info on image files.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.images.getAllStrips">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.images.</span></span><span class="sig-name descname"><span class="pre">getAllStrips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#springheel_jacky.images.getAllStrips" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Get strip images for all comics on the site.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>The site JSON contents.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list of list</strong></dt><dd><p>A list of lists – one for each category – of comic strip
+image URLs on the site.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.images.getCatStrips">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.images.</span></span><span class="sig-name descname"><span class="pre">getCatStrips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">,</span> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel_jacky.images.getCatStrips" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Get URLs for one category on the site.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>The site JSON contents.</p>
+</dd>
+<dt><strong>cat_name</strong><span class="classifier">str</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list of str</strong></dt><dd><p>A list of all comic page URLs in the category, or False if no
+such category exists.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.images.getChapStrips">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.images.</span></span><span class="sig-name descname"><span class="pre">getChapStrips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chap_num</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">,</span> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel_jacky.images.getChapStrips" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Get URLs for one chapter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>The site JSON contents.</p>
+</dd>
+<dt><strong>cat_name</strong><span class="classifier">str</span></dt><dd><p>The name of the category to search.</p>
+</dd>
+<dt><strong>chap_num</strong><span class="classifier">int</span></dt><dd><p>The chapter number to retrieve pages from.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list of str</strong></dt><dd><p>A list of all comic page URLs in the chapter, or False if no
+such chapter exists.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.images.makeFilename">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.images.</span></span><span class="sig-name descname"><span class="pre">makeFilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel_jacky.images.makeFilename" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-springheel_jacky.internet">
+<span id="springheel-jacky-internet-module"></span><h2>springheel_jacky.internet module<a class="headerlink" href="#module-springheel_jacky.internet" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Request resources from the Internet.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.internet.dlImgs">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.internet.</span></span><span class="sig-name descname"><span class="pre">dlImgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imagelist</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#springheel_jacky.internet.dlImgs" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Download images from a list to the specified
+directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>imagelist</strong><span class="classifier">list of str</span></dt><dd><p>A list of image URLs.</p>
+</dd>
+<dt><strong>out_dir</strong><span class="classifier">str</span></dt><dd><p>The output directory to use. Created if it
+doesn’t already exist.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list</strong></dt><dd><p>A list of status codes from the download process (for debug
+purposes).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.internet.getSite">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.internet.</span></span><span class="sig-name descname"><span class="pre">getSite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel_jacky.internet.getSite" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Get the site URL to parse and clean it up a bit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>url</strong><span class="classifier">str</span></dt><dd><p>The first argument passed to the command line.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>str or False</strong></dt><dd><p>The URL, if it very loosely appears to be a URL. False
+otherwise.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.internet.retrieveJson">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.internet.</span></span><span class="sig-name descname"><span class="pre">retrieveJson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#springheel_jacky.internet.retrieveJson" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the JSON endpoints file from a site.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>url</strong><span class="classifier">str</span></dt><dd><p>The site URL.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dict</strong></dt><dd><p>JSON endpoint data for the site.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.internet.saveImg">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.internet.</span></span><span class="sig-name descname"><span class="pre">saveImg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_fn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">codes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#springheel_jacky.internet.saveImg" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Save an image locally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>img</strong><span class="classifier">str</span></dt><dd><p>The URL of an image to download.</p>
+</dd>
+<dt><strong>out_fn</strong><span class="classifier">str</span></dt><dd><p>The output file to save to.</p>
+</dd>
+<dt><strong>codes</strong><span class="classifier">list</span></dt><dd><p>A list to use for recording status codes.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list</strong></dt><dd><p>A list of HTTP status codes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-springheel_jacky.links">
+<span id="springheel-jacky-links-module"></span><h2>springheel_jacky.links module<a class="headerlink" href="#module-springheel_jacky.links" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Get info on URLs.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.links.getAllPermalinks">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.links.</span></span><span class="sig-name descname"><span class="pre">getAllPermalinks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#springheel_jacky.links.getAllPermalinks" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Get URLs for all comics on the site.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>The site JSON contents.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list of list</strong></dt><dd><p>A list of lists – one for each category – of comic page URLs
+on the site.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.links.getCatPermalinks">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.links.</span></span><span class="sig-name descname"><span class="pre">getCatPermalinks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#springheel_jacky.links.getCatPermalinks" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Get URLs for one category on the site.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>The site JSON contents.</p>
+</dd>
+<dt><strong>cat_name</strong><span class="classifier">str</span></dt><dd><p>The name of the category to search.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list of str</strong></dt><dd><p>A list of all comic page URLs in the category.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.links.getChapPermalinks">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.links.</span></span><span class="sig-name descname"><span class="pre">getChapPermalinks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chap_num</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#springheel_jacky.links.getChapPermalinks" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Get URLs for one chapter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>The site JSON contents.</p>
+</dd>
+<dt><strong>cat_name</strong><span class="classifier">str</span></dt><dd><p>The name of the category to search.</p>
+</dd>
+<dt><strong>chap_num</strong><span class="classifier">int</span></dt><dd><p>The chapter number to retrieve pages from.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list of str</strong></dt><dd><p>A list of all comic page URLs in the chapter.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-springheel_jacky.search">
+<span id="springheel-jacky-search-module"></span><h2>springheel_jacky.search module<a class="headerlink" href="#module-springheel_jacky.search" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Search comics for dialogue for tags.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.search.formatResults">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.search.</span></span><span class="sig-name descname"><span class="pre">formatResults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results_comics</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchstring</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#springheel_jacky.search.formatResults" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Process search results for display in the console.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>results_comics</strong><span class="classifier">list of dict</span></dt><dd><p>A list of dictionaries representing comic strips, returned by
+one of the search functions.</p>
+</dd>
+<dt><strong>key</strong><span class="classifier">str</span></dt><dd><p>The type to format the results for. Either “dialogue” or “tags”.</p>
+</dd>
+<dt><strong>searchstring</strong><span class="classifier">str</span></dt><dd><p>The original search string.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list</strong></dt><dd><p>A list of formatted search results.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.search.searchDialogue">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.search.</span></span><span class="sig-name descname"><span class="pre">searchDialogue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchstring</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#springheel_jacky.search.searchDialogue" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Search comic transcripts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>The site JSON contents.</p>
+</dd>
+<dt><strong>searchstring</strong><span class="classifier">str</span></dt><dd><p>The string to search for.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list</strong></dt><dd><p>If not empty, a list of dictionaries for any strips that contain
+matches for the search string.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.search.searchTags">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.search.</span></span><span class="sig-name descname"><span class="pre">searchTags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#springheel_jacky.search.searchTags" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Search comic tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>The site JSON contents.</p>
+</dd>
+<dt><strong>tag</strong><span class="classifier">str</span></dt><dd><p>The string to search for.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list of dict</strong></dt><dd><p>If not empty, a list of dictionaries with any strips that are
+tagged with the queried tag.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-springheel_jacky.strips">
+<span id="springheel-jacky-strips-module"></span><h2>springheel_jacky.strips module<a class="headerlink" href="#module-springheel_jacky.strips" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Get info on individual strips.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel_jacky.strips.getStripInfo">
+<span class="sig-prename descclassname"><span class="pre">springheel_jacky.strips.</span></span><span class="sig-name descname"><span class="pre">getStripInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_num</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel_jacky.strips.getStripInfo" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Get information on one strip.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>The site JSON contents.</p>
+</dd>
+<dt><strong>cat_name</strong><span class="classifier">str</span></dt><dd><p>The name of the strip’s category.</p>
+</dd>
+<dt><strong>page_num</strong><span class="classifier">str</span></dt><dd><p>The page number. Leading zeroes are stripped.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dict or False</strong></dt><dd><p>A dictionary full of information about the strip, or False if no
+such strip exists.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-springheel_jacky">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-springheel_jacky" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Get and view resources from Springheel sites.</p>
+</div>
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">springheel_jacky package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-springheel_jacky.categories">springheel_jacky.categories module</a></li>
+<li><a class="reference internal" href="#module-springheel_jacky.chapters">springheel_jacky.chapters module</a></li>
+<li><a class="reference internal" href="#module-springheel_jacky.cli">springheel_jacky.cli module</a></li>
+<li><a class="reference internal" href="#module-springheel_jacky.cbz">springheel_jacky.cbz module</a></li>
+<li><a class="reference internal" href="#module-springheel_jacky.images">springheel_jacky.images module</a></li>
+<li><a class="reference internal" href="#module-springheel_jacky.internet">springheel_jacky.internet module</a></li>
+<li><a class="reference internal" href="#module-springheel_jacky.links">springheel_jacky.links module</a></li>
+<li><a class="reference internal" href="#module-springheel_jacky.search">springheel_jacky.search module</a></li>
+<li><a class="reference internal" href="#module-springheel_jacky.strips">springheel_jacky.strips module</a></li>
+<li><a class="reference internal" href="#module-springheel_jacky">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">springheel_jacky</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="api.html"
+                        title="next chapter"
+                        aria-label="next chapter">JSON API</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/springheel_jacky.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">springheel_jacky 1.0.0 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel_jacky</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel_jacky package</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="modules.html" title="springheel_jacky"
+                aria-label="previous: springheel_jacky"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="api.html" title="JSON API"
+                aria-label="next: JSON API"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2021, gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

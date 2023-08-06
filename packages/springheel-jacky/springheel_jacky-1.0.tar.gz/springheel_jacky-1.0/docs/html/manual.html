@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>springheel_jacky man page &#8212; springheel_jacky 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="Changelog" aria-label="Changelog" href="changelog.html" />
+    <link rel="prev" title="JSON API" aria-label="JSON API" href="api.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">springheel_jacky 1.0.0 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel_jacky man page</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="api.html" title="JSON API"
+                aria-label="previous: JSON API"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="changelog.html" title="Changelog"
+                aria-label="next: Changelog"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="springheel-jacky-man-page">
+<h1>springheel_jacky man page<a class="headerlink" href="#springheel-jacky-man-page" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>List all links on a site:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">springheel_jacky</span> <span class="pre">&lt;URL&gt;</span> <span class="pre">all_links</span></code></p>
+</div></blockquote>
+<p>Get image URLs for one chapter:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">springheel_jacky</span> <span class="pre">&lt;URL&gt;</span> <span class="pre">chap_images</span> <span class="pre">--category</span> <span class="pre">&quot;Foo&quot;</span> <span class="pre">--chapter</span> <span class="pre">2</span></code></p>
+</div></blockquote>
+<p>Get info on chapters:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">springheel_jacky</span> <span class="pre">&lt;URL&gt;</span> <span class="pre">chapters</span></code></p>
+</div></blockquote>
+<p>Search comic dialogue:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">springheel_jacky</span> <span class="pre">&lt;URL&gt;</span> <span class="pre">search</span> <span class="pre">--query</span> <span class="pre">&quot;foo&quot;</span></code></p>
+</div></blockquote>
+<p>Search for a tag:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">springheel_jacky</span> <span class="pre">&lt;URL&gt;</span> <span class="pre">search</span> <span class="pre">--tag</span> <span class="pre">&quot;foo&quot;</span></code></p>
+</div></blockquote>
+<p>Get info on one strip:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">springheel_jacky</span> <span class="pre">&lt;URL&gt;</span> <span class="pre">strip</span> <span class="pre">--category</span> <span class="pre">&quot;Foo&quot;</span> <span class="pre">--page</span> <span class="pre">3</span></code></p>
+</div></blockquote>
+<p>Get info on a category:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">springheel_jacky</span> <span class="pre">&lt;URL&gt;</span> <span class="pre">category</span> <span class="pre">--category</span> <span class="pre">&quot;Foo&quot;</span></code></p>
+</div></blockquote>
+<p>Download a comic as CBZ:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">springheel_jacky</span> <span class="pre">&lt;URL&gt;</span> <span class="pre">cbz</span></code></p>
+</div></blockquote>
+<p>Download a chapter as CBZ:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">springheel_jacky</span> <span class="pre">&lt;URL&gt;</span> <span class="pre">cbz</span> <span class="pre">--category</span> <span class="pre">&quot;Foo&quot;</span> <span class="pre">--chapter</span> <span class="pre">4</span></code></p>
+</div></blockquote>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>This is a simple command-line tool to work with Springheel sites without scraping.</p>
+<p>When generating a site, Springheel creates a JSON endpoints file; parsing this file allows programs to request resources from the site easily, without mucking around in the HTML. It's not quite an API, but for a static site, it's close enough.</p>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p><strong>save</strong> [--filename|-f OUTPUT_FILENAME]</p>
+<blockquote>
+<div><p>Download the site.json file to the current directory, for debug purposes.</p>
+</div></blockquote>
+<p><strong>chapters</strong></p>
+<blockquote>
+<div><p>List chapter information, if available.</p>
+</div></blockquote>
+<p><strong>all_links</strong></p>
+<blockquote>
+<div><p>List permalinks to all comic pages.</p>
+</div></blockquote>
+<p><strong>all_images</strong></p>
+<blockquote>
+<div><p>List URLs of all comic image files.</p>
+</div></blockquote>
+<p><strong>cat_links</strong> --category|-c CATEGORY_NAME</p>
+<blockquote>
+<div><p>List permalinks to comic pages in one category.</p>
+</div></blockquote>
+<p><strong>cat_images</strong> --category|-c CATEGORY_NAME</p>
+<blockquote>
+<div><p>List URLs of comic image files in one category.</p>
+</div></blockquote>
+<p><strong>chap_links</strong> --category|-c CATEGORY_NAME --chapter|-k CHAPTER_NUMBER</p>
+<blockquote>
+<div><p>List permalinks to comic pages in one chapter.</p>
+</div></blockquote>
+<p><strong>chap_images</strong> --chapter|-k CHAPTER_NUMBER</p>
+<blockquote>
+<div><p>List URLs of all comic image files in one chapter.</p>
+</div></blockquote>
+<p><strong>search</strong> (--query|-q SEARCH_STRING | --tag|-t TAG)</p>
+<blockquote>
+<div><p>Search comic transcripts for a case-insensitive word/phrase, or search for comics with a certain tag (whole word).</p>
+</div></blockquote>
+<p><strong>strip</strong> --category|-c CATEGORY_NAME --page|-p PAGE_NUMBER</p>
+<blockquote>
+<div><p>Display info on a single strip.</p>
+</div></blockquote>
+<p><strong>category</strong> --category|-c CATEGORY_NAME [--no-strips|-n]</p>
+<blockquote>
+<div><p>Display info on a single category. Disable appearance of strip info in output with <code class="docutils literal notranslate"><span class="pre">--no-strips</span></code>.</p>
+</div></blockquote>
+<p><strong>cbz</strong> [--category|-c CATEGORY_NAME] [--chapter|-k CHAPTER_NUMBER] [--filename|-f OUTPUT_FILENAME]</p>
+<blockquote>
+<div><p>Download a comic as CBZ archive. Defaults to downloading all comics on the site, but can be limited to a single category or chapter if desired.</p>
+</div></blockquote>
+</div>
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">springheel_jacky man page</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#description">Description</a></li>
+<li><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="api.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">JSON API</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="changelog.html"
+                        title="next chapter"
+                        aria-label="next chapter">Changelog</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/manual.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">springheel_jacky 1.0.0 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel_jacky man page</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="api.html" title="JSON API"
+                aria-label="previous: JSON API"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="changelog.html" title="Changelog"
+                aria-label="next: Changelog"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2021, gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

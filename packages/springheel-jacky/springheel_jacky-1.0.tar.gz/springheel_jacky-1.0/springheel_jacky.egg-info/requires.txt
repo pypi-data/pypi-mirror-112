@@ -1,0 +1,6 @@
+requests
+html_text
+
+[docs]
+sphinx>=3.4.1
+numpydoc

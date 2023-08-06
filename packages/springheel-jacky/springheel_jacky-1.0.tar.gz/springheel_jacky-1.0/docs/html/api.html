@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON API &#8212; springheel_jacky 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="springheel_jacky man page" aria-label="springheel_jacky man page" href="manual.html" />
+    <link rel="prev" title="springheel_jacky package" aria-label="springheel_jacky package" href="springheel_jacky.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">springheel_jacky 1.0.0 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">JSON API</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel_jacky.html" title="springheel_jacky package"
+                aria-label="previous: springheel_jacky package"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="manual.html" title="springheel_jacky man page"
+                aria-label="next: springheel_jacky man page"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="json-api">
+<h1>JSON API<a class="headerlink" href="#json-api" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<p>This is a listing of the various JSON endpoints exposed to
+springheel_jacky.</p>
+<div class="section" id="site">
+<h2>Site<a class="headerlink" href="#site" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Keys</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>about</strong><span class="classifier">str</span></dt><dd><p>Whether or not the comic has an about page.</p>
+</dd>
+<dt><strong>archive_page</strong><span class="classifier">str</span></dt><dd><p>URL of the comic archive page.</p>
+</dd>
+<dt><strong>base_url</strong><span class="classifier">str</span></dt><dd><p>The base URL for this site.</p>
+</dd>
+<dt><strong>categories</strong><span class="classifier">list of dict</span></dt><dd><p>Categories on the site. If single is True, there will only be one entry. See <a class="reference external" href="#categories">Categories</a> for a list of attributes belonging to these items.</p>
+</dd>
+<dt><strong>chapter_info</strong><span class="classifier">dict</span></dt><dd><p>Information about chapters in each category. See
+<a class="reference external" href="#chapters">Chapters</a>.</p>
+</dd>
+<dt><strong>characters_page</strong><span class="classifier">str or bool</span></dt><dd><p>If it exists, the URL of the characters page.</p>
+</dd>
+<dt><strong>copyright_statement</strong><span class="classifier">str</span></dt><dd><p>HTML-formatted copyright block.</p>
+</dd>
+<dt><strong>country</strong><span class="classifier">str</span></dt><dd><p>The country from which this comic was published. This is mostly relevant if it is public domain.</p>
+</dd>
+<dt><strong>description</strong><span class="classifier">str</span></dt><dd><p>A short description of the site.</p>
+</dd>
+<dt><strong>diaspora_url</strong><span class="classifier">str</span></dt><dd><p>Diaspora* stream URL.</p>
+</dd>
+<dt><strong>extras_page</strong><span class="classifier">str or bool</span></dt><dd><p>If it exists, the URL of the extras page.</p>
+</dd>
+<dt><strong>generated_on</strong><span class="classifier">float</span></dt><dd><p>The date when this site was generated (Unix timestamp).</p>
+</dd>
+<dt><strong>header_filename</strong><span class="classifier">str</span></dt><dd><p>The filename for the site header banner.</p>
+</dd>
+<dt><strong>image_rename_pattern</strong><span class="classifier">str</span></dt><dd><p>The pattern used for renaming images.</p>
+</dd>
+<dt><strong>json_mode</strong><span class="classifier">str</span></dt><dd><p>Whether the site uses JSON files as input or Springheel’s original format.</p>
+</dd>
+<dt><strong>language</strong><span class="classifier">str</span></dt><dd><p>The site’s language (ISO 639-1 code).</p>
+</dd>
+<dt><strong>liberapay_handle</strong><span class="classifier">str</span></dt><dd><p>Liberapay handle. Applied in the form of <code class="docutils literal notranslate"><span class="pre">https://liberapay.com/{liberapay_handle}</span></code></p>
+</dd>
+<dt><strong>license</strong><span class="classifier">str</span></dt><dd><p>An HTML snippet with copyright information on the site.</p>
+</dd>
+<dt><strong>mastodon_url</strong><span class="classifier">str</span></dt><dd><p>Mastodon URL.</p>
+</dd>
+<dt><strong>navdirection</strong><span class="classifier">str</span></dt><dd><p>The metaphorical direction used for navigation arrows. Can be <code class="docutils literal notranslate"><span class="pre">ltr</span></code> or <code class="docutils literal notranslate"><span class="pre">rtl</span></code>.</p>
+</dd>
+<dt><strong>patreon_handle</strong><span class="classifier">str</span></dt><dd><p>Patreon handle. Applied in the form of <code class="docutils literal notranslate"><span class="pre">https://www.patreon.com/{patreon_handle}</span></code></p>
+</dd>
+<dt><strong>pump_url</strong><span class="classifier">str</span></dt><dd><p>Pump microblog URL.</p>
+</dd>
+<dt><strong>rename_images</strong><span class="classifier">str</span></dt><dd><p>Whether or not to rename images when building the site.</p>
+</dd>
+<dt><strong>site_author</strong><span class="classifier">str</span></dt><dd><p>The author of this site.</p>
+</dd>
+<dt><strong>site_author_email</strong><span class="classifier">str</span></dt><dd><p>The author’s email, used for RSS feed generation. Will probably be fake.</p>
+</dd>
+<dt><strong>site_authors</strong><span class="classifier">list of str</span></dt><dd><p>All persons whose work appears on the site.</p>
+</dd>
+<dt><strong>site_style</strong><span class="classifier">str</span></dt><dd><p>The site theme.</p>
+</dd>
+<dt><strong>site_title</strong><span class="classifier">str</span></dt><dd><p>The overall title of the site.</p>
+</dd>
+<dt><strong>site_type</strong><span class="classifier">str</span></dt><dd><p>Whether the site has multiple “comics” or just one.</p>
+</dd>
+<dt><strong>social_icons</strong><span class="classifier">str</span></dt><dd><p>Whether or not to include social media links on each page.</p>
+</dd>
+<dt><strong>springheel_version</strong><span class="classifier">str</span></dt><dd><p>The version of Springheel used to build the site.</p>
+</dd>
+<dt><strong>store_page</strong><span class="classifier">str or bool</span></dt><dd><p>If it exists, the URL of the store page.</p>
+</dd>
+<dt><strong>tags</strong><span class="classifier">list of dict</span></dt><dd><p>Tags associated with comics. See <a class="reference external" href="#tags">Tags</a> for available
+attributes.</p>
+</dd>
+<dt><strong>tumblr_handle</strong><span class="classifier">str</span></dt><dd><p>Tumblr blog. Applied like <code class="docutils literal notranslate"><span class="pre">https://{tumblr_handle}.tumblr.com</span></code></p>
+</dd>
+<dt><strong>twitter_handle</strong><span class="classifier">str</span></dt><dd><p>Twitter handle. Applied in the form of <code class="docutils literal notranslate"><span class="pre">https://twitter.com/{twitter_handle}</span></code>.</p>
+</dd>
+<dt><strong>zero_padding</strong><span class="classifier">str</span></dt><dd><p>To how many decimal places comic page numbers should be padded, if any.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="categories">
+<h2>Categories<a class="headerlink" href="#categories" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Keys</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>category</strong><span class="classifier">str</span></dt><dd><p>The name of the category.</p>
+</dd>
+<dt><strong>characters</strong><span class="classifier">dict</span></dt><dd><p>Character information for this category, if available. See
+<a class="reference external" href="#characters">Characters</a> for available attributes.</p>
+</dd>
+<dt><strong>copyright_statement</strong><span class="classifier">str</span></dt><dd><p>HTML-formatted copyright block.</p>
+</dd>
+<dt><strong>first_page</strong><span class="classifier">str</span></dt><dd><p>The newest page in the category.</p>
+</dd>
+<dt><strong>known_pages</strong><span class="classifier">list of str</span></dt><dd><p>A list of all zero-padded page numbers in the category.</p>
+</dd>
+<dt><strong>known_pages_raw</strong><span class="classifier">list of str</span></dt><dd><p>A list of all page numbers in the category as they were originally added to Springheel.</p>
+</dd>
+<dt><strong>known_pages_real</strong><span class="classifier">list of int, float, or tuple</span></dt><dd><p>A list of all page numbers in this category converted to integers (or arrays of integers for multi-page spreads).</p>
+</dd>
+<dt><strong>last_page</strong><span class="classifier">str</span></dt><dd><p>The most recent page in the category.</p>
+</dd>
+<dt><strong>strips</strong><span class="classifier">list</span></dt><dd><p>All strips included in this category. See <a class="reference external" href="#strips">Strips</a> for a list of attributes belonging to these items.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="strips">
+<h2>Strips<a class="headerlink" href="#strips" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Keys</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>alt_text</strong><span class="classifier">str</span></dt><dd><p>A short piece of additional text associated with this strip. Not actually used as alt text.</p>
+</dd>
+<dt><strong>author</strong><span class="classifier">str</span></dt><dd><p>The author of this strip.</p>
+</dd>
+<dt><strong>author_email</strong><span class="classifier">str</span></dt><dd><p>The author’s email address. Will probably be fake.</p>
+</dd>
+<dt><strong>authors</strong><span class="classifier">list of str</span></dt><dd><p>All authors listed separately, in case there are more than one.</p>
+</dd>
+<dt><strong>category</strong><span class="classifier">str</span></dt><dd><p>The name of the category associated with this strip.</p>
+</dd>
+<dt><strong>chapter</strong><span class="classifier">str or bool</span></dt><dd><p>The strip’s chapter number, if available.</p>
+</dd>
+<dt><strong>commentary</strong><span class="classifier">str</span></dt><dd><p>HTML-formatted commentary on this strip.</p>
+</dd>
+<dt><strong>copyright_statement</strong><span class="classifier">str</span></dt><dd><p>HTML-formatted copyright block.</p>
+</dd>
+<dt><strong>date</strong><span class="classifier">str</span></dt><dd><p>Duplicate of date_fmt</p>
+</dd>
+<dt><strong>date_fmt</strong><span class="classifier">str</span></dt><dd><p>The date on which this strip was published.</p>
+</dd>
+<dt><strong>figcaption</strong><span class="classifier">str</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">alt_text</span></code> formatted as an HTML figcaption.</p>
+</dd>
+<dt><strong>h1_title</strong><span class="classifier">str</span></dt><dd><p>The strip’s title as it appears in the main heading element (with page number and category).</p>
+</dd>
+<dt><strong>header_title</strong><span class="classifier">str</span></dt><dd><p>The same as h1_title.</p>
+</dd>
+<dt><strong>height</strong><span class="classifier">str</span></dt><dd><p>The height of the strip image.</p>
+</dd>
+<dt><strong>html_filename</strong><span class="classifier">str</span></dt><dd><p>An explanation about the purpose of this instance.</p>
+</dd>
+<dt><strong>img</strong><span class="classifier">str</span></dt><dd><p>The filename of the strip image.</p>
+</dd>
+<dt><strong>lang</strong><span class="classifier">str</span></dt><dd><p>The strip’s language.</p>
+</dd>
+<dt><strong>license</strong><span class="classifier">str</span></dt><dd><p>An explanation about the purpose of this instance.</p>
+</dd>
+<dt><strong>mode</strong><span class="classifier">str</span></dt><dd><p>Not currently used for anything.</p>
+</dd>
+<dt><strong>new_meta</strong><span class="classifier">str</span></dt><dd><p>The filename of the strip’s metadata file.</p>
+</dd>
+<dt><strong>new_transcr</strong><span class="classifier">str</span></dt><dd><p>The filename of the strip’s transcript.</p>
+</dd>
+<dt><strong>page</strong><span class="classifier">str</span></dt><dd><p>The strip’s page number.</p>
+</dd>
+<dt><strong>page_padded</strong><span class="classifier">str</span></dt><dd><p>The strip’s page number, padded with zeroes.</p>
+</dd>
+<dt><strong>page_url</strong><span class="classifier">str</span></dt><dd><p>The strip’s URL.</p>
+</dd>
+<dt><strong>raw_comments</strong><span class="classifier">list of str</span></dt><dd><p>The strip’s commentary in its original form.</p>
+</dd>
+<dt><strong>series_slug</strong><span class="classifier">str</span></dt><dd><p>The strip’s category as a URL slug.</p>
+</dd>
+<dt><strong>sha256</strong><span class="classifier">str</span></dt><dd><p>SHA-256 checksum of the strip image.</p>
+</dd>
+<dt><strong>slug</strong><span class="classifier">str</span></dt><dd><p>The strip’s URL slug.</p>
+</dd>
+<dt><strong>slugs</strong><span class="classifier">list of str</span></dt><dd><p>The category and strip title slugs used for file renaming.</p>
+</dd>
+<dt><strong>source</strong><span class="classifier">str</span></dt><dd><p>The URL of a work on which this strip is based, or where it was originally posted.</p>
+</dd>
+<dt><strong>statline</strong><span class="classifier">str</span></dt><dd><p>An HTML block that appears below commentary, listing various metadata about the strip.</p>
+</dd>
+<dt><strong>tags</strong><span class="classifier">list of str</span></dt><dd><p>An optional list of tags associated with this strip.</p>
+</dd>
+<dt><strong>title</strong><span class="classifier">str</span></dt><dd><p>The title of the strip.</p>
+</dd>
+<dt><strong>title_slug</strong><span class="classifier">str</span></dt><dd><p>The title’s URL slug.</p>
+</dd>
+<dt><strong>transcript_c</strong><span class="classifier">str</span></dt><dd><p>The HTML block with the strip’s transcript.</p>
+</dd>
+<dt><strong>url</strong><span class="classifier">str</span></dt><dd><p>Duplicate of page_url</p>
+</dd>
+<dt><strong>width</strong><span class="classifier">str</span></dt><dd><p>The strip image’s width.</p>
+</dd>
+<dt><strong>year</strong><span class="classifier">str</span></dt><dd><p>The year this strip was published.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="characters">
+<h2>Characters<a class="headerlink" href="#characters" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">characters</span></code> key, if existent, has two keys:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keys</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<dl class="simple">
+<dt><strong>items</strong><span class="classifier">list of dict</span></dt><dd><p>A list of character items.</p>
+</dd>
+<dt><strong>url</strong><span class="classifier">str</span></dt><dd><p>The URL of the resultant characters page.</p>
+</dd>
+</dl>
+<p>Each item in the <code class="docutils literal notranslate"><span class="pre">items</span></code> list has at minimum the following attributes:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keys</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>The character’s name.</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier">str</span></dt><dd><p>A description of the character.</p>
+</dd>
+<dt><strong>img</strong><span class="classifier">str</span></dt><dd><p>An image filename representing a picture of the character.</p>
+</dd>
+</dl>
+<p>More attributes may be available depending on the individual site.</p>
+</div>
+<div class="section" id="tags">
+<h2>Tags<a class="headerlink" href="#tags" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Keys</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>The name of the tag.</p>
+</dd>
+<dt><strong>url</strong><span class="classifier">str</span></dt><dd><p>The URL for the tag’s index.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="chapters">
+<h2>Chapters<a class="headerlink" href="#chapters" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Keys in this dictionary are the titles of <a class="reference external" href="#categories">Categories</a>.
+Each contains a list of dictionaries indicating chapter numbers and, if
+available, titles:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keys</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<dl class="simple">
+<dt><strong>num</strong><span class="classifier">int</span></dt><dd><p>The chapter number.</p>
+</dd>
+<dt><strong>title</strong><span class="classifier">str, optional</span></dt><dd><p>The title of the chapter.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">JSON API</a><ul>
+<li><a class="reference internal" href="#site">Site</a></li>
+<li><a class="reference internal" href="#categories">Categories</a></li>
+<li><a class="reference internal" href="#strips">Strips</a></li>
+<li><a class="reference internal" href="#characters">Characters</a></li>
+<li><a class="reference internal" href="#tags">Tags</a></li>
+<li><a class="reference internal" href="#chapters">Chapters</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="springheel_jacky.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">springheel_jacky package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="manual.html"
+                        title="next chapter"
+                        aria-label="next chapter">springheel_jacky man page</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">springheel_jacky 1.0.0 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">JSON API</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel_jacky.html" title="springheel_jacky package"
+                aria-label="previous: springheel_jacky package"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="manual.html" title="springheel_jacky man page"
+                aria-label="next: springheel_jacky man page"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2021, gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>
