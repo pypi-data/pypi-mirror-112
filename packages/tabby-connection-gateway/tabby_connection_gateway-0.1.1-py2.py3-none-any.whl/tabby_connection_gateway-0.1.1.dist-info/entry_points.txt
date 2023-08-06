@@ -1,0 +1,3 @@
+[console_scripts]
+tabby-connection-gateway = tabby_connection_gateway.cli:main
+
