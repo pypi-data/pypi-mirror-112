@@ -1,0 +1,5 @@
+[console_scripts]
+fabs = fabsetup.__main__:main
+fabsetup = fabsetup.__main__:main
+fap = fabsetup.__main__:main
+

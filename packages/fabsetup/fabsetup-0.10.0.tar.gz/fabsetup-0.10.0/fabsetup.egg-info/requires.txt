@@ -1,0 +1,9 @@
+fabric>=2.0.0
+
+[devel]
+black
+mutmut
+pytest
+recommonmark
+sphinx
+tox
