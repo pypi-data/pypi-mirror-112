@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: femagroundmotions
+Version: 1.0.1
+Summary: FEMA P695 ground motion data in multiple formats.
+Home-page: https://github.com/otaithleigh/fema-ground-motions
+Author: Peter Talley
+Author-email: peterctalley@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+Requires-Dist: h5py
+Requires-Dist: hdf5plugin
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: tables
+
+README
+++++++
+
+H1
+==
+
+H2
+--
+
+
