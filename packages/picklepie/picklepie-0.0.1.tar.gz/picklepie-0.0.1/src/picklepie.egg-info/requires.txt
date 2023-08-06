@@ -1,0 +1,14 @@
+imblearn>=0.0
+imbalanced-learn>=0.8.0
+kneed>=0.7.0
+matplotlib>=3.3.1
+mlxtend>=0.18.0
+multipledispatch>=0.6.0
+numpy>=1.19.1
+openpyxl>=3.0.7
+pyodbc>=4.0.30
+seaborn>=0.11.1
+sklearn>=0.0
+scikit-learn>=0.24.2
+scikit-plot>=0.3.7
+statsmodels>=0.12.2

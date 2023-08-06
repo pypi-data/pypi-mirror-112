@@ -1,0 +1,10 @@
+LICENSE.txt
+README.txt
+pyproject.toml
+setup.cfg
+src/picklepie/__init__.py
+src/picklepie.egg-info/PKG-INFO
+src/picklepie.egg-info/SOURCES.txt
+src/picklepie.egg-info/dependency_links.txt
+src/picklepie.egg-info/requires.txt
+src/picklepie.egg-info/top_level.txt

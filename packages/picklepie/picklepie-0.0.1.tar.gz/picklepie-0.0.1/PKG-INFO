@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: picklepie
+Version: 0.0.1
+Summary: a python package
+Home-page: https://github.com/ah4d1/picklepie
+Author: Ahadi Aprianto
+Author-email: support@pickle.id
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/ah4d1/picklepie
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+picklepie
+
+picklepie is a python package.
+
+Copyright(c)2021 Ahadi Aprianto
+License     : BSD 3-Clause "New" or "Revised"
+
+
