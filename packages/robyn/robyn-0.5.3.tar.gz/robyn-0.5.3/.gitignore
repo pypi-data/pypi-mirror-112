@@ -1,0 +1,12 @@
+/target
+
+# ignore pre compiled binaries
+*.so
+dist/
+
+#python cache
+*__pycache__
+*tags
+
+# DS_Store
+*.DS_Store
