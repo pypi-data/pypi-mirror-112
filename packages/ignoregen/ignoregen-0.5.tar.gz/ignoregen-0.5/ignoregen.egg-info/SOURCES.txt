@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+ignoregen/__init__.py
+ignoregen/__main__.py
+ignoregen.egg-info/PKG-INFO
+ignoregen.egg-info/SOURCES.txt
+ignoregen.egg-info/dependency_links.txt
+ignoregen.egg-info/entry_points.txt
+ignoregen.egg-info/not-zip-safe
+ignoregen.egg-info/requires.txt
+ignoregen.egg-info/top_level.txt
+ignoregen/tests/__init__.py

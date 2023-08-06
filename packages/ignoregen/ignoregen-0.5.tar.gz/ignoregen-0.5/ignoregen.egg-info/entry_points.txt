@@ -1,0 +1,3 @@
+[console_scripts]
+ignoregen = ignoregen.__main__:_main
+
