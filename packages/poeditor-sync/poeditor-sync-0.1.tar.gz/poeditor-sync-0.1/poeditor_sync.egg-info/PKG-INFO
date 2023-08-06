@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: poeditor-sync
+Version: 0.1
+Summary: Command line client for POEditor service
+Home-page: https://github.com/mick88/poeditor-sync
+Author: Michal Dabski
+Author-email: contact@michaldabski.com
+License: MIT
+Project-URL: Source, https://github.com/mick88/poeditor-sync
+Project-URL: Tracker, https://github.com/mick88/poeditor-sync/issues
+Description: # POEditor sync
+        
+        A commandline tool for synchronizing your project's translation with [POEditor](https://poeditor.com/)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
