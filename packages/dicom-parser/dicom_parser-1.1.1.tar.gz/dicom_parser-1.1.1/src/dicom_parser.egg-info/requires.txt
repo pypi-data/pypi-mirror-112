@@ -1,0 +1,64 @@
+jinja2~=2.11
+nibabel~=3.0
+pandas~=1.0
+pydicom~=2.1.2
+
+[all]
+black==21.5b1
+build
+coverage[toml]~=5.5
+coverage-badge~=1.0
+doc8~=0.8
+flake8~=3.7
+ipython
+isort~=5.8
+pytest~=6.2
+sphinx~=4.0
+sphinx-rtd-theme~=0.5
+tox~=3.23
+twine
+
+[all:platform_system != "Windows"]
+python-magic~=0.4
+
+[all:python_version <= "3.7"]
+pickle5~=0.0
+
+[dev]
+black==21.5b1
+coverage[toml]~=5.5
+doc8~=0.8
+flake8~=3.7
+ipython
+isort~=5.8
+pytest~=6.2
+sphinx~=4.0
+sphinx-rtd-theme~=0.5
+tox~=3.23
+
+[dev:platform_system != "Windows"]
+python-magic~=0.4
+
+[dist]
+build
+twine
+
+[docs]
+sphinx~=4.0
+sphinx-rtd-theme~=0.5
+
+[magic]
+
+[magic:platform_system != "Windows"]
+python-magic~=0.4
+
+[test]
+coverage[toml]~=5.5
+pytest~=6.2
+tox~=3.23
+
+[test:platform_system != "Windows"]
+python-magic~=0.4
+
+[test:python_version <= "3.7"]
+pickle5~=0.0
