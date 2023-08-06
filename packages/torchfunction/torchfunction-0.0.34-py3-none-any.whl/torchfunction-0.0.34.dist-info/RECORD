@@ -1,0 +1,15 @@
+torchfunction/__init__.py,sha256=CSb7x9sS6pJZP-25uzxMcnH-SMbDrUgXZeLB74lHNdw,37
+torchfunction/createtensor.py,sha256=QVlcOWsxJKXvGtdMyHxIqleNAAvT7390p_g7a-5q7x8,516
+torchfunction/data.py,sha256=OKIBncQw5mvpfz41jc7PdgdJ35q_zG8LGOINPcXidig,4870
+torchfunction/device.py,sha256=eLlHT8llLu8M7_NU07Gjcp-ZLbnLd8AziU7rhV20XH0,3192
+torchfunction/functional.py,sha256=LTVHc69cHDkLLtVJNpEOwBkVuv_IeeJ4occakq_VzMI,656
+torchfunction/inspect.py,sha256=Svxt91BbV3hfZZHo5VXJgTnAiX9ZDNNQSt0xrnx5Nh0,930
+torchfunction/lossfunc.py,sha256=eDIuUVVn6Kj0LobD2qBA7UgJbWVLSTBz5UzHjN8F1V8,2602
+torchfunction/nn/__init__.py,sha256=5RlQ4iRCXMFStVngkGIGKnVn1SWLjpSQlu-aQiv2rCQ,27
+torchfunction/nn/linear.py,sha256=QbyVrElsO8MbmlOrLFGLvIoHATcUAR1h_9kaZ3_Aq9A,4930
+torchfunction/optim/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torchfunction/optim/lr_scheduler.py,sha256=nxKQVRlIJBvw_fAsQDm_1_mJidmDBQ0r9tqCzSUiaVQ,4611
+torchfunction-0.0.34.dist-info/METADATA,sha256=Zh7lNR_TFejOSk-qzjm934m8tTrk97vV3_sDy-RYSX8,3612
+torchfunction-0.0.34.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+torchfunction-0.0.34.dist-info/top_level.txt,sha256=S1oGrUz-aOKGsUhmfdOKpVoU6ZnohbHuQpCnjasyZVg,14
+torchfunction-0.0.34.dist-info/RECORD,,
