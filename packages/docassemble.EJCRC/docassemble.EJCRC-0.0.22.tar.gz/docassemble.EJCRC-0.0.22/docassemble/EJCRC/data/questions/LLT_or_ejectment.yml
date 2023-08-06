@@ -1,0 +1,13 @@
+---
+mandatory: true
+question: |
+  Select the scenario that best applies to you:
+subquestion: |
+  - [I am a party in an active court case]
+  - [I am looking to start a case]
+  - [I am looking to appeal a case that has been decided]
+
+  
+  [I am a party in an active court case]: ${ interview_url(i='docassemble.EJCRC:data/questions/LLT_or_ejectment_defendant.yml') }
+  [I am looking to start a case]: ${ interview_url(i='docassemble.EJCRC:data/questions/LLT_or_ejectment_plaintiff.yml') }
+  [I am looking to appeal a case that has been decided]: ${ interview_url(i='docassemble.EJCRC:data/questions/LLT_or_ejectment_default.yml') }
