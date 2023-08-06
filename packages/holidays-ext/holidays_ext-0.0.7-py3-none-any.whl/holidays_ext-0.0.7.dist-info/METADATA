@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: holidays-ext
+Version: 0.0.7
+Summary: Extended holidays package
+Home-page: https://github.com/kaixuyang/holidays-extension
+Author: Kaixu Yang
+Author-email: kaixuyang@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.15.4)
+Requires-Dist: pandas (>=1.0.4)
+Requires-Dist: python-dateutil (>=2.8.0)
+Requires-Dist: LunarCalendar-ext (>=0.0.1)
+Requires-Dist: convertdate (>=2.1.2)
+Requires-Dist: holidays (>=0.9.5)
+
+# Holidays Extension
+
+This repo forks the [Facebook Prophet](https://github.com/facebook/prophet)
+library, and serve as an extension of the [Python holidays](https://github.com/dr-prodigy/python-holidays)
+library. The holidays are customized and extended.
+
+To use this library, simply do
+
+```python
+from holidays_ext.get_holidays import get_holiday
+from holidays_ext.get_holidays import get_holiday_df
+
+holidays = get_holiday(
+    country_list=["UnitedStates", "Russia"],
+    years=[2019, 2020]
+)
+holidays
+
+holidays_df = get_holiday_df(
+    country_list=["UnitedStates", "China", "India"],
+    years=[2018, 2019, 2020, 2021]
+)
+holidays_df
+```
+
+
