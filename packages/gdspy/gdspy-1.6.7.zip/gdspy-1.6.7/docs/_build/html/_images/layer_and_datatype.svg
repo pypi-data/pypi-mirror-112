@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="400.0" height="254.55" viewBox="-200.0 -127.27 400.0 254.55">
+<defs>
+<style type="text/css">
+.l2d3 {stroke: rgb(106, 106, 255); fill: rgb(106, 106, 255); fill-opacity: 0.5;}
+.l0d7 {stroke: rgb(191, 112, 112); fill: rgb(191, 112, 112); fill-opacity: 0.5;}
+.l1d3 {stroke: rgb(85, 255, 85); fill: rgb(85, 255, 85); fill-opacity: 0.5;}
+</style>
+</defs>
+<rect x="-200.0" y="-127.27" width="400.0" height="254.55" fill="none" stroke="none"/>
+<g id="layer_and_datatype" transform="scale(1 -1)">
+<polygon class="l1d3" points="-109.09,-109.09 -109.09,109.09 109.09,109.09 109.09,-109.09"/>
+<polygon class="l2d3" points="-181.82,-109.09 -181.82,109.09 -109.09,109.09 -109.09,-109.09"/>
+<polygon class="l2d3" points="181.82,-109.09 181.82,109.09 109.09,109.09 109.09,-109.09"/>
+<polygon class="l0d7" points="90.91,0.0 45.45,78.73 -45.45,78.73 -90.91,0.0 -45.45,-78.73 45.45,-78.73"/>
+</g>
+</svg>
