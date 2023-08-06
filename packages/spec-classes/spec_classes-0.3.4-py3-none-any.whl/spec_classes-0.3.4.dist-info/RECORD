@@ -1,0 +1,16 @@
+spec_classes/__init__.py,sha256=Dl5MBlU1zJyG_9Sy3eG0GBURqSkcAnw6KLJRFUL0I4I,375
+spec_classes/_version.py,sha256=DBtAcNSfrUuY0OcD30xQLFDYtrWXtI8iEJsXjrMfCY4,172
+spec_classes/errors.py,sha256=Gvau62w56_VGl13d9bZC6uFgbm49r_VpdwiirdYzPLs,50
+spec_classes/spec_class.py,sha256=spcSuxNbPXgHZD4iGoU78sIYjOKAK0d1Z4Ew_dEeu54,74516
+spec_classes/special_types.py,sha256=YMkI_cb7t8WDUdrA3O9HO9Y6n5lIYAUFtXghXOy0Mw0,9047
+spec_classes/types.py,sha256=hwFioCfTf_qmH-pLKrAn0jxtOe8r8Q6Auxf6iD9V8jE,3483
+spec_classes/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spec_classes/utils/collections.py,sha256=0GghNi9uKxkLn5rM_OJlicTKCuipTbYlNjk_EcoJ1Ek,17937
+spec_classes/utils/method_builder.py,sha256=x1pdeTt2fFRdEYOwqtwQQHsRIp0WftZNd-XLl_RvDhc,11492
+spec_classes/utils/mutation.py,sha256=gfJpJPhSqCBRi_sDE-eesbtqHm42P7TRySk_nzO7g64,7049
+spec_classes/utils/type_checking.py,sha256=bkTHL58WkPe8divycIo2gSxd0nKAAJLE-ljBgnLfC8o,3972
+spec_classes-0.3.4.dist-info/LICENSE,sha256=dutdwgLtO0HP7THwwOS8Zea1C0XBRu1h0Q_ViWTtOoY,1054
+spec_classes-0.3.4.dist-info/METADATA,sha256=bIvUJeCevZjjxchPSJxRRUUiL15WtOQ5u9sc17Irq0o,2534
+spec_classes-0.3.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+spec_classes-0.3.4.dist-info/top_level.txt,sha256=sWM0k37TkXWIorIxP830K_rgprdkRsD9vg2obnWk_Dg,13
+spec_classes-0.3.4.dist-info/RECORD,,
