@@ -1,0 +1,33 @@
+from enum import Enum
+from json import JSONEncoder
+from typing import Any
+
+def build_primitive(fmt: str, inst: type, size: int, name: str, signed: bool) -> dict: ...
+
+class Primitive(Enum):
+    BOOL: Any
+    INT8: Any
+    UINT8: Any
+    INT16: Any
+    UINT16: Any
+    INT32: Any
+    UINT32: Any
+    INT64: Any
+    UINT64: Any
+    FLOAT: Any
+    DOUBLE: Any
+
+def random_integer(prim: Primitive) -> int: ...
+def integer_can_hold(prim: Primitive, val: int) -> bool: ...
+def get_integer_max(prim: Primitive) -> int: ...
+def get_integer_min(prim: Primitive) -> int: ...
+
+class PrimitiveEncoder(JSONEncoder):
+    def default(self, o) -> dict: ...
+
+def get_name(inst: Primitive) -> str: ...
+def get_fstring(inst: Primitive) -> str: ...
+def get_size(inst: Primitive) -> int: ...
+def default_val(inst: Primitive) -> Any: ...
+
+INTEGER_PRIMITIVES: Any

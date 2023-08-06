@@ -1,0 +1,13 @@
+from .queue_daemon import QueueDaemon as QueueDaemon
+from .telemetry_environment import TelemetryEnvironment as TelemetryEnvironment
+from typing import Any, Tuple
+from vtelem.types.command_queue_daemon import ConsumerType as ConsumerType, HandlersType as HandlersType, ResultCbType as ResultCbType
+
+LOG: Any
+
+class CommandQueueDaemon(QueueDaemon):
+    handlers: Any
+    def __init__(self, name: str, env: TelemetryEnvironment = ..., time_keeper: Any = ...): ...
+    def register_consumer(self, command: str, handler: ConsumerType, result_cb: ResultCbType = ..., help_msg: str = ...) -> None: ...
+    def enqueue(self, command: Any, result_cb: ResultCbType = ...) -> None: ...
+    def execute(self, command: Any) -> Tuple[bool, str]: ...

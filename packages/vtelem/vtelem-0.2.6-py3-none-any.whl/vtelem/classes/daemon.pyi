@@ -1,0 +1,13 @@
+from . import LOG_PERIOD as LOG_PERIOD
+from .daemon_base import DaemonBase as DaemonBase, DaemonState as DaemonState
+from .telemetry_environment import TelemetryEnvironment as TelemetryEnvironment
+from typing import Any, Callable
+from vtelem.enums.primitive import Primitive as Primitive
+
+LOG: Any
+
+class Daemon(DaemonBase):
+    def __init__(self, name: str, task: Callable, rate: float, iter_overrun_cb: Callable = ..., state_change_cb: Callable = ..., env: TelemetryEnvironment = ..., time_keeper: Any = ..., init: Callable = ...) -> None: ...
+    def get_rate(self) -> float: ...
+    def run(self, *args, **kwargs) -> None: ...
+    def set_rate(self, rate: float) -> None: ...
