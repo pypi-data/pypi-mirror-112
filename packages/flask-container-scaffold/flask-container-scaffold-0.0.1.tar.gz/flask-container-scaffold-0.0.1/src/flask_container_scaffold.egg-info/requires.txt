@@ -1,0 +1,11 @@
+flask
+toolchest
+
+[dist]
+build
+twine
+
+[test]
+flake8
+pytest
+tox
