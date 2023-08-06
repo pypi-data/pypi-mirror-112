@@ -1,0 +1,13 @@
+LICENSE
+README.txt
+setup.py
+woollylib/__init__.py
+woollylib/dataset.py
+woollylib/main.py
+woollylib/scheduler.py
+woollylib/training.py
+woollylib.egg-info/PKG-INFO
+woollylib.egg-info/SOURCES.txt
+woollylib.egg-info/dependency_links.txt
+woollylib.egg-info/requires.txt
+woollylib.egg-info/top_level.txt
