@@ -1,0 +1,17 @@
+edges_io/__init__.py,sha256=h_ppYLCZiNbbtVIvu_r-CefpGa5Vp2_hLQDqKMNuhQU,368
+edges_io/_structure.py,sha256=kd1keFxqZDuO6IbJB6KQi5UWVjkfvSNDZVyGgjy72OQ,11839
+edges_io/auxiliary.py,sha256=LRr4WmV0qTJSz6orduAcMHjio-wHllkVI_31vnEmT7I,11748
+edges_io/cli.py,sha256=QjtsgZMJuTrtSnCNFBu1HaKG7DemaU6ofakUPw-TWxM,2863
+edges_io/h5.py,sha256=zPcnHWK2Qnx4QPRQtN3zIbLuxEvDbZmGQ770_IY9x1c,13483
+edges_io/io.py,sha256=5ITysmlBjdKd3UTbvj0P7CkgM1H_wXsdsJk7w0Wj3gY,65607
+edges_io/logging.py,sha256=jiXB10FthAGB08oAvldKrCTANFfZrNRXzscnuyeCeqY,2774
+edges_io/utils.py,sha256=JgVyqOWfQr4ZSzZeE7N1uM8VOcwuMUpJxpHJ_DeNmz0,3545
+edges_io/data/antenna_simulators.toml,sha256=qIknqeFC16ch1BnV4rzm6txR9M4_c-xOKiL_Jpxwkfc,1540
+edges_io/data/calibration_loads.toml,sha256=m_0We6TVweg-k54uHPMrxEaaKxy0qm5MaKgyhqNIFBI,556
+edges_io-2.3.8.dist-info/AUTHORS.rst,sha256=6zHlmRrwho5ehlpBwDdP-3j133jiHBVwcAgz4wYlC-s,86
+edges_io-2.3.8.dist-info/LICENSE.txt,sha256=r9i5RD0j8oqpD_zefkBnJ6ONOYHktmCKYVSyYvy2LoY,1080
+edges_io-2.3.8.dist-info/METADATA,sha256=-BNDJHqh_LzvtIoT48LpvrNKlp7qgMg9jrQjn2H-PZU,21210
+edges_io-2.3.8.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+edges_io-2.3.8.dist-info/entry_points.txt,sha256=0NEte6nrPVdlR7a-99oFBsH3COFek2D-5utEGELb9tU,48
+edges_io-2.3.8.dist-info/top_level.txt,sha256=L5Xpj9M_s6sMid7O1v9S_Vjbf1lxhlG7g3JsoCE881k,9
+edges_io-2.3.8.dist-info/RECORD,,
