@@ -1,0 +1,14 @@
+README.rst
+copr-builder
+setup.py
+copr_builder/__init__.py
+copr_builder/copr_builder.py
+copr_builder/copr_project.py
+copr_builder/errors.py
+copr_builder/git_repo.py
+copr_builder/srpm_builder.py
+copr_builder/utils.py
+copr_builder.egg-info/PKG-INFO
+copr_builder.egg-info/SOURCES.txt
+copr_builder.egg-info/dependency_links.txt
+copr_builder.egg-info/top_level.txt
