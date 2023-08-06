@@ -1,0 +1,3 @@
+[console_scripts]
+frida-hooks = frida_hooks.main:main
+
