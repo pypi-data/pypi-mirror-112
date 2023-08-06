@@ -1,0 +1,21 @@
+.gitignore
+Pipfile
+Pipfile.lock
+README.md
+setup.py
+saseg_runner/ExtractCodeAndLog.vbs
+saseg_runner/__init__.py
+saseg_runner/runner.py
+saseg_runner.egg-info/PKG-INFO
+saseg_runner.egg-info/SOURCES.txt
+saseg_runner.egg-info/dependency_links.txt
+saseg_runner.egg-info/entry_points.txt
+saseg_runner.egg-info/requires.txt
+saseg_runner.egg-info/top_level.txt
+tests/test.egp
+tests/test_all.py
+tests/test_error_format2.egp
+tests/test_fail.egp
+tests/test_success.egp
+tests/space exist/test_success.egp
+tests/日本語フォルダ名/test_success.egp

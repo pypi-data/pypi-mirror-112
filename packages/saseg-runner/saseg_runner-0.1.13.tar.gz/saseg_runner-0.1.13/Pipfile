@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+flake8 = "*"
+pipenv-setup = "*"
+wheel = "*"
+twine = "*"
+pytest = "*"
+saseg_runner = {editable = true,path = "."}
+pytest-cov = "*"
+setuptools-scm = "*"
+
+[packages]
+pypiwin32 = "*"
+click = "*"
+
+[requires]
+python_version = "3.7"
