@@ -1,0 +1,3 @@
+[console_scripts]
+sl-shortner = sl_shortner.__main__:main
+
