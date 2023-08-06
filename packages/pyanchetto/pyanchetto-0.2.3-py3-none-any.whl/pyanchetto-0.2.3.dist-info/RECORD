@@ -1,0 +1,13 @@
+pyanchetto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyanchetto/chess.py,sha256=vdzfTWYYnsTqO1o1cQVBAuX7gXMxmcvBIxMHbyDdPxs,29609
+pyanchetto/chess_parser.py,sha256=S_vkGoIc-naeRkyJo2eb_-yVDhbrsQb1TjGDm82K2Nk,1930
+pyanchetto/driver.py,sha256=OZWf-SPmek3KQeb5txk1p746C_cDX2gjYNXERAxiv4w,1153
+pyanchetto/move_tree.py,sha256=d0z1OFruacu8MilcUSOB4HMH8xMpq8lAUwZXAN5XcD8,1263
+pyanchetto/perft.py,sha256=gD_e3gMmfiq-jouoE3Bn7GrNnpsd9pErVAVxCFF5DeY,2921
+pyanchetto/pgn_interpreter.py,sha256=BHekh-zMo6nVrZtYH7g03nIvFjkurhUV8ompbzK-t_g,7562
+pyanchetto/pgn_parser.py,sha256=fp1g8ZAlvAdOKwnuTQTnGx2SWF1m0nrlLCn6UgwIxl4,7717
+pyanchetto-0.2.3.dist-info/LICENSE,sha256=vpVFerwl7QCWl02W4ZB36hX7o90vYwleg9NNlRCIqdE,18054
+pyanchetto-0.2.3.dist-info/METADATA,sha256=q4C8fUm-ygQr3fgj2gBwRCPdp6ZKgUuB5_u0btCG7E8,3458
+pyanchetto-0.2.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyanchetto-0.2.3.dist-info/top_level.txt,sha256=5nFnFGztblOw6AqQnqiW8qKiHZNqonyojvyiKVWgRYw,11
+pyanchetto-0.2.3.dist-info/RECORD,,
