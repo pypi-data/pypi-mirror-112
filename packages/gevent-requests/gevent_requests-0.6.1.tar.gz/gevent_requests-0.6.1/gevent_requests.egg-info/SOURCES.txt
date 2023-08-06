@@ -1,0 +1,13 @@
+AUTHORS.rst
+LICENSE
+MANIFEST.in
+README.rst
+gevent_requests.py
+setup.cfg
+setup.py
+gevent_requests.egg-info/PKG-INFO
+gevent_requests.egg-info/SOURCES.txt
+gevent_requests.egg-info/dependency_links.txt
+gevent_requests.egg-info/not-zip-safe
+gevent_requests.egg-info/requires.txt
+gevent_requests.egg-info/top_level.txt
