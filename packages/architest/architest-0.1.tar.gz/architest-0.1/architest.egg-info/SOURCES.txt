@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+architest/__init__.py
+architest/architest.py
+architest/core.py
+architest/model.py
+architest.egg-info/PKG-INFO
+architest.egg-info/SOURCES.txt
+architest.egg-info/dependency_links.txt
+architest.egg-info/requires.txt
+architest.egg-info/top_level.txt
