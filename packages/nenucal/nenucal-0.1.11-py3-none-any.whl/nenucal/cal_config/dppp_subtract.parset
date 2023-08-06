@@ -1,0 +1,12 @@
+numthreads=1000
+msin.datacolumn=DATA
+
+msout=.
+msout.datacolumn=SUBTRACTED_DATA
+
+steps=[sub]
+sub.type=h5parmpredict
+sub.sourcedb=
+sub.applycal.correction=fulljones
+sub.directions=
+sub.operation=subtract
