@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+GoogleScholarReport/__init__.py
+GoogleScholarReport/collector.py
+GoogleScholarReport.egg-info/PKG-INFO
+GoogleScholarReport.egg-info/SOURCES.txt
+GoogleScholarReport.egg-info/dependency_links.txt
+GoogleScholarReport.egg-info/requires.txt
+GoogleScholarReport.egg-info/top_level.txt
+bin/collector
+test/__init__.py
+test/test_gsr.py
