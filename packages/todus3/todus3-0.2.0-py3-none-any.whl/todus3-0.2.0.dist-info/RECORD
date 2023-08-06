@@ -1,0 +1,13 @@
+todus3/__init__.py,sha256=0SmTvV0iGTSNRPlJRUOofjlN40ou5k0l0zXbDRiBTjI,45
+todus3/__main__.py,sha256=CyuR80vzisa6SDQ77TGCGfqS5cwhMbNa0Aofqa4ctZY,124
+todus3/client.py,sha256=KXL8O9vCIOMMFdiKZSqHj6Z_TlsohZ82YifqCU9nUb8,6899
+todus3/errors.py,sha256=q66BylhKBOH-M9LlAz4LPPl0DBwRC3ZwWk-ATagQp5M,87
+todus3/main.py,sha256=cc4jS5gsNMol_FKU4pHejU1V2wiymXdApCvB5rhlCZM,6596
+todus3/s3.py,sha256=XlqRZdf6e64Rdit1koFjjmGdXw_p8BQWTZZREXxp2vE,3842
+todus3/util.py,sha256=XhYVidwehuvaDyvs1zXPjQEoLZtkdaiND0PL5pKLiPQ,1313
+todus3-0.2.0.dist-info/LICENSE,sha256=-rPda9qyJvHAhjCx3ZF-Efy07F4eAg4sFvg6ChOGPoU,16726
+todus3-0.2.0.dist-info/METADATA,sha256=KKONYhieHG_nr764UyxL8QC-Q41BPO-u5-ohnpF8Ms0,1824
+todus3-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+todus3-0.2.0.dist-info/entry_points.txt,sha256=3I59DdEFWETGR8hrKTyxKfECjyv0-HJRDyz_IL4rQcQ,45
+todus3-0.2.0.dist-info/top_level.txt,sha256=N1HhJZmN5hPvnOcYJksz-MmR_JACQsqZjHoIHR1Jq_k,7
+todus3-0.2.0.dist-info/RECORD,,
