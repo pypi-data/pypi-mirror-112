@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cdk_image_moderation/__init__.py
+src/cdk_image_moderation/py.typed
+src/cdk_image_moderation.egg-info/PKG-INFO
+src/cdk_image_moderation.egg-info/SOURCES.txt
+src/cdk_image_moderation.egg-info/dependency_links.txt
+src/cdk_image_moderation.egg-info/requires.txt
+src/cdk_image_moderation.egg-info/top_level.txt
+src/cdk_image_moderation/_jsii/__init__.py
+src/cdk_image_moderation/_jsii/cdk-image-moderation@0.1.59.jsii.tgz
