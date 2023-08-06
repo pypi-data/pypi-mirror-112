@@ -1,0 +1,3 @@
+[console_scripts]
+archive-md-urls = cli:main
+
