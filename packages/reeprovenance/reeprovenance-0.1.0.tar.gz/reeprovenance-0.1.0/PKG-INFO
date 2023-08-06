@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: reeprovenance
+Version: 0.1.0
+Summary: a calculating tool for ree provenance research.
+Home-page: https://github.com/KeranLi
+Author: Kirk Li
+Author-email: keranli98@outlook.com
+License: MIT
+Description: a calculating tool for ree provenance research.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Provides-Extra: fancy feature
