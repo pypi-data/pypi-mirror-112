@@ -1,0 +1,12 @@
+README.md
+setup.py
+jsonshower/__init__.py
+jsonshower/docs.py
+jsonshower/errors.py
+jsonshower/string_replace.py
+jsonshower/viewer.py
+jsonshower.egg-info/PKG-INFO
+jsonshower.egg-info/SOURCES.txt
+jsonshower.egg-info/dependency_links.txt
+jsonshower.egg-info/requires.txt
+jsonshower.egg-info/top_level.txt
