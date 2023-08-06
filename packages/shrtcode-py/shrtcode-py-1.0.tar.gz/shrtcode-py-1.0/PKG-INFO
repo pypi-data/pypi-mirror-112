@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: shrtcode-py
+Version: 1.0
+Summary: Library for shrtco.de API
+Home-page: https://github.com/tailsjs/shrtco.de-py
+Author: tailsjs
+Author-email: tjs@retard.yo
+License: MIT
+Download-URL: https://github.com/tailsjs/shrtco.de-py/archive/refs/tags/1.0.tar.gz
+Description: UNKNOWN
+Keywords: shrtco.de,short,url,api,shorter,emoji,password,pass
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
