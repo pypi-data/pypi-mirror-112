@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+bulk_task/__init__.py
+bulk_task/backend.py
+bulk_task/core.py
+bulk_task/models.py
+bulk_task/utils.py
+bulk_task.egg-info/PKG-INFO
+bulk_task.egg-info/SOURCES.txt
+bulk_task.egg-info/dependency_links.txt
+bulk_task.egg-info/top_level.txt
