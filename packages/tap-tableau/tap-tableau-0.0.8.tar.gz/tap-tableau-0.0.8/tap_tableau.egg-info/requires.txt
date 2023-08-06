@@ -1,0 +1,7 @@
+singer-python>=5.8.0
+requests>=2.20.0
+tableauserverclient>=0.15.0
+
+[dev]
+pylint
+nose
