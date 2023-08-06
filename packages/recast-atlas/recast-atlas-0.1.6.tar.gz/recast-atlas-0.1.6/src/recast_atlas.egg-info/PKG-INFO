@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: recast-atlas
+Version: 0.1.6
+Summary: RECAST for ATLAS at the LHC
+Home-page: UNKNOWN
+Author: Lukas Heinrich
+Author-email: lukas.heinrich@cern.ch
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: develop
+Provides-Extra: kubernetes
+Provides-Extra: local
+Provides-Extra: reana
