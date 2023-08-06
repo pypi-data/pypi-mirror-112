@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: lazyops
+Version: 0.0.2
+Summary: lazyops
+Home-page: http://github.com/trisongz/lazyops
+Author: Tri Songz
+Author-email: ts@growthengineai.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: file-io (>=0.1.15)
+Requires-Dist: requests
+Requires-Dist: dateparser
+Requires-Dist: dataclasses-json
+Requires-Dist: aiohttp
+Requires-Dist: six
+
+# lazyops
+A collection of Lazy Python Functions (or things I keep copypasting)
+
+
+
+
+
+
