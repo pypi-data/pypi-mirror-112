@@ -1,0 +1,119 @@
+# Almoststatic
+
+**Almoststatic** is a [Python](https://python.org) library useful to build
+static html content from [yaml files](https://yaml.org/) and
+[markdown](https://www.markdownguide.org/) files.
+
+It is roughly inspired by [hugo](https://gohugo.io/) static site generator,
+but it differs in many ways.
+
+**Almoststatic** has a great integration with [Flask](https://flask.palletsprojects.com)
+web micro framework. But can be used even without it.
+
+Yaml files and media data are stored in a `content` folder and pages are built
+combining yaml files with [jinja2](https://jinja2docs.readthedocs.io) templates,
+the same used by default on Flask.
+
+When your site is done, you can continue to serve it with Flask, or you can
+write it as static site composed by plain html pages, easy to deliver everywhere
+in the web.
+
+# Why Almoststatic?
+
+- **It's perfect for pythonist.** If you are pythonist, it's the right choice
+  for you, because uses jinja2 that is one of the most used template's engine
+  written in Python so you have to learn it only once and there is no need to
+  learn others systems and templates.
+
+- **It's easy!** In fact the rules are very few and this mean few things to
+  learn, but also more flexibility.
+
+- **It's versatile.** It's engine has a powerful recursive system for embedding
+  and including contents. This helps to build rich contents and also to split
+  the contents in small pieces called *"widgets"* easier to maintain.
+
+- **You can deliver static and dynamic contents at same time.** Under Flask you
+  can build your dynamic content and then use the **Almoststatic** system to
+  render the rest of page or render with it the whole page if it is full static.
+
+- **Write static sites.** Static sites are composed only by text files and
+  media contents. They are easy to deliver on the web, are secure by design,
+  require less maintenance and resources and are faster. If you have no need of
+  dynamic contents, with **Almoststatic** you can write all static pages ready
+  to be delivered.
+
+- **Not only for pythonists.** To use **Almoststatic** You need to know very few
+  thinks of Python, the mot part of your time is spent writing contents in Yaml
+  or Markdown and writing widgets in html and Jinja2. So, learn some Python
+  basics or search for little help and go on.
+
+# Quick start
+
+The simplest way to see if **Almoststatic** is right for you, is to try the
+sample provided with source code package and examinate source code.
+
+The following tutorial is tested on Linux Ubuntu, but it's easy to port on
+other platforms such other Linux flavours, Windows or Mac.
+
+You need git and python3, install them with:
+```bash
+$ sudo apt install git python3
+```
+python3 should be already installed because it is in all modern Linux
+distributions but be sure your version is at least 3.6 with:
+
+```bash
+$ python3 --version
+```
+
+then goto in your development environment, download source code of
+Almoststatic and enter into directory:
+```bash
+$ git clone https://gitlab.com/claudio.driussi/almoststatic.git
+$ cd almoststatic
+```
+now you can setup you development environment with virtualenv and install the
+package:
+
+```bash
+$ python3 -m venv myvenv
+$ source myvenv/bin/activate
+$ pip install almoststatic
+```
+Done! Now you can try the sample:
+```bash
+$ cd sample/
+$ python flaskapp.py
+```
+This launch a Flask app with the demo site which illustrates the
+**Almoststatic** functionality. Goto in your browser and navigate to:
+`http://127.0.0.1:5000/` you will see some sample pages.
+
+When you are done, exit from server pressing CTRL-C and write a static site and
+see the result files with:
+
+```bash
+$ python write_static.py
+$ ls -l ../_static_site/
+```
+As you can see, your pages are written as *.html files, but this is not enough
+to get a really static site, to do this you have to tune writing parameters and
+copy media files on appropriate location. When you are done the site can be
+published as static site.
+
+If you wish, you can run tests:
+
+```bash
+$ cd ../test
+$ python as_test.py
+```
+This do some tests and write a simpler static site.
+
+Now if you decide that **Almoststatic** is right for you, you can dig into
+source code of sample and tests and read the documentation.
+
+# Donate
+
+If you appreciate Almoststatic, you can make a donation via PayPal
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate?hosted_button_id=JYJ6EMFY7YWJQ)
