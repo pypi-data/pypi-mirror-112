@@ -1,0 +1,95 @@
+.coveragerc
+.gitignore
+.pre-commit-config.yaml
+CONTRIBUTING.md
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+.github/workflows/python-publish.yml
+.github/workflows/syntax.yml
+.github/workflows/tests.yml
+dev/Development - Coverage.ipynb
+dev/Development - External Sim.ipynb
+dev/Development - High-dim Quality.ipynb
+dev/Development - Ratio plots.ipynb
+dev/Development - Separate out Simulator.ipynb
+dev/Development - Visualize f.ipynb
+dev/simulate.py
+dev/simulators.py
+docs/Makefile
+docs/make.bat
+docs/source/autodoc.rst
+docs/source/conf.py
+docs/source/context.rst
+docs/source/goals.rst
+docs/source/index.rst
+docs/source/install.rst
+docs/source/latex_macros.sty
+docs/source/modules.rst
+docs/source/quickstart.rst
+docs/source/swyft.rst
+docs/source/theory.rst
+docs/source/theorytex.rst
+docs/source/images/20d-1dPos.png
+docs/source/images/quickstart-1d.png
+docs/source/images/quickstart-2d.png
+notebooks/NeurIPS Corner.ipynb
+notebooks/NeurIPS eggbox.ipynb
+notebooks/Quickstart-new.ipynb
+notebooks/Quickstart.ipynb
+notebooks/Tutorial.ipynb
+scripts/run_swyft.py
+scripts/conf/config.yaml
+scripts/conf/definitions.py
+swyft/__init__.py
+swyft/__version__.py
+swyft/types.py
+swyft.egg-info/PKG-INFO
+swyft.egg-info/SOURCES.txt
+swyft.egg-info/dependency_links.txt
+swyft.egg-info/not-zip-safe
+swyft.egg-info/requires.txt
+swyft.egg-info/top_level.txt
+swyft/bounds/__init__.py
+swyft/bounds/bounds.py
+swyft/bounds/prior.py
+swyft/inference/__init__.py
+swyft/inference/loss.py
+swyft/inference/microscope.py
+swyft/inference/posteriors.py
+swyft/inference/ratios.py
+swyft/inference/task.py
+swyft/inference/train.py
+swyft/networks/__init__.py
+swyft/networks/batchnorm.py
+swyft/networks/head.py
+swyft/networks/linear.py
+swyft/networks/module.py
+swyft/networks/normalization.py
+swyft/networks/resnet.py
+swyft/networks/tail.py
+swyft/store/__init__.py
+swyft/store/dataset.py
+swyft/store/simulator.py
+swyft/store/store.py
+swyft/utils/.utils.py.swp
+swyft/utils/__init__.py
+swyft/utils/array.py
+swyft/utils/constrainedcorner.py
+swyft/utils/device.py
+swyft/utils/mutils.py
+swyft/utils/parameters.py
+swyft/utils/plot.py
+swyft/utils/utils.py
+swyft/utils/wmutils.py
+tests/__init__.py
+tests/cache_test.py
+tests/estimation_test.py
+tests/intensity_test.py
+tests/network_test.py
+tests/simulator_test.py
+tests/store_integration_test.py
+tests/store_test.py
+tests/utils_test.py
