@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: DI-engine
+Version: 0.1.0
+Summary: Decision AI Engine
+Home-page: UNKNOWN
+Author: OpenDILab Contributors
+License: Apache License, Version 2.0
+Keywords: Decision AI Engine
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Requires-Dist: numpy (>=1.10)
+Requires-Dist: requests (~=2.24.0)
+Requires-Dist: six
+Requires-Dist: gym (>=0.15.3)
+Requires-Dist: torch (<=1.8.0,>=1.3.1)
+Requires-Dist: pyyaml
+Requires-Dist: easydict (==1.9)
+Requires-Dist: tensorboardX (<=2.2,>=2.1)
+Requires-Dist: matplotlib
+Requires-Dist: yapf (==0.29.0)
+Requires-Dist: responses (~=0.12.1)
+Requires-Dist: flask (~=1.1.2)
+Requires-Dist: lz4
+Requires-Dist: cloudpickle
+Requires-Dist: tabulate
+Requires-Dist: sortedcontainers
+Requires-Dist: click (==7.1.2)
+Requires-Dist: URLObject (~=2.4.3)
+Requires-Dist: urllib3 (==1.25.10)
+Requires-Dist: readerwriterlock
+Requires-Dist: namedlist
+Requires-Dist: opencv-python
+Requires-Dist: enum-tools
+Provides-Extra: common_env
+Requires-Dist: atari-py ; extra == 'common_env'
+Requires-Dist: box2d-py ; extra == 'common_env'
+Requires-Dist: cmake (>=3.18.4) ; extra == 'common_env'
+Requires-Dist: opencv-python ; extra == 'common_env'
+Provides-Extra: doc
+Requires-Dist: sphinx (>=2.2.1) ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme (~=0.4.3) ; extra == 'doc'
+Requires-Dist: enum-tools ; extra == 'doc'
+Requires-Dist: sphinx-toolbox ; extra == 'doc'
+Requires-Dist: plantumlcli (>=0.0.2) ; extra == 'doc'
+Provides-Extra: fast
+Requires-Dist: numpy-stl ; extra == 'fast'
+Requires-Dist: numba (>=0.53.0) ; extra == 'fast'
+Requires-Dist: redis (==3.5.3) ; extra == 'fast'
+Requires-Dist: redis-py-cluster (==2.1.0) ; extra == 'fast'
+Provides-Extra: gfootball_env
+Requires-Dist: gfootball ; extra == 'gfootball_env'
+Requires-Dist: kaggle-environments ; extra == 'gfootball_env'
+Provides-Extra: procgen_env
+Requires-Dist: procgen ; extra == 'procgen_env'
+Provides-Extra: sc2_env
+Requires-Dist: absl-py (>=0.1.0) ; extra == 'sc2_env'
+Requires-Dist: future ; extra == 'sc2_env'
+Requires-Dist: mpyq ; extra == 'sc2_env'
+Requires-Dist: mock ; extra == 'sc2_env'
+Requires-Dist: portpicker (>=1.2.0) ; extra == 'sc2_env'
+Requires-Dist: websocket-client ; extra == 'sc2_env'
+Requires-Dist: protobuf (>=2.6) ; extra == 'sc2_env'
+Requires-Dist: sk-video ; extra == 'sc2_env'
+Requires-Dist: whichcraft ; extra == 'sc2_env'
+Requires-Dist: joblib ; extra == 'sc2_env'
+Requires-Dist: futures ; (python_version == "2.7") and extra == 'sc2_env'
+Provides-Extra: style
+Requires-Dist: yapf (==0.29.0) ; extra == 'style'
+Requires-Dist: flake8 ; extra == 'style'
+Provides-Extra: sumo_env
+Requires-Dist: sumolib ; extra == 'sumo_env'
+Requires-Dist: traci ; extra == 'sumo_env'
+Provides-Extra: test
+Requires-Dist: pytest (==5.1.1) ; extra == 'test'
+Requires-Dist: pytest-xdist (==1.31.0) ; extra == 'test'
+Requires-Dist: pytest-cov (==2.8.1) ; extra == 'test'
+Requires-Dist: pytest-forked (~=1.3.0) ; extra == 'test'
+Requires-Dist: pytest-mock (~=3.3.1) ; extra == 'test'
+Requires-Dist: pytest-rerunfailures (~=9.1.1) ; extra == 'test'
+Requires-Dist: pytest-timeouts (~=1.2.1) ; extra == 'test'
+
+UNKNOWN
+
+
