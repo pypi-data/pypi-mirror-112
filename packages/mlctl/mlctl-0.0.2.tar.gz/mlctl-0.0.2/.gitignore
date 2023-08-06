@@ -1,0 +1,16 @@
+*.egg-info
+.tox
+.eggs
+
+report.html
+
+__version.py
+
+build/*
+dist/*
+
+secrets/*
+
+*__pycache__
+
+.vscode
