@@ -1,0 +1,53 @@
+$def with (profile)
+$var title: About Me
+$var name: $profile["name"]
+
+$if tx.user.is_owner:
+    <form method=post>
+
+<article class=h-card>
+
+<h1 class=p-name>$profile["name"]</h1>
+$if tx.user.is_owner:
+    <div class=editor><label><input type=text name=name
+    value="$profile['name']"></label></div>
+
+<p><a class="u-url u-uid" href=//$profile["uid"]>$profile["uid"]</a></p>
+$if tx.user.is_owner:
+    <div class=editor><label><input type=text name=uid disabled
+    value="$profile['uid']"></label></div>
+
+$ urls = profile.get("urls", [])
+$if urls:
+    <h3>Elsewhere</h3>
+    <ul>\
+    $for url in urls:
+        $if url.startswith("twitter.com/"):
+            $ name = "Twitter"
+        $if url.startswith("github.com/"):
+            $ name = "GitHub"
+        <li><a href=//$url>$name</a></li>
+    </ul>
+$if tx.user.is_owner:
+    <div class=editor><label><textarea
+    name=urls>$"\n".join(profile.get("urls", []))</textarea></label></div>
+
+</article>
+
+$if tx.user.is_owner:
+    <button>Save</button>
+    </form>
+
+$if tx.user.is_owner:
+    $def head():
+        <script>
+        _.load(() => {
+          _('.editor').each(item => item.style.display = 'none')
+          _('form').append('<button id=edit>Edit</button>')
+          _('#edit').click(ev => {
+            ev.preventDefault()
+            _('.editor').each(item => item.style.display = 'block')
+          })
+        })
+        </script>
+    $var head = head

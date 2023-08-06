@@ -1,0 +1,66 @@
+$def with (name)
+$var title: $name chat
+
+<article class=h-feed>
+
+<h3>Participants</h3>
+<ul>
+<li><a class="h-card p-participant"><a class="u-url u-uid p-name"
+href=/chat/braid>Angelo</a></p></li>
+</ul>
+
+<button id=notifier>Enable notifications</button>
+
+<div id=recent>
+</div>
+
+<form id=send>
+<input name=message>
+<button>Send</button>
+</form>
+
+<form id=peers>
+<label>Peer: <input name=peer></label>
+<button>Add</button>
+</form>
+
+</article>
+
+<style>
+form#send {
+  bottom: 0;
+  left: 0;
+  position: fixed; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const braidClient = new _.BraidClient('/chat/braid')
+  braidClient.subscribe((range, data) => {
+    var recent = document.querySelector('#recent')
+    var entry = document.createElement('p')
+    entry.classList.add('h-entry')
+    entry.innerHTML = `<a class="p-author h-card"
+      href=//$${data.author.url}>$${data.author.name}</a>:
+      <span class=p-name>$${data.name}</span>`
+    recent.append(entry)
+    new Notification(`$${data.author.name}: $${data.name}`)
+  })
+  document.querySelector('form#send').addEventListener('submit', (ev) => {
+    ev.preventDefault()
+    const msgInput = document.querySelector('form#send input[name=message]')
+    braidClient.publish('.feed[-0:-0]',
+                        {author: {url: '$tx.owner["uid"]',
+                                  name: '$tx.owner["name"]'},
+                         name: msgInput.value})
+    msgInput.value = ''
+  })
+  document.querySelector('#notifier').addEventListener('click', () => {
+    if (!('Notification' in window)) {
+      alert('This browser does not support desktop notification')
+    } else if (Notification.permission !== 'denied') {
+      Notification.requestPermission()
+    }
+  })
+})
+</script>
