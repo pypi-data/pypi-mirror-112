@@ -1,0 +1,28 @@
+# Compiled python modules.
+*.pyc
+
+# Persisted models.
+*.pkl
+
+# Setuptools distribution folder.
+dist/
+
+# test cache
+.pytest_cache
+
+# Python cache
+__pycache__
+
+# Python egg metadata, regenerated from source files by setuptools.
+*.egg-info
+build/
+
+# Notebook checkpoints
+.ipynb_checkpoints
+
+*.*~
+
+*.idea
+*.vscode
+*.DS_Store
+
