@@ -1,0 +1,15 @@
+README.md
+setup.py
+sql_judge_utils/__init__.py
+sql_judge_utils/database.py
+sql_judge_utils/mysql.py
+sql_judge_utils/parser.py
+sql_judge_utils/postgresql.py
+sql_judge_utils.egg-info/PKG-INFO
+sql_judge_utils.egg-info/SOURCES.txt
+sql_judge_utils.egg-info/dependency_links.txt
+sql_judge_utils.egg-info/requires.txt
+sql_judge_utils.egg-info/top_level.txt
+tests/__init__.py
+tests/tests_database.py
+tests/tests_parser.py
