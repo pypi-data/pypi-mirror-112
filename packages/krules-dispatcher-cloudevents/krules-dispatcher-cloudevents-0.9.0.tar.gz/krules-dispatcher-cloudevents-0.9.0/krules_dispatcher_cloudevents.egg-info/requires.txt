@@ -1,0 +1,4 @@
+cloudevents==1.2.0
+krules-core==0.9.0
+pytz==2020.5
+requests==2.25.1
