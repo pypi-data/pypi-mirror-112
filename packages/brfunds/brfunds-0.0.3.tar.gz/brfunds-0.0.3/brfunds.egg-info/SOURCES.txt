@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+brfunds/__init__.py
+brfunds/brfunds.py
+brfunds.egg-info/PKG-INFO
+brfunds.egg-info/SOURCES.txt
+brfunds.egg-info/dependency_links.txt
+brfunds.egg-info/requires.txt
+brfunds.egg-info/top_level.txt
