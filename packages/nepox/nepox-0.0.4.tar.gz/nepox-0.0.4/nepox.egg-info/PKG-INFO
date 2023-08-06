@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: nepox
+Version: 0.0.4
+Summary: Simple script to create a new Python project
+Home-page: https://github.com/mortafix/Nepox
+Author: Moris Doratiotto
+Author-email: moris.doratiotto@gmail.com
+License: UNKNOWN
+Description: ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/nepox)
+        [![PyPI](https://img.shields.io/pypi/v/nepox?color=red)](https://pypi.org/project/nepox/)
+        [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+        ![GitHub](https://img.shields.io/github/license/mortafix/nepox)
+        
+        # Setup
+        You can find the package, [here](https://pypi.org/project/nepox/).
+        ```
+        pip3 install nepox
+        ```
+        
+        # Usage
+        You can use the help (`-h`) for more information.
+        ```bash
+        nepox project-name # simple
+        nepox project-name -e sublime # with editor specification
+        ```
+Keywords: project,sublime,terminus,creation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
