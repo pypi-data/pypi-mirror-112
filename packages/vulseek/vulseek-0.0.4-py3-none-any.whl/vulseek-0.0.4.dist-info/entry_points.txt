@@ -1,0 +1,3 @@
+[console_scripts]
+vulseek = vulseek.cli.main:cli
+
