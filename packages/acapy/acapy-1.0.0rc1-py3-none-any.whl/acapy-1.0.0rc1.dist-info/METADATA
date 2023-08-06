@@ -1,0 +1,1702 @@
+Metadata-Version: 2.1
+Name: acapy
+Version: 1.0.0rc1
+Summary: acapy package (Python bindings for AVALDATA AcapLib2 )
+Home-page: https://www.avaldata.co.jp/contact
+Author: AVALDATA
+Author-email: 
+License: 3-Clause BSD License
+Keywords: AVALDATA acapy AcapLib2
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: Japanese
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+acapy package (Python bindings for AVALDATA AcapLib2 )
+
+# Index
+
+- [**Installation**](#Installation)
+- [**Requirment**](#Requirment)
+- [**LICENSE**](#LICENSE)
+- [**AcaPy Class**](#AcaPy-Class)
+  - [Examples](#Examples)
+  - [Constructors](#Constructors)
+  - [Properties](#Properties)
+  - [Methods](#Methods)
+- [**GraphicsBox Class**](#GraphicsBox-Class)
+  - [Constructors](#Constructors-2)
+  - [Properties](#Properties-2)
+  - [Methods](#Methods-2)
+- [**Changelog**](#Changelog)
+
+
+
+# Installation
+
+```
+pip install acapy
+```
+
+
+
+# Requirment
+
+- AcapLib2 (AVALDATA SDK)
+- numpy
+- Pillow
+
+※サンプルの実行にはOepnCVが必要になります。
+
+<div style="page-break-after:always"></div>
+
+# LICENSE
+
+```
+BSD 3-Clause License
+
+Copyright (c) 2021, AVALDATA
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+<div style="page-break-after:always"></div>
+
+# AcaPy Class
+
+AcapLib2をPythonから使えるようにしたクラスです。
+
+
+
+## Examples
+
+### Snap sample
+
+画像１枚を繰り返し取得します。
+高速に画像を連続取込する場合は、[Grab sample](#Grab-sample)を参照下さい。
+
+```Python
+import sys
+
+import cv2
+import acapy
+
+# AcaPyクラスのインスタンス
+capture = acapy.AcaPy()
+
+if capture.is_opened == False:
+    # キャプチャボードが見つからないときは終了
+    del(capture)
+    sys.exit(0)
+
+# iniファイル（ボード設定ファイル）の読込
+# iniファイルは実際に使用するカメラ用のファイルを指定してください。
+capture.load_inifile("./AreaSensor_mono.ini")
+
+while(True):
+    # 画像を１枚取得
+    ret, frame = capture.snap() # カラーのときはBGR(OpenCVのMatと互換)
+    # 画像の表示
+    cv2.imshow ("Image", frame )
+
+    if cv2.waitKey(1) > 0:
+        # キー入力待ち
+        break
+
+cv2.destroyAllWindows()
+```
+
+<div style="page-break-after:always"></div>
+
+### Grab sample
+
+連続的に画像を取り込みます。
+
+```python
+import sys
+
+import cv2
+import acapy
+
+# AcaPyクラスのインスタンス
+capture = acapy.AcaPy()
+
+if capture.is_opened == False:
+    # キャプチャボードが見つからないときは終了
+    del(capture)
+    sys.exit(0)
+
+# iniファイル（ボード設定ファイル）の読込
+# iniファイルは実際に使用するカメラ用のファイルを指定してください。
+capture.load_inifile("./AreaSensor_mono.ini")
+
+# grab(連続画像取込)の開始
+capture.grab_start()
+
+while(True):
+    
+    # 前回のフレームの次から今回のフレームまでを取得
+    ret, frames, count, frame_no = capture.read_frames()# カラーのときはBGR(OpenCVのMatと互換)
+    if ret < 0:
+        # 画像メモリの上書きが発生している
+        # iniファイルのUSER_MEMORY_NUMの値、もしくはAcaPyクラスのmem_numプロパティの値を大きくすること
+        pass
+    elif ret == acapy.AcaPy.ERROR:
+        # フレームエンドのタイムアウト発生時、Grabのループ停止
+        break
+        
+    # 最後に取得した画像を表示
+    cv2.imshow ("Image", frames[count - 1] )
+
+    if cv2.waitKey(1) > 0:
+        # キー入力待ち
+        break
+
+# grab(連続画像取込)の停止
+capture.grab_stop()
+
+cv2.destroyAllWindows()
+```
+
+<div style="page-break-after:always"></div>
+
+## Constructors
+
+ボード番号、チャンネル番号を指定して、画像入力ボードをオープンします。
+実際にボードがオープン出来たかどうかは、**is_opened**プロパティで確認してください。
+
+```
+def __init__(self, board_id: int = 0, ch: int = 1, debug_print: bool = True):
+```
+
+ ***パラメータ***
+
+| 名前        | 型   | 説明                                                         |
+| ----------- | ---- | ------------------------------------------------------------ |
+| board_id    | int  | 0以上のボード番号を指定します。                              |
+| ch          | int  | 1以上のチャンネル番号を指定します。                          |
+| debug_print | bool | Trueを指定した場合、AcaPyクラスメソッドにエラー等が発生した場合、コンソールにエラー情報が表示されます。Falseを指定すると何も表示されません。 |
+
+## Properties
+
+プロパティの値は、値を設定後、refrect_param()メソッドを実行すると設定が画像入力ボードに反映されます。
+refrect_param()メソッドを実行し忘れた場合、grab_start()メソッド内でrefrect_param()メソッドが実行されます。
+
+| Properties                    | Descriptoin                                                  | Get/Set | ini  parameter                           |
+| ----------------------------- | ------------------------------------------------------------ | :-----: | ---------------------------------------- |
+| acaplib2_version              | AcapLib2のDLLバージョンを取得します。                        |   ●/-   |                                          |
+| a_cw_ccw                      | エンコーダA相の回転方向を取得します。                        |   ●/-   |                                          |
+| b_cw_ccw                      | エンコーダB相の回転方向を取得します。                        |   ●/-   |                                          |
+| bayer_enable                  | ベイヤー変換の有効／無効を取得・設定します。                 |   ●/●   | USER_BAYER_ENABLE                        |
+| bayer_grid                    | ベイヤー変換開始位置のパターンを取得・設定します。           |   ●/●   | USER_BAYER_GRID                          |
+| bayer_input_bit               | Bayer画像のBit数を取得・設定します。                         |   ●/●   | USER_BAYER_INPUT_BIT                     |
+| bayer_lut_data                | 編集するLUTデータ配列(リスト)を取得・設定します。            |   ●/●   |                                          |
+| bayer_lut_edit                | BayerLUTの編集を開始・停止します。                           |   ●/●   |                                          |
+| bayer_output_bit              | Bayer変換後のBit数を取得・設定します。                       |   ●/●   | USER_BAYER_OUTPUT_BIT                    |
+| board_bit                     | ボードで確保する画像用メモリのビット幅を取得します。         |   ●/-   | USER_GRABBER_BIT_DEPTH                   |
+| board_id                      | 初期化されたボードIDを取得します。                           |   ●/-   |                                          |
+| board_error                   | ボードエラーを取得・クリアします。                           |   ●/●   |                                          |
+| board_name                    | 初期化されたボード名を取得します。                           |   ●/-   |                                          |
+| board_temp                    | 基板温度を取得します。                                       |   ●/-   |                                          |
+| buffer_zero_fill              | 初期化時にバッファをゼロクリアするかを取得・設定します。     |   ●/●   |                                          |
+| camera_bit                    | カメラから入力する画像のビット数を取得・設定します。         |   ●/●   | USER_CAMERA_BIT_DEPTH                    |
+| camera_state                  | カメラの接続状態を取得します。                               |   ●/-   |                                          |
+| capture_flag                  | キャプチャ状況を取得します。                                 |   ●/-   |                                          |
+| cc_cycle                      | CC信号の周期[usec]を取得・設定します。                       |   ●/●   | USER_SW_TRIGGER_CYCLE                    |
+| cc_cycle_ex                   | CC信号の周期[100nsec]を取得・設定します。                    |   ●/●   | USER_SW_TRIGGER_CYCLE                    |
+| cc_delay                      | CC信号の出力遅延時間[usec]を取得・設定します。               |   ●/●   | USER_CC_DELAY                            |
+| cc_enable                     | CC信号出力の有効(1)／無効(0)を取得・設定します。             |   ●/●   | USER_SW_TRIGGER_ENABLE                   |
+| cc_out_no                     | CC信号の番号(1～4)を取得・設定します。                       |   ●/●   | USER_CL_CC_OUT_NO                        |
+| cc_polarity                   | CC信号の論理を取得・設定します。                             |   ●/●   | USER_SW_TRIGGER_POLARITY                 |
+| cc1_polarity                  | CC1信号の出力レベルを取得・設定します。                      |   ●/●   | USER_CL_CC1_POLARITY                     |
+| cc2_polarity                  | CC2信号の出力レベルを取得・設定します。                      |   ●/●   | USER_CL_CC2_POLARITY                     |
+| cc3_polarity                  | CC3信号の出力レベルを取得・設定します。                      |   ●/●   | USER_CL_CC3_POLARITY                     |
+| cc4_polarity                  | CC4信号の出力レベルを取得・設定します。                      |   ●/●   | USER_CL_CC4_POLARITY                     |
+| cc_stop                       | 画像入力停止後、CC出力を行うかの設定を取得・設定します。     |   ●/●   | USER_CC_STOP                             |
+| cancel_initialize             | 初期化と内部バッファ確保の設定を取得・設定します。           |   ●/●   | USER_CANCEL_INITIALIZE                   |
+| ch                            | 初期化されたチャンネル番号を取得します。                     |   ●/-   |                                          |
+| channel_num                   | ボードの総チャンネル数を取得します。                         |   ●/-   |                                          |
+| chatter_separate              | 外部トリガ検出無効時間の設定方法を取得・設定します。         |   ●/●   | USER_EXTERNAL_TRIGGER  _CHATTER_SEPARATE |
+| count_cc                      | CC信号の出力回数を取得します。                               |   ●/-   |                                          |
+| count_exttrig                 | EXTTRIG(外部トリガ)信号の入力回数を取得します。              |   ●/-   |                                          |
+| count_fval                    | FVAL信号の入力回数を取得します。                             |   ●/-   |                                          |
+| count_lval                    | LVAL信号の入力回数を取得します。                             |   ●/-   |                                          |
+| custom                        | FPGAカスタマイズが行われた番号を取得します。                 |   ●/-   |                                          |
+| cxp_acquision  _start_address | CXP規格のAcquisitionStartのアドレスを取得・設定します。      |   ●/●   | USER_CXP_ACQUISION  _START_ADDRESS       |
+| cxp_acquision  _start_value   | CXP規格のAcquisitionStartのアドレスに指定する値を取得・設定します。 |   ●/●   | USER_CXP_ACQUISION  _START_VALUE         |
+| cxp_acquision  _stop_address  | CXP規格のAcquisitionStopのアドレスを取得・設定します。       |   ●/●   | USER_CXP_ACQUISION  _STOP_ADDRESS        |
+| cxp_acquision  _stop_value    | CXP規格のAcquisitionStopのアドレスに指定する値を取得・設定します。 |   ●/●   | USER_CXP_ACQUISION  _STOP_VALUE          |
+| cxp_bitrate                   | CXPのビットレートを取得・設定します。                        |   ●/●   | USER_CXP_PHY_BITRATE                     |
+| cxp_link_speed                | CXPのリンク速度を取得・設定します。                          |   ●/●   | USER_CXP_PHY_LINKSPEED                   |
+| cxp_pixel_format              | CXP規格のPixelFormatアドレスに指定する値を取得・設定します。 |   ●/●   | USER_CXP_PIXEL_FORMAT                    |
+| cxp_pixel  _format_address    | CXP規格のPixelFormatアドレス値を取得・設定します。           |   ●/●   | USER_CXP_PIXEL  _FORMAT_ADDRESS          |
+| data_mask_lower               | カメラリンクポートA～Dのマスク値を取得・設定します。         |   ●/●   | USER_DATA_MASK_LOWER                     |
+| data_mask_upper               | カメラリンクポートE～Hのマスク値を取得・設定します。         |   ●/●   | USER_DATA_MASK_UPPER                     |
+| device                        | 実装されているデバイス名を取得します。                       |   ●/-   |                                          |
+| dval_enable                   | カメラデータ入力時のDVAL信号参照の有効(1)／無効(0)を取得・設定します。 |   ●/●   | USER_DVAL_SIGNAL_ENABLE                  |
+| encoder_abs_count             | エンコーダ絶対カウンタ値を取得します。                       |   ●/-   |                                          |
+| encoder_abs_start             | 絶多値エンコーダの開始／停止の制御値を取得・設定します。     |   ●/●   |                                          |
+| encoder_agr_count             | 相対位置エンコーダ使用時の一致パルス数を取得します。         |   ●/-   |                                          |
+| encoder_all_count             | 相対位置エンコーダ使用時の総カウント値を取得します。         |   ●/-   |                                          |
+| encoder_compare_reg_1         | エンコーダ比較レジスタ１の値を取得・設定します。             |   ●/●   | USER_ENCODER  _COMPARE_REG_1             |
+| encoder_compare_reg_2         | エンコーダ比較レジスタ2の値を取得・設定します。              |   ●/●   | USER_ENCODER  _COMPARE_REG_2             |
+| encoder_count                 | エンコーダ相対カウンタ値を取得します。                       |   ●/-   |                                          |
+| encoder_direction             | エンコーダ入力パルス方向を取得・設定します。                 |   ●/●   | USER_ENCODER_PULSE                       |
+| encoder_enable                | エンコーダの有効／無効／使用方法を取得・設定します。         |   ●/●   | USER_ENCODER_ENABLE                      |
+| encoder_mode                  | エンコーダ動作モードを取得・設定します。                     |   ●/●   | USER_ENCODER_MODE                        |
+| encoder_phase                 | エンコーダ入力パルス選択を取得・設定します。                 |   ●/●   | USER_ENCODER_PHASE                       |
+| encoder_start                 | 外部トリガをエンコーダで使用する方法を取得・設定します。     |   ●/●   | USER_ENCODER_START                       |
+| encoder_z_phase               | エンコーダ起動にZ相を使用するかの設定を取得・設定します。    |   ●/●   | USER_ENCODER_Z_PHASE                     |
+| exposure                      | CC信号の出力幅（露光時間）[usec]を取得・設定します。         |   ●/●   | USER_SW_TRIGGER_WIDTH                    |
+| exposure_ex                   | CC信号の出力幅（露光時間）[100nsec]を取得・設定します。      |   ●/●   | USER_SW_TRIGGER_WIDTH                    |
+| express_link                  | PCI-Expressバスに接続されているリンク幅を取得します。        |   ●/-   |                                          |
+| external_trigger_chatter      | 外部トリガ検出無効時間[usec]を取得・設定します。             |   ●/●   | USER_EXTERNAL_TRIGGER  _CHATTER          |
+| external_trigger_delay        | 外部トリガ検出遅延時間[usec]を取得・設定します。             |   ●/●   | USER_EXTERNAL_TRIGGER  _DELAY            |
+| external_trigger_enable       | 外部トリガに使用する信号選択を取得・設定します。             |   ●/●   | USER_EXTERNAL_TRIGGER  _ENABLE           |
+| external_trigger_mode         | 外部トリガを使用してCC信号を出力する方法を取得・設定します。 |   ●/●   | USER_EXTERNAL_TRIGGER  _POLARITY         |
+| fifo_full                     | FIFOステータスを取得します。                                 |   ●/-   |                                          |
+| fpga_temp                     | FPGA温度を取得します。                                       |   ●/-   |                                          |
+| fpga_version                  | FPGAバージョンを取得します。                                 |   ●/-   |                                          |
+| freq_a                        | エンコーダA相の周波数(Hz)を取得します。                      |   ●/-   |                                          |
+| freq_b                        | エンコーダB相の周波数(Hz)を取得します。                      |   ●/-   |                                          |
+| freq_fval                     | FVALの周波数(kHz)を取得します。                              |   ●/-   |                                          |
+| freq_lval                     | LVALの周波数(kHz)を取得します。                              |   ●/-   |                                          |
+| freq_ttl1                     | TTL1の周波数(Hz)を取得します。                               |   ●/-   |                                          |
+| freq_ttl2                     | TTL2の周波数(Hz)を取得します。                               |   ●/-   |                                          |
+| freq_z                        | エンコーダZ相の周波数(Hz)を取得します。                      |   ●/-   |                                          |
+| gpin_pol                      | GP_INのレベルをBit情報で取得します。                         |   ●/-   |                                          |
+| gpin_pin_sel                  | GP_INピン割込みピンを取得・設定します。                      |   ●/●   | USER_GPIN_SEL                            |
+| gpout_pol                     | GP_OUTピンの出力レベルを取得・設定します。                   |   ●/●   | USER_GPOUT_POL                           |
+| gpout_sel                     | GP_OUTピンの出力設定を取得・設定します。                     |   ●/●   | USER_GPOUT_SEL                           |
+| handle                        | 初期化されたボードハンドルを取得します。                     |   ●/-   |                                          |
+| height                        | 画像入力サイズの高さを取得・設定します。                     |   ●/●   | USER_Y_SIZE, USER_Y_TOTAL_SIZE           |
+| infrared_enable               | RGBIの有効／無効を取得・設定します。                         |   ●/●   | USER_INFRARED_ENABLE                     |
+| interval_exttrig_1            | 認識した外部トリガ間隔の時間（カウント値）の最新の値を取得します。 |   ●/-   |                                          |
+| interval_exttrig_2            | 認識した外部トリガ間隔の時間（カウント値）の２番目に新しい値を取得します。 |   ●/-   |                                          |
+| interval_exttrig_3            | 認識した外部トリガ間隔の時間（カウント値）の3番目に新しい値を取得します。 |   ●/-   |                                          |
+| interval_exttrig_4            | 認識した外部トリガ間隔の時間（カウント値）の4番目に新しい値を取得します。 |   ●/-   |                                          |
+| is_grab                       | Grab中かどうかを取得します。                                 |   ●/-   |                                          |
+| is_opened                     | ボードのOpenに成功したかどうかを取得します。                 |   ●/-   |                                          |
+| line_reverse                  | カメラから入力したラインデータの左右反転設定を取得・設定します。 |   ●/●   | USER_CAMERALINK  _LINE_REVERSE           |
+| interrupt_line                | １フレーム入力ライン数カウント間隔を取得・設定します。       |   ●/●   | USER_DATA_INTERRUT_LINE                  |
+| lval_delay                    | カメラから入力するLVALのX方向遅延量(clock)を取得・設定します。 |   ●/●   | USER_CAMERALINK  _LVAL_DELAY             |
+| lvds_cclk_sel                 | カメラ駆動クロックを取得・設定します。                       |   ●/●   | USER_LVDS_CCLK_SEL                       |
+| lvds_phase_sel                | 入力サンプリングの位相を取得・設定します。                   |   ●/●   | USER_LVDS_PAHSE_SEL                      |
+| lvds_synclt_sel               | SYNCLTピンの入出力を取得・設定します。                       |   ●/●   |                                          |
+| mem_num                       | リングバッファの画像面数を取得・設定します。                 |   ●/●   | USER_MEMORY_NUM                          |
+| narrow10bit_enable            | データ詰め転送の有効(1)／無効(0)を取得・設定します。         |   ●/●   | USER_NARROW10BIT_ENABLE                  |
+| pocl_lite_enable              | PoCL-Liteカメラ用設定の有効(1)／無効(0)を取得・設定します。  |   ●/●   | USER_POCL_LITE_ENABLE                    |
+| power_state                   | カメラ電源エラー状態を取得・クリアします。                   |   ●/●   |                                          |
+| power_supply                  | カメラへの給電状態を取得・設定します。                       |   ●/●   |                                          |
+| pix_shift                     | カメラから入力するデータを右シフトするビット数を取得・設定します。 |   ●/●   | USER_PIXEL_DATA_SHIFT                    |
+| reverse_dma_enable            | 上下反転DMAの有効(1)／無効(0)を取得・設定します。            |   ●/●   | USER_REVERSE_DMA_ENABLE                  |
+| rolling_shutter               | ローリングシャッタの有効(1)／無効(0)を取得・設定します。     |   ●/●   | USER_ROLLING_SHUTTER  _TRIGGER_ENABLE    |
+| scan_system                   | 取込を行うカメラの種類を取得・設定します。                   |   ●/●   | USER_INTERLACE_TYPE                      |
+| serial_no                     | ボードのシリアル番号を取得します。                           |   ●/-   |                                          |
+| start_frame_no                | 取込を開始するフレーム番号(1, 2, 3…)を取得・設定します。     |   ●/●   |                                          |
+| strobe_delay                  | ストロボ信号出力遅延時間[usec]を取得・設定します。           |   ●/●   | USER_STROBE_DELAY_COUNT                  |
+| strobe_enable                 | ストロボ出力信号の有効(1)／無効(0)を取得・設定します。       |   ●/●   | USER_STROBE_ENABLE                       |
+| strobe_pol                    | ストロボの極性を取得・設定します。                           |   ●/●   | USER_STROBE_POLALITY                     |
+| strobe_time                   | ストロボ信号出力時間[usec]を取得・設定します。               |   ●/●   | USER_STROBE_TIME_COUNT                   |
+| sync_ch                       | 指定チャンネルの取込をどのchに同期されるかを取得・設定します。 |   ●/●   | USER_SYNC_CH                             |
+| sync_lt                       | CC信号の出力をSYNCLT入力に同期されるかどうかを取得・設定します。 |   ●/●   | USER_SYNC_LT                             |
+| tap_arrange                   | カメラ入力タップの並べ替え方法を取得・設定します。           |   ●/●   | USER_CAMERALINK  _REARRANGEMENT_ENABLE   |
+| tap_arrange_x_size            | カメラが１ラインとして出力する総画素数を取得・設定します。   |   ●/●   | USER_CAMERALINK  _REARRANGEMENT_XSIZE    |
+| tap_direction1                | 複数のタップ入力を行う時、Tap1の入力方向を取得・設定します。 |   ●/●   | USER_CAMERALINK_TAP_DIRECTON_1           |
+| tap_direction2                | 複数のタップ入力を行う時、Tap2の入力方向を取得・設定します。 |   ●/●   | USER_CAMERALINK_TAP_DIRECTON_2           |
+| tap_direction3                | 複数のタップ入力を行う時、Tap3の入力方向を取得・設定します。 |   ●/●   | USER_CAMERALINK_TAP_DIRECTON_3           |
+| tap_direction4                | 複数のタップ入力を行う時、Tap4の入力方向を取得・設定します。 |   ●/●   | USER_CAMERALINK_TAP_DIRECTON_4           |
+| tap_direction5                | 複数のタップ入力を行う時、Tap5の入力方向を取得・設定します。 |   ●/●   | USER_CAMERALINK_TAP_DIRECTON_5           |
+| tap_direction6                | 複数のタップ入力を行う時、Tap6の入力方向を取得・設定します。 |   ●/●   | USER_CAMERALINK_TAP_DIRECTON_6           |
+| tap_direction7                | 複数のタップ入力を行う時、Tap7の入力方向を取得・設定します。 |   ●/●   | USER_CAMERALINK_TAP_DIRECTON_7           |
+| tap_direction8                | 複数のタップ入力を行う時、Tap8の入力方向を取得・設定します。 |   ●/●   | USER_CAMERALINK_TAP_DIRECTON_8           |
+| tap_num                       | 入力タップ数を取得・設定します。                             |   ●/●   | USER_X_TAPS_PER_CH                       |
+| timeout                       | grab_stop()メソッドのフレーム入力待ちタイムアウト時間をミリ秒単位で取得・設定します。 |   ●/●   | USER_TIMEOUT1                            |
+| trigger_enable                | CC信号出力の有効(1)／無効(0)を取得・設定します。             |   ●/●   | USER_SW_TRIGGER_ENABLE                   |
+| vertical_remap                | Y方向特殊DMAの設定／無効(0)を取得・設定します。              |   ●/●   | USER_VERTICAL_REMAP  _ENABLE             |
+| virtual_comport               | 仮想COMポート番号を取得します。                              |   ●/-   |                                          |
+| width                         | 画像入力サイズの幅を取得・設定します。                       |   ●/●   | USER_X_SIZE                              |
+| x_delay                       | カメラ入力のX方向遅延量を取得・設定します。                  |   ●/●   | USER_X_FRONT_PORCH                       |
+| y_delay                       | カメラ入力のY方向遅延行数を取得・設定します。                |   ●/●   | USER_Y_FRONT_PORCH                       |
+| y_total                       | カメラから入力する行数を取得・設定します。<br />y_totalを設定する場合は、必ずwidth→y_totalの順に設定してください。 |   ●/●   | USER_Y_TOTAL_SIZE                        |
+
+※設定値の詳細は、AcapLib2のマニュアル「SDK-AcapLib2 Library Manual for Windows(OM15018*).pdf」を参照願います。
+
+<div style="page-break-after:always"></div>
+
+## Methods
+
+| Methods                                                      | Descriptoin                                                  | AcapLib2 Function                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | -------------------------------------- |
+| bgr2rgb(image)                                               | カラー画像のとき、BGRからRGBへ並びを入れ替えます。           |                                        |
+| count_reset()                                                | すべてのカウンタをリセットします。                           |                                        |
+| cxp_link_reset()                                             | CoaXPressカメラ、ボードに対してリンクリセットを行います。    |                                        |
+| get_boardInfo()                                              | PCに接続されているボード一覧の情報を取得します。(static method) |                                        |
+| get_encoder()                                                | エンコーダの設定を取得します。                               | AcapGetEncoder                         |
+| get_encoder_abs_multipoint(point_no)                         | 指定したエンコーダ絶対カウントのポイント番号の絶対カウント値を取得します。 |                                        |
+| get_external_trigger()                                       | 外部トリガの設定を取得します。                               | AcapGetExternalTrigger                 |
+| get_frame_no()                                               | 現在の画像取得枚数（1,2,3・・・）を取得します。              |                                        |
+| get_gpout()                                                  | 汎用出力(GPOUT)のレベルを取得します。                        | AcapGetGPOut                           |
+| get_image_data(index)                                        | リングバッファのIndex番号を指定して、画像データを取得します。 |                                        |
+| get_last_error([error_reset])                                | 最後に発生したエラー情報を取得します。                       |                                        |
+| get_line_trigger()                                           | ライントリガの設定を取得します。                             | AcapGetLineTrigger                     |
+| get_info(value_id[, memnum])                                 | 設定IDを指定してボードの設定値を取得します。                 |                                        |
+| get_shutter_trigger()                                        | エリアセンサシャッタトリガの設定を取得します。               | AcapGetShutterTrigger                  |
+| get_strobe()                                                 | ストロボの設定を取得します。                                 | AcapGetStrobe                          |
+| grab_abort()                                                 | 画像入力を強制停止します。                                   |                                        |
+| grab_start([input_num])                                      | 画像入力枚数を指定し、画像入力を開始します。                 |                                        |
+| grab_stop()                                                  | 画像入力を停止します。                                       |                                        |
+| load_inifile(filename)                                       | ボード設定ファイル(*.ini)を読込、ボードの設定を行います。    |                                        |
+| opt_link_reset()                                             | Opt-C:Linkボードに対してリンクリセットを行います。           |                                        |
+| print_acapy_values()                                         | ボードに設定されている値をコマンドプロンプトへ表示します。   |                                        |
+| print_last_error()                                           | 最後に発生したエラー情報をコマンドプロンプトへ表示します。   |                                        |
+| read([copy, wait_frame])                                     | grab_start()後、現在のフレーム画像を取得します。             |                                        |
+| read_frames([copy])                                          | 前回取得したフレームの次から、現在のフレームまでの画像を取得します。 |                                        |
+| refrect_param([force_execution])                             | プロパティで設定した値をボードへ反映させます。               |                                        |
+| save_inifile(inifilename)                                    | ボードに設定されている値をiniファイルに保存します。          |                                        |
+| serial_close()                                               | シリアル通信ポートを閉じます。                               | AcapSerialClose                        |
+| serial_get_parameter()                                       | シリアル通信のパラメータを取得します。                       | AcapSerialGetParameter                 |
+| serial_open([baud_rate, data_bit, parity, stop_bit, flow])   | シリアルポートをオープンし、シリアル通信のパラメータを設定します。 | AcapSerialOpen  AcapSerialSetParameter |
+| serial_read([asc, time_out, buffer_size, end_str])           | シリアル通信コマンドを受信します。<br />受信バッファが空になるまで受信します。 | AcapSerialRead                         |
+| serial_write(write_command[, asc, start_str, end_str])       | シリアル通信コマンドを送信します。                           | AcapSerialWrite                        |
+| set_encoder(enc_enable, enc_mode, enc_start, enc_phase, enc_direction, z_phase_enable, compare1, compare2) | エンコーダを設定します。                                     | AcapSetEncoder                         |
+| set_encoder_abs_multipoint(point_no, abs_count)              | エンコーダ絶対カウントのポイント番号を指定して、絶対カウント値を設定します。 |                                        |
+| set_external_trigger( exp_trg_en, ext_trg_mode, ext_trg_dly, ext_trg_chatter, timeout) | 外部トリガを設定します。                                     | AcapSetExternalTrigger                 |
+| set_gpout(output_level)                                      | 汎用出力(GPOUT)のレベルを設定します。                        | AcapSetGPOut                           |
+| set_info(value_id, value[, memnum])                          | ボードへ設定IDを指定して値を設定します。<br />プロパティに設定値がある場合は設定しないでください。 | AcapSetInfo                            |
+| set_line_trigger(exp_cycle, exposure, exp_pol)               | ライントリガを設定します。                                   | AcapSetLineTrigger                     |
+| set_power_supply(wait_time, value)                           | カメラクロック確認待機時間(waite_time)をmsecで指定し、給電のON(1)/OFF(0)をvalueに設定します。 |                                        |
+| set_shutter_trigger(exp_cycle, exposure, exp_pol, exp_unitt, cc_sel) | エリアセンサシャッタトリガを設定します。                     | AcapSetShutterTrigger                  |
+| set_strobe(strobe_en, strobe_delay, strobe_time)             | ストロボを設定します。                                       | AcapSetStrobe                          |
+| snap([copy])                                                 | １フレームの取込を行います。                                 |                                        |
+| wait_grab_start([timeout])                                   | Grab開始を待ちます。                                         |                                        |
+| wait_frame_end([timeout])                                    | 現在のフレームの入力完了を待ちます。                         |                                        |
+| wait_gpin([timeout])                                         | GPIN割込みを待ちます。                                       |                                        |
+| wait_grab_end([timeout])                                     | Grab(連続入力)の完了を待ちます。                             |                                        |
+
+※コールバック関数は対応していません。
+
+<div style="page-break-after:always"></div>
+
+### bgr2rgbメソッド
+
+カラーデータのRGBの並びをB,G,RからR,G,Bへ入れ替えます。
+
+```
+def bgr2rgb(bgr_image : np.ndarray) -> np.ndarray:
+```
+
+ ***パラメータ***
+
+| 名前      | 型         | 説明                                                  |
+| --------- | ---------- | ----------------------------------------------------- |
+| bgr_image | np.ndarray | numpyのndarray形式のB,G,R順のカラー画像を指定します。 |
+
+ ***戻り値***
+
+rgb_image
+
+| 名前      | 型         | 説明                                                  |
+| --------- | ---------- | ----------------------------------------------------- |
+| rgb_image | np.ndarray | numpyのndarray形式のR,G,B順のカラー画像を取得します。 |
+
+### count_resetメソッド
+
+FVAL/LVAL/外部トリガ/CC カウント回数及び、外部トリガ間隔カウンタ1～4 のカウンタをリセットしま
+す。
+
+```
+def count_reset(self) -> bool:
+```
+
+ ***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | bool | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### cxp_link_resetメソッド
+
+対象のポートに接続されているカメラに対し、カメラ接続確立(再初期化)を行います。
+※カメラ設定はデフォルトに戻りますので、LinkSpeed 等カメラ設定を再度実施する必要があります。
+
+```
+def cxp_link_reset(self) -> bool:
+```
+
+ ***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | bool | 成功時: 1<br />失敗時: 0 |
+
+### get_boardInfoメソッド
+
+接続されているボード情報をACAPBOARDINFOEX構造体で取得します。
+
+AcapLib2のAcapGetBoardInfoEx相当
+
+```
+def get_boardInfo() -> Tuple[int, acaplib2.ACAPBOARDINFOEX]:
+```
+
+ ***戻り値***
+
+(ret, board_info)
+
+| 名前       | 型                       | 説明                                   |
+| ---------- | ------------------------ | -------------------------------------- |
+| ret        | bool                     | 成功時: 1<br />失敗時: 0               |
+| board_info | acaplib2.ACAPBOARDINFOEX | 接続されたボード情報が格納された構造体 |
+
+<div style="page-break-after:always"></div>
+
+### get_encoderメソッド
+
+接続されているボード情報をACAPBOARDINFOEX構造体で取得します。
+
+AcapLib2のAcapGetEncoder相当
+
+```
+def get_encoder(self) -> Tuple[int, int, int, int, int, int, int, int, int, int]:
+```
+
+ ***戻り値***
+
+(ret, enc_enable, enc_mode, enc_start, enc_phase, enc_direction, z_phase_enable, compare1, compare2, comp2_count)
+
+| 名前           | 型   | 説明                                                         |
+| -------------- | ---- | ------------------------------------------------------------ |
+| ret            | int  | 成功時: 1<br />失敗時: 0                                     |
+| enc_enable     | int  | エンコーダ使用設定                                           |
+| enc_mode       | int  | エンコーダモード                                             |
+| enc_start      | int  | エンコーダ起動方法                                           |
+| enc_phase      | int  | エンコーダパルス                                             |
+| enc_direction  | int  | エンコーダ回転方向                                           |
+| z_phase_enable | int  | Z 相使用設定                                                 |
+| compare1       | int  | 比較レジスタ1(遅延パルス設定)                                |
+| compare2       | int  | 比較レジスタ2(間隔パルス設定)                                |
+| comp2_count    | int  | エンコーダカウント値<br />相対カウント、有効時：総カウント数<br />絶対カウント、有効時：絶対カウント値 |
+
+<div style="page-break-after:always"></div>
+
+### get_encoder_abs_multipointメソッド
+
+絶対カウント・マルチポイント値を取得します。
+
+```
+def get_encoder_abs_multipoint(self, point_no : int) -> Tuple[int, int]:
+```
+
+ ***パラメータ***
+
+| 名前     | 型   | 説明                                               |
+| -------- | ---- | -------------------------------------------------- |
+| point_no | int  | 設定するマルチポイントの番号を指定します。(0～255) |
+
+ ***戻り値***
+
+(ret, abs_count)
+
+| 名前      | 型   | 説明                           |
+| --------- | ---- | ------------------------------ |
+| ret       | int  | 成功時: 1<br />失敗時: 0       |
+| abs_count | int  | 絶対カウント・マルチポイント値 |
+
+### get_external_triggerメソッド
+
+外部トリガの設定を取得します。
+
+AcapLib2のAcapGetExternalTrigger相当
+
+```
+def get_external_trigger(self) -> Tuple[int, int, int, int, int, int]:
+```
+
+ ***戻り値***
+
+(ret, exp_trg_en, ext_trg_mode, ext_trg_dly, ext_trg_chatter, timeout)
+
+| 名前            | 型   | 説明                               |
+| --------------- | ---- | ---------------------------------- |
+| ret             | int  | 成功時: 1<br />失敗時: 0           |
+| exp_trg_en      | int  | 外部トリガ 使用設定                |
+| ext_trg_mode    | int  | 外部トリガモード                   |
+| ext_trg_dly     | int  | 外部トリガ 検出遅延時間 (1us 単位) |
+| ext_trg_chatter | int  | 外部トリガ 検出無効時間 (1us 単位) |
+| timeout         | int  | 検出待機時間 (1ms 単位)            |
+
+<div style="page-break-after:always"></div>
+
+### get_frame_noメソッド
+
+入力フレームの情報を取得します。
+
+AcapLib2のAcapGetFrameNo相当
+
+```
+def get_frame_no(self) -> Tuple[int, int, int , int]:
+```
+
+ ***戻り値***
+
+(ret, frame_no, line, index)
+
+| 名前     | 型   | 説明                                                     |
+| -------- | ---- | -------------------------------------------------------- |
+| ret      | int  | 成功時: 1<br />失敗時: 0                                 |
+| frame_no | int  | 入力が完了したフレーム数を取得します。                   |
+| line     | int  | フレーム内の入力が完了したライン数を取得します。         |
+| index    | int  | 最後に入力が完了したメモリ番号（1,2,3...）を取得します。 |
+
+### get_gpoutメソッド
+
+GPOUTの状態を取得します。
+
+AcapLib2のAcapGetGPOut相当
+
+```
+def get_gpout(self) -> Tuple[int, int]:
+```
+
+ ***戻り値***
+
+(ret, dwOutputLevel)
+
+| 名前          | 型   | 説明                                                         |
+| ------------- | ---- | ------------------------------------------------------------ |
+| ret           | int  | 成功時: 1<br />失敗時: 0                                     |
+| dwOutputLevel | int  | GPOUT 出力設定状態を対応するBit で格納します。<br/>0：OFF/1：ON<br/>Bit0：GPOUT[1]ピン (GP_OUT1)<br/>Bit1：GPOUT[2]ピン (GP_OUT2)<br/>：<br/>Bit7：GPOUT[8]ピン |
+
+<div style="page-break-after:always"></div>
+
+### get_image_dataメソッド
+
+リングバッファのIndex番号(0, 1, 2...)を指定し、画像データを取得します。
+
+```
+def get_image_data(self, index : int) -> Union[np.ndarray, None]:
+```
+
+ ***パラメータ***
+
+| 名前  | 型   | 説明                                                  |
+| ----- | ---- | ----------------------------------------------------- |
+| index | int  | リングバッファのIndex番号(0, 1, 2...)を指定しリます。 |
+
+ ***戻り値***
+
+image
+
+| 名前  | 型         | 説明                                     |
+| ----- | ---------- | ---------------------------------------- |
+| image | np.ndarray | 画像データはnumpyのndarrayで取得します。 |
+
+### get_last_errorメソッド
+
+最後に発生したエラー情報を取得します。
+
+AcapLib2のAcapGetLastErrorCode相当
+
+```
+def get_last_error(self, error_reset : bool = False) -> acaplib2.ACAPERRORINFO:
+```
+
+ ***パラメータ***
+
+| 名前        | 型   | 説明                                                         |
+| ----------- | ---- | ------------------------------------------------------------ |
+| error_reset | bool | True: エラー情報をリセット<br />False: エラー情報をリセットしない |
+
+ ***戻り値***
+
+error_info
+
+| 名前       | 型                     | 説明                                            |
+| ---------- | ---------------------- | ----------------------------------------------- |
+| error_info | acaplib2.ACAPERRORINFO | エラーの内容をACAPERRORINFO構造体で取得します。 |
+
+<div style="page-break-after:always"></div>
+
+### get_line_triggerメソッド
+
+ライントリガの設定を取得します。
+
+AcapLib2のAcapGetLineTrigger相当
+
+```
+def get_line_trigger(self) -> Tuple[int, int, int, int]:
+```
+
+ ***戻り値***
+
+(ret, exp_cycle, exposure, exp_pol)
+
+| 名前      | 型   | 説明                                                   |
+| --------- | ---- | ------------------------------------------------------ |
+| ret       | int  | 成功時: 1<br />失敗時: 0                               |
+| exp_cycle | int  | 露光周期を1μsec単位で取得します。                      |
+| exposure  | int  | 露光時間を1μsec単位で取得します。                      |
+| exp_pol   | int  | 出力論理を取得します。<br />1:　正論理<br />0:　負論理 |
+
+### get_infoメソッド
+
+設定IDを指定して、設定値を取得します。
+
+AcapLib2のAcapGetInfo相当
+
+```
+def get_info(self, value_id : int, mem_num : int = 0) -> Tuple[int, int]:
+```
+
+ ***パラメータ***
+
+| 名前     | 型   | 説明                                                         |
+| -------- | ---- | ------------------------------------------------------------ |
+| value_id | int  | 設定ID                                                       |
+| mem_num  | int  | value_idの値により使用方法が異なります。<br />詳細はAcapLib2マニュアルのAcapGetInfo関数を参照ください。 |
+
+ ***戻り値***
+
+(ret, value)
+
+| 名前  | 型   | 説明                     |
+| ----- | ---- | ------------------------ |
+| ret   | int  | 成功時: 1<br />失敗時: 0 |
+| value | int  | 取得した設定値           |
+
+<div style="page-break-after:always"></div>
+
+### get_shutter_triggerメソッド
+
+シャッタトリガの設定を取得します。
+
+AcapLib2のAcapGetShutterTrigger相当
+
+```
+def get_shutter_trigger(self) -> Tuple[int, int, int, int, int, int]:
+```
+
+ ***戻り値***
+
+(ret, exp_cycle, exposure, exp_pol, exp_unit, cc_sel)
+
+| 名前      | 型   | 説明                                    |
+| --------- | ---- | --------------------------------------- |
+| ret       | int  | 成功時: 1<br />失敗時: 0                |
+| exp_cycle | int  | CC周期を1μsec単位で取得します。         |
+| exposure  | int  | CC出力幅を1μsec単位で取得します。       |
+| exp_pol   | int  | 出力論理を取得します。                  |
+| exp_unit  | int  | 未サポート                              |
+| cc_sel    | int  | 露光信号を出力するCC 番号を取得します。 |
+
+### get_strobeメソッド
+
+ストロボの設定を取得します。
+
+AcapLib2のAcapGetStrobe相当
+
+```
+def get_strobe(self) -> Tuple[int, int, int, int]:
+```
+
+ ***戻り値***
+
+(ret, strobe_en, strobe_delay, strobe_time)
+
+| 名前         | 型   | 説明                                                         |
+| ------------ | ---- | ------------------------------------------------------------ |
+| ret          | int  | 成功時: 1<br />失敗時: 0                                     |
+| strobe_en    | int  | ストロボの有効(1)／無効(0)状態を取得します。                 |
+| strobe_delay | int  | ストロボパルスが出力されるまでの遅延時間(1μsec単位)を取得します。 |
+| strobe_time  | int  | ストロボを出力する時間(1μsec単位)を取得します。              |
+
+<div style="page-break-after:always"></div>
+
+### grab_abortメソッド
+
+画像入力を強制停止します。
+
+AcapLib2のAcapGrabAbort相当
+
+```
+def grab_abort(self) -> int:
+```
+
+ ***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+### grab_startメソッド
+
+画像入力を開始します。
+
+AcapLib2のAcapGrabStart相当
+
+```
+def grab_start(self, input_num : int = 0) -> int:
+```
+
+  ***パラメータ***
+
+| 名前      | 型   | 説明                                                         |
+| --------- | ---- | ------------------------------------------------------------ |
+| input_num | int  | 0: 連続入力<br />1: 一画面入力<br />2～0xFFFFFFFF: 指定枚入力 |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### grab_stopメソッド
+
+画像入力を停止します。
+
+AcapLib2のAcapGrabStop相当
+
+```
+def grab_stop(self) -> int:
+```
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+### load_inifileメソッド
+
+ボード設定ファイル（iniファイル）を読込ます。
+
+AcapLib2のAcapSelectFile相当
+
+```
+def load_inifile(self, inifilename : str) -> int:
+```
+
+  ***パラメータ***
+
+| 名前        | 型   | 説明                                  |
+| ----------- | ---- | ------------------------------------- |
+| inifilename | str  | iniファイルのファイル名を指定します。 |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### opt_link_resetメソッド
+
+Opt-C:Link ボードに対してリンクリセット(再初期化)を行います。
+
+```
+def opt_link_reset(self) -> bool:
+```
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+### print_acapy_valuesメソッド
+
+AcaPyクラスに設定されている値をコマンドラインに表示します。
+
+```
+def print_acapy_values(self):
+```
+
+### print_last_errorメソッド
+
+最後に発生したエラー情報をコマンドラインに表示します。
+
+```
+def print_last_error(self) -> acaplib2.ACAPERRORINFO:
+```
+
+***戻り値***
+
+error_info
+
+| 名前       | 型                     | 説明                                            |
+| ---------- | ---------------------- | ----------------------------------------------- |
+| error_info | acaplib2.ACAPERRORINFO | エラーの内容をACAPERRORINFO構造体で取得します。 |
+
+<div style="page-break-after:always"></div>
+
+### readメソッド
+
+grab_startメソッドを実行後、grab_startメソッドを実行するまでの間で実行し、現在の画像データを１フレーム分取得します。
+
+```
+def read(self, copy : bool = False, wait_frame : bool = True) -> Tuple[int, Union[np.ndarray, None], int, int]:
+```
+
+  ***パラメータ***
+
+| 名前       | 型   | 説明                                                         |
+| ---------- | ---- | ------------------------------------------------------------ |
+| copy       | bool | True: リングバッファから画像データをコピーして取得します。<br />False:リングバッファの画像データを取得します。この場合、画像データが上書きされる場合があります。 |
+| wait_frame | bool | True: １フレーム分の画像データ取得完了を待ってから画像データを取得します。<br />False:１フレーム分の画像データ取得完了を待たずに画像データを取得します。 |
+
+***戻り値***
+
+(ret, frame, frame_no, line)
+
+| 名前     | 型         | 説明                                                         |
+| -------- | ---------- | ------------------------------------------------------------ |
+| ret      | int        | 成功時: 1<br />失敗時: 0                                     |
+| frame    | np.ndarray | 取得した画像データ<br />カラー画像の場合、データの並びはB, G, Rとなります。（OpenCVと同等） |
+| frame_no | int        | grab_startから入力が完了したフレーム数（1, 2, 3...）         |
+| line     | int        | 入力が完了したライン数                                       |
+
+<div style="page-break-after:always"></div>
+
+### read_framesメソッド
+
+grab_startメソッドを実行後、grab_startメソッドを実行するまでの間で実行し、前回取得したフレームの次のフレームから現在取得したフレームまでの画像データをリストで取得します。
+
+カメラのフレームレートが速い場合、取得したフレーム画像が上書きされる場合があります。
+その場合、mem_numプロパティの値（リングバッファの画像面数）を大きくしてください。
+
+```
+def read_frames(self, copy : bool = False) -> Tuple[int, Union[List[np.ndarray], None], int, int]:
+```
+
+  ***パラメータ***
+
+| 名前 | 型   | 説明                                                         |
+| ---- | ---- | ------------------------------------------------------------ |
+| copy | bool | True: リングバッファから画像データをコピーして取得します。<br />False:リングバッファの画像データを取得します。 |
+
+***戻り値***
+
+(ret, frames, count, frame_no)
+
+| 名前     | 型         | 説明                                                         |
+| -------- | ---------- | ------------------------------------------------------------ |
+| ret      | int        | 成功時: 1<br />失敗時: 0<br />データ上書き時: 上書きされた画像枚数を負にした値 |
+| frames   | np.ndarray | 前回取得したフレームの次のフレームから現在取得したフレームまでの画像データをリストで取得します。<br />カラー画像の場合、データの並びはB, G, Rとなります。（OpenCVと同等） |
+| count    | int        | 前回取得したフレームの次のフレームから現在取得したフレームまでのフレーム数 |
+| frame_no | int        | grab_startから入力が完了したフレーム数（1, 2, 3...）         |
+
+<div style="page-break-after:always"></div>
+
+### refrect_paramメソッド
+
+プロパティで設定した値を画像入力ボードに反映します。
+
+```
+def refrect_param(self, force_execution : bool = False) -> int:
+```
+
+  ***パラメータ***
+
+| 名前            | 型   | 説明                                                         |
+| --------------- | ---- | ------------------------------------------------------------ |
+| force_execution | bool | True: 強制的に実行します。<br />False:反映が必要な場合に、実行します。 |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+### save_inifileメソッド
+
+ボードに設定されている値をiniファイルに保存します。
+
+AcapLib2のAcapSelectFile相当
+
+```
+def save_inifile(self, inifilename : str) -> int:
+```
+
+  ***パラメータ***
+
+| 名前        | 型   | 説明                              |
+| ----------- | ---- | --------------------------------- |
+| inifilename | str  | 保存するiniファイルのファイルパス |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### serial_closeメソッド
+
+シリアル通信のポートをクローズします。
+
+AcapLib2のAcapSerialClose相当
+
+```
+def serial_close(self) -> int:
+```
+
+  ***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+### serial_get_parameterメソッド
+
+シリアル通信の設定を取得します。
+
+AcapLib2のAcapSerialGetParameter相当
+
+```
+def serial_get_parameter(self) -> Tuple[int, int, int, int, int, int]:
+```
+
+  ***戻り値***
+
+(ret, baud_rate, data_bit, parity, stop_bit, flow)
+
+| 名前      | 型   | 説明                               |
+| --------- | ---- | ---------------------------------- |
+| ret       | int  | 成功時: 1<br />失敗時: 0           |
+| baud_rate | int  | ボーレートを以下の値を取得します。 |
+| data_bit  | int  | データビットを取得します。         |
+| parity    | int  | パリティを取得します。             |
+| stop_bit  | int  | ストップビットを取得します。       |
+| flow      | int  | フロー制御を取得します。           |
+
+### serial_openメソッド
+
+シリアル通信のポートをオープンします。
+
+AcapLib2のAcapSerialOpen、AcapSerialSetParameter相当
+
+```
+def serial_open(self, baud_rate : int = 9600, data_bit : int = 8, parity : int = 0, stop_bit : int = 0, flow : int = 0) -> int:
+```
+
+  ***パラメータ***
+
+| 名前      | 型   | 説明                                                         |
+| --------- | ---- | ------------------------------------------------------------ |
+| baud_rate | int  | ボーレートを以下の値の中から設定します。<br />9600, 19200, 38400, 57600, 115200 |
+| data_bit  | int  | データビットを指定します。（現在、8 のみ設定可）             |
+| parity    | int  | パリティを指定します。（現在、「0 :なし」 のみ設定可）       |
+| stop_bit  | int  | ストップビットを指定します。（現在、「0: 1bit」 のみ設定可） |
+| flow      | int  | フロー制御を指定します。（現在、「0 :なし」 のみ設定可）     |
+
+  ***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### serial_readメソッド
+
+シリアル通信コマンドの受信を行います。
+受信はデータが空になるまで、stop_bitになるまで、タイムアウトになるまで行われます。
+
+AcapLib2のAcapSerialRead相当
+
+```
+def serial_read(self, asc : bool = True, time_out : int = 100, buffer_size : int = 511, end_str : Union[str, None] = None) -> Tuple[int, str, int]:
+```
+
+  ***パラメータ***
+
+| 名前        | 型   | 説明                                                         |
+| ----------- | ---- | ------------------------------------------------------------ |
+| asc         | bool | シリアルに読込む(受信)文字のコードを指定します。<br />False: 16 進数(HEX)表記<br />True: ASCII |
+| time_out    | int  | データビットを指定します。（現在、8 のみ設定可）             |
+| buffer_size | int  | パリティを指定します。（現在、「0 :なし」 のみ設定可）       |
+| end_str     | int  | ストップビットを指定します。（現在、「0: 1bit」 のみ設定可） |
+
+  ***戻り値***
+
+(ret, read_command, read_bytes)
+
+| 名前         | 型   | 説明                     |
+| ------------ | ---- | ------------------------ |
+| ret          | int  | 成功時: 1<br />失敗時: 0 |
+| read_command | str  | 受信した文字列           |
+| read_bytes   | int  | 受信したデータのバイト数 |
+
+<div style="page-break-after:always"></div>
+
+### serial_writeメソッド
+
+指定した文字コードでコマンドの書込み(送信)を行います。
+AcapLib2のAcapSerialWrite相当
+
+```
+def serial_write(self, write_command : str, asc : bool = True, start_str : Union[str, None] = None, end_str : Union[str, None] = "\r") -> int:
+```
+
+  ***パラメータ***
+
+| 名前          | 型   | 説明                                                         |
+| ------------- | ---- | ------------------------------------------------------------ |
+| write_command | str  | シリアルに送信するコマンド                                   |
+| asc           | bool | シリアルに書込む(送信)文字のコードを指定します。<br />False: 16 進数(HEX)表記<br />True: ASCII |
+| start_str     | str  | asc がTRUE の場合に指定できます。<br/>コマンドの開始文字列(ASCII 表記)<br/>使用しない場合は「None」を指定して下さい |
+| end_str       | str  | asc がTRUE の場合に指定できます。<br/>コマンドの終端文字列(ASCII 表記)<br/>使用しない場合は「None」を指定して下さい |
+
+  ***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### set_encoderメソッド
+
+エンコーダの設定を行います。
+AcapLib2のAcapSetEncoder相当
+
+```
+def set_encoder(self, enc_enable : int, enc_mode : int, enc_start : int, enc_phase : int, enc_direction : int, z_phase_enable : int, compare1 : int, compare2 : int) -> int:
+```
+
+  ***パラメータ***
+
+| 名前           | 型   | 説明                                                         |
+| -------------- | ---- | ------------------------------------------------------------ |
+| enc_enable     | int  | エンコーダ使用設定<br />0: 無効<br />1: 有効（相対カウント）<br />2: 有効（絶対カウント） |
+| enc_mode       | int  | エンコーダモード<br />0: エンコーダスキャンモード<br />1: エンコーダライン選択モード |
+| enc_start      | int  | エンコーダの起動方法<br/>0: エンコーダをCPU で起動<br />1: エンコーダを外部トリガで起動<br />2: エンコーダをCPU で起動して、外部トリガを一致パルスとして使用 |
+| enc_phase      | int  | エンコーダパルス<br/>0: AB相<br/>1: A相                      |
+| enc_direction  | int  | エンコーダ回転方向<br />0: CW<br/>1: CCW                     |
+| z_phase_enable | int  | Z 相使用設定<br />0: 使用しない<br />1: 使用する             |
+| compare1       | int  | 比較レジスタ1(遅延パルス設定)<br />0 ～ 4,294,967,295        |
+| compare2       | int  | 比較レジスタ2(間隔パルス設定)<br />1 ～ 4,294,967,295        |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### set_encoder_abs_multipointメソッド
+
+絶対カウントマルチポイントの値を設定します。
+
+```
+def set_encoder_abs_multipoint(self, point_no : int, abs_count : int) -> int:
+```
+
+  ***パラメータ***
+
+| 名前      | 型   | 説明                                                         |
+| --------- | ---- | ------------------------------------------------------------ |
+| point_no  | int  | 設定するマルチポイントの番号を指定します。(0～255)           |
+| abs_count | int  | 絶対カウント・マルチポイント値の設定を行います。<br />-2147483648 ～ 2147483647 |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### set_external_triggerメソッド
+
+外部トリガの種別、検出方法などを設定します。
+AcapLib2のAcapSetExternalTrigger相当
+
+```
+def set_external_trigger(self, exp_trg_en : int, ext_trg_mode : int, ext_trg_dly : int, ext_trg_chatter : int, timeout : int) -> int:
+```
+
+  ***パラメータ***
+
+| 名前            | 型   | 説明                                                         |
+| --------------- | ---- | ------------------------------------------------------------ |
+| exp_trg_en      | int  | 外部トリガとして使用する信号の選択<br />0 : 無効<br/>1 : TTL トリガ<br/>2 : 差動トリガ(エンコーダと共用)<br/>3 : 新規差動トリガ<br/>4 : OPT トリガ |
+| ext_trg_mode    | int  | 外部トリガモード<br />0 : 外部トリガ1 回でCC が1 回出力するモード(連続外部トリガモード)<br/>1 : 外部トリガ1 回でCC が周期出力するモード(単発外部トリガモード) |
+| ext_trg_dly     | int  | 外部トリガ 検出遅延時間 (1us 単位)                           |
+| ext_trg_chatter | int  | 外部トリガ 検出無効時間 (1us 単位)                           |
+| timeout         | int  | 検出待機時間 (1ms 単位)<br />1 ～ 4,294,967,295              |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### set_gpoutメソッド
+
+GPOUT ピンの出力を制御します。
+AcapLib2のAcapSetGPOut相当
+
+```
+ def set_gpout(self, output_level : int) -> int:
+```
+
+  ***パラメータ***
+
+| 名前         | 型   | 説明                                                         |
+| ------------ | ---- | ------------------------------------------------------------ |
+| output_level | int  | 対応するBit のGPOUT ピンをON(High)/OFF(Low)します。<br />0：OFF/1：ON<br/>Bit0：GPOUT[1]ピン (GP_OUT1)<br/>Bit1：GPOUT[2]ピン (GP_OUT2)<br/>：<br/>Bit7：GPOUT[8]ピン |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### set_infoメソッド
+
+設定IDを指定して、設定値を設定します。
+プロパティに同様の設定値がある場合は設定しないでください。
+
+AcapLib2のAcapSetInfo相当
+
+```
+def set_info(self, value_id : int, value : int, mem_num : int = -1) -> int:
+```
+
+  ***パラメータ***
+
+| 名前     | 型   | 説明                                                         |
+| -------- | ---- | ------------------------------------------------------------ |
+| value_id | int  | 設定ID                                                       |
+| value    | int  | 設定値                                                       |
+| mem_num  | int  | value_idの値により使用方法が異なります。<br />詳細はAcapLib2マニュアルのAcapSetInfo関数を参照ください。 |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### set_line_triggerメソッド
+
+ラインセンサへ出力するCC 信号の周期・幅を設定します。
+AcapLib2のAcapSetLineTrigger相当
+
+```
+def set_line_trigger(self, exp_cycle : int, exposure : int, exp_pol : int) -> int:
+```
+
+  ***パラメータ***
+
+| 名前      | 型   | 説明                                                         |
+| --------- | ---- | ------------------------------------------------------------ |
+| exp_cycle | int  | CC 出力周期 (1us 単位) ※CoaXPress の場合はトリガパケットです。<br />0 ～ 4,294,967,295 |
+| exposure  | int  | CC 出力幅 (1us 単位)<br />0 ～ 4,294,967,295                 |
+| exp_pol   | int  | 出力論理<br />0 : 負論理<br/>1 : 正論理                      |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### set_power_supplyメソッド
+
+カメラへの電源供給を制御します。
+
+```
+def set_power_supply(self, value : int, wait_time : int = 3000) -> int:
+```
+
+  ***パラメータ***
+
+| 名前      | 型   | 説明                                |
+| --------- | ---- | ----------------------------------- |
+| value     | int  | 電源のON/OFF<br />0: OFF<br />1: ON |
+| wait_time | int  | タイムアウト時間をmsで指定します。  |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### set_shutter_triggerメソッド
+
+エリアセンサシャッタトリガを設定します。
+
+AcapLib2のAcapSetShutterTrigger相当
+
+```
+def set_shutter_trigger(self, exp_cycle : int, exposure : int, exp_pol : int, exp_unit : int, cc_sel : int) -> int:
+```
+
+  ***パラメータ***
+
+| 名前      | 型   | 説明                                                    |
+| --------- | ---- | ------------------------------------------------------- |
+| exp_cycle | int  | CC 出力周期 (1us 単位)<br />0 ～ 429,496,729            |
+| exposure  | int  | CC 出力幅 (1us 単位)<br />0 ～ 429,496,729              |
+| exp_pol   | int  | 出力論理<br />0 : 負論理<br/>1 : 正論理                 |
+| exp_unit  | int  | 未サポート                                              |
+| cc_sel    | int  | 出力する番号<br />1 : CC1 / 2 : CC2 / 3 : CC3 / 4 : CC4 |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### set_strobeメソッド
+
+ストロボを設定します。
+
+AcapLib2のAcapSetStrobe相当
+
+```
+def set_strobe(self, strobe_en : int, strobe_delay : int, strobe_time : int) -> int:
+```
+
+  ***パラメータ***
+
+| 名前         | 型   | 説明                                                         |
+| ------------ | ---- | ------------------------------------------------------------ |
+| strobe_en    | int  | ストロボ 使用設定<br />0 : 無効 / 1 : 有効                   |
+| strobe_delay | int  | ストロボパルスが出力されるまでの遅延時間 (1us 単位)<br />0 ～ 65,535 |
+| strobe_time  | int  | ストロボパルスを出力する時間 (1us 単位)<br />0 ～ 65,535     |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### snapメソッド
+
+画像を１枚取込みます。
+
+高速に連続取込する場合は、grabをお使い下さい。（参照：[Grab sample](#Grab-sample)）
+
+```
+def snap(self, copy : bool = False) -> Tuple[int, Union[np.ndarray, None]]:
+```
+
+  ***パラメータ***
+
+| 名前 | 型   | 説明                                                         |
+| ---- | ---- | ------------------------------------------------------------ |
+| copy | bool | True: リングバッファから画像データをコピーして取得します。<br/>False:リングバッファの画像データを取得します。この場合、画像デー<br/>タが上書きされる場合があります。 |
+
+***戻り値***
+
+(ret, frame)
+
+| 名前  | 型         | 説明                                                         |
+| ----- | ---------- | ------------------------------------------------------------ |
+| ret   | int        | 成功時: 1<br />失敗時: 0                                     |
+| frame | np.ndarray | 取得した画像データ<br/>カラー画像の場合、データの並びはB, G, Rとなります。<br/>（OpenCVと同等） |
+
+<div style="page-break-after:always"></div>
+
+### wait_frame_endメソッド
+
+１フレーム分の画像取込完了を待ちます。
+
+AcapLib2のAcapWaitEventのACL_INT_FRAMEEND相当
+
+```
+def wait_frame_end(self, timeout = -1) -> int:
+```
+
+  ***パラメータ***
+
+| 名前    | 型   | 説明                                                         |
+| ------- | ---- | ------------------------------------------------------------ |
+| timeout | int  | 待機時間をmsec単位で指定します。<br />値が負の場合、timeoutプロパティで指定された時間分待機します。 |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+### wait_gpinメソッド
+
+GPIN 割り込みを待ちます。
+
+AcapLib2のAcapWaitEventのACL_INT_GPIN相当
+
+```
+def wait_gpin(self, timeout = -1) -> int:
+```
+
+  ***パラメータ***
+
+| 名前    | 型   | 説明                                                         |
+| ------- | ---- | ------------------------------------------------------------ |
+| timeout | int  | 待機時間をmsec単位で指定します。<br />値が負の場合、timeoutプロパティで指定された時間分待機します。 |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+### wait_grab_endメソッド
+
+grabの入力停止を待ちます。
+
+AcapLib2のAcapWaitEventのACL_INT_GRABEND相当
+
+```
+def wait_grab_end(self, timeout = -1) -> int:
+```
+
+  ***パラメータ***
+
+| 名前    | 型   | 説明                                                         |
+| ------- | ---- | ------------------------------------------------------------ |
+| timeout | int  | 待機時間をmsec単位で指定します。<br />値が負の場合、timeoutプロパティで指定された時間分待機します。 |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+### wait_grab_startメソッド
+
+grabの入力開始を待ちます。
+
+AcapLib2のAcapWaitEventのACL_INT_GRABSTART相当
+
+```
+def  wait_grab_start(self, timeout = -1) -> int:
+```
+
+  ***パラメータ***
+
+| 名前    | 型   | 説明                                                         |
+| ------- | ---- | ------------------------------------------------------------ |
+| timeout | int  | 待機時間をmsec単位で指定します。<br />値が負の場合、timeoutプロパティで指定された時間分待機します。 |
+
+***戻り値***
+
+ret
+
+| 名前 | 型   | 説明                     |
+| ---- | ---- | ------------------------ |
+| ret  | int  | 成功時: 1<br />失敗時: 0 |
+
+<div style="page-break-after:always"></div>
+
+# GraphicsBox Class
+
+tkinterのCanvasクラスを継承した、tkinter用画像表示ウィジェットとなります。
+
+## Constructors
+
+| Constructors                             | Descriptoin                             |
+| ---------------------------------------- | --------------------------------------- |
+| GraphicsBox(parent, option = value, ...) | option設定はTkinterのCanvasクラスと同じ |
+
+## Properties
+
+| Properties       | Descriptoin                                                  | Get/Set |
+| ---------------- | ------------------------------------------------------------ | :-----: |
+| affine_matrix    | 画像表示に使用している3x3のアフィン変換行列を取得・設定します。 |   ●/●   |
+| bright_enabled   | 輝度値の表示(True)／非表示(False)の設定を取得・設定します。  |   ●/●   |
+| cross_beam_color | プロファイル用十字線の色を取得・設定します。                 |   ●/●   |
+| disp_scale       | 画像表示倍率を取得します。                                   |   ●/-   |
+| grid_color       | グリッド線の色を取得・設定します。                           |   ●/●   |
+| grid_disp_scale  | グリッド線を表示する画像の最小倍率を取得・設定します。       |   ●/●   |
+| grid_enabled     | 画像拡大時のグリッド線の表示(True)／非表示(False)の設定を取得・設定します。 |   ●/●   |
+| max_scale        | 画像の拡大時の最大倍率を取得・設定します。                   |   ●/●   |
+| min_scale        | 画像の縮小時の最小倍率を取得・設定します。                   |   ●/●   |
+| profile_enabled  | プロファイルの表示(True)／非表示(False)の設定を取得・設定します。 |   ●/●   |
+| profile_hight    | プロファイルグラフの高さを取得・設定します。                 |   ●/●   |
+| profile_x        | プロファイルを表示するX座標（ウィジェットの座標）を取得・設定します。 |   ●/●   |
+| profile_x_color  | モノクロ画像時の横方向のプロファイルの線色を取得・設定します。 |   ●/●   |
+| profile_y        | プロファイルを表示するY座標（ウィジェットの座標）を取得・設定します。 |   ●/●   |
+| profile_y_color  | モノクロ画像時の縦方向のプロファイルの線色を取得・設定します。 |   ●/●   |
+| zoomup_direction | 画像拡大時のホイールの回転方向を取得・設定します。  <br />-1:下へ回転、1:上へ回転 |   ●/●   |
+
+<div style="page-break-after:always"></div>
+
+## Methods
+
+| Methods                             | Descriptoin                                                  |
+| ----------------------------------- | ------------------------------------------------------------ |
+| dest_to_src_xy(xy)                  | 現在の表示状態において、ウィジェット上の座標を画像上の座標へ変換します。 |
+| draw_image(image)                   | PillowのImage形式もしくはnumpyのndarray形式の画像をGraphicsBoxへ表示します。表示可能なのは8bit,24bit,32bitの画像のみです。 |
+| redraw_image()                      | 画像を再描画します。                                         |
+| reset_transform()                   | 画像表示を初期状態（左上に等倍率）に戻します。               |
+| scale_at(scale, cx, cy)             | 指定した点を中心に拡大縮小します。                           |
+| scale_transform(scale)              | 画像表示の相対倍率を指定し拡大縮小します。                   |
+| src_to_dest_xy(xy)                  | 現在の表示状態において、画像上の座標をウィジェット上の座標へ変換します。 |
+| translate(offset_x, offset_y)       | 画像表示位置を平行移動します。                               |
+| zoom_fit(image_width, image_height) | 画像の幅と高さを指定し、ウィジェット全体に画像を表示します。 |
+
+<div style="page-break-after:always"></div>
+
+### dest_to_src_xyメソッド
+
+表示している画像のウィジェット上の座標（ウィジェットの左上が原点）から、画像の座標へ変換します。
+
+```
+def dest_to_src_xy(self, xy : Tuple[float, float]) -> Tuple[float, float]:
+```
+
+  ***パラメータ***
+
+| 名前 | 型                  | 説明                                                         |
+| ---- | ------------------- | ------------------------------------------------------------ |
+| xy   | Tuple[float, float] | 表示している画像のウィジェット上のxy座標（ウィジェットの左上が原点）をfloat型のタプルで指定します。 |
+
+***戻り値***
+
+(x, y)
+
+| 名前   | 型                  | 説明                                            |
+| ------ | ------------------- | ----------------------------------------------- |
+| (x, y) | Tuple[float, float] | 画像上のxy座標がfloat型のタプルで取得されます。 |
+
+### draw_imageメソッド
+
+画像データをウィジェットに表示します。
+
+```
+def draw_image(self, image : Union[Image.Image, np.ndarray])　-> int:
+```
+
+  ***パラメータ***
+
+| 名前  | 型                             | 説明                                                         |
+| ----- | ------------------------------ | ------------------------------------------------------------ |
+| image | Union[Image.Image, np.ndarray] | 表示する画像データ<br />データはPillowのImageオブジェクトもしくはnumpyのndarrayオブジェクトとなります。<br />カラー画像の場合、R,G,Bの順で指定してください。 |
+
+***戻り値***
+
+id
+
+| 名前 | 型   | 説明                                        |
+| ---- | ---- | ------------------------------------------- |
+| id   | int  | tkinterのcreate_imageの戻り値を取得します。 |
+
+### redraw_imageメソッド
+
+画像を再描画します。
+
+```
+def redraw_image(self):
+```
+
+### reset_transformメソッド
+
+クラス内部で使用している画像表示用アフィン変換行列をセット（単位行列にする）します。
+リセット後に画像を表示すると、画像はウィジェットの左上に等倍（倍率が１）で表示されます。
+
+```
+def reset_transform(self):
+```
+
+### scale_atメソッド
+
+指定した座標（ウィジェットの座標）を中心に画像を拡大縮小します。
+
+```
+def scale_at(self, scale:float, cx:float, cy:float):
+```
+
+  ***パラメータ***
+
+| 名前  | 型    | 説明                                                         |
+| ----- | ----- | ------------------------------------------------------------ |
+| scale | float | 画像の表示倍率を指定します。<br />倍率は現在の表示状態からの相対倍率となります。 |
+| cx    | float | 拡大縮小の基点となる x 座標（ウィジェットの座標）を指定します。 |
+| cy    | float | 拡大縮小の基点となる y 座標（ウィジェットの座標）を指定します。 |
+
+### scale_transformメソッド
+
+原点（ウィジェットの左上）を中心に画像を拡大縮小します。
+
+```
+def scale_transform(self, scale:float):
+```
+
+  ***パラメータ***
+
+| 名前  | 型    | 説明                                                         |
+| ----- | ----- | ------------------------------------------------------------ |
+| scale | float | 画像の表示倍率を指定します。<br />倍率は現在の表示状態からの相対倍率となります。 |
+
+<div style="page-break-after:always"></div>
+
+### src_to_dest_xyメソッド
+
+表示している画像上の座標から、ウィジェット上の座標へ変換します。
+
+```
+def src_to_dest_xy(self, xy : Tuple[float, float]) -> Tuple[float, float]:
+```
+
+  ***パラメータ***
+
+| 名前 | 型                  | 説明                                                      |
+| ---- | ------------------- | --------------------------------------------------------- |
+| xy   | Tuple[float, float] | 表示している画像上のxy座標をfloat型のタプルで指定します。 |
+
+***戻り値***
+
+(x, y)
+
+| 名前   | 型                  | 説明                                                    |
+| ------ | ------------------- | ------------------------------------------------------- |
+| (x, y) | Tuple[float, float] | ウィジェット上のxy座標がfloat型のタプルで取得されます。 |
+
+### translateメソッド
+
+画像の表示位置を指定した大きさ（ウィジェット上の距離）で平行移動します。
+
+```
+def translate(self, offset_x : float, offset_y : float):
+```
+
+  ***パラメータ***
+
+| 名前     | 型    | 説明                                                    |
+| -------- | ----- | ------------------------------------------------------- |
+| offset_x | float | 画像のX方向の移動量をウィジェット上の距離で指定します。 |
+| offset_y | float | 画像のY方向の移動量をウィジェット上の距離で指定します。 |
+
+### zoom_fitメソッド
+
+画像全体がウィジェット全体に表示されるように表示位置、倍率を調整します。
+
+```
+def zoom_fit(self, image_width : int, image_height : int):
+```
+
+  ***パラメータ***
+
+| 名前         | 型   | 説明                             |
+| ------------ | ---- | -------------------------------- |
+| image_width  | int  | 画像の幅の画素数を指定します。   |
+| image_height | int  | 画像の高さの画素数を指定します。 |
+
+
+
+# Changelog
+
+## Ver.1.0.0
+
+| モジュール  | バージョン | 備考 |
+| ----------- | ---------- | ---- |
+| acaplib2    | Ver.1.0.0  | 初版 |
+| acapy       | Ver.1.0.0  | 初版 |
+| graphicsbox | Ver.1.0.0  | 初版 |
+
+初版
+
+
+
