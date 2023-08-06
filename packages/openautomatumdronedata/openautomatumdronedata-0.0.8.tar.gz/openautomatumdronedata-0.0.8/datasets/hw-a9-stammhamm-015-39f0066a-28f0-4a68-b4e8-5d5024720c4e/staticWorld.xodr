@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenDRIVE xmlns="http://www.opendrive.org">
+    <header revMajor="1" revMinor="4" date="2021-20-04T22:37:30">
+        <userData code="Created by IPGRoad" value="LibVersion 9.1" />
+    </header>
+    <road name="object 1" length="269.05900780144" id="0" junction="-1">
+        <type s="0" type="rural">
+            <speed max="100" unit="km/h" />
+        </type>
+        <planView>
+            <geometry s="0" x="47.368" y="-136.681" hdg="1.59997823188824" length="269.05900780144">
+                <arc curvature="-0.000304165578007369" />
+            </geometry>
+        </planView>
+        <lanes>
+            <laneSection s="0">
+                <left>
+                    <lane id="5" type="shoulder">
+                        <width sOffset="0" a="3" b="0" c="0" d="0" />
+                        <material sOffset="0" friction="1" />
+                        <speed sOffset="0" max="100" unit="km/h" />
+                    </lane>
+                    <lane id="4" type="driving">
+                        <width sOffset="0" a="3.8" b="0" c="0" d="0" />
+                        <roadMark sOffset="1e-07" type="solid" color="white" width="0.12" height="0" />
+                        <material sOffset="0" friction="1" />
+                        <speed sOffset="0" max="100" unit="km/h" />
+                    </lane>
+                    <lane id="3" type="driving">
+                        <width sOffset="0" a="3.8" b="0" c="0" d="0" />
+                        <roadMark sOffset="1e-07" type="broken" color="white" width="0.12" height="0" />
+                        <material sOffset="0" friction="1" />
+                        <speed sOffset="0" max="100" unit="km/h" />
+                    </lane>
+                    <lane id="2" type="driving">
+                        <width sOffset="0" a="3.8" b="0" c="0" d="0" />
+                        <roadMark sOffset="1e-07" type="broken" color="white" width="0.12" height="0" />
+                        <material sOffset="0" friction="1" />
+                        <speed sOffset="0" max="100" unit="km/h" />
+                    </lane>
+                    <lane id="1" type="none">
+                        <width sOffset="0" a="3.1" b="0" c="0" d="0" />
+                        <roadMark sOffset="1e-07" type="solid" color="white" width="0.12" height="0" />
+                        <material sOffset="0" friction="1" />
+                        <speed sOffset="0" max="100" unit="km/h" />
+                    </lane>
+                </left>
+                <center>
+                    <lane id="0" type="driving" />
+                </center>
+                <right>
+                    <lane id="-1" type="none">
+                        <width sOffset="0" a="3.1" b="0" c="0" d="0" />
+                        <roadMark sOffset="1e-07" type="solid" color="white" width="0.12" height="0" />
+                        <material sOffset="0" friction="1" />
+                        <speed sOffset="0" max="100" unit="km/h" />
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <width sOffset="0" a="3.8" b="0" c="0" d="0" />
+                        <roadMark sOffset="1e-07" type="broken" color="white" width="0.12" height="0" />
+                        <material sOffset="0" friction="1" />
+                        <speed sOffset="0" max="100" unit="km/h" />
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <width sOffset="0" a="3.8" b="0" c="0" d="0" />
+                        <roadMark sOffset="1e-07" type="broken" color="white" width="0.12" height="0" />
+                        <material sOffset="0" friction="1" />
+                        <speed sOffset="0" max="100" unit="km/h" />
+                    </lane>
+                    <lane id="-4" type="driving">
+                        <width sOffset="0" a="3.8" b="0" c="0" d="0" />
+                        <roadMark sOffset="1e-07" type="solid" color="white" width="0.12" height="0" />
+                        <material sOffset="0" friction="1" />
+                        <speed sOffset="0" max="100" unit="km/h" />
+                    </lane>
+                    <lane id="-5" type="shoulder">
+                        <width sOffset="0" a="3" b="0" c="0" d="0" />
+                        <material sOffset="0" friction="1" />
+                        <speed sOffset="0" max="100" unit="km/h" />
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+        <objects>
+            <object type="IPGRoad Traffic barrier" name="object 19" id="1" s="1e-07" t="0.3" zOffset="0" validLength="269.05900760144" orientation="none" hdg="0" pitch="0" roll="0" length="269.05900760144" width="0.155" height="0.75">
+                <repeat s="1e-07" length="269.05900760144" distance="0" tStart="0.3" tEnd="0.3" heightStart="0.75" heightEnd="0.75" zOffsetStart="0" zOffsetEnd="0" widthStart="0.155" widthEnd="0.155" />
+                <userData code="IPGRoad" value="Traffic barrier">
+                    <parameters side="R" type="2" interval="3.000000" detectability="1.000000" visibility="1" pType="2" eType0="0" eType1="0" />
+                </userData>
+            </object>
+            <object type="IPGRoad Traffic barrier" name="object 63" id="2" s="1e-07" t="17.5" zOffset="0" validLength="269.05900760144" orientation="none" hdg="0" pitch="0" roll="0" length="269.05900760144" width="0.155" height="0.75">
+                <repeat s="1e-07" length="269.05900760144" distance="0" tStart="17.5" tEnd="17.5" heightStart="0.75" heightEnd="0.75" zOffsetStart="0" zOffsetEnd="0" widthStart="0.155" widthEnd="0.155" />
+                <userData code="IPGRoad" value="Traffic barrier">
+                    <parameters side="L" type="2" interval="3.000000" detectability="1.000000" visibility="1" pType="2" eType0="0" eType1="0" />
+                </userData>
+            </object>
+            <object type="IPGRoad Traffic barrier" name="object 78" id="3" s="1e-07" t="-0.3" zOffset="0" validLength="269.05900760144" orientation="none" hdg="0" pitch="0" roll="0" length="269.05900760144" width="0.155" height="0.75">
+                <repeat s="1e-07" length="269.05900760144" distance="0" tStart="-0.3" tEnd="-0.3" heightStart="0.75" heightEnd="0.75" zOffsetStart="0" zOffsetEnd="0" widthStart="0.155" widthEnd="0.155" />
+                <userData code="IPGRoad" value="Traffic barrier">
+                    <parameters side="L" type="2" interval="3.000000" detectability="1.000000" visibility="1" pType="2" eType0="0" eType1="0" />
+                </userData>
+            </object>
+            <object type="IPGRoad Traffic barrier" name="object 122" id="4" s="1e-07" t="-17.5" zOffset="0" validLength="269.05900760144" orientation="none" hdg="0" pitch="0" roll="0" length="269.05900760144" width="0.155" height="0.75">
+                <repeat s="1e-07" length="269.05900760144" distance="0" tStart="-17.5" tEnd="-17.5" heightStart="0.75" heightEnd="0.75" zOffsetStart="0" zOffsetEnd="0" widthStart="0.155" widthEnd="0.155" />
+                <userData code="IPGRoad" value="Traffic barrier">
+                    <parameters side="R" type="2" interval="3.000000" detectability="1.000000" visibility="1" pType="2" eType0="0" eType1="0" />
+                </userData>
+            </object>
+        </objects>
+    </road>
+</OpenDRIVE>
