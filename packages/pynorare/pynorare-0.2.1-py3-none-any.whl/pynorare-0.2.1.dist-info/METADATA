@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: pynorare
+Version: 0.2.1
+Summary: A Python library to handle NoRaRe data
+Home-page: https://github.com/concepticon/pynorare
+Author: Johann-Mattis List and Robert Forkel
+Author-email: mattis.list@lingpy.org
+License: Apache 2.0
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: attrs (>=18.2)
+Requires-Dist: cldfcatalog (>=1.3)
+Requires-Dist: clldutils (>=3.1.2)
+Requires-Dist: csvw (>=1.6)
+Requires-Dist: pyconcepticon (>=2.5)
+Requires-Dist: tqdm
+Requires-Dist: uritemplate
+Requires-Dist: xlrd (~=1.0)
+Provides-Extra: dev
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage (>=4.2) ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-mock ; extra == 'test'
+Requires-Dist: pytest (>=5) ; extra == 'test'
+
+# pynorare
+Python package for the NoRaRe collection
+
+[![Build Status](https://github.com/concepticon/pynorare/workflows/tests/badge.svg)](https://github.com/concepticon/pynorare/actions?query=workflow%3Atests)
+[![codecov](https://codecov.io/gh/concepticon/pynorare/branch/master/graph/badge.svg)](https://codecov.io/gh/concepticon/pynorare)
+[![PyPI](https://img.shields.io/pypi/v/pynorare.svg)](https://pypi.org/project/pynorare)
+
+
+
