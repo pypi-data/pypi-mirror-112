@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: ralph-malph
+Version: 2.0.0
+Summary: A learning logs processor to feed your LRS
+Home-page: https://openfun.github.io/ralph/
+Author: Open FUN (France Universite Numerique)
+Author-email: fun.dev@fun-mooc.fr
+License: MIT
+Keywords: Open edX,Analytics,xAPI,LRS
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: click (==8.0.1)
+Requires-Dist: click-option-group (==0.5.3)
+Requires-Dist: elasticsearch (==7.13.2)
+Requires-Dist: ovh (==0.5.0)
+Requires-Dist: pydantic (==1.8.2)
+Requires-Dist: python-keystoneclient (==4.2.0)
+Requires-Dist: python-swiftclient (==3.12.0)
+Requires-Dist: pyyaml (==5.4.1)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: sentry-sdk (==1.1.0)
+Provides-Extra: ci
+Requires-Dist: twine (==3.4.1) ; extra == 'ci'
+Provides-Extra: dev
+Requires-Dist: bandit (==1.7.0) ; extra == 'dev'
+Requires-Dist: black (==21.6b0) ; extra == 'dev'
+Requires-Dist: factory-boy (==3.2.0) ; extra == 'dev'
+Requires-Dist: Faker (==8.9.1) ; extra == 'dev'
+Requires-Dist: flake8 (==3.9.2) ; extra == 'dev'
+Requires-Dist: hypothesis (==6.14.1) ; extra == 'dev'
+Requires-Dist: ipdb (==0.13.9) ; extra == 'dev'
+Requires-Dist: ipython (==7.25.0) ; extra == 'dev'
+Requires-Dist: isort (==5.9.1) ; extra == 'dev'
+Requires-Dist: logging-gelf (==0.0.26) ; extra == 'dev'
+Requires-Dist: memory-profiler (==0.58.0) ; extra == 'dev'
+Requires-Dist: mkdocs (==1.2.1) ; extra == 'dev'
+Requires-Dist: mkdocs-click (==0.4.0) ; extra == 'dev'
+Requires-Dist: mkdocs-material (==7.1.9) ; extra == 'dev'
+Requires-Dist: mkdocstrings (==0.15.2) ; extra == 'dev'
+Requires-Dist: pyfakefs (==4.5.0) ; extra == 'dev'
+Requires-Dist: pylint (==2.9.3) ; extra == 'dev'
+Requires-Dist: pytest (==6.2.4) ; extra == 'dev'
+Requires-Dist: pytest-cov (==2.12.1) ; extra == 'dev'
+
+# Ralph
+
+Ralph is a command-line tool to fetch, extract, convert and push your tracking
+logs (_aka_ learning events) from various storage backends to your LRS or any
+other compatible storage or database backend.
+
+## Quick start guide
+
+Ralph is distributed as a standard python package; it can be installed _via_
+`pip` or any other python package manager (_e.g_ Poetry, Pipenv, etc.):
+
+```
+$ pip install ralph-malph
+```
+
+Once installed, the `ralph` command should be available in your `PATH`. Try to
+invoke the program usage thanks to the `--help` flag:
+
+```
+$ ralph --help
+```
+
+You should see a list of available commands and global flags for `ralph`. Note
+that each command has its own usage that can be invoked _via_:
+
+```
+$ ralph COMMAND --help
+```
+
+> You should substitute `COMMAND` by the target command, _e.g._ `list`, to see
+> its usage.
+
+## Documentation
+
+We try our best to maintain an up-to-date reference documentation for this
+project. If you intend to install, test or contribute to ralph, we invite you
+to read this [documentation](https://openfun.github.io/ralph) and give us
+feedback if some parts are unclear or your use case is not (or poorly) covered.
+
+## Contributing
+
+This project is intended to be community-driven, so please, do not hesitate to
+get in touch if you have any question related to our implementation or design
+decisions.
+
+We try to raise our code quality standards and expect contributors to follow
+the recommandations from our
+[handbook](https://openfun.gitbooks.io/handbook/content).
+
+## License
+
+This work is released under the MIT License (see [LICENSE](./LICENSE.md)).
+
+
