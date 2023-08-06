@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "awaitwhat"
+version = "21.1"
+description = "async/await introspection"
+authors = ["Dima Tisnek <dimaqq@gmail.com>"]
+license = "MIT"
+readme = "readme.md"
+homepage = "https://github.com/dimaqq/awaitwhat"
+repository = "https://github.com/dimaqq/awaitwhat"
+documentation = "https://github.com/dimaqq/awaitwhat"
+keywords = ["asyncio"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Framework :: AsyncIO",
+  "Topic :: Software Development :: Debuggers",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: MacOS :: MacOS X",
+  "Operating System :: Microsoft :: Windows",
+]
+
+build = "build.py"
+
+packages = [{include = "awaitwhat"}]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+ipython = "*"
+black = { version = "^21.6b0", allow-prereleases = true }
+pre-commit = "^2"
+
+[build-system]
+requires = ["poetry>=1.0.9"]
+build-backend = "poetry.masonry.api"
