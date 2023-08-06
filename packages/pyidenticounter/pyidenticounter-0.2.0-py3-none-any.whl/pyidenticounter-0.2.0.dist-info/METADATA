@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pyidenticounter
+Version: 0.2.0
+Summary: Count the number of identifier inside your python modules (variable, function, method and class names).
+License: MIT
+Author: Bahram Aghaei
+Author-email: aghaee.bahram@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
