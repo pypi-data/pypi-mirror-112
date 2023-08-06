@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: journal-targeter
+Version: 0.1.5
+Summary: Journal matching, using title, abstract & references.
+Home-page: https://github.com/Townsend-Lab-Yale/journal_targeter
+Author: Stephen Gaffney
+Author-email: stephen.gaffney@yale.edu
+License: GPL-3.0-or-later
+Project-URL: Web-app, https://jot.publichealth.yale.edu
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Provides-Extra: testing
+License-File: LICENSE.txt
+License-File: AUTHORS.md
+
+# Jot: Journal Targeter
+
+A web app for journal suitability metrics, based on manuscript title, abstract 
+and references.
+
+
