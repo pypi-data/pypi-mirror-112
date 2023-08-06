@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: afkarena
+Version: 0.1.0
+Summary: Simple API wrapper for the AFK Arena site https://cdkey.lilith.com/afk-global.
+License: MIT
+Author: scragly
+Author-email: 29337040+scragly@users.noreply.github.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0)
