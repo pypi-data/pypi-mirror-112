@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sd_utils
+Version: 0.4.1
+Summary: A python module with basic utils I tend to use in my projects
+Home-page: https://github.com/stephend017/sd_utils
+Author: Stephen Davis
+Author-email: stephenedavis17@gmail.com
+License: UNKNOWN
+Description: # sd_utils
+        A template repository for python packages
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
