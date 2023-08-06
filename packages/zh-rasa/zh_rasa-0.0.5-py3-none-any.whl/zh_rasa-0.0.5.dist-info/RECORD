@@ -1,0 +1,10 @@
+zh_rasa/__init__.py,sha256=bjrZz7HrLHIer8aF5JPvSyhR7TG6Yh_jGm8qNoHUnK8,129
+zh_rasa/classifiers/__init__.py,sha256=LXXtP8odpwws2AvJarmQkkRV4BoyBBtZ7iYiX6j1cu4,77
+zh_rasa/classifiers/tfnlu_classifier.py,sha256=Ec91HD_5KqEKgxdfUIyyGy1Zj7NinPEhBJFTdwYD7IY,3147
+zh_rasa/extractors/__init__.py,sha256=pzJCNqkDSS8rcVVCWndN2FGZZ85Kl8MUlJCmOurKJN0,74
+zh_rasa/extractors/tfnlu_extractor.py,sha256=z0Ac1GUOBe5S4m_j1py7bDYqeiZFOMTuxg8TPu28B78,3813
+zh_rasa-0.0.5.dist-info/LICENSE,sha256=1H_0zU8bSTSmb5dD5N0yzIxRfbLTgW-t34WJ1dSOKpg,1066
+zh_rasa-0.0.5.dist-info/METADATA,sha256=OYva0K9o6UUg9u6gi3zIp4wim9bQFz3Sq1iHjr6P5ZY,332
+zh_rasa-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+zh_rasa-0.0.5.dist-info/top_level.txt,sha256=UGe_8gRu4y0hVbXvtVXAHqa1CYy5G1Sn1fPQ_e7RZJY,8
+zh_rasa-0.0.5.dist-info/RECORD,,

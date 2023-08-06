@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: zh-rasa
+Version: 0.0.5
+Summary: Chinese NLP tool for RASA
+Home-page: https://github.com/deepdialog/zh-rasa
+Author: deepdialog
+Author-email: thebotbot@sina.com
+License: Private
+Keywords: nlp,nlu
+Platform: any
+Requires-Dist: tensorflow (>=2.2.0)
+Requires-Dist: tfnlu (>=1.1.0)
+
+Chinese NLP tool for RASA
+
+
