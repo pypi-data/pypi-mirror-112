@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pedalboard
+Version: 0.3.3
+Summary: A Python library for adding effects to audio.
+Home-page: UNKNOWN
+Author: Peter Sobot
+Author-email: psobot@spotify.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: numpy
+
+UNKNOWN
+
