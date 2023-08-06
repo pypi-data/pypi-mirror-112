@@ -1,0 +1,12 @@
+pandas
+requests
+scikit-learn
+numpy
+tensorflow>=2.2
+transformers
+
+[all]
+gym[mujoco]
+
+[cma]
+cma
