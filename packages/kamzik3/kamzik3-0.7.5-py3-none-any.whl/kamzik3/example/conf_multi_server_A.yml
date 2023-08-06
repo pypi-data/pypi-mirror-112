@@ -1,0 +1,59 @@
+session: !Device:kamzik3.devices.deviceSession.DeviceSession
+  config:
+    attributes:
+      ? !!python/tuple
+      - Log directory
+      - Value
+      : ./server_A_log
+      ? !!python/tuple
+      - Resource directory
+      - Value
+      : ./resources
+      !!python/tuple [Allow attribute log, Value ]: False
+    server: !Device:kamzik3.devices.deviceServer.DeviceServer
+      host: 127.0.0.1
+      port: 60002
+    publisher: !Device:kamzik3.devices.devicePublisher.DevicePublisher
+      host: 127.0.0.1
+      port: 50002
+  device_id: Dummy server A
+devices:
+  Motor1: &id001 !Device:kamzik3.devices.dummy.dummyMotor.DummyMotor
+    device_id: Motor1
+  Motor1_axis_0: !Device:kamzik3.devices.dummy.dummyMotor.DummyMotorChannel
+    channel: 0
+    config:
+      attributes:
+        ? !!python/tuple
+        - Position
+        - Tolerance
+        : - 0nm
+          - 0nm
+    device: *id001
+    device_id: X
+  Motor1_axis_1: !Device:kamzik3.devices.dummy.dummyMotor.DummyMotorChannel
+    channel: 1
+    config:
+      attributes:
+        ? !!python/tuple
+        - Position
+        - Tolerance
+        : - 100nm
+          - 100nm
+    device: *id001
+    device_id: Y
+  Motor1_axis_2: !Device:kamzik3.devices.dummy.dummyMotor.DummyMotorChannel
+    channel: 2
+    config:
+      attributes:
+        ? !!python/tuple
+        - Position
+        - Tolerance
+        : - 100nm
+          - 100nm
+        ? !!python/tuple
+        - Position
+        - Factor
+        : -3
+    device: *id001
+    device_id: Z
