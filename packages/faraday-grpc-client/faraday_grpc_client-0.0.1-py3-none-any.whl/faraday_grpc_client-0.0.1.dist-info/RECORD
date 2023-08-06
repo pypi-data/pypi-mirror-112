@@ -1,0 +1,10 @@
+frdgrpc/__init__.py,sha256=ElgyBDZerdSENdIbCjEICGintDtZdxNq3uky-3-xLmY,87
+frdgrpc/client.py,sha256=K_st8mLJsZYH7AAlhGzmFgma8kxtbB9YZ9vupyiAqcw,1999
+frdgrpc/common.py,sha256=YmiV85U8LwqA5i0chgJBRXES9sIoA0PzHcRzkbmZ1aY,4890
+frdgrpc/compiled/faraday.proto,sha256=2ZuL2uAibvwj4m4--mkAa0j2dOJM4LwYq6YJVVaUyRw,16958
+frdgrpc/compiled/faraday_pb2.py,sha256=SzCUxayUtEzgaVHpMtehWVDe-cg6Y6dj1Rzp8RW94Lk,69829
+frdgrpc/compiled/faraday_pb2_grpc.py,sha256=0SrqYbnkJiYqChXpOTl9AhKIxljwMQVrdW7d_kzmOYg,14009
+frdgrpc/errors.py,sha256=9xdHy50C42ay7xPB20JxZSrdVOGlu1PFAMvl6bPlQOA,1085
+faraday_grpc_client-0.0.1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+faraday_grpc_client-0.0.1.dist-info/METADATA,sha256=_ne6Aq6U0Gg3UhbzOnaoMe_8prDDqebv6rlsF03G4Rc,3245
+faraday_grpc_client-0.0.1.dist-info/RECORD,,
