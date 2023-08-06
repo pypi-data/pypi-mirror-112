@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/functional_streams.egg-info/PKG-INFO
+src/functional_streams.egg-info/SOURCES.txt
+src/functional_streams.egg-info/dependency_links.txt
+src/functional_streams.egg-info/top_level.txt
+src/streams/Stream.py
+src/streams/__init__.py
