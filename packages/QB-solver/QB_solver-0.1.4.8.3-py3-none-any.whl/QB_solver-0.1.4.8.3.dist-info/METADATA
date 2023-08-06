@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: QB-solver
+Version: 0.1.4.8.3
+Summary: Rubik's cube simulation and tutorial
+Home-page: https://github.com/a-penton/QB
+Author: Andrew Penton, Heinrich Perez, Steven Perez, Noah Sharpe, Daniel Shinkarow
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: ursina
+Requires-Dist: rubik-cube
+Requires-Dist: psd-tools3
+
+UNKNOWN
+
+
