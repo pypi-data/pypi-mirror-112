@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+smallworld/__init__.py
+smallworld/draw.py
+smallworld/generate.py
+smallworld/metadata.py
+smallworld/theory.py
+smallworld/tools.py
+smallworld.egg-info/PKG-INFO
+smallworld.egg-info/SOURCES.txt
+smallworld.egg-info/dependency_links.txt
+smallworld.egg-info/not-zip-safe
+smallworld.egg-info/requires.txt
+smallworld.egg-info/top_level.txt
