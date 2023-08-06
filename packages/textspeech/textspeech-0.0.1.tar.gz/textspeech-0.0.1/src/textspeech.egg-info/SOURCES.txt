@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/SPEAK/__init__.py
+src/SPEAK/speak.py
+src/textspeech.egg-info/PKG-INFO
+src/textspeech.egg-info/SOURCES.txt
+src/textspeech.egg-info/dependency_links.txt
+src/textspeech.egg-info/top_level.txt

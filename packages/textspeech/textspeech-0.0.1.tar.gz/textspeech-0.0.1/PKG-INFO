@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: textspeech
+Version: 0.0.1
+Summary: textspeech is a module for text-to-speech.
+Home-page: https://github.com/kareemsaf/Speak
+Author: kareemPypi
+Author-email: s4830866@mkhg.moe.gov.sa
+License: UNKNOWN
+Project-URL: Bug Detector, https://github.com/kareemsaf/Speak/issues
+Project-URL: PyQt5, https://pypi.org/project/PyQt5
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+Welcome to textspeech v0.01! textspeech is a module that is able to create text-to-speech
+from a module called PyQt5. It is required and is in the project links.
+
