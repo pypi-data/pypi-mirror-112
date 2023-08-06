@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: signum
+Version: 0.1.9
+Summary: NumPy-based signal data container tools
+Home-page: https://github.com/savetheginger/signum
+Author: savetheginger
+Author-email: mysh995@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: examples
+
+# signum
+NumPy-based signal data container tools
+
+
