@@ -1,0 +1,104 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ward]
+path = ["tests"]
+exclude = ["tests/resources/"]
+
+[tool.poetry]
+name = "ward"
+version = "0.63.0b0"
+description = "A modern Python testing framework"
+exclude = ["tests"]
+authors = ["Darren Burns <darrenb900@gmail.com>"]
+maintainers = ["Darren Burns <darrenb900@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://wardpy.com"
+repository = "https://github.com/darrenburns/ward"
+documentation = "https://wardpy.com"
+keywords = ["test", "testing", "quality-assurance", "cli", "python3"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+]
+include = ["ward/py.typed"]
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+dataclasses = { version = "^0.7", python = "3.6" }
+click = ">=7,<9"
+rich = "^10.0.0"
+tomli = "^1.0.0"
+pprintpp = "^0.4.0"
+cucumber-tag-expressions = "^2.0.0"
+click-default-group = "^1.2.2"
+click-completion = "^0.5.2"
+pluggy = "^0.13.1"
+
+[tool.poetry.dev-dependencies]
+Sphinx = "^3.5.1"
+sphinx-rtd-theme = "^0.5.1"
+coverage = {version = "^5.1", extras = ["toml"]}
+pre-commit = "^2.13.0"
+
+[tool.poetry.scripts]
+ward = "ward._run:run"
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "pragma: unreachable",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "if typing.TYPE_CHECKING:",
+]
+
+[tool.coverage.run]
+branch = true
+include = [
+    "ward/*",
+]
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+show_error_codes = true
+warn_unreachable = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unused_ignores = true
+# Disabling incremental mode is required for `warn_unused_configs = true` to work
+incremental = false
+strict_equality = true
+implicit_reexport = false
+no_implicit_optional = true
+overrides = [
+    # These third-party dependencies don't distribute type annotations
+    { module = "pprintpp.*", ignore_missing_imports = true },
+    { module = "pluggy.*", ignore_missing_imports = true },
+    { module = "cucumber_tag_expressions.*", ignore_missing_imports = true },
+    { module = "click_completion.*", ignore_missing_imports = true },
+    { module = "click_default_group.*", ignore_missing_imports = true },
+    # TODO: Remove these lines and fix type-checker errors to gradually introduce mypy
+    { module = "ward._rewrite.*", ignore_errors = true },
+    { module = "ward._collect.*", ignore_errors = true },
+    { module = "ward._run.*", ignore_errors = true },
+    { module = "tests.*", ignore_errors = true },
+    { module = "conf.*", ignore_errors = true },  # matches docs/source/conf.py
+]
