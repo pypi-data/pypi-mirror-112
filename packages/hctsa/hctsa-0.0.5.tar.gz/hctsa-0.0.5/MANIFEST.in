@@ -1,0 +1,10 @@
+#documentation
+
+#Python folders
+recursive-include hctsa/descriptive *
+recursive-include hctsa/preparation *
+
+#Misc
+include README.md
+include setup.cfg
+include setup.py

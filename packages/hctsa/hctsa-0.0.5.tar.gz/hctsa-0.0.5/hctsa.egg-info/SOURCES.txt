@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+hctsa/__init__.py
+hctsa/core.py
+hctsa.egg-info/PKG-INFO
+hctsa.egg-info/SOURCES.txt
+hctsa.egg-info/dependency_links.txt
+hctsa.egg-info/top_level.txt
+hctsa/descriptive/__init__.py
+hctsa/descriptive/multivariat.py
+hctsa/descriptive/univariate.py
+hctsa/preparation/__init__.py
+hctsa/preparation/normalization.py
