@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: django-postalcode
+Version: 1.3
+Summary: django-postalcode
+Home-page: https://github.com/InnonationTeam/django-postalcode
+Author: Jessica Chiara Catania, Rosario Amantia, Gianluca Di Franco
+License: BSD
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+
+django-postalcode is a Django app to verify if the cap of a Nation is valid.
+
