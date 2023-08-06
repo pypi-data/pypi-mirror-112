@@ -1,0 +1,14 @@
+Author: Jonas Malaco
+    Merge #376: core: make Device hashable again
+    
+
+Author: Nick Bogdanov
+    Make Device hashable again
+    
+    Commit 251dbc15df00b5 ("core: implement Device.__eq__") had the side
+    effect of making Device objects unhashable, so they could no longer be
+    included in a set().  This was a regression from v1.1.1.  Add a
+    corresponding __hash__() method so that Device objects are hashable
+    again.
+    
+    Fixes eblot/pyftdi#256
