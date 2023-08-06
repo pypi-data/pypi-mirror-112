@@ -1,0 +1,1607 @@
+# Translations template for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# 
+# Translators:
+# Zoriana Zaiats, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-07-14 11:47+0000\n"
+"PO-Revision-Date: 2021-05-11 14:16+0000\n"
+"Last-Translator: Zoriana Zaiats, 2021\n"
+"Language-Team: English (United States) (https://www.transifex.com/open-contracting-partnership-1/teams/117704/en_US/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: spoonbill/__init__.py:71
+msgid "Input file is {}"
+msgstr ""
+
+#: spoonbill/__init__.py:114
+msgid "No schema provided, using version {}"
+msgstr ""
+
+#: spoonbill/__init__.py:119
+msgid "Incomplete schema, please make sure your data is correct"
+msgstr ""
+
+#: spoonbill/cli.py:18
+msgid "  Processed {} objects"
+msgstr ""
+
+#: spoonbill/cli.py:19
+msgid "  Flattened {} objects"
+msgstr ""
+
+#: spoonbill/cli.py:43
+msgid "Wrong selection, table '{}' does not exist"
+msgstr "Wrong selection, table '{}' does not exist"
+
+#: spoonbill/cli.py:48
+msgid "CLI tool to flatten OCDS files"
+msgstr ""
+
+#: spoonbill/cli.py:51
+msgid ""
+"A JSON schema file URI. The URI can be a file path or an HTTP link. "
+"Spoonbill uses the schema to analyze the provided JSON file. Defaults to the"
+" OCDS 1.1.5 release schema (requires internet connection)"
+msgstr ""
+
+#: spoonbill/cli.py:60
+msgid ""
+"A comma-separated list of initial tables to write. The available tables to "
+"select are: parties, planning, tenders, awards, contracts"
+msgstr ""
+
+#: spoonbill/cli.py:67
+msgid ""
+"The maximum number of elements in an array before it is split into a table"
+msgstr ""
+
+#: spoonbill/cli.py:74
+msgid ""
+"A file path URI to a previously generated state file. If not provided, a new"
+" state file is generated"
+msgstr ""
+
+#: spoonbill/cli.py:79
+msgid ""
+"A file path to store the resulting xlsx file. Default to result.xlsx. Set to"
+" '' to disable the xlsx file generation"
+msgstr ""
+
+#: spoonbill/cli.py:88
+msgid ""
+"An existing directory path. If set also generates CSV files in the given "
+"directory. Disabled by default"
+msgstr ""
+
+#: spoonbill/cli.py:94
+msgid ""
+"A comma-separated list of tables. Combines same OCDS object types from "
+"different locations (tender, awards, etc) into a single table. The available"
+" tables are: documents, milestones, and amendments"
+msgstr ""
+
+#: spoonbill/cli.py:102
+msgid ""
+"A comma-separated list of tables to exclude from export. Disabled by default"
+msgstr ""
+
+#: spoonbill/cli.py:108
+msgid ""
+"A comma-separated list of column names to copy from child tables into their "
+"parent table. Disabled by default"
+msgstr ""
+
+#: spoonbill/cli.py:116
+msgid ""
+"A file path directory. Same as --unnest, but read column names from a file "
+"with one column per line"
+msgstr ""
+
+#: spoonbill/cli.py:122
+msgid ""
+"A comma-separated list of a subset of columns to output instead of all, in "
+"JSON path format, e.g. /parties/name. Defaults to all the available columns"
+msgstr ""
+
+#: spoonbill/cli.py:131
+msgid ""
+"A file path directory. Same as --only, but read the columns names from a "
+"file with one column per line"
+msgstr ""
+
+#: spoonbill/cli.py:137
+msgid ""
+"A comma-separated list of columns to repeat from a parent table into its "
+"child tables, in JSON path format,e.g. /parties/name. Disabled by default"
+msgstr ""
+
+#: spoonbill/cli.py:146
+msgid ""
+"A file path directory. Same as --repeat, but read the columns names from a "
+"file with one column per line"
+msgstr ""
+
+#: spoonbill/cli.py:152
+msgid ""
+"For each array field, add a count column to its parent table. Disabled by "
+"default"
+msgstr ""
+
+#: spoonbill/cli.py:158
+msgid ""
+"Change the tables headings to human-readable format, using the schema's "
+"title properties"
+msgstr ""
+
+#: spoonbill/cli.py:163
+msgid "Use with --human, the language to use for the human-readable headings"
+msgstr ""
+
+#: spoonbill/cli.py:194 spoonbill/cli.py:198
+msgid "Desired location {} does not exists"
+msgstr ""
+
+#: spoonbill/cli.py:209
+msgid "Restoring from provided state file"
+msgstr ""
+
+#: spoonbill/cli.py:212
+msgid "State file not supplied, going to analyze input file first"
+msgstr ""
+
+#: spoonbill/cli.py:221
+msgid "Analyze options:"
+msgstr ""
+
+#: spoonbill/cli.py:223
+msgid " - {:30} => {}"
+msgstr ""
+
+#: spoonbill/cli.py:224
+msgid "Processing file: {}"
+msgstr ""
+
+#: spoonbill/cli.py:235
+msgid "Done processing. Analyzed objects: {}"
+msgstr ""
+
+#: spoonbill/cli.py:239
+msgid "Dumping analyzed data to '{}'"
+msgstr ""
+
+#: spoonbill/cli.py:242
+msgid "Flattening file: {}"
+msgstr ""
+
+#: spoonbill/cli.py:245
+msgid "Conflicting options: unnest and unnest-file"
+msgstr ""
+
+#: spoonbill/cli.py:247
+msgid "Conflicting options: repeat and repeat-file"
+msgstr ""
+
+#: spoonbill/cli.py:249
+msgid "Conflicting options: only and only-file"
+msgstr ""
+
+#: spoonbill/cli.py:251
+msgid "Ignoring tables (excluded by user): {}"
+msgstr ""
+
+#: spoonbill/cli.py:261
+msgid "Ignoring empty table {}"
+msgstr ""
+
+#: spoonbill/cli.py:271
+msgid "Unnesting columns {} for table {}"
+msgstr ""
+
+#: spoonbill/cli.py:279
+msgid "Using only columns {} for table {}"
+msgstr ""
+
+#: spoonbill/cli.py:287
+msgid "Repeating columns {} in all child table of {}"
+msgstr ""
+
+#: spoonbill/cli.py:306
+msgid "Going to export tables: {}"
+msgstr ""
+
+#: spoonbill/cli.py:308
+msgid "Processed tables:"
+msgstr ""
+
+#: spoonbill/cli.py:310
+msgid " - {:30} => {} rows"
+msgstr ""
+
+#: spoonbill/cli.py:310
+msgid " ---- {:27} => {} rows"
+msgstr ""
+
+#: spoonbill/cli.py:313
+msgid "Flattening input file"
+msgstr ""
+
+#: spoonbill/cli.py:324
+msgid "Done flattening. Flattened objects: {}"
+msgstr ""
+
+#: spoonbill/flatten.py:193
+msgid "Ignoring repeat column {} because it is not in table {}"
+msgstr ""
+
+#: spoonbill/spec.py:157 spoonbill/stats.py:249
+#, python-format
+msgid "Detected additional column: %s in %s table"
+msgstr ""
+
+#: spoonbill/stats.py:155 spoonbill/stats.py:279
+#, python-format
+msgid "Detected additional table: %s"
+msgstr ""
+
+#: spoonbill/stats.py:337
+msgid "Failed to dump DataPreprocessor to file. Error: {}"
+msgstr ""
+
+#: spoonbill/stats.py:350
+msgid "Invalid pickle file. Can't restore."
+msgstr ""
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/ocid"
+msgstr "Ocid"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/id"
+msgstr "Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/date"
+msgstr "Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tag"
+msgstr "Tag"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/initiationType"
+msgstr "Initiation Type"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/partiesCount"
+msgstr "Parties Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awardsCount"
+msgstr "Awards Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contractsCount"
+msgstr "Contracts Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/language"
+msgstr "Language"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/relatedProcessesCount"
+msgstr "Related Processes Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/relatedProcesses/id"
+msgstr "Related Processes Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/relatedProcesses/relationship"
+msgstr "Related Processes Relationship"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/relatedProcesses/title"
+msgstr "Related Processes Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/relatedProcesses/scheme"
+msgstr "Related Processes Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/relatedProcesses/identifier"
+msgstr "Related Processes Identifier"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/relatedProcesses/uri"
+msgstr "Related Processes Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/id"
+msgstr "Contracts Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/awardID"
+msgstr "Contracts Award Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/title"
+msgstr "Contracts Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/description"
+msgstr "Contracts Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/status"
+msgstr "Contracts Status"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/itemsCount"
+msgstr "Contracts Items Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/dateSigned"
+msgstr "Contracts Date Signed"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/documentsCount"
+msgstr "Contracts Documents Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/relatedProcessesCount"
+msgstr "Contracts Related Processes Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/milestonesCount"
+msgstr "Contracts Milestones Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/amendmentsCount"
+msgstr "Contracts Amendments Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/amendments/date"
+msgstr "Amendments Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/amendments/date"
+msgstr "Contracts Amendments Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/amendments/rationale"
+msgstr "Amendments Rationale"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/amendments/rationale"
+msgstr "Contracts Amendments Rationale"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/amendments/id"
+msgstr "Amendments Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/amendments/id"
+msgstr "Contracts Amendments Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/amendments/description"
+msgstr "Amendments Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/amendments/description"
+msgstr "Contracts Amendments Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/amendments/amendsReleaseID"
+msgstr "Amendments Amends Release Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/amendments/amendsReleaseID"
+msgstr "Contracts Amendments Amends Release Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/amendments/releaseID"
+msgstr "Amendments Release Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/amendments/releaseID"
+msgstr "Contracts Amendments Release Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/milestones/id"
+msgstr "Milestones Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/milestones/id"
+msgstr "Contracts Milestones Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/milestones/title"
+msgstr "Milestones Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/milestones/title"
+msgstr "Contracts Milestones Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/milestones/type"
+msgstr "Milestones Type"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/milestones/type"
+msgstr "Contracts Milestones Type"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/milestones/description"
+msgstr "Milestones Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/milestones/description"
+msgstr "Contracts Milestones Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/milestones/code"
+msgstr "Milestones Code"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/milestones/code"
+msgstr "Contracts Milestones Code"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/milestones/dueDate"
+msgstr "Milestones Due Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/milestones/dueDate"
+msgstr "Contracts Milestones Due Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/milestones/dateMet"
+msgstr "Milestones Date Met"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/milestones/dateMet"
+msgstr "Contracts Milestones Date Met"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/milestones/dateModified"
+msgstr "Milestones Date Modified"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/milestones/dateModified"
+msgstr "Contracts Milestones Date Modified"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/milestones/status"
+msgstr "Milestones Status"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/milestones/status"
+msgstr "Contracts Milestones Status"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/relatedProcesses/id"
+msgstr "Contracts Related Processes Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/relatedProcesses/relationship"
+msgstr "Contracts Related Processes Relationship"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/relatedProcesses/title"
+msgstr "Contracts Related Processes Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/relatedProcesses/scheme"
+msgstr "Contracts Related Processes Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/relatedProcesses/identifier"
+msgstr "Contracts Related Processes Identifier"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/relatedProcesses/uri"
+msgstr "Contracts Related Processes Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/transactionsCount"
+msgstr "Contracts Implementation Transactions Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/milestonesCount"
+msgstr "Contracts Implementation Milestones Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/documentsCount"
+msgstr "Contracts Implementation Documents Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/documents/id"
+msgstr "Documents Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/documents/id"
+msgstr "Contracts Implementation Documents Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/documents/documentType"
+msgstr "Documents Document Type"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/documents/documentType"
+msgstr "Contracts Implementation Documents Document Type"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/documents/title"
+msgstr "Documents Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/documents/title"
+msgstr "Contracts Implementation Documents Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/documents/description"
+msgstr "Documents Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/documents/description"
+msgstr "Contracts Implementation Documents Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/documents/url"
+msgstr "Documents Url"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/documents/url"
+msgstr "Contracts Implementation Documents Url"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/documents/datePublished"
+msgstr "Documents Date Published"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/documents/datePublished"
+msgstr "Contracts Implementation Documents Date Published"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/documents/dateModified"
+msgstr "Documents Date Modified"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/documents/dateModified"
+msgstr "Contracts Implementation Documents Date Modified"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/documents/format"
+msgstr "Documents Format"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/documents/format"
+msgstr "Contracts Implementation Documents Format"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/documents/language"
+msgstr "Documents Language"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/documents/language"
+msgstr "Contracts Implementation Documents Language"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/milestones/id"
+msgstr "Contracts Implementation Milestones Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/milestones/title"
+msgstr "Contracts Implementation Milestones Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/milestones/type"
+msgstr "Contracts Implementation Milestones Type"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/milestones/description"
+msgstr "Contracts Implementation Milestones Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/milestones/code"
+msgstr "Contracts Implementation Milestones Code"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/milestones/dueDate"
+msgstr "Contracts Implementation Milestones Due Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/milestones/dateMet"
+msgstr "Contracts Implementation Milestones Date Met"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/milestones/dateModified"
+msgstr "Contracts Implementation Milestones Date Modified"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/milestones/status"
+msgstr "Contracts Implementation Milestones Status"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/transactions/id"
+msgstr "Contracts Implementation Transactions Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/transactions/source"
+msgstr "Contracts Implementation Transactions Source"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/transactions/date"
+msgstr "Contracts Implementation Transactions Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/transactions/uri"
+msgstr "Contracts Implementation Transactions Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/transactions/payee/name"
+msgstr "Contracts Implementation Transactions Payee Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/transactions/payee/id"
+msgstr "Contracts Implementation Transactions Payee Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/transactions/payer/name"
+msgstr "Contracts Implementation Transactions Payer Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/transactions/payer/id"
+msgstr "Contracts Implementation Transactions Payer Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/transactions/value/amount"
+msgstr "Contracts Implementation Transactions Value Amount"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/implementation/transactions/value/currency"
+msgstr "Contracts Implementation Transactions Value Currency"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/documents/id"
+msgstr "Contracts Documents Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/documents/documentType"
+msgstr "Contracts Documents Document Type"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/documents/title"
+msgstr "Contracts Documents Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/documents/description"
+msgstr "Contracts Documents Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/documents/url"
+msgstr "Contracts Documents Url"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/documents/datePublished"
+msgstr "Contracts Documents Date Published"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/documents/dateModified"
+msgstr "Contracts Documents Date Modified"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/documents/format"
+msgstr "Contracts Documents Format"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/documents/language"
+msgstr "Contracts Documents Language"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/id"
+msgstr "Contracts Items Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/description"
+msgstr "Contracts Items Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/additionalClassificationsCount"
+msgstr "Contracts Items Additional Classifications Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/quantity"
+msgstr "Contracts Items Quantity"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/unit/scheme"
+msgstr "Contracts Items Unit Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/unit/id"
+msgstr "Contracts Items Unit Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/unit/name"
+msgstr "Contracts Items Unit Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/unit/uri"
+msgstr "Contracts Items Unit Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/unit/value/amount"
+msgstr "Contracts Items Unit Value Amount"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/unit/value/currency"
+msgstr "Contracts Items Unit Value Currency"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/additionalClassifications/scheme"
+msgstr "Contracts Items Additional Classifications Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/additionalClassifications/id"
+msgstr "Contracts Items Additional Classifications Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/additionalClassifications/description"
+msgstr "Contracts Items Additional Classifications Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/additionalClassifications/uri"
+msgstr "Contracts Items Additional Classifications Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/classification/scheme"
+msgstr "Contracts Items Classification Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/classification/id"
+msgstr "Contracts Items Classification Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/classification/description"
+msgstr "Contracts Items Classification Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/items/classification/uri"
+msgstr "Contracts Items Classification Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/value/amount"
+msgstr "Contracts Value Amount"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/value/currency"
+msgstr "Contracts Value Currency"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/period/startDate"
+msgstr "Contracts Period Start Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/period/endDate"
+msgstr "Contracts Period End Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/period/maxExtentDate"
+msgstr "Contracts Period Max Extent Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/contracts/period/durationInDays"
+msgstr "Contracts Period Duration In Days"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/id"
+msgstr "Awards Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/title"
+msgstr "Awards Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/description"
+msgstr "Awards Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/status"
+msgstr "Awards Status"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/date"
+msgstr "Awards Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/suppliersCount"
+msgstr "Awards Suppliers Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/itemsCount"
+msgstr "Awards Items Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/documentsCount"
+msgstr "Awards Documents Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/amendmentsCount"
+msgstr "Awards Amendments Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/amendments/date"
+msgstr "Awards Amendments Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/amendments/rationale"
+msgstr "Awards Amendments Rationale"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/amendments/id"
+msgstr "Awards Amendments Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/amendments/description"
+msgstr "Awards Amendments Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/amendments/amendsReleaseID"
+msgstr "Awards Amendments Amends Release Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/amendments/releaseID"
+msgstr "Awards Amendments Release Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/documents/id"
+msgstr "Awards Documents Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/documents/documentType"
+msgstr "Awards Documents Document Type"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/documents/title"
+msgstr "Awards Documents Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/documents/description"
+msgstr "Awards Documents Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/documents/url"
+msgstr "Awards Documents Url"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/documents/datePublished"
+msgstr "Awards Documents Date Published"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/documents/dateModified"
+msgstr "Awards Documents Date Modified"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/documents/format"
+msgstr "Awards Documents Format"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/documents/language"
+msgstr "Awards Documents Language"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/contractPeriod/startDate"
+msgstr "Awards Contract Period Start Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/contractPeriod/endDate"
+msgstr "Awards Contract Period End Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/contractPeriod/maxExtentDate"
+msgstr "Awards Contract Period Max Extent Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/contractPeriod/durationInDays"
+msgstr "Awards Contract Period Duration In Days"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/id"
+msgstr "Awards Items Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/description"
+msgstr "Awards Items Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/additionalClassificationsCount"
+msgstr "Awards Items Additional Classifications Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/quantity"
+msgstr "Awards Items Quantity"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/unit/scheme"
+msgstr "Awards Items Unit Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/unit/id"
+msgstr "Awards Items Unit Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/unit/name"
+msgstr "Awards Items Unit Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/unit/uri"
+msgstr "Awards Items Unit Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/unit/value/amount"
+msgstr "Awards Items Unit Value Amount"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/unit/value/currency"
+msgstr "Awards Items Unit Value Currency"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/additionalClassifications/scheme"
+msgstr "Awards Items Additional Classifications Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/additionalClassifications/id"
+msgstr "Awards Items Additional Classifications Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/additionalClassifications/description"
+msgstr "Awards Items Additional Classifications Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/additionalClassifications/uri"
+msgstr "Awards Items Additional Classifications Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/classification/scheme"
+msgstr "Awards Items Classification Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/classification/id"
+msgstr "Awards Items Classification Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/classification/description"
+msgstr "Awards Items Classification Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/items/classification/uri"
+msgstr "Awards Items Classification Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/suppliers/name"
+msgstr "Awards Suppliers Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/suppliers/id"
+msgstr "Awards Suppliers Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/value/amount"
+msgstr "Awards Value Amount"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/awards/value/currency"
+msgstr "Awards Value Currency"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/id"
+msgstr "Tender Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/title"
+msgstr "Tender Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/description"
+msgstr "Tender Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/status"
+msgstr "Tender Status"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/itemsCount"
+msgstr "Tender Items Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/procurementMethod"
+msgstr "Tender Procurement Method"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/procurementMethodDetails"
+msgstr "Tender Procurement Method Details"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/procurementMethodRationale"
+msgstr "Tender Procurement Method Rationale"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/mainProcurementCategory"
+msgstr "Tender Main Procurement Category"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/additionalProcurementCategories"
+msgstr "Tender Additional Procurement Categories"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/awardCriteria"
+msgstr "Tender Award Criteria"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/awardCriteriaDetails"
+msgstr "Tender Award Criteria Details"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/submissionMethod"
+msgstr "Tender Submission Method"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/submissionMethodDetails"
+msgstr "Tender Submission Method Details"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/hasEnquiries"
+msgstr "Tender Has Enquiries"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/eligibilityCriteria"
+msgstr "Tender Eligibility Criteria"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/numberOfTenderers"
+msgstr "Tender Number Of Tenderers"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/tenderersCount"
+msgstr "Tender Tenderers Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/documentsCount"
+msgstr "Tender Documents Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/milestonesCount"
+msgstr "Tender Milestones Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/amendmentsCount"
+msgstr "Tender Amendments Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/amendments/date"
+msgstr "Tender Amendments Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/amendments/rationale"
+msgstr "Tender Amendments Rationale"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/amendments/id"
+msgstr "Tender Amendments Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/amendments/description"
+msgstr "Tender Amendments Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/amendments/amendsReleaseID"
+msgstr "Tender Amendments Amends Release Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/amendments/releaseID"
+msgstr "Tender Amendments Release Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/milestones/id"
+msgstr "Tender Milestones Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/milestones/title"
+msgstr "Tender Milestones Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/milestones/type"
+msgstr "Tender Milestones Type"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/milestones/description"
+msgstr "Tender Milestones Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/milestones/code"
+msgstr "Tender Milestones Code"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/milestones/dueDate"
+msgstr "Tender Milestones Due Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/milestones/dateMet"
+msgstr "Tender Milestones Date Met"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/milestones/dateModified"
+msgstr "Tender Milestones Date Modified"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/milestones/status"
+msgstr "Tender Milestones Status"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/documents/id"
+msgstr "Tender Documents Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/documents/documentType"
+msgstr "Tender Documents Document Type"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/documents/title"
+msgstr "Tender Documents Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/documents/description"
+msgstr "Tender Documents Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/documents/url"
+msgstr "Tender Documents Url"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/documents/datePublished"
+msgstr "Tender Documents Date Published"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/documents/dateModified"
+msgstr "Tender Documents Date Modified"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/documents/format"
+msgstr "Tender Documents Format"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/documents/language"
+msgstr "Tender Documents Language"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/tenderers/name"
+msgstr "Tender Tenderers Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/tenderers/id"
+msgstr "Tender Tenderers Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/contractPeriod/startDate"
+msgstr "Tender Contract Period Start Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/contractPeriod/endDate"
+msgstr "Tender Contract Period End Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/contractPeriod/maxExtentDate"
+msgstr "Tender Contract Period Max Extent Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/contractPeriod/durationInDays"
+msgstr "Tender Contract Period Duration In Days"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/awardPeriod/startDate"
+msgstr "Tender Award Period Start Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/awardPeriod/endDate"
+msgstr "Tender Award Period End Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/awardPeriod/maxExtentDate"
+msgstr "Tender Award Period Max Extent Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/awardPeriod/durationInDays"
+msgstr "Tender Award Period Duration In Days"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/enquiryPeriod/startDate"
+msgstr "Tender Enquiry Period Start Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/enquiryPeriod/endDate"
+msgstr "Tender Enquiry Period End Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/enquiryPeriod/maxExtentDate"
+msgstr "Tender Enquiry Period Max Extent Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/enquiryPeriod/durationInDays"
+msgstr "Tender Enquiry Period Duration In Days"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/tenderPeriod/startDate"
+msgstr "Tender Tender Period Start Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/tenderPeriod/endDate"
+msgstr "Tender Tender Period End Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/tenderPeriod/maxExtentDate"
+msgstr "Tender Tender Period Max Extent Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/tenderPeriod/durationInDays"
+msgstr "Tender Tender Period Duration In Days"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/minValue/amount"
+msgstr "Tender Min Value Amount"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/minValue/currency"
+msgstr "Tender Min Value Currency"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/value/amount"
+msgstr "Tender Value Amount"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/value/currency"
+msgstr "Tender Value Currency"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/id"
+msgstr "Tender Items Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/description"
+msgstr "Tender Items Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/additionalClassificationsCount"
+msgstr "Tender Items Additional Classifications Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/quantity"
+msgstr "Tender Items Quantity"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/unit/scheme"
+msgstr "Tender Items Unit Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/unit/id"
+msgstr "Tender Items Unit Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/unit/name"
+msgstr "Tender Items Unit Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/unit/uri"
+msgstr "Tender Items Unit Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/unit/value/amount"
+msgstr "Tender Items Unit Value Amount"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/unit/value/currency"
+msgstr "Tender Items Unit Value Currency"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/additionalClassifications/scheme"
+msgstr "Tender Items Additional Classifications Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/additionalClassifications/id"
+msgstr "Tender Items Additional Classifications Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/additionalClassifications/description"
+msgstr "Tender Items Additional Classifications Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/additionalClassifications/uri"
+msgstr "Tender Items Additional Classifications Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/classification/scheme"
+msgstr "Tender Items Classification Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/classification/id"
+msgstr "Tender Items Classification Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/classification/description"
+msgstr "Tender Items Classification Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/items/classification/uri"
+msgstr "Tender Items Classification Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/procuringEntity/name"
+msgstr "Tender Procuring Entity Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/tender/procuringEntity/id"
+msgstr "Tender Procuring Entity Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/rationale"
+msgstr "Planning Rationale"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/documentsCount"
+msgstr "Planning Documents Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/milestonesCount"
+msgstr "Planning Milestones Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/milestones/id"
+msgstr "Planning Milestones Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/milestones/title"
+msgstr "Planning Milestones Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/milestones/type"
+msgstr "Planning Milestones Type"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/milestones/description"
+msgstr "Planning Milestones Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/milestones/code"
+msgstr "Planning Milestones Code"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/milestones/dueDate"
+msgstr "Planning Milestones Due Date"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/milestones/dateMet"
+msgstr "Planning Milestones Date Met"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/milestones/dateModified"
+msgstr "Planning Milestones Date Modified"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/milestones/status"
+msgstr "Planning Milestones Status"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/documents/id"
+msgstr "Planning Documents Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/documents/documentType"
+msgstr "Planning Documents Document Type"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/documents/title"
+msgstr "Planning Documents Title"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/documents/description"
+msgstr "Planning Documents Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/documents/url"
+msgstr "Planning Documents Url"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/documents/datePublished"
+msgstr "Planning Documents Date Published"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/documents/dateModified"
+msgstr "Planning Documents Date Modified"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/documents/format"
+msgstr "Planning Documents Format"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/documents/language"
+msgstr "Planning Documents Language"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/budget/id"
+msgstr "Planning Budget Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/budget/description"
+msgstr "Planning Budget Description"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/budget/project"
+msgstr "Planning Budget Project"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/budget/projectID"
+msgstr "Planning Budget Project Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/budget/uri"
+msgstr "Planning Budget Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/budget/amount/amount"
+msgstr "Planning Budget Amount Amount"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/planning/budget/amount/currency"
+msgstr "Planning Budget Amount Currency"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/buyer/name"
+msgstr "Buyer Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/buyer/id"
+msgstr "Buyer Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/name"
+msgstr "Parties Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/id"
+msgstr "Parties Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/additionalIdentifiersCount"
+msgstr "Parties Additional Identifiers Count"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/roles"
+msgstr "Parties Roles"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/contactPoint/name"
+msgstr "Parties Contact Point Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/contactPoint/email"
+msgstr "Parties Contact Point Email"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/contactPoint/telephone"
+msgstr "Parties Contact Point Telephone"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/contactPoint/faxNumber"
+msgstr "Parties Contact Point Fax Number"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/contactPoint/url"
+msgstr "Parties Contact Point Url"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/address/streetAddress"
+msgstr "Parties Address Street Address"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/address/locality"
+msgstr "Parties Address Locality"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/address/region"
+msgstr "Parties Address Region"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/address/postalCode"
+msgstr "Parties Address Postal Code"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/address/countryName"
+msgstr "Parties Address Country Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/additionalIdentifiers/scheme"
+msgstr "Parties Additional Identifiers Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/additionalIdentifiers/id"
+msgstr "Parties Additional Identifiers Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/additionalIdentifiers/legalName"
+msgstr "Parties Additional Identifiers Legal Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/additionalIdentifiers/uri"
+msgstr "Parties Additional Identifiers Uri"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/identifier/scheme"
+msgstr "Parties Identifier Scheme"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/identifier/id"
+msgstr "Parties Identifier Id"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/identifier/legalName"
+msgstr "Parties Identifier Legal Name"
+
+#: spoonbill/locales/release-schema.json:1
+msgid "/parties/identifier/uri"
+msgstr "Parties Identifier Uri"
+
+#: spoonbill/writers/csv.py:40
+msgid "Dumping table '{}' to file '{}'"
+msgstr ""
+
+#: spoonbill/writers/csv.py:43
+msgid "Failed to open file {} with error {}"
+msgstr ""
+
+#: spoonbill/writers/csv.py:54
+msgid "Failed to headers with error {}"
+msgstr ""
+
+#: spoonbill/writers/csv.py:73 spoonbill/writers/xlsx.py:81
+msgid ""
+"Operation produced invalid path. This a software bug, please send issue to "
+"developers"
+msgstr ""
+
+#: spoonbill/writers/csv.py:74
+msgid "Failed to write row {} with error {}"
+msgstr ""
+
+#: spoonbill/writers/csv.py:76 spoonbill/writers/xlsx.py:71
+msgid "Invalid table {}"
+msgstr ""
+
+#: spoonbill/writers/xlsx.py:50
+msgid "Failed to write header {} to xlsx sheet {} with error {}"
+msgstr ""
+
+#: spoonbill/writers/xlsx.py:59
+msgid "Dumped all sheets to file to file '{}'"
+msgstr ""
+
+#: spoonbill/writers/xlsx.py:83
+msgid "Failed to write column {} to xlsx sheet {}"
+msgstr ""
+
+#: spoonbill/writers/xlsx.py:88
+msgid "Failed to write column {} to xlsx sheet {} with error {}"
+msgstr ""
