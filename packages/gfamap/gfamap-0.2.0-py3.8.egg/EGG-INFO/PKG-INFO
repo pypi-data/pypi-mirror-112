@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: gfamap
+Version: 0.2.0
+Summary: Map edges of a genome graph to a reference genome database.
+Home-page: https://github.com/jleechung/gfamap
+Author: Joseph Lee
+Author-email: joseph.lee@u.nus.edu
+License: MIT
+Description: Map edges of a genome graph to a reference genome database.
+Keywords: python genome graph genome assembly
+Platform: UNKNOWN
