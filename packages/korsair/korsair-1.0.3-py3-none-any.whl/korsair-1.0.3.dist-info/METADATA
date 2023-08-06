@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: korsair
+Version: 1.0.3
+Summary: korsair pythonlib release
+Home-page: UNKNOWN
+Author: ksb98
+Author-email: qkfka9045@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: requests
+Requires-Dist: pandas
+
+UNKNOWN
+
+
