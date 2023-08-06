@@ -1,0 +1,17 @@
+AUTHORS
+LICENSE
+README.md
+setup.py
+xicsrt_contrib/__init__.py
+xicsrt_contrib/_version.py
+xicsrt_contrib.egg-info/PKG-INFO
+xicsrt_contrib.egg-info/SOURCES.txt
+xicsrt_contrib.egg-info/dependency_links.txt
+xicsrt_contrib.egg-info/requires.txt
+xicsrt_contrib.egg-info/top_level.txt
+xicsrt_contrib/filters/__init__.py
+xicsrt_contrib/optics/__init__.py
+xicsrt_contrib/sources/_XicsrtPlasmaImas.py
+xicsrt_contrib/sources/_XicsrtPlasmaVmec.py
+xicsrt_contrib/sources/_XicsrtPlasmaVmecDatafile.py
+xicsrt_contrib/sources/__init__.py
