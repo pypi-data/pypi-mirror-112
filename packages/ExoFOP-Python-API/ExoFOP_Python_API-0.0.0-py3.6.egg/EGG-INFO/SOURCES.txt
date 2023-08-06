@@ -1,0 +1,11 @@
+README.md
+setup.py
+ExoFOP_Python_API.egg-info/PKG-INFO
+ExoFOP_Python_API.egg-info/SOURCES.txt
+ExoFOP_Python_API.egg-info/dependency_links.txt
+ExoFOP_Python_API.egg-info/requires.txt
+ExoFOP_Python_API.egg-info/top_level.txt
+etta/__init__.py
+etta/helpers.py
+etta/php_wrappers.py
+etta/test.py

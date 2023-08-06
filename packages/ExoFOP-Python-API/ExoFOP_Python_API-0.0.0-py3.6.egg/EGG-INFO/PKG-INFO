@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: ExoFOP-Python-API
+Version: 0.0.0
+Summary: Wrappers for the ExoFOP-TESS PHP functions.
+Home-page: https://github.com/jennywwww/exofop-tess-api
+Author: Weijie Wang
+Author-email: jenny.wang2000@hotmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.0
