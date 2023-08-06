@@ -1,0 +1,11 @@
+pydicom>=1.0
+numpy
+
+[dev]
+check-manifest
+sphinx
+sphinx-autobuild
+
+[test]
+coverage
+pytest
