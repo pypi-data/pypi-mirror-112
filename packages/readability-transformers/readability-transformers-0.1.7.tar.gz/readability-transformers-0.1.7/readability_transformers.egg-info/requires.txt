@@ -1,0 +1,13 @@
+loguru
+numpy
+pandas
+easydict
+spacy
+torch>=1.0
+tqdm
+sentence-transformers
+nltk
+TRUNAJOD
+requests
+gensim
+supar
