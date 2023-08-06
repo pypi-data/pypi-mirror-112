@@ -1,0 +1,8 @@
+numpy
+scipy
+matplotlib
+vtk
+pytest>=3.6
+pytest-cov
+codecov
+bump2version
