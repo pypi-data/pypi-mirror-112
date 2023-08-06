@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: wagtail-live
+Version: 1.0a2
+Summary: An app for high speed content publishing from a messaging app to a Wagtail site.
+Home-page: https://github.com/wagtail/wagtail-live/
+Author: Tidiane Dia and Wagtail Core Team
+Author-email: hello@wagtail.io
+License: BSD-3-Clause
+Project-URL: Documentation, https://wagtail.github.io/wagtail-live/
+Project-URL: Source, https://github.com/wagtail/wagtail-live/
+Project-URL: Issue tracker, https://github.com/wagtail/wagtail-live/issues/
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Framework :: Django
+Classifier: Framework :: Wagtail
+Classifier: Framework :: Wagtail :: 2
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: docs
+Provides-Extra: build
+License-File: LICENSE
+
+# Wagtail Live
+
+High speed publishing from messaging app to a Wagtail live blog.
+
+## Documentation
+
+[https://wagtail.github.io/wagtail-live/](https://wagtail.github.io/wagtail-live/)
+
