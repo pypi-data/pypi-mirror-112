@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: pybtc
+Version: 2.3.11
+Summary: Python Bitcoin library
+Home-page: https://github.com/bitaps-com/pybtc
+Author: Alexsei Karpov
+Author-email: admin@bitaps.com
+License: GPL-3.0
+Description: UNKNOWN
+Keywords: bitcoin
+Platform: UNKNOWN
+Requires-Python: >=3.7
