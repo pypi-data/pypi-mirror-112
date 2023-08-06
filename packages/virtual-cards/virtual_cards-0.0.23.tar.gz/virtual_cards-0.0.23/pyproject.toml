@@ -1,0 +1,13 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "celery",
+    "kombu",
+    "pydantic",
+    "typing",
+    "psycopg2",
+    "requests",
+    "pathlib"
+]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: virtual_cards
+Version: 0.0.23
+Summary: A small example package Virtual Card
+Home-page:  
+Author: Dmytro Bondar
+Author-email: admin@affcountry.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.7
+
+file: README.md
+
