@@ -1,0 +1,4 @@
+meshtastic>=1.2.16
+PySimpleGUI>=4.34.0
+requests>=2.25.1
+esptool>=3.0

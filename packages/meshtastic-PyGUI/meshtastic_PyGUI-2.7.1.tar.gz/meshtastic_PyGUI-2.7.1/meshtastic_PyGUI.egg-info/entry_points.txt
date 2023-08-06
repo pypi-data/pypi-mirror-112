@@ -1,0 +1,3 @@
+[console_scripts]
+meshtastic_pygui = meshtastic_pygui.__main__:main
+
