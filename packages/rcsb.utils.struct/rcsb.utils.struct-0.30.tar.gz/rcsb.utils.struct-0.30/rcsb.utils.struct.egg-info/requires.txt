@@ -1,0 +1,7 @@
+rcsb.utils.io>=1.00
+
+[dev]
+check-manifest
+
+[test]
+coverage
