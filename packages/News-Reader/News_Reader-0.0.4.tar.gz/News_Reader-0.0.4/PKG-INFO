@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: News_Reader
+Version: 0.0.4
+Summary: This Is A Indian News reader Program Devloped By Parth Arora To Impress Your Friends 
+Home-page: UNKNOWN
+Author: Parth Arora
+License: MIT
+Keywords: news reader
+Platform: UNKNOWN
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python :: 3
+License-File: License.txt
+
+# News Reader
+This Is A Indian News reader Program Devloped By Parth Arora
+To Impress Your Friends
+
+--------THIS WILL BE THE ABOUT US SECTION OF YOUR PROGRAM---------
+*Our FEATURES*
+Firstly,We Use Simple English
+2nd We Provide Top Headlines Sort By Your Choice
+3rd. Headlines are Bought From Popular Resources Like :- Time Of India,BBc News etc.
+We Provide Many Options To Search Like by Keywords,By Category('Science,Technology' etc) and How Many Top Headlines You want To See (DEfault:- Top - 10) and many more....."
+
+## Installation
+```pip install News-Reader```
+
+## How To Use it?
+1. Firstly , You Have To Log On to News Api Website
+2. Then Open The Source Code Of This Program And Under Class IndianNewsReader There Will Be Private Variable named __apikey (Default assigned to XXXXXXXX) replace XXXXXXXX with your api key(str type) as well as des variable you can also add your name
+3. Then Open The File You Want To Make Your News Reader
+4. First line Will Be ```from News-Reader import IndianNewsReader ```
+5. Copy the main source code of this module and paste it in your program
+6. Run it and impress your Friends!
+
+## Note
+If You Ran The Program WithOut Giving Api Key It Will Throw An Error
+## License
+Copyright Â© 2021 Parth Arora
+This Repository Is Licensed Under MIT license
+See License For Details!
+
+Change Log
+============
+
+0.0.4 (14/07/2021)
+- Fourth Release
+------------------------
+
+
