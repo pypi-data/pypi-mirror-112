@@ -1,0 +1,13 @@
+signum/__init__.py,sha256=sNdd_DW8VHt7kSXwR1zqcYX0yvOpgYWNIKMW81sGlSM,151
+signum/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+signum/core/base_container.py,sha256=3x2NBnL5yyEzfnPNgnGrxOg4EdECSrsu1rrTLa3Eep0,18353
+signum/core/containers.py,sha256=qAixtm9rccfuKuFkMdG-983D9ML2H0qHJBOVxcLF1e8,4173
+signum/core/freq_domain_signal.py,sha256=ayjyaCq_ymyoBhykXBEHPbWA6hGbmFP5XQ5i23oS-J8,1064
+signum/core/time_domain_signal.py,sha256=pTGEhjuqYOlzXGV3Jpi-T0SXggT_UASiK98uIl2IyvY,3871
+signum/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+signum/tools/plotting_tools.py,sha256=DBKS_u7htj31pfK8EcbgPLKvzHxpWXXRQDkfqLJdqw8,1030
+signum/tools/scale_manager.py,sha256=UrMXyzj0OfhawD0aO5SperCwsx7THbAuZuj4lNHjbGE,7254
+signum-0.1.9.dist-info/METADATA,sha256=IZ0Ll6Oex3kvNw4iM9B4CuLAMDEry0JujXOdarBUfkU,481
+signum-0.1.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+signum-0.1.9.dist-info/top_level.txt,sha256=Coq8Y39PJkHD3Tm5P6B46kK2-YjFf2Idk_ILG1lLEUk,7
+signum-0.1.9.dist-info/RECORD,,
