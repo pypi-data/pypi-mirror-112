@@ -1,0 +1,3 @@
+[console_scripts]
+idemux = idemux.__main__:main
+
