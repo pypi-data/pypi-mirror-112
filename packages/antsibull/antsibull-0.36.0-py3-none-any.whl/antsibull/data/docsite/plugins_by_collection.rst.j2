@@ -1,0 +1,71 @@
+{% if not breadcrumbs %}
+:orphan:
+{% endif %}
+
+.. _plugins_in_@{collection_name}@:
+
+@{collection_name.title()}@
+@{ '=' * (collection_name | length) }@
+
+{% if collection_version %}
+Collection version @{ collection_version }@
+{% endif %}
+
+.. toctree::
+    :maxdepth: 1
+
+{% for section in extra_docs_sections %}
+@{section.title}@
+@{ '-' * (section.title | length) }@
+
+{%   if section.toctree %}
+.. toctree::
+    :maxdepth: 1
+
+{%     for toctree_entry in section.toctree %}
+    @{toctree_entry}@
+{%     endfor %}
+{%   endif %}
+
+{% endfor %}
+
+Plugin Index
+------------
+
+{% if plugin_maps %}
+These are the plugins in the @{collection_name}@ collection
+{% else %}
+There are no plugins in the @{collection_name}@ collection with automatically generated documentation.
+{% endif %}
+
+{% for category, plugins in plugin_maps.items() | sort %}
+
+{%   if category == 'module' %}
+Modules
+~~~~~~~
+{%   else %}
+@{ category | capitalize }@ Plugins
+@{ '~' * ((category | length) + 8) }@
+{%   endif %}
+
+{%   for name, desc in plugins.items() | sort %}
+* :ref:`@{ name }@ <ansible_collections.@{ collection_name }@.@{ name }@_@{ category }@>` -- @{ desc | rst_ify | indent(width=2) }@
+{%   endfor %}
+{% endfor %}
+
+
+.. seealso::
+
+    List of :ref:`collections <list_of_collections>` with docs hosted here.
+
+{% if breadcrumbs %}
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+{%   for category, plugins in plugin_maps.items() | sort %}
+{%     for name, desc in plugins.items() | sort %}
+    @{ name }@_@{ category }@
+{%     endfor %}
+{%   endfor %}
+{% endif %}
