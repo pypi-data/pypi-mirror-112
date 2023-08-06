@@ -1,0 +1,13 @@
+argparse
+colorama
+flask
+flask_cors
+jinja2
+markdown
+markdown_katex
+marshmallow<3.12,>=03.8
+python-frontmatter
+pyyaml>=5.1
+regex
+requests
+waitress
