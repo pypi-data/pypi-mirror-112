@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: amundsen-metadata
+Version: 3.8.0
+Summary: Metadata service for Amundsen
+Home-page: https://www.github.com/amundsen-io/amundsen/tree/main/metadata
+Maintainer: Amundsen TSC
+Maintainer-email: amundsen-tsc@lists.lfai.foundation
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Requires-Dist: amundsen-gremlin (>=0.0.9)
+Requires-Dist: gremlinpython (==3.4.3)
+Requires-Dist: neo4j (==1.7.6)
+Requires-Dist: neotime (==1.7.1)
+Requires-Dist: apache-atlas (==0.0.11)
+Requires-Dist: beaker (>=1.10.0)
+Requires-Dist: overrides (==2.5)
+Requires-Dist: amundsen-common (>=0.15.3)
+Requires-Dist: attrs (>=19.1.0)
+Requires-Dist: boto3 (==1.17.23)
+Requires-Dist: click (==7.0)
+Requires-Dist: flasgger (==0.9.5)
+Requires-Dist: Flask (==1.0.2)
+Requires-Dist: Flask-RESTful (>=0.3.6)
+Requires-Dist: flask-cors (==3.0.8)
+Requires-Dist: Jinja2 (>=2.10.1)
+Requires-Dist: jsonschema (<4.0,>=3.0.1)
+Requires-Dist: marshmallow (<=3.6,>=3.0)
+Requires-Dist: marshmallow3-annotations (>=1.0.0)
+Requires-Dist: pytz (==2021.1)
+Requires-Dist: requests (>=2.25.0)
+Requires-Dist: requests-aws4auth (==1.1.0)
+Requires-Dist: statsd (==3.2.1)
+Requires-Dist: typing (==3.6.4)
+Requires-Dist: werkzeug (>=2.0.0)
+Requires-Dist: wheel (==0.36.2)
+Provides-Extra: all
+Requires-Dist: amundsen-gremlin (>=0.0.9) ; extra == 'all'
+Requires-Dist: gremlinpython (==3.4.3) ; extra == 'all'
+Requires-Dist: neo4j (==1.7.6) ; extra == 'all'
+Requires-Dist: neotime (==1.7.1) ; extra == 'all'
+Requires-Dist: apache-atlas (==0.0.11) ; extra == 'all'
+Requires-Dist: beaker (>=1.10.0) ; extra == 'all'
+Requires-Dist: overrides (==2.5) ; extra == 'all'
+Requires-Dist: amundsen-common (>=0.15.3) ; extra == 'all'
+Requires-Dist: attrs (>=19.1.0) ; extra == 'all'
+Requires-Dist: boto3 (==1.17.23) ; extra == 'all'
+Requires-Dist: click (==7.0) ; extra == 'all'
+Requires-Dist: flasgger (==0.9.5) ; extra == 'all'
+Requires-Dist: Flask (==1.0.2) ; extra == 'all'
+Requires-Dist: Flask-RESTful (>=0.3.6) ; extra == 'all'
+Requires-Dist: flask-cors (==3.0.8) ; extra == 'all'
+Requires-Dist: Jinja2 (>=2.10.1) ; extra == 'all'
+Requires-Dist: jsonschema (<4.0,>=3.0.1) ; extra == 'all'
+Requires-Dist: marshmallow (<=3.6,>=3.0) ; extra == 'all'
+Requires-Dist: marshmallow3-annotations (>=1.0.0) ; extra == 'all'
+Requires-Dist: pytz (==2021.1) ; extra == 'all'
+Requires-Dist: requests (>=2.25.0) ; extra == 'all'
+Requires-Dist: requests-aws4auth (==1.1.0) ; extra == 'all'
+Requires-Dist: statsd (==3.2.1) ; extra == 'all'
+Requires-Dist: typing (==3.6.4) ; extra == 'all'
+Requires-Dist: werkzeug (>=2.0.0) ; extra == 'all'
+Requires-Dist: wheel (==0.36.2) ; extra == 'all'
+Requires-Dist: flake8 (>=3.9.2) ; extra == 'all'
+Requires-Dist: flake8-tidy-imports (>=4.3.0) ; extra == 'all'
+Requires-Dist: isort[colors] (~=5.8.0) ; extra == 'all'
+Requires-Dist: mock (>=4.0.3) ; extra == 'all'
+Requires-Dist: mypy (<0.900,>=0.812) ; extra == 'all'
+Requires-Dist: pytest (>=6.2.4) ; extra == 'all'
+Requires-Dist: pytest-cov (>=2.12.0) ; extra == 'all'
+Requires-Dist: pytest-env (>=0.6.2) ; extra == 'all'
+Requires-Dist: pytest-mock (>=3.6.1) ; extra == 'all'
+Requires-Dist: typed-ast (>=1.4.3) ; extra == 'all'
+Requires-Dist: flaskoidc (==1.0.0) ; extra == 'all'
+Requires-Dist: amundsen-rds (==0.0.5) ; extra == 'all'
+Requires-Dist: mysqlclient (<3,>=1.3.6) ; extra == 'all'
+Requires-Dist: sqlalchemy (<1.4,>=1.3.6) ; extra == 'all'
+Requires-Dist: alembic (<2.0,>=1.2) ; extra == 'all'
+Provides-Extra: atlas
+Requires-Dist: apache-atlas (==0.0.11) ; extra == 'atlas'
+Provides-Extra: dev
+Requires-Dist: flake8 (>=3.9.2) ; extra == 'dev'
+Requires-Dist: flake8-tidy-imports (>=4.3.0) ; extra == 'dev'
+Requires-Dist: isort[colors] (~=5.8.0) ; extra == 'dev'
+Requires-Dist: mock (>=4.0.3) ; extra == 'dev'
+Requires-Dist: mypy (<0.900,>=0.812) ; extra == 'dev'
+Requires-Dist: pytest (>=6.2.4) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.12.0) ; extra == 'dev'
+Requires-Dist: pytest-env (>=0.6.2) ; extra == 'dev'
+Requires-Dist: pytest-mock (>=3.6.1) ; extra == 'dev'
+Requires-Dist: typed-ast (>=1.4.3) ; extra == 'dev'
+Provides-Extra: oidc
+Requires-Dist: flaskoidc (==1.0.0) ; extra == 'oidc'
+Provides-Extra: rds
+Requires-Dist: amundsen-rds (==0.0.5) ; extra == 'rds'
+Requires-Dist: mysqlclient (<3,>=1.3.6) ; extra == 'rds'
+Requires-Dist: sqlalchemy (<1.4,>=1.3.6) ; extra == 'rds'
+Requires-Dist: alembic (<2.0,>=1.2) ; extra == 'rds'
+
+UNKNOWN
+
+
