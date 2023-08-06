@@ -1,0 +1,125 @@
+CHANGES
+=======
+
+* remove failure test
+* testing failure
+* trying to remove duplicate unittesting
+* moved some coverage and flake parts of CI into test portion so they show up on the run log
+* moved flake into test part
+* typo
+* moving coverage to travis yaml
+* test
+* testing new configuration
+* Fixed some linter errors and removed Python 2 testing
+* Fixed DummyTree's structure mapping pipeline
+* unable to render viz, needed to force https
+* fixed typos (spelling) in doc comments
+* fixed spelling in doc comment
+* removed http protocol on script imports, so appropriate protocol (http or https) is used
+* modified sanity check instance to check attribute before values, also added some tests, excluded \_\_init\_\_.py from coverage report
+* fixed pep8 error
+* added unittests for continuous value class
+* modified test\_load\_quadruped to not use random seed, which breaks when backtesting on py2
+* Moved dataset doctests into unittests
+* Updated use of collections.abc to be backwards compatible with py2 and py3
+* added another test and error handling for passing empty lists into choice functions
+* updated test so it test most likely choices
+* updated utils comments for choice functions to refer to weights not probs
+* adjusted most likely choice and weighted choice so they do not accept negative weights. added appropriate tests to trigger exceptions
+* added rest of utils tests
+* added weighted choice test
+* removed unittest and added in test of most\_likely\_choice
+* removed unittest, just using pytest
+* removed raw strings and escaped backslashes
+* updated files to be pep8 compliant
+* need to omit the test files from the coverage report
+* turning on flake8
+* removed unnecessary requirements from test\_requirements
+* removed doctesting, next step will be to replicate doctest behavior in separate unit tests
+* trying to get right versions of pypy
+* testing with multiple versions first
+* made hyphenated keywords
+* changed key, trying to use --pro flag
+* testing again
+* trying with owner and project specified explicitly
+* again?
+* another try encrypting password
+* updated travis.yml encrypted password. removed release on tag, it should release a dev version
+
+v0.3.5
+------
+
+* updated travis to skip uploading to pypi existing versioned packages
+* setup travis to auto deploy to pypi
+* error in formatting for coverage badge
+* modified readme to include build status and test coverage
+* excluding data files from testing and test coverage
+* excluded files from coverage report, such as tests/ examples/ and visualization\_files/
+* ignoring data files, examples, tests, and visualization\_files, from code coverage testing
+* trying python 3.7 with travis, disabiling flake8 to try and get first pass to see what happens
+* trying travis with py3.6
+* testing travis
+* trying to get testing up and running with travis
+* moving closer to using tox with travis and coveralls
+* added travis build script
+* fixed some typos in to doc comments
+* added a test to make sure there is no error when categorizing an empty object
+* modified examples to use cluster(...) as an iterable. Also, updated preprocessor, so not using depricated collections class
+* Update README.rst
+* updated cluster to be an interator so you don't have to wait for the entire clustering to finish to see results
+* Fixed a bug where Cobweb3Node.probability would throw an exception when evaluating a numerical value for an attribute that did not exist in its varriable table. It now correctly returns 0
+* adding a .gitignore to ignore changes to the local output.js file which changes everytime you test the viz
+* moved the Image Field dropdown to be inside the settings-collapse div
+* removed creation of the images folder, let the user specify the full path to images
+* removed the parens from the reversed string attribute sorting
+* modified the viz code so that it can now render url values as images (the values must be full paths either locally or externally). Also, modified the code that sorts attributes, so that sorting is done on reversed attribute strings, in order to give the effect of grouping things in the same object together
+* updating version number with new cluster visualization changes
+* updated the other visualize functions so they don't generate files by default
+* fixed typo where nominal values weren't being filtered correctly
+* made the settings sections collapsable, added an opotion to set how binary attributes are treated, and tweaked the python code so you can call see the viz without generating files in the local directory
+* added a concept search function, cleaned up some css and simplified some code
+* fixed several css issues with the visualization and enhanced the d3 code to a newer version
+* increased version number, listed MIT license directly in setup.py, increased py\_search requirements, updated classifiers
+* added option for backwards compatible (python 2/3) doctests, but still broken because of our use of pprint
+* modified for compatability with latest version of py\_search
+* modified to conform to PEP8 and removed non-ascii character which caused a snag for python2 processing of doc comments
+* modified to conform to PEP8 and removed dos ^M line endings
+* fixed the docstring to cluster\_split\_search to include a mention of the labels attribute
+* updated ipython to a later version, so it doesn't cause a read the docs import error
+* modified the datasets module to make it possible to load subsets of the json example datasets without having to parse the whole file. I'm hoping this fixes the problem with rendering the module on readthedocs
+* fixed a small bug in the visualizer where the color scales would stay visible for the wrong type of attrbitue
+* made a small change to the cluster module that allows for heuristics to be provided as a string name of one of the provided heuristic functions instead of the function itself. Also caught a doc typo
+* updated pypi categorization tags and setup.py to use latest versions of py\_search and munkres. Created universal wheel and pushed to pypi
+* modified the isNumber function to return falce when a number is NaN because NaN will really screw up our continuous value representation
+* added a check in clustering to raise an exception when asked to cluster an empty list
+* fixed bug in probability where the wrong amount of noise was being added (it needs to be added for both the sampling distribution and for the measurement of the value being predicted
+* modified the cluster\_split\_search example to show 3 different datasets to get a better sense of performance compared to human labeling
+* added integral of gaussian products to continuous value
+* updated two\_best\_children to return the cu of the best and the pointers to the two best children. Also modified to maintain a concept ID as an int instead of a string
+* modified attrs() function to use filter, which is much faster improves overall runtime about 20%, also modified increment and update counts to minimize the number of function calls, which saves 1-5% time
+* updated benchmark
+* cleaned up the setup.py file and updated the requiremenst for py\_search
+* updated cobweb to use relative CU to reduce time complexity of cobweb algorithm. Also, added updated benchmarks for cobweb and cobweb3
+* added a script to time benchmark cobweb with random instances
+* added seeds to all examples that use some kind of randomization
+* removed some comments
+* updated to work with latest version of py\_search. Also, modified the quadruped example to do less runs and examples. Finally I added some of the files that I normally keep on my computer, for plotting cu calculations for small sigma and for replicating the acs simulations
+* Update viz\_logic.js
+* added some lines to the .gitignore for times when a call to visualize generates extra files in the main repo, and maybe fixed a bug where the datasets module does not render on the docs page
+* some minor stylistic updates
+* merged in Chris's fix to displaying the html page in a way that seems to work on both Mac and Windows, also added a visualize\_clusters function that trims a tree to the level specified by a clustering from the cluster module
+* updated to append file and resolve relative path to absolute path
+* moved the visualization module to be part of the main concept\_formation module and created a single top level function that can be used to generate and invoke interactive visualizations of trees
+* added an output\_json function to continuous\_values to make it easier to serialize them into json
+* modified cobweb3's output\_json function to create dictionaries for ContinuousValues with their relevant properties in them because they aren't serializable otherwise
+* is\_exact\_match in cobweb3 updated to ignore hidden
+* There was a bug in the AICc hueristic function that made it still possible for the functions to divide by 0, it should be fixed now
+* removed structure map internally functionality from trestle, it was not working properly
+* Updated trestle to use gensym in name standardizer
+* updated trestle structure map internally to use parent mapping as seed for local search in children. Hopefully this will speed mapping up
+* merged in another doctest to make sure the new preprocessor is working as expected
+* fixed preprocessors (flattener, subcomponentprocessor, list processors) and updated trestle and structure mapper to reflect these changes
+* found a bug in is\_exact\_match that would fail in certain cases where instances had hidden attributes
+* modified expected\_correct\_guesses to check if a tree exsits before testing scaling
+* updated pysearch requirement
+* updated test to compare hill climbing and annealing
