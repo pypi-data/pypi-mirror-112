@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: codefast
+Version: 0.3.2
+Summary: A package for faster coding.
+Home-page: https://github.com/private_repo/codefast
+Author: R2FsCg
+Author-email: r2fscg@gmail.com
+License: UNKNOWN
+Description: A package for faster Python programming. 
+        
+        ## Usage
+        ```python
+        import codefast as cf
+        
+        js = cf.jsonread('json_file.json')
+        cf.pp(js) # == pprint.pprint(js)
+        ```
+        
+        ## Install
+        `python3 -m pip install codefast`
+        
+        Or, update to latest version with:
+        
+        `python3 -m pip install codefast --upgrade`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

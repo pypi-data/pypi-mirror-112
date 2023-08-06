@@ -1,0 +1,10 @@
+colorlog>=4.6.1
+lxml
+smart-open
+pillow
+bs4
+arrow
+numpy
+termcolor
+pydub
+pandas
