@@ -1,0 +1,10 @@
+alembic
+click
+docker
+flask
+furo
+gitpython
+psycopg2-binary
+pytest
+python-dotenv
+sqlalchemy
