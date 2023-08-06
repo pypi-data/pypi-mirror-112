@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: allthethings
+Version: 0.2.0
+Summary: Various utilities
+Home-page: https://github.com/scravy/allthethings
+Author: Julian Fleischer
+Author-email: tirednesscankill@warhog.net
+License: UNKNOWN
+Description: # allthethings
+        
+        Various utilities augmenting the python standard library.
+        
+        - `allthethings.daterange.DateRange` – Date Ranges like `2020-01..2020-03-14`
+        - `allthethings.dates.at_end_of_month` – 28th? 30th? 31st?
+        - `allthethings.ranges.range_incl` and `allthethings.ranges.range_excl` – unopinoinated ranges that work with all sorts of types
+        - `allthethings.iterables.groupby` – like Scala's groupby, unlike Haskell's/Python's groupby
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
