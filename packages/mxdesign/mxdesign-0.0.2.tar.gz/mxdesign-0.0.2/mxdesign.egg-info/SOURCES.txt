@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+mxdesign/__init__.py
+mxdesign/base.py
+mxdesign/pipeline.py
+mxdesign.egg-info/PKG-INFO
+mxdesign.egg-info/SOURCES.txt
+mxdesign.egg-info/dependency_links.txt
+mxdesign.egg-info/requires.txt
+mxdesign.egg-info/top_level.txt
+mxdesign/model_selection/__init__.py
+mxdesign/model_selection/_validation.py
