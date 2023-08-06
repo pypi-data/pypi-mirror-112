@@ -1,0 +1,4 @@
+[console_scripts]
+send-email = py_basic_ses.entry:send_email
+send-test = py_basic_ses.entry:send_test_email
+
