@@ -1,0 +1,16 @@
+README.md
+setup.py
+src/blib/__init__.py
+src/blib/banner.py
+src/blib/draw.py
+src/blib/files.py
+src/blib/index.py
+src/blib/layer.py
+src/blib/parser.py
+src/blib/rgba.py
+src/blib/vec3.py
+src/blib.egg-info/PKG-INFO
+src/blib.egg-info/SOURCES.txt
+src/blib.egg-info/dependency_links.txt
+src/blib.egg-info/requires.txt
+src/blib.egg-info/top_level.txt
