@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: launchable
+Version: 1.24.0
+Summary: Launchable CLI
+Home-page: https://launchableinc.com/
+Author: Launchable, Inc.
+Author-email: info@launchableinc.com
+License: Apache Software License v2
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Requires-Dist: click (~=7.0)
+Requires-Dist: requests
+Requires-Dist: junitparser (>=2.0.0)
+Requires-Dist: setuptools
+Requires-Dist: more-itertools (>=7.1.0)
+Requires-Dist: python-dateutil
+Requires-Dist: wmi ; platform_system == "Windows"
+
+# Usage
+
+See https://docs.launchableinc.com/cli-reference and https://docs.launchableinc.com/getting-started.
+
+# Development
+## Preparation
+We recommend Pipenv
+```shell
+pip install pipenv
+pipenv install --dev
+```
+If you mess up your local pipenv, `pipenv --rm` will revert the operation above.
+
+## Load development environment
+```shell
+pipenv shell
+```
+
+## Run tests
+```shell
+pipenv run test
+```
+
+## Add dependency
+```shell
+pipenv install --dev some-what-module
+```
+
+# How to release
+Create new release on Github, then Github Actions automatically uploads the module to PyPI.
+
+## Versioning
+This module follows [Semantic versioning](https://semver.org/) such as X.Y.Z.
+
+* Major (X)
+  * Drastic update breaking backward compatibility
+* Minor (Y)
+  * Add new plugins, options with backward compatibility
+* Patch (Z)-
+  * Fix bugs or minor behaviors
+
+
