@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: psy-taliro
+Version: 1.0.0a11
+Summary: System-level verification library using STL
+License: BSD-3-Clause
+Author: Quinn Thibeault
+Author-email: qthibeau@asu.edu
+Requires-Python: >=3.7.1,<3.10
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: docs
+Provides-Extra: tests
+Provides-Extra: tltk
+Requires-Dist: Sphinx (>=3.5.3,<4.0.0); extra == "docs"
+Requires-Dist: antlr4-python3-runtime (>=4.5.3,<4.6.0)
+Requires-Dist: attrs (>=21.0.0,<22.0.0)
+Requires-Dist: numpy (>=1.20.2,<2.0.0)
+Requires-Dist: pandas (>=1.2.3,<2.0.0); extra == "tests"
+Requires-Dist: pydantic (>=1.8.2,<2.0.0)
+Requires-Dist: scipy (>=1.6.2,<2.0.0)
+Requires-Dist: sphinx-autodocgen (>=1.2,<2.0); extra == "docs"
+Requires-Dist: tltk-mtl (>=0.0.27,<0.0.28); extra == "tltk"
+Requires-Dist: typing-extensions (>=3.7.4,<4.0.0); python_version < "3.8"
