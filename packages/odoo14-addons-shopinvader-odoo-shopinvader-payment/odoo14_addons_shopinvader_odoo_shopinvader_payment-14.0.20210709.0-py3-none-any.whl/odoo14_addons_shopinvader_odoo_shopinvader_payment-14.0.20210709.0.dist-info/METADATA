@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: odoo14-addons-shopinvader-odoo-shopinvader-payment
+Version: 14.0.20210709.0
+Summary: Meta package for shopinvader-odoo-shopinvader-payment Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo14-addon-invader-payment
+Requires-Dist: odoo14-addon-invader-payment-manual
+Requires-Dist: odoo14-addon-shopinvader-payment
+Requires-Dist: odoo14-addon-shopinvader-payment-manual
+
+UNKNOWN
+
+
