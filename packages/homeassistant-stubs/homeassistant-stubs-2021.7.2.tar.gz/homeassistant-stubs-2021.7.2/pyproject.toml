@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "homeassistant-stubs"
+version = "2021.7.2"
+description = "PEP 484 typing stubs for Home Assistant Core"
+authors = ["Ruslan Sayfutdinov <ruslan@sayfutdinov.com>"]
+license = "MIT"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development",
+    "Typing :: Typed",
+]
+keywords = ["homeassistant", "typing", "pep484"]
+readme = "README.md"
+homepage = "https://github.com/KapJI/homeassistant-stubs"
+repository = "https://github.com/KapJI/homeassistant-stubs"
+packages = [
+    { include = "homeassistant-stubs" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+homeassistant = "2021.7.2"
+
+[tool.poetry.dev-dependencies]
+awesomeversion = "^21.2.3"
+black = "^21.6b0"
+codespell = "^2.1.0"
+flake8 = "^3.9.2"
+flake8-bugbear = "^21.4.3"
+flake8-comprehensions = "^3.5.0"
+flake8-simplify = "^0.14.1"
+flake8-use-fstring = "^1.1"
+isort = "^5.9.1"
+mypy = "^0.910"
+pre-commit = "^2.13.0"
+pylint = "^2.9.3"
+types-requests = "^2.25.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.pylint.format]
+max-line-length = "88"
+
+[tool.pylint.basic]
+good-names = ["fp"]
