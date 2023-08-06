@@ -1,0 +1,11 @@
+LICENCE
+README.rst
+setup.py
+locopt/__init__.py
+locopt/client.py
+locopt/helpers.py
+locopt.egg-info/PKG-INFO
+locopt.egg-info/SOURCES.txt
+locopt.egg-info/dependency_links.txt
+locopt.egg-info/requires.txt
+locopt.egg-info/top_level.txt

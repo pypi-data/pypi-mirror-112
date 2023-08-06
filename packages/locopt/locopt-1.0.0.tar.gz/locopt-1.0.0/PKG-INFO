@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: locopt
+Version: 1.0.0
+Summary: Localized template access and format.
+Home-page: https://github.com/Exahilosys/locopt
+Author: Exahilosys
+License: MIT
+Description: Installing
+        ==========
+        
+        .. code-block:: bash
+        
+          pip3 install locopt
+        
+Platform: UNKNOWN
+Provides-Extra: docs
