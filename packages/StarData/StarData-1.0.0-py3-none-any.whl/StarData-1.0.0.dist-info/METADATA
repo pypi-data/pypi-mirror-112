@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: StarData
+Version: 1.0.0
+Summary: A comprehensive simple API for general cloud database framework
+Home-page: https://github.com/underthestars-zhy/StarData-Python
+Author: zhy-uts
+Author-email: zhuhaoyu0909@icloud.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests (>=2.24.0)
+
+# StarData-Python
+> 一个现代化便捷的数据管理系统
+
+
+
