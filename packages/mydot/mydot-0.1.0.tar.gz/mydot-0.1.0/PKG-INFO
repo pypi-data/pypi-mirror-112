@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: mydot
+Version: 0.1.0
+Summary: Manage and edit $HOME dotfiles using Python + git = <3
+Home-page: https://github.com/gikeymarcia/mydot
+Author: Mikey Garcia
+Author-email: gikeymarcia@gmail.com
+License: GPL-3.0
+Description: # mydot -- A Python Module for managing dotfiles
+        
+        ## Usage
+        
+        ```bash
+        python -m pip install --user mydot
+        python -m mydot --status
+        python -m mydot --edit
+        python -m mydot --add
+        ```
+        
+        ### Source of Truth
+        
+        This project is available on [GitHub][github] and [GitLab][gitlab]. Each push to 
+        `master` automatically goes to both so choose whichever platform you prefer.
+        
+        [github]: <https://github.com/gikeymarcia/mydot>
+        "Follow and Contribute on GitHub"
+        [gitlab]: <https://gitlab.com/gikeymarcia/mydot>
+        "Follow and Contribute on GitLab"
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
