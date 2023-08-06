@@ -1,0 +1,7 @@
+oic>=1.2.1
+
+[mongo]
+pymongo
+
+[redis]
+redis
