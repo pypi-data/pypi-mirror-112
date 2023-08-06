@@ -1,0 +1,3 @@
+[console_scripts]
+spyc=spyc_spc.main:main
+
