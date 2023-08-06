@@ -1,0 +1,5 @@
+[console_scripts]
+amulog = amulog.__main__:main
+amulog.edit = amulog.edit.__main__:main
+amulog.eval = amulog.eval.__main__:main
+
