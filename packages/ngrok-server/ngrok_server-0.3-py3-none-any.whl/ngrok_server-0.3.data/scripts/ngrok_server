@@ -1,0 +1,109 @@
+#!/bin/bash
+
+set -e
+
+version="0.3"
+
+#linux=0
+#windows=0
+
+device=$(uname)
+
+if [[ "$device" == "Linux" ]]; then
+    #echo "linux detected"
+    linux=1
+else
+    echo "unknown device"
+fi
+
+if [[ ! $(which adb) ]]; then
+    echo "adb not found... try again after installing adb"
+    exit 1
+fi
+
+
+if [[ ! $(which ngrok) ]]; then
+     echo "ngrok not found... download ngrok and include in PATH"
+     exit 1
+fi
+
+function advl_get()
+{
+  select=0
+
+  output=$(adb devices)
+
+  devices=(${output/"List of devices attached"/""})
+
+  devicesLength=${#devices[@]}
+
+  final=()
+
+  count=0
+
+  for i in ${devices[@]}; do
+    if [[ $i != "device" ]]; then
+  #    echo "device == $i"
+      final+=" $i"
+    fi
+  done
+
+  	echo ${final[@]}
+}
+
+function adb_device_select()
+{
+  title=""
+  first=0
+  devices=($(advl_get))
+
+  if [[ -z $devices ]]; then
+    echo "no device found... connect a device"
+  	exit 1
+  fi
+
+  my_device_count=${#devices[@]}
+
+  if [[ "$my_device_count" == "1" ]]; then
+    echo ${devices[0]}
+  else
+  count=0
+  for device in ${devices[@]}; do
+  	((++count))
+  	echo "$count) $device" >&2
+  done
+
+  read -p "Enter a device number:- " number
+  echo ${devices[((--number))]}
+fi
+}
+
+selected_device=$(adb_device_select)
+
+wifi_device_selected=0
+
+function connect_by_ip()
+{
+  my_device=$1
+  routes=($(adb -s $my_device shell ip route))
+  len=${#routes[@]}
+  ((--len))
+  con_device=${routes[$len]}
+  echo "trying to connect device $con_device by ip"
+  adb -s $my_device tcpip 5555
+  sleep 0.3
+  selected_device=${con_device}:5555
+  adb connect $selected_device
+}
+
+function is_device_selected_wifi()
+{
+  if [[ ! $selected_device =~ "192.168" ]]; then
+    connect_by_ip $selected_device
+  else
+    echo "device already connected by wifi"
+  fi
+}
+
+is_device_selected_wifi
+ngrok tcp $selected_device -region in
