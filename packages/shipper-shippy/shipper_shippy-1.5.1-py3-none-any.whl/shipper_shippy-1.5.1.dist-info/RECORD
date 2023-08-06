@@ -1,0 +1,14 @@
+shippy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shippy/__main__.py,sha256=OHLuSZzdRtORygCwfhOmYQwApHndJ31XHrMNVDx_GXU,7357
+shippy/client.py,sha256=PVLQIk2eXRnETV8ylF-pk31-__FD8YUsPkcT8dWbDZA,8689
+shippy/config.py,sha256=8DFQpQdFFN57vX_vNhO30zRd9Iut9UEAGikl3sT8kn8,1078
+shippy/constants.py,sha256=tMU-QdkXTMa-kiVz-BJ2FEf4azK_U7jevr8cIRzNNSU,1037
+shippy/exceptions.py,sha256=fuU3641x-3m6AjhfEhiHFsr4Wbxvr7VlXyytXMVm_0k,87
+shippy/helper.py,sha256=y00w3GO-7kk-poNAhMlPdCyLIUYsPUrkjjNXrGdNDIE,2263
+shippy/version.py,sha256=NDlROWepCnqBHWyLcrJwKvhuZfX-taeoUiu4stsqbo0,55
+shipper_shippy-1.5.1.dist-info/LICENSE,sha256=U5Eyaq-E63ei8YTf9KKx-h3YvdFZYEf-jHBa2VrZ6mw,1066
+shipper_shippy-1.5.1.dist-info/METADATA,sha256=fONra1I3ZKnHjqDeJLShc1Ql9z0qNw3p6XZey0nia4g,2204
+shipper_shippy-1.5.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+shipper_shippy-1.5.1.dist-info/entry_points.txt,sha256=Nut8Rrg_WDpSM-kxYnyD7YlC6yJKCBbV3vgb66cWzNY,49
+shipper_shippy-1.5.1.dist-info/top_level.txt,sha256=bKzZ56t78g1rmiadqNeCfoLQeniNMgBwBHWxs4Vohmk,7
+shipper_shippy-1.5.1.dist-info/RECORD,,
