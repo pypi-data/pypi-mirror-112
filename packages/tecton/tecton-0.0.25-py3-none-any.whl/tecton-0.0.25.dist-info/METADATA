@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: tecton
+Version: 0.0.25
+Summary: Tecton Python SDK
+Home-page: https://tecton.ai
+Author: Tecton, Inc.
+Author-email: support@tecton.ai
+License: Tecton Proprietary
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: Other/Proprietary License
+Requires-Python: ==3.7.*
+Description-Content-Type: text/markdown
+Requires-Dist: attrs (==19.2.0)
+Requires-Dist: boto3
+Requires-Dist: dill
+Requires-Dist: googleapis-common-protos (==1.52.0)
+Requires-Dist: grpcio
+Requires-Dist: jinja2
+Requires-Dist: numpy (>=1.16.5)
+Requires-Dist: pendulum (==2.0.5)
+Requires-Dist: protobuf (==3.9.0)
+Requires-Dist: pytimeparse
+Requires-Dist: pandas (<=1.1.5,>=0.25.0)
+Requires-Dist: texttable
+Requires-Dist: requests
+Requires-Dist: colorama (==0.4.3)
+Requires-Dist: tqdm (==4.41.1)
+Requires-Dist: yaspin (==0.16.0)
+Requires-Dist: typing-extensions (==3.7.4.1)
+Requires-Dist: pygments (==2.5.2)
+Requires-Dist: pyarrow (==0.13.0)
+Requires-Dist: pytest (==5.4.3)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: typeguard
+Provides-Extra: databricks-connect
+Requires-Dist: databricks-connect (~=6.4.28) ; extra == 'databricks-connect'
+Provides-Extra: pyspark
+Requires-Dist: pyspark (==2.4.4) ; extra == 'pyspark'
+
+# Tecton
+
+* [General Documentation](https://docs.tecton.ai/)
+* [API Reference](https://docs.tecton.ai/api-reference/index.html)
+
+
