@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "passrack"
+version = "0.1.6"
+description = "A Command Line Interface to encrypt, decrypt and save passwords. What's new: More exception handling"
+authors = ["Avanindra Chakraborty <avanindra.d2.chakraborty@gmail.com>", "Arghya Sarkar <arghyasarkar.nolan@gmail.com>"]
+license = "MIT"
+readme="README.md"
+homepage= "https://github.com/AvanindraC/passrack"
+repository = "https://github.com/AvanindraC/passrack"
+keywords = ["PassRack"]
+
+classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+	"Programming Language :: Python :: 3.9",
+        "Operating System :: OS Independent"
+    ]
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+click = "^8.0.1"
+cryptocode = "^0.1"
+click-help-colors = "^0.9"
+pyfiglet = "^0.8.post1"
+
+[tool.poetry.dev-dependencies]
+
+
+[tool.poetry.scripts]
+prack = "passrack:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
