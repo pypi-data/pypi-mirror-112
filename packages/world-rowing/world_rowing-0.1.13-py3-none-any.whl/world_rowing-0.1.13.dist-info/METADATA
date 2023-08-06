@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: world-rowing
+Version: 0.1.13
+Summary: Library for loading and presenting data from the worldrowing.com
+Home-page: https://github.com/matthewghgriffiths/rowing
+Author: Matthew Grifiths
+Author-email: matthewghgriffiths@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Provides-Extra: cli
+Requires-Dist: cmd2 (>=2.0.0) ; extra == 'cli'
+Provides-Extra: req
+Requires-Dist: requests ; extra == 'req'
+
+# rowing
+Collection of code to load, process and analyse rowing data
+
+
