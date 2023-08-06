@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: btc_price
+Version: 0.0.4
+Summary: Package to get btc prize in an easy way.
+Home-page: UNKNOWN
+Author: Hexye
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# btc_price
+Package to get btc prize in an easy way.
+
+# DOCS
+
+# Get the bitcoin price in any currency:
+
+print(btcprice("USD"))
+
+# See how many bitcoin you can get with a certain amount of dollars:
+
+print(convert(120.50))
+
+
