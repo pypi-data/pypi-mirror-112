@@ -1,0 +1,8 @@
+healpy
+astropy
+numpy
+h5py>=3.0
+scipy
+numba
+cmasher
+tqdm
