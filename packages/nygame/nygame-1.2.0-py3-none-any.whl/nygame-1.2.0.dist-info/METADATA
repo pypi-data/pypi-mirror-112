@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: nygame
+Version: 1.2.0
+Summary: nygame
+Home-page: UNKNOWN
+Author: Natalie Fearnley
+Author-email: nfearnley@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/nfearnley/nygame
+Project-URL: Tracker, https://github.com/nfearnley/nygame/issues
+Keywords: game
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygame (==2.0.1)
+Requires-Dist: emoji (==1.2.0)
+Provides-Extra: dev
+Requires-Dist: autopep8 (==1.5.5) ; extra == 'dev'
+Requires-Dist: flake8 (==3.8.4) ; extra == 'dev'
+Requires-Dist: pytest (==6.2.2) ; extra == 'dev'
+
+# nygame
+
+nygame is a wrapper around the pygame library. It's goal is to provide and more pythonic and easy to use experience.
+
+## Usage
+
+A basic game structure can be started like this:
+
+```python
+import nygame
+import pygame
+
+class Game(nygame.Game):
+    def __init__(self):
+        super().__init__(size=(300, 200))
+        pass
+
+    def loop(self, events):
+        pygame.draw.circle(self.surface, "red", (150, 100), 50)
+
+if __name__ == "__main__":
+    Game().run()
+```
+
+After `Game.__init__()` is called, a new game. A window of 300x200 will be created to host the game. Further options are available in `super().__init__()`'s doc string.
+
+`Game.loop()` will be called every frame, with the most recent events in the `events` argument. The screen will automatically be cleared before every frame and can be drawn to by using `self.surface`.
+
+## Demos
+
+[EmojiApp](demos) - A demo app that lets you browse through emoji
+
+## Development
+
+### Deployment
+
+???
+
