@@ -1,0 +1,15 @@
+ChangeLog.md
+LICENSE
+MANIFEST.in
+README-CN.md
+README.md
+setup.cfg
+setup.py
+alibabacloud_devops_rdc20200303/__init__.py
+alibabacloud_devops_rdc20200303/client.py
+alibabacloud_devops_rdc20200303/models.py
+alibabacloud_devops_rdc20200303.egg-info/PKG-INFO
+alibabacloud_devops_rdc20200303.egg-info/SOURCES.txt
+alibabacloud_devops_rdc20200303.egg-info/dependency_links.txt
+alibabacloud_devops_rdc20200303.egg-info/requires.txt
+alibabacloud_devops_rdc20200303.egg-info/top_level.txt
