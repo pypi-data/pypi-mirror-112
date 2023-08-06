@@ -1,0 +1,16 @@
+bci4als/__init__.py,sha256=lmZkXcb3CVxyrZC7gOKqkZdfTT1dBjxR-P2cq47Xv6M,368
+bci4als/_version.py,sha256=G71ysCwnDVZBaiZ-zwcldP44TwK41jTJIZP0NQQwzrA,23
+bci4als/eeg.py,sha256=a6GZNwEo5K8Jh38jfSOxxTivzx3VXoiBZszbsGyZP88,11001
+bci4als/ml_model.py,sha256=n8IVuaNosKabxCC9j5Np6uGsXZNHjNIAJ9BFiPG_GeY,2892
+bci4als/mouse.py,sha256=YPL9x6qej5PzotN4yVN78lm9rxiAhllUaBu5J2w5J94,6535
+bci4als/dashboard/__init__.py,sha256=BM94MdkffFHSLhLNqQigVPk3-XEX8bWm9W9uNEtBS0Y,17
+bci4als/experiments/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bci4als/experiments/experiment.py,sha256=FddLdjYZpzOoNx2eKn20bPSE-5g3Eyri1JxEwjfsbEA,5460
+bci4als/experiments/feedback.py,sha256=vZE15IGbpBKNdCXityBqA4-gr-gSpk2ZcJbhqSAW02g,6722
+bci4als/experiments/offline.py,sha256=NaSBUp6Cv6GUQnmNQbKkTqXjQzSJwO_-dhcqRf-t7xg,9180
+bci4als/experiments/online.py,sha256=XVZce9Hp8HFymL3PC1IybpdXnH7RhUe5Cvc-KV6J5-U,8425
+bci4als-0.36.1.dist-info/LICENSE,sha256=hhxPYhIFOAbx3J9dDTGsyGc2-M8X3AYnHA8BVV--3rU,1109
+bci4als-0.36.1.dist-info/METADATA,sha256=UrHexE1DT00V9PYT-Qxlr4sikCQeVylbA2tdBo5JvY4,6911
+bci4als-0.36.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bci4als-0.36.1.dist-info/top_level.txt,sha256=FE3ucZU3Sjhm_r0KBg4WbvB3PXeaFV5lwbr5D_CFWvI,8
+bci4als-0.36.1.dist-info/RECORD,,
