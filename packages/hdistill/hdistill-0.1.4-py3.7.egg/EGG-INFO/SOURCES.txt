@@ -1,0 +1,16 @@
+README.md
+setup.py
+hdistill/__init__.py
+hdistill/hdistill.py
+hdistill/main.py
+hdistill.egg-info/PKG-INFO
+hdistill.egg-info/SOURCES.txt
+hdistill.egg-info/dependency_links.txt
+hdistill.egg-info/entry_points.txt
+hdistill.egg-info/not-zip-safe
+hdistill.egg-info/requires.txt
+hdistill.egg-info/top_level.txt
+tests/__init__.py
+tests/test_html_parser.py
+tests/test_sanitizer.py
+tests/test_transformer.py
