@@ -1,0 +1,3 @@
+[pytest11]
+pytest_embedded_qemu = pytest_embedded_qemu.plugin
+
