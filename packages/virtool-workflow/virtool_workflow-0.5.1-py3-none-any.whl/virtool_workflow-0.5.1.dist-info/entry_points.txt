@@ -1,0 +1,4 @@
+[console_scripts]
+workflow=virtool_workflow.cli:cli_main
+workflow-test=integration_tests.cli:cli
+

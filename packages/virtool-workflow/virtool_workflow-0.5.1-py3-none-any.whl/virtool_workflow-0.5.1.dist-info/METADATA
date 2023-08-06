@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: virtool-workflow
+Version: 0.5.1
+Summary: A framework for developing bioinformatics workflows for Virtool.
+Home-page: https://github.com/virtool/virtool-workflow
+License: MIT
+Author: Ian Boyes
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Provides-Extra: test
+Requires-Dist: aiofiles (>=0.6.0,<0.7.0)
+Requires-Dist: aiohttp (==3.7.3)
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: virtool-core (>=0.1.1,<0.2.0)
+Project-URL: Repository, https://github.com/virtool/virtool-workflow
+Description-Content-Type: text/markdown
+
+# Virtool Workflow
+
+![Tests](https://github.com/virtool/virtool-workflow/workflows/Tests/badge.svg?branch=master)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1bf01ed0b27040cc92b4ad2380e650d5)](https://www.codacy.com/gh/virtool/virtool-workflow/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=virtool/virtool-workflow&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/1bf01ed0b27040cc92b4ad2380e650d5)](https://www.codacy.com/gh/virtool/virtool-workflow/dashboard?utm_source=github.com&utm_medium=referral&utm_content=virtool/virtool-workflow&utm_campaign=Badge_Coverage)
+
+A framework for developing bioinformatic workflows in Python.
+
+```python
+from virtool_workflow import startup, step, cleanup
+
+@startup
+def startup_function():
+    ...
+
+@step 
+def step_function():
+    ...
+
+@step
+def step_function_2():
+    ...
+
+@cleanup
+def cleanup_function():
+    ...
+```
+
+* [Documentation](https://workflow.virtool.ca)
+* [Virtool Website](https://www.virtool.ca/)
+* [PyPI Package](https://pypi.org/project/virtool-workflow/)
+
