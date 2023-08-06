@@ -1,0 +1,13 @@
+README.md
+setup.py
+idcard/__init__.py
+idcard/checker.py
+idcard/idcard_test.py
+mobile/__init__.py
+mobile/checker.py
+mobile/mobile_test.py
+py_snum_checker.egg-info/PKG-INFO
+py_snum_checker.egg-info/SOURCES.txt
+py_snum_checker.egg-info/dependency_links.txt
+py_snum_checker.egg-info/requires.txt
+py_snum_checker.egg-info/top_level.txt
