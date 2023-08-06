@@ -1,0 +1,33 @@
+[console_scripts]
+homcloud-abstract-filtration = homcloud.abstract_filtration:main
+homcloud-build-phtrees = homcloud.build_phtrees:main
+homcloud-dump-diagram = homcloud.dump_diagram:main
+homcloud-full-ph-tree = homcloud.full_ph_tree:main
+homcloud-idiagram2diagram = homcloud.idiagram2diagram:main
+homcloud-optimal-cycle = homcloud.optimal_cycle:main
+homcloud-optimal-volume = homcloud.optimal_volume:main
+homcloud-optvol = homcloud.optvol:main
+homcloud-pc-alpha = homcloud.pc_alpha:main
+homcloud-phtrees = homcloud.phtrees:main
+homcloud-pict-binarize-nd = homcloud.pict.binarize_nd:main
+homcloud-pict-merge-tree-levelset = homcloud.pict.merge_tree_levelset:main
+homcloud-pict-pict3d-vtk = homcloud.pict.pict3d_vtk:main
+homcloud-pict-pixel-levelset-nd = homcloud.pict.pixel_levelset_nd:main
+homcloud-pict-show-volume-2d = homcloud.pict.show_volume_2d:main
+homcloud-pict-slice3d = homcloud.pict.slice3d:main
+homcloud-pict-to-npy = homcloud.pict.to_npy:main
+homcloud-pict-tree = homcloud.pict.tree:main
+homcloud-plot-PD = homcloud.plot_PD:main
+homcloud-plot-PD-gui = homcloud.plot_PD_gui:main
+homcloud-plot-PD-slice = homcloud.plot_PD_slice:main
+homcloud-proj-histo = homcloud.proj_histo:main
+homcloud-pwgk = homcloud.pwgk:main
+homcloud-query-full-ph-tree = homcloud.query_full_ph_tree:main
+homcloud-query-pht = homcloud.query_pht:main
+homcloud-rips = homcloud.rips:main
+homcloud-vectorize-PD = homcloud.vectorize_PD:main
+homcloud-view-index-pict = homcloud.view_index_pict:main
+homcloud-view-index-pict-gui = homcloud.view_index_pict_gui:main
+homcloud-view-index-pict3d = homcloud.view_index_pict3d:main
+homcloud-view-vectorized-PD = homcloud.view_vectorized_PD:main
+
