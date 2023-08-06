@@ -1,0 +1,10 @@
+torch_ort/__init__.py,sha256=Op01lCGfuixSWwz9hzKjH3unOZ157Mt-mHax70rqjQE,334
+torch_ort/configure/__main__.py,sha256=8Q24BQqPLckV3QCpYozDB2-ULliWJX_gJ3pqGHcNl6E,447
+torch_ort/experimental/__init__.py,sha256=R3lALo8AG2klv3mAR_9pNdwO0L6-7OHLIOIFh1fuwMs,656
+torch_ort/experimental/debug.py,sha256=Yu1zy54H59vUHoCGsDBhj66f76h5DoDUOzpWYAakUyo,3156
+torch_ort/experimental/graph_config.py,sha256=kShOj0HfwZF1lOHDgrmq5EIMTaYA4wkgedzIQ02GCEg,4489
+torch_ort-1.8.1.dist-info/LICENSE,sha256=6YYQNph-9RlDD1CkNTIYS5-giJy2s6AQKs92URgehXU,1072
+torch_ort-1.8.1.dist-info/METADATA,sha256=uuUQVLSNm5H89VhF9Z67h10_7pWGs3ISoWfyuM3vOAQ,5477
+torch_ort-1.8.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+torch_ort-1.8.1.dist-info/top_level.txt,sha256=WhPBgm3984KoF89q9Hz_0RXELKfeifc8JDoxt6Bpp5w,10
+torch_ort-1.8.1.dist-info/RECORD,,
