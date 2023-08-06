@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: servicestack
+Version: 0.0.4
+Summary: ServiceStack Python Service Clients
+Home-page: https://github.com/ServiceStack/servicestack-python
+Author: ServiceStack, Inc.
+Author-email: team@servicestack.net
+License: BSD-3-Clause
+Keywords: servicestack,client,dotnet
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# servicestack-python
+Python ServiceStack Client
+
+
