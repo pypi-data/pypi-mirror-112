@@ -1,0 +1,21 @@
+mandatory: true
+question: |
+  Help finding Case ID
+subquestion: |
+  There are three places you may be able to find your case number
+  
+  1. The full number may be on the bottom right hand corner of your filed complaint
+  
+  [FILE docassemble.EJCRC:casenoone.png]
+  
+  2. The full number may be under the term and year
+  
+  [FILE docassemble.EJCRC:casenotwo.png]
+  
+  3. The number may need to be interpreted from the last two digits of the year, the month number, and the three or four digit number. 
+  
+  [FILE docassemble.EJCRC:casenothree.png]
+  
+  (Conversion tool coming soon)
+buttons:
+  - Exit: exit

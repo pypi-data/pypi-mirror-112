@@ -1,0 +1,128 @@
+metadata:
+  title: Motion for Writ of Possession
+  temporary session: true
+---
+question: |
+  Praecipe for Writ of Possession (More Information)
+subquestion: |
+  A Praecipe for Writ of Possession may be filed with the court once judgment for possession has been granted.  This court filing enables you to request enforcement of the judgment in the case by the Sheriff’s Office.  
+
+  #### Rule 2974*. Writ of Possession 
+  
+  (a) Where a writ of possession is issued pursuant to a judgment of possession based upon a residential lease containing a warrant of attorney or cognovit provision, the writ shall have attached to the face thereof a notice substantially in the following form -
+  
+  See Form
+
+  (b) The writ and notice shall be served by the sheriff, but no further eviction proceedings shall be undertaken until the expiration of twenty (20) days after the service of the writ and notice. 
+
+  (c) A stay of execution of the writ of possession may be obtained by the filing of a petition therefore in accordance with Pa.R.C.P. 3162, conditioned upon posting of a bond in an amount to be determined by the Court in a manner similar to that required by Pa.R.C.P.J.P. 1008B. 
+
+  (d) Anyone presenting a petition for stay in accordance with subdivision 
+
+  (e) shall make a reasonable attempt to notify the plaintiff or his/her attorney of the date, place and time when the petition for stay will be presented to the Court. 
+
+fields:
+  - I understand: understand
+    datatype: yesnowide
+validation code: |
+  if not understand:
+    validation_error("You cannot continue until you indicate that you understand.")
+---
+question: Thank you, ${ plaintiffname1 }!
+subquestion: |
+  Please download your Motion for Writ of Possession sheet below.
+  
+  YOU MUST FILE THIS SHEET EITHER IN PERSON OR ONLINE.
+  To do so, please follow the instructuions listed here.
+attachment:
+  - name: writ_possession
+    filename: Motion for Writ of Possession
+    docx template file: wop.docx
+    valid formats:
+      - pdf
+buttons:
+  - Exit: exit
+mandatory: True
+
+---
+mandatory: true
+need:
+  understand
+question: |
+  Please complete the information for each plaintiff in this case.
+subquestion: |
+  A plaintiff is a party who is suing/taking the defendant(s) to court.  
+fields:
+  - How many plaintiffs are there?: plaintiffnumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1   
+  - Plaintiff Full Name: plaintiffname1
+  - 2nd Plaintiff Full Name: plaintiffname2
+    js show if: |
+      val('plaintiffnumber') > 1
+  - 3rd Plaintiff Full Name: plaintiffname3
+    js show if: |
+      val('plaintiffnumber') > 2
+---
+question: |
+  Please complete the information for each defendant in this case.
+subquestion: |
+  A defendant is a party (individual, company, or institution) being sued. Name all of the defendants you are trying to remove from the property to the best of your ability. If you do know the names of some of the defendants, you may enter “All Occupants” in the name section.
+fields:
+  - How many defendants are party to the case?: defendantnumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1    
+  - Defendant Full Name: defendantname1
+  - 2nd Defendant Full Name: defendantname2
+    js show if: |
+      val('defendantnumber') > 1 
+  - 3rd Defendant Name: defendantname3
+    js show if: |
+      val('defendantnumber') > 2
+---
+need: 
+  defendantname1
+question: | 
+  Please provide the Case ID number for this case:
+subquestion: |
+  After the complaint is submitted to the filing office and accepted, you should have received a copy of the complaint with the Case ID number at the bottom right corner of the complaint.
+  
+  If you cannot locate the Case ID number, you may either contact the civil filing office or find the number by searching for your case on the [FJD Civil Docket.](http://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_disclaimer)
+  
+  [Click here if you need additional help (opens a separate tab)](${ interview_url(i='docassemble.EJCRC:data/questions/case_id_help.yml') }){:target="_blank"}.
+fields:
+  - Do you have a 9-digit case number?: nines
+    datatype: radio
+    choices: 
+      - Yes
+      - No
+  - 9-digit case number: serial
+    required: false
+    js show if: |
+      val('nines') == 'Yes'
+---
+need: 
+  nines
+question: |
+  Please describe your property (including address) and  sign your name to the description:
+fields:
+  - Property description: propertydescription
+    datatype: area
+---
+need:
+  propertydescription
+question: | 
+  Review your description and sign your name to it below:
+subquestion: |
+  ${ propertydescription }    
+signature: signature1
+under: |
+  ${ plaintiffname1 }
