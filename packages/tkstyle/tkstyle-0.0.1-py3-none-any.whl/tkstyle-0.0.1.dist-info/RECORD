@@ -1,0 +1,17 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tkstyle/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tkstyle/__main__.py,sha256=RnP1DzTTwlf--yvJkbsuV19oEUFQO97j0Atatq54ll4,101
+tkstyle/hooking/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tkstyle/hooking/ante_build_hook.py,sha256=xHHJNXnxb9watd2y7WjAJtYrYatQ5l-nIIue1G0R4gs,457
+tkstyle/hooking/ante_release_hook.py,sha256=0zUaDxzt0xCA-CXaHGYtngfHXqgCVI-LIDorQtLP5sY,4687
+tkstyle/hooking/post_build_hook.py,sha256=OORfwRWkgH7ibBj8g5TQ5qzRu2cUKbl1qzQhFtvdaB8,457
+tkstyle/hooking/post_release_hook.py,sha256=BA0iuoN4Pvur4rRcmEOW6w1U5gy3Cagtf45BG_LmIeM,2183
+tkstyle/pyrustic_data/hooking.json,sha256=-Or3wqYWYBo3a2CmdsgY4zYNTcBqhzE2LBnUi5_61qk,286
+tkstyle/pyrustic_data/hubstore.json,sha256=PYmFHCMCYZJ3_QeuTvBJVDIChqxxv6HuCg09hsXm6vU,166
+tkstyle/pyrustic_data/release_info.json,sha256=0QtfLB58GqQZa7_YpBcLQsitcu_oJiJ-tH3_RbaUP7I,274
+tkstyle-0.0.1.dist-info/LICENSE,sha256=qa7R_AbaR83ZfoUV_42NLm1y03WIzvfz5kcIrGwX-UY,1075
+tkstyle-0.0.1.dist-info/METADATA,sha256=ha4CCW0nQY40Rs_EaOxaHEdvmoHawaynuxsRYWjB5T0,1224
+tkstyle-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tkstyle-0.0.1.dist-info/entry_points.txt,sha256=TPLH-AIazXlEwdmhEIaa9J-l5Gu3jfOMgJxku5YD98c,51
+tkstyle-0.0.1.dist-info/top_level.txt,sha256=VTOjXqr9U9fR_ulDlIc4A4L3nehFhRorbCjBgKGQ3hw,14
+tkstyle-0.0.1.dist-info/RECORD,,
