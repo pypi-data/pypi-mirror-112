@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/nba_history/__init__.py
+src/nba_history/player_data.py
+src/nba_history/team_data.py
+src/nba_history.egg-info/PKG-INFO
+src/nba_history.egg-info/SOURCES.txt
+src/nba_history.egg-info/dependency_links.txt
+src/nba_history.egg-info/requires.txt
+src/nba_history.egg-info/top_level.txt
