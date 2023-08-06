@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pyparsedvd/__init__.py
+pyparsedvd/py.typed
+pyparsedvd/sector.py
+pyparsedvd.egg-info/PKG-INFO
+pyparsedvd.egg-info/SOURCES.txt
+pyparsedvd.egg-info/dependency_links.txt
+pyparsedvd.egg-info/not-zip-safe
+pyparsedvd.egg-info/top_level.txt
+pyparsedvd/vts_ifo/__init__.py
+pyparsedvd/vts_ifo/load.py
+pyparsedvd/vts_ifo/sector_offsets.py
+pyparsedvd/vts_ifo/vts_pgci.py
