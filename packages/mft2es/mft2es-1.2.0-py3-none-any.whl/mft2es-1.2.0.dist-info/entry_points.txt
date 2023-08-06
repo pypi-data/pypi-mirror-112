@@ -1,0 +1,4 @@
+[console_scripts]
+mft2es=mft2es:console_mft2es
+mft2json=mft2es:console_mft2json
+
