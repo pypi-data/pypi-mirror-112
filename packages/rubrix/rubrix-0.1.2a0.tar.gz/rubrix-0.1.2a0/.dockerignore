@@ -1,0 +1,17 @@
+# Ignore everything
+**
+
+# Distribution packages
+!dist/**
+!scripts/**
+!src/**
+!frontend/**
+!docs/**
+!.gitignore
+!pyproject.toml
+!setup.cfg
+!pytest.ini
+!.git/**
+
+**/node_modules/**
+
