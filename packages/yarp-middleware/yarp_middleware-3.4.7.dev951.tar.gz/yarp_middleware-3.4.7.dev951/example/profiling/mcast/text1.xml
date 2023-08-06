@@ -1,0 +1,30 @@
+<!--
+  SPDX-FileCopyrightText: 2006-2021 Istituto Italiano di Tecnologia (IIT)
+  SPDX-FileCopyrightText: 2006-2010 RobotCub Consortium
+  SPDX-License-Identifier: BSD-3-Clause
+-->
+
+<application>
+    <name>mcast Test 1 -- Single source single target</name>
+    <module>
+        <name>yarpdev</name>
+        <node>pc104</node>
+        <parameters>--device fakeFrameGrabber --name /grabber1 --framerate 30</parameters>
+        <tag>grabber1</tag>
+        <stdio>icub15</stdio>
+    </module>
+
+    <module>
+        <name>framerate</name>
+        <parameters>--local /fr1</parameters>
+        <tag>fr1</tag>
+        <node>icub15</node>
+        <stdio>icub15</stdio>
+    </module>
+
+    <connection>
+        <from>/grabber1</from>
+        <to>/fr1</to>
+        <protocol>mcast</protocol>
+    </connection>
+</application>
