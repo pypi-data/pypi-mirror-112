@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: paraloq-installer-experimental
+Version: 0.1.3
+Summary: Facilitates installing paraloq software.
+License: MIT
+Author: Maximilian Arrich
+Requires-Python: >=3.7.1,<4.0.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: GitPython (>=3.1.18,<4.0.0)
+Requires-Dist: boto3 (>=1.17.14,<2.0.0)
+Requires-Dist: click (>=8.0.1,<9.0.0)
+Requires-Dist: cookiecutter (>=1.7.3,<2.0.0)
+Requires-Dist: fastapi (>=0.65.2,<0.66.0)
+Requires-Dist: pre-commit (>=2.13.0,<3.0.0)
+Requires-Dist: pydantic (>=1.8.1,<2.0.0)
+Requires-Dist: pywin32 (>=300,<301); platform_system == "Windows"
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: rich (>=10.1.0,<11.0.0)
+Requires-Dist: typing-extensions (>=3.10.0,<4.0.0)
+Requires-Dist: uvicorn (>=0.14.0,<0.15.0)
+Description-Content-Type: text/markdown
+
+# Paraloq
+
+This is the core package for the paraloq software products. For more information, please refere
+to the docs on GitHub.
+
