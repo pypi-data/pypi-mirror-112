@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: file.utils
+Version: 0.0.1
+Summary: A simple file utility in Python.
+Home-page: https://github.com/nycr1te/file.utils
+Author: Nycrite
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/nycr1te/file.utils/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# file.utils
+
+This is a very simple package which can be used to handle file creation, deletion, and reading,
+A documentation is being built.
+
