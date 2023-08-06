@@ -1,0 +1,7 @@
+biopython<2,>=1.78
+gtfparse<2,>=1
+pandas<2,>=1.0
+requests<3,>=2
+tqdm<5,>=4
+scikit-learn<0.3,>=0.24
+matplotlib<4,>=3.4
