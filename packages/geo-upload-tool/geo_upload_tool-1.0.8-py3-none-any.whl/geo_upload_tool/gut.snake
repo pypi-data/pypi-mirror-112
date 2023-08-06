@@ -1,0 +1,190 @@
+import gzip
+import math
+from geo_upload_tool import sanitize
+
+def conf(k) :
+    return config[sanitize(k)]
+
+def is_gzip(fn) :
+    # check gzip, magic number 1f 8b
+    with open(fn,'rb') as f :
+        return f.read(2) == b'\x1f\x8b'
+
+rule md5sum:
+    input: lambda w: conf(w.path)
+    output: '{dir}/.cache/{path}.md5'
+    shell:
+        'md5sum -b {input} > {output}'
+
+rule readlen:
+    input: lambda w: conf(w.path)
+    output: '{dir}/.cache/{path}.rlen'
+    run:
+        import gzip
+        from itertools import islice
+
+        if is_gzip(input[0]) :
+            f = gzip.open(input[0],'rb')
+        else :
+            f = open(input[0],'rt')
+
+        # estimate the max len using the first 100k reads
+        max_len = 0
+        for header in islice(f,100000) :
+            seq = next(f)
+            next(f)
+            next(f)
+            max_len = max(max_len,len(seq.strip()))
+
+        f.close()
+
+        with open(output[0],'wt') as f :
+            f.write(str(max_len))
+
+def nbases(w) :
+    nbase = 0
+    path = conf(w.seq)
+    rd_f = gzip.open if is_gzip(path) else open
+    with rd_f(conf(w.seq),'rt') as f :
+        for r in f :
+            if r.startswith('>') : continue
+            nbase += len(r.strip())
+    return min(14,int(math.log2(nbase)/2)-1)
+
+rule star_index:
+    input: fa=lambda w: conf(w.seq),
+    output: directory('{path}/{seq}__star')
+    threads: conf('cores')
+    params:
+        gz=lambda w: 'GZ' if is_gzip(conf(w.seq)) else '',
+        nbases=nbases
+    shell:
+        '''
+            mkdir -p {output}
+            if [ "{params.gz}" == "GZ" ]; then
+                FA={input.fa}_gzd
+                zcat {input.fa} > $FA
+                STAR --runMode genomeGenerate \
+                --runThreadN {threads} \
+                --genomeDir {output} \
+                --genomeFastaFiles $FA \
+                --genomeSAindexNbases {params.nbases}
+                rm -f $FA
+            else
+                STAR --runMode genomeGenerate \
+                --runThreadN {threads} \
+                --genomeDir {output} \
+                --genomeFastaFiles {input.fa} \
+                --genomeSAindexNbases {params.nbases}
+            fi
+        '''
+
+def rfc(w) :
+        if is_gzip(conf(w.sample+'_read1')) :
+            return '--readFilesCommand zcat'
+        else :
+            return ''
+rule star:
+    input:
+        r1=lambda w: conf(w.sample+'_read1'),
+        r2=lambda w: conf(w.sample+'_read2'),
+        index=lambda w: conf(w.sample+'_index')
+    output: '{path}/{sample}_Aligned.out.bam'
+    threads: conf('cores')
+    params:
+        rfc=rfc,
+    shell:
+        # take only the first 1M reads to estimate inner mate distance
+        '''
+        STAR --readFilesIn {input.r1} {input.r2} \
+            --genomeDir {input.index} {params.rfc} \
+            --runThreadN {threads} \
+            --outFileNamePrefix {wildcards.path}/{wildcards.sample}_ \
+            --readMapNumber 1000000 \
+            --outSAMtype BAM SortedByCoordinate \
+            --outStd BAM_SortedByCoordinate > {output}
+        '''
+
+rule inner_mate:
+    input: '{path}/{sample}_Aligned.out.bam'
+    output: '{path}/{sample}_Aligned.out.bam_imdstats.csv'
+    run:
+        import csv
+        import statistics # python 3.4+
+        import pysam
+        pysam.index(input[0])
+        sf = pysam.AlignmentFile(input[0],'rb')
+        imd = []
+
+        prev_mean = 0
+        tol = 1e-10
+
+        for read in sf.fetch(until_eof=True) :
+            if read.is_read1 and read.is_proper_pair :
+
+                # heuristic for spliced read: ref skip cigar code greater than 5
+                n_cigar = [n for (c,n) in read.cigartuples if c == 'N']
+                if n_cigar and max(n_cigar) > 5 :
+                    continue
+
+                mate = sf.mate(read)
+
+                # neither read can have a splice junction
+                n_cigar = [n for (c,n) in mate.cigartuples if c == 'N']
+                if n_cigar and max(n_cigar) > 5 :
+                    continue
+
+                coords = (
+                        read.reference_start,
+                        read.reference_start+read.query_length,
+                        mate.reference_start,
+                        mate.reference_start+mate.query_length
+                )
+                fragment_len = max(coords)-min(coords)
+
+                # fragment lengths are supposed to be ~300 nt, but larger
+                # insert distances can occur due to alignment across splice
+                # junctions
+                # assume that any fragment length greater than 600 is an artifact
+                if fragment_len < 600 :
+                    imd.append(fragment_len)
+
+                # adaptive stopping, break when the mean changes less than .1%
+                # from one read to the next, after a burn in of 1000 reads
+                if len(imd) > 1000 :
+                    mean_len = statistics.mean(imd)
+                    if (1-tol) < prev_mean/mean_len < (1+tol) :
+                        break
+                    prev_mean = mean_len
+
+        with open(output[0], 'wt') as f :
+            csv.writer(f).writerow(
+                (
+                    len(imd), # number of paired reads included in calculation
+                    statistics.mean(imd),
+                    statistics.median(imd),
+                    statistics.stdev(imd)
+                )
+            )
+
+# not used, keeping in case I want to use them later
+'''
+cmds = {
+    'symlink': 'ln -s',
+    'copy': 'cp -u'
+}
+rule stage:
+    input: '{dir}/{path}'
+    output: config['outdir']+'/{path}'
+    params:
+        cmd=cmds[config['copy_or_symlink']]
+    shell:
+        'ln -s {input} {output}'
+
+rule fastqc:
+    input: '{dir}/{path}.{ext,(fq|fastq)(.gz)?}'
+    output: '{dir}/.cache/{path}_fastqc.zip'
+    shell:
+        'fastqc -o {wildcards.dir}/.cache/ {input}'
+
+'''
