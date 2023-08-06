@@ -1,0 +1,11 @@
+requests
+tqdm
+ipykernel
+traitlets
+jupyter_core
+importlib-metadata
+numpy
+packaging
+click
+toml
+GitPython
