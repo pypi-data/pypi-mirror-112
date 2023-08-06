@@ -1,0 +1,176 @@
+import logging
+
+from airflow import DAG
+from airflow.kubernetes.secret import Secret
+from airflow.utils.dates import days_ago
+from airflow.utils.task_group import TaskGroup
+from airflow.sensors.external_task import ExternalTaskSensor
+from datetime import timedelta
+
+EXPERIMENT_NAME = "{{ config.run_config.experiment_name | slugify }}"
+
+args = {
+    'owner': 'airflow',
+}
+
+{% if mlflow_url %}
+{{ include_start_mlflow_experiment_operator | safe }}
+{% endif %}
+{% if not config.run_config.volume.disabled %}
+{{ include_create_pipeline_storage_operator | safe }}
+{{ include_delete_pipeline_storage_operator | safe }}
+{% if not config.run_config.volume.skip_init %}
+{{ include_data_volume_init_operator | safe }}
+{% endif %}
+{% endif %}
+{{ include_node_pod_operator | safe }}
+
+with DAG(
+    dag_id='{{ dag_name }}',
+    description='{{ config.run_config.description }}',
+    default_args=args,
+    schedule_interval={% if schedule_interval %}'{{ schedule_interval }}'{% else %}None{% endif %},
+    start_date=days_ago(2),
+    tags=['commit_sha:{{ git_info.commit_sha }}',
+            'generated_with_kedro_airflow_k8s:{{ kedro_airflow_k8s_version }}',
+            'experiment_name:'+EXPERIMENT_NAME],
+    params={},
+) as dag:
+
+    pvc_name = '{{ project_name | safe | slugify }}.{% raw %}{{ ts_nodash | lower  }}{% endraw %}'
+
+    {% if mlflow_url %}
+    start_mlflow_run = StartMLflowExperimentOperator(
+        experiment_name=EXPERIMENT_NAME,
+        mlflow_url='{{ mlflow_url }}',
+        image="{{ image }}",
+    )
+    {% endif %}
+
+    {% if not config.run_config.volume.disabled %}
+    create_pipeline_storage = CreatePipelineStorageOperator(
+        pvc_name=pvc_name,
+        namespace='{{ config.run_config.namespace }}',
+        access_modes={{config.run_config.volume.access_modes | safe}},
+        volume_size='{{ config.run_config.volume.size }}',
+        storage_class_name='{{ config.run_config.volume.storageclass }}'
+    )
+
+    delete_pipeline_storage=DeletePipelineStorageOperator(
+        pvc_name=pvc_name,
+        namespace='{{ config.run_config.namespace }}'
+    )
+
+    {% if not config.run_config.volume.skip_init %}
+    data_volume_init=DataVolumeInitOperator(
+        namespace='{{ config.run_config.namespace }}',
+        pvc_name=pvc_name,
+        image='{{ image }}',
+        image_pull_policy='{{ config.run_config.image_pull_policy }}',
+        startup_timeout={{ config.run_config.startup_timeout }},
+        volume_owner={{ config.run_config.volume.owner }}
+    )
+    {% endif %}
+    {% endif %}
+
+    tasks = {}
+    with TaskGroup("kedro", prefix_group_id=False) as kedro_group:
+    {% for node in pipeline.nodes %}
+        tasks["{{ node.name | slugify }}"] = NodePodOperator(
+            node_name="{{node.name}}",
+            namespace="{{config.run_config.namespace}}",
+            volume_disabled={{config.run_config.volume.disabled}},
+            pvc_name=pvc_name,
+            image="{{ image }}",
+            image_pull_policy="{{ config.run_config.image_pull_policy }}",
+            env="{{env}}",
+            pipeline="{{ pipeline_name }}",
+            task_id="{{ node.name | slugify }}",
+            startup_timeout={{ config.run_config.startup_timeout }},
+            volume_owner={{ config.run_config.volume.owner }},
+            mlflow_enabled={% if mlflow_url %}True{% else %}False{% endif %},
+            requests_cpu="{{resources[node.name].requests.cpu if resources[node.name].requests.cpu}}",
+            requests_memory="{{resources[node.name].requests.memory if resources[node.name].requests.memory}}",
+            limits_cpu="{{resources[node.name].limits.cpu if resources[node.name].limits.cpu}}",
+            limits_memory="{{resources[node.name].limits.memory if resources[node.name].limits.memory}}",
+            node_selector_labels={
+            {%- for key, value in resources[node.name].node_selectors.items() %}
+                "{{ key }}": "{{ value }}",
+                {%- endfor %}
+            },
+            labels={
+            {%- for key, value in resources[node.name].labels.items() %}
+                "{{ key }}": "{{ value }}",
+                {%- endfor %}
+            },
+            tolerations=[
+            {%- for tolerations_items in resources[node.name].tolerations %}
+                {
+                {%- for key, value in tolerations_items.items() %}
+                   "{{ key }}": "{{ value }}",
+                {%- endfor %}
+                },
+            {%- endfor %}
+            ],
+            annotations={
+            {%- for key, value in resources[node.name].annotations.items() %}
+                "{{ key }}": "{{ value }}",
+            {%- endfor %}
+            },
+            secrets=[
+            {%- for secret in secrets %}
+                Secret("{{secret.deploy_type}}", {{  "\"{}\"".format(secret.deploy_target)|safe if secret.deploy_target else None}}, "{{secret.secret}}", {{ "\"{}\"".format(secret.key)|safe if secret.key else None}}),
+            {%- endfor %}
+            ],
+            parameters="""
+            {%- for param in macro_params %}
+                {{ param }}:{{'{{'}} {{  param }} {{ '}}' }},
+                {%- endfor %}
+            {%- for param in variables_params %}
+                {{ param }}:{{'{{ var.value.'}}{{  param }} {{ '}}' }},
+                {%- endfor %}
+            """,
+        )
+    {% endfor %}
+
+    {% for parent_node, child_nodes in dependencies.items() -%}
+    {% for child in child_nodes %}
+        tasks["{{ parent_node.name | slugify }}"] >> tasks["{{ child.name | slugify }}"]
+    {% endfor %}
+    {%- endfor %}
+
+    {% if with_external_dependencies %}
+    {% for dependency in config.run_config.external_dependencies %}
+    with TaskGroup("external_pipelines", prefix_group_id=False):
+        ExternalTaskSensor(external_dag_id='{{ dependency.dag_id }}',
+                            external_task_id='{{ dependency.task_id if dependency.task_id }}',
+                            check_existence={{ dependency.check_existence }},
+                            execution_delta=timedelta(minutes={{ dependency.execution_delta }}),
+                            task_id='wait_for_{{ dependency.dag_id }}_{{ dependency.task_id }}',
+                            timeout={{ dependency.timeout }} * 60,
+                            ) >> kedro_group
+    {% endfor %}
+    {% endif %}
+
+    {% if not config.run_config.volume.disabled %}
+        {% if not config.run_config.volume.skip_init %}
+    create_pipeline_storage >> data_volume_init
+    data_volume_init >> delete_pipeline_storage
+        {% else %}
+    create_pipeline_storage >> delete_pipeline_storage
+        {% endif %}
+    {% endif %}
+
+    {% if mlflow_url %}
+    start_mlflow_run >> kedro_group
+    {% endif %}
+    {% if not config.run_config.volume.disabled and not config.run_config.volume.skip_init %}
+    data_volume_init >> kedro_group
+    {% endif %}
+
+    {% if not config.run_config.volume.disabled %}
+    kedro_group >> delete_pipeline_storage
+    {% endif %}
+
+if __name__ == "__main__":
+    dag.cli()
