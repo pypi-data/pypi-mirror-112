@@ -1,0 +1,17 @@
+click>=7.1.2
+consolekit>=1.2.2
+dom-toml>=0.4.0
+domdf-python-tools>=2.8.0
+first>=2.0.2
+natsort>=7.1.1
+packaging>=20.9
+pyproject-parser>=0.3.0
+shippinglabel>=0.16.0
+
+[all]
+docutils==0.16
+pyproject-parser[readme]>=0.3.0
+
+[readme]
+docutils==0.16
+pyproject-parser[readme]>=0.3.0
