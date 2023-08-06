@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: pysimplevcs
+Version: 0.6
+Summary: Python helpers for interacting with VCSs
+Home-page: https://github.com/rcook/pysimplevcs
+Author: Richard Cook
+Author-email: rcook@rcook.org
+License: MIT
+Description: # pysimplevcs
+        [![View on PyPI](https://img.shields.io/pypi/v/pysimplevcs.svg)](https://pypi.python.org/pypi/pysimplevcs)
+        [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/rcook/pysimplevcs/master/LICENSE)
+        
+        Simple wrappers around `git` and `hg` commands etc.
+        
+        ## Licence
+        
+        [MIT License][licence]
+        
+        Copyright &copy; 2017 Richard Cook
+        
+        [licence]: LICENSE
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
