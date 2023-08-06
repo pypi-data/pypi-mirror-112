@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: ikea_api
+Version: 0.1.3
+Summary: IKEA API Client
+Home-page: https://github.com/vrslev/ikea-api-client
+Author: vrslev
+Author-email: 5225148+vrslev@users.noreply.github.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: aiohttp>=3.7.4
+Requires-Dist: requests>=2.26.0
+Requires-Dist: brotli>=1.0.9
+Requires-Dist: bs4>=0.0.1
+
+# IKEA API Client
+
+Manage cart, check available delivery options, lookup your purchase history.
+
+## Features
+
+### Cart
+
+-   add, delete and update items
+-   copy cart from another user
+-   set and delete coupon
+-   show
+-   clear
+
+### Order Capture
+
+-   get available delivery services
+
+### Purchase
+
+-   get history
+-   get order info (can be used without authorization by login)
+
+### Get items specs
+
+## Example
+
+```python
+from ikea_api import get_guest_token, Cart, OrderCapture
+
+token = get_guest_token()
+cart = Cart(token)
+cart.add_items({'30457903': 1})
+order_capture = OrderCapture(token, zip_code='101000')
+services = order_capture.get_delivery_services()
+print(services)
+```
+
+## Installation
+
+```bash
+pip install git+git://github.com/vrslev/ikea-api-client.git@master
+```
+
