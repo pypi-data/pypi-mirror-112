@@ -1,0 +1,15 @@
+numpy
+astropy
+boto3
+ts-dds
+ts-ddsconfig
+ts-idl>=1.2
+
+[dev]
+numpy
+astropy
+boto3
+ts-dds
+ts-ddsconfig
+ts-idl>=1.2
+documenteer[pipelines]
