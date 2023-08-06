@@ -1,0 +1,10 @@
+setup.py
+otumba/Binomialdistribution.py
+otumba/Gaussiandistribution.py
+otumba/Generaldistribution.py
+otumba/__init__.py
+otumba.egg-info/PKG-INFO
+otumba.egg-info/SOURCES.txt
+otumba.egg-info/dependency_links.txt
+otumba.egg-info/not-zip-safe
+otumba.egg-info/top_level.txt
