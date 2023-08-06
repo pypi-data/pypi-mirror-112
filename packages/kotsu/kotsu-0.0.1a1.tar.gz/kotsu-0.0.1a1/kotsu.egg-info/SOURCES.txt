@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+versioneer.py
+kotsu/__init__.py
+kotsu/_version.py
+kotsu/kotsu.py
+kotsu.egg-info/PKG-INFO
+kotsu.egg-info/SOURCES.txt
+kotsu.egg-info/dependency_links.txt
+kotsu.egg-info/top_level.txt
+tests/__init__.py
+tests/test_kotsu.py

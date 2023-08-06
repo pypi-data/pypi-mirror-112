@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: kotsu
+Version: 0.0.1a1
+Summary: Lightweight framework for structured and repeatable model validation
+Home-page: https://github.com/datavaluepeople/kotsu
+Author: datavaluepeople
+Author-email: opensource@datavaluepeople.com
+License: MIT
+Description: # kotsu
+        Lightweight framework for structured and repeatable model validation
+        
+        ## License
+        
+        [MIT](LICENSE.txt)
+        
+        
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
