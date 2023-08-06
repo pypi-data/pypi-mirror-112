@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: easyterm
+Version: 0.1.4
+Summary: convenient python functions for everyday use of terminal
+Home-page: https://github.com/marco-mariotti/easyterm
+Author: Marco Mariotti
+Author-email: marco.mariotti.mm@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Easyterm : convenient python functions for everyday use of terminal
+
+Features:
+- printing in colors (fn: write, printerr)
+- print service messages to be refreshed, e.g. progress bars (fn: service)
+- manage command line options with minimal coding  (fn: command_line_options)
+
+
+
+
