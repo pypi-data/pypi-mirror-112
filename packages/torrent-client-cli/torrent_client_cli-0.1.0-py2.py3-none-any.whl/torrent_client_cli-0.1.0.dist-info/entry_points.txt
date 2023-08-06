@@ -1,0 +1,3 @@
+[console_scripts]
+torrent_client_cli = torrent_client_cli.cli:main
+
