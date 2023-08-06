@@ -1,0 +1,13 @@
+setuptools
+pyrsistent
+pushcollector
+paramiko
+requests
+pubtools-pyxis
+six
+python-qpid-proton==0.34.0
+monotonic
+iiblib
+pubtools-iib
+
+# -e git+https://code.engineering.redhat.com/gerrit/rhmsg#egg=rhmsg-0.9
