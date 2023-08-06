@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: thtools
+Version: 0.0.1
+Summary: A library for the analysis of toehold switch riboregulators.
+Home-page: UNKNOWN
+Author: Lucas Ng
+Author-email: lkn849@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: eel (>=0.14.0)
+Requires-Dist: nupack (>=4.0.0)
+Requires-Dist: pathos (>=0.2.8)
+Requires-Dist: prettytable (>=2.1.0)
+Requires-Dist: psutil (>=5.8.0)
+
+# thtools
+
+A library for the analysis of toehold switch riboregulators.
+
+## License
+[MIT](LICENSE)
+
