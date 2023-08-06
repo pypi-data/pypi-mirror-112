@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: ninty
+Version: 0.0.8
+Summary: C++ extension with functions for which python is too slow.
+Home-page: https://github.com/kinnay/ninty
+Author: Yannik Marchand
+Author-email: ymarchand@me.com
+License: GPLv3
+Description: C++ extension with functions for which python is too slow.
+Platform: UNKNOWN
