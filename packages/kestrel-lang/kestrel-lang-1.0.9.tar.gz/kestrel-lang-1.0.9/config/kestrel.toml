@@ -1,0 +1,31 @@
+# Kestrel Core Configuration File
+#
+# This config file should be a two-level dictionary.
+# No more levels are allowed.
+#
+# The user config (if exists) will override the system config
+# - user config: ~/.config/kestrel/kestrel.toml
+
+[session]
+local_database_path = "local.db"
+debug_env_var_name = "KESTREL_DEBUG"
+
+[language]
+default_variable = "_"
+default_sort_order = "desc"
+default_datasource_schema = "stixshifter"
+default_analytics_schema = "docker"
+
+[stixquery]
+timerange_start_offset = -300 # seconds
+timerange_stop_offset = 300 # seconds
+support_id = false # STIX 2.0 does not support unique ID
+
+[prefetch]
+# prefetch all records/observations for entities
+get = true
+find = true
+process_name_change_timerange_start_offset = -5 # seconds
+process_name_change_timerange_stop_offset = 5 # seconds
+process_lifespan_start_offset = -10800 # seconds
+process_lifespan_stop_offset = 10800 # seconds
