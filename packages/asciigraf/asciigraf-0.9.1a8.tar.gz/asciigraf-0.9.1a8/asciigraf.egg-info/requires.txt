@@ -1,0 +1,9 @@
+colorama
+
+[:python_version < "3.7"]
+networkx<2.6,>=1.11
+
+[test]
+pytest
+pytest-cov
+flake8
