@@ -1,0 +1,25 @@
+{#-------------------------------Help Page------------------------------------#}
+{#
+Generate a help page for a entity.
+Input:
+    topic: properties defining the entity
+Output: Generates the page Help:<topic.name>
+#}
+{#-------------------------------Template-------------------------------------#}
+== Help for {{ topic.name }} ==
+{{ topic.query_topic_overview() }}
+=== Documentation ===
+{{ topic.wiki_documentation }}
+=== Example {{ topic.plural_name }} ===
+{{ topic.query_examples() }}
+=== Properties ===
+{{ topic.query_entity_properties()}}
+=== uml ===
+{% include "uml.jinja" %}
+
+== See also ==
+{{ SMWPart.getAllAsPageLink(topic) }}
+== Topics ==
+{# Add all topics that are related to this topic as list of page links -#}
+{{ SMW.render_as_list(map(Topic.get_page_link, topic.get_related_topics(properties))) }}
+
