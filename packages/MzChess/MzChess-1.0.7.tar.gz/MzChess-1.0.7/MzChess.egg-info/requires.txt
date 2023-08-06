@@ -1,0 +1,4 @@
+PyQt5>=5.11.0
+PyQtChart>=5.11.0
+chess>=1.4
+ply>=3.11
