@@ -1,0 +1,22 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+EMPeaks/EMPeaks.egg-info/PKG-INFO
+EMPeaks/EMPeaks.egg-info/SOURCES.txt
+EMPeaks/EMPeaks.egg-info/dependency_links.txt
+EMPeaks/EMPeaks.egg-info/top_level.txt
+EMPeaks/GaussianMixture/__init__ 2.py
+EMPeaks/GaussianMixture/__init__.py
+EMPeaks/GaussianMixture/_em 2.py
+EMPeaks/GaussianMixture/_em.py
+EMPeaks/GaussianMixture/_gmm 2.py
+EMPeaks/GaussianMixture/_gmm.py
+EMPeaks/GaussianMixture/_spectrum_adapted_em 2.py
+EMPeaks/GaussianMixture/_spectrum_adapted_em.py
+EMPeaks/GaussianMixture/Tests/__init__.py
+EMPeaks/GaussianMixture/Tests/_test_data.py
+EMPeaks/GaussianMixture/Tests/_test_em.py
+EMPeaks/GaussianMixture/Tests/_test_exp_data.py
+EMPeaks/GaussianMixture/Tests/_test_sepctrum_adapted_em.py
