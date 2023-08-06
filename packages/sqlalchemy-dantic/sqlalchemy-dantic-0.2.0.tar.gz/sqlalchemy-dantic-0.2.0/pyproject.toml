@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "sqlalchemy-dantic"
+version = "0.2.0"
+description = "Tools to convert SQLAlchemy models to Pydantic models.Thanks project 'pydantic-sqlalchemy'."
+authors = ["Chise1 <chise123@live.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+sqlalchemy = "^1.3.16"
+pydantic = "^1.5.1"
+
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.770"
+black = "^19.10b0"
+isort = "^4.3.21"
+pytest = "^5.4.1"
+sqlalchemy-stubs = "^0.3"
+pytest-cov = "^2.8.1"
+sqlalchemy-utc = "^0.10.0"
+autoflake = "^1.3.1"
+flake8 = "^3.7.9"
+
+[tool.poetry.extras]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry-version-plugin]
+source = "init"
+
+[[tool.poetry.source]]
+url = "https://mirrors.aliyun.com/pypi/simple/"
+name = "aliyun"
+default = true
