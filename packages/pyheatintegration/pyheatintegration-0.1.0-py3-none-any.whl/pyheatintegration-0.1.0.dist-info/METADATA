@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pyheatintegration
+Version: 0.1.0
+Summary: Heat Integration
+Home-page: https://github.com/tarao1006/pyheatintegration
+Author: Taiga Katarao
+Author-email: taiga4562@gmail.com
+License: MIT
+Keywords: chemical-engineering,heat-integration,heat-exchanger
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Japanese
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# pyheatintegration
+
+ヒートインテグレーションを支援します。
+
+## Requirements
+
+- Python >= 3.9
+
+## License
+
+MIT
+
+
