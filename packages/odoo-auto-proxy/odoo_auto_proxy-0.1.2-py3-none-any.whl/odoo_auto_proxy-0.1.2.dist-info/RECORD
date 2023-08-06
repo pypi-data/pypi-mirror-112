@@ -1,0 +1,14 @@
+odoo_auto_proxy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoo_auto_proxy/__main__.py,sha256=-j-yBftHjcb2W93D_5EH9K4sn4PjqTQofM6yoHeayLM,46
+odoo_auto_proxy/args.py,sha256=iU-92OS_T5oqeJR4f9ZIc77whAWXbNR10yAkx17ymOE,1507
+odoo_auto_proxy/certificate.py,sha256=4t_galTDEC2SMcop12jO9LrLuomS2wNN8de2lIsb1ek,2087
+odoo_auto_proxy/defaults.py,sha256=gWahz2dDORDGM250EVnPr0OO5q0P2sIXIh4kMpgdzrI,583
+odoo_auto_proxy/docker_config.py,sha256=dNWcXucN1aZFa-hVyLZXNB-4Gutz2LBUAGOzLX0cMJo,1254
+odoo_auto_proxy/docker_event_listener.py,sha256=xu1qebb5TXDD7PiD5VjamwhE4TgpK0gZZBQo_5Ztiy4,1681
+odoo_auto_proxy/nginx.py,sha256=oLnTy5yggijVAhMNBUr_Bep7JoGv9_-falmNKY3yr2s,1673
+odoo_auto_proxy/utils.py,sha256=kvwttTbJXN8xy0F8kq2xiPNiKmv4RHYaTANRkEtq7FE,1357
+odoo_auto_proxy-0.1.2.dist-info/LICENSE,sha256=px5NVLAMU2uBhRISLuru87Qa9HZEFisR4MJ0RznQeXI,1066
+odoo_auto_proxy-0.1.2.dist-info/METADATA,sha256=m8EsEtvPshNF3PjLESOe2EBo6C212ndu7WoHoD3zku4,2428
+odoo_auto_proxy-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+odoo_auto_proxy-0.1.2.dist-info/top_level.txt,sha256=iSUebbntpXsattfVWvUiF6fEsj6cCefZL2lY6Pz9t5k,16
+odoo_auto_proxy-0.1.2.dist-info/RECORD,,
