@@ -1,0 +1,10 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+src/h5pPlugin.egg-info/PKG-INFO
+src/h5pPlugin.egg-info/SOURCES.txt
+src/h5pPlugin.egg-info/dependency_links.txt
+src/h5pPlugin.egg-info/top_level.txt
+src/h5pPlugin_package/__init__.py
+src/h5pPlugin_package/iframe.py
