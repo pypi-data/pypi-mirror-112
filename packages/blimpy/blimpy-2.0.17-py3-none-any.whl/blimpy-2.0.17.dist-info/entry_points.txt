@@ -1,0 +1,12 @@
+[console_scripts]
+bl_scrunch = blimpy.bl_scrunch:cmd_tool
+bldice = blimpy.dice:cmd_tool
+calcload = blimpy.calcload:cmd_tool
+fil2h5 = blimpy.fil2h5:cmd_tool
+h52fil = blimpy.h52fil:cmd_tool
+matchfils = blimpy.match_fils:cmd_tool
+rawhdr = blimpy.rawhdr:cmd_tool
+rawutil = blimpy.guppi:cmd_tool
+stax = blimpy.stax:cmd_line
+watutil = blimpy.waterfall:cmd_tool
+
