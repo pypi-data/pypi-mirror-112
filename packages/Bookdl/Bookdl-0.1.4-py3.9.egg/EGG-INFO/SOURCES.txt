@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+Bookdl/__init__.py
+Bookdl/books.py
+Bookdl/logger.py
+Bookdl/pdfdrive.py
+Bookdl/save.py
+Bookdl.egg-info/PKG-INFO
+Bookdl.egg-info/SOURCES.txt
+Bookdl.egg-info/dependency_links.txt
+Bookdl.egg-info/requires.txt
+Bookdl.egg-info/top_level.txt
+scripts/Bookdl
