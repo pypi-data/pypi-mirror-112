@@ -1,0 +1,8 @@
+[console_scripts]
+buildsummary = LaueTools.FileSeries.Build_Summary:start
+indexrefine = LaueTools.FileSeries.Index_Refine:start
+lauetools = LaueTools.LaueToolsGUI:start
+peaksearch = LaueTools.FileSeries.Peak_Search:start
+plotmap = LaueTools.FileSeries.Plot_Maps2:start
+plotmeshGUI = LaueTools.plotmeshspecGUI:start
+
