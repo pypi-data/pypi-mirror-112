@@ -1,0 +1,14 @@
+README.rst
+setup.py
+trustregion/__init__.py
+trustregion/interface.py
+trustregion/trsapp.f90
+trustregion/trsbox.f90
+trustregion/trslin.f90
+trustregion/version.py
+trustregion.egg-info/PKG-INFO
+trustregion.egg-info/SOURCES.txt
+trustregion.egg-info/dependency_links.txt
+trustregion.egg-info/requires.txt
+trustregion.egg-info/top_level.txt
+trustregion.egg-info/zip-safe
