@@ -1,0 +1,9 @@
+enhancements>=0.2.1
+paramiko
+pytz
+sshpubkeys
+pyyaml
+packaging
+
+[plugins]
+ssh-mitm-plugins
