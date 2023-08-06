@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/upapp/__init__.py
+src/upapp/upapp.py
+src/upapp.egg-info/PKG-INFO
+src/upapp.egg-info/SOURCES.txt
+src/upapp.egg-info/dependency_links.txt
+src/upapp.egg-info/top_level.txt
