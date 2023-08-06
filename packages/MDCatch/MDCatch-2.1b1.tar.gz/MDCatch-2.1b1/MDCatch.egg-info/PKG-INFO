@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: MDCatch
+Version: 2.1b1
+Summary: Fetch metadata from EPU / SerialEM and launch on-the-fly pre-processing
+Home-page: https://github.com/azazellochg/MDCatch
+Author: Grigory Sharov
+Author-email: gsharov@mrc-lmb.cam.ac.uk
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/azazellochg/MDCatch/issues
+Project-URL: Source, https://github.com/azazellochg/MDCatch
+Description: See https://github.com/azazellochg/MDCatch for more details
+Keywords: cryo-em python qt5 epu serialem
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
