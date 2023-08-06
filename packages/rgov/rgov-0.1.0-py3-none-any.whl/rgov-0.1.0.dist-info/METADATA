@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: rgov
+Version: 0.1.0
+Summary: 
+Author: Jordan Sweet
+Author-email: jsbmgcontact@protonmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cleo (>=0.8.1,<0.9.0)
+Requires-Dist: fake-useragent (>=0.1.11,<0.2.0)
+Requires-Dist: grequests (>=0.6.0,<0.7.0)
+Requires-Dist: html5lib (>=1.1,<2.0)
+Requires-Dist: lxml (>=4.6.3,<5.0.0)
+Requires-Dist: numpy (>=1.21.0,<2.0.0)
+Requires-Dist: python-daemon (>=2.3.0,<3.0.0)
+Requires-Dist: python-language-server (>=0.36.2,<0.37.0)
+Requires-Dist: python-lsp-server (>=1.0.1,<2.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
