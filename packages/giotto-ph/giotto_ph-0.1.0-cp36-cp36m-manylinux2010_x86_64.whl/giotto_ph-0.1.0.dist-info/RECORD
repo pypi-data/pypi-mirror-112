@@ -1,0 +1,12 @@
+giotto_ph-0.1.0.dist-info/LICENSE,sha256=wiv9A2iMcIYnFR9B2R0f9McuWnQYBHxQ5zLh3j7mN4g,35192
+giotto_ph-0.1.0.dist-info/METADATA,sha256=84MWW2X47SCMvNcA8sYIiXZAYRbqbE9t8TyEYXToyW0,7302
+giotto_ph-0.1.0.dist-info/top_level.txt,sha256=VY7JNFK1ziu4gNFeDEd7UqJthhMsYdylwSXFxf4CX6U,4
+giotto_ph-0.1.0.dist-info/RECORD,,
+giotto_ph-0.1.0.dist-info/WHEEL,sha256=0k8JcxMWZX7TJIi6JFgSy7UEc0KxSHdqNxJk5plm2FY,112
+gph/_version.py,sha256=ngihwFLU2Qp9U-pQNFMvagIMov7zs7xjW8M7PxZP_PY,594
+gph/__init__.py,sha256=FdbK8V0KBgI6eg4uIjzqsrmMmC21wukp_X6NbRtsB9I,82
+gph/modules/gph_ripser_coeff.cpython-36m-x86_64-linux-gnu.so,sha256=zSnk2eUG-iFZr8Tv0mp-PzORxlVJNE_uQXFEOQjvX44,467528
+gph/modules/gph_ripser.cpython-36m-x86_64-linux-gnu.so,sha256=PtPknw1bN1oGj0vfujBbh74dMKuZYrw-sz-5nIEPPrU,463432
+gph/modules/gph_collapser.cpython-36m-x86_64-linux-gnu.so,sha256=j1nuQ2pbP5Gq3Vw4SVE5XdmfdY4F8s2_-blqKzmhmY4,184072
+gph/python/__init__.py,sha256=gATvzJV3iGeaM8iuvRLeE9e-ZjSarmCM6N4o-Z3VubA,46
+gph/python/ripser_interface.py,sha256=88rHHvjdXYsb7qWAzG1yQSwARDxZnb-iqUnzjDWu5SU,19974
