@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: chip-data-team-py-slack-notifier
+Version: 0.1.0
+Summary: Processes notifications from SNS or custom and sends them to slack.     
+Home-page: UNKNOWN
+Author: Bernard Louis Alecu
+Author-email: louis.alecu@getchip.uk
+License: LICENSE
+Platform: UNKNOWN
+Requires-Dist: slack-sdk
+Requires-Dist: pytest
+
+Datya Team Py Slack Notifier
+
+This package receives a custom/SNS notification with the details of a process
+that ran and sends a message to Slack with the outcome.
+
+
