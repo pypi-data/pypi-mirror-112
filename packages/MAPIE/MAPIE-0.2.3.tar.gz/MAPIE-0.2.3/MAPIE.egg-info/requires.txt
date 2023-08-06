@@ -1,0 +1,14 @@
+scikit-learn
+
+[docs]
+sphinx
+sphinx-gallery
+sphinx_rtd_theme
+numpydoc
+matplotlib
+
+[tests]
+flake8
+mypy
+pytest
+pytest-cov
