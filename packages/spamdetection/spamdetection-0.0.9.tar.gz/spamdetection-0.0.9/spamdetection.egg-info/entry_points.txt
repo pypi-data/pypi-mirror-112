@@ -1,0 +1,3 @@
+[console_scripts]
+spam-detection = spamdetection.__main__:main
+

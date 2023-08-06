@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+spamdetection/SpamDetector.py
+spamdetection/__init__.py
+spamdetection/__main__.py
+spamdetection/app.py
+spamdetection/params.py
+spamdetection.egg-info/PKG-INFO
+spamdetection.egg-info/SOURCES.txt
+spamdetection.egg-info/dependency_links.txt
+spamdetection.egg-info/entry_points.txt
+spamdetection.egg-info/requires.txt
+spamdetection.egg-info/top_level.txt
+spamdetection/Model/sms_model_v1.pkl

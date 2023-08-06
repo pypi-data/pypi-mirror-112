@@ -1,0 +1,3 @@
+include spamdetection/Model/*.pkl
+include README.md
+include spamdetection/*.py
