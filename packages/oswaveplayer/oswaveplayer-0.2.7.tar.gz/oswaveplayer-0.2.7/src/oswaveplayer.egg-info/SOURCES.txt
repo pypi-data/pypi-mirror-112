@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/oswave/__init__.py
+src/oswave/oswaveplayer.py
+src/oswaveplayer.egg-info/PKG-INFO
+src/oswaveplayer.egg-info/SOURCES.txt
+src/oswaveplayer.egg-info/dependency_links.txt
+src/oswaveplayer.egg-info/top_level.txt
