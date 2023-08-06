@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+black = "*"
+flit = "*"
+coverage = "*"
+flake8 = "*"
+mccabe = "*"
+mypy = "*"
+pylint = "*"
+pytest = "*"
+tox = "*"
+pytest-cov = "*"
+
+[pipenv]
+allow_prereleases = true
