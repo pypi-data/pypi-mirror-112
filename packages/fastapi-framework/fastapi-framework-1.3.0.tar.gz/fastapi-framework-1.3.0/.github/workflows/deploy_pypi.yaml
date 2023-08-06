@@ -1,0 +1,29 @@
+name: Build and Deploy PyPi
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.6"
+
+      - name: Install Flit
+        run: pip install flit
+
+      - name: Publish
+        env:
+          FLIT_USERNAME: ${{ secrets.FLIT_USERNAME }}
+          FLIT_PASSWORD: ${{ secrets.FLIT_PASSWORD }}
+        run: flit publish
