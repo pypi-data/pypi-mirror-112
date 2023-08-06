@@ -1,0 +1,4 @@
+[console_scripts]
+hhstrip = scapy_helper.utils.hhstrip:hhstrip
+hstrip = scapy_helper.utils.hstrip:hstrip
+
