@@ -1,0 +1,315 @@
+Metadata-Version: 2.1
+Name: litcorpt
+Version: 0.0.3
+Summary: API to access Portuguese Literary Corpus
+Home-page: https://github.com/igormorgado/litcorpt
+Author: Igor Morgado
+Author-email: morgado.igor@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/igormorgado/litcorpt/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# WRITE ABOUT:
+
+  - .env file
+
+  - update book structure
+
+# litcorpt
+
+**LIT**erary **COR**pus in **P**or**T**uguese is a API to access a literary
+corpus in portuguese language.
+
+The API provides access to the corpus without all the fuzz to download and write
+a loader for different types of data sources. It is exposed as a simple document
+database.
+
+
+## How to install.
+
+Simply:
+
+```
+pip install litcorpt
+```
+
+## Getting started
+
+After installation in you Python just
+
+```
+import litcorpt
+from pprint  import pprint as pp
+corpus_db = litcorpt.corpus_load()
+print(f'There are {len(corpus_db)} documents in corpus')
+```
+
+It will load the whole corpus. When running by the first time, it will download
+from internet, process and build the whole dataset.
+
+The download size is around 115MB and is automaticly handled by the library. It
+is downloaded just at first time you load it. After the first time it will load
+from local disk. The time to load data locally takes around 34 ms. This value
+was measured in my own computer (your mileage may vary).
+
+## Basic Usage
+
+Most of time you just want to retrieve the whole corpus as a list of documents.
+You can do that with this one liner.
+
+```
+corpus = litcorpt.corpus(corpus_db)
+```
+
+This operation just append to a list all contents for all documents. Since a
+document may have more than one content.
+
+## Advanced usage
+
+Besides the fetchall usage, many custom queries can be done. Is possible to
+search by matches, regexes, fields.
+
+### All book titles of an author (Eça de Queirós)
+
+We are ignoring documents where Queirós is an editor.
+
+As a regular `for` loop
+
+```
+q = litcorpt.Query()
+search = corpus_db.search(q.creator.any((q.lastname == 'Queirós') &
+                                        (q.firstname == 'Eça de')))
+
+titles = []
+for document in search:
+  titles.append(document['title'])
+
+pp(titles)
+
+```
+
+As a list comprehension shorter but harder to read.
+
+```
+q = litcorpt.Query()
+titles = [ document['title'] for document in corpus_db.search(q.creator.any((q.lastname == 'Queirós') & (q.firstname == 'Eça de')))]
+pp(titles)
+```
+
+### Building a corpus with Eça de Queirós
+
+
+```
+q = litcorpt.Query()
+search = (q.creator.any((q.lastname == 'Queirós') & (q.firstname == 'Eça de')))
+queiros_corpus = litcorpt.corpus(corpus_db, search)
+pp(queiros_corpus)
+```
+
+### Building a bibliography
+
+Here we handle the case where there is no author.
+
+```
+documents = corpus_db.all()
+
+bibliography = []
+for document in documents:
+    creators = []
+    for creator in document.get('creator', [{'lastname': 'Anonymous'}]):
+        creators.append(', '.join(filter(None, list(creator.values())[1:3])))
+    bibliography.append(f'{" and ".join(creators)}. {document["title"][0].strip()}.')
+
+pp(bibliography)
+```
+
+### Count documents by Author Surname
+
+Here we use Python's Counter to count the surnames and using a dict
+comprehension to filter the authors that occurs more than 5 times. You still can
+access the whole counting the `lastnames` variable
+
+
+As a list comprehension
+
+```
+q = litcorpt.Query()
+from collections import Counter
+lastnames = Counter([ creator['lastname'] for document in corpus_db.search(q.creator.exists()) for creator in document['creator'] ])
+most_common_surnames = {lastname: count for lastname, count in lastnames.items() if count >= 5}
+
+print(most_common_surnames)
+```
+
+Unrolling the comprehension
+
+```
+q = litcorpt.Query()
+from collections import Counter
+
+lastnames = []
+
+for document in corpus_db.search(q.creator.exists()):
+  for creator in document['creator']:
+    lastnames.append(creator['lastname'])
+
+lastnames = Counter(lastnames)
+
+most_common_surnames = {}
+for lastname, count in lastnames.items():
+  if count >= 5:
+    most_common_surnames[lastname] = count
+```
+
+Extra: Sorting by decreasing frequency, then alphabeticaly.
+
+```
+sorted(most_common_surnames.items(), key=lambda item: (-item[1], item[0]))
+```
+
+
+### Display all Subjects
+
+First we group all subjects
+
+```
+q = litcorpt.Query()
+subjects = []
+for document in corpus_db.search(q.subject.exists()):
+  if document['subject'] is not None:
+    subjects.extend(document['subject'])
+```
+
+Then we can count, and sort by descending frequency (Python 3.6> dicts are
+ordered by default).
+
+```
+from collections import Counter
+subject_frequency = Counter(subjects)
+subject_frequency = dict(sorted(subject_frequency.items(), key=lambda item: -item[1]))
+```
+
+And also group the unique items for reference.
+
+```
+subject_list = list(subject_frequency.keys())
+```
+
+### Building a corpus given a list of Subjects
+
+First we pick a list of subjects (this is just an example with a few valid
+entries, and some not valid).
+
+```
+subjects = [ 'portuguese drama',
+             'france',
+             'drama',
+             'women',
+             '<INVALID SUBJECT>' ]
+```
+
+Then we proceed with search and corpus building
+
+```
+q = litcorpt.Query()
+search = corpus_db.search(q.subject.any(subjects))
+drama_corpus = [ document for documents in search for document in documents['contents'] ]
+```
+
+If we want we can easily list the titles in our new *drama_corpus*
+
+```
+titles = [ document['title'] for document in search ]
+```
+
+Of course we can do the same by any of the fields in document.
+
+### Retrieving a document by ID
+
+```
+q = litcorpt.Query()
+search  = q.creator.any((q.lastname == 'Macedo') & (q.firstname == 'Joaquim Manuel de'))
+doc_ids = litcorpt.doc_id(corpus_db, search)
+
+for doc_id in doc_ids:
+  print(corpus_db.get(doc_id=doc_id)['title'])
+```
+
+## The structure of a document.
+
+The corpus database is a list of documents. A document is often related with a
+literary document (book, text, play, etc) and contains the following fields:
+
+index:             An unique string to internaly identify the entry.
+title:             A list of titles associated to the entry. Often is
+                   a list with a single element.
+creator:           A list of creators. Each creator contains:
+                       Role: Creator relationship with the book entry
+                       LastName: creator last name, often used in bibliography,
+                       FirstName: creator given name,
+                       Birth: Creator's birth year.
+                       Death: Creator's death year.
+                       Place: Creator's birth place.
+language:          A list of ISO entry with language, pt_BR or pt are the
+                   most common here.  A document can contain many languages.
+                   Most of time just one.
+published:         Date of first publish. Multiple edition should use the
+                   date of first edition. Except when large changes happened
+                   in document, as change of translator, change of ortography.
+identifier:        A unique global identifier, often a ISBN13 for books.
+original_language: Original language of document. Using ISO entry for language.
+subject:           A list entry subjects. As example: Fantasy, Science-Fiction, Kids.
+                   Use lower caps always.
+genre:             A list of literary genre: Novel, Poetry, Lyrics, Theather.
+                   Use lower caps always.
+ortography:        Reference to which Portuguese ortography is being used.
+abstract:          The book abstract/resume.
+notes:             Any notes worth of note.
+contents:          Book contents. The text itself.
+
+Caution: Date fields must contain a datetime.date or a string in format "YYYY-MM-DD"
+
+## Customizing
+
+By default, the corpus is stored at
+
+```
+${HOME}/litcorpt_data
+```
+
+If you wish to put in a different place, just set the  `CORPUS_DATAPATH`
+environment variable in your system configuration. For example for bash, add
+this to your  `~/.bashrc`
+
+```
+export CORPUS_DATAPATH="/whatever/place/you/want"
+```
+
+Then call your programs using `litcorpt` or your `ipython` session
+
+## TODO
+
+  - Maybe build some custom functions to handle the most common filter use
+    cases.
+      - Given a search return doc_ids (DONE)
+      - Given a search return corpus (DONE)
+      - Given a search return authors
+
+  - Function to print corpus statistics as:
+      1. Number of authors.
+      2. Number of books.
+      3. Number of words.
+      4. Maybe more later...
+      This function may be a good way to write some use cases.
+
+  - Rewrite DOCSTRINGS using numpy style:
+    https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard
+
+
+

@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/litcorpt/__init__.py
+src/litcorpt/main.py
+src/litcorpt/model.py
+src/litcorpt/utils.py
+src/litcorpt.egg-info/PKG-INFO
+src/litcorpt.egg-info/SOURCES.txt
+src/litcorpt.egg-info/dependency_links.txt
+src/litcorpt.egg-info/requires.txt
+src/litcorpt.egg-info/top_level.txt
