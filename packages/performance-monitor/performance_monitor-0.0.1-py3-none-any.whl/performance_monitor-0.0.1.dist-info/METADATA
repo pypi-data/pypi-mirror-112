@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: performance-monitor
+Version: 0.0.1
+Summary: Simple Decorator to check the time took by a function to get executed.
+Home-page: https://github.com/niksingh710/performance-monitor
+Author: Nikhil Singh
+Author-email: nik.singh710@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Performance Monitor
+
+Simple Decorator to represent the time took by a function execution.
+
+## Installation
+
+Run the following to install:
+
+```python
+pip install performance-monitor
+```
+
+## Usage
+
+```python
+from performance_monitor import *
+
+@performance
+def my_func():
+    for _ in range(1000000):
+        pass
+
+my_func()
+
+# Output
+'''
+
+:-: my_func --> 18.163681030273438 ms
+
+'''
+
+```
+
+## Options
+
+| Unit             | Decorator        |
+| ---------------- | ---------------- |
+| millisecond (ms) | @performance     |
+| second (sec)     | @performance_sec |
+| minute (min)     | @performance_min |
+| hour (hr)        | @performance_hr  |
+
+
