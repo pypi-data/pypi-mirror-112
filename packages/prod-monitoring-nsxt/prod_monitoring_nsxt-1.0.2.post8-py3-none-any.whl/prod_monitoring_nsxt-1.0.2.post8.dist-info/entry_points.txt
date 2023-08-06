@@ -1,0 +1,3 @@
+[console_scripts]
+execute_monitoring = monitoring.scripts.executor:main
+
