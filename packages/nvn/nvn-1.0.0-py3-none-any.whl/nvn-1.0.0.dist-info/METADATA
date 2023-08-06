@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: nvn
+Version: 1.0.0
+Summary: twint NexT Gen Project Manager
+Home-page: https://github.com/ardustri/Externatus/eternatus
+Author: Ardustri
+Author-email: info@nvn.sh
+License: MPL-2.0-or-later
+Platform: UNKNOWN
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: colorama
+
+# twint
+Twint, Next gen project manager
+
+
