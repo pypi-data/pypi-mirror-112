@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Getting Started &mdash; hifis_surveyval  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Preprocessing" href="preprocessing.html" />
+    <link rel="prev" title="HIFIS-Surveyval" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hifis_surveyval
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-environment">Setting up the Environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-project-for-the-analysis">Create a Project for the Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-dependencies">Install Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#initializing-hifis-surveyval">Initializing hifis-surveyval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-or-changing-analysis-scripts">Adding or Changing Analysis Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accessing_data.html">Accessing the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hifis_surveyval</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Getting Started</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/pages/getting_started.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>To develop and / or run an analysis you need some things:</p>
+<ol class="arabic simple">
+<li><p>Data in form of a <cite>.csv</cite> file</p></li>
+<li><p>Meta data in form of a <cite>.yml</cite> file</p></li>
+<li><p>A directory to store your scripts (can be generated)</p></li>
+<li><p>A directory to store the outputs of the scripts (will be generated, if it
+does not exists)</p></li>
+</ol>
+</div>
+<div class="section" id="setting-up-the-environment">
+<h2>Setting up the Environment<a class="headerlink" href="#setting-up-the-environment" title="Permalink to this headline">¶</a></h2>
+<p>Because the scripts use <cite>hifis-surveyval</cite> as dependency, it is wise to set
+up a dedicated environment for your analysis. We show an example workflow
+using <a class="reference external" href="https://python-poetry.org/">Poetry</a> to achieve that, but other
+solutions like <a class="reference external" href="https://pipenv.pypa.io/en/latest/">Pipenv</a> also work.</p>
+<p>First, we need to install poetry on our system.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install poetry
+</pre></div>
+</div>
+<p>Afterwards, we need to create a project folder or clone a git repository,
+where everything is stored. In the terminal, go to this directory.</p>
+<div class="section" id="create-a-project-for-the-analysis">
+<h3>Create a Project for the Analysis<a class="headerlink" href="#create-a-project-for-the-analysis" title="Permalink to this headline">¶</a></h3>
+<p>If in an existing git repository already a <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> exists, you
+can skip this step.</p>
+<p>Follow the instructions of poetry and skip choosing the dependencies.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry init
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-dependencies">
+<h3>Install Dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>The most important dependency is obviously <code class="docutils literal notranslate"><span class="pre">hifis-surveyval</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry add hifis-surveyval
+</pre></div>
+</div>
+<p>You can later add other dependencies of the analysis scripts with the same
+command.</p>
+</div>
+</div>
+<div class="section" id="initializing-hifis-surveyval">
+<h2>Initializing hifis-surveyval<a class="headerlink" href="#initializing-hifis-surveyval" title="Permalink to this headline">¶</a></h2>
+<p>If in an existing git repository already a <code class="docutils literal notranslate"><span class="pre">hifis-surveyval.yml</span></code> and a
+directory for your scripts exist, you can skip this step.</p>
+<p>We can create a config and an example script with the following command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry run hifis-surveyval init
+</pre></div>
+</div>
+<p>If you only need the config or only an example script, see:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry run hifis-surveyval init --help
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-or-changing-analysis-scripts">
+<h2>Adding or Changing Analysis Scripts<a class="headerlink" href="#adding-or-changing-analysis-scripts" title="Permalink to this headline">¶</a></h2>
+<p>Now you can freely add or edit <code class="docutils literal notranslate"><span class="pre">.py</span></code> files in the scripts folder
+determined in the config file. Please do not use subpackages there.</p>
+<p>You get access to the data and the tools via the arguments in the <cite>run</cite>
+function of the script. An example script is shown below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">hifis_surveyval.data_container</span> <span class="kn">import</span> <span class="n">DataContainer</span>
+<span class="kn">from</span> <span class="nn">hifis_surveyval.hifis_surveyval</span> <span class="kn">import</span> <span class="n">HIFISSurveyval</span>
+
+<span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">hifis_surveyval</span><span class="p">:</span> <span class="n">HIFISSurveyval</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">DataContainer</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Execute example script.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">question</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">question_collection_ids</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="preprocessing.html" class="btn btn-neutral float-right" title="Preprocessing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="HIFIS-Surveyval" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, HIFIS Software.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

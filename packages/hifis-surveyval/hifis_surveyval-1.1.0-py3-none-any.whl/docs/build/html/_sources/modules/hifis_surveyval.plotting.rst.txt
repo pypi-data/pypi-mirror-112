@@ -1,0 +1,37 @@
+hifis\_surveyval.plotting package
+=================================
+
+Submodules
+----------
+
+hifis\_surveyval.plotting.matplotlib\_plotter module
+----------------------------------------------------
+
+.. automodule:: hifis_surveyval.plotting.matplotlib_plotter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+hifis\_surveyval.plotting.plotter module
+----------------------------------------
+
+.. automodule:: hifis_surveyval.plotting.plotter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+hifis\_surveyval.plotting.supported\_output\_format module
+----------------------------------------------------------
+
+.. automodule:: hifis_surveyval.plotting.supported_output_format
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: hifis_surveyval.plotting
+   :members:
+   :undoc-members:
+   :show-inheritance:

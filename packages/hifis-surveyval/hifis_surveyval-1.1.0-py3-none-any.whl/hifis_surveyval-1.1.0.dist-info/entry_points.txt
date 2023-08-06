@@ -1,0 +1,3 @@
+[console_scripts]
+hifis-surveyval=hifis_surveyval.cli:cli
+

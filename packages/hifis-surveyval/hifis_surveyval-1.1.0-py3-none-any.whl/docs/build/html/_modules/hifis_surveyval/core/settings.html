@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hifis_surveyval.core.settings &mdash; hifis_surveyval  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> hifis_surveyval
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/accessing_data.html">Accessing the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/development.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/api.html">API Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">hifis_surveyval</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>hifis_surveyval.core.settings</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for hifis_surveyval.core.settings</h1><div class="highlight"><pre>
+<span></span><span class="c1"># hifis-surveyval</span>
+<span class="c1"># Framework to help developing analysis scripts for the HIFIS Software survey.</span>
+<span class="c1">#</span>
+<span class="c1"># SPDX-FileCopyrightText: 2021 HIFIS Software &lt;support@hifis.net&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># SPDX-License-Identifier: GPL-3.0-or-later</span>
+<span class="c1">#</span>
+<span class="c1"># This program is free software: you can redistribute it and/or modify</span>
+<span class="c1"># it under the terms of the GNU General Public License as published by</span>
+<span class="c1"># the Free Software Foundation, either version 3 of the License, or</span>
+<span class="c1"># (at your option) any later version.</span>
+<span class="c1">#</span>
+<span class="c1"># This program is distributed in the hope that it will be useful,</span>
+<span class="c1"># but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="c1"># GNU General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1"># You should have received a copy of the GNU General Public License</span>
+<span class="c1"># along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module handles settings.</span>
+
+<span class="sd">It provides:</span>
+<span class="sd">* settings classes</span>
+<span class="sd">* getter for settings</span>
+<span class="sd">* an export function to create a file</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Set</span>
+
+<span class="kn">import</span> <span class="nn">yaml</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseSettings</span><span class="p">,</span> <span class="n">validator</span>
+
+<span class="kn">from</span> <span class="nn">hifis_surveyval.plotting.supported_output_format</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">SupportedOutputFormat</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="SystemSettings"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.settings.SystemSettings">[docs]</a><span class="k">class</span> <span class="nc">SystemSettings</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Settings, that are not loaded from file.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Path to config Filename</span>
+    <span class="n">CONFIG_FILENAME</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;hifis-surveyval.yml&quot;</span><span class="p">)</span>
+
+    <span class="n">VERBOSITY</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">NOTSET</span>
+
+    <span class="c1"># The date prefix is used to identify the run</span>
+    <span class="c1"># (e.g. for saving output images)</span>
+    <span class="n">RUN_TIMESTAMP</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="SystemSettings.set_timestamp"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.settings.SystemSettings.set_timestamp">[docs]</a>    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;RUN_TIMESTAMP&quot;</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">set_timestamp</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">to_validate</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the current datetime.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            to_validate (str): Date-time string to be validated.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: Date-time string in a specific format.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">_%H-%M-%S&quot;</span><span class="p">)</span></div>
+
+    <span class="c1"># Path to sub-folder which holds all output files of a single</span>
+    <span class="c1"># analysis run</span>
+    <span class="n">ANALYSIS_OUTPUT_PATH</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="SystemSettings.assemble_output_path"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.settings.SystemSettings.assemble_output_path">[docs]</a>    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;ANALYSIS_OUTPUT_PATH&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">assemble_output_path</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span> <span class="n">to_validate</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">values</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Assemble path from user settings and datetime.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            to_validate (str):</span>
+<span class="sd">                Analysis output path as string to be validated.</span>
+<span class="sd">            values (Dict[str, Any]):</span>
+<span class="sd">                Parts of the analysis output path to be</span>
+<span class="sd">                concatenated as an absolute path.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Path: Path to the output folder of the an analysis run.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;OUTPUT_FOLDER&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;RUN_TIMESTAMP&quot;</span><span class="p">)</span></div>
+
+    <span class="c1"># Using a set for true_values and false_values to avoid duplicates and</span>
+    <span class="c1"># because order does not matter</span>
+    <span class="n">TRUE_VALUES</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;True&quot;</span><span class="p">,</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="s2">&quot;On&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">}</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A set of strings to be interpreted as boolean &#39;True&#39; when</span>
+<span class="sd">    parsing the input data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">FALSE_VALUES</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;False&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;Off&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">}</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A set of strings to be interpreted as boolean &#39;False&#39; when</span>
+<span class="sd">    parsing the input data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SystemSettings.case_insensitive_values"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.settings.SystemSettings.case_insensitive_values">[docs]</a>    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;FALSE_VALUES&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUE_VALUES&quot;</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">case_insensitive_values</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">to_validate</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Extend list of values to match all cases.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            to_validate (str): Analysis output path as string to be validated.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Set: Set of false and true values accepted as boolean values in</span>
+<span class="sd">                 the data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">additional_lower</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">to_validate</span><span class="p">))</span>
+        <span class="n">additional_upper</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">upper</span><span class="p">,</span> <span class="n">to_validate</span><span class="p">))</span>
+        <span class="n">to_validate</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">additional_lower</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">additional_upper</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">to_validate</span></div></div>
+
+
+<div class="viewcode-block" id="FileSettings"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.settings.FileSettings">[docs]</a><span class="k">class</span> <span class="nc">FileSettings</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Settings, that the user can change.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Path to preprocessing script</span>
+    <span class="n">PREPROCESSING_FILENAME</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;preprocess.py&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FileSettings.validate_preprocessing_script"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.settings.FileSettings.validate_preprocessing_script">[docs]</a>    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;PREPROCESSING_FILENAME&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">validate_preprocessing_script</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">to_validate</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Assure, that preprocessing script is a Python file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            to_validate (str):</span>
+<span class="sd">                Preprocessing script path as string to be validated.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Path: Path to the preprocessing script.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">str</span><span class="p">(</span><span class="n">to_validate</span><span class="p">)</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.py&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Preprocessing Script must be a python script&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">to_validate</span><span class="p">)</span></div>
+
+    <span class="c1"># Path to metadata</span>
+    <span class="n">METADATA</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;metadata/meta.yml&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Path in which modules to be executed are located which defaults</span>
+    <span class="c1"># to &quot;scripts&quot; folder.</span>
+    <span class="n">SCRIPT_FOLDER</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;scripts&quot;</span><span class="p">)</span>
+
+    <span class="c1"># List of selected module names to be executed which defaults to</span>
+    <span class="c1"># an empty list for all modules in the module folder.</span>
+    <span class="n">SCRIPT_NAMES</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># The Format in which the data should be output</span>
+    <span class="n">OUTPUT_FORMAT</span><span class="p">:</span> <span class="n">SupportedOutputFormat</span> <span class="o">=</span> <span class="n">SupportedOutputFormat</span><span class="o">.</span><span class="n">SCREEN</span>
+
+    <span class="c1"># Folder, into which the output file goes</span>
+    <span class="c1"># if the output format is not screen</span>
+    <span class="n">OUTPUT_FOLDER</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FileSettings.Config"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.settings.FileSettings.Config">[docs]</a>    <span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Subclass for specification.</span>
+
+<span class="sd">        See https://pydantic-docs.helpmanual.io/usage/model_config/</span>
+<span class="sd">        for details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">case_sensitive</span> <span class="o">=</span> <span class="kc">True</span></div></div>
+
+
+<div class="viewcode-block" id="Settings"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.settings.Settings">[docs]</a><span class="k">class</span> <span class="nc">Settings</span><span class="p">(</span><span class="n">SystemSettings</span><span class="p">,</span> <span class="n">FileSettings</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Merge two sub setting types.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Settings.create_default_config_file"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.settings.Settings.create_default_config_file">[docs]</a>    <span class="k">def</span> <span class="nf">create_default_config_file</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create a file to store the config.&quot;&quot;&quot;</span>
+        <span class="n">config_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">FileSettings</span><span class="o">.</span><span class="n">__fields__</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Path</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span>
+                <span class="n">value</span><span class="p">,</span> <span class="n">SupportedOutputFormat</span>
+            <span class="p">):</span>
+                <span class="n">config_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">config_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONFIG_FILENAME</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">config_file</span><span class="p">:</span>
+            <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">config_dict</span><span class="p">,</span> <span class="n">config_file</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Settings.set_verbosity"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.settings.Settings.set_verbosity">[docs]</a>    <span class="k">def</span> <span class="nf">set_verbosity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Interpret the verbosity option count.</span>
+
+<span class="sd">        Set the log levels accordingly.</span>
+<span class="sd">        The used log level is also stored in the settings.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            verbose_count (int): The amount of verbose option triggers.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">verbosity_options</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">,</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">,</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span>
+        <span class="p">]</span>
+
+        <span class="n">max_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">verbosity_options</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+        <span class="c1"># Clamp verbose_count to accepted values</span>
+        <span class="c1"># Note that it shall not be possible to unset the verbosity.</span>
+        <span class="n">option_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="mi">0</span>
+            <span class="k">if</span> <span class="n">verbose_count</span> <span class="o">&lt;</span> <span class="mi">0</span>
+            <span class="k">else</span> <span class="n">max_index</span>
+            <span class="k">if</span> <span class="n">verbose_count</span> <span class="o">&gt;</span> <span class="n">max_index</span>
+            <span class="k">else</span> <span class="n">verbose_count</span>
+        <span class="p">)</span>
+
+        <span class="n">new_level</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">verbosity_options</span><span class="p">[</span><span class="n">option_index</span><span class="p">]</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
+            <span class="n">level</span><span class="o">=</span><span class="n">new_level</span><span class="p">,</span>
+            <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> &quot;</span>
+            <span class="s2">&quot;[</span><span class="si">%(levelname)-8s</span><span class="s2">] &quot;</span>
+            <span class="s2">&quot;</span><span class="si">%(module)s</span><span class="s2">.</span><span class="si">%(funcName)s</span><span class="s2">(): &quot;</span>
+            <span class="s2">&quot;</span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">VERBOSITY</span> <span class="o">=</span> <span class="n">new_level</span></div>
+
+<div class="viewcode-block" id="Settings.load_config_file"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.settings.Settings.load_config_file">[docs]</a>    <span class="k">def</span> <span class="nf">load_config_file</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return an instance of Settings.&quot;&quot;&quot;</span>
+        <span class="c1"># if config file exists, load settings from it, otherwise return</span>
+        <span class="c1"># default</span>
+        <span class="k">if</span> <span class="n">Path</span><span class="o">.</span><span class="n">is_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONFIG_FILENAME</span><span class="p">):</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loading &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">CONFIG_FILENAME</span><span class="si">}</span><span class="s2">&#39; as config.&quot;</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONFIG_FILENAME</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">config_file</span><span class="p">:</span>
+                <span class="n">config_dict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">config_file</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">FullLoader</span><span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Parsing &#39;</span><span class="si">{</span><span class="n">config_dict</span><span class="si">}</span><span class="s2">&#39; as config.&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">config_dict</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">config_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;handling &#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+                <span class="c1"># cast as type, to preserve the type.</span>
+                <span class="c1"># otherwise paths are getting replaced with strings</span>
+                <span class="n">setting_type</span><span class="p">:</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;type is &#39;</span><span class="si">{</span><span class="n">setting_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">setting_type</span> <span class="o">==</span> <span class="n">SupportedOutputFormat</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span>
+                        <span class="n">key</span><span class="p">,</span> <span class="n">SupportedOutputFormat</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">setting_type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+
+            <span class="c1"># because assembling the output path is done during initialization,</span>
+            <span class="c1"># we need to rerun it</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ANALYSIS_OUTPUT_PATH</span> <span class="o">=</span> <span class="n">SystemSettings</span><span class="o">.</span><span class="n">assemble_output_path</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ANALYSIS_OUTPUT_PATH</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;No config file present. Keeping default values&quot;</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, HIFIS Software.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

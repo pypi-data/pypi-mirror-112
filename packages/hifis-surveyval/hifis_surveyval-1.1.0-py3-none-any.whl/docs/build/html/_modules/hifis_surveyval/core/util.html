@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hifis_surveyval.core.util &mdash; hifis_surveyval  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> hifis_surveyval
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/accessing_data.html">Accessing the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/development.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/api.html">API Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">hifis_surveyval</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>hifis_surveyval.core.util</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for hifis_surveyval.core.util</h1><div class="highlight"><pre>
+<span></span><span class="c1"># hifis-surveyval</span>
+<span class="c1"># Framework to help developing analysis scripts for the HIFIS Software survey.</span>
+<span class="c1">#</span>
+<span class="c1"># SPDX-FileCopyrightText: 2021 HIFIS Software &lt;support@hifis.net&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># SPDX-License-Identifier: GPL-3.0-or-later</span>
+<span class="c1">#</span>
+<span class="c1"># This program is free software: you can redistribute it and/or modify</span>
+<span class="c1"># it under the terms of the GNU General Public License as published by</span>
+<span class="c1"># the Free Software Foundation, either version 3 of the License, or</span>
+<span class="c1"># (at your option) any later version.</span>
+<span class="c1">#</span>
+<span class="c1"># This program is distributed in the hope that it will be useful,</span>
+<span class="c1"># but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="c1"># GNU General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1"># You should have received a copy of the GNU General Public License</span>
+<span class="c1"># along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+
+<span class="sd">&quot;&quot;&quot;This module provides helper functions.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">Series</span><span class="p">,</span> <span class="n">concat</span>
+
+<span class="kn">from</span> <span class="nn">hifis_surveyval.core.settings</span> <span class="kn">import</span> <span class="n">Settings</span>
+
+
+<div class="viewcode-block" id="dataframe_value_counts"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.util.dataframe_value_counts">[docs]</a><span class="k">def</span> <span class="nf">dataframe_value_counts</span><span class="p">(</span>
+    <span class="n">dataframe</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span>
+    <span class="n">relative_values</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">drop_nans</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Count how often a unique value appears in each column of a data frame.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dataframe (DataFrame):</span>
+<span class="sd">            The data frame of which the values shall be counted.</span>
+<span class="sd">        relative_values (bool):</span>
+<span class="sd">            Instead of absolute counts fill the cells with their relative</span>
+<span class="sd">            contribution to the column total</span>
+<span class="sd">        drop_nans (bool):</span>
+<span class="sd">            Whether to remove the NaN value count. Defaults to True</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        DataFrame:</span>
+<span class="sd">            A new data frame with the same columns as the input. The index is</span>
+<span class="sd">            changed to represent the unique values and the cells contain the</span>
+<span class="sd">            count of the unique values in the given column.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">new_frame</span><span class="p">:</span> <span class="n">DataFrame</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">dataframe</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span>
+                <span class="n">normalize</span><span class="o">=</span><span class="n">relative_values</span><span class="p">,</span> <span class="n">dropna</span><span class="o">=</span><span class="n">drop_nans</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">columns</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">new_frame</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">new_frame</span> <span class="o">=</span> <span class="n">new_frame</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">new_frame</span></div>
+
+
+<div class="viewcode-block" id="cross_reference_sum"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.util.cross_reference_sum">[docs]</a><span class="k">def</span> <span class="nf">cross_reference_sum</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">grouping</span><span class="p">:</span> <span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Cross references a data frame with a series and count correlations.</span>
+
+<span class="sd">    The data frame is processed column-wise.</span>
+<span class="sd">    For each column, indices are grouped up by their respective value in the</span>
+<span class="sd">    grouping series and each group is summed up.</span>
+
+<span class="sd">    Columns with incomplete data or rows that can not be cross-referenced may</span>
+<span class="sd">    be dropped.</span>
+
+<span class="sd">    In the context of the survey analysis, data usually is a multiple choice</span>
+<span class="sd">    question, while the grouping series is a single choice question.</span>
+<span class="sd">    They get matched by the participant IDs and the correlations get summed up.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (DataFrame):</span>
+<span class="sd">            A data frame of which the columns are to be grouped and summed up.</span>
+<span class="sd">        grouping (Series):</span>
+<span class="sd">            A series with indices (mostly) matching that of &quot;data&quot;, associating</span>
+<span class="sd">            each index with a group towards which the values of &quot;data&quot; are to</span>
+<span class="sd">            be counted.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        DataFrame:</span>
+<span class="sd">            A data frame containing the columns from data (minus dropped</span>
+<span class="sd">            columns) and the unique values of the grouping series as indices.</span>
+<span class="sd">            Each cell at [column, index] holds the sum of the values in the</span>
+<span class="sd">            respective column of the data which corresponded to the index in</span>
+<span class="sd">            the grouping series.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">grouping_values</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">grouping</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+    <span class="n">grouping_header</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">grouping</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="c1"># Join the frame and the series for association and clean N/A values</span>
+    <span class="c1"># Rows that can not be associated get dropped, they will not contribute to</span>
+    <span class="c1"># the summary.</span>
+    <span class="n">joined_frame</span><span class="p">:</span> <span class="n">DataFrame</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">grouping</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">)</span>
+    <span class="n">joined_frame</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Process the singular rows and keep them in a list to concatenate them all</span>
+    <span class="c1"># at once later on. This seems to be more efficient than DataFrame.append()</span>
+    <span class="c1"># The latter also seems to drop the type information which can lead to</span>
+    <span class="c1"># trouble when attempting to plot the result.</span>
+    <span class="n">per_field</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Series</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">current_group</span> <span class="ow">in</span> <span class="n">grouping_values</span><span class="p">:</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">joined_frame</span><span class="p">[</span><span class="n">grouping_header</span><span class="p">]</span> <span class="o">==</span> <span class="n">current_group</span>
+        <span class="n">filtered</span> <span class="o">=</span> <span class="n">joined_frame</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+
+        <span class="c1"># Drop the series entries previously added for association, so they do</span>
+        <span class="c1"># not show up in the result. Also set the name so it becomes the index</span>
+        <span class="c1"># label on concatenation.</span>
+        <span class="n">summary</span><span class="p">:</span> <span class="n">Series</span> <span class="o">=</span> <span class="n">filtered</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">grouping_header</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">summary</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">current_group</span>
+        <span class="n">per_field</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">summary</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">concat</span><span class="p">(</span><span class="n">per_field</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div>
+
+
+<span class="c1"># TODO Remove filter and group for Questions?</span>
+<div class="viewcode-block" id="filter_and_group_series"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.util.filter_and_group_series">[docs]</a><span class="k">def</span> <span class="nf">filter_and_group_series</span><span class="p">(</span>
+    <span class="n">base_data</span><span class="p">:</span> <span class="n">Series</span><span class="p">,</span>
+    <span class="n">group_by</span><span class="p">:</span> <span class="n">Series</span><span class="p">,</span>
+    <span class="n">min_value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">max_value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Filter a series and group its values according to another series.</span>
+
+<span class="sd">    Generate a sparse DataFrame in which all values of base_data are assigned</span>
+<span class="sd">    to a column according to the corresponding value for the same index in</span>
+<span class="sd">    group_by.</span>
+
+<span class="sd">    Indexes not present in group_by will result in an empty row.</span>
+<span class="sd">    Indexes not present in base_data will result in an empty column.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        base_data (Series):</span>
+<span class="sd">            The series of which the data is to be sorted and filtered.</span>
+<span class="sd">        group_by (Series):</span>
+<span class="sd">            A series assigning each index to a group.</span>
+<span class="sd">        min_value (Optional[float]):</span>
+<span class="sd">            An optional minimum value. All values of base_data below this</span>
+<span class="sd">            value will be excluded from the result. Not set by default.</span>
+<span class="sd">        max_value (Optional[float]):</span>
+<span class="sd">            An optional maximum value. All values of base_data above this</span>
+<span class="sd">            value will be excluded from the result. Not set by default.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        DataFrame:</span>
+<span class="sd">            A new DataFrame where each row represents an index of base_data</span>
+<span class="sd">            and each column is one of the unique values of the group_by series.</span>
+<span class="sd">            The values of base_data are put into the column where the base_data</span>
+<span class="sd">            index matches the group_by index.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">result_frame</span><span class="p">:</span> <span class="n">DataFrame</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">index</span><span class="o">=</span><span class="n">base_data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">group_by</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">group_index</span><span class="p">,</span> <span class="n">group_name</span> <span class="ow">in</span> <span class="n">group_by</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">group_index</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">base_data</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">base_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">group_index</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="c1"># Apply all the filters</span>
+        <span class="k">if</span> <span class="n">max_value</span> <span class="ow">and</span> <span class="n">max_value</span> <span class="o">&lt;</span> <span class="n">value</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">min_value</span> <span class="ow">and</span> <span class="n">min_value</span> <span class="o">&gt;</span> <span class="n">value</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">result_frame</span><span class="p">[</span><span class="n">group_name</span><span class="p">][</span><span class="n">group_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">return</span> <span class="n">result_frame</span></div>
+
+
+<div class="viewcode-block" id="create_example_script"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.util.create_example_script">[docs]</a><span class="k">def</span> <span class="nf">create_example_script</span><span class="p">(</span><span class="n">settings</span><span class="p">:</span> <span class="n">Settings</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create an example script from data payload at the default script location.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        settings (Settings):</span>
+<span class="sd">            Settings of the analysis run.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># create folder to store the scripts</span>
+    <span class="k">if</span> <span class="n">settings</span><span class="o">.</span><span class="n">SCRIPT_FOLDER</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">settings</span><span class="o">.</span><span class="n">SCRIPT_FOLDER</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">settings</span><span class="o">.</span><span class="n">SCRIPT_FOLDER</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># copy a file from the packages file payload to the set up scripts folder</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">absolute</span><span class="p">()</span><span class="si">}</span><span class="s2">/files/example_script.py&quot;</span><span class="p">,</span>
+        <span class="n">settings</span><span class="o">.</span><span class="n">SCRIPT_FOLDER</span><span class="o">.</span><span class="n">resolve</span><span class="p">(),</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="create_preprocessing_script"><a class="viewcode-back" href="../../../modules/hifis_surveyval.core.html#hifis_surveyval.core.util.create_preprocessing_script">[docs]</a><span class="k">def</span> <span class="nf">create_preprocessing_script</span><span class="p">(</span><span class="n">settings</span><span class="p">:</span> <span class="n">Settings</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create an empty preprocessing script at the default location.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        settings (Settings):</span>
+<span class="sd">            Settings of the analysis run.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># copy a file from the packages file payload to the set up scripts folder</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">absolute</span><span class="p">()</span><span class="si">}</span><span class="s2">/files/preprocess.py&quot;</span><span class="p">,</span>
+        <span class="n">settings</span><span class="o">.</span><span class="n">PREPROCESSING_FILENAME</span><span class="o">.</span><span class="n">resolve</span><span class="p">(),</span>
+    <span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, HIFIS Software.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

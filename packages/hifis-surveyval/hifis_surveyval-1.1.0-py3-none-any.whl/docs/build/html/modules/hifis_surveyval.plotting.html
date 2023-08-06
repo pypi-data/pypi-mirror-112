@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hifis_surveyval.plotting package &mdash; hifis_surveyval  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="hifis_surveyval.printing package" href="hifis_surveyval.printing.html" />
+    <link rel="prev" title="hifis_surveyval.models.mixins package" href="hifis_surveyval.models.mixins.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hifis_surveyval
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pages/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/accessing_data.html">Accessing the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/development.html">Developer Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../pages/api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../pages/api.html#cli-interface">CLI Interface</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../pages/api.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="modules.html">hifis_surveyval</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="hifis_surveyval.html">hifis_surveyval package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hifis_surveyval</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../pages/api.html">API Documentation</a> &raquo;</li>
+        
+          <li><a href="modules.html">hifis_surveyval</a> &raquo;</li>
+        
+          <li><a href="hifis_surveyval.html">hifis_surveyval package</a> &raquo;</li>
+        
+      <li>hifis_surveyval.plotting package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modules/hifis_surveyval.plotting.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hifis-surveyval-plotting-package">
+<h1>hifis_surveyval.plotting package<a class="headerlink" href="#hifis-surveyval-plotting-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-hifis_surveyval.plotting.matplotlib_plotter">
+<span id="hifis-surveyval-plotting-matplotlib-plotter-module"></span><h2>hifis_surveyval.plotting.matplotlib_plotter module<a class="headerlink" href="#module-hifis_surveyval.plotting.matplotlib_plotter" title="Permalink to this headline">¶</a></h2>
+<p>This module provides functionality to plot survey data.</p>
+<p>This module is called by survey analysis scripts and is a helper module
+which processes <cite>pandas</cite> data-frames as input and transforms them into
+informative plots.
+The actual plotting is done by utilizing a separate plotting library called
+<cite>matplotlib</cite>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.matplotlib_plotter.MatplotlibPlotter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">hifis_surveyval.plotting.matplotlib_plotter.</span></span><span class="sig-name descname"><span class="pre">MatplotlibPlotter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_format</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat" title="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat"><span class="pre">hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hifis_surveyval/plotting/matplotlib_plotter.html#MatplotlibPlotter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.plotting.matplotlib_plotter.MatplotlibPlotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hifis_surveyval.plotting.plotter.Plotter" title="hifis_surveyval.plotting.plotter.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">hifis_surveyval.plotting.plotter.Plotter</span></code></a></p>
+<p>Provides standardized plotting functionalities with matplotlib.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.matplotlib_plotter.MatplotlibPlotter.plot_bar_chart">
+<span class="sig-name descname"><span class="pre">plot_bar_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_frame:</span> <span class="pre">&lt;MagicMock</span> <span class="pre">id='140701748867568'&gt;</span></em>, <em class="sig-param"><span class="pre">plot_file_name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></em>, <em class="sig-param"><span class="pre">show_legend:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></em>, <em class="sig-param"><span class="pre">show_value_labels:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></em>, <em class="sig-param"><span class="pre">round_value_labels_to_decimals:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/plotting/matplotlib_plotter.html#MatplotlibPlotter.plot_bar_chart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.plotting.matplotlib_plotter.MatplotlibPlotter.plot_bar_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot given data-frame as a (stacked) bar chart.</p>
+<p>A pandas DataFrame is used as input data from which a (stacked) bar
+chart is generated. This DataFrame need be structured in a particular
+way. The actual data values are taken column by column and plotted as
+bars for each index entry.
+In case of a normal bar chart this means each sequence of bars /
+column is put next to each other while each sequence is grouped by the
+series / rows and labeled accordingly in the legend.
+By contrast in case of a stacked bar chart each sequence of bars /
+column is stacked on top of the previous instead of put next to each
+other and labeled accordingly in the legend.
+The index names are used to label the ticks along the x-axis, while the
+column names are used as labels in the legend.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>data_frame (DataFrame):</dt><dd><p>All data needed for this function to plot a stacked bar
+chart is encapsulated in this DataFrame.</p>
+</dd>
+<dt>plot_file_name (str):</dt><dd><p>Optional file name which is used to store the plot to a
+file. If this argument is an empty string (Default) for this
+argument, a suitable file name is auto-generated.</p>
+</dd>
+<dt>show_legend (bool):</dt><dd><p>Used to control whether a legend is included in the plot or
+not. (Default: True)</p>
+</dd>
+<dt>show_value_labels (bool):</dt><dd><p>Enable or disable labels to show the values of each bar. (
+Default: True)</p>
+</dd>
+<dt>round_value_labels_to_decimals (int):</dt><dd><p>Round label values to the number of decimals. (Default: 0)</p>
+</dd>
+<dt>**kwargs:</dt><dd><dl class="simple">
+<dt>stacked (bool):</dt><dd><p>Prompts the generation of a stacked bar chart instead on
+bars being grouped side-by-side.</p>
+</dd>
+<dt>plot_title (str):</dt><dd><p>The title text for the plot. (Default: “”)</p>
+</dd>
+<dt>x_axis_label (str):</dt><dd><p>The label for the x-axis. Default: “”)</p>
+</dd>
+<dt>x_label_rotation (int):</dt><dd><p>Allows to rotate the x-axis labels for better
+readability. Value is given in degrees. (Default: 0)</p>
+</dd>
+<dt>y_axis_label (str):</dt><dd><p>The label for the y-axis. Default: “”)</p>
+</dd>
+<dt>legend_location (str):</dt><dd><p>Specifies positioning of the plot’s legend. (Default:
+“best”) See Also: pandas.Axis.legend(loc)</p>
+</dd>
+<dt>legend_anchor (BboxBase):</dt><dd><p>Allows to specify an anchor point for the plot’s legend (
+Default: None) See Also: pandas.Axis.legend(bbox_to_anchor)</p>
+</dd>
+<dt>ylim (Set[float]):</dt><dd><p>Allows to specify the maximum and minimum values of the
+y axis (Default: None) See Also:
+matplotlib.axes.Axes.set_ylim</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.matplotlib_plotter.MatplotlibPlotter.plot_box_chart">
+<span class="sig-name descname"><span class="pre">plot_box_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_frame:</span> <span class="pre">Optional[&lt;MagicMock</span> <span class="pre">id='140701748867568'&gt;]</span> <span class="pre">=</span> <span class="pre">None</span></em>, <em class="sig-param"><span class="pre">data_frames:</span> <span class="pre">Optional[List[&lt;MagicMock</span> <span class="pre">id='140701748867568'&gt;]]</span> <span class="pre">=</span> <span class="pre">None</span></em>, <em class="sig-param"><span class="pre">plot_file_name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/plotting/matplotlib_plotter.html#MatplotlibPlotter.plot_box_chart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.plotting.matplotlib_plotter.MatplotlibPlotter.plot_box_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a box chart from the provided data.</p>
+<p>Each column in the frame corresponds to one box with whiskers.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>data_frame (Optional[DataFrame]):</dt><dd><p>A singular data frame. Syntactic sugar for using
+<cite>data_frame=x</cite> instead of <cite>data_frames=[x]</cite>.</p>
+</dd>
+<dt>data_frames (List[DataFrame]):</dt><dd><p>A list of data frames. The columns with the same column
+index across all the frames are grouped together.</p>
+</dd>
+<dt>plot_file_name (str):</dt><dd><p>Optional file name which is used to store the plot to a file.
+If this argument is an empty string (Default) for this
+argument, a suitable file name is auto-generated.</p>
+</dd>
+<dt>**kwargs:</dt><dd><dl class="simple">
+<dt>plot_title (str):</dt><dd><p>The title text for the plot. (Default: “”)</p>
+</dd>
+<dt>x_axis_label (str):</dt><dd><p>The label for the x-axis. Default: “”)</p>
+</dd>
+<dt>x_label_rotation (int):</dt><dd><p>Allows to rotate the x-axis labels for better
+readability. Value is given in degrees. (Default: 0)</p>
+</dd>
+<dt>y_axis_label (str):</dt><dd><p>The label for the y-axis. Default: “”)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.matplotlib_plotter.MatplotlibPlotter.plot_matrix_chart">
+<span class="sig-name descname"><span class="pre">plot_matrix_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_frame:</span> <span class="pre">&lt;MagicMock</span> <span class="pre">id='140701748867568'&gt;</span></em>, <em class="sig-param"><span class="pre">plot_file_name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></em>, <em class="sig-param"><span class="pre">invert_colors:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></em>, <em class="sig-param"><span class="pre">value_label_decimals:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/plotting/matplotlib_plotter.html#MatplotlibPlotter.plot_matrix_chart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.plotting.matplotlib_plotter.MatplotlibPlotter.plot_matrix_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot given data frame as matrix chart.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>data_frame (DataFrame):</dt><dd><p>The data frame to plot.</p>
+</dd>
+<dt>plot_file_name (str):</dt><dd><p>(Optional) The file name stem for the output file.</p>
+</dd>
+<dt>invert_colors (bool):</dt><dd><p>(Optional) Use an inverted color scheme for plotting. This
+is recommended for plotting data that represents the absence of
+something. Defaults to False.</p>
+</dd>
+<dt>value_label_decimals (int):</dt><dd><p>Round label values to the number of decimals. (Default: 2)</p>
+</dd>
+<dt>**kwargs:</dt><dd><dl class="simple">
+<dt>plot_title (str):</dt><dd><p>The title text for the plot. (Dafault: “”)</p>
+</dd>
+<dt>x_axis_label (str):</dt><dd><p>The label for the x-axis. Default: “”)</p>
+</dd>
+<dt>x_label_rotation (int):</dt><dd><p>Allows to rotate the x-axis labels for better
+readability. Value is given in degrees. (Default: 0)</p>
+</dd>
+<dt>y_axis_label (str):</dt><dd><p>The label for the y-axis. Default: “”)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-hifis_surveyval.plotting.plotter">
+<span id="hifis-surveyval-plotting-plotter-module"></span><h2>hifis_surveyval.plotting.plotter module<a class="headerlink" href="#module-hifis_surveyval.plotting.plotter" title="Permalink to this headline">¶</a></h2>
+<p>This module provides a framework for plotters.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.plotter.Plotter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">hifis_surveyval.plotting.plotter.</span></span><span class="sig-name descname"><span class="pre">Plotter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_format</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat" title="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat"><span class="pre">hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hifis_surveyval/plotting/plotter.html#Plotter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.plotting.plotter.Plotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Base class to derive plotters from.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.plotter.Plotter.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_format</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat" title="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat"><span class="pre">hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/plotting/plotter.html#Plotter.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.plotting.plotter.Plotter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize a plotter.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>output_format (SupportedOutputFormat): Supported output format.
+output_path (Path): Path to the output folder.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-hifis_surveyval.plotting.supported_output_format">
+<span id="hifis-surveyval-plotting-supported-output-format-module"></span><h2>hifis_surveyval.plotting.supported_output_format module<a class="headerlink" href="#module-hifis_surveyval.plotting.supported_output_format" title="Permalink to this headline">¶</a></h2>
+<p>This module provides a way of handling output formats for plotters.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">hifis_surveyval.plotting.supported_output_format.</span></span><span class="sig-name descname"><span class="pre">SupportedOutputFormat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hifis_surveyval/plotting/supported_output_format.html#SupportedOutputFormat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An abstraction of the supported output formats for generated images.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat.PDF">
+<span class="sig-name descname"><span class="pre">PDF</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat.PDF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat.PNG">
+<span class="sig-name descname"><span class="pre">PNG</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat.PNG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat.SCREEN">
+<span class="sig-name descname"><span class="pre">SCREEN</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat.SCREEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat.SVG">
+<span class="sig-name descname"><span class="pre">SVG</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat.SVG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat.from_str">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enum_entry</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">enum.Enum</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/plotting/supported_output_format.html#SupportedOutputFormat.from_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat.from_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate an enum object from a string.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>enum_entry (str): String to be converted into another string</dt><dd><p>representing a supported output format.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>Enum: Enumeration entry that has been selected.</p>
+</dd>
+<dt>Raises:</dt><dd><dl class="simple">
+<dt>NotImplementedError: Exception thrown if output format is not</dt><dd><p>supported.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat.list">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Set</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/plotting/supported_output_format.html#SupportedOutputFormat.list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a set listing the supported output formats.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>Set: Set of supported output formats.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-hifis_surveyval.plotting">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hifis_surveyval.plotting" title="Permalink to this headline">¶</a></h2>
+<p>This package provides plotting functionalities.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="hifis_surveyval.printing.html" class="btn btn-neutral float-right" title="hifis_surveyval.printing package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="hifis_surveyval.models.mixins.html" class="btn btn-neutral float-left" title="hifis_surveyval.models.mixins package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, HIFIS Software.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
