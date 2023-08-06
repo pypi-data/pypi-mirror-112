@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/pidm/__init__.py
+src/pidm/pidm.py
+src/pidm.egg-info/PKG-INFO
+src/pidm.egg-info/SOURCES.txt
+src/pidm.egg-info/dependency_links.txt
+src/pidm.egg-info/top_level.txt
