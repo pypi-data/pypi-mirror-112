@@ -1,0 +1,85 @@
+FROM {{ base_data_model_builder_image }} as builder
+ARG PIP_INDEX_URL=https://pypi.org/simple
+ARG PIP_EXTRA_INDEX_URL
+ARG PIP_DISABLE_PIP_VERSION_CHECK=true
+ARG PIP_NO_INPUT=true
+ARG PIP_NO_CACHE_DIR=off
+LABEL stage=builder
+WORKDIR /opt/kelvin/app/
+{#
+#}
+{% if system_packages %}
+RUN export DEBIAN_FRONTEND=noninteractive; apt-get update && \
+apt-get install -y --no-install-recommends {{ system_packages }} && \
+apt-get clean && rm -rf /var/lib/apt/lists/*
+{% endif %}
+{#
+#}
+ENV VIRTUAL_ENV=/opt/kelvin/app/venv
+ENV VIRTUAL_ENV_PYTHON=/opt/kelvin/app/venv/bin/python
+RUN python3 -m venv ${VIRTUAL_ENV} && ${VIRTUAL_ENV_PYTHON} -m pip install -U pip
+{#
+#}
+{% if requirements_file %}
+COPY {{ requirements_file }} /opt/kelvin/app/
+{% if wheels_dir %}
+COPY {{ wheels_dir }} /opt/kelvin/app/{{ wheels_dir}}
+{% endif %}
+RUN ${VIRTUAL_ENV_PYTHON} -m pip install {% if wheels_dir %}-f {{ wheels_dir}} {% endif %}-r /opt/kelvin/app/{{ requirements_file }}
+{% endif %}
+{% if adhoc_python_dependencies %}
+RUN ${VIRTUAL_ENV_PYTHON} -m pip install {{adhoc_python_dependencies}}
+{% endif %}
+{#
+#}
+{% if executable == "run_app" %}
+RUN echo '#! /bin/bash \n\
+BASE_DIR=$(realpath $(dirname $0))\n\
+cd "${BASE_DIR}"\n\
+exec python -m kelvin.app run app -c app.yaml {{ entry_point }} "$@"' > {{ executable }}
+RUN chmod +x {{ executable }}
+{% endif %}
+{#
+#}
+{% if build_for_datatype_compilation %}
+COPY build/datatype/ /icds
+RUN entrypoint.sh
+RUN \
+pip install kelvin-icd[builder] && \
+kelvin-icd message package /icds && \
+mv kelvin_message-*.whl /output/python && \
+${VIRTUAL_ENV_PYTHON} -m pip install /output/python/kelvin_message-*.whl
+{% endif %}
+{#
+#}
+COPY . /opt/kelvin/app/
+{#
+#}
+
+FROM {{base_image}}
+{% if system_packages %}
+RUN export DEBIAN_FRONTEND=noninteractive; apt-get update && \
+    apt-get install -y --no-install-recommends {{system_packages}} && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+{% endif %}
+{#
+#}
+{% if build_for_datatype_compilation %}
+COPY --from=builder /output /opt/kelvin/datatype
+{% endif %}
+COPY --from=builder /opt/kelvin/app /opt/kelvin/app/
+COPY --from=builder /opt/kelvin/core/metadata.yaml /opt/kelvin/core/builder_metadata.yaml
+{% if not build_for_upload %}
+COPY build/app.yaml /opt/kelvin/app/app.yaml
+{% endif %}
+{#
+#}
+ENV PYTHONUNBUFFERED=1
+ENV VIRTUAL_ENV=/opt/kelvin/app/venv
+ENV PATH=${VIRTUAL_ENV}/bin:${PATH}
+WORKDIR /opt/kelvin/app/
+ENTRYPOINT ["run_app"]
+CMD ["--cfg", "/opt/kelvin/app/{{ app_configuration_file }}"]
+{#
+  vim:ft=dockerfile.jinja
+#}

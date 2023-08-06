@@ -1,0 +1,61 @@
+import logging
+
+from fastapi import FastAPI
+from fastapi.logger import logger as fastapi_logger
+from starlette.middleware.cors import CORSMiddleware
+
+from ..model import Model
+from .config import get_service_configuration, get_settings
+
+
+def setup_logs():
+    gunicorn_logger = logging.getLogger("gunicorn")
+    log_level = gunicorn_logger.level
+
+    root_logger = logging.getLogger()
+    gunicorn_error_logger = logging.getLogger("gunicorn.error")
+    uvicorn_access_logger = logging.getLogger("uvicorn.access")
+
+    # Use gunicorn error handlers for root, uvicorn, and fastapi loggers
+    root_logger.handlers = gunicorn_error_logger.handlers
+    uvicorn_access_logger.handlers = gunicorn_error_logger.handlers
+    fastapi_logger.handlers = gunicorn_error_logger.handlers
+
+    # Pass on logging levels for root, uvicorn, and fastapi loggers
+    root_logger.setLevel(log_level)
+    uvicorn_access_logger.setLevel(log_level)
+    fastapi_logger.setLevel(log_level)
+
+
+def get_application() -> FastAPI:
+    # initialize application
+    application = FastAPI(
+        title="{{ title }}",
+    )
+
+    # load settings
+    settings = get_settings()
+
+    # load configuration
+    model_service_configuration = get_service_configuration()
+
+    # Initialize model class and load model artifact
+    model = Model(
+        settings=settings, model_service_configuration=model_service_configuration
+    )
+    application.state.model = model
+    application.state.model_service_configuration = model_service_configuration
+
+    if settings.CORS_ORIGINS:
+        application.add_middleware(
+            CORSMiddleware,
+            allow_origins=[str(origin) for origin in settings.CORS_ORIGINS],
+            allow_credentials=True,
+            allow_methods=["*"],
+            allow_headers=["*"],
+        )
+
+    return application
+{#
+  vim:ft=python.jinja2:sw=4
+#}

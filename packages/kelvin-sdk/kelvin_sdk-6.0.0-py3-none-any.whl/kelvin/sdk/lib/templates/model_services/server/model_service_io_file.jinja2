@@ -1,0 +1,62 @@
+"""IO Model."""
+
+from typing import Any, Dict, Mapping, Optional, Sequence, Type, TypeVar, Union
+
+from pandas import DataFrame, Series
+from pydantic import BaseModel
+
+T = TypeVar("T", bound="IO")
+
+
+class IO(BaseModel):
+    """IO base-class."""
+
+    @classmethod
+    def from_dict(cls: Type[T], x: Mapping[str, Any], **kwargs: Any) -> T:
+        """Initialize from dictionary."""
+
+        return cls.parse_obj({**x, **kwargs} if kwargs else x)
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary."""
+
+        return self.dict()
+
+    @classmethod
+    def from_frame(cls: Type[T], x: DataFrame, **kwargs: Any) -> T:
+        """Initialize from data-frame."""
+
+        data = x.to_dict()
+        if kwargs:
+            data.update(kwargs)
+
+        return cls.parse_obj(data)
+
+    def to_frame(self, **kwargs: Any) -> DataFrame:
+        """Convert data to data-frame."""
+
+        data = self.dict()
+
+        # ensure at least one column is a list
+        if not any(isinstance(x, list) for x in data.values()):
+            data = {k: [v] for k, v in data.items()}
+
+        return DataFrame(data, **kwargs)
+
+    @classmethod
+    def from_series(cls: Type[T], x: Series, **kwargs: Any) -> T:
+        """Initialize from series."""
+
+        data = x.to_dict()
+        if kwargs:
+            data.update(kwargs)
+
+        return cls.parse_obj(data)
+
+    def to_series(self, **kwargs: Any) -> Series:
+        """Convert data to series."""
+
+        return Series(self.dict(), **kwargs)
+{#
+  vim:ft=python.jinja2:sw=4
+#}

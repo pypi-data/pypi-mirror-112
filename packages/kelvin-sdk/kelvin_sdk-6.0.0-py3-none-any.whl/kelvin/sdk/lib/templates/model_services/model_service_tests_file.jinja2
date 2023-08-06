@@ -1,0 +1,31 @@
+from pathlib import Path
+
+import pytest
+from fastapi.testclient import TestClient
+
+from app.server.service import app
+
+
+@pytest.fixture(autouse=True)
+def mock_test_env(monkeypatch):
+    path = Path(__file__).parent.parent.absolute()
+    model_service = path / 'model_service.yaml'
+    artifacts = path / 'artifacts'
+    monkeypatch.setenv('MODEL_SERVICE_PATH', str(model_service))
+
+
+def test_predict_for_success(mock_test_env):
+    with TestClient(app) as client:
+        request = {
+            ... # define input data here
+        }
+        expected_response = {
+            ... # define expected data here
+        }
+
+        response = client.post("/predict", json=request)
+    assert response.status_code == 200
+    assert response.json() == expected_response
+{#
+  vim:ft=python.jinja2:sw=4
+#}

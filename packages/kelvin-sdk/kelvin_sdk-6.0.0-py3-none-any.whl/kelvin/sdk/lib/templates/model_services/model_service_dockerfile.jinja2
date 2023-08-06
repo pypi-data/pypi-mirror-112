@@ -1,0 +1,23 @@
+FROM tiangolo/uvicorn-gunicorn-fastapi@sha256:edb2e3ecbb922c199ce23ca8b4dc60bdf65a7829bc2b6bd3767392566f437e04
+
+ARG PIP_DISABLE_PIP_VERSION_CHECK=true
+ARG PIP_EXTRA_INDEX_URL
+ARG PIP_NO_INPUT=true
+ARG PIP_NO_CACHE_DIR=off
+
+ENV MODEL_SERVICE_PATH=/app/{{ model_service_yaml_file }}
+
+ENV APP_MODULE='{{ model_service_module }}'
+ENV HOST='0.0.0.0'
+ENV PORT='80'
+
+RUN pip install pandas {{ python_dependencies }}
+
+COPY {{ requirements_file }} /app
+
+RUN pip install -r /app/{{ requirements_file }}
+
+COPY . /app
+{#
+  vim:ft=python.jinja2:sw=4
+#}

@@ -1,0 +1,132 @@
+# Model service
+
+The `model service` exposes a REST API that can be queried to get predictions from ML models.
+It requires the user to set the inputs/outputs format, implement the prediction logic.
+The server structure and configuration is already defined.
+
+    ENDPOINT: /predict
+    METHOD: POST
+
+
+Follow the next steps in order to make the server work.
+
+## 1 - Define the request/response format
+
+Fill the class `Request` in `app/io.py`.
+This class will validate the body content received in the predict endpoint.
+The example below shows the `Request` implementation that matches the incoming JSON data.
+
+``` json
+{"data": [1.5, 2.1, 3.5, 4.0, 5.3]}
+```
+
+``` python
+## app/io.py
+
+from typing import List
+
+from pydantic import BaseModel
+
+
+class Request(BaseModel):
+    data: List[float]
+```
+
+Fill the classes `Response` in `app/io.py`.
+The response format is defined by the `Response` class.
+
+``` json
+{"anomaly": 1}
+```
+
+``` python
+## app/io.py
+
+from pydantic import BaseModel
+
+
+class Response(BaseModel):
+    anomaly: int
+```
+
+## 2 - Implement model load and prediction logic methods
+
+It is required to implement both load and prediction methods present in the class `app.model.Predict`.
+
+``` python
+## app/model.py
+
+from typing import Any
+
+import joblib
+import numpy as np
+from .io import Request, Response
+from .server.predict import Predict
+
+
+class Model(Predict):
+    def load(self, model_artifact_path: str) -> Any:
+        """
+        Load the expected model artifact.
+
+        :param model_artifact_path: the current path for the artifact
+        :return: in memory loaded model to be used in the run method
+        """
+
+        return joblib.load(model_artifact_path)
+
+    def run(self, request: Request) -> Response:
+        """
+        Get predictions using loaded load Implementation.
+
+        1 - get predictions using loaded model
+        predictions = self.model.predict(...)
+        2 - return <io.Response> format
+        return Response(predictions=predictions)
+
+        Optional - Access the model service configuration
+        configuration = self.model_service_configuration
+
+        :param request: io.Request
+             Contains input data to be processed by the model.
+        :return: Dict
+            Model predictions results. Expected response with the format defined in io.Response.
+        """
+
+        # Assemble input vector from input dict
+        model_input = np.array(
+            [
+                request.machine_temperature,
+                request.machine_pressure,
+                request.ambient_temperature,
+                request.ambient_humidity,
+            ]
+        ).reshape(1, -1)
+
+        model_prediction = self.model.predict(model_input)
+
+        # The user should assemble the output
+        return Response(anomaly=model_prediction[0])
+
+```
+
+## 3 - Add the python dependencies to the `requirements.txt` file.
+
+```
+## requirements.txt
+tensorflow
+pytorch
+```
+
+## 4 - Copy the artifact to `artifacts` folder and set its path in the `model_service.yaml`
+
+``` yaml
+## model_service.yaml
+
+name: anomaly
+version: 0.0.1
+artifact: artifacts/model.pkl
+```
+{#
+  vim:ft=python.jinja2:sw=4
+#}

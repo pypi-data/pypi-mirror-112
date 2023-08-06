@@ -1,0 +1,48 @@
+FROM {{base_data_model_builder_image}} as builder
+LABEL stage=builder
+WORKDIR /opt/kelvin/app/
+COPY . /opt/kelvin/app/
+{#
+#}
+{% if build_for_datatype_compilation %}
+COPY build/datatype/ /icds
+RUN entrypoint.sh
+RUN ln -s /output /opt/kelvin/datatype
+{% endif %}
+{#
+#}
+{% if system_packages %}
+RUN export DEBIAN_FRONTEND=noninteractive; apt-get update && \
+    apt-get install -y --no-install-recommends {{system_packages}} && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+{% endif %}
+{#
+#}
+RUN cd {{app_file_system_name}} && cmake . && make && find $(pwd) -type f -name "*.h" -o -name "*.cpp"  | xargs rm
+{#
+#}
+
+FROM {{base_image}}
+{% if system_packages %}
+RUN export DEBIAN_FRONTEND=noninteractive; apt-get update && \
+    apt-get install -y --no-install-recommends {{system_packages}} && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+{% endif %}
+{#
+#}
+{% if build_for_datatype_compilation %}
+COPY --from=builder /output /opt/kelvin/datatype
+{% endif %}
+COPY --from=builder /opt/kelvin/app /opt/kelvin/app/
+COPY --from=builder /opt/kelvin/core/metadata.yaml /opt/kelvin/core/builder_metadata.yaml
+{% if not build_for_upload %}
+COPY build/app.yaml /opt/kelvin/app/app.yaml
+{% endif %}
+{#
+#}
+WORKDIR /opt/kelvin/app/
+ENTRYPOINT ["run_app"]
+CMD ["--cfg", "/opt/kelvin/app/{{ app_configuration_file }}"]
+{#
+  vim:ft=dockerfile.jinja
+#}

@@ -1,0 +1,55 @@
+"""Model class."""
+
+## Tasks for model service creator:
+##   - implement load function
+##   - implement predict function
+
+from typing import Any
+
+from .io import Request, Response
+from .server.predict import Predict
+
+
+class Model(Predict):
+    """Model class."""
+
+    def load(self, model_artifact_path: str) -> Any:
+        """Load the expected model artifact.
+
+        :param model_artifact_path: the current path for the artifact
+        :type model_artifact_path: str
+        :return: loaded model to be used in the run method
+        """
+
+        ## Example:
+        ##   return tf.keras.models.load_model(model_artifact_path)
+        ## or:
+        ##   return torch.load(model_artifact_path)
+
+    def run(self, request: Request) -> Response:
+        """Get predictions using loaded model implementation.
+
+        :param request: Contains input data to be processed by the model.
+        :type request: Request
+        :return: Model predictions results. Expected response with the format defined in `Response`.
+        :rtype: Response
+        """
+
+        ## get predictions using loaded model predictions = self.model.predict(...)
+        ## optional: Access the model service configuration
+        ## configuration = self.model_service_configuration
+
+        ## 1. preprocess request data
+        data = request.dict()
+
+        ## 2. get predictions
+        result = self.model.predict(data)
+
+        ## 3. return dictionary with `Response` format
+        ## example:
+        ##   return Response(predictions=result)
+
+        return Response()
+{#
+  vim:ft=python.jinja2:sw=4
+#}

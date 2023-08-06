@@ -1,0 +1,44 @@
+import logging
+from typing import Any
+
+from fastapi import status
+from fastapi.responses import JSONResponse
+
+from ..io import Request, Response
+from .application import get_application, setup_logs
+from .config import get_settings
+from .errors import ErrorResponse
+
+setup_logs()
+app = get_application()
+settings = get_settings()
+
+
+@app.on_event("startup")
+async def startup_event() -> None:
+    """Load the model artifact when the application starts."""
+
+    app.state.model.load_model()
+
+
+@app.post(
+    settings.PREDICT_ENDPOINT,
+    response_model=Response,
+    responses={status.HTTP_500_INTERNAL_SERVER_ERROR: {"model": ErrorResponse}},
+)
+async def predict(request: Request) -> Any:
+    """Run the model to produce a prediction."""
+
+    try:
+        predict_model = app.state.model
+        return predict_model.run(request=request)
+    except Exception:
+        logging.exception("Unable to run model")
+
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={"message": "Unexpected error"},
+        )
+{#
+  vim:ft=python.jinja2:sw=4
+#}

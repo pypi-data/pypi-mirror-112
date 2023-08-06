@@ -1,0 +1,39 @@
+import abc
+from typing import Any, Dict, Generic, Optional, TypeVar
+
+from ..io import Request, Response
+from .config import ModelServiceConfiguration, Settings
+
+T = TypeVar("T")
+
+
+class Predict(abc.ABC, Generic[T]):
+    model: Optional[T] = None
+
+    def __init__(
+        self,
+        settings: Settings,
+        model_service_configuration: ModelServiceConfiguration,
+    ) -> None:
+        self.settings = settings
+        self.model_service_configuration = model_service_configuration
+
+    @abc.abstractmethod
+    def load(self, model_artifact_path: str) -> T:
+        ...
+
+    @abc.abstractmethod
+    def run(self, request: Request) -> Response:
+        ...
+
+    def load_model(self) -> T:
+        artifact = self.model_service_configuration.artifact
+        if artifact is None:
+            raise ValueError("No artifact provided")
+
+        model = self.model = self.load(artifact)
+
+        return model
+{#
+  vim:ft=python.jinja2:sw=4
+#}

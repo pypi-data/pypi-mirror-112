@@ -1,0 +1,39 @@
+from functools import lru_cache
+from pathlib import Path
+from typing import Any, List, Optional
+
+import yaml
+from pydantic import AnyHttpUrl, BaseModel, BaseSettings
+
+
+class Settings(BaseSettings):
+    PREDICT_ENDPOINT: str = "/predict"
+    DEBUG: bool = False
+    CORS_ORIGINS: List[AnyHttpUrl] = []
+    PATH: Path = Path("model_service.yaml")
+
+    class Config:
+        case_sensitive = True
+        env_prefix = "MODEL_SERVICE_"
+
+
+@lru_cache()
+def get_settings(**kwargs: Any) -> Settings:
+    return Settings(**kwargs)
+
+
+class ModelServiceConfiguration(BaseModel):
+    name: str
+    version: str
+    artifact: Optional[str] = None
+
+
+@lru_cache()
+def get_service_configuration() -> ModelServiceConfiguration:
+    # load model_service.yaml to settings
+    content = get_settings().PATH.read_text()
+    config = yaml.safe_load(content)
+    return ModelServiceConfiguration(**config)
+{#
+  vim:ft=python.jinja2:sw=4
+#}

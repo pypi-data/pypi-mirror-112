@@ -1,0 +1,30 @@
+"""Models that represent data for the input and output."""
+
+## Tasks for model service creator:
+##   - add fields to `Request` class
+##   - add fields to `Response` class
+
+from pydantic import BaseModel
+
+from .server.io import IO
+
+
+class Request(IO):
+    """Request data validator."""
+
+    ## define the inputs below, e.g.:
+    ##   machine_temperature: float
+    ## or:
+    ##   data: List[float]
+
+
+class Response(IO):
+    """Response data validator."""
+
+    ## define the outputs below, e.g.:
+    ##   anomaly: int
+    ## or:
+    ##   predictions: List[float]
+{#
+  vim:ft=python.jinja2:sw=4
+#}

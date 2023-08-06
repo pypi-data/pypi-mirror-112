@@ -1,0 +1,13 @@
+#include "{{app_file_system_name}}.h"
+
+namespace {{app_file_system_name}} {
+
+void {{app_file_system_name}}::on_data(std::list<std::unique_ptr<MessageInterface>>& msgs) {
+
+}
+
+} /* namespace {{app_file_system_name}} */
+
+std::unique_ptr<ApplicationInterface> new_instance() {
+  return std::make_unique<{{app_file_system_name}}::{{app_file_system_name}}>();
+}

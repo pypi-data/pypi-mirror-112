@@ -1,0 +1,47 @@
+#ifndef APPLICATION_{{app_file_system_name}}_H
+#define APPLICATION_{{app_file_system_name}}_H
+
+#include "common/application/DataModel.hpp"
+
+namespace {{app_file_system_name}} {
+
+class {{app_file_system_name}} : public DataModelApplication {
+ protected:
+  /** The callback method that is automatically attached to the poller.  This method is abstract and
+   *  must be implemented by the application.
+   *
+   *  @param[in] msgs The buffered data type messages since the callback was last triggered.
+   */
+  void on_data(std::list<std::unique_ptr<MessageInterface>>& msgs) override;
+
+  /** The blank base virtual implementation of the stale data timeout callback that can be implemented
+   *  by the calling application if there is additional functionality required.
+   *
+   *  @param[in] time_of_validity The last time data was received by the application.
+   */
+  void on_data_timeout(const std::chrono::nanoseconds& time_of_validity) override {
+    LOG_WARN("Unhandled timeout occurred in %s at %llu\\n", get_name().c_str(), time_of_validity.count());
+  }
+
+  /** The on_configuration_change() method is an optional method that is called every time the application's
+   *  configuration is modified.  This method is called directly after on_initialize() and then any time following
+   *  when the configuration is modified.  It is an event-driven method, so any synchronization with required by
+   *  the application must be handled internally.
+   *
+   *  @param[in] config The incoming configuration for the application.
+   */
+  bool on_configuration_change(const ConfigurationInterface& config) override {
+    return config ? true : false;
+  }
+
+  /** Called when the application is being terminated.  This allows applications to clean up internally allocated
+   *  data strutures, threads, or other dynamically allocated structures.
+   */
+  void on_terminate() override {
+    return;
+  }
+};
+
+}  // namespace {{app_file_system_name}}
+
+#endif /* APPLICATION_{{app_file_system_name}}_H */

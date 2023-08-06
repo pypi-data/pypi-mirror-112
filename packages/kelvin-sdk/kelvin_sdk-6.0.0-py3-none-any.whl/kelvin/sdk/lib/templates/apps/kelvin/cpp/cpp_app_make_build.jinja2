@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.10)
+project({{app_file_system_name}})
+include(/opt/kelvin/datatype/data_model.cmake OPTIONAL)
+
+file(GLOB GLOB_SOURCE_FILES "*.cpp")
+
+add_library({{app_file_system_name}} SHARED ${GLOB_SOURCE_FILES})
+# Insert your custom models after 'PUBLIC' should you required them.
+target_link_libraries({{app_file_system_name}} PUBLIC)
+set_target_properties({{app_file_system_name}} PROPERTIES PREFIX "")
+
