@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+src/hyperfit/__init__.py
+src/hyperfit/data.py
+src/hyperfit/linfit.py
+src/hyperfit.egg-info/PKG-INFO
+src/hyperfit.egg-info/SOURCES.txt
+src/hyperfit.egg-info/dependency_links.txt
+src/hyperfit.egg-info/requires.txt
+src/hyperfit.egg-info/top_level.txt
+src/hyperfit/data/Example.txt
+src/hyperfit/data/FP6dFGS.txt
+src/hyperfit/data/GAMAsmVsize.txt
+src/hyperfit/data/MJB.txt
+src/hyperfit/data/TFR.txt
