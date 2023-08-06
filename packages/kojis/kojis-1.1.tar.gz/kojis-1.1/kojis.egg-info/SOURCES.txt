@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+kojis.egg-info/PKG-INFO
+kojis.egg-info/SOURCES.txt
+kojis.egg-info/dependency_links.txt
+kojis.egg-info/top_level.txt
