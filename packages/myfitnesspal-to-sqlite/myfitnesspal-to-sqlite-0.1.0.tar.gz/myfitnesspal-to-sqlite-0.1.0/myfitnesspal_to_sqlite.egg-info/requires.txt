@@ -1,0 +1,6 @@
+click
+sqlite-utils>=3.0
+myfitnesspal
+
+[test]
+pytest

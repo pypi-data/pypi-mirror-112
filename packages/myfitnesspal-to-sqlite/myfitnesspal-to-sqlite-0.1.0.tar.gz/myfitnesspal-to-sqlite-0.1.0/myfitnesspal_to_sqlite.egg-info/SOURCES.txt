@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+myfitnesspal_to_sqlite/__init__.py
+myfitnesspal_to_sqlite/cli.py
+myfitnesspal_to_sqlite/utils.py
+myfitnesspal_to_sqlite.egg-info/PKG-INFO
+myfitnesspal_to_sqlite.egg-info/SOURCES.txt
+myfitnesspal_to_sqlite.egg-info/dependency_links.txt
+myfitnesspal_to_sqlite.egg-info/entry_points.txt
+myfitnesspal_to_sqlite.egg-info/requires.txt
+myfitnesspal_to_sqlite.egg-info/top_level.txt
