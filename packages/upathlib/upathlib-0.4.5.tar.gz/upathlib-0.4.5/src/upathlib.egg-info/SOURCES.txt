@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/upathlib/__init__.py
+src/upathlib/_blob.py
+src/upathlib/_fake.py
+src/upathlib/_local.py
+src/upathlib/_upath.py
+src/upathlib/azure.py
+src/upathlib/gcp.py
+src/upathlib.egg-info/PKG-INFO
+src/upathlib.egg-info/SOURCES.txt
+src/upathlib.egg-info/dependency_links.txt
+src/upathlib.egg-info/requires.txt
+src/upathlib.egg-info/top_level.txt
