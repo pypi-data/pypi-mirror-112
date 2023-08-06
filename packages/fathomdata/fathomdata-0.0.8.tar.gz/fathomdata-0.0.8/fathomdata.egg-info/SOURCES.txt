@@ -1,0 +1,13 @@
+README.md
+setup.py
+fathomdata/__init__.py
+fathomdata/control_chart.py
+fathomdata/document.py
+fathomdata/fathom_api.py
+fathomdata/sample_data.py
+fathomdata/western_electric_rules.py
+fathomdata.egg-info/PKG-INFO
+fathomdata.egg-info/SOURCES.txt
+fathomdata.egg-info/dependency_links.txt
+fathomdata.egg-info/requires.txt
+fathomdata.egg-info/top_level.txt
