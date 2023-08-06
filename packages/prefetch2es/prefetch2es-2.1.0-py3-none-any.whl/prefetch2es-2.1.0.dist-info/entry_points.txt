@@ -1,0 +1,4 @@
+[console_scripts]
+prefetch2es=prefetch2es:console_prefetch2es
+prefetch2json=prefetch2es:console_prefetch2json
+
