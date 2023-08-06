@@ -1,0 +1,322 @@
+Metadata-Version: 2.1
+Name: firstock
+Version: 0.1
+Summary: A functional python wrapper for firstock trading api
+Home-page: http://developers.thefirstock.com/api/
+Author: Firsstock
+Author-email: support@thefirstock.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pandas
+
+
+## ABOUT
+Firstock is a functional python wrapper for Firstock trading api.
+It allows rapid trading algo development easily, with support for both REST-API interfaces. 
+Execute Orders in Reatime, Modify/Cancel Orders, Retrieve Orderbook, Tradebook, Open Positions, Squareoff Positions and much more functionalities. 
+For more details of each API behavior, Pease see the Firstock API documentation.
+
+
+## License
+Firstock  (c) 2021. Licensed under the MIT License.
+
+
+## Documentation
+[Firstock Rest API documentation ](http://developers.thefirstock.com/api/)
+
+
+
+
+## Installation
+Install from PyPI
+
+	pip install firstock
+
+Always use the newest version while the project is still in alpha!
+
+
+## Usage Examples
+In order to call Firstock trade API, you need to sign up for an trading account with Firstock and obtain API key pairs from developers console to enjoy unlimited access to the API based trading.
+
+
+
+
+## Getting Started
+
+After downloading package import the package and create the object with api credentials
+
+
+	from firstock import*
+
+
+
+
+
+## Creating  Object
+
+For creating an object there are 4 arguments which would be passed
+
+         api_key : str
+             User Api key 
+         api_secret : str
+             User Api secret 
+         user_id    : str
+            Userid of Firstock account
+         api_type : str
+            If api credentials are of user account value is "user"
+            If api credentials are of Partner account value is "partner"
+
+
+Sample:
+
+	firstock=api(api_key="my_api_key",api_secret="my_api_secret",user_id="my_user_id",api_type="user")
+
+
+
+## Generating Access Token
+
+
+	Create Firstock object : firstock=api(api_key="my_api_key",api_secret="my_api_secret",user_id="my_user_id",api_type="user")
+
+	Get login url :firstock.login_url() : Use this link to login to firstock account and get the request_token_from_redirect_url
+
+	Generate Acesstoken: firstock.generate_accesstoken(request_token_from_redirect_url)
+
+
+
+
+
+## Using Object Methods
+obj.method(mandatory_parameters)  or obj.method(madatory_parameters+required_parameters)
+
+
+
+
+# Avaliable Methods
+
+
+
+### 1. login_url:
+
+		Funtion with mandatory parameters:   
+				login_url()
+
+		Function with all parameters:          
+
+				login_url()
+
+		Sample:             
+				firstock.login_url()
+
+
+### 2. generate_accesstoken:
+
+		Funtion with mandatory parameters:   
+				generate_accesstoken(request_token)
+
+		Function with all parameters:          
+
+				generate_accesstoken(request_token)
+
+		Sample:             
+				firstock.generate_accesstoken(request_token)
+
+
+
+### 3. place_order:  
+
+		Function with mandatory parmeters: 
+				place_order(exchange,symbol,quantity,transaction_type)
+
+		Function with all parametrs:       
+				place_order(exchange,symbol,quantity,transaction_type,
+					    order_type,product,price,disc,is_amo,ret,trigprice,
+					    book_profit_price,book_loss_price,trail_price,symbol2,
+					    transaction_type2,quantity2,price2,symbol3,transaction_type3,
+					    quantity3,price3,remarks,ordersource)
+
+                Sample :        
+				firstock.place_order('NSE','NTPC-EQ',1,'B',order_type='LMT',price='110.0')   
+
+
+
+### 4. cancel_order:
+
+		Funtion with mandatory parameters:   
+				cancelorder(order_id)
+
+		Function with all parameters:
+				cancelorder(order_id)
+
+
+		Sample :         
+				firstock.cancel_order('21051900000141')
+
+
+### 5. modify_order:
+
+		Funtion with mandatory parameters:  
+			     modify_order(exchange,order_id,symbol)
+
+		Function with all parameters: 
+
+		            modify_order(exchange,order_id,symbol,order_type,quantity,price,trigprice,book_profit_price,book_loss_price,trail_price,ret)
+
+		Sample :          
+			    firstock.modify_order(exchange="NSE",order_id="21051900000101",symbol="NTPC-EQ",price="110.2")
+
+
+
+
+### 6. order_book:
+
+		Funtion with mandatory parameters:  
+			     	order_book()
+
+		Function with all parameters:
+		 	      	order_book(product)
+
+		Sample :
+			firstock.modify_order()
+ `		   
+
+
+
+### 7. single_order_history:
+
+		Funtion with mandatory parameters:   
+					single_order_history(order_id)
+
+		Function with all parameters:        
+					single_order_history(order_id)
+
+		Sample:                              
+					fristock.single_order_history(order_id='21051900000141')
+
+
+
+### 8. trade_book:
+
+
+		Funtion with mandatory parameters:   
+					trade_book()
+
+		Function with all parameters:        
+					trade_book()
+
+	        Sample:                              
+					firstock.trade_book()
+
+
+
+
+
+### 9. order_book: 
+
+		Funtion with mandatory parameters:   
+					order_book(client_id)
+
+		Function with all parameters:       
+					order_book(client_id,api_key,api_secret)
+
+		Sample:                              
+					firstock.order_book()
+
+
+
+
+### 10. holdings:
+
+
+		Funtion with mandatory parameters:   
+					holdings()
+
+		Function with all parameters:        
+					holdings(product)
+
+		Sample:                             
+					firstock.holdings()
+
+
+
+
+
+### 11. position_book:
+
+
+		Funtion with mandatory parameters:   
+					position_book()
+
+		Function with all parameters:        
+					position_book()
+
+		Sample:                              
+					firstock.position_book()
+
+
+
+
+
+### 12. user_limits:
+
+
+		Funtion with mandatory parameters:   
+					user_limits()
+
+		Function with all parameters:        
+					user_limits()
+
+		Sample:                              
+					firstock.user_limits()
+
+
+
+
+### 13. user_details : 
+
+		Funtion with mandatory parameters:   
+					user_details ()
+
+		Function with all parameters:        
+					user_details ()
+
+		Sample:                              
+					firstock.user_details()
+
+
+
+### 14. logout : 
+
+		Funtion with mandatory parameters:   
+					logout()
+
+		Function with all parameters:        
+					logout()
+
+		Sample:                              
+					firstock.logout()
+
+
+
+
+
+### 15. product_conversion:
+
+
+		Funtion with mandatory parameters:   
+						     product_conversion(exchange,symbol,quantity,product,previous_product,transaction_type,ret)
+
+		Function with all parameters:        
+						     product_conversion(exchange,symbol,quantity,product,previous_product,transaction_type,ret)
+
+		Sample:                              
+						     firstock.product_conversion("NSE","NTPC-EQ",1,"C","I","B")
+
+
+

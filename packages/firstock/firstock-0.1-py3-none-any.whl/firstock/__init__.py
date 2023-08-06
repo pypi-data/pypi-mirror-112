@@ -1,0 +1,1 @@
+from firstock.pyfirstock import*
