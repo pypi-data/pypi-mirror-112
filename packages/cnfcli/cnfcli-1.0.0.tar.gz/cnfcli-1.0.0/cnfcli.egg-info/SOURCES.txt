@@ -1,0 +1,9 @@
+setup.py
+cnfcli.egg-info/PKG-INFO
+cnfcli.egg-info/SOURCES.txt
+cnfcli.egg-info/dependency_links.txt
+cnfcli.egg-info/entry_points.txt
+cnfcli.egg-info/requires.txt
+cnfcli.egg-info/top_level.txt
+src/__init__.py
+src/cnf.py
