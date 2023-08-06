@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: iota-dust-manager
+Version: 0.1.5
+Summary: A thread safe, stateless python package that manages your receiving dust address
+Home-page: https://github.com/F-Node-Karlsruhe/iota-dust-manager
+Author: F-Node-Karlsruhe
+Author-email: contact@f-node.de
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+
+UNKNOWN
+
