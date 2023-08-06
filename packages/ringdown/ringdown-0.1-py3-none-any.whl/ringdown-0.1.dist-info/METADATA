@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ringdown
+Version: 0.1
+Summary: Bayesian analysis of black hole ringdowns.
+Home-page: https://github.com/maxisi/ringdown
+Author: Maximiliano Isi, Will M. Farr
+Author-email: max.isi@ligo.org, will.farr@stonybrook.edu
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: Cython (>=0.22)
+Requires-Dist: arviz
+Requires-Dist: h5py
+Requires-Dist: lalsuite
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pystan (<3,>=2)
+Requires-Dist: qnm
+Requires-Dist: scipy
+Requires-Dist: seaborn
+
+UNKNOWN
+

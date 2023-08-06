@@ -1,0 +1,12 @@
+ringdown/__init__.py,sha256=FQ4QrvSeAHZV_p_mGQB4CvHTi8XjNMfn3E9Q6cv8KAI,1097
+ringdown/data.py,sha256=9Qvn0RV3XGSVMjJuZkMbc6LlYClAKkWnpKh1WhJLhec,6330
+ringdown/fit.py,sha256=a8OUCws1kpMdZRtEgeAr6q4Cq9McGLQ0QJDu8naKM9M,14387
+ringdown/kde_contour.py,sha256=pq8HbZ20Vmp2xIE60IIIYJCXqhiwSGDKeJmh43XRku0,8299
+ringdown/qnms.py,sha256=dx23rd4IWuIhkA4z287ppND1tCH7lh-0yn7IzopJzfc,3869
+ringdown/stan/ringdown_ftau.stan,sha256=NyxsbF8qZA6y06og8omFAnGmtE9tLrdQYNE1T9E5Pr4,2506
+ringdown/stan/ringdown_mchi.stan,sha256=4iQMy_SYaTi6lCOMG379dTthudTnSRF9mFeYm_1H-ak,4542
+ringdown-0.1.dist-info/LICENSE,sha256=rq99RTYZ51e8x68pdPK2HDRyOkXaSWS0rd10yGa8PGM,1132
+ringdown-0.1.dist-info/METADATA,sha256=lVbW_bC7sPt7YXdTv--qBIL2S8gF_VM5ZYZ3O9h0RuE,565
+ringdown-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ringdown-0.1.dist-info/top_level.txt,sha256=S1J0jg-LEq9uomBDNXoWuvT9qH7qVaazr2-CcgIyrp0,9
+ringdown-0.1.dist-info/RECORD,,
