@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+Tawpy.egg-info/PKG-INFO
+Tawpy.egg-info/SOURCES.txt
+Tawpy.egg-info/dependency_links.txt
+Tawpy.egg-info/top_level.txt
+tawpy/__init__.py
+tawpy/api.py
+tawpy/enums.py
+tawpy/errors.py
+tawpy/http_tenor.py
