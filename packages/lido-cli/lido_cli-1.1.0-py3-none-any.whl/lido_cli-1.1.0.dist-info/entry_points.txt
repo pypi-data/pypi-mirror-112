@@ -1,0 +1,3 @@
+[console_scripts]
+lido-cli=lido_validate_keys:cli
+
