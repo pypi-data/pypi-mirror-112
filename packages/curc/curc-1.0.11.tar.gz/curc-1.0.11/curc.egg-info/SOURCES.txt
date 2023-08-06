@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+curc/__init__.py
+curc/__main__.py
+curc.egg-info/PKG-INFO
+curc.egg-info/SOURCES.txt
+curc.egg-info/dependency_links.txt
+curc.egg-info/entry_points.txt
+curc.egg-info/requires.txt
+curc.egg-info/top_level.txt
+img/curc.png
