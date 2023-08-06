@@ -1,0 +1,1 @@
+from .chipyfunction01 import chi_squ

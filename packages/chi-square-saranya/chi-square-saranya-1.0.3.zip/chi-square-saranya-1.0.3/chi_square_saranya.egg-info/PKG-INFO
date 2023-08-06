@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: chi-square-saranya
+Version: 1.0.3
+Summary: It Outputs if the required categorical column is dependent or independent of output categorical column
+Home-page: https://github.com/saranya-sekar/chi-square-saranya
+Author: Saranya Sekar
+Author-email: saranyatagore@yahoo.com
+License: MIT
+Download-URL: https://github.com/saranya-sekar/chi-square-saranya/archive/refs/tags/final-04.tar.gz
+Description: # chi-square-saranya
+        It takes a dataframe with categorical columns for input as well as output , input categorical column, output categorical column
+        
+        ## Installation
+        ```pip install chi-square-saranya```
+        
+        ## How to use it?
+        Use this function in your chi-square dataset chi_squ(dataframe,input_column,output_column)
+        
+        ## License
+        
+        Â© 2021 Saranya Sekar
+        
+        This repository is licensed under the MIT license. See LICENSE for details.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
