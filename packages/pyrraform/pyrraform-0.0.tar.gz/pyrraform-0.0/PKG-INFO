@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: pyrraform
+Version: 0.0
+Summary: Terraform Wrapper
+Home-page: https://github.com/cedricmenec/pyrraform
+Author: Cedric Menec
+Author-email: cedric.menec@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: terraform,wrapper
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
