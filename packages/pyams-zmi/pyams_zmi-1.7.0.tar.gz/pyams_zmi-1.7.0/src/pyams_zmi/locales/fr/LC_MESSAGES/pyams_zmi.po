@@ -1,0 +1,484 @@
+#
+# SOME DESCRIPTIVE TITLE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE 1.0\n"
+"POT-Creation-Date: 2021-07-03 13:31+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Lingua 3.10.dev0\n"
+
+#: src/pyams_zmi/skin.py:32
+msgid "PyAMS management skin"
+msgstr "PyAMS: skin MyAMS"
+
+#: src/pyams_zmi/search.py:42
+msgid "Search form"
+msgstr "Rechercher"
+
+#: src/pyams_zmi/search.py:43
+msgid "Search criteria"
+msgstr "Critères de recherche"
+
+#: src/pyams_zmi/table.py:275 src/pyams_zmi/zmi/registry.py:92
+msgid "Name"
+msgstr "Nom"
+
+#: src/pyams_zmi/table.py:427
+msgid "Delete element"
+msgstr "Supprimer cet élément"
+
+#: src/pyams_zmi/interfaces/configuration.py:36
+msgid "MyAMS full bundle"
+msgstr "Full-bundle (version complète, avec icônes CSS)"
+
+#: src/pyams_zmi/interfaces/configuration.py:37
+msgid "MyAMS mini bundle (with SVG icons)"
+msgstr "MyAMS mini-bundle (Thème MyAMS en version minimale, avec icônes SVG)"
+
+#: src/pyams_zmi/interfaces/configuration.py:38
+msgid "MyAMS core bundle (with SVG icons)"
+msgstr "MyAMS core-bundle (Thème MyAMS en version core, avec icônes SVG)"
+
+#: src/pyams_zmi/interfaces/configuration.py:39
+msgid "Emerald mini bundle (with SVG icons)"
+msgstr ""
+"Emerald mini-bundle (Thème Emerald en version minimale, avec icônes SVG)"
+
+#: src/pyams_zmi/interfaces/configuration.py:40
+msgid "Emerald core bundle (with SVG icons)"
+msgstr "Emerald core-bundle (Thème Emerald en version core, avec icônes SVG)"
+
+#: src/pyams_zmi/interfaces/configuration.py:50
+msgid "Site name"
+msgstr "Nom du site"
+
+#: src/pyams_zmi/interfaces/configuration.py:54
+msgid "Home name"
+msgstr "Racine du site"
+
+#: src/pyams_zmi/interfaces/configuration.py:55
+msgid "Label used to get access to site's root in breadcrumbs link"
+msgstr "Libellé indiqué dans le fil d'Ariane pour accéder à la racine du site"
+
+#: src/pyams_zmi/interfaces/configuration.py:59
+msgid "Application name"
+msgstr "Nom de l'application"
+
+#: src/pyams_zmi/interfaces/configuration.py:63
+msgid "Application package"
+msgstr "Package de l'application"
+
+#: src/pyams_zmi/interfaces/configuration.py:64
+msgid "Name of the main package used to get application version"
+msgstr "Nom du package Python principal correspondant au nom de l'application"
+
+#: src/pyams_zmi/interfaces/configuration.py:69
+msgid "Secondary name"
+msgstr "Complément"
+
+#: src/pyams_zmi/interfaces/configuration.py:72
+msgid "Secondary package"
+msgstr "Package complétaire"
+
+#: src/pyams_zmi/interfaces/configuration.py:73
+msgid "Name of the secondary package used to complete application version"
+msgstr ""
+"Nom du package Python utilisé pour compléter l'affichage du numéro de version"
+
+#: src/pyams_zmi/interfaces/configuration.py:77
+msgid "Environment name"
+msgstr "Environnement"
+
+#: src/pyams_zmi/interfaces/configuration.py:78
+msgid "Short text used to describe runtime environment"
+msgstr "Court texte de description de l'environnement d'exécution"
+
+#: src/pyams_zmi/interfaces/configuration.py:83
+msgid "MyAMS bundle"
+msgstr "Bundle MyAMS"
+
+#: src/pyams_zmi/interfaces/configuration.py:84
+msgid "MyAMS bundle used by the application"
+msgstr "Mode de packaging du framework MyAMS utilisé par l'application"
+
+#: src/pyams_zmi/interfaces/configuration.py:88
+msgid "Icon"
+msgstr "Icône"
+
+#: src/pyams_zmi/interfaces/configuration.py:89
+msgid "Favorites icon"
+msgstr "Icône des favoris"
+
+#: src/pyams_zmi/interfaces/configuration.py:92
+msgid "Include header"
+msgstr "Inclure le bandeau supérieur"
+
+#: src/pyams_zmi/interfaces/configuration.py:96
+msgid "Fixed header"
+msgstr "Bandeau fixe"
+
+#: src/pyams_zmi/interfaces/configuration.py:97
+msgid ""
+"If selected, the header will not scroll but will stay fixed at the top of "
+"the screen"
+msgstr ""
+"Cette option permet de maintenir le bandeau visible en haut de la fenêtre "
+"lorsque l'utilisateur fait défiler les contenus"
+
+#: src/pyams_zmi/interfaces/configuration.py:102
+msgid "Logo image"
+msgstr "Logo"
+
+#: src/pyams_zmi/interfaces/configuration.py:103
+msgid "SVG or bitmap image used as logo"
+msgstr "Image bitmap ou SVG utilisée pour afficher le logo"
+
+#: src/pyams_zmi/interfaces/configuration.py:106
+msgid "Include site search"
+msgstr "Inclure la recherche"
+
+#: src/pyams_zmi/interfaces/configuration.py:107
+msgid "Include a global site search access link in page header"
+msgstr "Inclure une zone de recherche globale dans le bandeau supérieur"
+
+#: src/pyams_zmi/interfaces/configuration.py:112
+msgid "Site search placeholder"
+msgstr "Texte d'attente de la zone de recherche"
+
+#: src/pyams_zmi/interfaces/configuration.py:115
+msgid "Site search handler"
+msgstr "Cible de la recherche"
+
+#: src/pyams_zmi/interfaces/configuration.py:119
+msgid "Include navigation menus"
+msgstr "Inclure les menus de navigation"
+
+#: src/pyams_zmi/interfaces/configuration.py:123
+msgid "Include minify buttons"
+msgstr "Inclure les boutons de réduction"
+
+#: src/pyams_zmi/interfaces/configuration.py:124
+msgid ""
+"If selected, this will provide features to reduce or hide navigation menus"
+msgstr ""
+"Cette option permet de fournir des fonctions de réduction ou de masquage des "
+"menus de navigation"
+
+#: src/pyams_zmi/interfaces/configuration.py:129
+msgid "Fixed menus"
+msgstr "Menus fixes"
+
+#: src/pyams_zmi/interfaces/configuration.py:133
+msgid "Accordion menus"
+msgstr "Menus en accordéon"
+
+#: src/pyams_zmi/interfaces/configuration.py:134
+msgid "If selected, only one navigation menu can be opened at a given time"
+msgstr "Cette option empêche l'ouverture simultanée de plusieurs menus"
+
+#: src/pyams_zmi/interfaces/configuration.py:139
+msgid "Include ribbon"
+msgstr "Inclure le ruban"
+
+#: src/pyams_zmi/interfaces/configuration.py:140
+msgid "Display breadcrumbs ribbon?"
+msgstr "Afficher le ruban contenant le fil d'Ariane"
+
+#: src/pyams_zmi/interfaces/configuration.py:144
+msgid "Fixed ribon"
+msgstr "Ruban fixe"
+
+#: src/pyams_zmi/interfaces/configuration.py:145
+msgid ""
+"If selected, the ribbon will not scroll but will stay fixed at the top of "
+"the page"
+msgstr "Cette option empêche le défilement du ruban en tête de page"
+
+#: src/pyams_zmi/interfaces/configuration.py:150
+msgid "Base body CSS class"
+msgstr "Classe CSS du body"
+
+#: src/pyams_zmi/interfaces/configuration.py:155
+msgid "Custom stylesheet"
+msgstr "Feuille de style spécifique"
+
+#: src/pyams_zmi/interfaces/configuration.py:156
+msgid ""
+"Custom stylesheet used to override or extend default MyAMS management skin"
+msgstr ""
+"Vous pouvez fournir une feuille de style spécifique pour surcharger ou "
+"compléter le thème graphique par défaut"
+
+#: src/pyams_zmi/interfaces/configuration.py:160
+msgid "Custom script"
+msgstr "Script personnalisé"
+
+#: src/pyams_zmi/interfaces/configuration.py:161
+msgid "Custom javascript used to override or extend default MyAMS modules"
+msgstr ""
+"Vous pouvez fournir un script spécifique pour surcharger ou compléter les "
+"fonctionnalités de MyAMS"
+
+#: src/pyams_zmi/interfaces/form.py:46 src/pyams_zmi/interfaces/form.py:56
+msgid "Add"
+msgstr "Ajouter"
+
+#: src/pyams_zmi/interfaces/form.py:49 src/pyams_zmi/interfaces/form.py:69
+#: src/pyams_zmi/interfaces/form.py:145
+msgid "Reset"
+msgstr "Annuler"
+
+#: src/pyams_zmi/interfaces/form.py:59 src/pyams_zmi/interfaces/form.py:79
+#: src/pyams_zmi/interfaces/form.py:90
+msgid "Cancel"
+msgstr "Annuler"
+
+#: src/pyams_zmi/interfaces/form.py:66 src/pyams_zmi/interfaces/form.py:76
+msgid "Apply"
+msgstr "Enregistrer"
+
+#: src/pyams_zmi/interfaces/form.py:137
+msgid "Search for"
+msgstr "Texte recherché"
+
+#: src/pyams_zmi/interfaces/form.py:143
+msgid "Search"
+msgstr "Chercher"
+
+#: src/pyams_zmi/interfaces/templates/table-multiple.pt:9
+#: src/pyams_zmi/interfaces/templates/table.pt:9
+#: src/pyams_zmi/interfaces/templates/table-empty.pt:8
+#: src/pyams_zmi/interfaces/templates/form.pt:10
+#: src/pyams_zmi/interfaces/templates/form-display.pt:10
+msgid "Back to previous page"
+msgstr "Revenir à la page précédente"
+
+#: src/pyams_zmi/interfaces/templates/table.pt:19
+#: src/pyams_zmi/interfaces/templates/inner-table.pt:14
+msgid "WARNING: only the first ${length} results are displayed in this table!"
+msgstr ""
+"ATTENTION : la liste est tronquée, seuls les ${length} premiers résultats "
+"sont affichés !"
+
+#: src/pyams_zmi/interfaces/templates/inner-table-empty.pt:11
+#: src/pyams_zmi/interfaces/templates/table-empty.pt:16
+msgid "This table is empty."
+msgstr "Cette table ne contient aucun élément."
+
+#: src/pyams_zmi/helper/container.py:55 src/pyams_zmi/helper/container.py:113
+msgid "No provided object_name argument!"
+msgstr "Le nom de l'objet à mettre à jour n'a pas été renseigné !"
+
+#: src/pyams_zmi/helper/container.py:68 src/pyams_zmi/helper/container.py:135
+msgid "Given element name doesn't exist!"
+msgstr "L'élément sélectionné n'existe pas !"
+
+#: src/pyams_zmi/helper/container.py:83
+msgid "Element was deleted successfully."
+msgstr "L'élément a été supprimé avec succès."
+
+#: src/pyams_zmi/helper/container.py:122
+msgid "No provided attribute name!"
+msgstr "Le nom de l'attribut à mettre à jour n'a pas été renseigné !"
+
+#: src/pyams_zmi/helper/container.py:150
+msgid "Element was updated successfully."
+msgstr "L'élément a été modifié avec succès."
+
+#: src/pyams_zmi/zmi/environment.py:49
+msgid "Environment"
+msgstr "Environnement"
+
+#: src/pyams_zmi/zmi/environment.py:59
+msgid "Application runtime environment"
+msgstr "Environnement de l'application"
+
+#: src/pyams_zmi/zmi/environment.py:96
+msgid "Package name"
+msgstr "Nom du package"
+
+#: src/pyams_zmi/zmi/environment.py:111
+msgid "Version"
+msgstr "Version"
+
+#: src/pyams_zmi/zmi/environment.py:126
+msgid "Path"
+msgstr "Chemin"
+
+#: src/pyams_zmi/zmi/environment.py:142
+msgid "Packages versions"
+msgstr "Packages Python"
+
+#: src/pyams_zmi/zmi/environment.py:182
+msgid "Variable name"
+msgstr "Nom de la variable"
+
+#: src/pyams_zmi/zmi/environment.py:196 src/pyams_zmi/zmi/environment.py:266
+msgid "Value"
+msgstr "Valeur"
+
+#: src/pyams_zmi/zmi/environment.py:212
+msgid "Environment variables"
+msgstr "Variables d'environnement"
+
+#: src/pyams_zmi/zmi/environment.py:252
+msgid "Setting name"
+msgstr "Nom du paramètre"
+
+#: src/pyams_zmi/zmi/environment.py:282
+msgid "Configuration settings"
+msgstr "Paramètres de configuration"
+
+#: src/pyams_zmi/zmi/skin.py:44 src/pyams_zmi/zmi/skin.py:58
+msgid "Graphic theme"
+msgstr "Thème graphique"
+
+#: src/pyams_zmi/zmi/skin.py:93
+msgid "Skin properties"
+msgstr "Propriétés du thème graphique"
+
+#: src/pyams_zmi/zmi/configuration.py:50
+msgid "Configuration"
+msgstr "Configuration"
+
+#: src/pyams_zmi/zmi/configuration.py:59 src/pyams_zmi/zmi/configuration.py:69
+msgid "ZMI configuration"
+msgstr "Configuration ZMI"
+
+#: src/pyams_zmi/zmi/configuration.py:70
+msgid "Interface configuration"
+msgstr "Interface d'administration"
+
+#: src/pyams_zmi/zmi/configuration.py:145
+msgid "Warning!"
+msgstr "ATTENTION !"
+
+#: src/pyams_zmi/zmi/configuration.py:146
+msgid "Removing navigation menus will also remove access to this form..."
+msgstr ""
+"En supprimant les menus de navigation, vous supprimerez également l'accès à "
+"ce formulaire !!"
+
+#: src/pyams_zmi/zmi/configuration.py:167
+msgid "Custom extensions"
+msgstr "Personnalisation"
+
+#: src/pyams_zmi/zmi/controlpanel.py:46
+msgid "Utilities"
+msgstr "Utilitaires"
+
+#: src/pyams_zmi/zmi/controlpanel.py:80 src/pyams_zmi/zmi/viewlet/menu.py:112
+msgid "Control panel"
+msgstr "Panneau de configuration"
+
+#: src/pyams_zmi/zmi/controlpanel.py:82 src/pyams_zmi/zmi/registry.py:137
+#: src/pyams_zmi/zmi/registry.py:191
+msgid "Site utilities"
+msgstr "Utilitaires"
+
+#: src/pyams_zmi/zmi/timezone.py:47
+msgid "Server timezone"
+msgstr "Fuseau horaire"
+
+#: src/pyams_zmi/zmi/timezone.py:48
+msgid "Properties"
+msgstr "Propriétés"
+
+#: src/pyams_zmi/zmi/registry.py:51
+msgid "Component"
+msgstr "Composant"
+
+#: src/pyams_zmi/zmi/registry.py:75
+msgid "Interface"
+msgstr "Interface"
+
+#: src/pyams_zmi/zmi/registry.py:113 src/pyams_zmi/zmi/registry.py:139
+msgid "Local registry"
+msgstr "Registre local"
+
+#: src/pyams_zmi/zmi/registry.py:149
+msgid ""
+"The local registry is used to store 'local' utilities, whose configuration "
+"is stored into the ZODB. Some of these utilities have important settings "
+"which can define the whole application behaviour.\n"
+"Some of these components are created automatically, while other ones are "
+"created by sites managers, like SQLAlchemy or ZODB connections.\n"
+msgstr ""
+"Le registre local est utilisé pour enregistrer des utilitaires dont la "
+"définition et le paramétrage sont stockés dans la ZODB. Certain de ces "
+"utilitaires ont des paramètres importants qui déterminent le mode de "
+"fonctionnement de toute l'application.\n"
+"Certains de ces composants sont créés automatiquement (via la commande "
+"*pyams_upgrade*), tandis que d'autres tels que les connexions SQLAlchemy ou "
+"ZEO sont créés manuellement par les administrateurs en fonction des "
+"besoins.\n"
+
+#: src/pyams_zmi/zmi/registry.py:167 src/pyams_zmi/zmi/registry.py:193
+msgid "Global registry"
+msgstr "Registre global"
+
+#: src/pyams_zmi/zmi/registry.py:203
+msgid ""
+"The global registry is used to store utilities which are defined statically "
+"in Python code or using ZCML directives.\n"
+msgstr ""
+"Le registre global est utilisé pour enregistrer des composants généralement "
+"statiques, qui sont chargés au démarrage de l'application via des scripts en "
+"Python ou des directives ZCML.\n"
+
+#: src/pyams_zmi/zmi/viewlet/header.py:59
+msgid "PyAMS admin page"
+msgstr "PyAMS"
+
+#: src/pyams_zmi/zmi/viewlet/userlinks.py:87
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: src/pyams_zmi/zmi/viewlet/menu.py:94
+msgid "Content management"
+msgstr "Gestion de contenu"
+
+#: src/pyams_zmi/zmi/viewlet/menu.py:103
+msgid "Site management"
+msgstr "Gestion du site"
+
+#: src/pyams_zmi/zmi/viewlet/templates/user-menu.pt:7
+#: src/pyams_zmi/zmi/viewlet/templates/user-menu.pt:5
+msgid "User profile"
+msgstr "Mon profil"
+
+#: src/pyams_zmi/zmi/viewlet/templates/page-nav.pt:12
+msgid "Minify menus"
+msgstr "Réduire les menus"
+
+#: src/pyams_zmi/zmi/viewlet/templates/hide-nav.pt:6
+msgid "Show/hide navigation menus"
+msgstr "Afficher/masquer les menus de navigation"
+
+#: src/pyams_zmi/zmi/viewlet/templates/site-search.pt:6
+msgid "Search..."
+msgstr "Rechercher..."
+
+#~ msgid "Name of a secondary package displayed after main application name"
+#~ msgstr ""
+#~ "Nom d'un package secondaire utilisé pour compléter l'affichage du numéro "
+#~ "de version"
+
+#~ msgid "MyAMS core bundle"
+#~ msgstr "Core-bundle"
+
+#~ msgid "This package is used to display current application version"
+#~ msgstr ""
+#~ "Nom du package Python utilisé pour afficher le numéro de version de "
+#~ "l'application"
+
+#~ msgid "Inner version package"
+#~ msgstr "Package interne"
