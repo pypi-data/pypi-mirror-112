@@ -1,0 +1,14 @@
+pytest_recording/__init__.py,sha256=6mKn1J5iuX9HHACIGdJEkOE4ZS0DqYUxR1JqSgqw-Oo,62
+pytest_recording/_vcr.py,sha256=2ciT5vk3Fvc7v2XxHeF4U9cy1gE-wZZ4L7B7N61ipxQ,3900
+pytest_recording/exceptions.py,sha256=oIGNtPyTBnptpHhrOFK9UifYsVN4UJUVQwfj9SU7kqo,91
+pytest_recording/hooks.py,sha256=jtDuA88_s_pSFhImQW4bEERNLy-Pdz68Kn3FqdKSvPM,151
+pytest_recording/network.py,sha256=5c_jC5DayRKHhdWzYGxzsr5Wdc3OeBEpHZK7rB9S3L0,5635
+pytest_recording/plugin.py,sha256=FNb9bfDd8yxxbJ2Gq_tKFL1oATkWEOQsU5M-yfHxSp8,6845
+pytest_recording/utils.py,sha256=ccnl75dDvPvK-Yc-KDT_3j9jkc9qMWqiyeONIdgivqo,314
+pytest_recording/validation.py,sha256=6TUu_qvR5r4hHzShElfPycNZQn6Ng82QyZ7RQA9BxlQ,685
+pytest_recording-0.12.0.dist-info/LICENSE,sha256=CLnAoROUBlHqJSiRW4F2CAkwifv7ZsNBrHJ4P84g3NE,1076
+pytest_recording-0.12.0.dist-info/METADATA,sha256=y9BTWoeUBaSjw5Xf5_v5q894BsIirbpPHoX0bNSweOA,8515
+pytest_recording-0.12.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytest_recording-0.12.0.dist-info/entry_points.txt,sha256=ViX9PDL8bnDhD5LYSMaDwcfZhi0w6qbAd2sorqqNYfw,48
+pytest_recording-0.12.0.dist-info/top_level.txt,sha256=rtmGnXB_ynX10tG02WcbO0yGMrM9YqWvj7CIO6tLVCo,17
+pytest_recording-0.12.0.dist-info/RECORD,,
