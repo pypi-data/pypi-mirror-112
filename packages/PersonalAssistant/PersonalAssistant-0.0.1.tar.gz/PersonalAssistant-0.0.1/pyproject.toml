@@ -1,0 +1,12 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "pyttsx3",
+    "pyjokes",
+    "SpeechRecognition",
+    "requests",
+    "wikipedia",
+    "pafy"
+]
+build-backend = "setuptools.build_meta"
