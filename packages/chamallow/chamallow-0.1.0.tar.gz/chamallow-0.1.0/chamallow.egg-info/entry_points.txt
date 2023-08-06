@@ -1,0 +1,3 @@
+[console_scripts]
+chamallow = chamallow.__main__:run
+
