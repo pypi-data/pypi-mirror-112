@@ -1,0 +1,138 @@
+.coveragerc
+.gitignore
+.readthedocs.yml
+CHANGELOG.md
+README.md
+_config.yml
+licence.txt
+pytest.ini
+setup.cfg
+setup.py
+tox.ini
+.circleci/config.yml
+.github/ISSUE_TEMPLATE/bug_report.md
+.github/ISSUE_TEMPLATE/config.yml
+.github/ISSUE_TEMPLATE/feature_request.md
+PyDynamic/__init__.py
+PyDynamic/signals.py
+PyDynamic.egg-info/PKG-INFO
+PyDynamic.egg-info/SOURCES.txt
+PyDynamic.egg-info/dependency_links.txt
+PyDynamic.egg-info/requires.txt
+PyDynamic.egg-info/top_level.txt
+PyDynamic/deconvolution/__init__.py
+PyDynamic/deconvolution/fit_filter.py
+PyDynamic/identification/__init__.py
+PyDynamic/identification/fit_filter.py
+PyDynamic/identification/fit_transfer.py
+PyDynamic/misc/SecondOrderSystem.py
+PyDynamic/misc/__init__.py
+PyDynamic/misc/filterstuff.py
+PyDynamic/misc/impinvar.py
+PyDynamic/misc/impinvar_license.txt
+PyDynamic/misc/noise.py
+PyDynamic/misc/testsignals.py
+PyDynamic/misc/tools.py
+PyDynamic/model_estimation/__init__.py
+PyDynamic/model_estimation/fit_filter.py
+PyDynamic/model_estimation/fit_transfer.py
+PyDynamic/uncertainty/__init__.py
+PyDynamic/uncertainty/interpolate.py
+PyDynamic/uncertainty/interpolation.py
+PyDynamic/uncertainty/propagate_DFT.py
+PyDynamic/uncertainty/propagate_DWT.py
+PyDynamic/uncertainty/propagate_MonteCarlo.py
+PyDynamic/uncertainty/propagate_convolution.py
+PyDynamic/uncertainty/propagate_filter.py
+docs/CONTRIBUTING.md
+docs/DFT_13_0.png
+docs/DFT_16_0.png
+docs/DFT_22_0.png
+docs/DFT_26_0.png
+docs/DFT_27_0.png
+docs/DFT_5_0.png
+docs/DFT_6_0.png
+docs/Deconvolution by FIR.rst
+docs/Deconvolution in the DFT domain.rst
+docs/Deconvolution.png
+docs/Examples.rst
+docs/FIR_16_0.png
+docs/FIR_20_0.png
+docs/FIR_22_0.png
+docs/FIR_23_0.png
+docs/FIR_5_0.png
+docs/FIR_6_0.png
+docs/FIR_9_0.png
+docs/Getting started.md
+docs/IIR_16_0.png
+docs/IIR_18_0.png
+docs/IIR_21_0.png
+docs/IIR_23_0.png
+docs/IIR_24_0.png
+docs/IIR_28_1.png
+docs/PyDynamic.misc.rst
+docs/PyDynamic.model_estimation.rst
+docs/PyDynamic.uncertainty.rst
+docs/PyDynamic_package_diagram.drawio
+docs/PyDynamic_package_diagram.png
+docs/Tutorials.rst
+docs/Uncertainty propagation for IIR filters.rst
+docs/conf.py
+docs/index.rst
+docs/numpy-intersphinx-mappings.txt
+docs/pydynamic-intersphinx-mappings.txt
+docs/pydynamic_tutorials-intersphinx-mappings.txt
+examples/DFT and iDFT with PyDynamic - best practice guide and use cases.ipynb
+examples/__init__.py
+examples/fit_sos.py
+examples/working_with_signals.py
+examples/.ipynb_checkpoints/DFT and iDFT with PyDynamic - best practice guide and use cases-checkpoint.ipynb
+examples/Digital filtering/FIRuncFilter_runtime_comparison.py
+examples/Digital filtering/deconv_FIR.py
+examples/Digital filtering/identify_IIR.py
+examples/Digital filtering/realtime_dwt.py
+examples/Digital filtering/speed_comparison_filter.py
+examples/Digital filtering/uncpropagation_FIR.py
+examples/Digital filtering/uncpropagation_IIR.py
+examples/Digital filtering/validate_DWT_monte_carlo.py
+examples/Digital filtering/validate_FIR_IIR_MC.py
+examples/Digital filtering/validate_FIRuncFilter.py
+examples/Interpolating/validation_spline_interp_with_MC.py
+examples/Shock calibration/Input estimation for shock acceleration example.ipynb
+examples/Shock calibration/measured_input_accel.txt
+examples/Shock calibration/measured_output_accel.txt
+examples/Shock calibration/sinusoidal_calibration_values.txt
+examples/uncertainty_for_dft/DFT_amplitude_phase.py
+examples/uncertainty_for_dft/DFTdeconv calibration.dat
+examples/uncertainty_for_dft/DFTdeconv measured_signal.dat
+examples/uncertainty_for_dft/DFTdeconv reference_signal.dat
+examples/uncertainty_for_dft/__init__.py
+examples/uncertainty_for_dft/deconv_DFT.py
+requirements/dev-requirements-py36.in
+requirements/dev-requirements-py36.txt
+requirements/dev-requirements-py37.in
+requirements/dev-requirements-py37.txt
+requirements/dev-requirements-py38.in
+requirements/dev-requirements-py38.txt
+requirements/dev-requirements.in
+requirements/dev-requirements.txt
+requirements/environment.yml
+requirements/requirements-py36.txt
+requirements/requirements-py37.txt
+requirements/requirements-py38.txt
+requirements/requirements.txt
+requirements/upgrade_dependencies.sh
+test/__init__.py
+test/test_DFT.py
+test/test_deprecations.py
+test/test_examples.py
+test/test_identification.py
+test/test_interpolate.py
+test/test_isstable.py
+test/test_misc_noise.py
+test/test_propagate_DWT.py
+test/test_propagate_MonteCarlo.py
+test/test_propagate_convolution.py
+test/test_propagate_filter.py
+test/test_second_order_systems.py
+test/test_signals.py
