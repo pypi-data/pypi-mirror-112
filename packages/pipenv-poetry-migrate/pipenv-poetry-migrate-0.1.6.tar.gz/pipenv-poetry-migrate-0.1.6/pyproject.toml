@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "pipenv-poetry-migrate"
+version = "0.1.6"
+description = "simple migration script, migrate pipenv to poetry"
+authors = ["Yoshiyuki HINO <yhinoz@gmail.com>"]
+license = "Apache-2.0"
+repository = 'https://github.com/yhino/pipenv-poetry-migrate'
+homepage = 'https://github.com/yhino/pipenv-poetry-migrate'
+readme = 'README.md'
+
+[tool.poetry.dependencies]
+python = "^3.7"
+tomlkit = ">=0.5.11,<1.0.0"
+rich = "^9.6.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pytest-cov = "^2.8.1"
+flake8 = "^3.9.2"
+black = "^21.6b0"
+isort = "^5.9.1"
+mypy = "^0.910"
+tox = "^3.20.0"
+python-semantic-release = "^7.15.3"
+types-setuptools = "^57.0.0"
+
+[tool.poetry.scripts]
+pipenv-poetry-migrate = "pipenv_poetry_migrate.cli:main"
+
+[tool.isort]
+profile = "black"
+src_paths = ["pipenv_poetry_migrate", "tests"]
+
+[tool.semantic_release]
+branch = "master"
+version_toml = "pyproject.toml:tool.poetry.version"
+commit_parser = "semantic_release.history.emoji_parser"
+major_emoji = ":boom:"
+minor_emoji = ":sparkles:,:children_crossing:,:lipstick:,:iphone:,:egg:,:chart_with_upwards_trend:"
+patch_emoji = ":ambulance:,:lock:,:bug:,:zap:,:goal_net:,:alien:,:wheelchair:,:speech_balloon:,:mag:,:apple:,:penguin:,:checkered_flag:,:robot:,:green_apple:"
+build_command = "poetry build"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
