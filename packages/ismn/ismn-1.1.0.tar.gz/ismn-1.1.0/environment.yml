@@ -1,0 +1,21 @@
+name: ismn
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy
+  - pandas
+  - matplotlib
+  - cartopy
+  - ipykernel
+  - pip
+  - pip:
+     - pygeogrids>=0.3.2
+     - configparser
+     - tqdm
+     - more_itertools
+     - sphinx==4.0.3  # there seems to be an issue with 4.1.0 and nbsphinx, when this is resolved this line can be deleted to use the latest version.
+     - nbsphinx
+     - sphinx_rtd_theme
+     - pytest
+     - pytest-cov
