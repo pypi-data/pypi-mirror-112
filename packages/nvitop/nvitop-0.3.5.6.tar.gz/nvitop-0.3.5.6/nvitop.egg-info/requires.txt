@@ -1,0 +1,7 @@
+nvidia-ml-py==11.450.51
+psutil
+cachetools
+termcolor
+
+[:platform_system == "Windows"]
+windows-curses
