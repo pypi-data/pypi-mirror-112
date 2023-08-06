@@ -1,0 +1,8 @@
+nevermined-metadata-driver-interface
+elasticsearch~=7.13.1
+
+[dev]
+pytest
+
+[test]
+pytest
