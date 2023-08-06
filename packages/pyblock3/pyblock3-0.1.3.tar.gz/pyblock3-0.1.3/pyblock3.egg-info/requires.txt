@@ -1,0 +1,7 @@
+mkl
+mkl-include
+numpy
+numba
+psutil
+pybind11
+intel-openmp
