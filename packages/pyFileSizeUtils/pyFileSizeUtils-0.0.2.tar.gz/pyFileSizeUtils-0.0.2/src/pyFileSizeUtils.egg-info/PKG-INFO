@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pyFileSizeUtils
+Version: 0.0.2
+Summary: File size utils contains method for conversion between size unit like byte, kilobyte, megabyte...
+Home-page: https://github.com/xh-dev/pyFileSizeUtils
+Author: xethhung
+Author-email: pypi@xethh.dev
+License: UNKNOWN
+Description: # File Size Utils
+        
+        A library provide function converting file size or memory size between different unit byte, kilo byte, mega byte...
+        
+        # Installation
+        
+        ```
+        pip install pyFileSizeUtils
+        ```
+        
+        # Demo
+        
+        ```python
+        import pyFileSizeUtils 
+        ```
+        
+        ```python
+        from pyFileSizeUtils import BinarySize,SizeUnit
+        
+        oneMB = BinarySize.ofMBFromInt(1).inByte()
+        print(oneKB.inByte()) # 1024
+        
+        
+        ```
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: dev

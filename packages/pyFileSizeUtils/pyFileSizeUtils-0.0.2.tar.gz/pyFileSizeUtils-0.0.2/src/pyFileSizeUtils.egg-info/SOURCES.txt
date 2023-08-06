@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/pyFileSizeUtils.py
+src/pyFileSizeUtils.egg-info/PKG-INFO
+src/pyFileSizeUtils.egg-info/SOURCES.txt
+src/pyFileSizeUtils.egg-info/dependency_links.txt
+src/pyFileSizeUtils.egg-info/requires.txt
+src/pyFileSizeUtils.egg-info/top_level.txt
+test/test_code.py
