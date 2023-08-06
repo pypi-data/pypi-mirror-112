@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: SaranyaSumThree
+Version: 1.0.0
+Summary: It Outputs sum of three numbers
+Home-page: https://github.com/saranya-sekar/SaranyaSumThree
+Author: Saranya Sekar
+Author-email: saranyatagore@yahoo.com
+License: MIT
+Download-URL: https://github.com/saranya-sekar/SaranyaSumThree/archive/refs/tags/final-01.tar.gz
+Description: # SaranyaSumThree
+        It takes Three numbers as input and returns the sum of the three
+        
+        ## Installation
+        ```pip install SaranyaSumThree```
+        
+        ## How to use it?
+        Use this function in your sum_three(a,b,c)
+        
+        ## License
+        
+        Â© 2021 Saranya Sekar
+        
+        This repository is licensed under the MIT license. See LICENSE for details.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
