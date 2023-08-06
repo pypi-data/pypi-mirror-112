@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: wyzeapy
+Version: 0.2.8
+Summary: Python client for private Wyze API
+Home-page: https://github.com/JoshuaMulliken/wyzeapy
+Author: Mulliken LLC
+Author-email: joshua@mulliken.net
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/JoshuaMulliken/wyzeapy/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Freeware
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Wyzeapy: Python wrapper around the Wyze App APIs
+
+This library is primarily designed to be used in the [ha-wyzeapi](https://github.com/JoshuaMulliken/ha-wyzeapi) Home Assistant integration. If you find it useful in another application please let me know so that I can notify you of any breaking changes.
+
+## Usage
+
+For now please look at the implementation of ha-wyzeapi. I do not have the time to write significant documentation until both of these projects are at a feature complete and stable place.
+
+## Code Scanning
+
+Analysis is run through: [sonarcloud](https://sonarcloud.io/dashboard?id=JoshuaMulliken_wyzeapy)
+
+
