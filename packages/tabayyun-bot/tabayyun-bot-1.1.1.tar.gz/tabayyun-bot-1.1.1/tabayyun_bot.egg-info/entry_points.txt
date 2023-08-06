@@ -1,0 +1,3 @@
+[console_scripts]
+tabayyun-bot = cli.cli:handle_commands
+
