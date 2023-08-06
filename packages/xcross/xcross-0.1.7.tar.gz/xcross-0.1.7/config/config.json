@@ -1,0 +1,261 @@
+// NOTE: This is a custom JSON file, where lines leading
+// with `//` are removed. No other comments are valid.
+{
+    // Currently uses the following toolchain versions:
+    //   Ubuntu          20.04
+    //   GCC             10.2.0
+    //   MinGW           8.0.0
+    //   glibc           2.31 or 2.32
+    //   musl            1.2.2
+    //   avr-libc        2.0.0
+    //   uclibc-ng       1.0.31
+    //   crosstool-ng    1.24.0
+    //   qemu (Debian)   4.2.1
+    //   qemu (Source)   6.0.0
+    //   android NDK     r22b
+    //
+    // Incrementing a major version of any of these dependencies
+    // will lead to a version increment.
+
+    // Metadata associated with xcross.
+    "metadata": {
+        "username": "ahuszagh",
+        "repository": "cross",
+        "authors": "ahuszagh@gmail.com",
+        "maintainer": "ahuszagh@gmail.com",
+        "url": "https://github.com/Alexhuszagh/xcross",
+        "vcs-url": "https://github.com/Alexhuszagh/xcross"
+    },
+    // Version for xcross.
+    "xcross": {
+        "version": {
+            "major": "0",
+            "minor": "1",
+            "patch": "7",
+            "release": "",
+            "number": "",
+            "build": "2021-07-10"
+        }
+    },
+    // Version for Docker images.
+    "docker": {
+        "version": {
+            "major": "0",
+            "minor": "1",
+            "patch": "0",
+            "build": "2021-07-10"
+        }
+    },
+    // Ubuntu version for Docker images.
+    "ubuntu": {
+        "version": {
+            "major": "20",
+            "minor": "04",
+            "name": "focal"
+        }
+    },
+    // Emscripten emsdk version for the Docker images.
+    "emsdk": {
+        "version": {
+            "major": "2",
+            "minor": "0",
+            "patch": "23"
+        }
+    },
+    // Linux version for musl images.
+    "linux": {
+        "version": {
+            "major": "4",
+            "minor": "19",
+            "patch": "90",
+            "xz_sha1": "2663224361a984c8a62b9cf9fc8c82c0a75f9f3f"
+        }
+    },
+    // Linux kernel header version for musl images.
+    "linux-headers": {
+        "version": {
+            "major": "4",
+            "minor": "19",
+            "patch": "88",
+            "xz_sha1": "de12b9c8ae2de9e85056a36be9f0fcc0a1e4abe9"
+        }
+    },
+    // Binutils version for **most** images.
+    "binutils": {
+        "version": {
+            "major": "2",
+            "minor": "32",
+            // The SHA1 sum to verify the download.
+            "xz_sha1": "cd45a512af1c8a508976c1beb4f5825b3bb89f4d"
+        }
+    },
+    // GCC Version for **most** images.
+    // We still track config files in ct-ng since some images
+    // have to be specially maintained.
+    "gcc": {
+        "version": {
+            "major": "10",
+            "minor": "2",
+            "patch": "0",
+            // The SHA1 sum to verify the download.
+            "xz_sha1": "8de0aecd3a52bb92b43082df8a9256356d1f03be"
+        }
+    },
+    // MinGW version for crosstool-NG builds.
+    "mingw": {
+        "version": {
+            "major": "8",
+            "minor": "0",
+            "patch": "0"
+        }
+    },
+    // Glibc version for crosstool-NG builds.
+    "glibc": {
+        "version": {
+            "major": "2",
+            "minor": "31",
+            "patch": "0"
+        }
+    },
+    // Musl libc version for crosstool-NG builds.
+    "musl": {
+        "version": {
+            "major": "1",
+            "minor": "2",
+            "patch": "2",
+            // The SHA1 sum to verify the download from musl.
+            "gz_sha1": "e7ba5f0a5f89c13843b955e916f1d9a9d4b6ab9a"
+        }
+    },
+    // Musl-cross-make versions for musl builds.
+    "musl-cross": {
+        "version": {
+            "major": "0",
+            "minor": "9",
+            "patch": "9"
+        }
+    },
+    // AVR libc version for crosstool-NG builds.
+    "avr": {
+        "version": {
+            "major": "2",
+            "minor": "0",
+            "patch": "0"
+        }
+    },
+    // uClibc-NG version for crosstool-NG builds.
+    "uclibc": {
+        "version": {
+            "major": "1",
+            "minor": "0",
+            "patch": "31"
+        }
+    },
+    // ISL version for musl-cross builds.
+    "isl": {
+        "version": {
+            "major": "0",
+            "minor": "20",
+            "bz2_sha1": "b1d96b7b44c72f86c98d4fbd4caaa7796b27681e"
+        }
+    },
+    // Get the GMP version for musl-cross builds.
+    "gmp": {
+        "version": {
+            "major": "6",
+            "minor": "1",
+            "patch": "2",
+            "bz2_sha1": "366ded6a44cd108ba6b3f5b9a252eab3f3a95cdf"
+        }
+    },
+    // Get the MPC version for musl-cross builds.
+    "mpc": {
+        "version": {
+            "major": "1",
+            "minor": "1",
+            "patch": "0",
+            "gz_sha1": "b019d9e1d27ec5fb99497159d43a3164995de2d0"
+        }
+    },
+    // Get the MPFR version for musl-cross builds.
+    "mpfr": {
+        "version": {
+            "major": "4",
+            "minor": "0",
+            "patch": "2",
+            "bz2_sha1": "d6a313a3b1ceb9ff3be71cd18e45468837b7fd53"
+        }
+    },
+    // Expat version for crosstool-NG builds.
+    "expat": {
+        "version": {
+            "major": "2",
+            "minor": "4",
+            "patch": "1"
+        }
+    },
+    // Get the buildroot version we download.
+    "buildroot": {
+        "version": {
+            "major": "2021",
+            "minor": "02",
+            "patch": "3"
+        }
+    },
+    // Get the crosstool-NG version we download.
+    "crosstool-ng": {
+        "version": {
+            "major": "1",
+            "minor": "24",
+            "patch": "0"
+        }
+    },
+    // Qemu-from-source version.
+    "qemu": {
+        "version": {
+            "major": "6",
+            "minor": "0",
+            "patch": "0"
+        }
+    },
+    // Android versions.
+    "android": {
+        "clang_version": "11.0.5",
+        "ndk_directory": "/usr/local/ndk",
+        "ndk_version": "r22b",
+        "sdk_version": "30"
+    },
+    // RISCV GNU toolchain version.
+    "riscv-gnu-toolchain": {
+        "riscv-version": "2021.04.23",
+        "binutils-version": "2.36.1",
+        "gdb-version": "10.1",
+        "glibc-version": "2.33",
+        "newlib-version": "4.1.0",
+        "extensions": {
+            "linux": {
+                "type": "linux",
+                "required": "ima",
+                "all": "imafdc"
+            },
+            "bare-metal": {
+                "type": null,
+                "required": "imac",
+                "all": "imac"
+            }
+        },
+        "bits": ["32", "64"],
+        "abi": {
+            "32": "ilp32",
+            "64": "lp64"
+        }
+    },
+    // Other configuration options.
+    "options": {
+        "build_jobs": "5",
+        "sysroot": "/opt",
+        "username": "cross",
+        "sleep": "1m",
+        "timeout": "5m"
+    }
+}
