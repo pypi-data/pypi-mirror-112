@@ -1,0 +1,15 @@
+README.md
+setup.py
+file_io.egg-info/PKG-INFO
+file_io.egg-info/SOURCES.txt
+file_io.egg-info/dependency_links.txt
+file_io.egg-info/requires.txt
+file_io.egg-info/top_level.txt
+fileio/__init__.py
+fileio/_version.py
+fileio/src/__init__.py
+fileio/utils/__init__.py
+fileio/utils/ds.py
+fileio/utils/logging.py
+fileio/utils/multi.py
+fileio/utils/ops.py
