@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+src/cartogram/__init__.py
+src/cartogram/_constants.py
+src/cartogram/_utils.py
+src/cartogram/dorling.py
+src/cartogram/dorling_compress.py
+src/cartogram_nuuuwan.egg-info/PKG-INFO
+src/cartogram_nuuuwan.egg-info/SOURCES.txt
+src/cartogram_nuuuwan.egg-info/dependency_links.txt
+src/cartogram_nuuuwan.egg-info/requires.txt
+src/cartogram_nuuuwan.egg-info/top_level.txt
