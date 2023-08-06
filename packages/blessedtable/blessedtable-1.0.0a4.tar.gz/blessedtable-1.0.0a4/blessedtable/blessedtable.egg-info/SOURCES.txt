@@ -1,0 +1,16 @@
+.coveragerc
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+store.py
+tests.py
+tox.ini
+blessedtable/blessedtable.py
+blessedtable/blessedtable.egg-info/PKG-INFO
+blessedtable/blessedtable.egg-info/SOURCES.txt
+blessedtable/blessedtable.egg-info/dependency_links.txt
+blessedtable/blessedtable.egg-info/requires.txt
+blessedtable/blessedtable.egg-info/top_level.txt
