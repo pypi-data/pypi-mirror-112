@@ -1,0 +1,7 @@
+sqlite-utils>=2.4.4
+click
+requests
+requests_mock
+
+[test]
+pytest
