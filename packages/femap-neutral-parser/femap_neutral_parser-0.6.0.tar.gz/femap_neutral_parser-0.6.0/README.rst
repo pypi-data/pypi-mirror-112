@@ -1,0 +1,152 @@
+====================
+FEMAP neutral Parser
+====================
+
+
+FEMAP neutral file parser
+
+
+* Free software: MIT license
+
+
+Features and limitations
+------------------------
+
+Parse and render FEMAP neutral files. For now, three blocks are interpreted:
+
+* Block 100 "Neutral File Header"
+* Block 450 "Output Sets"
+* Block 451 "Output Data Vectors"
+
+Additionally, MYSTRAN outputs (which makes use of different titles than FEMAP)
+are harmonized: access to total translation is done using the same title as
+FEMAP ("Total Translation" *vs* "RSS translations").
+
+Basic example
+-------------
+
+Import the parser and instantiate it::
+
+        >>> from femap_neutral_parser import Parser
+        >>> neutral = Parser("fea.NEU")
+
+Get a summary of what's available::
+
+        >>> neutral.info()
+        Analysis
+        ========
+         * subcase 1: Analyse. NASTRAN SPC 1 - NASTRAN SPC 1 - NASTRAN SPC 1 - lc1. test (Static)
+         * subcase 2: Analyse. NASTRAN SPC 1 - NASTRAN SPC 1 - NASTRAN SPC 1 - lc2. test (Static)
+
+        Outputs
+        =======
+        access to one of them using `.output_vectors[<title>][<SubcaseID>]['record']`
+
+         * Total Translation
+         * T1 Translation
+         * T2 Translation
+         * ...
+         * Bar EndA Min Comb Stress
+         * Bar EndB Min Comb Stress
+
+
+As of `femap-neutral-parser` 0.3.0, an aggregated output is done *via* `Parser.vectors()` method::
+
+        >>> arr = neutral.vectors(("T1 Translation", 
+        ...                        "T2 Translation", 
+        ...                        "T3 Translation"), 
+        ...                       SubcaseIDs=None)  # collect all subcases
+        >>> arr
+        rec.array([( 1,  0.        , 0.,  0.000000e+00, 1),
+                   ( 2, -0.1870816 , 0.,  0.000000e+00, 1),
+                   ( 3,  0.        , 0.,  0.000000e+00, 1),
+                   ...
+                   (10,  0.        , 0., -1.100510e+00, 2),
+                   (11,  0.        , 0., -1.916094e+00, 2),
+                   (12,  0.        , 0., -2.389742e+00, 2)],
+                  dtype=[('NodeID', '<i8'), ('T1 Translation', '<f8'), ('T2 Translation', '<f8'), ('T3 Translation', '<f8'), ('SubcaseID', '<i8')])
+
+Which is easily turned into a pandas DataFrame::
+
+        >>> pd.DataFrame(arr).set_index(["SubcaseID", "NodeID"])
+                          T1 Translation  T2 Translation  T3 Translation
+        SubcaseID NodeID                                                
+        1         1             0.000000             0.0        0.000000
+                  2            -0.187082             0.0        0.000000
+        ...
+                  11            0.000000             0.0       -1.564502
+                  12            0.000000             0.0       -1.602912
+        2         1             0.000000             0.0        0.000000
+                  2            -0.204539             0.0        0.000000
+        ...
+                  11            0.000000             0.0       -1.916094
+                  12            0.000000             0.0       -2.389742
+
+To get individual output vectors, just address the relevant dictionary::
+
+        >>> arr = neutral.output_vectors["Total Translation"][2]["record"]
+        >>> type(arr)
+        numpy.ndarray
+        >>> arr
+        array([( 1, 0.000000e+00), ( 2, 2.045391e-01), ( 3, 0.000000e+00),
+               ( 4, 1.468270e-02), ( 5, 9.231050e-05), ( 6, 6.276400e-01),
+               ( 7, 2.578386e+00), ( 8, 1.025100e-01), ( 9, 2.578363e+00),
+               (10, 1.100510e+00), (11, 1.916094e+00), (12, 2.389742e+00)],
+              dtype=[('NodeID', '<i8'), ('Total Translation', '<f8')])
+        >>> import pandas as pd
+        >>> pd.DataFrame(arr).set_index("NodeID")
+                Total Translation
+        NodeID                   
+        1                0.000000
+        2                0.204539
+        3                0.000000
+        4                0.014683
+        5                0.000092
+        6                0.627640
+        7                2.578386
+        8                0.102510
+        9                2.578363
+        10               1.100510
+        11               1.916094
+        12               2.389742
+
+
+Requirements
+------------
+
+Beside Python>=3.8, only `numpy` is required. `numpy` arrays are released as
+`<https://numpy.org/doc/stable/user/basics.rec.html>`_, which makes conversions
+to Pandas a breeze.
+
+Testing
+-------
+
+For testing, making docs or coding, all the dev requirements are provided in `requirements_dev.txt`. 
+
+From a blank virtual environment, clone this repo::
+
+        git clone https://framagit.org/numenic/femap_neutral_parser.git
+
+
+Create a Python virtual environment, and activate it::
+
+        python -m venv fnp
+        source fnp/bin/activate
+
+Install requirements::
+
+        cd femap_neutral_parser
+        pip install -r requirements.txt  # install numpy
+        pip install -r requirements_dev.txt
+        pip install -e .  # install femap-neutral-parser in new venv
+
+Now testing::
+
+        make test  # or make coverage
+
+Building docs::
+
+        make docs
+
+
+        
