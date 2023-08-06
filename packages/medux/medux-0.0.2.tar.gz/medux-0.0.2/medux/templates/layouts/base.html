@@ -1,0 +1,85 @@
+{% extends 'layouts/html.html' %}
+{% load alerts static i18n menu %}
+
+{% block title %}MedUX{% endblock title %}
+
+{% block body %}
+  {% generate_menu %}
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light bg-medux"
+         aria-label="Main navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">
+          <img src="{% static 'img/logo.png' %}" alt="Logo"
+               style="width:32px; height:32px;">
+          <span>MedUX</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarDropdown" aria-controls="navbarDropdown"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi-three-dots-vertical"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarDropdown">
+
+          <ul class="nav navbar-nav me-auto mb-1 mb-lg-0">
+            {% with menu=menus.main_menu %}
+              {% include "includes/top-navbar-menu.html" %}{% endwith %}
+          </ul>
+          <form class="d-flex">
+            <div class="input-group input-group-sm">
+              <input class="form-control" type="search"
+                     placeholder="{% trans 'Search patients' %}"
+                     aria-label="{% trans 'Search' %}">
+              <button
+                  class="btn-secondary input-group-text"><i class="bi-search"></i></button>
+            </div>
+          </form>
+          <ul class="nav navbar-nav">
+            {% with menu=menus.top_navbar %}
+              {% include "includes/top-navbar-menu.html" %}{% endwith %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container-fluid ">
+
+    <div aria-live="polite" aria-atomic="true" class="position-relative">
+      <div class="toast-container position-absolute top-0 end-0 p-3">
+        {# TODO: toasts could be done here using a plugin hook #}
+        {# {% toast title="Neue Nachricht" message='{{ foo }}' icon="bi-user" tag="danger" %}#}
+        {# {% toast title="Bootstrap" badge="just now" message='See? Just like this.' icon="bi-user" %}#}
+      </div>
+    </div>
+
+    <div class="row">
+      {% include "includes/sidebar.html" %}
+      <main class="main col-lg-11">
+        <div class="nav-scroller bg--body shadow-sm">
+          <nav class="nav nav-underline" aria-label="Secondary navigation">
+
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+               <h2>{% block viewmode_title %}{% endblock %}</h2>
+              <div class="btn-toolbar mb-2 mb-md-0">
+                {% block secondary_menu %}{% endblock %}
+              </div>
+            </div>
+            {#            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>#}
+            {#            <a class="nav-link" href="#">File <span#}
+            {#                class="badge bg-warning text-dark rounded-pill align-text-bottom">27</span>#}
+            {#            </a>#}
+            {#            <a class="nav-link" href="#">Medication</a>#}
+          </nav>
+        </div>
+        {% block content %}
+        {% endblock content %}
+      </main>
+    </div>
+  </main>
+{% endblock body %}
+{% block footer %}
+  {% include 'includes/footer.html' %}
+{% endblock %}
+{% block javascripts %}
+{% endblock %}

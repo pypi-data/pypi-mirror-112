@@ -1,0 +1,30 @@
+.bg-medux {
+    background-color: #2F91A3;
+}
+
+
+#sidebar {
+    width: 48px;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 68px; /* 40 + 20 */
+    }
+
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 1em; /* height of the footer */
+    box-sizing: border-box;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    min-height: 1em;
+}

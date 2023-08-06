@@ -1,0 +1,18 @@
+  {% for item in menu %}
+    {% if item.visible %}
+      <li class="nav-item{% if item.children %} dropdown{% endif %}"
+          id="top-menu-{{ item.slug }}"
+          {% if item.icon_only %}
+            {# FIXME: remove caret when using icons-only dropdown  #}
+          {% endif %}>
+        <a role="button"{% if item.children %} href="#"{% else %} href="{{ item.url }}"{% endif %} class="nav-link{% if item.children %} dropdown-toggle"
+            data-bs-toggle="dropdown" aria-expanded="false{% endif %}">
+          {% if item.icon %}<i class="{{ item.icon }}"></i> {% endif %}
+          {% if not item.icon_only %}{{ item.title }}{% endif %}
+        </a>
+        {% if item.children %}
+            {% include 'includes/top-navbar-submenu.html' with items=item.children %}
+        {% endif %}
+      </li>
+    {% endif %}
+  {% endfor %}

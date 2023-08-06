@@ -1,0 +1,20 @@
+<ul class="dropdown-menu">
+  {% for item in items %}
+    {% if item.visible %}
+      {% if item.separator %}
+          <li><hr class="dropdown-divider"/></li>
+      {% else %}
+        <li class="{% if item.selected %}active {% endif %}">
+          <a class="dropdown-item" href="{{ item.url }}">
+            {% if item.icon %}<i class="{{ item.icon }}"></i> {% endif %}{{ item.title }}
+          </a>
+          {% if item.children %}
+            {% with items=item.children template_name='top-navbar-submenu.html' %}
+              {% include template_name %}
+            {% endwith %}
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</ul>

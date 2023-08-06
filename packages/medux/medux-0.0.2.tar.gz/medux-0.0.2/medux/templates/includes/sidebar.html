@@ -1,0 +1,19 @@
+{% load static %}
+<nav id="sidebar" class="d-md-block bg-light sidebar collapse">
+  <div class="position-sticky pt-2">
+    <ul class="nav flex-column">
+      {% for viewmode in viewmodes|dictsort:"weight" %}
+      <li class="nav-item">
+        <a class="btn nav-link{% if viewmode.url == request.path %} active" aria-current="page{% endif %}" href="{{ viewmode.url }}" title="{{ viewmode.title }}">
+          <h1>{% if viewmode.icon_type == "bi" %}
+            <i class="{{ viewmode.icon }}"></i>
+          {% else %}
+            <img src="{% static viewmode.icon %}" alt="{{ viewmode.title }}">
+          {% endif %}</h1>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+

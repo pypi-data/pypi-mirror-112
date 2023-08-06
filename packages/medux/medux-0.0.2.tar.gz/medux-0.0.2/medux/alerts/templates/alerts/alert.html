@@ -1,0 +1,19 @@
+{% load i18n %}
+<div class="toast fade show alert-secondary" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header{% if tag in light_tags %} text-dark bg-{{ tag }}{% endif %}{% if tag in dark_tags %} text-light bg-{{ tag }}{% endif %}">
+    {% if icon %}
+     <div class="p-1"><i class="{{ icon }}"></i></div>
+    {% endif %} 
+{#    <img src="..." class="rounded me-2" alt="...">#}
+    <strong class="me-auto">{{ title }}</strong>
+    {% if badge %}
+    <small class="text-muted">{{ badge }}</small>
+    {% endif %}
+    <button type="button" class="btn-close" data-bs-dismiss="toast"
+            aria-label="{% trans 'Close' %}"></button>
+  </div>
+  <div class="toast-body">
+    {{ message }}
+  </div>
+</div>
+<div class="btn-primary"></div>

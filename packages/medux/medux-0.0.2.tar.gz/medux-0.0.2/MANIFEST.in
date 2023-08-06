@@ -1,0 +1,9 @@
+include LICENSE.md
+include CHANGELOG.md
+recursive-include **/templates *
+recursive-include **/static *
+
+#recursive-include docs *.rst *.md
+global-exclude *.py[co]
+prune docs/_build
+prune .venv

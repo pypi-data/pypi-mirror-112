@@ -1,0 +1,67 @@
+{% extends 'layouts/empty.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans "Login" %}{% endblock %}
+
+{% block content %}
+  <div class="container-md mb-4">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="login-form bg-light mt-4 p-4 shadow-lg">
+          <form action="{% url 'login' %}" method="post" class="row g-3">
+            {% csrf_token %}
+            <h4>{% trans 'Log in' %}</h4>
+            <div class="col-12">
+              <label for="username">{% trans 'Username' %}</label>
+              <input id="username" type="text" name="username" class="form-control"
+                     placeholder="Username">
+            </div>
+            <div class="col-12">
+              <label>{% trans 'Password' %}</label>
+              <input type="password" name="password" class="form-control"
+                     placeholder="Password">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rememberUser">
+                <label class="form-check-label"
+                       for="rememberUser">{% trans 'Remember me' %}</label>
+              </div>
+            </div>
+          {% if form.non_field_errors or form.errors %}
+            <div class="alert alert-danger">
+            <ul>
+              {% if form.non_field_errors %}
+                {% for error in form.non_field_errors %}
+                  <li><strong>{{ error }}</strong></li>
+                {% endfor %}
+              {% endif %}
+
+              {% if form.errors %}
+                  {% for field in form %}
+                    {% for error in field.errors %}
+                      <li><strong>{{ field.label }}: {{ error | escape }}</strong></li>
+                    {% endfor %}
+                  {% endfor %}
+
+              {% endif %}
+            </ul>
+            </div>
+
+          {% endif %}
+            <div class="col-12">
+              <button type="submit"
+                      class="btn btn-dark float-end">{% trans 'Login' %}</button>
+            </div>
+          </form>
+          <hr class="mt-4">
+          <div class="col-12">
+            <a class="small" href="{% url 'password_reset' %}">
+              {% trans "Forgot your password?" %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
