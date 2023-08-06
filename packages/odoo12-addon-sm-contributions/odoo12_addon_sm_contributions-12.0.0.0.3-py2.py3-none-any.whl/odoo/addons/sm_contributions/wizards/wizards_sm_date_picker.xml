@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record model="ir.ui.view" id="data_picker_wizard">
+    <field name="name">Date picker</field>
+    <field name="model">sm_contributions.date_picker.wizard</field>
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+          <field name="date_chosen"/>
+
+        </group>
+        <footer>
+          <button string="Cancel" special="cancel" class="oe_highlight"/>
+
+          <button name="proceed" string="Proceed to close the contribution" type="object"
+              class="oe_highlight"/>
+        </footer>
+      </form>
+    </field>
+  </record>
+</odoo>

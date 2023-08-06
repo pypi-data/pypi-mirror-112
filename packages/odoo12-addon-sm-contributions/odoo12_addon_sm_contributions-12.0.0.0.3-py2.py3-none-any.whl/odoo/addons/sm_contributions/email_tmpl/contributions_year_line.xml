@@ -1,0 +1,33 @@
+<odoo>
+  <data noupdate="1">
+
+    <record id="email_year_report" model="mail.template">
+        <field name="name">email_tmpl_contribution_year_report</field>
+        <field name="email_from">aportacions@sommobilitat.coop</field>
+        <field name="subject">Report anual de l'aportació</field>
+        <field name="partner_to">${object.associated_contribution.associated_member.id}</field>
+        <field name="model_id" ref="sm_contributions.model_sm_contributions_sm_contribution_line"/>
+        <field name="auto_delete" eval="False"/>
+        <field name="report_template" ref="sm_contributions.sm_contributions_report_line"/>
+        <field name="report_name">Informe retribució ${(object.initial_day).replace('/','_')}</field>
+        <field name="lang">${object.associated_contribution.associated_member.lang}</field>
+        <field name="body_html"><![CDATA[
+
+<div style="font-family: helvetica;font-size: 14px;">
+  <p>Hola ${object.associated_contribution.associated_member.name},</p>
+  <p style="line-height: 1.656" dir="ltr">T'adjuntem l'informe on es recull la<b> retribució anual corresponent a l'últim exercici </b>de la teva inversió a Som Mobilitat SCCL.</p>
+  <p style="line-height: 1.656" dir="ltr">Recorda que aquest informe et serà vàlid per justificar l'ingrés dels interessos a la teva declaració de renda.</p>
+  <p style="line-height: 1.656" dir="ltr">Ens posem a la teva disposició. Per a qualsevol dubte et pots dirigir a <a onclick="return rcmail.command('compose','aportacions@sommobilitat.coop',this)" href="mailto:aportacions@sommobilitat.coop" rel="noreferrer">aportacions@sommobilitat.coop</a> o al telèfon 930.185.137.&nbsp;</p>
+  <p style="line-height: 1.656" dir="ltr">Reiterem el nostre agraïment per la confiança que has dipositat en el projecte.</p>
+  <p style="line-height: 1.656" dir="ltr"><br></p>
+  <p style="line-height: 1.656" dir="ltr">Atentament,</p>
+  <br>
+</div>
+% if ctx.get('send_from_code'):
+  ${user.signature|safe}
+% endif
+
+        ]]></field>
+    </record>
+  </data>
+</odoo>

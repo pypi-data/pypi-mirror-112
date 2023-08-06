@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record model="ir.ui.view" id="contribution_line_selectable_wizard">
+    <field name="name">Select contribution line</field>
+    <field name="model">sm_contributions.contribution_line_selectable.wizard</field>
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+          <field name="parent_model"/>
+          <field name="year" domain="[('associated_contribution', '=', parent_model)]" widget="selectable"/>
+        </group>
+
+        <footer>
+          <button string="Cancel" special="cancel" class="oe_highlight"/>
+
+          <button name="send_year_report_email" string="Send email" type="object"
+              class="oe_highlight"/>
+        </footer>
+      </form>
+    </field>
+  </record>
+</odoo>

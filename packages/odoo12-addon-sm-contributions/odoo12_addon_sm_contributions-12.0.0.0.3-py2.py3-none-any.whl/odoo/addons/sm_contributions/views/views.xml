@@ -1,0 +1,5 @@
+<odoo>
+  <data>
+    <menuitem name="Contributions" id="sm_contributions.contributions_parent" parent="vertical_carsharing.menu_root"/>
+  </data>
+</odoo>

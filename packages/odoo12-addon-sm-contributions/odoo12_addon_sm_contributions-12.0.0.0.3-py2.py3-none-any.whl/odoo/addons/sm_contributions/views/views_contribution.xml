@@ -1,0 +1,109 @@
+<odoo>
+  <data>
+    <record id="view_contribution_window" model="ir.actions.act_window">
+      <field name="name">Contribution</field>
+      <field name="res_model">sm_contributions.sm_contribution</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_contribution_list" model="ir.ui.view">
+      <field name="name">sm_contributions.sm_contribution.tree</field>
+      <field name="model">sm_contributions.sm_contribution</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="contribution_type"/>
+          <field name="associated_member"/>
+          <field name="initial_import"/>
+          <field name="contributions_quantity"/>
+          <field name="contract_number"/>
+          <field name="initial_day"/>
+          <field name="expiration_day"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_contribution_form" model="ir.ui.view">
+      <field name="name">sm_contributions.sm_contribution.form</field>
+      <field name="model">sm_contributions.sm_contribution</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit contribution" version="7.0" delete="false">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group col="4">
+                  <field name="name"/>
+                  <field name="contract_number"/>
+                  <field name="initial_import"/>
+                  <field name="initial_import_txt"/>
+                  <field name="contributions_quantity"/>
+                </group>
+                <group>
+                  <field name="contribution_type"/>
+                  <field name="contribution_email_template_id"/>
+                </group>
+                <group>
+                  <field name="associated_member"/>
+                </group>
+
+                <group col="4">
+                  <field name="initial_day"/>
+                  <field name="expiration_day"/>
+                  <field name="closed_day"/>
+                </group>
+                <group>
+                  <field name="returned"/>
+                </group>
+
+                <group>
+                  <field name="contract_email_sent"/>
+                </group>
+
+                <group>
+                  <field name="upload_file" filename="file_name"/>
+                  <field name="file_name" invisible="1"/>
+                </group>
+
+                <group>
+                  <field name="contributions_line" widget="many2many_list"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!--ACTIONS-->
+
+    <record id="view_close_contribution_workflow" model="ir.actions.server">
+      <field name="name">Close contribution</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_sm_contributions_sm_contribution"/>
+      <field name="state">code</field>
+      <field name="code">action = model.select_closing_date()</field>
+    </record>
+
+    <record id="view_send_email_workflow" model="ir.actions.server">
+      <field name="name">Send contract</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_sm_contributions_sm_contribution"/>
+      <field name="state">code</field>
+      <field name="code">model.send_contract_email_from_action()</field>
+    </record>
+
+    <record id="view_send_year_report_workflow" model="ir.actions.server">
+      <field name="name">Send year report</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_sm_contributions_sm_contribution"/>
+      <field name="state">code</field>
+      <field name="code">action = model.send_year_report_email_from_action()</field>
+    </record>
+
+    <menuitem name="Contributions"
+          id="sm_contributions.contribution"
+          parent="sm_contributions.contributions_parent"
+          action="view_contribution_window"/>
+
+  </data>
+</odoo>

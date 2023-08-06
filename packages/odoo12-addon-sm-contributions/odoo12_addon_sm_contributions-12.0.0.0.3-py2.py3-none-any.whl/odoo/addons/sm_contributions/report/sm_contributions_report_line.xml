@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+  <data>
+
+    <template id="sm_contributions_report_line_view">
+      <t t-call="web.html_container">
+        <t t-call="sm_reports.sm_external_layout">
+          <t t-foreach="docs" t-as="doc">
+            <t t-set="doc"
+               t-value="doc.with_context({'lang':doc.associated_contribution.associated_member.lang})"/>
+            <div class="page">
+              <html>
+                <head>
+                  <style>
+                    table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    }
+
+                    th, td {
+                    padding: 8px;
+                    text-align: left;
+                    border-bottom: 1px solid #ddd;
+                    }
+
+                    tr:hover {background-color:#f5f5f5;}
+                  </style>
+
+                </head>
+                <body>
+                  <br></br>
+
+                  <h3>
+                    <strong>Dades del prestatari/a</strong>
+                  </h3>
+
+                  <table style="width:60%">
+                    <tr>
+                      <th>Cognoms i nom</th>
+                      <td>
+                        <span t-field="doc.associated_contribution.associated_member.name"/>
+                      </td>
+
+                    </tr>
+
+                    <tr>
+                      <t t-if="doc.associated_contribution.associated_member.is_company == True">
+                        <th>CIF</th>
+                        <td>
+                          <span t-field="doc.associated_contribution.associated_member.vat"/>
+                        </td>
+                      </t>
+                      <t t-else="">
+                        <th>DNI</th>
+                        <td>
+                          <div t-field="doc.associated_contribution.associated_member.vat"/>
+                        </td>
+                      </t>
+
+                    </tr>
+
+                    <tr>
+                      <th>Carrer</th>
+                      <td>
+                        <span t-field="doc.associated_contribution.associated_member.street"/>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>C. Postal - Municipi</th>
+                      <td>
+                        <span t-field="doc.associated_contribution.associated_member.zip"/>
+                        -
+                        <span t-field="doc.associated_contribution.associated_member.city"/>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>Correu electronic</th>
+                      <td>
+                        <span t-field="doc.associated_contribution.associated_member.email"/>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>Numero de soci/a</th>
+                      <td>
+                        <span t-field="doc.associated_contribution.associated_member.cooperator_register_number"/>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <br/>
+
+                  <h3>
+                    <strong>Dades de l'entitat prestadora</strong>
+                  </h3>
+
+                  <table style="width:60%">
+
+                    <tr>
+                      <th>Nom</th>
+                      <td>
+                        <span style=" text-transform: uppercase;"
+                            t-field="doc.associated_contribution.associated_member.company_id.name"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>CIF</th>
+                      <td>
+                        <span t-field="doc.associated_contribution.associated_member.company_id.partner_id.vat"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Carrer</th>
+                      <td>
+                        <span t-field="doc.associated_contribution.associated_member.company_id.partner_id.street"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>C. Postal - Municipi</th>
+                      <td>
+                        <span t-field="doc.associated_contribution.associated_member.company_id.partner_id.zip"/>
+                        -
+                        <span t-field="doc.associated_contribution.associated_member.company_id.partner_id.city"/>
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>Correu electronic</th>
+                      <td>
+                        <span t-field="doc.associated_contribution.associated_member.company_id.partner_id.email"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Representant</th>
+                      <td>
+                        <span t-field="doc.associated_contribution.associated_member.company_id.partner_id.representative"/>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <br/>
+
+                  <h3>
+                    <strong>Detalls de la inversió:</strong>
+                  </h3>
+                  <table>
+                    <tr>
+                      <th>Data inicial</th>
+                      <th>Data venciment</th>
+                      <th>Import títols o préstec</th>
+                      <th>Número de títols</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span t-field="doc.associated_contribution.initial_day"/>
+                      </td>
+                      <td>
+                        <t t-if="doc.associated_contribution.closed_day">
+                          <span t-field="doc.associated_contribution.closed_day"/>
+                        </t>
+                        <t t-else="">
+                          <span t-field="doc.associated_contribution.expiration_day"/>
+                        </t>
+                      </td>
+                      <td>
+                        <span t-field="doc.associated_contribution.initial_import"/>
+                        <span>€</span>
+                      </td>
+                      <td>
+                        <span t-field="doc.associated_contribution.contributions_quantity"/>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <br/>
+                  <h4>
+                    Retribució corresponent al
+                    <span t-field="doc.year"/>:
+
+                  </h4>
+
+                  <table style="width:60%; padding-left:5em">
+                    <tr>
+                      <th>Data inici període</th>
+                      <td>
+                        <span t-field="doc.initial_day"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Data final període</th>
+                      <td>
+                        <span t-field="doc.final_day"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Tipus d'interès</th>
+                      <td>
+                        <span t-field="doc.interest"/>
+                        <span>%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Interessos totals</th>
+                      <td>
+                        <span t-field="doc.import_free_tax"/>
+                        <span>€</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Retenció IRPF IS</th>
+                      <td>
+                        <span t-field="doc.tax"/>
+                        <span>€</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>A ingressar a compte</th>
+                      <td>
+                        <span t-field="doc.import_to_deposit_to_account"/>
+                        <span>€</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Compte bancari pagament</th>
+                      <td>
+                        <span t-field="doc.associated_contribution.associated_member.bank_ids[0].acc_number"/>
+                      </td>
+                    </tr>
+                  </table>
+                </body>
+              </html>
+            </div>
+          </t>
+        </t>
+      </t>
+    </template>
+
+    <report
+        id="sm_contributions_report_line"
+        model="sm_contributions.sm_contribution_line"
+        string="Contribution report line"
+        name="sm_contributions.sm_contributions_report_line_view"
+        file="sm_contributions.sm_contributions_report_line"
+        report_type="qweb-pdf"/>
+  </data>
+</odoo>

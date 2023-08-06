@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<odoo>
+  <data>
+
+    <template id="sm_contributions_report_view">
+      <t t-call="web.html_container">
+        <t t-call="sm_reports.sm_external_layout">
+          <t t-foreach="docs" t-as="doc">
+            <t t-set="doc"
+               t-value="doc.with_context({'lang':doc.associated_member.lang})"/>
+            <div class="page">
+              <div class="row">
+                <div class="col-xs-5 col-xs-offset-7">
+
+                  <div t-field="doc.associated_member.name"/>
+                  <t t-if="doc.associated_member.is_company == True">
+                    <div t-field="doc.associated_member.vat"/>
+                  </t>
+                  <t t-if="doc.associated_member.is_company == False">
+                    <div t-field="doc.associated_member.vat"/>
+                  </t>
+                  <div t-field="doc.associated_member.street"/>
+
+                  <span t-field="doc.associated_member.zip"/>
+                  <span t-field="doc.associated_member.city"/>
+
+                  <span t-if="doc.associated_member.state_id != False">(</span>
+                  <span t-if="doc.associated_member.state_id != False"
+                      t-field="doc.associated_member.state_id.name"/>
+                  <span t-if="doc.associated_member.state_id != False">)</span>
+
+
+                </div>
+              </div>
+
+
+              <html>
+                <head>
+                  <style>
+                    table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    }
+
+                    th, td {
+                    padding: 8px;
+                    text-align: left;
+                    border-bottom: 1px solid #ddd;
+                    }
+
+                    tr:hover {background-color:#f5f5f5;}
+                  </style>
+                </head>
+                <body>
+                  <h3 style="padding-bottom:25px;">
+                    <strong>Informe aportació</strong>
+                  </h3>
+
+                  <h4>Dades generals</h4>
+
+                  <table>
+                    <tr>
+                      <th>Data inicial</th>
+                      <th>Data venciment</th>
+                      <th>Import títols o préstec</th>
+                      <th>Número de títols</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span t-field="doc.initial_day"/>
+                      </td>
+                      <td>
+                        <span t-field="doc.expiration_day"/>
+                      </td>
+                      <td>
+                        <span t-field="doc.initial_import"/>
+                        <span>€</span>
+                      </td>
+                      <td>
+                        <span t-field="doc.contributions_quantity"/>
+                      </td>
+                    </tr>
+                  </table>
+                  <br/>
+                  <br/>
+
+                  <h4>Linies</h4>
+
+                  <table class="table table-condensed">
+                    <thead>
+                      <tr>
+                        <th>Any</th>
+                        <th>Inici</th>
+                        <th>Fi</th>
+                        <th>Número de dies</th>
+                        <th>Interès</th>
+                        <th>Interessos bruts</th>
+                        <th>Impost 19% IRPF</th>
+                        <th>Interessos nets</th>
+                      </tr>
+                    </thead>
+                    <tbody class="invoice_tbody">
+                      <tr t-foreach="doc.contributions_line" t-as="l">
+                        <td>
+                          <span t-field="l.year"/>
+                        </td>
+                        <td>
+                          <span t-field="l.initial_day"/>
+                        </td>
+                        <td>
+                          <span t-field="l.final_day"/>
+                        </td>
+                        <td>
+                          <span t-field="l.number_of_days"/>
+                        </td>
+                        <td>
+                          <span t-field="l.interest"/>
+                        </td>
+                        <td>
+                          <span t-field="l.import_free_tax"/>
+                        </td>
+                        <td>
+                          <span t-field="l.tax"/>
+                        </td>
+                        <td>
+                          <span t-field="l.import_to_deposit_to_account"/>
+                        </td>
+
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </body>
+              </html>
+
+
+            </div>
+          </t>
+        </t>
+      </t>
+    </template>
+
+    <report
+        id="sm_contributions_report"
+        model="sm_contributions.sm_contribution"
+        string="Contribution report"
+        name="sm_contributions.sm_contributions_report_view"
+        file="sm_contributions.sm_contributions_report"
+        report_type="qweb-pdf"/>
+  </data>
+</odoo>

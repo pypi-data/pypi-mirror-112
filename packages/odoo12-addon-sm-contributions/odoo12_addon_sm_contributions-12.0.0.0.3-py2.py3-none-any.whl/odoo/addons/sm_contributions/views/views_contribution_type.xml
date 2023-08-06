@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+    <record id="view_contribution_type_window" model="ir.actions.act_window">
+      <field name="name">Contribution type</field>
+      <field name="res_model">sm_contributions.sm_contribution_type</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_contribution_type_list" model="ir.ui.view">
+      <field name="name">sm_contributions.sm_contribution_type.tree</field>
+      <field name="model">sm_contributions.sm_contribution_type</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="duration"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_contribution_type_form" model="ir.ui.view">
+      <field name="name">sm_contributions.sm_contribution_type.form</field>
+      <field name="model">sm_contributions.sm_contribution_type</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit contribution" version="7.0">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="name"/>
+                  <field name="template_id"/>
+                  <field name="duration" string="Duration (Months)"/>
+                  <field name="historical" widget="many2many_list"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <menuitem name="Contributions type"
+          id="sm_contributions.contribution_type"
+          parent="sm_contributions.contributions_parent"
+          action="view_contribution_type_window"/>
+
+  </data>
+</odoo>

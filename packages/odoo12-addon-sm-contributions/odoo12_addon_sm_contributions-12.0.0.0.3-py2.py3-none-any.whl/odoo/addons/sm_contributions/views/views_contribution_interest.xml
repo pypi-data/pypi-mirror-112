@@ -1,0 +1,51 @@
+<odoo>
+  <data>
+    <record id="view_contribution_interest_window" model="ir.actions.act_window">
+      <field name="name">Contribution interest</field>
+      <field name="res_model">sm_contributions.sm_contribution_interest</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_contribution_interest_list" model="ir.ui.view">
+      <field name="name">sm_contributions.sm_contribution_interest.tree</field>
+      <field name="model">sm_contributions.sm_contribution_interest</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="year"/>
+          <field name="interest"/>
+          <field name="iva"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_contribution_interest_form" model="ir.ui.view">
+      <field name="name">sm_contributions.sm_contribution_interest.form</field>
+      <field name="model">sm_contributions.sm_contribution_interest</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit contribution" version="7.0" delete="false">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="name"/>
+                  <field name="year"/>
+                  <field name="interest"/>
+                  <field name="iva"/>
+                  <field name="type"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <menuitem name="Contributions interest"
+          id="sm_contributions.contribution_interest"
+          parent="sm_contributions.contributions_parent"
+          action="view_contribution_interest_window"/>
+
+  </data>
+</odoo>

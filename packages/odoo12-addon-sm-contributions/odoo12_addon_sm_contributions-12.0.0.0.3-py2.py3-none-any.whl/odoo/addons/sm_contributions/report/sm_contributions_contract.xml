@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+  <data>
+    <template id="sm_contributions_contract_view">
+      <t t-call="web.html_container">
+        <t t-call="sm_reports.sm_external_layout">
+          <t t-foreach="docs" t-as="doc">
+            <t t-set="doc"
+               t-value="doc.with_context({'lang':doc.associated_member.lang})"/>
+
+            <div class="header" style="margin-top:60px;">
+              <div class="row">
+                <div class="col-xs-2">
+                  <img t-if="doc.associated_member.company_id.logo"
+                     t-att-src="'data:image/png;base64,%s' % doc.associated_member.company_id.logo"
+                     style="max-height:120px;"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="page">
+              <html>
+                <body>
+                  <p>
+                    <div align="center">
+                      <strong>I.- REUNITS</strong>
+                    </div>
+                    <br></br>
+
+                  </p>
+                  <p>
+                    <div align="justify">
+                      Per una part, en Ricard Jornet i Ginestà, major d'edat, amb DNI
+
+                      <span
+                          t-field="doc.associated_member.company_id.partner_id.related_representative_member_id.vat"/>
+                      , i domicili als efectes del present contracte al Carrer Toló 18, Espai Can
+                      Fugarolas - Coworking, a 08301 de Mataró.
+                    </div>
+
+
+                  </p>
+                  <p>
+                    <div align="justify">
+                      Per altre part,
+
+                      <span t-field="doc.associated_member.name"/>
+                      soci número
+
+                      <span t-field="doc.associated_member.cooperator_register_number"/>
+                      de Som Mobilitat SCCL, major d’edat, amb DNI
+
+                      <span
+                          t-field="doc.associated_member.vat"/>, i domicili al Carrer
+
+                      <span
+                          t-field="doc.associated_member.street"/>, amb el codi postal
+
+
+                      <span t-field="doc.associated_member.zip"/>
+                      de
+
+                      <span t-field="doc.associated_member.city"/>.
+
+                    </div>
+
+                  </p>
+                  <p>
+                    <br></br>
+
+                    <div align="center">
+                      <strong>II.- INTERVENEN</strong>
+                    </div>
+                    <br></br>
+
+                  </p>
+                  <p>
+                    <div align="justify">
+
+                      En Ricard Jornet i Ginestà en la seva condició de president de Som Mobilitat
+                      SCCL i
+                      en nom i representació de Som Mobilitat SCCL, domiciliada a, Carrer Toló 18,
+                      Espai
+                      Can Fugarolas - Coworking, a 08301 de Mataró, amb NIF F66835125, inscrita al
+                      Registre Territorial de Cooperatives de la Generalitat de Catalunya, al full
+                      14746.
+                    </div>
+
+                  </p>
+                  <p>
+                    <div align="justify">
+
+                      En
+
+                      <span t-field="doc.associated_member.name"/>, actuant en el seu propi
+                      nom i
+                      interès.
+                    </div>
+
+                  </p>
+                  <p>
+                    <div align="justify">
+
+                      Ambdues parts, en les respectives qualitats amb les que actuen, es
+                      reconeixen
+                      mútuament capacitat suficient per contractar i obligar-se i
+                    </div>
+
+                  </p>
+                  <p>
+                    <br></br>
+
+                    <div align="center">
+                      <strong>III.- MANIFESTEN</strong>
+                    </div>
+                    <br></br>
+
+                  </p>
+                  <p>
+                    <div align="justify">
+
+                      I.- Que Som Mobilitat SCCL és una cooperativa de consum i sense afany de
+                      lucre.
+                    </div>
+                  </p>
+                  <p>
+                    <div align="justify">
+
+                      II.- Que el seu objecte social es proveir de serveis de mobilitat sostenible
+                      a les
+                      persones sòcies que formem part de la cooperativa.
+                    </div>
+
+                  </p>
+                  <p>
+                    <div align="justify">
+                      III.- Que Som Mobilitat SCCL ha acordat l’emissió de títols participatius
+                      amb un
+                      valor nominal de 100 euros cada títol a 5 anys amb l'objecte de finançar la
+                      posada
+                      en funcionament del servei de mobilitat elèctrica compartida (p2p) i de la
+                      compra de
+                      cotxes elèctrics per la flota de la cooperativa amb la que volem accelerar
+                      l’arribada del servei de mobilitat compartida, elèctrica i amb renovables.
+                    </div>
+                  </p>
+                  <p>
+                    <div align="justify">
+                      La durada des títols participatius serà de 5 anys amb data d'inici
+                      <span t-field="doc.initial_day"/>
+                      i amb data de venciment
+                      <span t-field="doc.expiration_day"/>
+
+                    </div>
+                  </p>
+
+                  <p>
+                    <div align="justify">
+                      IV.- Que
+                      <span t-field="doc.associated_member.name"/>
+                      està disposat a subscriure títols participatius per col·laborar amb Som
+                      Mobilitat SCCL per fer possible les finalitats anteriors i, amb aquesta
+                      finalitat,
+                      fa la subscripció de títols per la quantitat que més endavant s'especifica.
+                    </div>
+                  </p>
+
+
+                  <p>
+                    <div align="justify">
+
+                      V.- Que
+                      <span t-field="doc.associated_member.name"/>
+                      està interessat en rebre i accepta la subscripció que realitza i que
+                      accepta les condicions de retribució i devolució del títols subscrits amb
+                      Som
+                      Mobilitat SCCL, que són del seu interès, i que es detallen al present
+                      contracte.
+                    </div>
+                  </p>
+                  <p>
+                    <div align="justify">
+                      En conseqüència, ambdues parts de mutu acord subscriuen el present contracte
+                      que es
+                      regeix especialment pels següents:
+                    </div>
+                  </p>
+
+                  <br></br>
+
+                  <table style="width: 100%; line-height:50px;">
+
+                    <tr>
+                      <td align="center">Ricard Jornet i
+                        Ginestà
+                      </td>
+                      <td align="center">
+                        <span t-field="doc.associated_member.name"/>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td align="center">President de Som Mobilitat SCCL</td>
+                      <td align="center">Soci
+                        <span t-field="doc.associated_member.cooperator_register_number"/>
+                        de Som Mobilitat SCCL
+                      </td>
+
+                    </tr>
+
+                    <tr>
+                      <td align="center">
+
+                        <img src='/sm_contributions/static/firm.png' style="max-height: 60px;"/>
+                      </td>
+                      <td align="center">
+                      </td>
+
+                    </tr>
+
+
+                  </table>
+
+
+                  <p style="page-break-after:always;"/>
+
+                  <p>
+                    <br></br>
+
+                    <div align="center">
+                      <strong>IV.- PACTES</strong>
+                    </div>
+                    <br></br>
+
+                  </p>
+
+
+                  <p>
+                    <div align="justify">
+
+                      <strong>Primer.-</strong>
+                      <span t-field="doc.associated_member.name"/>
+                      adquireix, en aquest acte, i per un import de
+                      <span t-field="doc.initial_import_txt"/>
+                      euros (
+                      <span t-field="doc.initial_import"/>
+                      €),
+                      <span t-field="doc.contributions_quantity"/>
+                      títols participatius de Som Mobilitat SCCL, els rep i accepta en les
+                      condicions que
+                      seguidament
+                      s'estableixen.
+                    </div>
+                  </p>
+
+                  <p>
+                    <div align="justify">
+                      <strong>Segon.-</strong>L’aportació voluntària meritarà a favor d’un interès
+                      nominal
+                      d’un 3% anual. Els interessos meritats seran pagats durant els cinc dies
+                      hàbils
+                      següents al 31 de desembre de l’any. L’interès podrà variar previ acord de
+                      l’Assemblea General de la cooperativa.
+                    </div>
+                  </p>
+
+                  <p>
+                    <div align="justify">
+                      <strong>Tercer.-</strong>
+                      El import nominal dels títols participatius podrà ser renovat amb acord
+                      d’ambdues
+                      parts abans dels tres mesos pel seu venciment. En cas contrari l’import
+                      nominal dels
+                      títols participatius serà retornat per Som Mobilitat SCCL en un sol termini,
+                      dins
+                      els cinc dies hàbils següents a la data de la seva finalització, mitjançant
+                      ingrés
+                      al compte bancari indicat per
+                      <span t-field="doc.associated_member.name"/>.
+                    </div>
+                  </p>
+
+                  <p>
+                    <div align="justify">
+                      <strong>Quart.-</strong>
+                      <span t-field="doc.associated_member.name"/>
+                      pot demanar el retorn anticipat dels títols subscrits, total o parcialment,
+                      un cop hagi transcorregut un any des de la seva aportació, mitjançant una
+                      sol·licitud per escrit, dirigida al Consell Rector de Som Mobilitat SCCL que
+                      farà
+                      efectiu el retorn en un termini no superior als tres mesos des de la
+                      recepció de la
+                      seva sol·licitud al Consell Rector, mitjançant l'ingrés de la quantitat
+                      resultant al
+                      compte bancari indicat per
+                      <span t-field="doc.associated_member.name"/>.
+                    </div>
+                  </p>
+
+                  <p>
+                    <div align="justify">
+                      <strong>Cinquè.-</strong>Les comunicacions entre les parts es dirigiran a
+                      les
+                      persones i a les adreces que consten a l'encapçalament i s'efectuaran per
+                      escrit,
+                      per qualsevol mitjà que acrediti la recepció de la comunicació per la part
+                      destinatària.
+                    </div>
+                  </p>
+                  <p>
+                    <div align="justify">
+                      <strong>Sisè.-</strong>
+                      Les parts, renunciant a qualsevol altre fur que els pogués correspondre, per
+                      a la
+                      resolució de tota controvèrsia derivada del present contracte, es sotmeten a
+                      l'Arbitratge del Consell Superior de la Cooperació, el qual, d'acord amb el
+                      seu
+                      Reglament, nomenarà un àrbitre i gestionarà l'arbitratge; l’Arbitratge es
+                      celebrarà
+                      a Barcelona. Les parts es comprometen des d'ara al compliment de la
+                      resolució
+                      arbitral.
+                    </div>
+                  </p>
+                  <p>
+                    <div align="justify">
+                      I perquè així consti, en prova de conformitat amb al totalitat del seu
+                      contingut,
+                      ambdues parts signen el present contracte en doble exemplar a un sol efecte
+                      a
+                    </div>
+                  </p>
+
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+
+
+                  <p>Mataró,
+                    <span t-field="doc.associated_member.member_email_date"/>.
+                  </p>
+
+                  <br></br>
+                  <br></br>
+
+                  <table style="width: 100%; line-height:50px;">
+
+                    <tr>
+                      <td align="center">Ricard Jornet i
+                        Ginestà
+                      </td>
+                      <td align="center">
+                        <span t-field="doc.associated_member.name"/>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td align="center">President de Som Mobilitat SCCL</td>
+                      <td align="center">Soci
+                        <span t-field="doc.associated_member.cooperator_register_number"/>
+                        de Som Mobilitat SCCL
+                      </td>
+
+                    </tr>
+
+                    <tr>
+                      <td align="center">
+
+                        <img src='/sm_contributions/static/firm.png' style="max-height: 60px;"/>
+                      </td>
+                      <td align="center">
+                      </td>
+
+                    </tr>
+
+
+                  </table>
+
+
+                </body>
+              </html>
+            </div>
+
+          </t>
+        </t>
+      </t>
+    </template>
+    <report
+        id="sm_contributions_contract"
+        model="sm_contributions.sm_contribution"
+        string="Contract"
+        name="sm_contributions.sm_contributions_contract_view"
+        file="sm_contributions.sm_contributions_contract"
+        report_type="qweb-pdf"/>
+
+  </data>
+</odoo>
