@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: pipelitools
+Version: 1.1.2
+Summary: Tools for data analysis
+Home-page: https://github.com/nastiag67/pipelitools
+Author: Anastasia Glushkova
+Author-email: anastasia.glushkova0@yandex.ru
+License: MIT license
+Keywords: pipelitools
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+License-File: AUTHORS.rst
+
+### Description
+
+Pipelines for data analysis and machine learning.
+
+Most frequently used tools for data analysis and machine learning.
+
+```
+pipelitools/pipelitools
+	|-- __init__.py  
+	|-- preprocessing  
+		|-- __init__.py  
+		|-- eda.py  
+		|-- feature_selection.py  
+		|-- outliers.py  
+	|-- models  
+		|-- __init__.py  
+		|-- classification.py  
+		|-- metrics.py  
+	|-- utils.py  
+```
+
+### Installation
+
+```
+pip install pipelitools
+```
+
+### Usage
+
+This package was used in [University of Oxford MSc dissertation project](https://github.com/nastiag67/ecgn).
+
+Use pip to install:
+<br>
+<br>
+__`pip install git+https://github.com/nastiag67/packages`__
+
+
+
+=======
+History
+=======
+
+0.1.0 (2021-06-11)
+------------------
+
+* First release.
+
+1.1.0 (2021-07-01)
+------------------
+
+* Added pipeline to compute models
+
+1.1.1 (2021-07-08)
+------------------
+
+* Added tests for every module
+* Renaming
+
