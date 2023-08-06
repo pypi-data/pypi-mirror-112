@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: qiskit-optimization
+Version: 0.2.0
+Summary: Qiskit Optimization: A library of quantum computing optimizations
+Home-page: https://github.com/Qiskit/qiskit-optimization
+Author: Qiskit Optimization Development Team
+Author-email: hello@qiskit.org
+License: Apache-2.0
+Keywords: qiskit sdk quantum optimization
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: qiskit-terra (>=0.17.0)
+Requires-Dist: scipy (>=1.4)
+Requires-Dist: numpy (>=1.17)
+Requires-Dist: docplex (>=2.21.207)
+Requires-Dist: setuptools (>=40.1.0)
+Requires-Dist: networkx (<2.6,>=2.2)
+Requires-Dist: dataclasses ; python_version < "3.7"
+Provides-Extra: cplex
+Requires-Dist: cplex ; (python_version < "3.9") and extra == 'cplex'
+Provides-Extra: cvx
+Requires-Dist: cvxpy ; extra == 'cvx'
+Provides-Extra: gurobi
+Requires-Dist: gurobipy ; extra == 'gurobi'
+Provides-Extra: matplotlib
+Requires-Dist: matplotlib ; extra == 'matplotlib'
+
+Qiskit Optimization is a open-source library of quantum computing optimizations.
+ 
+
