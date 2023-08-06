@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: tokendito
+Version: 1.2.1
+Summary: Get AWS STS tokens from Okta SSO
+Home-page: https://github.com/dowjones/tokendito
+Author: tokendito
+Author-email: tokendito@dowjones.com
+License: Apache 2.0
+Keywords: okta,aws,sts
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+Description-Content-Type: text/x-rst
+Requires-Dist: boto3 (>=1.9.0)
+Requires-Dist: requests (>=2.19.0)
+Requires-Dist: configparser (>=3.5.0)
+Requires-Dist: future (>=0.16.0)
+Requires-Dist: pyOpenSSL (>=18.0.0)
+Requires-Dist: beautifulsoup4 (>=4.6.0)
+Requires-Dist: lxml (>=4.3.0)
+Requires-Dist: pytz (==2021.1)
+Requires-Dist: tzlocal (==2.1)
+Requires-Dist: cryptography (==3.3.2) ; python_version == "2.7"
+
+.. image:: https://raw.githubusercontent.com/dowjones/tokendito/master/docs/tokendito.png
+   :align: center
+
+Generate temporary AWS credentials via Okta.
+
+.. image:: https://github.com/dowjones/tokendito/workflows/Lint%20and%20Test/badge.svg
+    :target: https://github.com/dowjones/tokendito/actions
+
+.. image:: https://img.shields.io/badge/python-2.7%2C%203.5%2C%203.6%2C%203.7%2C%203.8-blueviolet
+    :target: https://pypi.org/project/tokendito/
+
+.. image:: https://github.com/dowjones/tokendito/workflows/Woke/badge.svg
+    :target: https://github.com/dowjones/tokendito/actions
+
+.. image:: https://img.shields.io/badge/license-Apache%202.0-ff69b4
+    :target: https://github.com/dowjones/tokendito/blob/master/LICENSE.txt
+
+.. image:: https://img.shields.io/badge/OS-Mac%2C%20Windows%2C%20Linux-9cf
+    :target: https://github.com/dowjones/tokendito/
+
+|
+|
+
+.. image:: https://raw.githubusercontent.com/dowjones/tokendito/master/docs/tokendito-scaled.gif
+
+
+**WARNING: Python2.7 and Python3.5 support will be dropped in a near time, pin tokendito version to current if you want to keep it working in automation.**
+
+NOTE: Advanced users may shorten the tokendito interaction to a `single command <https://github.com/dowjones/tokendito/tree/master/docs#single-command-usage>`_.
+
+.. _STS: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html
+
+Use tokendito to generate temporary AWS credentials via Okta for programmatic authentication to AWS. Tokendito signs you in to Okta and uses your existing AWS integration to broker your SAML assertion into your AWS accounts, returning STS_ tokens into your local ``~/.aws/credentials`` file.
+
+Requirements
+------------
+
+* Python 2.7.10+
+* Your AWS account is federated in Okta
+
+tokendito is compatible with both python 2 and 3, and can be installed with either pip or pip3.
+
+Getting started
+---------------
+
+#. Install (via PyPi): ``pip install tokendito``
+
+#. Run ``tokendito --configure``.
+
+#. Run ``tokendito``.
+
+Have multiple Okta tiles to switch between? View our `multi-tile guide <https://github.com/dowjones/tokendito/tree/master/docs#multi-tile-guide>`_.
+
+=====================================================================================================================================================================================================================================================
+Tips, tricks, troubleshooting, examples, and more docs are `here <https://github.com/dowjones/tokendito/blob/master/docs/README.rst>`_! Also, `contributions are welcome <https://github.com/dowjones/tokendito/blob/master/docs/CONTRIBUTING.rst>`_!
+=====================================================================================================================================================================================================================================================
+
+
