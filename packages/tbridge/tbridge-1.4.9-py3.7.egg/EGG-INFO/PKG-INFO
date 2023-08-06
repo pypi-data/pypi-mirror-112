@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: tbridge
+Version: 1.4.9
+Summary: Testing BRIghtness Deviations in Galaxy profile Extractions
+Home-page: https://github.com/hsouch/tbridge
+Author: Harrison Souchereau
+Author-email: harrison.souchereau@yale.edu
+License: BSD 3-clause
+Description: # TBRIDGE
+        
+        ***T***esting ***BRI***ghtness ***D***eviations in **G**alaxy Profile **E**xtractions
+        
+        Tbridge is a testing suite for images and catalogues of astronomical information, 
+        using differences between the extracted profiles of a model galaxy and that same model 
+        added to various backgrounds. 
+        
+        
+Keywords: astronomy,astrophysics,photometry,isophote
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
