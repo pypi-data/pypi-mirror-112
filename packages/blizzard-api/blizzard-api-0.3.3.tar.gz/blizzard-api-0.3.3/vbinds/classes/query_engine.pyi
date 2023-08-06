@@ -1,0 +1,16 @@
+from .cache import Cache as Cache
+from .token_engine import TokenEngine as TokenEngine
+from typing import Any, Optional
+from vbinds.enums import Locale as Locale, Namespace as Namespace, Region as Region, get_namespace_str as get_namespace_str, get_query_str as get_query_str
+
+class QueryEngine(TokenEngine):
+    log: Any
+    locale: Any
+    printer: Any
+    has_missed: bool
+    tries: Any
+    def __init__(self, cache: Cache, region: Region = ..., locale: Locale = ..., tries: int = ...) -> None: ...
+    def raw_query(self, path: str, namespace: Namespace, path_root: str = ..., should_print: bool = ...) -> Optional[dict]: ...
+    def save(self) -> None: ...
+    def static_has(self, path: str, path_root: str = ...) -> bool: ...
+    def static_query(self, path: str, should_print: bool = ...) -> Optional[dict]: ...
