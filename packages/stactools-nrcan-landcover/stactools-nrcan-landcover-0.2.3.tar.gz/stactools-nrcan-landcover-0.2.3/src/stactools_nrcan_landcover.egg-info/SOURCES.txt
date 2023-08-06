@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/stactools/nrcan_landcover/__init__.py
+src/stactools/nrcan_landcover/cog.py
+src/stactools/nrcan_landcover/commands.py
+src/stactools/nrcan_landcover/constants.py
+src/stactools/nrcan_landcover/stac.py
+src/stactools/nrcan_landcover/utils.py
+src/stactools_nrcan_landcover.egg-info/PKG-INFO
+src/stactools_nrcan_landcover.egg-info/SOURCES.txt
+src/stactools_nrcan_landcover.egg-info/dependency_links.txt
+src/stactools_nrcan_landcover.egg-info/requires.txt
+src/stactools_nrcan_landcover.egg-info/top_level.txt
