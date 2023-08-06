@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: abhiprime
+Version: 2.0.0
+Summary: A program to check if the given number is a prime number or not
+Home-page: UNKNOWN
+Author: Abhishek Singh
+Author-email: abhisheksingh@ggits.org
+License: UNKNOWN
+Keywords: primenumber
+Platform: UNKNOWN
+
+
+To install:
+pip install abhiprime
+
+If you are already using abhiprime then please upgrade it. If upgradation is throwing error, then uninstall the previous version and install the latest version.
+After installation, import abhiprime. it is used to check the following operations:
+1. abhiprime.test_prime(n)- This is an efficient prime number tester program created to check if the given number is a prime number or not.
+2. abhiprime.prev_prime(n)- used to give the just previous prime number value from the given number n.
+3. abhiprime.next_prime(n)- used to give the just next prime number value from the given number n. 
+4. abhiprime.prime_upto(n)- gives a list of prime numbers upto the given number n.
+5. abhiprime.range_prime(n,m)- gives a list of prime numbers between numbers n and m.
+6. abhiprime.fib_prime(n)- gives a list of numbers which are prime and fibonacci also.
+
+Change Log
+==========
+
+2.0.0(10/07/2021)
+------------------
+- Fifth Release
+
+
