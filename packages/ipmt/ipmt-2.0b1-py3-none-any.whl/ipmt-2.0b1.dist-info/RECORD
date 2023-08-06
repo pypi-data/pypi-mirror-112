@@ -1,0 +1,12 @@
+ipmt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ipmt/cli.py,sha256=Sb2OYrFSlHTvLvh0oaqC7WhqplRtiYV2cTwLcXlh164,11821
+ipmt/db.py,sha256=EU30CakSjUXZHV4xCqwe527tSuuEAlyJXHIgbtJS74E,11707
+ipmt/error.py,sha256=ppF6V7OAn7F0VAaL90hkR2AxTjwjeyj4jTAAMrGoocI,189
+ipmt/migration.py,sha256=joQ8AVzO9_sVmXvPUSy3KTuGhQZQZ7BIEA5tYyqOe1k,35012
+ipmt/misc.py,sha256=-V0_GgjMcEODQ7MimpErYplReRAZLNjI3rtGOHkiwKU,6492
+ipmt/permissions.py,sha256=FswkC7D-IZ82G8PAf1KYxNDvZDkQdZB745t8Mo5x0dQ,14462
+ipmt-2.0b1.dist-info/entry_points.txt,sha256=WmoaUqRWolFfKBQeeebWMl2Yeix1do_ykqgc0v8zxpA,38
+ipmt-2.0b1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ipmt-2.0b1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+ipmt-2.0b1.dist-info/METADATA,sha256=mHUncyBfr8wJDV6o3IYryXI7lX4JFgip6fYa0AZMZOk,2841
+ipmt-2.0b1.dist-info/RECORD,,
