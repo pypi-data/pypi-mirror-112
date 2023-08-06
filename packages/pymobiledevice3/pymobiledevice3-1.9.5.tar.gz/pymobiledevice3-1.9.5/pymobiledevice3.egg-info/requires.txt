@@ -1,0 +1,13 @@
+construct>=2.9.29
+pyasn1
+termcolor
+click
+coloredlogs
+IPython
+bpylist2>=4.0.1
+pygments
+hexdump
+arrow
+daemonize
+gpxpy
+pykdebugparser>=1.1.2
