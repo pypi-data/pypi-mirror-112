@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: BlizzGameData
+Version: 0.0.6
+Summary: Blizz api client test
+Home-page: https://github.com/VictorMari/wow_game_data_api
+Author: Victor
+Author-email: vmarirodriguez@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/VictorMari/wow_game_data_api/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
