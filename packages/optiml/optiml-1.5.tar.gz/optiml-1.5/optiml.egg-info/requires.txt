@@ -1,0 +1,11 @@
+autograd
+casadi
+cvxopt
+cvxpy
+matplotlib
+numpy
+pytest
+qpsolvers
+scikit-learn
+scipy
+wurlitzer
