@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dash-xinet
+Version: 0.1.2
+Summary: Dash App
+Home-page: https://github.com/xinetzone/dash-xinet
+Author: xinetzone
+Author-email: xinzone@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Dash xinet
+
+[![GitHub issues](https://img.shields.io/github/issues/xinetzone/dash-xinet)](https://github.com/xinetzone/dash-xinet/issues) [![GitHub forks](https://img.shields.io/github/forks/xinetzone/dash-xinet)](https://github.com/xinetzone/dash-xinet/network) [![GitHub stars](https://img.shields.io/github/stars/xinetzone/dash-xinet)](https://github.com/xinetzone/dash-xinet/stargazers) [![GitHub license](https://img.shields.io/github/license/xinetzone/dash-xinet)](https://github.com/xinetzone/dash-xinet/blob/main/LICENSE)  ![repo size](https://img.shields.io/github/repo-size/xinetzone/dash-xinet.svg) [![contributors](https://img.shields.io/github/contributors/xinetzone/dash-xinet.svg)](https://github.com/xinetzone/dash-xinet/graphs/contributors) [![watcher](https://img.shields.io/github/watchers/xinetzone/dash-xinet.svg)](https://github.com/xinetzone/dash-xinet/watchers) ![](https://github.com/xinetzone/dash-xinet/actions/workflows/python-publish.yml/badge.svg)
+
+被发布于 [dash-xinet · PyPI](https://pypi.org/project/dash-xinet/)。更多内容见：[dash-book](https://xinetzone.github.io/dash-book/)。
+
