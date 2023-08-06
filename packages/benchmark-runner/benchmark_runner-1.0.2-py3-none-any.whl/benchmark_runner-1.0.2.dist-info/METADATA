@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: benchmark-runner
+Version: 1.0.2
+Summary: Benchmark Runner Tool
+Home-page: UNKNOWN
+Author: Red Hat
+Author-email: ebattat@redhat.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: typing (==3.7.4.3)
+Requires-Dist: typeguard (==2.12.0)
+Requires-Dist: elasticsearch (==7.13.2)
+Requires-Dist: elasticsearch-dsl (==7.3.0)
+Requires-Dist: pandas (==1.2.5)
+Requires-Dist: jinja2 (==3.0.1)
+Requires-Dist: typeguard (==2.12.1)
+Requires-Dist: PyYAML (==5.4.1)
+
+
+[![Actions Status](https://github.com/redhat-performance/cloud-governance/workflows/CI/badge.svg)](https://github.com/redhat-performance/cloud-governance/actions)
+[![Coverage Status](https://coveralls.io/repos/github/redhat-performance/cloud-governance/badge.svg?branch=master)](https://coveralls.io/github/redhat-performance/cloud-governance?branch=master)
+
+<h3 align="right">![](media/op.png)
+<h3 align="right">[](media/run.png) 
+<h3 align="center">Benchmark-Runner</h3>
+
+This tool provides a lightweight and flexible framework for running benchmark workloads 
+on Kubernetes/OpenShift-CNV Pod or VM.
+
+This tool support the following workloads:
+
+* hammerdb: running hammerdb workload on the following databases: MSSQL, Mariadb, Postgresql on Pod and VM [hammerdb](https://hammerdb.com/)
+* stressng: running stressng workload on Pod or VM [stressng](https://wiki.ubuntu.com/Kernel/Reference/stress-ng)
+* uperf: running uperf workload on Pod or VM  [uperf](http://uperf.org/)
+
+** First Phase: support [benchmark-operator workload](https://github.com/cloud-bulldozer/benchmark-operator)
+
+![](media/kiban.png)
+
+Reference:
+* The benchmark-runner package is placed in [PyPi](https://pypi.org/project/cloud-governance/)
+* The benchmark-runner container image is placed in [Quay.io](https://quay.io/repository/ebattat/cloud-governance)
+
+![](media/docker1.png)
+
+_**Table of Contents**_
+
+<!-- TOC -->
+- [Installation](#installation)
+- [Run workload using Docker/Podman](#run-policy-using-docker-podman)
+- [Run workload in Pod using Kubernetes/OpenShift](#run-policy-using-pod)
+- [Post Installation](#post-installation)
+
+<!-- /TOC -->
+
+## Installation
+
+#### Download benchmark-runner image from quay.io
+```sh
+podman pull quay.io/ebattat/benchmark-runner:latest
+```
+
+#### Environment variables description:
+
+(mandatory)KUBECONFIG=$KUBECONFIG
+
+(mandatory)KUBEADMIN_PASSWORD=$KUBEADMIN_PASSWORD
+
+(mandatory)workload=$workload
+
+Choose one from the following list:
+
+`['stressng_pod', 'stressng_vm','uperf_pod', 'uperf_vm', 'hammerdb_pod_mariadb', 'hammerdb_pod_mssql', 'hammerdb_pod_postgres', 'hammerdb_vm_mariadb', 'hammerdb_vm_mssql', 'hammerdb_vm_postgres']`
+
+(mandatory)elasticsearch=elasticsearch
+
+(optional)pin_node1=pin_node1
+
+(optional)pin_node2=pin_node2
+
+## Run workload using Podman/Docker 
+```sh
+# workload=stressng_pod
+sudo podman run --rm --name benchmark-runner -e KUBECONFIG=$KUBECONFIG -e KUBEADMIN_PASSWORD=$KUBEADMIN_PASSWORD -e workload=stressng_pod -e elasticsearch=elasticsearch -e pin_node1=pin_node1 -e log_level=INFO quay.io/ebattat/benchmark-runner:latest
+
+# custom workload data configuration (path for custom workload data: -v /home/user/workload/workload_data.yaml:/benchmark_runner/benchmark_operator/template/workload/workload_data.yaml)
+sudo podman run --rm --name benchmark-runner -e KUBECONFIG=$KUBECONFIG -e KUBEADMIN_PASSWORD=$KUBEADMIN_PASSWORD -e workload=stressng_pod -e elasticsearch=elasticsearch -e pin_node1=pin_node1 -e log_level=INFO -v /home/user/stressng/stressng_data.yaml:/benchmark_runner/benchmark_operator/template/stressng/stressng_data.yaml --privileged quay.io/ebattat/benchmark-runner:latest
+
+```
+
+## Run workload in Pod using Kubernetes/OpenShift]
+[TBD]
+
+## Post Installation
+
+#### Delete benchmark-runner image
+```sh
+sudo podman rmi quay.io/ebattat/benchmark-runner:latest
+```
+
+
