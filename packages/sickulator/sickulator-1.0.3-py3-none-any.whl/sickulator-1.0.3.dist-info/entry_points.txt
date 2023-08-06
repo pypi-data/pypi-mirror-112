@@ -1,0 +1,3 @@
+[console_scripts]
+sickulator = sickulator.main:main
+
