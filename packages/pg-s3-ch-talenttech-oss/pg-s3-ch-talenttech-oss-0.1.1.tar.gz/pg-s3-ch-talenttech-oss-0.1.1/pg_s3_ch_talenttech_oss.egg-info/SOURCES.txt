@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+pg_s3_ch_talenttech_oss.egg-info/PKG-INFO
+pg_s3_ch_talenttech_oss.egg-info/SOURCES.txt
+pg_s3_ch_talenttech_oss.egg-info/dependency_links.txt
+pg_s3_ch_talenttech_oss.egg-info/requires.txt
+pg_s3_ch_talenttech_oss.egg-info/top_level.txt
+postgresql_s3_clickhouse/__init__.py
+postgresql_s3_clickhouse/postgresql_s3_clickhouse.py
+test/test_pgs3ch.py
