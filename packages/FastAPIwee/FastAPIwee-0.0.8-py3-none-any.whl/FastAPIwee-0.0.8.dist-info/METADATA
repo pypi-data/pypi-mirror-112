@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: FastAPIwee
+Version: 0.0.8
+Summary: FastAPIwee - FastAPI + PeeWee = <3
+Home-page: https://github.com/Ignisor/FastAPIwee
+Author: German Gensetskyi
+Author-email: Ignis2497@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://fastapiwee.qqmber.wtf
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi (==0.66.0)
+Requires-Dist: pydantic (==1.8.2)
+Requires-Dist: peewee (==3.14.4)
+
+# FastAPIwee
+FastAPI + PeeWee = <3
+
+## Using
+
+Python >= 3.6 :snake:
+
+## Installation
+
+```python
+pip install FastAPIwee
+```
+
+:tada:
+
+## Documentation
+
+Documentation can be found here: https://fastapiwee.qqmber.wtf
+
+## Development
+
+### Documentation
+
+Documentation is made with [MkDocs](https://www.mkdocs.org) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+
+To run MkDocs server:
+
+- Go to mkdocs directory
+
+    ```bash
+    cd mkdocs
+    ```
+
+- Run server
+
+    ```bash
+    mkdocs serve
+    ```
+
+To build use:
+
+```bash
+mkdocs build
+```
+
+
