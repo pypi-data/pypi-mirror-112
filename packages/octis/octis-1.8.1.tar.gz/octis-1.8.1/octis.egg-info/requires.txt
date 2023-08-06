@@ -1,0 +1,14 @@
+gensim==3.8.3
+nltk
+pandas
+spacy
+scikit-learn>=0.24.2
+scikit-optimize>=0.8.1
+matplotlib
+torch
+numpy
+libsvm
+flask
+sentence_transformers
+requests
+tomotopy
