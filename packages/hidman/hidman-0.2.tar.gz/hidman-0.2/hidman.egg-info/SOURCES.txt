@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+hidman/__init__.py
+hidman/core.py
+hidman.egg-info/PKG-INFO
+hidman.egg-info/SOURCES.txt
+hidman.egg-info/dependency_links.txt
+hidman.egg-info/not-zip-safe
+hidman.egg-info/requires.txt
+hidman.egg-info/top_level.txt
