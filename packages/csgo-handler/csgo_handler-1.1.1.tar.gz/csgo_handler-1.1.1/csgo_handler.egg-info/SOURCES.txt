@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+bin/csgo-handler
+csgo_handler.egg-info/PKG-INFO
+csgo_handler.egg-info/SOURCES.txt
+csgo_handler.egg-info/dependency_links.txt
+csgo_handler.egg-info/requires.txt
+csgo_handler.egg-info/top_level.txt
+src/__init__.py
