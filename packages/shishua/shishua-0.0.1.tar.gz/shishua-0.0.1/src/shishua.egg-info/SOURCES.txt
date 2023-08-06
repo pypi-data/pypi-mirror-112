@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/binding/binding.c
+src/binding/binding.pyx
+src/binding/shishua-avx2.h
+src/binding/shishua-neon.h
+src/binding/shishua-sse2.h
+src/binding/shishua.h
+src/shishua/__init__.py
+src/shishua.egg-info/PKG-INFO
+src/shishua.egg-info/SOURCES.txt
+src/shishua.egg-info/dependency_links.txt
+src/shishua.egg-info/top_level.txt
