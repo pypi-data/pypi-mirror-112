@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pySatellite
+Version: 0.0.1
+Summary: simulate satellite tracking
+Home-page: https://pySatellite.github.io
+Author: pySatellite
+Author-email: pySatellite@gmail.com
+License: GNU General Public License (GPL)
+Project-URL: Bug Tracker, https://github.com/pySatellite/pySatellite.github.io/issues
+Platform: macOS
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+## pySatellite
+- Simulate satellite tracking.
+- It tells the story of space debris and satellite collisions.
+- To Infinity, and Beyond!
+
+## use
+
+```python
+from src.pysatellite import Rocket
+from src.pysatellite import Satellite
+
+Rocket.launch()
+Satellite.coordinates()
+```
+
