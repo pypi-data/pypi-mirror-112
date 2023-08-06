@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: pexip
+Version: 0.2.3
+Summary: Simple CLI utility to manually provision a Pexip Transcoder Client.
+Author: Colin Bruner
+Author-email: colin.d.bruner@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: requests (>=2.25.1,<3.0.0)
