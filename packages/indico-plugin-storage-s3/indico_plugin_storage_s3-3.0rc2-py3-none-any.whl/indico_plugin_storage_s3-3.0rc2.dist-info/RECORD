@@ -1,0 +1,13 @@
+indico_storage_s3/__init__.py,sha256=jTtEk3HxDX9UulFle4pyJS8v-HTjEVA3yG7m3DKr1-0,479
+indico_storage_s3/blueprint.py,sha256=dk8E2qyA7ozUj6qZXPaW31i-KhqSD5tU2GVUoDghJPI,496
+indico_storage_s3/controllers.py,sha256=AOSN91orS6Nc1RfMKEP7Wy6aM9XWlUCVOuoJkWkL41c,2717
+indico_storage_s3/migrate.py,sha256=8ZsOto8_IIB-SF0gtXpIazuZs2v-WWwxH6eR11gFrjo,22823
+indico_storage_s3/plugin.py,sha256=Bp_ziK5Jo0YkLkSELjt4DLnzNTBZqH2cySOayjSsoJc,4563
+indico_storage_s3/storage.py,sha256=qSj7xuNc0w689aDIcXOLy0ok2CFs3nXhNHZNCB8NOoE,11310
+indico_storage_s3/task.py,sha256=BrE5gbAC4j7ujixNlcvKVbqtBPR5iO3eABi0Z_oFei8,1710
+indico_storage_s3/util.py,sha256=YlIf1hom5tGrqs-xhke70oGFF-SfRB1xVzKteW2Toiw,732
+indico_plugin_storage_s3-3.0rc2.dist-info/METADATA,sha256=_EoEM6PduwbE6wvyv346nokj1ZqffsnAwstSJYsO0wI,530
+indico_plugin_storage_s3-3.0rc2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+indico_plugin_storage_s3-3.0rc2.dist-info/entry_points.txt,sha256=gxlOmb5i95FdJGlrRkSHMXaeoi7wo7_T3sL6zCBYSX0,72
+indico_plugin_storage_s3-3.0rc2.dist-info/top_level.txt,sha256=wMajir5p9AELlngQV8mOHyzu5xWvybvbG0rJg-YsQpM,18
+indico_plugin_storage_s3-3.0rc2.dist-info/RECORD,,

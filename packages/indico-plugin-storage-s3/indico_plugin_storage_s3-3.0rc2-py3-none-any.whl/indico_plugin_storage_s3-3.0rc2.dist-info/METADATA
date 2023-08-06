@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: indico-plugin-storage-s3
+Version: 3.0rc2
+Summary: S3 storage backend for Indico
+Home-page: https://github.com/indico/indico-plugins
+Author: Indico Team
+Author-email: indico-team@cern.ch
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: ~=3.9.0
+Requires-Dist: indico (>=3.0rc2)
+Requires-Dist: boto3 (<2.0,>=1.14.30)
+
+UNKNOWN
+
