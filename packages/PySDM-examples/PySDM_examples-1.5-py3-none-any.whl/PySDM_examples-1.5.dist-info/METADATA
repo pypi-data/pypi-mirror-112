@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: PySDM-examples
+Version: 1.5
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: https://github.com/orgs/atmos-cloud-sim-uj/people
+Author-email: UNKNOWN
+License: GPL-3.0
+Platform: UNKNOWN
+Requires-Dist: PySDM
+Requires-Dist: PyMPDATA
+Requires-Dist: pystrict
+Requires-Dist: matplotlib
+Requires-Dist: ipywidgets
+Requires-Dist: ghapi
+
+UNKNOWN
+
+
