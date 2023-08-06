@@ -1,0 +1,36 @@
+impala_reader:
+    dwh:
+        host: cloudera-impala-proxy.live.bi.hellofresh.io
+        user: /US/OA/ServiceAccount/SCA/user
+        password: /US/OA/ServiceAccount/SCA/password
+        port: 21050
+        auth_mechanism: PLAIN
+        use_ssl: True
+    sql_validate:
+        allowed_command: ['select', 'with', 'refresh', 'show',
+                          'invalidate', 'alter table', 'create']
+        forbidden_command: ['drop', 'truncate', 'delete', 'update', 'alter']
+data_master:
+    bodega:
+        user: /Prod/BodegaDB/etl_user
+        password: /Prod/BodegaDB/etl_user_password
+        intermediate_schema: intermediate_tables
+        exclude_from_hash_concat_ls: ['etl_created_at', 'etl_updated_at',
+                                      'etl_pkey']
+    sql_validate_reader:
+        allowed_command: ['select', 'with' ,'explain', 'create']
+    sql_validate_writer:
+        forbidden_prod_command: ['drop', 'truncate', 'delete', 'update', 'alter']
+snowflake:
+  account: /Prod/Snowflake/account
+  warehouse: /Prod/Snowflake/warehouse
+  database: /Prod/Snowflake/database
+  accounts:
+    read_only:
+      user: /Prod/Snowflake/ro_user
+      role: /Prod/Snowflake/user_role
+      private_key: /Prod/Snowflake/user_ro_private_key
+    service_account:
+      user: /Prod/Snowflake/sa_user
+      role: /Prod/Snowflake/sa_role
+      private_key: /Prod/Snowflake/sa_private_key

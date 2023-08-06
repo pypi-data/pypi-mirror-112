@@ -1,0 +1,15 @@
+hellofresh_data/__init__.py,sha256=3KwPXDT6eEOSHbpYP3R8_5NoTrhxnB7PiUYrl_qJWZE,28
+hellofresh_data/aws_s3.py,sha256=4CW2G8CrUAOE34pU27uYNoHx6-qjLfApkbNr70Ya9eA,1420
+hellofresh_data/bodega_connect.py,sha256=g1ZR8C-MYljYvKnnN_Ubbjg5Jz88bMFcIkFLNPCIlHM,2415
+hellofresh_data/config.yml,sha256=ZWYp37516aVeyRZLy0H2B9QU950RUxLqOXPOZECQ4fo,1380
+hellofresh_data/data_master.py,sha256=dh4gzjrO5HQCNxS6k-7N0fPqJ2dmF51lHihHv_j3524,24109
+hellofresh_data/google_drive_tools.py,sha256=X7THaivZ5SGX1_kLJ72OKiNrL6Lpx6bVbH-nVYdRu7I,10689
+hellofresh_data/impala_reader.py,sha256=Cyd-Zit2pUGgO0Oday3RxI5SlB6Ye4dhgOR1FnnBEX4,5424
+hellofresh_data/logging_setup.py,sha256=n6RMuBeYLhOYAxWMNglDxe2tjiSEkXvGqgMU2wjAXew,682
+hellofresh_data/parameter_store.py,sha256=-tIW00-JhMKx7nBqX60nDR7jHcyKdcjuybGDTdxCryc,662
+hellofresh_data/snowflake_connect.py,sha256=n8wOyvk5WnesAeyNbHCjcPh8_djXEyf3Kw7PgBSjRek,5011
+hellofresh_oa_data-0.3.35.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+hellofresh_oa_data-0.3.35.dist-info/METADATA,sha256=FBtJzOYj_4p6IY_MKTPv56EAL0z9JEYD0ov5hSZC6xs,364
+hellofresh_oa_data-0.3.35.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hellofresh_oa_data-0.3.35.dist-info/top_level.txt,sha256=MPCOYJyxdl1MoI8peQKVdfQ8QuU7LBZ_NgE6TxQ4h7g,16
+hellofresh_oa_data-0.3.35.dist-info/RECORD,,
