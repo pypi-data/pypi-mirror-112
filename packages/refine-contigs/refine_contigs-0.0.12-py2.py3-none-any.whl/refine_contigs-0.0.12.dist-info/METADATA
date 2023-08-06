@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: refine-contigs
+Version: 0.0.12
+Summary: A simple tool to identify and clean misassemblies for ancient metagenomics
+Home-page: https://github.com/genomewalker/refine-contigs
+Author: Antonio Fernandez-Guerra
+Author-email: antonio@metagenomics.eu
+License: GNUv3
+Keywords: refine-contigs
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: pandas (<=1.2.0)
+Requires-Dist: scipy (>=1.5.2)
+Requires-Dist: networkx (>=2.5)
+Requires-Dist: tqdm (==4.50.0)
+Requires-Dist: PyYAML (>=5.4)
+Requires-Dist: biopython (>=1.77)
+Requires-Dist: pyfaidx (>=0.5.9)
+Requires-Dist: pyranges (>=0.0.97)
+
+UNKNOWN
+
+
