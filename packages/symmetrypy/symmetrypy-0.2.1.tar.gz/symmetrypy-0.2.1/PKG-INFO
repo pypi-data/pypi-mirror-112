@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: symmetrypy
+Version: 0.2.1
+Summary:  Solana RPC API for symmetry 
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: Symmetry Python Package
+Keywords: symmetry blockchain solana
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
