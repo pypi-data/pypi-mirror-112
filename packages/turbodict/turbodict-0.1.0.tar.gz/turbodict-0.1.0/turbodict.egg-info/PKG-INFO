@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: turbodict
+Version: 0.1.0
+Summary: Cool dict extensions.
+Home-page: https://git.sr.ht/~fsx/turbodict
+Author: Frank Smit
+Author-email: frank@61924.nl
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
