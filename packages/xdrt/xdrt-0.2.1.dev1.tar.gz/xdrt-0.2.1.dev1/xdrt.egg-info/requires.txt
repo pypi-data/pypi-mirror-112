@@ -1,0 +1,12 @@
+numpy>=0.19
+SimpleITK>=2.0
+
+[dev]
+pytest
+pytest-mock
+sphinx_copybutton
+numpydoc
+myst_parser
+sphinx-book-theme
+pylint
+pydantic

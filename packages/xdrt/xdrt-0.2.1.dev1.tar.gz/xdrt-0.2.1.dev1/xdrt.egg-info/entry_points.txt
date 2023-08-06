@@ -1,0 +1,4 @@
+[console_scripts]
+xdr2img = xdrt.cli.xdr:main
+xvi2img = xdrt.cli.xvi:main
+
