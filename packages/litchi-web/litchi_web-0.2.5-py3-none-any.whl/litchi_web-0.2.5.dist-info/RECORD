@@ -1,0 +1,16 @@
+litchi/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+litchi/app.py,sha256=xmEx6leiJc7Cj-0nc56z2ZXW9HkoX6jr7UV_5_ZCCl0,2241
+litchi/lang/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+litchi/lang/base.py,sha256=mJUQHWEyV_SJYqD91pipEB7cL4JhXxhUHdI6_DkeX3o,244
+litchi/lang/brython.py,sha256=V_7cfrGbM8kpL_zqs7cxY5CgQfNBcfDbWbXnPHggpyM,345
+litchi/lang/server.py,sha256=M75s-BctQvhSWCO1Gd745IbAaYtq-DTgJ8Czj2Da8AI,299
+litchi/uix/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+litchi/uix/button.py,sha256=5iyOKnO6HtPe8MqAlQ-dsxSOOFLgmiyKQK3bsej4zps,1167
+litchi/uix/html.py,sha256=oV7miVyUnEge988bXqn1Vu1ff9diQfNCY4uQdZ1stc4,140
+litchi/uix/label.py,sha256=RkLX0A93uGtjRW5JqGmz9y6JQPBo5eIPFCBot9AWcDU,2694
+litchi/uix/table.py,sha256=iQIcQ85jjCrhoAaYnY-V14LzmeBJfLbKKd13fDG6YZI,1199
+litchi_web-0.2.5.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+litchi_web-0.2.5.dist-info/METADATA,sha256=D0TvckDGUN2XvAhnAY32i1YcFxM1DdYqgGJd5rC-aVM,2040
+litchi_web-0.2.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+litchi_web-0.2.5.dist-info/top_level.txt,sha256=KVtS8dUyhfAvWMnd6cfCfSjDZu1hqyzCcryNuSJceu4,30
+litchi_web-0.2.5.dist-info/RECORD,,
