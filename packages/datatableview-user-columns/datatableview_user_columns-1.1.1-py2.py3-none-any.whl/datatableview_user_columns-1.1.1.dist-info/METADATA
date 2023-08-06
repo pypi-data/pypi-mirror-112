@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: datatableview-user-columns
+Version: 1.1.1
+Summary: Allows a user to specify columns for a datatableview
+Home-page: https://github.com/icmanage/django-datatable-view-user-columns
+Author: Steven Klass
+Author-email: sklass@icmanage.com
+License: UNKNOWN
+Download-URL: https://github.com/icmanage/django-datatable-view-user-columns/archive/1.1.1.tar.gz
+Project-URL: Bug Reports, https://github.com/icmanage/django-datatable-view-user-columns/issues
+Project-URL: Say Thanks!, http://saythanks.io/to/rh0dium
+Project-URL: Source, https://github.com/icmanage/django-datatable-view-user-columns
+Keywords: django datatableview
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: django (<4.0,>=3)
+Requires-Dist: django-datatable-view
+
+# Django Datatable view user columns repository
+
+This is a small repo to allow user based custom columns.
+
+Learn more https://github.com/icmanage/django-datatable-view-user-columns
+
+### Build Process:
+1.  Update the `__version_info__` inside of the application. Commit and push.
+2.  Tag the release with the version. `git tag <version> -m "Release"; git push --tags`
+3.  Build the release `rm -rf dist build *egg-info; python setup.py sdist bdist_wheel`
+4.  Upload the data `twine upload dist/*`
+
+
