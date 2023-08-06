@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: mxdesign
+Version: 0.0.2
+Summary: A framework for eXperiment design specification
+Home-page: https://github.com/ysenarath/xdesign
+Author: Yasas Senarath
+Author-email: ysenarath.93@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-learn (~=0.24.2)
+Requires-Dist: setuptools (~=57.1.0)
+Requires-Dist: hyperopt (~=0.2.5)
+
+# MXDesign
+A framework for eXperiment Design specification in python for Machine Learning projects
+
