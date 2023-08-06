@@ -1,0 +1,7 @@
+sphinx>=1.6
+docutils<0.17
+
+[dev]
+transifex-client
+sphinxcontrib-httpdomain
+bump2version

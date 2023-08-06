@@ -1,0 +1,36 @@
+{# Add rst-badge after rst-versions for small badge style. #}
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="{{ _('Versions') }}">
+    <button class="rst-current-version" aria-expanded="false" aria-controls="docs_versions" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: {{ current_version }}
+      <span class="fa fa-caret-down"></span>
+    </button>
+    <div class="rst-other-versions" id="docs_version">
+      <h3 class="label" id="version-versions">{{ _('Versions') }}</h3>
+      <ul aria-labeledby="version-versions">
+          <li><a href="#">latest</a></li>
+          <li><a href="#">stable</a></li>
+          <li><a href="#">v10.0</a></li>
+          <li><a href="#">v9.5</a></li>
+          <li><a href="#">v9.4</a></li>
+          <li><a href="#">v9.3</a></li>
+          <li><a href="#">v9.2</a></li>
+          <li><a href="#">v9.1</a></li>
+          <li><a href="#">v9.0</a></li>
+      </ul>
+
+      <h3 class="label" id="version-downloads">{{ _('Downloads') }}</h3>
+      <ul aria-labeledby="version-downloads">
+        {% for type, url in downloads %}
+          <li><a href="{{ url }}">{{ type }}</a></li>
+        {% endfor %}
+      </ul>
+
+      <h3 class="label" id="version-rtd-proj">{{ _('On Read the Docs') }}</h3>
+      <ul aria-labeledby="version-rtd-proj">
+        {# Translators: The phrase "Read the Docs" is not translated #}
+        <li><a href="//{{ PRODUCTION_DOMAIN }}/projects/{{ slug }}/?fromdocs={{ slug }}">{{ _('Project Home') }}</a></li>
+        <li><a href="//{{ PRODUCTION_DOMAIN }}/builds/{{ slug }}/?fromdocs={{ slug }}">{{ _('Builds') }}</a></li>
+      </ul>
+    </div>
+  </div>
