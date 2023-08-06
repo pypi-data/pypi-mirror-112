@@ -1,0 +1,18 @@
+ecl
+ert>=2.25.0b1
+configsuite>=0.6
+numpy
+pandas>0.24
+pydantic
+scikit-learn
+scipy
+xlrd<2
+stea
+pyscal>=0.4.0
+fmu-ensemble
+segyio
+xtgeo
+
+[:python_version < "3.8"]
+typing_extensions
+typing_extensions
