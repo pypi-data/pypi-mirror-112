@@ -1,0 +1,196 @@
+Metadata-Version: 2.1
+Name: sk-dm
+Version: 0.2.6
+Summary: dmminig kit.
+Home-page: https://github.com/me/myproject
+Author: wengsongxiu
+Author-email: wengsongxiu@mastercom.cn
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: sklearn
+Requires-Dist: sk-common
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [sk-dm](#sk-dm)
+- [📦 项目介绍 (for humans)](#-%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D-for-humans)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [一.数据准备模块（data_prepare）](#%E4%B8%80%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87%E6%A8%A1%E5%9D%97data_prepare)
+    - [sk_dm.data_prepare.file_reader模块](#sk_dmdata_preparefile_reader%E6%A8%A1%E5%9D%97)
+    - [sk_dm.data_prepare.db_helper模块](#sk_dmdata_preparedb_helper%E6%A8%A1%E5%9D%97)
+  - [二.数据探索（data_explore）](#%E4%BA%8C%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2data_explore)
+    - [sk_dm.data_explore.data_process模块](#sk_dmdata_exploredata_process%E6%A8%A1%E5%9D%97)
+  - [三.特征工程（feature_engineering）](#%E4%B8%89%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8Bfeature_engineering)
+    - [sk_dm.feature_engineering.cutbins模块](#sk_dmfeature_engineeringcutbins%E6%A8%A1%E5%9D%97)
+    - [sk_dm.feature_engineering.feature_decomposition模块](#sk_dmfeature_engineeringfeature_decomposition%E6%A8%A1%E5%9D%97)
+    - [sk_dm.feature_engineering.feature_filter模块](#sk_dmfeature_engineeringfeature_filter%E6%A8%A1%E5%9D%97)
+  - [四.模型构建（data_model）](#%E5%9B%9B%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BAdata_model)
+    - [sk_dm.data_model模块](#sk_dmdata_model%E6%A8%A1%E5%9D%97)
+  - [五.评估模型（model_evaluation）](#%E4%BA%94%E8%AF%84%E4%BC%B0%E6%A8%A1%E5%9E%8Bmodel_evaluation)
+    - [sk_dm.model_evaluation.data_split模块](#sk_dmmodel_evaluationdata_split%E6%A8%A1%E5%9D%97)
+  - [More Resources](#more-resources)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+# sk-dm
+
+📦 项目介绍 (for humans)
+=======================
+
+这个第三方仓库是由深圳市名通科技股份有限公司AI团队提供的。团队致力于为Data Mining领域，提供一个稳定可靠， 功能完善的Data Mining常见操作。
+
+
+Installation
+-----
+
+```bash
+cd your_project
+pip install sk-dm
+```
+
+## Usage
+
+本仓库主要包含了五个模块，分别为数据准备（data_prepare）、数据探索（data_explore）、特征工程（feature_engineering）、模型构建（data_model）和评估模型（model_evaluation）。接下来介绍一下每个模块的功能。
+
+
+
+## 一.数据准备模块（data_prepare）
+
+###  sk_dm.data_prepare.file_reader模块
+
+###  sk_dm.data_prepare.db_helper模块
+
+``` text
+两个模块主要是读取文件，分别读取不同格式的数据，其中包括读取txt、csv、excel、HDF5和json格式，数据挖掘一般会读取txt和csv格式居多。这也是数据挖掘的第一步。
+```
+
+## 二.数据探索（data_explore）
+
+### sk_dm.data_explore.data_process模块
+
+``` TEXT
+该模块是对数据进行处理的，比如常规的对数据进行归一化、标准化、二值化处理，使得数据离散度较大的情况下将数据聚拢到（0，1），同时去掉数据的量纲。同时当数据标签不均匀的时候，还提供了将数据标签降采样和欠采样的操作。本模块还提供了一些数据是否符合正态分布的画图操作，更加直观的观测数据分布情况。还有提供热力图方便观测特征与标签的关系。
+```
+
+以下是数据探索的一些常规操作：
+
+``` python
+import pandas as pd
+import numpy as np
+
+colname = '' # 列名
+col1 = '' # 列名
+col2 = '' # 列名
+filepath = '' # 文件路径
+x = '' # 包含的字段
+y = '' # 包含的字段
+df = pd.read_csv(filepath, encoding='utf-8')
+
+# 查看数据行数、列数
+df.shape[0]
+df.shape[1]
+# 查看数据前几行，后几行，默认为5行
+df.head()
+df.tail()
+# 查看数据汇总统计
+df.describe()
+# 查看数据概况
+df.info()
+# 查看数据列名
+df.columns
+# 查看数据类型
+df.dtypes
+# 各列平均值
+df.mean()
+# 按列名查看某列（两种方式）
+df[colname]
+df.colname
+# 查列名看多列
+df[[col1, col2]]
+# 按索引查看某行,第一行：
+df.iloc[0]
+# 按索引查看某行某列，三行四列那个元素
+df.iloc[2, 3]
+# 选择某列大于1的行
+df[df[colname] > 1]
+# 选择某列包含x或者y字段的行,pandas有很多字符串处理函数
+df[df[colname].str.contains(x | y)]
+# 替换字符，将'k'换成'000'
+df[df[colname].replace('k', '000')]
+# 转换数据类型,转换成float型
+df.num = df.num.astype(float)
+# 查看某列的唯一值的个数
+df.colname.value_counts()
+# 按照某列排序（默认升序）
+df.sort_values(by=colname, ascending=True)
+# 应用函数，简单的可以用lambda
+df.apply(lambda x: x.max()-x.min())
+# 也可以用numpy自带的，例如cumsum累加
+df.apply(np.cumsum)
+```
+
+## 三.特征工程（feature_engineering）
+
+### sk_dm.feature_engineering.cutbins模块
+
+### sk_dm.feature_engineering.feature_decomposition模块
+
+### sk_dm.feature_engineering.feature_filter模块
+
+```TEXT
+此模块为特征工程的一些操作：
+1.第一个模块是分箱的操作，根据一些设定将数字或特征分在一起。
+2.第二个模块是特征降维操作，是对多特征数据进行操作，去掉无用或用处小的特征，提高模型准确率。
+3.第三个模块是特征过滤，仍然是去除特征与标签相关性小的特征，提高模型准确率。
+```
+
+## 四.模型构建（data_model）
+
+### sk_dm.data_model模块
+
+``` TEXT
+该模块里是机器学习的一些模型，包括catboost、lightgbm、xgboost、decisiontree等，可以调用直接训练，并输出评估值。
+```
+
+## 五.评估模型（model_evaluation）
+
+### sk_dm.model_evaluation.data_split模块
+
+```TEXT
+该模块是对数据进行切分评估模型，主要有交叉验证、留出法和自助法划分。
+```
+
+More Resources
+--------------
+
+-   [where is sklearn]  https://scikit-learn.org/stable/
+-   [where is auto-sklearn]  https://github.com/automl/auto-sklearn
+-   [Official Python Packaging User Guide](https://packaging.python.org)
+
+License
+-------
+
+This is free and unencumbered software released into the public domain.
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any means.
+
+
+
