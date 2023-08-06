@@ -1,0 +1,3 @@
+[console_scripts]
+tnmf = scripts.tnmf:main
+
