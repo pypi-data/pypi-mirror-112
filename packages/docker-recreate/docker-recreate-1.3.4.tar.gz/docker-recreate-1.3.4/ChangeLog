@@ -1,0 +1,62 @@
+CHANGES
+=======
+
+1.3.4
+-----
+
+* add pbr as setup requirements
+* add description content type
+* fix setup.cfg
+
+1.3.3
+-----
+
+* add more example in readme file
+* use pbr to manage version number
+
+1.3.2
+-----
+
+* fix long description content type to markdown
+
+1.3.1
+-----
+
+* fix long description
+
+1.3.0
+-----
+
+* add long description file
+
+1.2.0
+-----
+
+* delete useless file
+* fix readme wrap
+* no need to build whl package
+
+1.1.0
+-----
+
+* get version name from environment
+* fetch all depth
+* use git to get proper version
+
+1.0.4
+-----
+
+* add pbr to detect version
+
+1.0.3
+-----
+
+* Create python-publish.yml
+* Update unittest.yml
+* create unittests.yml
+* add README file
+* code refactor
+* fix the project name
+* Bump version to 1.0.1
+* add home page
+* init project
