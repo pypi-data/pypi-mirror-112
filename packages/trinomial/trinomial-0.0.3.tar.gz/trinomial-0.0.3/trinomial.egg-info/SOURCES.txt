@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+trinomial/__init__.py
+trinomial/trinomial.py
+trinomial.egg-info/PKG-INFO
+trinomial.egg-info/SOURCES.txt
+trinomial.egg-info/dependency_links.txt
+trinomial.egg-info/not-zip-safe
+trinomial.egg-info/top_level.txt
