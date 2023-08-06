@@ -1,0 +1,14 @@
+# Common requirements for developing on all supported python versions
+mock
+pytest-cov
+pytest-mock
+pycodestyle>=2.4.0
+flake8
+pyflakes
+pylint
+pylint-pytest
+pydocstyle
+tox==3.23.1
+black
+isort
+-r requirements.txt
