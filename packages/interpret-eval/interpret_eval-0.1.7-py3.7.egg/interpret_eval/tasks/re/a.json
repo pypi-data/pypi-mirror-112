@@ -1,0 +1,217 @@
+{
+    "task": "re",
+    "data": {
+        "name": "dataset_name",
+        "bias": {
+            "sLen": 32.42696629213483,
+            "pLen": 215.77528089887642,
+            "nEnt": 2.696629213483146,
+            "avgDist": 1.0131086142322097
+        },
+        "language": "English",
+        "output": "model_name/test_re.tsv"
+    },
+    "model": {
+        "name": "model_name",
+        "results": {
+            "overall": {
+                "performance": "91",
+                "confidence_low": 83.09859154929578,
+                "confidence_up": 97.1830985915493,
+                "error_case": [
+                    "1|||0|||['paclitaxel', 'trastuzumab']|||We examined the feasibility and safety of using paclitaxel and trastuzumab as maintenance therapy after high-dose chemotherapy ( HDC ) with autologous hematopoietic stem cell transplantation ( AHST ) for patients with HER2-positive metastatic breast cancer .",
+                    "1|||0|||['imatinib', 'irinotecan', '5‑Fu']|||Results of cell viability assays revealed that treatment with a combination of imatinib and chemotherapy agents irinotecan or 5‑Fu synergistically inhibited cell growth , compared with treatment with any of these drugs alone .",
+                    "1|||0|||['cetuximab', 'nystatin', 'cetuximab', 'cetuximab']|||Combination treatment with cetuximab and nystatin selectively increased cetuximab uptake by tumor tissues , translating into potentiated antitumor efficacy of cetuximab in vivo ( A431 and A549 tumors ) .",
+                    "1|||0|||['Bendamustine', 'rituximab']|||Bendamustine is effective both with rituximab and as a monotherapy in rituximab-refractory patients .",
+                    "1|||0|||['imatinib', 'irinotecan', '5‑Fu']|||Results of cell viability assays revealed that treatment with a combination of imatinib and chemotherapy agents irinotecan or 5‑Fu synergistically inhibited cell growth , compared with treatment with any of these drugs alone .",
+                    "0|||1|||['moxifloxacin', 'tobramycin']|||Following corneal scrapings and culture , topical 0.5 % moxifloxacin and 0.5 % tobramycin were administered hourly .",
+                    "0|||1|||['vasopressin', 'oxytocin']|||This increase in the number of vasopressin and oxytocin containing neurons in the pig hypothalamus is much later in development than has ever been reported so far .",
+                    "1|||0|||['olmesartan', 'azelnidipine']|||An angiotensin 2 type 1 receptor blocker , olmesartan , and a calcium channel blocker , azelnidipine , possess not only an antihypertensive effect but also an antioxidative effect and other beneficial effects ."
+                ]
+            },
+            "calibration": null,
+            "fine_grained": {
+                "sLen": [
+                    {
+                        "bucket_name": "(9,30)",
+                        "bucket_value": "84.62",
+                        "num": 26,
+                        "confidence_low": "65",
+                        "confidence_up": "100",
+                        "bucket_error_case": [
+                            "1|||0|||[Bendamustine, rituximab]|||Bendamustine is effective both with rituximab and as a monotherapy in rituximab-refractory patients .",
+                            "0|||1|||[moxifloxacin, tobramycin]|||Following corneal scrapings and culture , topical 0.5 % moxifloxacin and 0.5 % tobramycin were administered hourly .",
+                            "0|||1|||[vasopressin, oxytocin]|||This increase in the number of vasopressin and oxytocin containing neurons in the pig hypothalamus is much later in development than has ever been reported so far .",
+                            "1|||0|||[cetuximab, nystatin, cetuximab, cetuximab]|||Combination treatment with cetuximab and nystatin selectively increased cetuximab uptake by tumor tissues , translating into potentiated antitumor efficacy of cetuximab in vivo ( A431 and A549 tumors ) ."
+                        ]
+                    },
+                    {
+                        "bucket_name": "(32,33)",
+                        "bucket_value": "100",
+                        "num": 27,
+                        "confidence_low": "100",
+                        "confidence_up": "100",
+                        "bucket_error_case": []
+                    },
+                    {
+                        "bucket_name": "(34,36)",
+                        "bucket_value": "90.91",
+                        "num": 33,
+                        "confidence_low": "76.92",
+                        "confidence_up": "100",
+                        "bucket_error_case": [
+                            "1|||0|||[imatinib, irinotecan, 5‑Fu]|||Results of cell viability assays revealed that treatment with a combination of imatinib and chemotherapy agents irinotecan or 5‑Fu synergistically inhibited cell growth , compared with treatment with any of these drugs alone .",
+                            "1|||0|||[imatinib, irinotecan, 5‑Fu]|||Results of cell viability assays revealed that treatment with a combination of imatinib and chemotherapy agents irinotecan or 5‑Fu synergistically inhibited cell growth , compared with treatment with any of these drugs alone .",
+                            "1|||0|||[olmesartan, azelnidipine]|||An angiotensin 2 type 1 receptor blocker , olmesartan , and a calcium channel blocker , azelnidipine , possess not only an antihypertensive effect but also an antioxidative effect and other beneficial effects ."
+                        ]
+                    },
+                    {
+                        "bucket_name": "(37,1e+06)",
+                        "bucket_value": "66.67",
+                        "num": 3,
+                        "confidence_low": "0",
+                        "confidence_up": "100",
+                        "bucket_error_case": [
+                            "1|||0|||[paclitaxel, trastuzumab]|||We examined the feasibility and safety of using paclitaxel and trastuzumab as maintenance therapy after high-dose chemotherapy ( HDC ) with autologous hematopoietic stem cell transplantation ( AHST ) for patients with HER2-positive metastatic breast cancer ."
+                        ]
+                    }
+                ],
+                "pLen": [
+                    {
+                        "bucket_name": "(110,179)",
+                        "bucket_value": "94.12",
+                        "num": 34,
+                        "confidence_low": "85.19",
+                        "confidence_up": "100",
+                        "bucket_error_case": [
+                            "1|||0|||[Bendamustine, rituximab]|||Bendamustine is effective both with rituximab and as a monotherapy in rituximab-refractory patients .",
+                            "0|||1|||[moxifloxacin, tobramycin]|||Following corneal scrapings and culture , topical 0.5 % moxifloxacin and 0.5 % tobramycin were administered hourly ."
+                        ]
+                    },
+                    {
+                        "bucket_name": "(199,219)",
+                        "bucket_value": "96.67",
+                        "num": 30,
+                        "confidence_low": "87.5",
+                        "confidence_up": "100",
+                        "bucket_error_case": [
+                            "0|||1|||[vasopressin, oxytocin]|||This increase in the number of vasopressin and oxytocin containing neurons in the pig hypothalamus is much later in development than has ever been reported so far ."
+                        ]
+                    },
+                    {
+                        "bucket_name": "(220,291)",
+                        "bucket_value": "79.17",
+                        "num": 24,
+                        "confidence_low": "57.89",
+                        "confidence_up": "94.74",
+                        "bucket_error_case": [
+                            "1|||0|||[imatinib, irinotecan, 5‑Fu]|||Results of cell viability assays revealed that treatment with a combination of imatinib and chemotherapy agents irinotecan or 5‑Fu synergistically inhibited cell growth , compared with treatment with any of these drugs alone .",
+                            "1|||0|||[imatinib, irinotecan, 5‑Fu]|||Results of cell viability assays revealed that treatment with a combination of imatinib and chemotherapy agents irinotecan or 5‑Fu synergistically inhibited cell growth , compared with treatment with any of these drugs alone .",
+                            "1|||0|||[cetuximab, nystatin, cetuximab, cetuximab]|||Combination treatment with cetuximab and nystatin selectively increased cetuximab uptake by tumor tissues , translating into potentiated antitumor efficacy of cetuximab in vivo ( A431 and A549 tumors ) .",
+                            "1|||0|||[olmesartan, azelnidipine]|||An angiotensin 2 type 1 receptor blocker , olmesartan , and a calcium channel blocker , azelnidipine , possess not only an antihypertensive effect but also an antioxidative effect and other beneficial effects .",
+                            "1|||0|||[paclitaxel, trastuzumab]|||We examined the feasibility and safety of using paclitaxel and trastuzumab as maintenance therapy after high-dose chemotherapy ( HDC ) with autologous hematopoietic stem cell transplantation ( AHST ) for patients with HER2-positive metastatic breast cancer ."
+                        ]
+                    },
+                    {
+                        "bucket_name": "(626,1e+06)",
+                        "bucket_value": "100",
+                        "num": 1,
+                        "confidence_low": "100",
+                        "confidence_up": "100",
+                        "bucket_error_case": []
+                    }
+                ],
+                "nEnt": [
+                    {
+                        "bucket_name": "(2,)",
+                        "bucket_value": "82.22",
+                        "num": 45,
+                        "confidence_low": "69.44",
+                        "confidence_up": "94.44",
+                        "bucket_error_case": [
+                            "1|||0|||[paclitaxel, trastuzumab]|||We examined the feasibility and safety of using paclitaxel and trastuzumab as maintenance therapy after high-dose chemotherapy ( HDC ) with autologous hematopoietic stem cell transplantation ( AHST ) for patients with HER2-positive metastatic breast cancer .",
+                            "1|||0|||[imatinib, irinotecan, 5‑Fu]|||Results of cell viability assays revealed that treatment with a combination of imatinib and chemotherapy agents irinotecan or 5‑Fu synergistically inhibited cell growth , compared with treatment with any of these drugs alone .",
+                            "1|||0|||[cetuximab, nystatin, cetuximab, cetuximab]|||Combination treatment with cetuximab and nystatin selectively increased cetuximab uptake by tumor tissues , translating into potentiated antitumor efficacy of cetuximab in vivo ( A431 and A549 tumors ) .",
+                            "1|||0|||[Bendamustine, rituximab]|||Bendamustine is effective both with rituximab and as a monotherapy in rituximab-refractory patients .",
+                            "1|||0|||[imatinib, irinotecan, 5‑Fu]|||Results of cell viability assays revealed that treatment with a combination of imatinib and chemotherapy agents irinotecan or 5‑Fu synergistically inhibited cell growth , compared with treatment with any of these drugs alone .",
+                            "0|||1|||[moxifloxacin, tobramycin]|||Following corneal scrapings and culture , topical 0.5 % moxifloxacin and 0.5 % tobramycin were administered hourly .",
+                            "0|||1|||[vasopressin, oxytocin]|||This increase in the number of vasopressin and oxytocin containing neurons in the pig hypothalamus is much later in development than has ever been reported so far .",
+                            "1|||0|||[olmesartan, azelnidipine]|||An angiotensin 2 type 1 receptor blocker , olmesartan , and a calcium channel blocker , azelnidipine , possess not only an antihypertensive effect but also an antioxidative effect and other beneficial effects ."
+                        ]
+                    },
+                    {
+                        "bucket_name": "(3,)",
+                        "bucket_value": "100",
+                        "num": 29,
+                        "confidence_low": "100",
+                        "confidence_up": "100",
+                        "bucket_error_case": []
+                    },
+                    {
+                        "bucket_name": "(4,1e+06)",
+                        "bucket_value": "100",
+                        "num": 15,
+                        "confidence_low": "100",
+                        "confidence_up": "100",
+                        "bucket_error_case": []
+                    }
+                ],
+                "avgDist": [
+                    {
+                        "bucket_name": "(1,)",
+                        "bucket_value": "90.8",
+                        "num": 87,
+                        "confidence_low": "82.61",
+                        "confidence_up": "97.1",
+                        "bucket_error_case": [
+                            "1|||0|||[paclitaxel, trastuzumab]|||We examined the feasibility and safety of using paclitaxel and trastuzumab as maintenance therapy after high-dose chemotherapy ( HDC ) with autologous hematopoietic stem cell transplantation ( AHST ) for patients with HER2-positive metastatic breast cancer .",
+                            "1|||0|||[imatinib, irinotecan, 5‑Fu]|||Results of cell viability assays revealed that treatment with a combination of imatinib and chemotherapy agents irinotecan or 5‑Fu synergistically inhibited cell growth , compared with treatment with any of these drugs alone .",
+                            "1|||0|||[cetuximab, nystatin, cetuximab, cetuximab]|||Combination treatment with cetuximab and nystatin selectively increased cetuximab uptake by tumor tissues , translating into potentiated antitumor efficacy of cetuximab in vivo ( A431 and A549 tumors ) .",
+                            "1|||0|||[Bendamustine, rituximab]|||Bendamustine is effective both with rituximab and as a monotherapy in rituximab-refractory patients .",
+                            "1|||0|||[imatinib, irinotecan, 5‑Fu]|||Results of cell viability assays revealed that treatment with a combination of imatinib and chemotherapy agents irinotecan or 5‑Fu synergistically inhibited cell growth , compared with treatment with any of these drugs alone .",
+                            "0|||1|||[moxifloxacin, tobramycin]|||Following corneal scrapings and culture , topical 0.5 % moxifloxacin and 0.5 % tobramycin were administered hourly .",
+                            "0|||1|||[vasopressin, oxytocin]|||This increase in the number of vasopressin and oxytocin containing neurons in the pig hypothalamus is much later in development than has ever been reported so far .",
+                            "1|||0|||[olmesartan, azelnidipine]|||An angiotensin 2 type 1 receptor blocker , olmesartan , and a calcium channel blocker , azelnidipine , possess not only an antihypertensive effect but also an antioxidative effect and other beneficial effects ."
+                        ]
+                    },
+                    {
+                        "bucket_name": "(1.33,1e+06)",
+                        "bucket_value": "100",
+                        "num": 2,
+                        "confidence_low": "100",
+                        "confidence_up": "100",
+                        "bucket_error_case": []
+                    }
+                ],
+                "tag": [
+                    {
+                        "bucket_name": "0",
+                        "bucket_value": "97.59",
+                        "num": 83,
+                        "confidence_low": "93.94",
+                        "confidence_up": "100",
+                        "bucket_error_case": [
+                            "0|||1|||[moxifloxacin, tobramycin]|||Following corneal scrapings and culture , topical 0.5 % moxifloxacin and 0.5 % tobramycin were administered hourly .",
+                            "0|||1|||[vasopressin, oxytocin]|||This increase in the number of vasopressin and oxytocin containing neurons in the pig hypothalamus is much later in development than has ever been reported so far ."
+                        ]
+                    },
+                    {
+                        "bucket_name": "1",
+                        "bucket_value": "0",
+                        "num": 6,
+                        "confidence_low": "0",
+                        "confidence_up": "0",
+                        "bucket_error_case": [
+                            "1|||0|||[paclitaxel, trastuzumab]|||We examined the feasibility and safety of using paclitaxel and trastuzumab as maintenance therapy after high-dose chemotherapy ( HDC ) with autologous hematopoietic stem cell transplantation ( AHST ) for patients with HER2-positive metastatic breast cancer .",
+                            "1|||0|||[imatinib, irinotecan, 5‑Fu]|||Results of cell viability assays revealed that treatment with a combination of imatinib and chemotherapy agents irinotecan or 5‑Fu synergistically inhibited cell growth , compared with treatment with any of these drugs alone .",
+                            "1|||0|||[cetuximab, nystatin, cetuximab, cetuximab]|||Combination treatment with cetuximab and nystatin selectively increased cetuximab uptake by tumor tissues , translating into potentiated antitumor efficacy of cetuximab in vivo ( A431 and A549 tumors ) .",
+                            "1|||0|||[Bendamustine, rituximab]|||Bendamustine is effective both with rituximab and as a monotherapy in rituximab-refractory patients .",
+                            "1|||0|||[imatinib, irinotecan, 5‑Fu]|||Results of cell viability assays revealed that treatment with a combination of imatinib and chemotherapy agents irinotecan or 5‑Fu synergistically inhibited cell growth , compared with treatment with any of these drugs alone .",
+                            "1|||0|||[olmesartan, azelnidipine]|||An angiotensin 2 type 1 receptor blocker , olmesartan , and a calcium channel blocker , azelnidipine , possess not only an antihypertensive effect but also an antioxidative effect and other beneficial effects ."
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

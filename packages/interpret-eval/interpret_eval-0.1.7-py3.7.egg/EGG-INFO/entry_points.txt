@@ -1,0 +1,3 @@
+[console_scripts]
+interpret-eval = interpret_eval.interpret_eval_main:main
+
