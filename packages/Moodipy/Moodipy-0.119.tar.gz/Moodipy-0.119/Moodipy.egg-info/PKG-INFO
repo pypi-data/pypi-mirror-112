@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: Moodipy
+Version: 0.119
+Summary: Spotify Playlist Generator based of Mood
+Home-page: https://github.com/dianas11xx/Moodify
+Author: Noteworthy
+Author-email: UNKNOWN
+License: GPL 3
+Description: Uses sentiment analysis to create a playlist that matches someone's mood and also predict songs to rise in popularity.
+Platform: UNKNOWN

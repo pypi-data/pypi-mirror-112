@@ -1,0 +1,3 @@
+[console_scripts]
+Moodipy = Moodipy.main:main
+
