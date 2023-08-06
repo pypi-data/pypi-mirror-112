@@ -1,0 +1,3 @@
+include dict/*.dict
+include test.sh
+include tests/*.py
