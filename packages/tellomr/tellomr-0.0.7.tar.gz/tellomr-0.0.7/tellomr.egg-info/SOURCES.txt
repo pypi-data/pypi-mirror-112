@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+tellomr/__init__.py
+tellomr/demo.py
+tellomr/frame2html.py
+tellomr/stats.py
+tellomr/tello.py
+tellomr.egg-info/PKG-INFO
+tellomr.egg-info/SOURCES.txt
+tellomr.egg-info/dependency_links.txt
+tellomr.egg-info/requires.txt
+tellomr.egg-info/top_level.txt
