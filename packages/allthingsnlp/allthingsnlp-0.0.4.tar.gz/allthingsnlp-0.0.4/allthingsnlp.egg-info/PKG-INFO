@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: allthingsnlp
+Version: 0.0.4
+Summary: All things NLP - An open source, low-code NLP library in Python.
+Home-page: https://github.com/Pranavj94/all-things-nlp
+Author: Pranav J
+Author-email: pranavj13594@gmail.com
+License: MIT
+Description: # All-things-NLP
+        This repository is a collection of different NLP tasks 
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
