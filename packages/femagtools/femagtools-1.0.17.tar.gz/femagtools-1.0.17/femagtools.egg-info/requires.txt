@@ -1,0 +1,12 @@
+numpy
+scipy
+mako
+six
+lmfit
+dxfgrabber
+networkx
+netCDF4
+
+[meshio]
+meshio
+lxml
