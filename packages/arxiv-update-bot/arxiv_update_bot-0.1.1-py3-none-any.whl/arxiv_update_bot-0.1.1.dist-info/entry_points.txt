@@ -1,0 +1,3 @@
+[console_scripts]
+arxiv-update-bot=arxiv_update_bot.main:main
+
