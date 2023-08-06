@@ -1,0 +1,236 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "PoorWSGI Test",
+    "version": "1.0.0",
+    "description": "PoorWSGI Integrity test"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "paths": {
+    "/plain_text": {
+      "get": {
+        "summary": "Plain Text test page",
+        "responses": {
+          "200" : {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "default": "text/plain"
+                }
+              }
+            }
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/accept"
+        }
+      ]
+    },
+    "/json/{arg}": {
+      "get": {
+        "summary": "Json with path argument test",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "arg": {
+                      "type": "string",
+                      "example": "arg_from_path"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        }
+      },
+      "parameters": [
+      {
+        "name": "arg",
+        "in": "path",
+        "required": true,
+        "description": "Number argument",
+        "schema": {
+            "type": "number",
+            "example": 13.4,
+            "minimum": 1
+        }
+      },
+      {
+        "$ref": "#/components/parameters/accept"
+      }
+      ]
+    },
+    "/login": {
+      "get": {
+        "summary": "Create login cookie",
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {
+              "Set-Cookie": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/check/login": {
+      "get": {
+        "summary": "check loggin cookie",
+        "security": [
+          {"CookieAuth": [] }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/check/api-key": {
+      "get": {
+        "summary": "check api-key header",
+        "security": [
+          {"APIKey": []}
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+    },
+    "parameters": {
+      "accept": {
+        "name": "Accept",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "pattern": "(application/json)|(text/html)|(text/plain)"
+        }
+      }
+    },
+    "securitySchemes": {
+      "APIKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "API-Key"
+      },
+      "CookieAuth": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "SESSID"
+      }
+    },
+    "responses": {
+      "400": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "text/html": {
+            "schema": {
+              "type": "string"
+            }
+          },
+          "text/plain": {
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "headers": {
+          "Content-Type": {
+            "schema": {
+              "type": "string",
+              "default": "application/json"
+            }
+          }
+        }
+      },
+     "500": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "text/html": {
+            "schema": {
+              "type": "string"
+            }
+          },
+          "text/plain": {
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "headers": {
+          "Content-Type": {
+            "schema": {
+              "type": "string",
+              "default": "application/json"
+            }
+          }
+        }
+      }
+    }
+  }
+}
