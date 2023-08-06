@@ -1,0 +1,13 @@
+dbt/adapters/openlineage_bigquery/__init__.py,sha256=--J4GZ4JFN2BkhYPDjmTqK0cCAjMTy7Ec9QmiiEkyok,638
+dbt/adapters/openlineage_bigquery/connections.py,sha256=K2jWjcjRR-3uq725HwddEWSYLGIhjMANWe1GrgG1Z2M,10506
+dbt/adapters/openlineage_bigquery/impl.py,sha256=uAgQFgmzoLcan_KPcjaqYaIko_Y8I0S80rwR2W23XuU,769
+dbt/adapters/openlineage_bigquery/schema/__init__.py,sha256=HgsQNNujYMjjVV0SVz4bTDfVkrN8RnOXGgzoCapYa5Q,708
+dbt/include/openlineage_bigquery/__init__.py,sha256=MPQnGccFsedAruDmH7jUXQ4DyS19z-jk8Sty9zdMXVc,51
+dbt/include/openlineage_bigquery/dbt_project.yml,sha256=DfKh7pT9bACdzlj8RUQzcknRIKMCS68a85mu5lLsQNE,87
+dbt/include/openlineage_bigquery/macros/adapters.sql,sha256=ZreMezlSeIfbfVUK3EphNARA7yrpjmj0a0LiBFDRTe0,4903
+dbt/include/openlineage_bigquery/macros/catalog.sql,sha256=YCHfbuzceYyoLpDFR6cjcHnTxgCoBynhH-kxE7FCG7w,7363
+dbt/include/openlineage_bigquery/macros/etc.sql,sha256=Zot71hpnarZGCzf56pKkEgnc5agfDWG8iF-4i9jiBlk,491
+marquez_dbt_bigquery-0.16.1rc1.dist-info/METADATA,sha256=OqCHDxzEiR7avNQnQohFBbHxSGfVpJ0JyumFq5iotaQ,1940
+marquez_dbt_bigquery-0.16.1rc1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+marquez_dbt_bigquery-0.16.1rc1.dist-info/top_level.txt,sha256=B2YH4he17ajilEWOGCKHbRcEJlCuZKwCcgFcLPntLsE,4
+marquez_dbt_bigquery-0.16.1rc1.dist-info/RECORD,,
