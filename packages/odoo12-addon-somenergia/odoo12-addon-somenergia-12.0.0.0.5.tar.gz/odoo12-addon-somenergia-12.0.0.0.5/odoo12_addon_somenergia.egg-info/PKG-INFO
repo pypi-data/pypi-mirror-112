@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: odoo12-addon-somenergia
+Version: 12.0.0.0.5
+Summary: Odoo Som Energia customizations
+Home-page: https://coopdevs.org
+Author: Coopdevs Treball SCCL
+License: AGPL-3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: >=3.5
+
+ 
+    Odoo Som Energia customizations.
+    
+
