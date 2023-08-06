@@ -1,0 +1,17 @@
+airflow_db_logger/__init__.py,sha256=zvhPqig0TaI4p6FzrYK-puCkQmXGdMkWMBavQyc2Qt0,2257
+airflow_db_logger/airflow_utils.py,sha256=AOSU_WiVMy-bB5fIUn2y_FctL9UtGchNlk-7DLMt42c,1554
+airflow_db_logger/config.py,sha256=hmSvH922cjX0y5rJlUf5ilsq0gO1pSoELDLoXpEjPA0,10909
+airflow_db_logger/consts.py,sha256=99eIXq-YZmGw0G7WFKsQdFRwdkP_5f3wsgyTKaCj3yQ,1228
+airflow_db_logger/data.py,sha256=9rF73IqTtyjHlsNwFqaevKAPiI7593v1hSHyzP9FwGU,2948
+airflow_db_logger/exceptions.py,sha256=X9BzFiG3czNiNfH-LShCiTprfxuVxZoiqzkX_T-UxAk,45
+airflow_db_logger/handlers.py,sha256=7za69uGUz5BD0fIzsWBUyrR8DzjYJ9GsmtRDe-l1yKo,16613
+airflow_db_logger/operators.py,sha256=EDyayztaZJRMSdPywSMAhwnOZmtyQydTb2o565IvFeM,2649
+airflow_db_logger/shell_logging_config.py,sha256=aWbh6fJIeFucBhKMXTg6NTl5P1pBXzAlSTUORGJDK5o,1589
+airflow_db_logger/utils.py,sha256=8Kg6nF4EAo2Mgp9yWprcd-D6MPa17ljvRpe1rEhsEpY,1757
+airflow_db_logger/writers/gcs.py,sha256=JuUNNGTFRB19t-RncX9Dlg6cmGMxldec9mbdoK-dpns,3807
+airflow_db_logger/writers/local.py,sha256=atBF-1b3haZ8Cb86nNdfiacmaUmt5RRgo8zoAdgMmNE,2501
+airflow_db_logger/writers/shell.py,sha256=B7HVRRPDTSHQLf70huIP8vJ8iXYJaFrdnSUIdgXPLYs,665
+airflow_db_logger-2.0.1.dist-info/METADATA,sha256=gZb7eQYTfwCLnb_L5fPXTSLy5bB14KBpjMODLuLo8o4,448
+airflow_db_logger-2.0.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+airflow_db_logger-2.0.1.dist-info/top_level.txt,sha256=iLnYfOetXdV0V_7qUdhUrrnV2ZpO67fGtI887empDE4,44
+airflow_db_logger-2.0.1.dist-info/RECORD,,
