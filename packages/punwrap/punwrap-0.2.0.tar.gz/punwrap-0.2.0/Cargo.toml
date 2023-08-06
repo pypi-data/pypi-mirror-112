@@ -1,0 +1,30 @@
+[package]
+name = "punwrap"
+version = "0.2.0"
+authors = ["Viktor Eikman <viktor.eikman@gmail.com>"]
+edition = "2018"
+description = "Python bindings for runwrap"
+readme = "README.md"
+repository = "https://github.com/veikman/punwrap"
+license = "GPL-3.0-or-later"
+keywords = ["text", "markdown", "vcs"]
+classifiers = [
+    "Development Status :: 5 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Rust",
+]
+include = ["src/", "pyproject.toml", "LICENSE", "*.md"]
+
+[lib]
+name = "punwrap"
+crate-type = ["cdylib"]
+
+[dependencies]
+runwrap = "0.2"
+
+[dependencies.pyo3]
+version = "0.13"
+features = ["extension-module"]

@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: punwrap
+Version: 0.2.0
+Summary: Python bindings for runwrap
+Keywords: text,markdown,vcs
+Author: Viktor Eikman <viktor.eikman@gmail.com>
+Author-email: Viktor Eikman <viktor.eikman@gmail.com>
+License: GPL-3.0-or-later
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+`punwrap` provides only Python bindings for
+[`runwrap`](https://github.com/veikman/runwrap), a Rust library for wrapping
+and unwrapping paragraphs of Markdown.
+
+For an example of higher-level utilities built on `punwrap`, see
+[`yamlwrap`](https://github.com/veikman/yamlwrap).
+
+## License
+
+Copyright 2021 Viktor Eikman
+
+`punwrap` is licensed as detailed in the accompanying file LICENSE.
+
