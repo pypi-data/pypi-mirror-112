@@ -1,0 +1,38 @@
+from setuptools import setup, find_packages
+import requests
+import semantic_version
+
+install_requires = [
+    'requests==2.25.1',
+]
+
+def get_cloudflare_kv_version():
+    url = "https://pypi.org/pypi/cloudlare-kv/json"
+    response = requests.request("GET", url, headers={}, data={})
+    result = response.json()
+    cloudflare_kv_version = str(result.get("info").get("version"))
+    current_version = semantic_version.Version(cloudflare_kv_version)
+    next_version = current_version.next_patch()
+    return next_version
+
+setup(
+        name="cloudlare_kv",
+        version=str(get_cloudflare_kv_version()),
+        author="Dinesh Sonachalam",
+        author_email="dineshsonachalam@gmail.com",
+        description="A simple Python wrapper to Cloudflare KV",
+        url="https://github.com/dineshsonachalam/cloudflare-kv",
+        long_description=open('README.md').read(),
+        long_description_content_type='text/markdown',
+        zip_safe=False,
+        license='MIT',
+        keywords='cloudflare KV',
+        python_requires=">=3.1",
+        install_requires=install_requires,
+        packages=find_packages(),
+        classifiers=[
+                "Programming Language :: Python :: 3",
+                "License :: OSI Approved :: MIT License",
+                "Operating System :: OS Independent",
+        ]
+)
