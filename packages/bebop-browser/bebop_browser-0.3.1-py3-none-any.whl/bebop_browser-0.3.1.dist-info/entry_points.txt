@@ -1,0 +1,3 @@
+[console_scripts]
+bebop = bebop.__main__:main
+
