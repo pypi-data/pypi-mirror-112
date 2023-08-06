@@ -1,0 +1,81 @@
+metadata:
+  title: Office of Judicial Records Document Assembly Tool
+  temporary session: true
+---
+event: on_error
+question: |
+  Sorry, we have encountered an error.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: call_number
+question: |
+  Please call (215) 686-7027 for assistance.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+mandatory: true
+code: |
+  welcome
+  if welcome == False:
+    call_number
+---
+mandatory: true
+field: welcome
+question: |
+ Document Assembly Services for the First Judicial District Office of Judicial Records, Civil Trial Division
+subquestion: |
+  Welcome to the Office of Judicial Records. This online tool is designed to provide filing assistance to people who are not represented by an attorney in certain civil matters. This tool currently provides limited assistance for the following:
+  
+  * Postoning a sheriff's sale
+  * Ejectment (removing an individual from the property)
+  * Appealing a municipal court landlord/tenant decision
+---
+mandatory: true
+field: terms
+question: |
+  Please review and acknowledge the terms of use for this online tool
+subquestion: |
+  * This tool is intended for litigants who are not represented by an attorney.
+  * This tool should not be construed as legal advice and does not replace the legal expertise an attorney can provide. Contact attorney if you need legal advice or have questions about how to proceed with your case.
+  * This tool cannot file documents on your behalf to the court. If you wish to file any documents prepared by this tool, you must file them through the Office of Judicial Records.
+  * There may be court fees to file some of the documents prepared by this online tool. Using this tool does not waive court filing fees. To find out more about court   filing fees, contact the Office of Judicial Records.
+  * This tool may not be used for any commercial purpose.
+  
+fields:
+  - I understand and agree to the terms of service: agrees_to_tos
+    datatype: yesnowide
+validation code: |
+  if not agrees_to_tos:
+    validation_error("You cannot continue until you agree to the terms of service.")
+
+---
+mandatory: true
+need: 
+  welcome
+field: account
+question: |
+   Create an account (optional)
+subquestion: |
+  Please create an account if you would like to save your information, come back later if you need more time, or change your answers. An account requires an you to have an email address. You can create an account at any time by clicking the “Sign In” button on the upper left hand of this page.
+
+  You can also use this website without signing up, but you will not be able to save your answers.
+  
+  ${ action_button_html("https://ejcrc.ecernea.com/user/register", label="Create an account", color="primary", size="md") }
+continue button label: Continue without an account
+---
+mandatory: true
+question: |
+  Select the issue that applies to you:
+subquestion: |
+  - [I have received notice that my property is being put up for sheriff sale]
+  - [I am being kicked out of my home]
+  - [I am trying to remove someone from my property]
+  - [I have already used this website and I am looking for a specific form]
+  
+  [I am being kicked out of my home]: ${ interview_url(i='docassemble.EJCRC:data/questions/LLT_or_ejectment.yml') }
+  [I have received notice that my property is being put up for sheriff sale]: ${ interview_url(i='docassemble.EJCRC:data/questions/sheriff_sale.yml') }
+  [I am trying to remove someone from my property]: ${ interview_url(i='docassemble.EJCRC:data/questions/LLT_or_ejectment_plaintiff_screen.yml') }
+

@@ -1,0 +1,55 @@
+---
+metadata:
+  title: Ejectment Action
+  temporary session: true
+---
+event: call_number
+question: |
+  Please call (215) 686-7027 for assistance.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: docket
+question: |
+  Please check the docket.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: sherriff
+question: |
+  Please call the sherriff's office
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+mandatory: true
+question: | 
+  Please select the document you need to fill out:
+subquestion: |
+  Click on the green text for definitions of the different types of forms.
+  
+  1. [Civil Complaint for an Ejectment]
+      
+  2. [Return of Service Affidavit]
+      
+  3. [Motion for Alternative Service]
+      
+  4. [Notice of Praecipe to Enter Judgment by Default]
+      
+  5. [Praecipe to Enter Default Judgment for Possession]
+      
+  6. [Petition to Open Default Judgment]
+  
+  7. [Motion for Writ of Possession]
+    
+  
+    [Civil Complaint for an Ejectment]: ${ interview_url(i='docassemble.EJCRC:data/questions/civil_complaint.yml') }
+    [Return of Service Affidavit]: ${ interview_url(i='docassemble.EJCRC:data/questions/return_service.yml') }
+    [Motion for Alternative Service]: ${ interview_url(i='docassemble.EJCRC:data/questions/alternate_service.yml') }
+    [Notice of Praecipe to Enter Judgment by Default]: ${ interview_url(i='docassemble.EJCRC:data/questions/ten_day.yml') }
+    [Praecipe to Enter Default Judgment for Possession] : ${ interview_url(i='docassemble.EJCRC:data/questions/default_judgment_praecipe') }
+    [Petition to Open Default Judgment]: ${ interview_url(i='docassemble.EJCRC:data/questions/default_judgment_petition.yml') }
+    [Motion for Writ of Possession]: ${ interview_url(i='docassemble.EJCRC:data/questions/writ_possession.yml') }
+    

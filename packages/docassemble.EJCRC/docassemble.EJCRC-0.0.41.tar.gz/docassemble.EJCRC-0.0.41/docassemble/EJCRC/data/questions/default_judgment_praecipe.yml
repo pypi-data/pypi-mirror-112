@@ -1,0 +1,207 @@
+metadata:
+  title: Praecipe for Default Judgment
+  temporary session: true
+---
+attachment:
+  variable name: dfj
+  filename: dfj
+  docx template file: Praecipe_Default_Judgment.docx
+---
+question: Thank you, ${ plaintiffname1 }!
+subquestion: |
+  Please download your ten day notice sheet below.
+  
+  YOU MUST FILE THIS NOTICE EITHER IN PERSON OR ONLINE.
+  To do so, please follow the instructuions listed here.
+attachment:
+  - name: dfj
+    filename: Precipe for Default Judgment
+    valid formats:
+      - pdf
+    content: |
+      ${ output_file } 
+buttons:
+  - Exit: exit
+mandatory: True
+---
+mandatory: true
+question: |
+  Please complete the information for each plaintiff in this case.
+subquestion: |
+  A plaintiff is a party who is suing/taking the defendant(s) to court.  
+fields:
+  - How many plaintiffs are there?: plaintiffnumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1   
+  - Plaintiff Name: plaintiffname1
+  - 2nd Plaintiff Name: plaintiffname2
+    js show if: |
+      val('plaintiffnumber') > 1
+  - 3rd Plaintiff Name: plaintiffname3
+    js show if: |
+      val('plaintiffnumber') > 2
+---
+need:
+  plaintiffname1
+question: | 
+  Please provide your contact information:
+fields:
+  - Street Address: plaintiffstreetaddress1
+  - City and State: plaintiffcity1
+    default: "Philadelphia, PA"
+  - ZIP Code: plaintiffzipcode1
+  - Phone Number: plaintiffphone1
+---
+need:
+  plaintiffstreetaddress1
+question: |
+  Please complete the information for each defendant in this case.
+subquestion: |
+  A defendant is a party (individual, company, or institution) being sued. Name all of the defendants you are trying to remove from the property to the best of your ability. If you do know the names of some of the defendants, you may enter “All Occupants” in the name section.
+fields:
+  - How many defendants are party to the case?: defendantnumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1    
+  - Defendant Full Name: defendantname1
+  - 2nd Defendant Full Name: defendantname2
+    js show if: |
+      val('defendantnumber') > 1 
+  - 3rd Defendant Full Name: defendantname3
+    js show if: |
+      val('defendantnumber') > 2
+---
+need: 
+  defendantname1
+question: | 
+  Please provide the following information:
+fields:
+  - Do you have a 9-digit serial number?: nines
+    datatype: radio
+    choices: 
+      - Yes
+      - No
+  - 9-digit case number: serial
+    required: false
+    js show if: |
+      val('nines') == 'Yes'
+---
+need:
+  nines
+question: |
+  Please provide information about your original civil complaint for ejectment.
+fields:  
+ - When did you original serve your civil complaint?: servedate
+   datatype: date
+   default: |
+    ${ today().minus(days=30) }
+ - How did you serve your complaint?: mannerofservice
+ - Have you previously provided proof of service?: proof
+   choices:
+    - Yes
+    - No
+ - Please upload proof of service: proofupload
+   datatype: files
+   js show if: |
+     val('proof') == 'No'
+ - Please provide a name for your property: premisename
+---
+need:
+  servedate
+question: |
+  Please read and sign to the below statement:
+subquestion: |
+  ### PRAECIPE TO ENTER DEFAULT JUDGMENT FOR POSSESSION
+  TO THE OFFICE OF JUDICIAL RECORDS
+   Please enter a default judgment in favor of Plaintiff(s), ${ plaintiffname1 }
+   % if plaintiffnumber == 2: 
+   , %{ plaintiffname2 }
+   % elif plaintiffnumber == 3:
+   , ${ plaintiffname2 }, ${ plaintiffname3 }
+   % endif 
+    ,and against Defendant(s), ${ defendantname1 }
+   % if defendantnumber == 2:
+   , ${ defendantname2 }
+   % elif defendantnumber == 3:
+   , ${ defendantname2 }, ${ defendantname3 }
+   % endif
+  , for failure to answer or otherwise respond to the Complaint.
+  
+  1.	The complaint was served upon Defendant(s) on ${ servedate } by ${ mannerofservice }. A copy of the Proof of Service is 
+  % if proof == 'No':
+  attached hereto. 
+  % else:
+  filed of record. 
+  % endif
+  
+  2.	A copy of the Notice pursuant to Pa.R.C.P. 237.1(2) is attached hereto. A copy of the Certification of Service of the Notice is attached hereto.
+  
+  3.	Enter Judgment for Possession of premises known as ${ premisename }.
+signature: signature1
+under: |
+  ${ plaintiffname1 }
+---
+need:
+  signature1
+question: |
+  Please provide information about service of notice of praecipe to enter default judgment for possession
+fields:  
+  - Original Notice Date: noticedate
+    datatype: date
+    default: |
+      ${ today().minus(days=10) }
+  - How will did you serve the notice: noticemanner
+---
+question: |
+  Please read and sign to the below statement:
+subquestion: |
+  ###CERTIFICATION OF SERVICE OF NOTICE OF PRAECIPE TO ENTER DEFAULT JUDGMENT FOR POSSESSION
+
+	On ${ noticedate }, the undersigned caused a copy of the Notice of Praecipe to Enter Judgment of Default to be served by ${ noticemanner } upon Defendant(s) ${ defendantname1 }
+   % if defendantnumber == 2:
+   , ${ defendantname2 }
+   % elif defendantnumber == 3:
+   , ${ defendantname2 }, ${ defendantname3 }
+   % endif
+   , for failure to answer or otherwise respond to the Complaint. 
+	
+	I verify that the facts are true and correct and understand that the statements made in this Certification have been made subject to the penalties of 18 Pa.C.S. § 4904 relating to unsworn falsification to authorities.
+signature: signature2
+under: |
+  ${ plaintiffname1 }
+---
+need:
+  signature2
+question: |
+  Please provide the primary defendant's address
+fields:   
+  - Defendant Street Address: defendantstreetaddress1
+  - Defendant City and State: defendantcity1
+    help: This should be Philadelphia, PA
+    default: Philadelphia, PA
+  - Defendant ZIP Code: defendantzipcode1
+---
+need: 
+  defendantstreetaddress1
+question: |
+  Please read and sign to the below statement:
+subquestion: |
+  ###AFFIDAVITY OF NON-MILITARY SERVICE
+
+  The above-named defendant resides at ${ defendantstreetaddress1 }, ${ defendantstreetaddress1 } ${ defendantcity1 }, ${ defendantzipcode1 }, and the defendant is not in the Military Service of the United States, nor any State or Territory thereof or its allies as defined in the Servicemembers Civil Relief Act of 2003 and the amendments thereto.
+signature: signature3
+under: |
+  ${ plaintiffname1 }
+---
+code: |
+  if proof == 'Yes':
+    output_file = dfj
+  if proof == 'No':
+    output_file = pdf_concatenate(dfj, proofupload)

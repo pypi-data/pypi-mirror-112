@@ -1,0 +1,898 @@
+metadata:
+  title: Return of Service Affidavit
+  temporary session: true
+---
+mandatory: true
+question: |
+ The Return of Service Affidavit must be filed with the court after the complaint is served to all parties in the case. Please review the following Rules of Pennsylvania Civil Procedure before certifying all parties were serve with the complaint.  
+subquestion: |
+  ### Rule 405. Return of Service.
+  (a)  When service of original process has been made the sheriff or other person making service shall make a return of service forthwith. If service has not been made and the writ has not been reissued or the complaint reinstated, a return of no service shall be made upon the expiration of the period allowed for service.
+  
+  ### Rule 400.1: Provisions for all Courts of the First Judicial District
+  
+  (a) In an action commenced in the First Judicial District, original process may be served:
+  
+  (1) within the county by the sheriff or a competent adult, or
+  
+  (2) in any other county by deputized service as provided by Rule 400(d) or by a competent adult forwarding the process to the sheriff of the county where service may be made.
+
+  *Note: See Rule 76 for the definition of “competent adult”.
+  
+  The First Judicial District is comprised of Philadelphia County (b) In an action commenced in any other county, original process may be served in Philadelphia County by deputized service as provided by Rule 400(d) or by a competent adult.*
+
+  ### Rule 76: Definition
+  
+  The following words and phrases when used in the Rules of Civil Procedure shall have the following meanings, respectively, unless the context clearly indicates otherwise or the particular word or phrase is expressly defined in the chapter in which the particular rule is included:
+   
+   “competent adult” means an individual eighteen years of age or older who is neither a party to the action nor an employee or a relative of a party
+  
+  ### Rule 402: Manner of Service. Acceptance of Service
+  
+  (a) Original process may be served
+  
+  (1) by handing a copy to the defendant; or
+  
+  (2) by handing a copy
+  
+  (i) at the residence of the defendant to an adult member of the family with whom he resides; but if no adult member of the family is found, then to an adult person in charge of such residence; or
+  
+  (ii) at the residence of the defendant to the clerk or manager of the hotel, inn, apartment house, boarding house or other place of lodging at which he resides;
+
+fields:
+  - I have reviewed the above Pennsylvania Rules of Civil procedure regarding service: agrees_to_tos
+    datatype: yesnowide
+validation code: |
+  if not agrees_to_tos:
+    validation_error("You cannot continue until you have read the rules of service.")
+---
+attachment:
+  variable name: return_service
+  filename: return_service
+  docx template file: service.docx
+---
+mandatory: true
+code: |
+ agrees_to_tos
+ if not agrees_to_tos:
+   validation_error("You cannot continue until you have read the rules of service.")
+ if agrees_to_tos:
+    nines
+    if nines == 'Yes':
+      serial
+      plaintiffnumber
+      if plaintiffnumber == 1:
+        plaintiffname1
+        defendantnumber
+        if defendantnumber == 1:
+          defendantname1
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 2:
+           defendantname1
+           defendantname2
+           defendantchoice
+           servicetype
+           if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+           if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 3:
+          defendantname1
+          defendantname2
+          defendantname3
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+      if plaintiffnumber == 2:
+        plaintiffname1
+        plaintiffname2
+        defendantnumber
+        if defendantnumber == 1:
+          defendantname1
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 2:
+          defendantname1
+          defendantname2
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 3:
+          defendantname1
+          defendantname2
+          defendantname3
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+      if plaintiffnumber == 3:
+        plaintiffname1
+        plaintiffname2
+        plaintiffname3
+        defendantnumber
+        if defendantnumber == 1:
+          defendantname1
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 2:
+          defendantname1
+          defendantname2
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 3:
+          defendantname1
+          defendantname2
+          defendantname3
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+    if nines == 'No':
+      month
+      year
+      casenumber
+      plaintiffnumber
+      if plaintiffnumber == 1:
+        plaintiffname1
+        defendantnumber
+        if defendantnumber == 1:
+          defendantname1
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 2:
+          defendantname1
+          defendantname2
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 3:
+          defendantname1
+          defendantname2
+          defendantname3
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+      if plaintiffnumber == 2:
+        plaintiffname1
+        plaintiffname2
+        defendantnumber
+        if defendantnumber == 1:
+          defendantname1
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 2:
+          defendantname1
+          defendantname2
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 3:
+          defendantname1
+          defendantname2
+          defendantname3
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+      if plaintiffnumber == 3:
+        plaintiffname1
+        plaintiffname2
+        plaintiffname3
+        defendantnumber
+        if defendantnumber == 1:
+          defendantname1
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 2:
+          defendantname1
+          defendantname2
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 3:
+          defendantname1
+          defendantname2
+          defendantname3
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+    if nines == 'I do not know':
+      plaintiffnumber
+      if plaintiffnumber == 1:
+        plaintiffname1
+        defendantnumber
+        if defendantnumber == 1:
+          defendantname1
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 2:
+          defendantname1
+          defendantname2
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 3:
+          defendantname1
+          defendantname2
+          defendantname3
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+      if plaintiffnumber == 2:
+        plaintiffname1
+        plaintiffname2
+        defendantnumber
+        if defendantnumber == 1:
+          defendantname1
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 2:
+          defendantname1
+          defendantname2
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 3:
+          defendantname1
+          defendantname2
+          defendantname3
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+      if plaintiffnumber == 3:
+        plaintiffname1
+        plaintiffname2
+        plaintiffname3
+        defendantnumber
+        if defendantnumber == 1:
+          defendantname1
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 2:
+          defendantname1
+          defendantname2
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+        if defendantnumber == 3:
+          defendantname1
+          defendantname2
+          defendantname3
+          defendantchoice
+          servicetype
+          if servicetype == 'Defendant':
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+          if servicetype == 'adult':
+            adultname
+            streetaddress
+            time
+            day1
+            month1
+            year1
+            date
+            signature1
+---
+question: | 
+  Please provide the Case ID number for this case
+subquestion: |
+  After the complaint is submitted to the filing office and accepted, you should have received a copy of the complaint with the Case ID number at the bottom right corner of the complaint.  
+  
+   If you cannot locate the Case ID number, you may either contact the civil filing office or find the number by searching for your case on the [FJD Civil Docket.](https://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_disclaimer)
+
+fields:
+  - Do you have a 9-digit serial number?: nines
+    datatype: radio
+    choices: 
+      - Yes
+      - No
+      - I do not know
+  - Month: month
+    required: false
+    help: Please provide the month in 2 digits, e.g. January = 01, February = 02
+    js show if: |
+      val('nines') == 'No'
+  - The last two digits of the year: year
+    help: E.g., 2021 = 21
+    required: false
+    js show if: |
+      val('nines') == 'No'
+  - Case Number: casenumber
+    help: Do not provide this number if you do not have it.
+    required: false
+    js show if: |
+     val('nines') == 'No'
+  - 9-digit serial number: serial
+    required: false
+    js show if: |
+      val('nines') == 'Yes'
+---
+question: |
+  Please complete the information for each plaintiff in this case.
+subquestion: |
+  A plaintiff is a party who is suing/taking the defendant(s) to court.  
+  
+fields:
+  - How many plaintiffs are there?: plaintiffnumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1   
+  - Plaintiff Name: plaintiffname1
+  - 2nd Plaintiff Name: plaintiffname2
+    js show if: |
+      val('plaintiffnumber') > 1
+  - 3rd Plaintiff Name: plaintiffname3
+    js show if: |
+      val('plaintiffnumber') > 2
+---
+question: |
+  Please complete the information for each defendant in this case.
+subquestion: |
+  A defendant is the party (individual, company, or institution) who is being sued. Name all of the defendants you are trying to remove from the property to the best of your ability. If you do know the names of some of the defendants, you may enter “All Occupants” in the name section.
+fields:
+  - How many defendants are there?: defendantnumber
+    datatype: integer
+    choices:
+      - 1
+      - 2
+      - 3
+    default: 1   
+  - Defendant Name: defendantname1
+  - 2nd Defendant Name: defendantname2
+    js show if: |
+      val('defendantnumber') > 1
+  - 3rd Defendant Name: defendantname3
+    js show if: |
+      val('defendantnumber') > 2
+  - Which defendant did you serve?: defendantchoice
+---
+question: |
+  How did you serve your complaint?
+fields:
+  - Choose your method: servicetype
+    choices:
+    - I served it to the defendant directly: Defendant
+    - I served it to an adult in charge of the defendant's residence: adult 
+---
+question: |
+  What month, day, and year did you serve your complaint?
+fields:
+  - Month: month1
+    choices:
+      - January
+      - February
+      - March
+      - April
+      - May
+      - June
+      - July
+      - August
+      - September
+      - October
+      - November
+      - December
+  - Date: day1
+    choices:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+  - Year: year1
+    default: |
+      ${ today().year }
+  
+---
+question: |
+  What time did you serve your complaint?
+fields:
+  - Time: time
+    datatype: time
+---
+question: |
+  At what street address did you serve your complaint?
+subquestion: |
+  This only needs to include the street number, street name, and apartment/suite/floor (if applicable)
+fields:
+  - Street Address: streetaddress
+---
+question: |
+  What was the name of the adult in charge of the defendant's residence you served the complaint to?
+fields:
+  - Adult name: adultname
+---
+question: |
+  Confirm today's date
+fields:
+  - Today's date: date
+    default: |
+      ${ today() }
+---
+mandatory: true
+need:
+  time
+question: |
+  Review the following text and sign below:
+subquestion: |
+  I, ${ plaintiffname1 } , hereby certify that I served a true and correct copy of the Complaint / Notice of Appeal / Rule on ${ defendantchoice } 
+  % if servicetype == 'Defendant':
+  By handing a copy to the Defendant / Appellee, ${ defendantchoice }, on the ${ day1 } day of ${ month1 } , ${ year1 },  at ${ time } AM/PM, at ${ streetaddress }, Philadelphia, PA.
+  % elif servicetype == 'adult':
+  By handing a copy to ${ adultname }, an adult member of the family/adult person in charge of Defendant’s / Appellee’s residence, on the ${ day1 } day of ${ month1 } , ${ year1 }, at ${ time }, at ${ streetaddress }, Philadelphia, PA.
+  % endif 
+  
+  I verify that the statements in this Return of Service are true and correct. I further verify that I am an adult over the age of 18 and not related to any party in this action. I understand that this unsworn document contains statements that are made subject to the penalties of 18 P.C.S. §4904 relating to unsworn falsification to authorities.
+signature: signature1
+under: |
+  ${ plaintiffname1 }
+---
+question: Thank you, ${ plaintiffname1 }!
+subquestion: |
+  Please download your Return of Service Affidavit below.
+  
+  YOU MUST FILE THIS AFFIDAVIT EITHER IN PERSON OR ONLINE.
+  To do so, please follow the instructions listed here.
+attachment:
+  - name: return_service1
+    filename: return_service1
+    docx template file: service.docx
+    valid formats:
+      - pdf
+buttons:
+  - Exit: exit
+mandatory: True
