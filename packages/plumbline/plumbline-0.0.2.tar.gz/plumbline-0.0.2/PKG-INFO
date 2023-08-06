@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: plumbline
+Version: 0.0.2
+Summary: Python for comparing EPT and DEM data
+Home-page: https://github.com/hobu/plumbline
+Author: Howard Butler
+Author-email: howard@hobu.co
+License: UNKNOWN
+Description: # Plumbline
+        
+        A unix filter script for whether or not a point cloud data source matches a known
+        benchmark DEM.
+        
+        
+        ## Example
+        
+        ```
+        plumbline /vsicurl/https://hobu-lidar.s3.amazonaws.com/nasadem.vrt  \
+            https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_MI_31Co_Jackson_2016_LAS_2019/ept.json \
+            --sample_count 3 --plot jackson.pdf
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
