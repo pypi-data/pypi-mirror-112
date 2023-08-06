@@ -1,0 +1,14 @@
+xicsrt_contrib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xicsrt_contrib/_version.py,sha256=jmBoHda6Apjcd3NPzTzaO4ofOZBSTBZCpRYmVMxvWpk,268
+xicsrt_contrib/filters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xicsrt_contrib/optics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xicsrt_contrib/sources/_XicsrtPlasmaImas.py,sha256=47AYOmsdunqzmOf9J2uo_KiY1XbSLwQbMq3cfTjKPmc,16021
+xicsrt_contrib/sources/_XicsrtPlasmaVmec.py,sha256=6HRUuwSGyIyR6YHOYBjaZpVzirJr_Xup2TuPRmwhY4g,3013
+xicsrt_contrib/sources/_XicsrtPlasmaVmecDatafile.py,sha256=M5quFQSvUYK6QxEWZOSKe60CKk2zP92KF4m0kugjvZc,1781
+xicsrt_contrib/sources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xicsrt_contrib-0.6.0.dist-info/AUTHORS,sha256=Puv-CZ8eel9MwqZCjxgWyz31x1K4c63GbuMKRFsis9E,97
+xicsrt_contrib-0.6.0.dist-info/LICENSE,sha256=sLf3QD5CGgaivrEu9JXVxp8QFwZMl-D5sel7DHqKKjg,1111
+xicsrt_contrib-0.6.0.dist-info/METADATA,sha256=tB7v-7NfT3t_6ARAPdrKy4hwTqHMvT0jB_nwa_ythsw,1846
+xicsrt_contrib-0.6.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+xicsrt_contrib-0.6.0.dist-info/top_level.txt,sha256=0o-QaA4eUZKmQaLA8OUtEcA_YWyZTdabWzIGLumQEDU,15
+xicsrt_contrib-0.6.0.dist-info/RECORD,,
