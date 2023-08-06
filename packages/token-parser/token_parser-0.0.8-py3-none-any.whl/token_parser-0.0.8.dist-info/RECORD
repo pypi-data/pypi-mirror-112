@@ -1,0 +1,16 @@
+token_parser/__init__.py,sha256=z1y7lOcirgWFrOOzS8Yd-7w1RUdQKWPT5iyZIJo6JqM,59
+token_parser/parsers.py,sha256=4M9Vm4WuPMcObzzQv6lfODVUr3txQpCvOudbuN7VtHw,6724
+token_parser/utils.py,sha256=moyjrlosJCuGPxQQYdPpXwT45s-QFgLyK5dU7xUFQ94,134
+token_parser/examples/__init__.py,sha256=lVL4VPz3c4kWCgjPtL4uuQLNmgwK92q1ffAsv5El02k,25
+token_parser/examples/date_add.py,sha256=MwZNVYWSr3UMXtsjh0y9-j3dUcn95eqs2c_27FhvYNw,1821
+token_parser/examples/guid.py,sha256=0P8jmk-mPsz28fLF3UsVQcI5HHgBOEPL5OMO06yCDTQ,485
+token_parser/examples/inc_and_dec.py,sha256=wYkLk2dRKLIGFbagI27Itu2ZY81gCV1ZIatx4Ij1e1Q,1086
+token_parser/examples/int_and_float.py,sha256=MvwnNcQjwclGGK0Uu-OOYEOLNJezn--Yy0_lzR8EHL4,660
+token_parser/examples/now_and_utcnow.py,sha256=yEd5uG03m3ydOEWEYd88Amn4ovL8gYUOoIRGnl6EtIY,852
+token_parser/examples/parse_json_template.py,sha256=2kzopw67SrYQkgy-PMw6ZGX1euK-EWkVpJbnqDPkuYE,1182
+token_parser/tests/__init__.py,sha256=lVL4VPz3c4kWCgjPtL4uuQLNmgwK92q1ffAsv5El02k,25
+token_parser/tests/parsers_tests.py,sha256=-XexIYr9Zt0TcBkLI5hPes1xjW866ZZllPva5iKZOG4,12346
+token_parser-0.0.8.dist-info/METADATA,sha256=WYdb20BOUQJ2H5egVk-lZlaJq1X5mTaXqnP2qc_pboM,6626
+token_parser-0.0.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+token_parser-0.0.8.dist-info/top_level.txt,sha256=ZavjGGlEeUCZwjZ0ul-0B5a4NVoZ-2p7xx_VhNV_NXg,13
+token_parser-0.0.8.dist-info/RECORD,,
