@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/CosmosHashLib/__init__.py
+src/CosmosHashLib/hashing.py
+src/CosmosHashLib.egg-info/PKG-INFO
+src/CosmosHashLib.egg-info/SOURCES.txt
+src/CosmosHashLib.egg-info/dependency_links.txt
+src/CosmosHashLib.egg-info/top_level.txt
