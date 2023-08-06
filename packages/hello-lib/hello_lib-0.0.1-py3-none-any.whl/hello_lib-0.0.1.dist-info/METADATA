@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: hello-lib
+Version: 0.0.1
+Summary: A lib to do the initial testing.
+Home-page: https://github.com/
+Author: Nancykhullar
+Author-email: nancy.khullar97@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (==1.1.4)
+Requires-Dist: firebase-admin (==4.4.0)
+Requires-Dist: pyarrow (==2.0.0)
+
+basic hello package
+
+
