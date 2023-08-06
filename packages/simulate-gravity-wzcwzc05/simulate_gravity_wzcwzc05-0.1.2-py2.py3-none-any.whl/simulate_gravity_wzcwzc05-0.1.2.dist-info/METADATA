@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: simulate-gravity-wzcwzc05
+Version: 0.1.2
+Summary: 模拟宇宙
+Home-page: https://github.com/wzcwzc05/simulate-gravity
+Author: wzcwzc05
+Author-email: wzcwzc0@outlook.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: easygui
+Requires-Dist: pygame
+Requires-Dist: matplotlib
+
+UNKNOWN
+
