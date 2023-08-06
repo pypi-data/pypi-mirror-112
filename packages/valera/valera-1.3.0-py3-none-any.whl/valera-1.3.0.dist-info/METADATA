@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: valera
+Version: 1.3.0
+Summary: Validator for district42 schema
+Home-page: https://github.com/nikitanovosibirsk/valera
+Author: Nikita Tsvetkov
+Author-email: nikitanovosibirsk@yandex.com
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: niltype (<1.0,>=0.3)
+Requires-Dist: th (<1.0,>=0.2)
+Requires-Dist: district42 (<1.4,>=1.3)
+
+# valera
+
+[![Codecov](https://img.shields.io/codecov/c/github/nikitanovosibirsk/valera/master.svg?style=flat-square)](https://codecov.io/gh/nikitanovosibirsk/valera)
+[![PyPI](https://img.shields.io/pypi/v/valera.svg?style=flat-square)](https://pypi.python.org/pypi/valera/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/valera?style=flat-square)](https://pypi.python.org/pypi/valera/)
+[![Python Version](https://img.shields.io/pypi/pyversions/valera.svg?style=flat-square)](https://pypi.python.org/pypi/valera/)
+
+(!) Work in progress, breaking changes are possible until v2.0 is released
+
+## Installation
+
+```sh
+pip3 install valera
+```
+
+
