@@ -1,0 +1,12 @@
+requests>=2.25.1
+py7zr>=0.16.1
+multivolumefile>=0.2.3
+
+[dev]
+black>=21.6b0
+flake8>=3.9.2
+mypy>=0.910
+types-requests>=2.25.0
+
+[test]
+pytest>=6.2.4
