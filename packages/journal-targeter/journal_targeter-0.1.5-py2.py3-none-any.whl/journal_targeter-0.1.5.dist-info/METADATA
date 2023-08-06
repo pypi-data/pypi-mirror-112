@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: journal-targeter
+Version: 0.1.5
+Summary: Journal matching, using title, abstract & references.
+Home-page: https://github.com/Townsend-Lab-Yale/journal_targeter
+Author: Stephen Gaffney
+Author-email: stephen.gaffney@yale.edu
+License: GPL-3.0-or-later
+Project-URL: Web-app, https://jot.publichealth.yale.edu
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+License-File: LICENSE.txt
+License-File: AUTHORS.md
+Requires-Dist: Flask
+Requires-Dist: Bootstrap-Flask
+Requires-Dist: Flask-Markdown
+Requires-Dist: Flask-Session
+Requires-Dist: Flask-WTF
+Requires-Dist: PyYAML
+Requires-Dist: RISparser
+Requires-Dist: beautifulsoup4
+Requires-Dist: bokeh
+Requires-Dist: html5lib
+Requires-Dist: iso4
+Requires-Dist: lxml
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: xlrd
+Requires-Dist: xmltodict
+Requires-Dist: zeep
+Requires-Dist: appdirs
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+Provides-Extra: testing
+Requires-Dist: setuptools ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: pytest-check ; extra == 'testing'
+Requires-Dist: sphinx ; extra == 'testing'
+
+# Jot: Journal Targeter
+
+A web app for journal suitability metrics, based on manuscript title, abstract 
+and references.
+
+
