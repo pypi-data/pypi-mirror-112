@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+websocket_server/__init__.py
+websocket_server/websocket_server.py
+websocket_server.egg-info/PKG-INFO
+websocket_server.egg-info/SOURCES.txt
+websocket_server.egg-info/dependency_links.txt
+websocket_server.egg-info/top_level.txt
