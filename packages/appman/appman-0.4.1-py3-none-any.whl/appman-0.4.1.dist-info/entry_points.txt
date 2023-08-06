@@ -1,0 +1,3 @@
+[console_scripts]
+appman=appman.cli:main
+

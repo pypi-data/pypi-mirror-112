@@ -1,0 +1,15 @@
+appman/__init__.py,sha256=yaECg2zZ8Qi8MHJBllyLTAiIuO2S2VI_q8T1XNMW_UY,59
+appman/buckets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appman/cli.py,sha256=n7agQNUvbthJ64N4ytUB8Bichzf6s0vE6DkXwWzrJp8,13478
+appman/config.py,sha256=vQfec9oA6SCy4jirNDHwJIICthW1dad44k_jAhpmHRM,1114
+appman/core.py,sha256=30c-M_3yokPzQvYWmn_sIu1ZpV6MYRYHRFxs69PD97w,13123
+appman/log.py,sha256=BQHqD1PTOH8oRrstIohjQSKtuog-QUIlfyR5vJgLOIw,2331
+appman/logs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appman/user/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appman/user/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appman/util.py,sha256=FHcX8nrS9sM0Zdtvna1p_zxZYJ4jLoqwFkv6SV5ArXg,1373
+appman-0.4.1.dist-info/entry_points.txt,sha256=pCsItYFq-zJLXxRgHfTbRD-Kfng-9SOM-HMGK9fXFZ0,42
+appman-0.4.1.dist-info/LICENSE,sha256=JPPK6FDI6Zq7YLO-EshT7kibJCzaPYP49aEnj-352wk,1071
+appman-0.4.1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+appman-0.4.1.dist-info/METADATA,sha256=KQu36PA1b2x7lirdrOuwopmUOAHPi1v3QKWFBG1MOhA,5081
+appman-0.4.1.dist-info/RECORD,,
