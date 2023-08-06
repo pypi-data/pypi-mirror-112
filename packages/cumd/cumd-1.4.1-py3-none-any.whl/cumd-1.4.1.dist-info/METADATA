@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: cumd
+Version: 1.4.1
+Summary: Church Slavonic extensions to Markdown
+Home-page: https://github.com/slavonic/cumd/
+Author: Mike Kroutikov
+Author-email: pgmmpk@gmail.com
+License: MIT
+Keywords: church slavonic,markdown
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Religion
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: markdown (==3.2.1)
+Requires-Dist: lxml
+Requires-Dist: lxmlx
+
+UNKNOWN
+
+

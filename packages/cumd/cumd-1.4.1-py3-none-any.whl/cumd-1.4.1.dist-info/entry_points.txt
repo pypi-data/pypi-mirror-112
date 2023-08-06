@@ -1,0 +1,4 @@
+[console_scripts]
+cumd = cumd.cumd:main
+cuxml = cumd.cuxml:main
+
