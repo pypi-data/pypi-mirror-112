@@ -1,0 +1,17 @@
+README.rst
+setup.py
+arrapi/__init__.py
+arrapi/api.py
+arrapi/exceptions.py
+arrapi/lidarr.py
+arrapi/objs.py
+arrapi/radarr.py
+arrapi/readarr.py
+arrapi/sonarr.py
+arrapi/util.py
+arrapi.egg-info/PKG-INFO
+arrapi.egg-info/SOURCES.txt
+arrapi.egg-info/dependency_links.txt
+arrapi.egg-info/not-zip-safe
+arrapi.egg-info/requires.txt
+arrapi.egg-info/top_level.txt
