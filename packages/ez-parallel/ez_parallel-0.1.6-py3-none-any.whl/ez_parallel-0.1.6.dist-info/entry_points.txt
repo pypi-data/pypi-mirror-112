@@ -1,0 +1,3 @@
+[console_scripts]
+ez-parallel=ez_parallel.__main__:app
+
