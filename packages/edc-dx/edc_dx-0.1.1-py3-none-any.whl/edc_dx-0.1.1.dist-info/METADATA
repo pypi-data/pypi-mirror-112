@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: edc-dx
+Version: 0.1.1
+Summary: Classes to manage review of HIV, DM and HTN diagnoses
+Home-page: https://github.com/clinicedc/edc-dx-review
+Author: Erik van Widenfelt
+Author-email: ew2789@gmail.com
+License: GPL license, see LICENSE
+Keywords: django edc glucose ifg ogtt
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+
+|pypi| |actions| |codecov| |downloads|
+
+edc clinic review
+-----------------
+
+Classes to manage review of HIV, DM and HTN diagnoses
+
+
+.. |pypi| image:: https://img.shields.io/pypi/v/edc-clinic-review.svg
+    :target: https://pypi.python.org/pypi/edc-clinic-review
+
+.. |actions| image:: https://github.com/clinicedc/edc-clinic-review/workflows/build/badge.svg?branch=develop
+  :target: https://github.com/clinicedc/edc-clinic-review/actions?query=workflow:build
+
+.. |codecov| image:: https://codecov.io/gh/clinicedc/edc-clinic-review/branch/develop/graph/badge.svg
+  :target: https://codecov.io/gh/clinicedc/edc-clinic-review
+
+.. |downloads| image:: https://pepy.tech/badge/edc-clinic-review
+   :target: https://pepy.tech/project/edc-clinic-review
+
+
