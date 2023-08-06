@@ -1,0 +1,4 @@
+numpy>=1.17
+paramiko>=2.7.2
+pathos>=0.2.7
+tabulate>=0.8.7
