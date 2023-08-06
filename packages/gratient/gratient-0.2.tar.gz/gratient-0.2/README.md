@@ -1,0 +1,44 @@
+> # GRATIENT
+```
+# Module made by @venaxyt on Github
+import gratient
+
+text = """
+    `7MMF'   `7MF'` 7MM"'"YMM   `7MN.   `7MF'      ma       `YMM'   `MP' 
+      `MA     ,V     MM    `7     MMN.    M       ;MM:        VMb.  ,P   
+       VM:   ,V      MM   d       M YMb   M      ,V^MM.        `MM.M'    
+        MM.  M'      MMmmMM       M  `MN. M     ,M  `MM          MMb     
+        `MM A'       MM   Y  ,    M   `MM.M     AbmmmqMA       ,M'`Mb.   
+         :MM;        MM     ,M    M     YMM    A'     VML     ,P   `MM.  
+          VF       .JMMmmmmMMM  .JML.    YM  .AMA.   .AMMA. .MM:.  .:MMa.
+
+ [!] Please subscribe to my Github profile @venaxyt for more modules like this one.
+"""
+```
+```
+# Print a gratient text :
+gratient_text = gratient.black(text)
+print(gratient_text)
+```
+![](https://raw.githubusercontent.com/venaxyt/gratient/main/images/black.PNG)
+
+```
+gratient_text = gratient.purple(text)
+print(gratient_text)
+```
+![](https://raw.githubusercontent.com/venaxyt/gratient/main/images/purple.PNG)
+```
+gratient_text = gratient.blue(text)
+print(gratient_text)
+```
+![](https://raw.githubusercontent.com/venaxyt/gratient/main/images/blue.PNG)
+```
+gratient_text = gratient.red(text)
+print(gratient_text)
+```
+![](https://raw.githubusercontent.com/venaxyt/gratient/main/images/red.PNG)
+```
+gratient_text = gratient.yellow(text)
+print(gratient_text)
+```
+![](https://raw.githubusercontent.com/venaxyt/gratient/main/images/yellow.PNG)
