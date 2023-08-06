@@ -1,0 +1,6 @@
+[console_scripts]
+dbnd-set-up-scheduled = dbnd_airflow.plugins.setup_plugins:setup_scheduled_dags
+
+[dbnd]
+dbnd-airflow = dbnd_airflow._plugin
+
