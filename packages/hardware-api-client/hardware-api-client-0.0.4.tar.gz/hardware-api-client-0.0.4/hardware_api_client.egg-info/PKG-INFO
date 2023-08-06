@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: hardware-api-client
+Version: 0.0.4
+Summary: Python interface for testing against Hardware-API.com attached systems
+Home-page: https://hardware-api.com/
+Author: Andre Renaud
+Author-email: arenaud@designa-electronics.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
