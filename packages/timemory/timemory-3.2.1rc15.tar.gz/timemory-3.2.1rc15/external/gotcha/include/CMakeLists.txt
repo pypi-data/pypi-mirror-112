@@ -1,0 +1,4 @@
+
+if(GOTCHA_INSTALL_HEADERS)
+    install(DIRECTORY gotcha DESTINATION include FILES_MATCHING PATTERN *.h)
+endif()
