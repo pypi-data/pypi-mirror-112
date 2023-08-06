@@ -1,0 +1,192 @@
+Metadata-Version: 2.1
+Name: kps-api
+Version: 1.3.5
+Summary: Nutanix Karbon Platform Services
+Home-page: UNKNOWN
+Author-email: karbon-platform-services-api@nutanix.com
+License: UNKNOWN
+Description: # KPS API
+        
+        Documentation for Nutanix Karbon Platform Services python sdk.
+        
+        ## Requirements.
+        
+        Python 3.4+
+        
+        ## Installation & Usage
+        
+        The python package is hosted on PyPi
+        
+        ```sh
+        pip install kps-api
+        ```
+        (you may need to run `pip` with root permission: `sudo pip install kps-api`)
+        
+        Then import the package:
+        ```python
+        import kps_api 
+        ```
+        
+        ## Getting Started
+        
+        
+        ```python
+        from __future__ import print_function
+        import time
+        import kps_api
+        from kps_api.rest import ApiException
+        from pprint import pprint
+        
+        # Configure API key authorization: BearerToken
+        configuration = kps_api.Configuration()
+        configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+        # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+        # configuration.api_key_prefix['Authorization'] = 'Bearer'
+        
+        # create an instance of the API class
+        api_instance = kps_api.ApplicationApi(kps_api.ApiClient(configuration))
+        body = kps_api.ApplicationV2() # ApplicationV2 | Describes the application creation request.
+        authorization = 'authorization_example' # str | Format: Bearer <token>, with <token> from login API response.
+        
+        try:
+            # Create an application.
+            api_response = api_instance.application_create_v2(body, authorization)
+            pprint(api_response)
+        except ApiException as e:
+            print("Exception when calling ApplicationApi->application_create_v2: %s\n" % e)
+        
+        # Configure API key authorization: BearerToken
+        configuration = kps_api.Configuration()
+        configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+        # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+        # configuration.api_key_prefix['Authorization'] = 'Bearer'
+        
+        # create an instance of the API class
+        api_instance = kps_api.ApplicationApi(kps_api.ApiClient(configuration))
+        authorization = 'authorization_example' # str | Format: Bearer <token>, with <token> from login API response.
+        id = 'id_example' # str | ID of the entity
+        
+        try:
+            # Delete application specified by the application ID.
+            api_response = api_instance.application_delete_v2(authorization, id)
+            pprint(api_response)
+        except ApiException as e:
+            print("Exception when calling ApplicationApi->application_delete_v2: %s\n" % e)
+        
+        # Configure API key authorization: BearerToken
+        configuration = kps_api.Configuration()
+        configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+        # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+        # configuration.api_key_prefix['Authorization'] = 'Bearer'
+        
+        # create an instance of the API class
+        api_instance = kps_api.ApplicationApi(kps_api.ApiClient(configuration))
+        authorization = 'authorization_example' # str | Format: Bearer <token>, with <token> from login API response.
+        id = 'id_example' # str | ID of the entity
+        
+        try:
+            # Get application by application ID.
+            api_response = api_instance.application_get_v2(authorization, id)
+            pprint(api_response)
+        except ApiException as e:
+            print("Exception when calling ApplicationApi->application_get_v2: %s\n" % e)
+        
+        # Configure API key authorization: BearerToken
+        configuration = kps_api.Configuration()
+        configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+        # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+        # configuration.api_key_prefix['Authorization'] = 'Bearer'
+        
+        # create an instance of the API class
+        api_instance = kps_api.ApplicationApi(kps_api.ApiClient(configuration))
+        authorization = 'authorization_example' # str | Format: Bearer <token>, with <token> from login API response.
+        page_index = 789 # int | 0-based index of the page to fetch results. (optional)
+        page_size = 789 # int | Item count of each page. (optional)
+        order_by = ['order_by_example'] # list[str] | Specify result order. Zero or more entries with format: &ltkey> [desc] where orderByKeys lists allowed keys in each response. (optional)
+        filter = 'filter_example' # str | Specify result filter. Format is similar to a SQL WHERE clause. For example, to filter object by name with prefix foo, use: name LIKE 'foo%'. Supported filter keys are the same as order by keys. (optional)
+        
+        try:
+            # Get all applications.
+            api_response = api_instance.application_list_v2(authorization, page_index=page_index, page_size=page_size, order_by=order_by, filter=filter)
+            pprint(api_response)
+        except ApiException as e:
+            print("Exception when calling ApplicationApi->application_list_v2: %s\n" % e)
+        
+        # Configure API key authorization: BearerToken
+        configuration = kps_api.Configuration()
+        configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+        # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+        # configuration.api_key_prefix['Authorization'] = 'Bearer'
+        
+        # create an instance of the API class
+        api_instance = kps_api.ApplicationApi(kps_api.ApiClient(configuration))
+        body = kps_api.ApplicationV2() # ApplicationV2 | 
+        authorization = 'authorization_example' # str | Format: Bearer <token>, with <token> from login API response.
+        id = 'id_example' # str | ID of the entity
+        
+        try:
+            # Update a specific application with ID {id}.
+            api_response = api_instance.application_update_v3(body, authorization, id)
+            pprint(api_response)
+        except ApiException as e:
+            print("Exception when calling ApplicationApi->application_update_v3: %s\n" % e)
+        
+        # Configure API key authorization: BearerToken
+        configuration = kps_api.Configuration()
+        configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+        # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+        # configuration.api_key_prefix['Authorization'] = 'Bearer'
+        
+        # create an instance of the API class
+        api_instance = kps_api.ApplicationApi(kps_api.ApiClient(configuration))
+        authorization = 'authorization_example' # str | Format: Bearer <token>, with <token> from login API response.
+        id = 'id_example' # str | ID of the entity
+        edge_id = 'edge_id_example' # str | ID for the edge
+        
+        try:
+            # Get containers of an application specified by Application ID running on a specific edge.
+            api_response = api_instance.get_application_containers(authorization, id, edge_id)
+            pprint(api_response)
+        except ApiException as e:
+            print("Exception when calling ApplicationApi->get_application_containers: %s\n" % e)
+        
+        # Configure API key authorization: BearerToken
+        configuration = kps_api.Configuration()
+        configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+        # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+        # configuration.api_key_prefix['Authorization'] = 'Bearer'
+        
+        # create an instance of the API class
+        api_instance = kps_api.ApplicationApi(kps_api.ApiClient(configuration))
+        authorization = 'authorization_example' # str | Format: Bearer <token>, with <token> from login API response.
+        project_id = 'project_id_example' # str | ID for the project
+        page_index = 789 # int | 0-based index of the page to fetch results. (optional)
+        page_size = 789 # int | Item count of each page. (optional)
+        order_by = ['order_by_example'] # list[str] | Specify result order. Zero or more entries with format: &ltkey> [desc] where orderByKeys lists allowed keys in each response. (optional)
+        filter = 'filter_example' # str | Specify result filter. Format is similar to a SQL WHERE clause. For example, to filter object by name with prefix foo, use: name LIKE 'foo%'. Supported filter keys are the same as order by keys. (optional)
+        
+        try:
+            # Get all applications in a project according to project ID.
+            api_response = api_instance.project_get_applications_v2(authorization, project_id, page_index=page_index, page_size=page_size, order_by=order_by, filter=filter)
+            pprint(api_response)
+        except ApiException as e:
+            print("Exception when calling ApplicationApi->project_get_applications_v2: %s\n" % e)
+        ```
+        
+        ## Documentation for API Endpoints
+        
+        The documentation for the Nutanix Karbon Platform Services API endpoints can be found on [Nutanix.dev](https://www.nutanix.dev/reference/karbon-platform-services/)
+        
+        ## BearerToken
+        
+        - **Type**: API key
+        - **API key parameter name**: Authorization
+        - **Location**: HTTP header
+        
+        ## Author
+        
+        karbon-platform-services-api@nutanix.com
+        
+Keywords: Swagger,Karbon Platform Services API reference.
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
