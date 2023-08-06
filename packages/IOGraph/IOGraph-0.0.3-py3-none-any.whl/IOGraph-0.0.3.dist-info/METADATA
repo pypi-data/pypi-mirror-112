@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: IOGraph
+Version: 0.0.3
+Summary: Generate Plotly Graphs from IOZone Data
+Home-page: http://pypi.python.org/Makr91/IOGraph/
+Author: Mark Gilbert
+Author-email: support@philotic.cloud
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools
+Requires-Dist: pandas (>=0.22.0)
+Requires-Dist: numpy (>=1.16.0)
+
+# IOGraph
+
+This is to Graph IOZone Data without Excel.
+
+
