@@ -1,0 +1,9 @@
+extends base.jade
+block content
+	posts = get_data(type='post', status='public', limit=300)
+	ul#archive: for post in posts: li
+		span= post.date('%Y-%m-%d')
+		h2: a(href=post.url)= post.title
+
+	+h.paginator(pre_label='Pre', next_label='Next')
+

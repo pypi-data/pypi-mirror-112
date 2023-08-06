@@ -1,0 +1,10 @@
+[console_scripts]
+build_farbox_bucket = farbox_bucket.deploy.build.build_image:build_farbox_bucket_image_from_console
+deploy_farbox_bucket = farbox_bucket.deploy.deploy:deploy_from_console
+farbox_bucket = farbox_bucket.console:main
+farbox_bucket_restart_cache = farbox_bucket.deploy.deploy:restart_farbox_bucket_cache
+farbox_bucket_restart_web = farbox_bucket.deploy.deploy:update_farbox_bucket_web
+farbox_bucket_update_web = farbox_bucket.deploy.deploy:update_farbox_bucket_web
+farbox_bucket_upgrade = farbox_bucket.deploy.deploy:upgrade_farbox_bucket
+update_deploy_farbox_bucket = farbox_bucket.deploy.deploy:update_deploy_farbox_bucket
+

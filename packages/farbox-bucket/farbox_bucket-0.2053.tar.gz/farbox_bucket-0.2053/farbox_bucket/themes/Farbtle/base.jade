@@ -1,0 +1,27 @@
+html
+	head
+		+h.headers
+		title= post.title or site.title
+		+h.load('markdown')
+		+h.load('/template/style.scss')
+	body
+		#sidebar
+			#avatar
+				a(href='/'): .border: .img_container
+					img(src=site.site_avatar, alt=site.title)
+			.title
+				a(href='/')= site.title
+			+site.just_nav
+
+		#main
+			#banner
+				block banner
+					span.date= site.now.format('%b,%d %Y')
+					span.sub_info today
+			block content
+			#footer
+				| &copy; {{ site.now.format('%Y') }} {{ site.title }}
+				| | Origin by <a href="http://sync.sh" target="_blank">YCF</a>
+				| | Inspired by <a href="https://svbtle.com/" target="_blank">Svbtle</a>
+				| | Powered by <a href="https://www.farbox.org" target="_blank">FarBox</a>
+
