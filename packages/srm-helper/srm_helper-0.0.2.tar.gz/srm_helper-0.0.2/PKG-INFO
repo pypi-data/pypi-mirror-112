@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: srm_helper
+Version: 0.0.2
+Summary: Metabolomics software for automated generated of SRMs from HRMS MS/MS data
+Home-page: https://github.com/e-stan/HRMS_2_QQQ
+Author: Ethan Stancliffe
+Author-email: estancl1234@gmail.com
+License: MIT
+Download-URL: https://github.com/e-stan/HRMS_2_QQQ/archive/v0.0.2.tar.gz
+Description: UNKNOWN
+Keywords: Metabolomics,SRM,MS/MS,QqQ
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
