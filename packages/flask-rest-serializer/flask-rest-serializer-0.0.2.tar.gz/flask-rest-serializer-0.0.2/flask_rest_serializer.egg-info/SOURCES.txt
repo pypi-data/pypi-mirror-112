@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+flask_rest_serializer/__init__.py
+flask_rest_serializer/serializer.py
+flask_rest_serializer/swagger.py
+flask_rest_serializer.egg-info/PKG-INFO
+flask_rest_serializer.egg-info/SOURCES.txt
+flask_rest_serializer.egg-info/dependency_links.txt
+flask_rest_serializer.egg-info/requires.txt
+flask_rest_serializer.egg-info/top_level.txt
