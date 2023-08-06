@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: rss3
+Version: 0.1.0
+Summary: Python library for RSS3
+Home-page: https://github.com/LeetaoGoooo/RSS3-SDK-for-Python
+Author: LeeTao
+Author-email: leetao94cn@gmail.com
+License: MIT
+Keywords: rss3,rss
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp (>=3.7.4)
+Requires-Dist: marshmallow-dataclass (>=8.4.1)
+Requires-Dist: web3 (>=5.20.0)
+
+# RSS3
+
+A python version of the reference [RSS3 JavaScript SDK](https://github.com/NaturalSelectionLabs/RSS3-SDK-for-JavaScript), which means  the usage should be pretty similar between both.
+
+## Installation and usage
+
+### Installation
+
+**note**: There are two versions(0.1.0 and 0.1.1) that correspond to the rss3 version one by one. 
+
+If it raises SignatureNotMatchError,you'd better switch to the other version.
+
+```
+pip install rss3==[version]
+```
+
+or 
+
+```
+pip install rss3
+```
+
+### Usage
+
+To get started right away with defaults:
+
+```
+from rss3 import RSS3, IOptions
+rss 
+```
+
+
