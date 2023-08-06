@@ -1,0 +1,17 @@
+odoo/addons/invader_payment_stripe/README.rst,sha256=BUhXnkGitrwhtEt6Te7dzIzTuT-dhZdMq-YPcPTCqBw,2041
+odoo/addons/invader_payment_stripe/__init__.py,sha256=kYJNnKRGQ0n5bRWJIoEPgRN_IzlcYzepihpGRteXVuI,44
+odoo/addons/invader_payment_stripe/__manifest__.py,sha256=Yq3iLkKCeORYsj3E1WZBN6-7w3fJCha0BhNUkokLQ90,612
+odoo/addons/invader_payment_stripe/demo/payment_demo.xml,sha256=rxwsm3eyoLw3mV6EsVgzDK4XkKhEY_gdJdJpEQ4l23g,424
+odoo/addons/invader_payment_stripe/i18n/invader_payment_stripe.pot,sha256=OZDfMyf6VbZcIPErW6OInH9wSi6DE1tyneDpNP0P70Y,1325
+odoo/addons/invader_payment_stripe/models/__init__.py,sha256=7vdKHtopt40UqQtzymwsxGzlRCjpiOYbdR7frLpe8RA,22
+odoo/addons/invader_payment_stripe/models/payment.py,sha256=GKGPcz3g8z2PHKBcaHivJDGYxTPyLeycmSyJ2YejJpo,1508
+odoo/addons/invader_payment_stripe/readme/CONTRIBUTORS.rst,sha256=XOvmvmWVvuDVPNluyCog8zXbQ0wLwHqru-igToeRxwU,42
+odoo/addons/invader_payment_stripe/readme/DESCRIPTION.rst,sha256=YOxxSNWtdWhWxItZXGbM0SB7WovwtJ2ccEYOCEKIFj4,68
+odoo/addons/invader_payment_stripe/services/__init__.py,sha256=FoncIsX8mFsrc0k0a82bJvUg3dPwrPAAP3ZFpxPSM6g,29
+odoo/addons/invader_payment_stripe/services/payment_stripe.py,sha256=moFj26SSzjLAnWWft89nFvP6jGExw-lKA4_s1-iI1zs,12317
+odoo/addons/invader_payment_stripe/static/description/icon.png,sha256=oQVhoHDHtJ249OFWosWI5KnE2kNDyO6PzvU9y8XDquk,10712
+odoo/addons/invader_payment_stripe/static/description/index.html,sha256=jJr0KyUJ5namk_kV9XokjNCnxaJjK8LFoDCh9ueEaN8,10993
+odoo12_addon_invader_payment_stripe-12.0.2.1.0.dist-info/METADATA,sha256=7epwG7os30uF5vYosTlrmVQtvVQlissIajJBaCsGXVU,2646
+odoo12_addon_invader_payment_stripe-12.0.2.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+odoo12_addon_invader_payment_stripe-12.0.2.1.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_invader_payment_stripe-12.0.2.1.0.dist-info/RECORD,,
