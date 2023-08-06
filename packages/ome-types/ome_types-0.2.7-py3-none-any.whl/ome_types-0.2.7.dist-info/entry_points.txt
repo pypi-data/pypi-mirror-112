@@ -1,0 +1,3 @@
+[napari.plugin]
+ome-types = ome_types._napari_plugin
+
