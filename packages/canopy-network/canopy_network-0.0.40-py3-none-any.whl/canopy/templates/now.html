@@ -1,0 +1,74 @@
+$def with (now)
+$var title: Now
+
+<div id=mood>
+<div class=display></div>
+<div class=inputs>
+<input type=range min=0 max=255 value=0 id=moodStartR>
+<input type=range min=0 max=255 value=0 id=moodStartG>
+<input type=range min=0 max=255 value=0 id=moodStartB><br>
+<input type=range min=0 max=255 value=0 id=moodEndR>
+<input type=range min=0 max=255 value=0 id=moodEndG>
+<input type=range min=0 max=255 value=0 id=moodEndB>
+</div>
+</div>
+
+<ul id=browsing class=h-browsing>
+$for url in now.get("browsing", []):
+    <li><a class=u-url href=$url>$url</a></li>
+</ul>
+
+$def head():
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const getMood = (el, publish, range) => {
+        el.addEventListener('input', () => {
+          publish(range, el.value)
+        })
+      }
+      const setMood = (el, op, path, body, data) => {
+        el.value = body
+        document.querySelector('#mood .display').style.backgroundImage =
+          `linear-gradient(135deg, rgb($${data.mood.start[0]},
+                                       $${data.mood.start[1]},
+                                       $${data.mood.start[2]}),
+                                   rgb($${data.mood.end[0]},
+                                       $${data.mood.end[1]},
+                                       $${data.mood.end[2]}))`
+      }
+      const getBrowsing = (el, publish, range) => {
+        // TODO watch for DOM insertions?
+      }
+      const setBrowsing = (el, op, path, body, data) => {
+        if (op === 'add') {
+          li = document.createElement('LI')
+          li.appendChild(document.createTextNode(body))
+          el.appendChild(li)
+        }
+      }
+      roots('/now', {
+        '/browsing': ['browsing', getBrowsing, setBrowsing],
+        '/mood/start/0': ['moodStartR', getMood, setMood],
+        '/mood/start/1': ['moodStartG', getMood, setMood],
+        '/mood/start/2': ['moodStartB', getMood, setMood],
+        '/mood/end/0': ['moodEndR', getMood, setMood],
+        '/mood/end/1': ['moodEndG', getMood, setMood],
+        '/mood/end/2': ['moodEndB', getMood, setMood]
+      })
+    })
+    </script>
+    
+    <style>
+    #mood {
+      display: grid;
+      float: right;
+      grid-template-columns: auto auto;
+      height: 15em;
+      width: 30em; }
+    #mood .display {
+      height: 5em;
+      width: 5em; }
+    #mood input {
+      width: 8em; }
+    </style>
+$var head = head
