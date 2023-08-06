@@ -1,0 +1,6 @@
+import argparse
+from datazen import DEFAULT_MANIFEST as DEFAULT_MANIFEST
+from datazen.classes.environment import from_manifest as from_manifest
+
+def entry(args: argparse.Namespace) -> int: ...
+def add_app_args(parser: argparse.ArgumentParser) -> None: ...

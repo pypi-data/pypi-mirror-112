@@ -1,0 +1,6 @@
+from datazen.classes.task_environment import TaskEnvironment as TaskEnvironment
+from typing import List, Tuple
+
+class GroupEnvironment(TaskEnvironment):
+    def __init__(self) -> None: ...
+    def valid_group(self, entry: dict, _: str, dep_data: dict = ..., deps_changed: List[str] = ...) -> Tuple[bool, bool]: ...
