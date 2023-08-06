@@ -1,0 +1,66 @@
+=== Loading Fastr execution script  ===
+Using python 3.7.3 (default, Apr 24 2019, 10:44:57) 
+[GCC 5.4.0 20160609] loaded from /home/martijn/Documents/WORC3/bin/python
+[INFO] executionscript:0148 >> ----- Execution script -----
+
+[INFO] executionscript:0160 >> Loading pickled command from file
+[INFO] executionscript:0164 >> Finished loading pickle in 0.330859 seconds
+[INFO] executionscript:0176 >> Received command: <SinkJob
+  id=WORC_Example_STWStrategyHN_Multiclass___StatisticalTestFeatures_Tex___all___0
+  tmpdir=vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/StatisticalTestFeatures_Tex/all_0/>
+
+[INFO] executionscript:0055 >> Using Python 3.7.3 (default, Apr 24 2019, 10:44:57) 
+[GCC 5.4.0 20160609]
+[INFO] executionscript:0056 >> FASTR loaded from /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/__init__.py
+[INFO] executionscript:0057 >> version: 3.2.3_tags/3.2.3^0_2ed88fe2
+[INFO] executionscript:0058 >> Start time: 2021-07-03 15:27:16.387398
+[INFO] executionscript:0061 >> Job log path: /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/StatisticalTestFeatures_Tex/all_0/__fastr_result__.yaml
+[INFO] executionscript:0064 >> Running job WORC_Example_STWStrategyHN_Multiclass___StatisticalTestFeatures_Tex___all___0
+  command: fastr/Sink:1.0 v1.0
+  arguments: {'input': <SampleItem index=(0), id=all>, 'output': <SampleItem index=(0), id=all>, 'datatype': <SampleItem index=(0), id=all>}
+  outputs: {}
+
+[INFO] executionscript:0075 >> No old result, executing job
+[INFO] basepluginmanager:0078 >> Could not load plugin file /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/resources/plugins/reportingplugins/elasticsearchreporter.py
+FastrOptionalModuleNotAvailableError from /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/resources/plugins/reportingplugins/elasticsearchreporter.py line 46: Could not import the required elasticsearch for this plugin
+[INFO] executionscript:0084 >> DRMAA info: {'jobid': None, 'taskid': None, 'jobname': None}
+[INFO] executionscript:0086 >> Writing intermediate job info to: /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/StatisticalTestFeatures_Tex/all_0/__fastr_result__.yaml
+[INFO]       job:0767 >> Set current directory to job output dir /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/StatisticalTestFeatures_Tex/all_0
+[INFO]       job:0782 >> Start executing tool
+[INFO]       job:1252 >> Temp payload: {'inputs': {'input': (<TexFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex'>,), 'output': (<String: 'vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_{sample_id}_{cardinality}{ext}'>,), 'datatype': (<String: 'TexFile'>,)}, 'outputs': {}}
+[INFO]       job:1253 >> Input data: (<TexFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex'>,)
+[INFO]       job:1254 >> Input arguments: <SampleValue {0: (<Deferred: <TexFile: 'vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex'>>,)}>
+*** PAYLOAD: {'inputs': {'input': (<TexFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex'>,), 'output': ('vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_all_0.tex',), 'datatype': (<String: 'TexFile'>,)}, 'outputs': {}}
+[INFO]       job:1273 >> Checking [<DataType: Deferred class [Loaded]>] vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex (<Deferred: <TexFile: 'vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex'>>)
+[INFO]       job:1300 >> Extra inputs: [<JsonFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/__fastr_prov__.json'>]  Extra outputs: ['vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_all_0_tex.prov.json']
+[INFO]       job:0786 >> Finished creating payload in 0.000713 seconds
+[INFO]       job:0789 >> Start executing tool
+[INFO] localbinarytarget:0154 >> Changing ../../utils/cmd/
+[INFO]      tool:0387 >> Target is <Plugin: LocalBinaryTarget>
+[INFO]      tool:0396 >> Using payload: {'inputs': {'input': (<TexFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex'>, <JsonFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/__fastr_prov__.json'>), 'output': ('vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_all_0.tex', 'vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_all_0_tex.prov.json'), 'datatype': (<String: 'TexFile'>, <String: 'JsonFile'>)}, 'outputs': {}}
+[INFO] localbinarytarget:0202 >> Adding extra PATH: ['/home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/utils/cmd']
+[INFO] fastrinterface:0469 >> Execution payload: {'inputs': {'input': (<TexFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex'>, <JsonFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/__fastr_prov__.json'>), 'output': ('vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_all_0.tex', 'vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_all_0_tex.prov.json'), 'datatype': (<String: 'TexFile'>, <String: 'JsonFile'>)}, 'outputs': {}}
+[INFO] fastrinterface:0566 >> Adding (<TexFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex'>, <JsonFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/__fastr_prov__.json'>) to argument list based on <fastrinterface.InputParameterDescription object at 0x7f15fd414978>
+[INFO] fastrinterface:0566 >> Adding ('vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_all_0.tex', 'vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_all_0_tex.prov.json') to argument list based on <fastrinterface.InputParameterDescription object at 0x7f15fd414e10>
+[INFO] fastrinterface:0566 >> Adding (<String: 'TexFile'>, <String: 'JsonFile'>) to argument list based on <fastrinterface.InputParameterDescription object at 0x7f15fd414f28>
+[INFO] localbinarytarget:0261 >> Options: ['/home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/utils/cmd']
+[INFO]    target:0184 >> Calling command arguments: ['/home/martijn/Documents/WORC3/bin/python', '/home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/utils/cmd/sink.py', '--input', '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex', '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/__fastr_prov__.json', '--output', 'vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_all_0.tex', 'vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_all_0_tex.prov.json', '--datatype', 'TexFile', 'JsonFile']
+[INFO]    target:0188 >> Calling command: /home/martijn/Documents/WORC3/bin/python /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/utils/cmd/sink.py --input /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/__fastr_prov__.json --output vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_all_0.tex vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/StatisticalTestFeatures_all_0_tex.prov.json --datatype TexFile JsonFile
+[INFO] fastrinterface:0476 >> Collecting results
+[INFO]       job:0793 >> Finished executing tool in 3.020876 seconds
+[INFO]       job:0813 >> Start translating results tool
+[INFO]       job:0817 >> Finished translating results in 1e-05 seconds
+[INFO]       job:0823 >> Resetting current directory to /home/martijn/git/WORC/WORC/tests
+[INFO] executionscript:0092 >> Job subprocess finished
+[INFO] executionscript:0095 >> Start hashing results
+[INFO] executionscript:0099 >> Finished hashing results in 5e-06 seconds
+[INFO] executionscript:0100 >> try end time: 2021-07-03 15:27:20.505235
+[INFO] executionscript:0123 >> Execution finished normally.
+[INFO] executionscript:0126 >> Writing job result to: /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/StatisticalTestFeatures_Tex/all_0/__fastr_result__.yaml
+[INFO] basepluginmanager:0078 >> Could not load plugin file /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/resources/plugins/targetplugins/singularitytarget.py
+Could not find executable "singularity" on PATH: ['/home/martijn/Documents/WORC3/bin', '/home/martijn/miniconda2/bin', '/home/martijn/miniconda/bin', '/hoem/martijn/apps/elastix/bin', '/home/martijn/bin', '/home/martijn/.local/bin', '/opt/texbin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin']
+[INFO] basepluginmanager:0078 >> Could not load plugin file /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/resources/plugins/executionplugins/slurmexecution.py
+Could not find executable "sbatch" on PATH: ['/home/martijn/Documents/WORC3/bin', '/home/martijn/miniconda2/bin', '/home/martijn/miniconda/bin', '/hoem/martijn/apps/elastix/bin', '/home/martijn/bin', '/home/martijn/.local/bin', '/opt/texbin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin']
+[INFO] executionscript:0135 >> End time: 2021-07-03 15:27:20.708282
+[INFO] executionscript:0183 >> ---------------------------
+

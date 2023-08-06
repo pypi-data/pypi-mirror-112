@@ -1,0 +1,915 @@
+{
+  "id": "WORC_Example_STWStrategyHN_Multiclass___plot_Barchart___all",
+  "hostinfo": {
+    "os": {
+      "system": "Linux",
+      "is64bits": 1,
+      "maxsize": 9223372036854775807,
+      "version": {
+        "distname": "Ubuntu",
+        "version": "16.04",
+        "codename": "Xenial Xerus",
+        "libc": {
+          "libname": "glibc",
+          "version": "2.17"
+        }
+      }
+    },
+    "uname": [
+      "Linux",
+      "martijn-HP-EliteDesk-800-G2-SFF",
+      "4.4.0-210-generic",
+      "#242-Ubuntu SMP Fri Apr 16 09:57:56 UTC 2021",
+      "x86_64",
+      "x86_64"
+    ],
+    "username": "martijn",
+    "cwd": "/home/martijn/git/WORC/WORC/tests",
+    "python": {
+      "version": "3.7.3",
+      "branch": "",
+      "compiler": "GCC 5.4.0 20160609",
+      "implementation": "CPython",
+      "revision": ""
+    },
+    "envvar": {
+      "XDG_VTNR": "7",
+      "LC_PAPER": "nl_NL.UTF-8",
+      "LC_ADDRESS": "nl_NL.UTF-8",
+      "XDG_SESSION_ID": "c3",
+      "XDG_GREETER_DATA_DIR": "/var/lib/lightdm-data/martijn",
+      "LC_MONETARY": "nl_NL.UTF-8",
+      "CLUTTER_IM_MODULE": "xim",
+      "SESSION": "ubuntu",
+      "GPG_AGENT_INFO": "/home/martijn/.gnupg/S.gpg-agent:0:1",
+      "GUACAMOLE_HOME": "/home/martijn/apps/guacamolehome",
+      "TERM": "xterm-256color",
+      "VTE_VERSION": "4205",
+      "XDG_MENU_PREFIX": "gnome-",
+      "SHELL": "/bin/bash",
+      "CATALINA_HOME": "/usr/share/tomcat7",
+      "DERBY_HOME": "/usr/lib/jvm/java-8-oracle/db",
+      "QT_LINUX_ACCESSIBILITY_ALWAYS_ON": "1",
+      "WINDOWID": "127926454",
+      "LC_NUMERIC": "nl_NL.UTF-8",
+      "OLDPWD": "/home/martijn/git/WORC",
+      "UPSTART_SESSION": "unix:abstract=/com/ubuntu/upstart-session/1000/2506",
+      "GNOME_KEYRING_CONTROL": "",
+      "GTK_MODULES": "gail:atk-bridge:unity-gtk-module",
+      "USER": "martijn",
+      "JRE_HOME": "/usr/lib/jvm/java-8-oracle/jre",
+      "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+      "LC_TELEPHONE": "nl_NL.UTF-8",
+      "QT_ACCESSIBILITY": "1",
+      "LD_LIBRARY_PATH": "/home/martijn/apps/dip/Linuxa64/lib/::/home/martijn/apps/dip/Linuxa64/lib:/home/martijn/apps/elastix/lib",
+      "XDG_SESSION_PATH": "/org/freedesktop/DisplayManager/Session0",
+      "UNITY_HAS_3D_SUPPORT": "true",
+      "XDG_SEAT_PATH": "/org/freedesktop/DisplayManager/Seat0",
+      "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+      "DEFAULTS_PATH": "/usr/share/gconf/ubuntu.default.path",
+      "VIRTUAL_ENV": "/home/martijn/Documents/WORC3",
+      "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg",
+      "UNITY_DEFAULT_PROFILE": "unity",
+      "DESKTOP_SESSION": "ubuntu",
+      "PATH": "/home/martijn/Documents/WORC3/bin:/home/martijn/miniconda2/bin:/home/martijn/miniconda/bin:/hoem/martijn/apps/elastix/bin:/home/martijn/bin:/home/martijn/.local/bin:/opt/texbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin",
+      "QT_IM_MODULE": "ibus",
+      "QT_QPA_PLATFORMTHEME": "appmenu-qt5",
+      "LC_IDENTIFICATION": "nl_NL.UTF-8",
+      "XDG_SESSION_TYPE": "x11",
+      "PWD": "/home/martijn/git/WORC/WORC/tests",
+      "JOB": "unity-settings-daemon",
+      "XMODIFIERS": "@im=ibus",
+      "JAVA_HOME": "/usr/lib/jvm/java-8-oracle",
+      "GNOME_KEYRING_PID": "",
+      "LANG": "en_US.UTF-8",
+      "GDM_LANG": "en_US",
+      "MANDATORY_PATH": "/usr/share/gconf/ubuntu.mandatory.path",
+      "LC_MEASUREMENT": "nl_NL.UTF-8",
+      "COMPIZ_CONFIG_PROFILE": "ubuntu",
+      "IM_CONFIG_PHASE": "1",
+      "PS1": "(WORC3) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ ",
+      "GDMSESSION": "ubuntu",
+      "SESSIONTYPE": "gnome-session",
+      "GTK2_MODULES": "overlay-scrollbar",
+      "SHLVL": "1",
+      "HOME": "/home/martijn",
+      "XDG_SEAT": "seat0",
+      "LANGUAGE": "en_US",
+      "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+      "UPSTART_INSTANCE": "",
+      "PYTHONPATH": ":/home/martijn/git/PySNAP:/home/taskman/taskmanager/taskmanager/taskmanager:/home/taskman/taskmanager/taskmanager/taskmanager:/home/martijn/git/Taskclient:/home/martijn/git/RadTools:/media/martijn/DATA/Software/caffe-master/python:/home/martijn/git/DicomSorter:/home/martijn/git/XNATExplorer:/home/martijn/git/imgaug:/home/martijn/git/phasepack:/home/martijn/git/PREDICTFastr/PREDICT:/home/martijn/git/DicomSorter",
+      "UPSTART_EVENTS": "xsession started",
+      "XDG_SESSION_DESKTOP": "ubuntu",
+      "LOGNAME": "martijn",
+      "COMPIZ_BIN_PATH": "/usr/bin/",
+      "DBUS_SESSION_BUS_ADDRESS": "unix:abstract=/tmp/dbus-gy6EXjV9H7",
+      "J2SDKDIR": "/usr/lib/jvm/java-8-oracle",
+      "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/var/lib/snapd/desktop",
+      "QT4_IM_MODULE": "xim",
+      "LESSOPEN": "| /usr/bin/lesspipe %s",
+      "INSTANCE": "",
+      "UPSTART_JOB": "unity7",
+      "XDG_RUNTIME_DIR": "/run/user/1000",
+      "DISPLAY": ":0",
+      "XDG_CURRENT_DESKTOP": "Unity",
+      "GTK_IM_MODULE": "ibus",
+      "J2REDIR": "/usr/lib/jvm/java-8-oracle/jre",
+      "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+      "LC_TIME": "nl_NL.UTF-8",
+      "LC_NAME": "nl_NL.UTF-8",
+      "XAUTHORITY": "/home/martijn/.Xauthority",
+      "_": "/home/martijn/Documents/WORC3/bin/python",
+      "KMP_DUPLICATE_LIB_OK": "True",
+      "KMP_INIT_AT_FORK": "FALSE"
+    },
+    "drmaa": {
+      "jobid": null,
+      "taskid": null,
+      "jobname": null
+    }
+  },
+  "sysinfo_start": {
+    "cpu_usage": {
+      "user": 245449.88,
+      "nice": 768.88,
+      "system": 236234.65,
+      "idle": 14769188.77,
+      "iowait": 9144.58,
+      "irq": 0.0,
+      "softirq": 1681.95,
+      "steal": 0.0,
+      "guest": 0.0,
+      "guest_nice": 0.0,
+      "percent": 45.5
+    },
+    "memory_usage": {
+      "virtual": {
+        "total": 16701530112,
+        "available": 2533781504,
+        "percent": 84.8,
+        "used": 13096370176,
+        "free": 1210503168,
+        "active": 3580162048,
+        "inactive": 2529476608,
+        "buffers": 121958400,
+        "cached": 2272698368,
+        "shared": 724975616,
+        "slab": 455192576
+      },
+      "swap": {
+        "total": 17052987392,
+        "used": 8259833856,
+        "free": 8793153536,
+        "percent": 48.4,
+        "sin": 22361346048,
+        "sout": 33350627328
+      }
+    },
+    "mounts": [
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37217038336,
+        "disk_free": 9346461696,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sda6",
+        "mountpoint": "/home",
+        "fstype": "ext4",
+        "opts": "rw,relatime,data=ordered",
+        "disk_total": 185904377856,
+        "disk_used": 112456597504,
+        "disk_free": 63980711936,
+        "disk_use_percent": 63.7
+      },
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/var/lib/docker/aufs",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37217038336,
+        "disk_free": 9346461696,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sdc1",
+        "mountpoint": "/media/martijn/DATA",
+        "fstype": "fuseblk",
+        "opts": "rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096",
+        "disk_total": 2000396996608,
+        "disk_used": 1115982860288,
+        "disk_free": 884414136320,
+        "disk_use_percent": 55.8
+      }
+    ],
+    "users": [
+      {
+        "name": "martijn",
+        "terminal": "tty7",
+        "host": "localhost",
+        "started": 1623394048.0,
+        "pid": 2506
+      }
+    ]
+  },
+  "process": {
+    "return_code": 0,
+    "stdout": "Saving barchart to /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_tex_0.tex.\nSaving barchart to /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_png_0.png.\n",
+    "stderr": "",
+    "command": [
+      "python",
+      "/home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin/PlotBarchart.py",
+      "--prediction",
+      "/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/classify/all/classification_0.hdf5",
+      "--output_png",
+      "/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_png_0.png",
+      "--output_tex",
+      "/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_tex_0.tex",
+      "--estimators",
+      "1",
+      "--label_type",
+      "imaginary_label_1, complement_label_1"
+    ],
+    "resource_usage": [
+      {
+        "timestamp": "2021-07-03T13:32:00.072502",
+        "cpu_percent": 97.9,
+        "vmem": 163749888,
+        "rmem": 59740160,
+        "read_bytes": 4096,
+        "write_bytes": 4096
+      },
+      {
+        "timestamp": "2021-07-03T13:32:01.073662",
+        "cpu_percent": 113.9,
+        "vmem": 1708404736,
+        "rmem": 270196736,
+        "read_bytes": 4096,
+        "write_bytes": 4096
+      },
+      {
+        "timestamp": "2021-07-03T13:32:02.074694",
+        "cpu_percent": 100.9,
+        "vmem": 3395850240,
+        "rmem": 1477939200,
+        "read_bytes": 122880,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:03.076032",
+        "cpu_percent": 94.9,
+        "vmem": 3396112384,
+        "rmem": 1892335616,
+        "read_bytes": 212992,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:04.077205",
+        "cpu_percent": 136.8,
+        "vmem": 3489202176,
+        "rmem": 1893699584,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:05.078323",
+        "cpu_percent": 99.9,
+        "vmem": 3489202176,
+        "rmem": 1893699584,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:06.078625",
+        "cpu_percent": 100.0,
+        "vmem": 3489406976,
+        "rmem": 1893974016,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:07.079774",
+        "cpu_percent": 100.9,
+        "vmem": 3489406976,
+        "rmem": 1893974016,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:08.081487",
+        "cpu_percent": 99.8,
+        "vmem": 3489406976,
+        "rmem": 1892827136,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:09.082703",
+        "cpu_percent": 98.9,
+        "vmem": 3489406976,
+        "rmem": 1892827136,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:10.083890",
+        "cpu_percent": 99.9,
+        "vmem": 3489406976,
+        "rmem": 1892827136,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:11.085075",
+        "cpu_percent": 98.9,
+        "vmem": 3489406976,
+        "rmem": 1892659200,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:12.086367",
+        "cpu_percent": 98.9,
+        "vmem": 3489841152,
+        "rmem": 1878347776,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:13.086683",
+        "cpu_percent": 99.0,
+        "vmem": 3489841152,
+        "rmem": 1872285696,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:14.087865",
+        "cpu_percent": 99.9,
+        "vmem": 3489841152,
+        "rmem": 1864126464,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:15.089040",
+        "cpu_percent": 100.9,
+        "vmem": 3489841152,
+        "rmem": 1844465664,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:16.090201",
+        "cpu_percent": 99.9,
+        "vmem": 3489841152,
+        "rmem": 1844736000,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:17.090666",
+        "cpu_percent": 100.0,
+        "vmem": 3490705408,
+        "rmem": 1844736000,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:18.091789",
+        "cpu_percent": 99.9,
+        "vmem": 3490705408,
+        "rmem": 1844736000,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:19.092944",
+        "cpu_percent": 99.9,
+        "vmem": 3490705408,
+        "rmem": 1845006336,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:20.093278",
+        "cpu_percent": 100.0,
+        "vmem": 3490705408,
+        "rmem": 1834024960,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:21.094342",
+        "cpu_percent": 99.9,
+        "vmem": 3490705408,
+        "rmem": 1834024960,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:22.094610",
+        "cpu_percent": 100.0,
+        "vmem": 3490705408,
+        "rmem": 1834295296,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:23.095082",
+        "cpu_percent": 100.0,
+        "vmem": 3490705408,
+        "rmem": 1834295296,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:24.096289",
+        "cpu_percent": 99.9,
+        "vmem": 3490705408,
+        "rmem": 1834295296,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:25.097463",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1834565632,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:26.098634",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1834565632,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:27.099776",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1834565632,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:28.100373",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1834835968,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:29.101546",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1834835968,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:30.102648",
+        "cpu_percent": 100.9,
+        "vmem": 3492294656,
+        "rmem": 1835106304,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:31.103823",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1835106304,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:32.104997",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1835106304,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:33.106183",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1835376640,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:34.107356",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1835376640,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:35.108539",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1835646976,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:36.109751",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1835646976,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:37.110932",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1835917312,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:38.111951",
+        "cpu_percent": 99.9,
+        "vmem": 3492294656,
+        "rmem": 1835917312,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:39.113123",
+        "cpu_percent": 100.9,
+        "vmem": 3492294656,
+        "rmem": 1835917312,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:40.114258",
+        "cpu_percent": 99.9,
+        "vmem": 3495591936,
+        "rmem": 1838891008,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:41.115445",
+        "cpu_percent": 99.9,
+        "vmem": 3495591936,
+        "rmem": 1838891008,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:42.116063",
+        "cpu_percent": 99.9,
+        "vmem": 3495591936,
+        "rmem": 1838891008,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:43.116444",
+        "cpu_percent": 100.0,
+        "vmem": 3492294656,
+        "rmem": 1836072960,
+        "read_bytes": 557056,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:44.117732",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2954448896,
+        "read_bytes": 1265664,
+        "write_bytes": 12288
+      },
+      {
+        "timestamp": "2021-07-03T13:32:45.118864",
+        "cpu_percent": 111.9,
+        "vmem": 4659253248,
+        "rmem": 2955411456,
+        "read_bytes": 6512640,
+        "write_bytes": 24576
+      },
+      {
+        "timestamp": "2021-07-03T13:32:46.119229",
+        "cpu_percent": 100.0,
+        "vmem": 4659253248,
+        "rmem": 2955382784,
+        "read_bytes": 6512640,
+        "write_bytes": 65536
+      },
+      {
+        "timestamp": "2021-07-03T13:32:47.120411",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955317248,
+        "read_bytes": 6512640,
+        "write_bytes": 188416
+      },
+      {
+        "timestamp": "2021-07-03T13:32:48.121596",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955296768,
+        "read_bytes": 6512640,
+        "write_bytes": 253952
+      },
+      {
+        "timestamp": "2021-07-03T13:32:49.122653",
+        "cpu_percent": 98.9,
+        "vmem": 4659253248,
+        "rmem": 2955296768,
+        "read_bytes": 6512640,
+        "write_bytes": 360448
+      },
+      {
+        "timestamp": "2021-07-03T13:32:50.123838",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955149312,
+        "read_bytes": 6512640,
+        "write_bytes": 450560
+      },
+      {
+        "timestamp": "2021-07-03T13:32:51.124569",
+        "cpu_percent": 98.9,
+        "vmem": 4659253248,
+        "rmem": 2955149312,
+        "read_bytes": 6512640,
+        "write_bytes": 581632
+      },
+      {
+        "timestamp": "2021-07-03T13:32:52.125111",
+        "cpu_percent": 98.9,
+        "vmem": 4659253248,
+        "rmem": 2955149312,
+        "read_bytes": 6512640,
+        "write_bytes": 663552
+      },
+      {
+        "timestamp": "2021-07-03T13:32:53.126290",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955149312,
+        "read_bytes": 6512640,
+        "write_bytes": 778240
+      },
+      {
+        "timestamp": "2021-07-03T13:32:54.127429",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955112448,
+        "read_bytes": 6512640,
+        "write_bytes": 860160
+      },
+      {
+        "timestamp": "2021-07-03T13:32:55.128506",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955112448,
+        "read_bytes": 6512640,
+        "write_bytes": 966656
+      },
+      {
+        "timestamp": "2021-07-03T13:32:56.129683",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955112448,
+        "read_bytes": 6512640,
+        "write_bytes": 1073152
+      },
+      {
+        "timestamp": "2021-07-03T13:32:57.130929",
+        "cpu_percent": 100.9,
+        "vmem": 4659253248,
+        "rmem": 2955083776,
+        "read_bytes": 6512640,
+        "write_bytes": 1163264
+      },
+      {
+        "timestamp": "2021-07-03T13:32:58.132108",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955083776,
+        "read_bytes": 6512640,
+        "write_bytes": 1269760
+      },
+      {
+        "timestamp": "2021-07-03T13:32:59.133288",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955071488,
+        "read_bytes": 6512640,
+        "write_bytes": 1359872
+      },
+      {
+        "timestamp": "2021-07-03T13:33:00.134502",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955071488,
+        "read_bytes": 6512640,
+        "write_bytes": 1482752
+      },
+      {
+        "timestamp": "2021-07-03T13:33:01.134650",
+        "cpu_percent": 100.0,
+        "vmem": 4659253248,
+        "rmem": 2955071488,
+        "read_bytes": 6512640,
+        "write_bytes": 1564672
+      },
+      {
+        "timestamp": "2021-07-03T13:33:02.135878",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955071488,
+        "read_bytes": 6512640,
+        "write_bytes": 1712128
+      },
+      {
+        "timestamp": "2021-07-03T13:33:03.137065",
+        "cpu_percent": 98.9,
+        "vmem": 4659253248,
+        "rmem": 2955055104,
+        "read_bytes": 6512640,
+        "write_bytes": 1814528
+      },
+      {
+        "timestamp": "2021-07-03T13:33:04.138255",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955055104,
+        "read_bytes": 6512640,
+        "write_bytes": 1929216
+      },
+      {
+        "timestamp": "2021-07-03T13:33:05.139438",
+        "cpu_percent": 98.9,
+        "vmem": 4659253248,
+        "rmem": 2955055104,
+        "read_bytes": 6512640,
+        "write_bytes": 2052096
+      },
+      {
+        "timestamp": "2021-07-03T13:33:06.140212",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955055104,
+        "read_bytes": 6512640,
+        "write_bytes": 2150400
+      },
+      {
+        "timestamp": "2021-07-03T13:33:07.141390",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2955055104,
+        "read_bytes": 6512640,
+        "write_bytes": 2289664
+      },
+      {
+        "timestamp": "2021-07-03T13:33:08.141738",
+        "cpu_percent": 100.0,
+        "vmem": 4659253248,
+        "rmem": 2954997760,
+        "read_bytes": 6512640,
+        "write_bytes": 2387968
+      },
+      {
+        "timestamp": "2021-07-03T13:33:09.142911",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2954268672,
+        "read_bytes": 6512640,
+        "write_bytes": 2490368
+      },
+      {
+        "timestamp": "2021-07-03T13:33:10.143692",
+        "cpu_percent": 99.9,
+        "vmem": 4659253248,
+        "rmem": 2954268672,
+        "read_bytes": 6512640,
+        "write_bytes": 2555904
+      },
+      {
+        "timestamp": "2021-07-03T13:33:11.144865",
+        "cpu_percent": 100.9,
+        "vmem": 4659253248,
+        "rmem": 2954268672,
+        "read_bytes": 6512640,
+        "write_bytes": 2629632
+      },
+      {
+        "timestamp": "2021-07-03T13:33:12.145910",
+        "cpu_percent": 88.9,
+        "vmem": 1889931264,
+        "rmem": 198578176,
+        "read_bytes": 28966912,
+        "write_bytes": 2695168
+      }
+    ],
+    "time_elapsed": 73.33620476722717
+  },
+  "sysinfo_end": {
+    "cpu_usage": {
+      "user": 245574.68,
+      "nice": 768.89,
+      "system": 236251.99,
+      "idle": 14769624.36,
+      "iowait": 9157.9,
+      "irq": 0.0,
+      "softirq": 1682.46,
+      "steal": 0.0,
+      "guest": 0.0,
+      "guest_nice": 0.0,
+      "percent": 24.1
+    },
+    "memory_usage": {
+      "virtual": {
+        "total": 16701530112,
+        "available": 3500322816,
+        "percent": 79.0,
+        "used": 12256768000,
+        "free": 3087826944,
+        "active": 2813960192,
+        "inactive": 1427578880,
+        "buffers": 31989760,
+        "cached": 1324945408,
+        "shared": 597110784,
+        "slab": 451715072
+      },
+      "swap": {
+        "total": 17052987392,
+        "used": 8710336512,
+        "free": 8342650880,
+        "percent": 51.1,
+        "sin": 22465646592,
+        "sout": 34059624448
+      }
+    },
+    "mounts": [
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37217153024,
+        "disk_free": 9346347008,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sda6",
+        "mountpoint": "/home",
+        "fstype": "ext4",
+        "opts": "rw,relatime,data=ordered",
+        "disk_total": 185904377856,
+        "disk_used": 112462397440,
+        "disk_free": 63974912000,
+        "disk_use_percent": 63.7
+      },
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/var/lib/docker/aufs",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37217153024,
+        "disk_free": 9346347008,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sdc1",
+        "mountpoint": "/media/martijn/DATA",
+        "fstype": "fuseblk",
+        "opts": "rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096",
+        "disk_total": 2000396996608,
+        "disk_used": 1115982860288,
+        "disk_free": 884414136320,
+        "disk_use_percent": 55.8
+      }
+    ],
+    "users": [
+      {
+        "name": "martijn",
+        "terminal": "tty7",
+        "host": "localhost",
+        "started": 1623394048.0,
+        "pid": 2506
+      }
+    ]
+  }
+}

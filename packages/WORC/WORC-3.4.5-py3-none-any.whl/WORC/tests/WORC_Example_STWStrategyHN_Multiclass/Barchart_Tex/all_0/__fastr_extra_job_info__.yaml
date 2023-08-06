@@ -1,0 +1,346 @@
+{
+  "id": "WORC_Example_STWStrategyHN_Multiclass___Barchart_Tex___all___0",
+  "hostinfo": {
+    "os": {
+      "system": "Linux",
+      "is64bits": 1,
+      "maxsize": 9223372036854775807,
+      "version": {
+        "distname": "Ubuntu",
+        "version": "16.04",
+        "codename": "Xenial Xerus",
+        "libc": {
+          "libname": "glibc",
+          "version": "2.17"
+        }
+      }
+    },
+    "uname": [
+      "Linux",
+      "martijn-HP-EliteDesk-800-G2-SFF",
+      "4.4.0-210-generic",
+      "#242-Ubuntu SMP Fri Apr 16 09:57:56 UTC 2021",
+      "x86_64",
+      "x86_64"
+    ],
+    "username": "martijn",
+    "cwd": "/home/martijn/git/WORC/WORC/tests",
+    "python": {
+      "version": "3.7.3",
+      "branch": "",
+      "compiler": "GCC 5.4.0 20160609",
+      "implementation": "CPython",
+      "revision": ""
+    },
+    "envvar": {
+      "XDG_VTNR": "7",
+      "LC_PAPER": "nl_NL.UTF-8",
+      "LC_ADDRESS": "nl_NL.UTF-8",
+      "XDG_SESSION_ID": "c3",
+      "XDG_GREETER_DATA_DIR": "/var/lib/lightdm-data/martijn",
+      "LC_MONETARY": "nl_NL.UTF-8",
+      "CLUTTER_IM_MODULE": "xim",
+      "SESSION": "ubuntu",
+      "GPG_AGENT_INFO": "/home/martijn/.gnupg/S.gpg-agent:0:1",
+      "GUACAMOLE_HOME": "/home/martijn/apps/guacamolehome",
+      "TERM": "xterm-256color",
+      "VTE_VERSION": "4205",
+      "XDG_MENU_PREFIX": "gnome-",
+      "SHELL": "/bin/bash",
+      "CATALINA_HOME": "/usr/share/tomcat7",
+      "DERBY_HOME": "/usr/lib/jvm/java-8-oracle/db",
+      "QT_LINUX_ACCESSIBILITY_ALWAYS_ON": "1",
+      "WINDOWID": "127926454",
+      "LC_NUMERIC": "nl_NL.UTF-8",
+      "OLDPWD": "/home/martijn/git/WORC",
+      "UPSTART_SESSION": "unix:abstract=/com/ubuntu/upstart-session/1000/2506",
+      "GNOME_KEYRING_CONTROL": "",
+      "GTK_MODULES": "gail:atk-bridge:unity-gtk-module",
+      "USER": "martijn",
+      "JRE_HOME": "/usr/lib/jvm/java-8-oracle/jre",
+      "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+      "LC_TELEPHONE": "nl_NL.UTF-8",
+      "QT_ACCESSIBILITY": "1",
+      "LD_LIBRARY_PATH": "/home/martijn/apps/dip/Linuxa64/lib/::/home/martijn/apps/dip/Linuxa64/lib:/home/martijn/apps/elastix/lib",
+      "XDG_SESSION_PATH": "/org/freedesktop/DisplayManager/Session0",
+      "UNITY_HAS_3D_SUPPORT": "true",
+      "XDG_SEAT_PATH": "/org/freedesktop/DisplayManager/Seat0",
+      "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+      "DEFAULTS_PATH": "/usr/share/gconf/ubuntu.default.path",
+      "VIRTUAL_ENV": "/home/martijn/Documents/WORC3",
+      "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg",
+      "UNITY_DEFAULT_PROFILE": "unity",
+      "DESKTOP_SESSION": "ubuntu",
+      "PATH": "/home/martijn/Documents/WORC3/bin:/home/martijn/miniconda2/bin:/home/martijn/miniconda/bin:/hoem/martijn/apps/elastix/bin:/home/martijn/bin:/home/martijn/.local/bin:/opt/texbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin",
+      "QT_IM_MODULE": "ibus",
+      "QT_QPA_PLATFORMTHEME": "appmenu-qt5",
+      "LC_IDENTIFICATION": "nl_NL.UTF-8",
+      "XDG_SESSION_TYPE": "x11",
+      "PWD": "/home/martijn/git/WORC/WORC/tests",
+      "JOB": "unity-settings-daemon",
+      "XMODIFIERS": "@im=ibus",
+      "JAVA_HOME": "/usr/lib/jvm/java-8-oracle",
+      "GNOME_KEYRING_PID": "",
+      "LANG": "en_US.UTF-8",
+      "GDM_LANG": "en_US",
+      "MANDATORY_PATH": "/usr/share/gconf/ubuntu.mandatory.path",
+      "LC_MEASUREMENT": "nl_NL.UTF-8",
+      "COMPIZ_CONFIG_PROFILE": "ubuntu",
+      "IM_CONFIG_PHASE": "1",
+      "PS1": "(WORC3) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ ",
+      "GDMSESSION": "ubuntu",
+      "SESSIONTYPE": "gnome-session",
+      "GTK2_MODULES": "overlay-scrollbar",
+      "SHLVL": "1",
+      "HOME": "/home/martijn",
+      "XDG_SEAT": "seat0",
+      "LANGUAGE": "en_US",
+      "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+      "UPSTART_INSTANCE": "",
+      "PYTHONPATH": ":/home/martijn/git/PySNAP:/home/taskman/taskmanager/taskmanager/taskmanager:/home/taskman/taskmanager/taskmanager/taskmanager:/home/martijn/git/Taskclient:/home/martijn/git/RadTools:/media/martijn/DATA/Software/caffe-master/python:/home/martijn/git/DicomSorter:/home/martijn/git/XNATExplorer:/home/martijn/git/imgaug:/home/martijn/git/phasepack:/home/martijn/git/PREDICTFastr/PREDICT:/home/martijn/git/DicomSorter",
+      "UPSTART_EVENTS": "xsession started",
+      "XDG_SESSION_DESKTOP": "ubuntu",
+      "LOGNAME": "martijn",
+      "COMPIZ_BIN_PATH": "/usr/bin/",
+      "DBUS_SESSION_BUS_ADDRESS": "unix:abstract=/tmp/dbus-gy6EXjV9H7",
+      "J2SDKDIR": "/usr/lib/jvm/java-8-oracle",
+      "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/var/lib/snapd/desktop",
+      "QT4_IM_MODULE": "xim",
+      "LESSOPEN": "| /usr/bin/lesspipe %s",
+      "INSTANCE": "",
+      "UPSTART_JOB": "unity7",
+      "XDG_RUNTIME_DIR": "/run/user/1000",
+      "DISPLAY": ":0",
+      "XDG_CURRENT_DESKTOP": "Unity",
+      "GTK_IM_MODULE": "ibus",
+      "J2REDIR": "/usr/lib/jvm/java-8-oracle/jre",
+      "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+      "LC_TIME": "nl_NL.UTF-8",
+      "LC_NAME": "nl_NL.UTF-8",
+      "XAUTHORITY": "/home/martijn/.Xauthority",
+      "_": "/home/martijn/Documents/WORC3/bin/python",
+      "KMP_DUPLICATE_LIB_OK": "True",
+      "KMP_INIT_AT_FORK": "FALSE"
+    },
+    "drmaa": {
+      "jobid": null,
+      "taskid": null,
+      "jobname": null
+    }
+  },
+  "sysinfo_start": {
+    "cpu_usage": {
+      "user": 245580.1,
+      "nice": 768.89,
+      "system": 236253.13,
+      "idle": 14769647.97,
+      "iowait": 9159.56,
+      "irq": 0.0,
+      "softirq": 1682.52,
+      "steal": 0.0,
+      "guest": 0.0,
+      "guest_nice": 0.0,
+      "percent": 24.7
+    },
+    "memory_usage": {
+      "virtual": {
+        "total": 16701530112,
+        "available": 3400441856,
+        "percent": 79.6,
+        "used": 12358123520,
+        "free": 2858803200,
+        "active": 3025448960,
+        "inactive": 1443762176,
+        "buffers": 63483904,
+        "cached": 1421119488,
+        "shared": 595935232,
+        "slab": 451776512
+      },
+      "swap": {
+        "total": 17052987392,
+        "used": 8700719104,
+        "free": 8352268288,
+        "percent": 51.0,
+        "sin": 22475493376,
+        "sout": 34059624448
+      }
+    },
+    "mounts": [
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37217153024,
+        "disk_free": 9346347008,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sda6",
+        "mountpoint": "/home",
+        "fstype": "ext4",
+        "opts": "rw,relatime,data=ordered",
+        "disk_total": 185904377856,
+        "disk_used": 112462458880,
+        "disk_free": 63974850560,
+        "disk_use_percent": 63.7
+      },
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/var/lib/docker/aufs",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37217153024,
+        "disk_free": 9346347008,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sdc1",
+        "mountpoint": "/media/martijn/DATA",
+        "fstype": "fuseblk",
+        "opts": "rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096",
+        "disk_total": 2000396996608,
+        "disk_used": 1115982860288,
+        "disk_free": 884414136320,
+        "disk_use_percent": 55.8
+      }
+    ],
+    "users": [
+      {
+        "name": "martijn",
+        "terminal": "tty7",
+        "host": "localhost",
+        "started": 1623394048.0,
+        "pid": 2506
+      }
+    ]
+  },
+  "process": {
+    "return_code": 0,
+    "stdout": "[INFO]      sink:0045 >> Using Python version 3.7.3 (default, Apr 24 2019, 10:44:57) \n[GCC 5.4.0 20160609] loaded from /home/martijn/Documents/WORC3/bin/python\n[INFO]      sink:0049 >> Arguments:\ninput: ['/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_tex_0.tex', '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/__fastr_prov__.json']\noutput: ['vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/Barchart_all_0.tex', 'vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/Barchart_all_0_tex.prov.json']\ndatatype: ['TexFile', 'JsonFile']\n[INFO]      sink:0060 >> Processing /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_tex_0.tex --> vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/Barchart_all_0.tex [TexFile]\n[INFO] basepluginmanager:0078 >> Could not load plugin file /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/resources/plugins/reportingplugins/elasticsearchreporter.py\nFastrOptionalModuleNotAvailableError from /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/resources/plugins/reportingplugins/elasticsearchreporter.py line 46: Could not import the required elasticsearch for this plugin\n[INFO] basepluginmanager:0078 >> Could not load plugin file /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/resources/plugins/targetplugins/singularitytarget.py\nCould not find executable \"singularity\" on PATH: ['/home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/utils/cmd', '/home/martijn/Documents/WORC3/bin', '/home/martijn/miniconda2/bin', '/home/martijn/miniconda/bin', '/hoem/martijn/apps/elastix/bin', '/home/martijn/bin', '/home/martijn/.local/bin', '/opt/texbin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin']\n[INFO] basepluginmanager:0078 >> Could not load plugin file /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/resources/plugins/executionplugins/slurmexecution.py\nCould not find executable \"sbatch\" on PATH: ['/home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/utils/cmd', '/home/martijn/Documents/WORC3/bin', '/home/martijn/miniconda2/bin', '/home/martijn/miniconda/bin', '/hoem/martijn/apps/elastix/bin', '/home/martijn/bin', '/home/martijn/.local/bin', '/opt/texbin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin']\n[INFO]  ioplugin:0330 >> Push sink called with: /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_tex_0.tex, vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/Barchart_all_0.tex\n[INFO]  ioplugin:0340 >> Found URL contents: [('/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_tex_0.tex', 'vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/Barchart_all_0.tex')]\n[INFO]      sink:0060 >> Processing /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/__fastr_prov__.json --> vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/Barchart_all_0_tex.prov.json [JsonFile]\n[INFO]  ioplugin:0330 >> Push sink called with: /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/__fastr_prov__.json, vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/Barchart_all_0_tex.prov.json\n[INFO]  ioplugin:0340 >> Found URL contents: [('/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/__fastr_prov__.json', 'vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/Barchart_all_0_tex.prov.json')]\n",
+    "stderr": "",
+    "command": [
+      "/home/martijn/Documents/WORC3/bin/python",
+      "/home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/utils/cmd/sink.py",
+      "--input",
+      "/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_tex_0.tex",
+      "/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/__fastr_prov__.json",
+      "--output",
+      "vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/Barchart_all_0.tex",
+      "vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/Barchart_all_0_tex.prov.json",
+      "--datatype",
+      "TexFile",
+      "JsonFile"
+    ],
+    "resource_usage": [
+      {
+        "timestamp": "2021-07-03T13:33:18.347780",
+        "cpu_percent": 115.8,
+        "vmem": 569655296,
+        "rmem": 78798848,
+        "read_bytes": 0,
+        "write_bytes": 4096
+      },
+      {
+        "timestamp": "2021-07-03T13:33:19.349018",
+        "cpu_percent": 85.9,
+        "vmem": 0,
+        "rmem": 0,
+        "read_bytes": null,
+        "write_bytes": null
+      }
+    ],
+    "time_elapsed": 2.0117805004119873
+  },
+  "sysinfo_end": {
+    "cpu_usage": {
+      "user": 245584.35,
+      "nice": 768.89,
+      "system": 236254.08,
+      "idle": 14769667.75,
+      "iowait": 9159.81,
+      "irq": 0.0,
+      "softirq": 1682.53,
+      "steal": 0.0,
+      "guest": 0.0,
+      "guest_nice": 0.0,
+      "percent": 20.6
+    },
+    "memory_usage": {
+      "virtual": {
+        "total": 16701530112,
+        "available": 3393105920,
+        "percent": 79.7,
+        "used": 12365082624,
+        "free": 2815365120,
+        "active": 3060899840,
+        "inactive": 1451073536,
+        "buffers": 64864256,
+        "cached": 1456218112,
+        "shared": 596733952,
+        "slab": 451813376
+      },
+      "swap": {
+        "total": 17052987392,
+        "used": 8700096512,
+        "free": 8352890880,
+        "percent": 51.0,
+        "sin": 22476099584,
+        "sout": 34059624448
+      }
+    },
+    "mounts": [
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37217153024,
+        "disk_free": 9346347008,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sda6",
+        "mountpoint": "/home",
+        "fstype": "ext4",
+        "opts": "rw,relatime,data=ordered",
+        "disk_total": 185904377856,
+        "disk_used": 112465240064,
+        "disk_free": 63972069376,
+        "disk_use_percent": 63.7
+      },
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/var/lib/docker/aufs",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37217153024,
+        "disk_free": 9346347008,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sdc1",
+        "mountpoint": "/media/martijn/DATA",
+        "fstype": "fuseblk",
+        "opts": "rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096",
+        "disk_total": 2000396996608,
+        "disk_used": 1115982860288,
+        "disk_free": 884414136320,
+        "disk_use_percent": 55.8
+      }
+    ],
+    "users": [
+      {
+        "name": "martijn",
+        "terminal": "tty7",
+        "host": "localhost",
+        "started": 1623394048.0,
+        "pid": 2506
+      }
+    ]
+  }
+}

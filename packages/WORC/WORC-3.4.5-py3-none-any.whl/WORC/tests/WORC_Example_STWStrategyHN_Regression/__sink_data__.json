@@ -1,0 +1,70 @@
+{
+  "config_classification_sink": {
+    "id_0": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "BoxplotsFeatures_Zip": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "RankedPosteriors_Zip": {
+    "all": {
+      "status": "JobState.cancelled",
+      "errors": [
+        [
+          "WORC_Example_STWStrategyHN_Regression___plot_ranked_posteriors___all",
+          "JobState.failed",
+          "Encountered error: [FastrOutputValidationError] Output value [ZipFile] \"vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/plot_ranked_posteriors/all/output_zip_0.zip\" not valid for datatype \"'ZipFile'\" (/home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py:1148)",
+          "./plot_ranked_posteriors/all/__fastr_result__.yaml"
+        ]
+      ]
+    }
+  },
+  "RankedPosteriors_CSV": {
+    "all": {
+      "status": "JobState.cancelled",
+      "errors": [
+        [
+          "WORC_Example_STWStrategyHN_Regression___plot_ranked_posteriors___all",
+          "JobState.failed",
+          "Encountered error: [FastrOutputValidationError] Output value [ZipFile] \"vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/plot_ranked_posteriors/all/output_zip_0.zip\" not valid for datatype \"'ZipFile'\" (/home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py:1148)",
+          "./plot_ranked_posteriors/all/__fastr_result__.yaml"
+        ]
+      ]
+    }
+  },
+  "classification": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "Hyperparameters_CSV": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "performance": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "Barchart_PNG": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "Barchart_Tex": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  }
+}

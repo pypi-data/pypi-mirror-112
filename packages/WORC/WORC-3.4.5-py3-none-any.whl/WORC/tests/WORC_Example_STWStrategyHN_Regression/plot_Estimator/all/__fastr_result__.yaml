@@ -1,0 +1,110 @@
+network_id: WORC_Example_STWStrategyHN_Regression
+network_version: '0.0'
+run_id: WORC_Example_STWStrategyHN_Regression_2021-07-03T12-17-25
+node_id: plot_Estimator
+node_global_id: fastr:///networks/WORC_Example_STWStrategyHN_Regression/0.0/runs/WORC_Example_STWStrategyHN_Regression_2021-07-03T12-17-25/nodelist/plot_Estimator
+tool_id: worc/PlotEstimator:1.0
+tool_version: '1.0'
+sample_id:
+- all
+sample_index:
+- 0
+fastr_version: 3.2.3_tags/3.2.3^0_2ed88fe2
+network_tmpurl: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression
+hold_jobs:
+- WORC_Example_STWStrategyHN_Regression___classify___all
+timestamp: '2021-07-03T10:17:35.085682'
+preferred_types:
+  output_json:
+  - NiftiImageFileCompressed
+errors: []
+input_hash:
+  prediction:
+  - 83f008267ca70d2d266bc2da58353a32
+  pinfo:
+  - a80cf11c590b2f185ec62ad505bc0608
+  ensemble:
+  - c4ca4238a0b923820dcc509a6f75849b
+  label_type:
+  - 9d8d2d5ab12b515182a505f54db7f538
+output_hash:
+  output_json:
+  - 8b678b90fb7ee05bfb1849fc27032473
+status_list:
+- timestamp: '2021-07-03T10:17:35.085695'
+  status: created
+- timestamp: '2021-07-03T10:17:35.178510'
+  status: hold
+- timestamp: '2021-07-03T10:22:34.906558'
+  status: queued
+- timestamp: '2021-07-03T10:22:37.271356'
+  status: running
+- timestamp: '2021-07-03T10:22:42.673399'
+  status: execution_done
+output_data:
+  output_json:
+  - id: JsonFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/plot_Estimator/all/output_json_0.json
+input_arguments:
+  prediction:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: Deferred
+        format: null
+        value: val://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/classify/all/__fastr_result__.yaml?outputname=classification&nr=0
+    jobs:
+    - WORC_Example_STWStrategyHN_Regression___classify___all
+    failed_annotations: []
+  pinfo:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: PatientInfoFile
+        format: null
+        value: /home/martijn/git/WORCTutorial/Data/Examplefiles/pinfo_HN.csv
+    jobs: []
+    failed_annotations: []
+  ensemble:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: '1'
+    jobs: []
+    failed_annotations: []
+  label_type:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: Age
+    jobs: []
+    failed_annotations: []
+output_arguments:
+  output_json:
+    id: output_json
+    cardinality: 1
+    datatype: JsonFile
+    requested: true
+__class__: fastr.execution.job.Job
+__fastr_version__: 3.2.3_tags/3.2.3^0_2ed88fe2

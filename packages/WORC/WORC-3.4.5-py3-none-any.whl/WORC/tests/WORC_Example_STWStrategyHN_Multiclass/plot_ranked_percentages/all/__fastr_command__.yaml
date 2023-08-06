@@ -1,0 +1,132 @@
+network_id: WORC_Example_STWStrategyHN_Multiclass
+network_version: '0.0'
+run_id: WORC_Example_STWStrategyHN_Multiclass_2021-07-03T15-24-25
+node_id: plot_ranked_percentages
+node_global_id: fastr:///networks/WORC_Example_STWStrategyHN_Multiclass/0.0/runs/WORC_Example_STWStrategyHN_Multiclass_2021-07-03T15-24-25/nodelist/plot_ranked_percentages
+tool_id: worc/PlotRankedScores:1.0
+tool_version: '1.0'
+sample_id:
+- all
+sample_index:
+- 0
+fastr_version: 3.2.3_tags/3.2.3^0_2ed88fe2
+network_tmpurl: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass
+hold_jobs:
+- WORC_Example_STWStrategyHN_Multiclass___classify___all
+timestamp: '2021-07-03T13:24:34.163419'
+preferred_types:
+  output_zip:
+  - NiftiImageFileCompressed
+  output_csv:
+  - NiftiImageFileCompressed
+errors: []
+input_hash: {}
+output_hash: {}
+status_list:
+- timestamp: '2021-07-03T13:24:34.163441'
+  status: created
+- timestamp: '2021-07-03T13:24:34.300290'
+  status: hold
+- timestamp: '2021-07-03T13:31:51.022000'
+  status: queued
+output_data: {}
+input_arguments:
+  estimator:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: Deferred
+        format:
+        value: val://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/classify/all/__fastr_result__.yaml?outputname=classification&nr=0
+    jobs:
+    - WORC_Example_STWStrategyHN_Multiclass___classify___all
+    failed_annotations: []
+  pinfo:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: PatientInfoFile
+        format:
+        value: /home/martijn/git/WORCTutorial/Data/Examplefiles/pinfo_HN.csv
+    jobs: []
+    failed_annotations: []
+  ensemble:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format:
+        value: '1'
+    jobs: []
+    failed_annotations: []
+  label_type:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format:
+        value: imaginary_label_1, complement_label_1
+    jobs: []
+    failed_annotations: []
+  scores:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format:
+        value: percentages
+    jobs: []
+    failed_annotations: []
+  images:
+    index:
+    - 0
+    id:
+    - __EMPTY__
+    data:
+    - SampleValue
+    - {}
+    jobs: []
+    failed_annotations: []
+  segmentations:
+    index:
+    - 0
+    id:
+    - __EMPTY__
+    data:
+    - SampleValue
+    - {}
+    jobs: []
+    failed_annotations: []
+output_arguments:
+  output_zip:
+    id: output_zip
+    cardinality: 1
+    datatype: ZipFile
+    requested: true
+  output_csv:
+    id: output_csv
+    cardinality: 1
+    datatype: CSVFile
+    requested: true
+__class__: fastr.execution.job.Job
+__fastr_version__: 3.2.3_tags/3.2.3^0_2ed88fe2

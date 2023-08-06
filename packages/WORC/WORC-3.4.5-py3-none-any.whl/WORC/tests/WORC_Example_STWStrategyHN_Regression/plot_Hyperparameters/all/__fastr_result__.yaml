@@ -1,0 +1,95 @@
+network_id: WORC_Example_STWStrategyHN_Regression
+network_version: '0.0'
+run_id: WORC_Example_STWStrategyHN_Regression_2021-07-03T12-17-25
+node_id: plot_Hyperparameters
+node_global_id: fastr:///networks/WORC_Example_STWStrategyHN_Regression/0.0/runs/WORC_Example_STWStrategyHN_Regression_2021-07-03T12-17-25/nodelist/plot_Hyperparameters
+tool_id: worc/PlotHyperparameters:1.0
+tool_version: '1.0'
+sample_id:
+- all
+sample_index:
+- 0
+fastr_version: 3.2.3_tags/3.2.3^0_2ed88fe2
+network_tmpurl: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression
+hold_jobs:
+- WORC_Example_STWStrategyHN_Regression___classify___all
+timestamp: '2021-07-03T10:17:35.101130'
+preferred_types:
+  output_csv:
+  - NiftiImageFileCompressed
+errors: []
+input_hash:
+  prediction:
+  - 83f008267ca70d2d266bc2da58353a32
+  estimators:
+  - c4ca4238a0b923820dcc509a6f75849b
+  label_type:
+  - 9d8d2d5ab12b515182a505f54db7f538
+output_hash:
+  output_csv:
+  - dc045f347995e3e6e78410c6b5c41ded
+status_list:
+- timestamp: '2021-07-03T10:17:35.101148'
+  status: created
+- timestamp: '2021-07-03T10:17:35.207119'
+  status: hold
+- timestamp: '2021-07-03T10:22:34.946589'
+  status: queued
+- timestamp: '2021-07-03T10:22:45.611975'
+  status: running
+- timestamp: '2021-07-03T10:22:51.827153'
+  status: execution_done
+output_data:
+  output_csv:
+  - id: CSVFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/plot_Hyperparameters/all/output_csv_0.csv
+input_arguments:
+  prediction:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: Deferred
+        format: null
+        value: val://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/classify/all/__fastr_result__.yaml?outputname=classification&nr=0
+    jobs:
+    - WORC_Example_STWStrategyHN_Regression___classify___all
+    failed_annotations: []
+  estimators:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: '1'
+    jobs: []
+    failed_annotations: []
+  label_type:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: Age
+    jobs: []
+    failed_annotations: []
+output_arguments:
+  output_csv:
+    id: output_csv
+    cardinality: 1
+    datatype: CSVFile
+    requested: true
+__class__: fastr.execution.job.Job
+__fastr_version__: 3.2.3_tags/3.2.3^0_2ed88fe2

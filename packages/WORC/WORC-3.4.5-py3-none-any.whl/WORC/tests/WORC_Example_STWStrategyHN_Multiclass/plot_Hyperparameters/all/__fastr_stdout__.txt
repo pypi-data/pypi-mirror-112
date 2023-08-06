@@ -1,0 +1,63 @@
+=== Loading Fastr execution script  ===
+Using python 3.7.3 (default, Apr 24 2019, 10:44:57) 
+[GCC 5.4.0 20160609] loaded from /home/martijn/Documents/WORC3/bin/python
+[INFO] executionscript:0148 >> ----- Execution script -----
+
+[INFO] executionscript:0160 >> Loading pickled command from file
+[INFO] executionscript:0164 >> Finished loading pickle in 0.361315 seconds
+[INFO] executionscript:0176 >> Received command: <Job
+  id=WORC_Example_STWStrategyHN_Multiclass___plot_Hyperparameters___all
+  tool=worc/PlotHyperparameters:1.0 1.0
+  tmpdir=vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Hyperparameters/all/>
+
+[INFO] executionscript:0055 >> Using Python 3.7.3 (default, Apr 24 2019, 10:44:57) 
+[GCC 5.4.0 20160609]
+[INFO] executionscript:0056 >> FASTR loaded from /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/__init__.py
+[INFO] executionscript:0057 >> version: 3.2.3_tags/3.2.3^0_2ed88fe2
+[INFO] executionscript:0058 >> Start time: 2021-07-03 15:31:58.082821
+[INFO] executionscript:0061 >> Job log path: /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Hyperparameters/all/__fastr_result__.yaml
+[INFO] executionscript:0064 >> Running job WORC_Example_STWStrategyHN_Multiclass___plot_Hyperparameters___all
+  command: worc/PlotHyperparameters:1.0 v1.0
+  arguments: {'prediction': <SampleItem index=(0), id=all>, 'estimators': <SampleItem index=(0), id=id_0>, 'label_type': <SampleItem index=(0), id=id_0>}
+  outputs: {'output_csv': {'id': 'output_csv', 'cardinality': 1, 'datatype': 'CSVFile', 'requested': True}}
+
+[INFO] executionscript:0075 >> No old result, executing job
+[INFO] basepluginmanager:0078 >> Could not load plugin file /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/resources/plugins/reportingplugins/elasticsearchreporter.py
+FastrOptionalModuleNotAvailableError from /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/resources/plugins/reportingplugins/elasticsearchreporter.py line 46: Could not import the required elasticsearch for this plugin
+[INFO] executionscript:0084 >> DRMAA info: {'jobid': None, 'taskid': None, 'jobname': None}
+[INFO] executionscript:0086 >> Writing intermediate job info to: /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Hyperparameters/all/__fastr_result__.yaml
+[INFO]       job:0767 >> Set current directory to job output dir /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Hyperparameters/all
+[INFO]       job:0782 >> Start executing tool
+[INFO]       job:0786 >> Finished creating payload in 0.00051 seconds
+[INFO]       job:0789 >> Start executing tool
+[INFO] localbinarytarget:0154 >> Changing bin/
+[INFO]      tool:0387 >> Target is <Plugin: LocalBinaryTarget>
+[INFO]      tool:0396 >> Using payload: {'inputs': {'prediction': (<HDF5: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/classify/all/classification_0.hdf5'>,), 'estimators': (<String: '1'>,), 'label_type': (<String: 'imaginary_label_1, complement_label_1'>,)}, 'outputs': {'output_csv': (<CSVFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Hyperparameters/all/output_csv_0.csv'>,)}}
+[INFO] localbinarytarget:0202 >> Adding extra PATH: ['/home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin']
+[INFO] fastrinterface:0469 >> Execution payload: {'inputs': {'prediction': (<HDF5: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/classify/all/classification_0.hdf5'>,), 'estimators': (<String: '1'>,), 'label_type': (<String: 'imaginary_label_1, complement_label_1'>,)}, 'outputs': {'output_csv': (<CSVFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Hyperparameters/all/output_csv_0.csv'>,)}}
+[INFO] fastrinterface:0566 >> Adding (<HDF5: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/classify/all/classification_0.hdf5'>,) to argument list based on <fastrinterface.InputParameterDescription object at 0x7f821c3e81d0>
+[INFO] fastrinterface:0566 >> Adding (<CSVFile: '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Hyperparameters/all/output_csv_0.csv'>,) to argument list based on <fastrinterface.OutputParameterDescription object at 0x7f821c3e8dd8>
+[INFO] fastrinterface:0566 >> Adding (<String: '1'>,) to argument list based on <fastrinterface.InputParameterDescription object at 0x7f821c3e86a0>
+[INFO] fastrinterface:0566 >> Adding (<String: 'imaginary_label_1, complement_label_1'>,) to argument list based on <fastrinterface.InputParameterDescription object at 0x7f821c3e8be0>
+[INFO] localbinarytarget:0261 >> Options: ['/home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin']
+[INFO]    target:0184 >> Calling command arguments: ['python', '/home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin/PlotHyperparameters.py', '--prediction', '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/classify/all/classification_0.hdf5', '--output_csv', '/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Hyperparameters/all/output_csv_0.csv', '--estimators', '1', '--label_type', 'imaginary_label_1, complement_label_1']
+[INFO]    target:0188 >> Calling command: python /home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin/PlotHyperparameters.py --prediction /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/classify/all/classification_0.hdf5 --output_csv /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Hyperparameters/all/output_csv_0.csv --estimators 1 --label_type 'imaginary_label_1, complement_label_1'
+[INFO] fastrinterface:0476 >> Collecting results
+[INFO]       job:0793 >> Finished executing tool in 3.021751 seconds
+[INFO]       job:0813 >> Start translating results tool
+[INFO]       job:0817 >> Finished translating results in 0.000319 seconds
+[INFO]       job:0823 >> Resetting current directory to /home/martijn/git/WORC/WORC/tests
+[INFO]       job:1152 >> Data for output output_csv is valid
+[INFO] executionscript:0092 >> Job subprocess finished
+[INFO] executionscript:0095 >> Start hashing results
+[INFO] executionscript:0099 >> Finished hashing results in 0.000146 seconds
+[INFO] executionscript:0100 >> try end time: 2021-07-03 15:32:02.100647
+[INFO] executionscript:0123 >> Execution finished normally.
+[INFO] executionscript:0126 >> Writing job result to: /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Hyperparameters/all/__fastr_result__.yaml
+[INFO] basepluginmanager:0078 >> Could not load plugin file /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/resources/plugins/targetplugins/singularitytarget.py
+Could not find executable "singularity" on PATH: ['/home/martijn/Documents/WORC3/bin', '/home/martijn/miniconda2/bin', '/home/martijn/miniconda/bin', '/hoem/martijn/apps/elastix/bin', '/home/martijn/bin', '/home/martijn/.local/bin', '/opt/texbin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin']
+[INFO] basepluginmanager:0078 >> Could not load plugin file /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/resources/plugins/executionplugins/slurmexecution.py
+Could not find executable "sbatch" on PATH: ['/home/martijn/Documents/WORC3/bin', '/home/martijn/miniconda2/bin', '/home/martijn/miniconda/bin', '/hoem/martijn/apps/elastix/bin', '/home/martijn/bin', '/home/martijn/.local/bin', '/opt/texbin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin']
+[INFO] executionscript:0135 >> End time: 2021-07-03 15:32:02.729818
+[INFO] executionscript:0183 >> ---------------------------
+

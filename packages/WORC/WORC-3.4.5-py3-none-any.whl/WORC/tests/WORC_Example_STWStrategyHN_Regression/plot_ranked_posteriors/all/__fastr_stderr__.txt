@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py", line 89, in execute_job
+    job.execute()
+  File "/home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py", line 827, in execute
+    raise exceptions.FastrValueError('Output values are not valid!')
+fastr.exceptions.FastrValueError: [WORC_Example_STWStrategyHN_Regression___plot_ranked_posteriors___all] FastrValueError from /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py line 827: Output values are not valid!

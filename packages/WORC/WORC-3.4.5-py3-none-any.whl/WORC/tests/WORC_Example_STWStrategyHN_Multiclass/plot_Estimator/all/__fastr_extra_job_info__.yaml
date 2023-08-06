@@ -1,0 +1,347 @@
+{
+  "id": "WORC_Example_STWStrategyHN_Multiclass___plot_Estimator___all",
+  "hostinfo": {
+    "os": {
+      "system": "Linux",
+      "is64bits": 1,
+      "maxsize": 9223372036854775807,
+      "version": {
+        "distname": "Ubuntu",
+        "version": "16.04",
+        "codename": "Xenial Xerus",
+        "libc": {
+          "libname": "glibc",
+          "version": "2.17"
+        }
+      }
+    },
+    "uname": [
+      "Linux",
+      "martijn-HP-EliteDesk-800-G2-SFF",
+      "4.4.0-210-generic",
+      "#242-Ubuntu SMP Fri Apr 16 09:57:56 UTC 2021",
+      "x86_64",
+      "x86_64"
+    ],
+    "username": "martijn",
+    "cwd": "/home/martijn/git/WORC/WORC/tests",
+    "python": {
+      "version": "3.7.3",
+      "branch": "",
+      "compiler": "GCC 5.4.0 20160609",
+      "implementation": "CPython",
+      "revision": ""
+    },
+    "envvar": {
+      "XDG_VTNR": "7",
+      "LC_PAPER": "nl_NL.UTF-8",
+      "LC_ADDRESS": "nl_NL.UTF-8",
+      "XDG_SESSION_ID": "c3",
+      "XDG_GREETER_DATA_DIR": "/var/lib/lightdm-data/martijn",
+      "LC_MONETARY": "nl_NL.UTF-8",
+      "CLUTTER_IM_MODULE": "xim",
+      "SESSION": "ubuntu",
+      "GPG_AGENT_INFO": "/home/martijn/.gnupg/S.gpg-agent:0:1",
+      "GUACAMOLE_HOME": "/home/martijn/apps/guacamolehome",
+      "TERM": "xterm-256color",
+      "VTE_VERSION": "4205",
+      "XDG_MENU_PREFIX": "gnome-",
+      "SHELL": "/bin/bash",
+      "CATALINA_HOME": "/usr/share/tomcat7",
+      "DERBY_HOME": "/usr/lib/jvm/java-8-oracle/db",
+      "QT_LINUX_ACCESSIBILITY_ALWAYS_ON": "1",
+      "WINDOWID": "127926454",
+      "LC_NUMERIC": "nl_NL.UTF-8",
+      "OLDPWD": "/home/martijn/git/WORC",
+      "UPSTART_SESSION": "unix:abstract=/com/ubuntu/upstart-session/1000/2506",
+      "GNOME_KEYRING_CONTROL": "",
+      "GTK_MODULES": "gail:atk-bridge:unity-gtk-module",
+      "USER": "martijn",
+      "JRE_HOME": "/usr/lib/jvm/java-8-oracle/jre",
+      "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+      "LC_TELEPHONE": "nl_NL.UTF-8",
+      "QT_ACCESSIBILITY": "1",
+      "LD_LIBRARY_PATH": "/home/martijn/apps/dip/Linuxa64/lib/::/home/martijn/apps/dip/Linuxa64/lib:/home/martijn/apps/elastix/lib",
+      "XDG_SESSION_PATH": "/org/freedesktop/DisplayManager/Session0",
+      "UNITY_HAS_3D_SUPPORT": "true",
+      "XDG_SEAT_PATH": "/org/freedesktop/DisplayManager/Seat0",
+      "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+      "DEFAULTS_PATH": "/usr/share/gconf/ubuntu.default.path",
+      "VIRTUAL_ENV": "/home/martijn/Documents/WORC3",
+      "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg",
+      "UNITY_DEFAULT_PROFILE": "unity",
+      "DESKTOP_SESSION": "ubuntu",
+      "PATH": "/home/martijn/Documents/WORC3/bin:/home/martijn/miniconda2/bin:/home/martijn/miniconda/bin:/hoem/martijn/apps/elastix/bin:/home/martijn/bin:/home/martijn/.local/bin:/opt/texbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin",
+      "QT_IM_MODULE": "ibus",
+      "QT_QPA_PLATFORMTHEME": "appmenu-qt5",
+      "LC_IDENTIFICATION": "nl_NL.UTF-8",
+      "XDG_SESSION_TYPE": "x11",
+      "PWD": "/home/martijn/git/WORC/WORC/tests",
+      "JOB": "unity-settings-daemon",
+      "XMODIFIERS": "@im=ibus",
+      "JAVA_HOME": "/usr/lib/jvm/java-8-oracle",
+      "GNOME_KEYRING_PID": "",
+      "LANG": "en_US.UTF-8",
+      "GDM_LANG": "en_US",
+      "MANDATORY_PATH": "/usr/share/gconf/ubuntu.mandatory.path",
+      "LC_MEASUREMENT": "nl_NL.UTF-8",
+      "COMPIZ_CONFIG_PROFILE": "ubuntu",
+      "IM_CONFIG_PHASE": "1",
+      "PS1": "(WORC3) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ ",
+      "GDMSESSION": "ubuntu",
+      "SESSIONTYPE": "gnome-session",
+      "GTK2_MODULES": "overlay-scrollbar",
+      "SHLVL": "1",
+      "HOME": "/home/martijn",
+      "XDG_SEAT": "seat0",
+      "LANGUAGE": "en_US",
+      "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+      "UPSTART_INSTANCE": "",
+      "PYTHONPATH": ":/home/martijn/git/PySNAP:/home/taskman/taskmanager/taskmanager/taskmanager:/home/taskman/taskmanager/taskmanager/taskmanager:/home/martijn/git/Taskclient:/home/martijn/git/RadTools:/media/martijn/DATA/Software/caffe-master/python:/home/martijn/git/DicomSorter:/home/martijn/git/XNATExplorer:/home/martijn/git/imgaug:/home/martijn/git/phasepack:/home/martijn/git/PREDICTFastr/PREDICT:/home/martijn/git/DicomSorter",
+      "UPSTART_EVENTS": "xsession started",
+      "XDG_SESSION_DESKTOP": "ubuntu",
+      "LOGNAME": "martijn",
+      "COMPIZ_BIN_PATH": "/usr/bin/",
+      "DBUS_SESSION_BUS_ADDRESS": "unix:abstract=/tmp/dbus-gy6EXjV9H7",
+      "J2SDKDIR": "/usr/lib/jvm/java-8-oracle",
+      "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/var/lib/snapd/desktop",
+      "QT4_IM_MODULE": "xim",
+      "LESSOPEN": "| /usr/bin/lesspipe %s",
+      "INSTANCE": "",
+      "UPSTART_JOB": "unity7",
+      "XDG_RUNTIME_DIR": "/run/user/1000",
+      "DISPLAY": ":0",
+      "XDG_CURRENT_DESKTOP": "Unity",
+      "GTK_IM_MODULE": "ibus",
+      "J2REDIR": "/usr/lib/jvm/java-8-oracle/jre",
+      "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+      "LC_TIME": "nl_NL.UTF-8",
+      "LC_NAME": "nl_NL.UTF-8",
+      "XAUTHORITY": "/home/martijn/.Xauthority",
+      "_": "/home/martijn/Documents/WORC3/bin/python",
+      "KMP_DUPLICATE_LIB_OK": "True",
+      "KMP_INIT_AT_FORK": "FALSE"
+    },
+    "drmaa": {
+      "jobid": null,
+      "taskid": null,
+      "jobname": null
+    }
+  },
+  "sysinfo_start": {
+    "cpu_usage": {
+      "user": 245433.36,
+      "nice": 768.87,
+      "system": 236232.16,
+      "idle": 14769161.99,
+      "iowait": 9144.53,
+      "irq": 0.0,
+      "softirq": 1681.93,
+      "steal": 0.0,
+      "guest": 0.0,
+      "guest_nice": 0.0,
+      "percent": 46.2
+    },
+    "memory_usage": {
+      "virtual": {
+        "total": 16701530112,
+        "available": 2534244352,
+        "percent": 84.8,
+        "used": 13095206912,
+        "free": 1213440000,
+        "active": 3577073664,
+        "inactive": 2528604160,
+        "buffers": 121745408,
+        "cached": 2271137792,
+        "shared": 725213184,
+        "slab": 455168000
+      },
+      "swap": {
+        "total": 17052987392,
+        "used": 8259981312,
+        "free": 8793006080,
+        "percent": 48.4,
+        "sin": 22361202688,
+        "sout": 33350627328
+      }
+    },
+    "mounts": [
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37217038336,
+        "disk_free": 9346461696,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sda6",
+        "mountpoint": "/home",
+        "fstype": "ext4",
+        "opts": "rw,relatime,data=ordered",
+        "disk_total": 185904377856,
+        "disk_used": 112456392704,
+        "disk_free": 63980916736,
+        "disk_use_percent": 63.7
+      },
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/var/lib/docker/aufs",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37217038336,
+        "disk_free": 9346461696,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sdc1",
+        "mountpoint": "/media/martijn/DATA",
+        "fstype": "fuseblk",
+        "opts": "rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096",
+        "disk_total": 2000396996608,
+        "disk_used": 1115982860288,
+        "disk_free": 884414136320,
+        "disk_use_percent": 55.8
+      }
+    ],
+    "users": [
+      {
+        "name": "martijn",
+        "terminal": "tty7",
+        "host": "localhost",
+        "started": 1623394048.0,
+        "pid": 2506
+      }
+    ]
+  },
+  "process": {
+    "return_code": 0,
+    "stdout": "[WARNING]  warnings:0110 >> /home/martijn/Documents/WORC3/lib/python3.7/site-packages/WORC/processing/label_processing.py:126: ParserWarning: Falling back to the 'python' engine because the 'c' engine does not support sep=None with delim_whitespace=False; you can avoid this warning by specifying engine='python'.\n  data = pd.read_csv(input_file, sep=None, header=0)\n\nLabel names to extract: ['imaginary_label_1', 'complement_label_1']\n[WORC Warning] Support for multiple label types not supported yet. Taking first label for plot_estimator_performance.\n\n\nCross-validation 1 / 3.\nCreating ensemble using top 1 individual classifiers.\nRefitting estimator 1 / 1.\n\n\nTruth: [[0. 1.]\n [1. 0.]\n [0. 1.]\n [1. 0.]]\nPrediction: [[1. 0.]\n [1. 0.]\n [1. 0.]\n [1. 0.]]\nScore: [[0.7078077  0.26448254]\n [0.70667926 0.26602414]\n [0.64700716 0.35692375]\n [0.65537904 0.34042413]]\nComputing performance statistics.\n[WARNING]  warnings:0110 >> /home/martijn/Documents/WORC3/lib/python3.7/site-packages/WORC/classification/metrics.py:184: RuntimeWarning: invalid value encountered in true_divide\n  Precision = TP/(TP+FP)\n\n[WARNING]  warnings:0110 >> /home/martijn/Documents/WORC3/lib/python3.7/site-packages/WORC/classification/metrics.py:189: RuntimeWarning: invalid value encountered in true_divide\n  NPV = TN/(TN+FN)\n\nAUC: 0.5\n\n\nCross-validation 2 / 3.\nCreating ensemble using top 1 individual classifiers.\nRefitting estimator 1 / 1.\n\n\nTruth: [[0. 1.]\n [0. 1.]\n [1. 0.]\n [1. 0.]]\nPrediction: [[1. 0.]\n [1. 0.]\n [1. 0.]\n [1. 0.]]\nScore: [[0.87773422 0.13507528]\n [0.64515826 0.30719148]\n [0.50591915 0.40347016]\n [0.82224636 0.17843277]]\nComputing performance statistics.\n[WARNING]  warnings:0110 >> /home/martijn/Documents/WORC3/lib/python3.7/site-packages/WORC/classification/metrics.py:184: RuntimeWarning: invalid value encountered in true_divide\n  Precision = TP/(TP+FP)\n\n[WARNING]  warnings:0110 >> /home/martijn/Documents/WORC3/lib/python3.7/site-packages/WORC/classification/metrics.py:189: RuntimeWarning: invalid value encountered in true_divide\n  NPV = TN/(TN+FN)\n\nAUC: 0.25\n\n\nCross-validation 3 / 3.\nCreating ensemble using top 1 individual classifiers.\nRefitting estimator 1 / 1.\n\n\nTruth: [[0. 1.]\n [0. 1.]\n [1. 0.]\n [1. 0.]]\nPrediction: [[1. 0.]\n [1. 0.]\n [0. 1.]\n [1. 0.]]\nScore: [[0.77579822 0.66615752]\n [0.70353439 0.5       ]\n [0.87904226 0.88439738]\n [0.53414669 0.21240949]]\nComputing performance statistics.\nAUC: 0.5\n[[1.0, 1.0, 0.5], [0.0, 0.0, 0.0]]\nAlways Wrong: HN1004, label 0.0.\nAlways Right: HN1146, label 1.0.\nAlways Wrong: HN1331, label 0.0.\nAlways Right: HN1372, label 1.0.\nAlways Wrong: HN1077, label 0.0.\nAlways Wrong: HN1342, label 0.0.\nAlways Right: HN1524, label 1.0.\nAlways Wrong: HN1339, label 0.0.\nAlways Wrong: HN1519, label 1.0.\nAlways Right: HN1560, label 1.0.\nAUC 95%: : 0.4166666666666667 (-0.05765621255076636, 0.8909895458840997).\nAUC_complement_label_1 95%: : 0.4444444444444444 (-5.951883493127032, 6.396327937571477).\nAUC_imaginary_label_1 95%: : 0.0 (-5.951883493127032, 6.396327937571477).\nAccuracy 95%: : 0.4166666666666667 (-0.05765621255076636, 0.8909895458840997).\nAccuracy_complement_label_1 95%: : 0.4166666666666667 (-2.7598845174413573, 3.5932178507746904).\nAccuracy_imaginary_label_1 95%: : 0.4166666666666667 (-2.7598845174413573, 3.5932178507746904).\nAverage Accuracy 95%: : 0.4166666666666667 (-0.05765621255076636, 0.8909895458840997).\nBCA_complement_label_1 95%: : 0.4166666666666667 (-2.7598845174413573, 3.5932178507746904).\nBCA_imaginary_label_1 95%: : 0.4166666666666667 (-2.7598845174413573, 3.5932178507746904).\nF1-score 95%: : 0.2888888888888889 (0.0359166866395913, 0.5418610911381865).\nF1-score_complement_label_1 95%: : 0.0 (-5.951883493127032, 6.396327937571477).\nF1-score_imaginary_label_1 95%: : 0.4444444444444444 (-5.951883493127032, 6.396327937571477).\nNPV 95%: : 0.2222222222222222 (0.06411459581641113, 0.3803298486280333).\nNPV_complement_label_1 95%: : 0.2888888888888889 (-1.40527174263539, 1.983049520413168).\nNPV_imaginary_label_1 95%: : 0.2888888888888889 (-1.40527174263539, 1.983049520413168).\nPrecision 95%: : 0.2222222222222222 (0.06411459581641113, 0.3803298486280333).\nPrecision_complement_label_1 95%: : 0.4166666666666667 (-2.7598845174413573, 3.5932178507746904).\nPrecision_imaginary_label_1 95%: : 0.4166666666666667 (-2.7598845174413573, 3.5932178507746904).\nSensitivity 95%: : 0.4166666666666667 (-0.05765621255076636, 0.8909895458840997).\nSensitivity_complement_label_1 95%: : 0.0 (-11.679279871998355, 12.512613205331688).\nSensitivity_imaginary_label_1 95%: : 0.8333333333333334 (-11.679279871998355, 12.512613205331688).\nSpecificity 95%: : 0.4166666666666667 (-0.05765621255076636, 0.8909895458840997).\nSpecificity_complement_label_1 95%: : 0.8333333333333334 (-11.679279871998355, 12.512613205331688).\nSpecificity_imaginary_label_1 95%: : 0.0 (-11.679279871998355, 12.512613205331688).\n",
+    "stderr": "",
+    "command": [
+      "python",
+      "/home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin/PlotEstimator.py",
+      "--prediction",
+      "/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/classify/all/classification_0.hdf5",
+      "--output_json",
+      "/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Estimator/all/output_json_0.json",
+      "--pinfo",
+      "/home/martijn/git/WORCTutorial/Data/Examplefiles/pinfo_HN.csv",
+      "--ensemble",
+      "1",
+      "--label_type",
+      "imaginary_label_1, complement_label_1"
+    ],
+    "resource_usage": [
+      {
+        "timestamp": "2021-07-03T13:31:54.297199",
+        "cpu_percent": 97.9,
+        "vmem": 398581760,
+        "rmem": 64589824,
+        "read_bytes": 4096,
+        "write_bytes": 4096
+      },
+      {
+        "timestamp": "2021-07-03T13:31:55.298357",
+        "cpu_percent": 133.8,
+        "vmem": 1791696896,
+        "rmem": 287035392,
+        "read_bytes": 4096,
+        "write_bytes": 4096
+      }
+    ],
+    "time_elapsed": 2.7448325157165527
+  },
+  "sysinfo_end": {
+    "cpu_usage": {
+      "user": 245442.26,
+      "nice": 768.88,
+      "system": 236233.37,
+      "idle": 14769176.67,
+      "iowait": 9144.55,
+      "irq": 0.0,
+      "softirq": 1681.94,
+      "steal": 0.0,
+      "guest": 0.0,
+      "guest_nice": 0.0,
+      "percent": 40.8
+    },
+    "memory_usage": {
+      "virtual": {
+        "total": 16701530112,
+        "available": 2543194112,
+        "percent": 84.8,
+        "used": 13086994432,
+        "free": 1220231168,
+        "active": 3569188864,
+        "inactive": 2529513472,
+        "buffers": 121819136,
+        "cached": 2272485376,
+        "shared": 724901888,
+        "slab": 455733248
+      },
+      "swap": {
+        "total": 17052987392,
+        "used": 8259846144,
+        "free": 8793141248,
+        "percent": 48.4,
+        "sin": 22361333760,
+        "sout": 33350627328
+      }
+    },
+    "mounts": [
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37217038336,
+        "disk_free": 9346461696,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sda6",
+        "mountpoint": "/home",
+        "fstype": "ext4",
+        "opts": "rw,relatime,data=ordered",
+        "disk_total": 185904377856,
+        "disk_used": 112456499200,
+        "disk_free": 63980810240,
+        "disk_use_percent": 63.7
+      },
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/var/lib/docker/aufs",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37217038336,
+        "disk_free": 9346461696,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sdc1",
+        "mountpoint": "/media/martijn/DATA",
+        "fstype": "fuseblk",
+        "opts": "rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096",
+        "disk_total": 2000396996608,
+        "disk_used": 1115982860288,
+        "disk_free": 884414136320,
+        "disk_use_percent": 55.8
+      }
+    ],
+    "users": [
+      {
+        "name": "martijn",
+        "terminal": "tty7",
+        "host": "localhost",
+        "started": 1623394048.0,
+        "pid": 2506
+      }
+    ]
+  }
+}

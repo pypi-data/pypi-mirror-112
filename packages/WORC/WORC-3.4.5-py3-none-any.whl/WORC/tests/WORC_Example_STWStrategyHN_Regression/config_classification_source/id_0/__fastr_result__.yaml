@@ -1,0 +1,105 @@
+network_id: WORC_Example_STWStrategyHN_Regression
+network_version: '0.0'
+run_id: WORC_Example_STWStrategyHN_Regression_2021-07-03T12-17-25
+node_id: config_classification_source
+node_global_id: fastr:///networks/WORC_Example_STWStrategyHN_Regression/0.0/runs/WORC_Example_STWStrategyHN_Regression_2021-07-03T12-17-25/nodelist/config_classification_source
+tool_id: fastr/Source:1.0
+tool_version: '1.0'
+sample_id:
+- id_0
+sample_index:
+- 0
+fastr_version: 3.2.3_tags/3.2.3^0_2ed88fe2
+network_tmpurl: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression
+hold_jobs: []
+timestamp: '2021-07-03T10:17:25.899496'
+preferred_types:
+  output:
+  - NiftiImageFileCompressed
+errors: []
+input_hash:
+  input:
+  - eefbc3f27eebe7817fa95ddac82640fe
+  - 789665108f2206aeedf84ab83ba7d0af
+  - d0e59ed777e1e085624c53cd22d57a6f
+  - efd87a03677dba7bade2cd5fe1b6cfa1
+  - efd87a03677dba7bade2cd5fe1b6cfa1
+output_hash:
+  output:
+    id_0:
+    - 7d37e7bd54f603b6ef737175d5049aa9
+status_list:
+- timestamp: '2021-07-03T10:17:25.899684'
+  status: created
+- timestamp: '2021-07-03T10:17:28.774816'
+  status: running
+- timestamp: '2021-07-03T10:17:33.733233'
+  status: execution_done
+output_data:
+  output:
+    id_0:
+    - id: ParameterFile
+      format: null
+      value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/config_classification_source/id_0/result/config_WORC_Example_STWStrategyHN_Regression_0.ini
+input_arguments:
+  input:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: file:///home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/config_WORC_Example_STWStrategyHN_Regression_0.ini
+    jobs: []
+    failed_annotations: []
+  datatype:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: ParameterFile
+    jobs: []
+    failed_annotations: []
+  sample_id:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: id_0
+    jobs: []
+    failed_annotations: []
+  targetdir:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: Directory
+        format: null
+        value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/config_classification_source/id_0/result
+    jobs: []
+    failed_annotations: []
+output_arguments:
+  output:
+    id: output
+    cardinality: any
+    datatype: ParameterFile
+    requested: true
+datatype: ParameterFile
+__class__: fastr.execution.job.SourceJob
+__fastr_version__: 3.2.3_tags/3.2.3^0_2ed88fe2

@@ -1,0 +1,84 @@
+network_id: WORC_Example_STWStrategyHN_Regression
+network_version: '0.0'
+run_id: WORC_Example_STWStrategyHN_Regression_2021-07-03T12-17-25
+node_id: Hyperparameters_CSV
+node_global_id: fastr:///networks/WORC_Example_STWStrategyHN_Regression/0.0/runs/WORC_Example_STWStrategyHN_Regression_2021-07-03T12-17-25/nodelist/Hyperparameters_CSV
+tool_id: fastr/Sink:1.0
+tool_version: '1.0'
+sample_id:
+- all
+sample_index:
+- 0
+fastr_version: 3.2.3_tags/3.2.3^0_2ed88fe2
+network_tmpurl: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression
+hold_jobs:
+- WORC_Example_STWStrategyHN_Regression___plot_Hyperparameters___all
+timestamp: '2021-07-03T10:17:35.115506'
+preferred_types: {}
+errors: []
+input_hash:
+  input:
+  - dc045f347995e3e6e78410c6b5c41ded
+output_hash: {}
+status_list:
+- timestamp: '2021-07-03T10:17:35.115518'
+  status: created
+- timestamp: '2021-07-03T10:17:35.278448'
+  status: hold
+- timestamp: '2021-07-03T10:22:52.561852'
+  status: queued
+- timestamp: '2021-07-03T10:22:55.945844'
+  status: running
+- timestamp: '2021-07-03T10:23:00.017534'
+  status: execution_done
+output_data: {}
+input_arguments:
+  input:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: Deferred
+        format: null
+        value: val://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/plot_Hyperparameters/all/__fastr_result__.yaml?outputname=output_csv&nr=0
+    jobs: []
+    failed_annotations: []
+  output:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: vfs://output/WORC_Example_STWStrategyHN_Regression/Evaluation/Hyperparameters_{sample_id}_{cardinality}{ext}
+    jobs: []
+    failed_annotations: []
+  datatype:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: CSVFile
+    jobs: []
+    failed_annotations: []
+output_arguments: {}
+substitutions:
+  sample_id: all
+  cardinality: '0'
+  timestamp: '2021-07-03T12:17:25.490226'
+  uuid: dce5ba2c-dbe7-11eb-820a-9457a5ef2777
+  network: WORC_Example_STWStrategyHN_Regression_2021-07-03T12-17-25
+  node: Hyperparameters_CSV
+__class__: fastr.execution.job.SinkJob
+__fastr_version__: 3.2.3_tags/3.2.3^0_2ed88fe2

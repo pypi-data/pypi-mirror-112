@@ -1,0 +1,189 @@
+network_id: WORC_Example_STWStrategyHN_Regression
+network_version: '0.0'
+run_id: WORC_Example_STWStrategyHN_Regression_2021-07-03T12-17-25
+node_id: plot_ranked_posteriors
+node_global_id: fastr:///networks/WORC_Example_STWStrategyHN_Regression/0.0/runs/WORC_Example_STWStrategyHN_Regression_2021-07-03T12-17-25/nodelist/plot_ranked_posteriors
+tool_id: worc/PlotRankedScores:1.0
+tool_version: '1.0'
+sample_id:
+- all
+sample_index:
+- 0
+fastr_version: 3.2.3_tags/3.2.3^0_2ed88fe2
+network_tmpurl: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression
+hold_jobs:
+- WORC_Example_STWStrategyHN_Regression___classify___all
+timestamp: '2021-07-03T10:17:35.092896'
+preferred_types:
+  output_zip:
+  - NiftiImageFileCompressed
+  output_csv:
+  - NiftiImageFileCompressed
+errors:
+- - FastrOutputValidationError
+  - Output value [ZipFile] "vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/plot_ranked_posteriors/all/output_zip_0.zip"
+    not valid for datatype "'ZipFile'"
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1148
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1094 in validate_results\n  if not self._validate_result(output, output_value,\
+    \ payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1148 in _validate_result\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - The output "output_zip" is invalid!
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1096
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1096 in validate_results\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrValueError
+  - Output values are not valid!
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 827
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 827 in execute\n  raise exceptions.FastrValueError('Output values are not\
+    \ valid!')"
+input_hash:
+  estimator:
+  - 83f008267ca70d2d266bc2da58353a32
+  pinfo:
+  - a80cf11c590b2f185ec62ad505bc0608
+  ensemble:
+  - c4ca4238a0b923820dcc509a6f75849b
+  label_type:
+  - 9d8d2d5ab12b515182a505f54db7f538
+  scores:
+  - 57db3e2963641d1f42e0710f806b50c0
+  images: []
+  segmentations: []
+output_hash: {}
+status_list:
+- timestamp: '2021-07-03T10:17:35.092911'
+  status: created
+- timestamp: '2021-07-03T10:17:35.191351'
+  status: hold
+- timestamp: '2021-07-03T10:22:34.915641'
+  status: queued
+- timestamp: '2021-07-03T10:22:37.502137'
+  status: running
+- timestamp: '2021-07-03T10:22:43.004561'
+  status: execution_failed
+output_data:
+  output_zip:
+  - id: ZipFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/plot_ranked_posteriors/all/output_zip_0.zip
+  output_csv:
+  - id: CSVFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/plot_ranked_posteriors/all/output_csv_0.csv
+input_arguments:
+  estimator:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: Deferred
+        format: null
+        value: val://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Regression/classify/all/__fastr_result__.yaml?outputname=classification&nr=0
+    jobs:
+    - WORC_Example_STWStrategyHN_Regression___classify___all
+    failed_annotations: []
+  pinfo:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: PatientInfoFile
+        format: null
+        value: /home/martijn/git/WORCTutorial/Data/Examplefiles/pinfo_HN.csv
+    jobs: []
+    failed_annotations: []
+  ensemble:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: '1'
+    jobs: []
+    failed_annotations: []
+  label_type:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: Age
+    jobs: []
+    failed_annotations: []
+  scores:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: posteriors
+    jobs: []
+    failed_annotations: []
+  images:
+    index:
+    - 0
+    id:
+    - __EMPTY__
+    data:
+    - SampleValue
+    - {}
+    jobs: []
+    failed_annotations: []
+  segmentations:
+    index:
+    - 0
+    id:
+    - __EMPTY__
+    data:
+    - SampleValue
+    - {}
+    jobs: []
+    failed_annotations: []
+output_arguments:
+  output_zip:
+    id: output_zip
+    cardinality: 1
+    datatype: ZipFile
+    requested: true
+  output_csv:
+    id: output_csv
+    cardinality: 1
+    datatype: CSVFile
+    requested: true
+__class__: fastr.execution.job.Job
+__fastr_version__: 3.2.3_tags/3.2.3^0_2ed88fe2

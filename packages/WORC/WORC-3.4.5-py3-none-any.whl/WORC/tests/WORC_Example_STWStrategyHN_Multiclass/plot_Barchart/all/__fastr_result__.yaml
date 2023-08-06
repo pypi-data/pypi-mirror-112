@@ -1,0 +1,108 @@
+network_id: WORC_Example_STWStrategyHN_Multiclass
+network_version: '0.0'
+run_id: WORC_Example_STWStrategyHN_Multiclass_2021-07-03T15-24-25
+node_id: plot_Barchart
+node_global_id: fastr:///networks/WORC_Example_STWStrategyHN_Multiclass/0.0/runs/WORC_Example_STWStrategyHN_Multiclass_2021-07-03T15-24-25/nodelist/plot_Barchart
+tool_id: worc/PlotBarchart:1.0
+tool_version: '1.0'
+sample_id:
+- all
+sample_index:
+- 0
+fastr_version: 3.2.3_tags/3.2.3^0_2ed88fe2
+network_tmpurl: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass
+hold_jobs:
+- WORC_Example_STWStrategyHN_Multiclass___classify___all
+timestamp: '2021-07-03T13:24:34.176345'
+preferred_types:
+  output_png:
+  - NiftiImageFileCompressed
+  output_tex:
+  - NiftiImageFileCompressed
+errors: []
+input_hash:
+  prediction:
+  - 9990339005a15c0b56027545331c7e24
+  estimators:
+  - c4ca4238a0b923820dcc509a6f75849b
+  label_type:
+  - 99ae9002827e7b4a4ec123870fa77fe1
+output_hash:
+  output_png:
+  - d6c8c6337ff543591754a39b8b9f9987
+  output_tex:
+  - b6953235eee791732c2c95bd4e8c0884
+status_list:
+- timestamp: '2021-07-03T13:24:34.176361'
+  status: created
+- timestamp: '2021-07-03T13:24:34.318305'
+  status: hold
+- timestamp: '2021-07-03T13:31:51.049793'
+  status: queued
+- timestamp: '2021-07-03T13:31:58.083584'
+  status: running
+- timestamp: '2021-07-03T13:33:13.230861'
+  status: execution_done
+output_data:
+  output_png:
+  - id: PNGFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_png_0.png
+  output_tex:
+  - id: TexFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_tex_0.tex
+input_arguments:
+  prediction:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: Deferred
+        format: null
+        value: val://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/classify/all/__fastr_result__.yaml?outputname=classification&nr=0
+    jobs:
+    - WORC_Example_STWStrategyHN_Multiclass___classify___all
+    failed_annotations: []
+  estimators:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: '1'
+    jobs: []
+    failed_annotations: []
+  label_type:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: imaginary_label_1, complement_label_1
+    jobs: []
+    failed_annotations: []
+output_arguments:
+  output_png:
+    id: output_png
+    cardinality: 1
+    datatype: PNGFile
+    requested: true
+  output_tex:
+    id: output_tex
+    cardinality: 1
+    datatype: TexFile
+    requested: true
+__class__: fastr.execution.job.Job
+__fastr_version__: 3.2.3_tags/3.2.3^0_2ed88fe2

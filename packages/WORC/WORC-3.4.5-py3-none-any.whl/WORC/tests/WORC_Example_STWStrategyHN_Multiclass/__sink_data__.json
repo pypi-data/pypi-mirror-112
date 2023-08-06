@@ -1,0 +1,92 @@
+{
+  "config_classification_sink": {
+    "id_0": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "StatisticalTestFeatures_CSV": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "StatisticalTestFeatures_Tex": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "StatisticalTestFeatures_PNG": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "Decomposition_PNG": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "BoxplotsFeatures_Zip": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "classification": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "performance": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "RankedPercentages_Zip": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "RankedPercentages_CSV": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "RankedPosteriors_Zip": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "Hyperparameters_CSV": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "RankedPosteriors_CSV": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "Barchart_PNG": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  },
+  "Barchart_Tex": {
+    "all": {
+      "status": "JobState.finished",
+      "errors": []
+    }
+  }
+}

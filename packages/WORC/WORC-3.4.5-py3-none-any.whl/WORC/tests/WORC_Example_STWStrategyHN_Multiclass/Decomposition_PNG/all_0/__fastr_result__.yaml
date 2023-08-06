@@ -1,0 +1,84 @@
+network_id: WORC_Example_STWStrategyHN_Multiclass
+network_version: '0.0'
+run_id: WORC_Example_STWStrategyHN_Multiclass_2021-07-03T15-24-25
+node_id: Decomposition_PNG
+node_global_id: fastr:///networks/WORC_Example_STWStrategyHN_Multiclass/0.0/runs/WORC_Example_STWStrategyHN_Multiclass_2021-07-03T15-24-25/nodelist/Decomposition_PNG
+tool_id: fastr/Sink:1.0
+tool_version: '1.0'
+sample_id:
+- all
+sample_index:
+- 0
+fastr_version: 3.2.3_tags/3.2.3^0_2ed88fe2
+network_tmpurl: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass
+hold_jobs:
+- WORC_Example_STWStrategyHN_Multiclass___decomposition___all
+timestamp: '2021-07-03T13:24:34.188734'
+preferred_types: {}
+errors: []
+input_hash:
+  input:
+  - ba35748cddaaf875591f42dc4ab92059
+output_hash: {}
+status_list:
+- timestamp: '2021-07-03T13:24:34.188743'
+  status: created
+- timestamp: '2021-07-03T13:24:34.361783'
+  status: hold
+- timestamp: '2021-07-03T13:27:07.576204'
+  status: queued
+- timestamp: '2021-07-03T13:27:22.382934'
+  status: running
+- timestamp: '2021-07-03T13:27:26.685005'
+  status: execution_done
+output_data: {}
+input_arguments:
+  input:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: Deferred
+        format: null
+        value: val://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/decomposition/all/__fastr_result__.yaml?outputname=output&nr=0
+    jobs: []
+    failed_annotations: []
+  output:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: vfs://output/WORC_Example_STWStrategyHN_Multiclass/Evaluation/Decomposition_{sample_id}_{cardinality}{ext}
+    jobs: []
+    failed_annotations: []
+  datatype:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: PNGFile
+    jobs: []
+    failed_annotations: []
+output_arguments: {}
+substitutions:
+  sample_id: all
+  cardinality: '0'
+  timestamp: '2021-07-03T15:24:25.577581'
+  uuid: fc973048-dc01-11eb-820a-9457a5ef2777
+  network: WORC_Example_STWStrategyHN_Multiclass_2021-07-03T15-24-25
+  node: Decomposition_PNG
+__class__: fastr.execution.job.SinkJob
+__fastr_version__: 3.2.3_tags/3.2.3^0_2ed88fe2

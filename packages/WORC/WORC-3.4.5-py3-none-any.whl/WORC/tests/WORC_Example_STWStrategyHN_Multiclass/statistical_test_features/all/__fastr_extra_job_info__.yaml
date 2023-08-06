@@ -1,0 +1,373 @@
+{
+  "id": "WORC_Example_STWStrategyHN_Multiclass___statistical_test_features___all",
+  "hostinfo": {
+    "os": {
+      "system": "Linux",
+      "is64bits": 1,
+      "maxsize": 9223372036854775807,
+      "version": {
+        "distname": "Ubuntu",
+        "version": "16.04",
+        "codename": "Xenial Xerus",
+        "libc": {
+          "libname": "glibc",
+          "version": "2.17"
+        }
+      }
+    },
+    "uname": [
+      "Linux",
+      "martijn-HP-EliteDesk-800-G2-SFF",
+      "4.4.0-210-generic",
+      "#242-Ubuntu SMP Fri Apr 16 09:57:56 UTC 2021",
+      "x86_64",
+      "x86_64"
+    ],
+    "username": "martijn",
+    "cwd": "/home/martijn/git/WORC/WORC/tests",
+    "python": {
+      "version": "3.7.3",
+      "branch": "",
+      "compiler": "GCC 5.4.0 20160609",
+      "implementation": "CPython",
+      "revision": ""
+    },
+    "envvar": {
+      "XDG_VTNR": "7",
+      "LC_PAPER": "nl_NL.UTF-8",
+      "LC_ADDRESS": "nl_NL.UTF-8",
+      "XDG_SESSION_ID": "c3",
+      "XDG_GREETER_DATA_DIR": "/var/lib/lightdm-data/martijn",
+      "LC_MONETARY": "nl_NL.UTF-8",
+      "CLUTTER_IM_MODULE": "xim",
+      "SESSION": "ubuntu",
+      "GPG_AGENT_INFO": "/home/martijn/.gnupg/S.gpg-agent:0:1",
+      "GUACAMOLE_HOME": "/home/martijn/apps/guacamolehome",
+      "TERM": "xterm-256color",
+      "VTE_VERSION": "4205",
+      "XDG_MENU_PREFIX": "gnome-",
+      "SHELL": "/bin/bash",
+      "CATALINA_HOME": "/usr/share/tomcat7",
+      "DERBY_HOME": "/usr/lib/jvm/java-8-oracle/db",
+      "QT_LINUX_ACCESSIBILITY_ALWAYS_ON": "1",
+      "WINDOWID": "127926454",
+      "LC_NUMERIC": "nl_NL.UTF-8",
+      "OLDPWD": "/home/martijn/git/WORC",
+      "UPSTART_SESSION": "unix:abstract=/com/ubuntu/upstart-session/1000/2506",
+      "GNOME_KEYRING_CONTROL": "",
+      "GTK_MODULES": "gail:atk-bridge:unity-gtk-module",
+      "USER": "martijn",
+      "JRE_HOME": "/usr/lib/jvm/java-8-oracle/jre",
+      "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+      "LC_TELEPHONE": "nl_NL.UTF-8",
+      "QT_ACCESSIBILITY": "1",
+      "LD_LIBRARY_PATH": "/home/martijn/apps/dip/Linuxa64/lib/::/home/martijn/apps/dip/Linuxa64/lib:/home/martijn/apps/elastix/lib",
+      "XDG_SESSION_PATH": "/org/freedesktop/DisplayManager/Session0",
+      "UNITY_HAS_3D_SUPPORT": "true",
+      "XDG_SEAT_PATH": "/org/freedesktop/DisplayManager/Seat0",
+      "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+      "DEFAULTS_PATH": "/usr/share/gconf/ubuntu.default.path",
+      "VIRTUAL_ENV": "/home/martijn/Documents/WORC3",
+      "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg",
+      "UNITY_DEFAULT_PROFILE": "unity",
+      "DESKTOP_SESSION": "ubuntu",
+      "PATH": "/home/martijn/Documents/WORC3/bin:/home/martijn/miniconda2/bin:/home/martijn/miniconda/bin:/hoem/martijn/apps/elastix/bin:/home/martijn/bin:/home/martijn/.local/bin:/opt/texbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin",
+      "QT_IM_MODULE": "ibus",
+      "QT_QPA_PLATFORMTHEME": "appmenu-qt5",
+      "LC_IDENTIFICATION": "nl_NL.UTF-8",
+      "XDG_SESSION_TYPE": "x11",
+      "PWD": "/home/martijn/git/WORC/WORC/tests",
+      "JOB": "unity-settings-daemon",
+      "XMODIFIERS": "@im=ibus",
+      "JAVA_HOME": "/usr/lib/jvm/java-8-oracle",
+      "GNOME_KEYRING_PID": "",
+      "LANG": "en_US.UTF-8",
+      "GDM_LANG": "en_US",
+      "MANDATORY_PATH": "/usr/share/gconf/ubuntu.mandatory.path",
+      "LC_MEASUREMENT": "nl_NL.UTF-8",
+      "COMPIZ_CONFIG_PROFILE": "ubuntu",
+      "IM_CONFIG_PHASE": "1",
+      "PS1": "(WORC3) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ ",
+      "GDMSESSION": "ubuntu",
+      "SESSIONTYPE": "gnome-session",
+      "GTK2_MODULES": "overlay-scrollbar",
+      "SHLVL": "1",
+      "HOME": "/home/martijn",
+      "XDG_SEAT": "seat0",
+      "LANGUAGE": "en_US",
+      "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+      "UPSTART_INSTANCE": "",
+      "PYTHONPATH": ":/home/martijn/git/PySNAP:/home/taskman/taskmanager/taskmanager/taskmanager:/home/taskman/taskmanager/taskmanager/taskmanager:/home/martijn/git/Taskclient:/home/martijn/git/RadTools:/media/martijn/DATA/Software/caffe-master/python:/home/martijn/git/DicomSorter:/home/martijn/git/XNATExplorer:/home/martijn/git/imgaug:/home/martijn/git/phasepack:/home/martijn/git/PREDICTFastr/PREDICT:/home/martijn/git/DicomSorter",
+      "UPSTART_EVENTS": "xsession started",
+      "XDG_SESSION_DESKTOP": "ubuntu",
+      "LOGNAME": "martijn",
+      "COMPIZ_BIN_PATH": "/usr/bin/",
+      "DBUS_SESSION_BUS_ADDRESS": "unix:abstract=/tmp/dbus-gy6EXjV9H7",
+      "J2SDKDIR": "/usr/lib/jvm/java-8-oracle",
+      "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/var/lib/snapd/desktop",
+      "QT4_IM_MODULE": "xim",
+      "LESSOPEN": "| /usr/bin/lesspipe %s",
+      "INSTANCE": "",
+      "UPSTART_JOB": "unity7",
+      "XDG_RUNTIME_DIR": "/run/user/1000",
+      "DISPLAY": ":0",
+      "XDG_CURRENT_DESKTOP": "Unity",
+      "GTK_IM_MODULE": "ibus",
+      "J2REDIR": "/usr/lib/jvm/java-8-oracle/jre",
+      "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+      "LC_TIME": "nl_NL.UTF-8",
+      "LC_NAME": "nl_NL.UTF-8",
+      "XAUTHORITY": "/home/martijn/.Xauthority",
+      "_": "/home/martijn/Documents/WORC3/bin/python",
+      "KMP_DUPLICATE_LIB_OK": "True",
+      "KMP_INIT_AT_FORK": "FALSE"
+    },
+    "drmaa": {
+      "jobid": null,
+      "taskid": null,
+      "jobname": null
+    }
+  },
+  "sysinfo_start": {
+    "cpu_usage": {
+      "user": 243723.24,
+      "nice": 768.73,
+      "system": 236093.19,
+      "idle": 14767569.04,
+      "iowait": 9109.23,
+      "irq": 0.0,
+      "softirq": 1671.83,
+      "steal": 0.0,
+      "guest": 0.0,
+      "guest_nice": 0.0,
+      "percent": 55.4
+    },
+    "memory_usage": {
+      "virtual": {
+        "total": 16701530112,
+        "available": 854810624,
+        "percent": 94.9,
+        "used": 14721290240,
+        "free": 227708928,
+        "active": 5406994432,
+        "inactive": 1692471296,
+        "buffers": 108974080,
+        "cached": 1643556864,
+        "shared": 779030528,
+        "slab": 454017024
+      },
+      "swap": {
+        "total": 17052987392,
+        "used": 6524608512,
+        "free": 10528378880,
+        "percent": 38.3,
+        "sin": 21530038272,
+        "sout": 30701596672
+      }
+    },
+    "mounts": [
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37216960512,
+        "disk_free": 9346539520,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sda6",
+        "mountpoint": "/home",
+        "fstype": "ext4",
+        "opts": "rw,relatime,data=ordered",
+        "disk_total": 185904377856,
+        "disk_used": 112426823680,
+        "disk_free": 64010485760,
+        "disk_use_percent": 63.7
+      },
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/var/lib/docker/aufs",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37216960512,
+        "disk_free": 9346539520,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sdc1",
+        "mountpoint": "/media/martijn/DATA",
+        "fstype": "fuseblk",
+        "opts": "rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096",
+        "disk_total": 2000396996608,
+        "disk_used": 1115982860288,
+        "disk_free": 884414136320,
+        "disk_use_percent": 55.8
+      }
+    ],
+    "users": [
+      {
+        "name": "martijn",
+        "terminal": "tty7",
+        "host": "localhost",
+        "started": 1623394048.0,
+        "pid": 2506
+      }
+    ]
+  },
+  "process": {
+    "return_code": 0,
+    "stdout": "/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_png_0.png /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex\nReading features and label data.\n[WARNING]  warnings:0110 >> /home/martijn/Documents/WORC3/lib/python3.7/site-packages/WORC/processing/label_processing.py:126: ParserWarning: Falling back to the 'python' engine because the 'c' engine does not support sep=None with delim_whitespace=False; you can avoid this warning by specifying engine='python'.\n  data = pd.read_csv(input_file, sep=None, header=0)\n\nLabel names to extract: ['imaginary_label_1', 'complement_label_1']\nPerforming statistical tests.\n[WORC Warning] All numbers are identical in mannwhitneyu. Replacing metric value by NaN.\n[WORC Warning] PREDICT_original_tf_LBP_max_R15_P36_features_train_CT0 has only one value. Replacing chi2 metric value by NaN.\n[WORC Warning] All numbers are identical in mannwhitneyu. Replacing metric value by NaN.\n[WORC Warning] PREDICT_original_tf_LBP_max_R3_P12_features_train_CT0 has only one value. Replacing chi2 metric value by NaN.\n[WORC Warning] All numbers are identical in mannwhitneyu. Replacing metric value by NaN.\n[WORC Warning] PREDICT_original_tf_LBP_max_R8_P24_features_train_CT0 has only one value. Replacing chi2 metric value by NaN.\n[WORC Warning] All numbers are identical in mannwhitneyu. Replacing metric value by NaN.\n[WORC Warning] PREDICT_original_tf_LBP_peak_position_R8_P24_features_train_CT0 has only one value. Replacing chi2 metric value by NaN.\n[WORC Warning] All numbers are identical in mannwhitneyu. Replacing metric value by NaN.\n[WORC Warning] PREDICT_original_tf_LBP_max_R15_P36_features_train_CT0 has only one value. Replacing chi2 metric value by NaN.\n[WORC Warning] All numbers are identical in mannwhitneyu. Replacing metric value by NaN.\n[WORC Warning] PREDICT_original_tf_LBP_max_R3_P12_features_train_CT0 has only one value. Replacing chi2 metric value by NaN.\n[WORC Warning] All numbers are identical in mannwhitneyu. Replacing metric value by NaN.\n[WORC Warning] PREDICT_original_tf_LBP_max_R8_P24_features_train_CT0 has only one value. Replacing chi2 metric value by NaN.\n[WORC Warning] All numbers are identical in mannwhitneyu. Replacing metric value by NaN.\n[WORC Warning] PREDICT_original_tf_LBP_peak_position_R8_P24_features_train_CT0 has only one value. Replacing chi2 metric value by NaN.\nSaved data to CSV!\nDebug detected: False.\nPlot saved as /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_png_0.png!\nPlot saved as /home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex!\n",
+    "stderr": "",
+    "command": [
+      "python",
+      "/home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin/StatisticalTestFeatures_tool.py",
+      "--feat",
+      "features_train_CT0=/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1004_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1077_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1088_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1146_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1159_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1192_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1259_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1260_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1323_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1331_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1339_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1342_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1372_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1491_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1501_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1519_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1524_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1554_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1560_0.hdf5,/home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1748_0.hdf5",
+      "--output_csv",
+      "/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_csv_0.csv",
+      "--output_png",
+      "/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_png_0.png",
+      "--output_tex",
+      "/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex",
+      "--pc",
+      "/home/martijn/git/WORCTutorial/Data/Examplefiles/pinfo_HN.csv",
+      "--conf",
+      "/home/martijn/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/config_classification_source/id_0/result/config_WORC_Example_STWStrategyHN_Multiclass_0.ini"
+    ],
+    "resource_usage": [
+      {
+        "timestamp": "2021-07-03T13:24:38.108279",
+        "cpu_percent": 90.9,
+        "vmem": 163749888,
+        "rmem": 59936768,
+        "read_bytes": 2179072,
+        "write_bytes": 4096
+      },
+      {
+        "timestamp": "2021-07-03T13:24:39.109601",
+        "cpu_percent": 95.9,
+        "vmem": 908042240,
+        "rmem": 149069824,
+        "read_bytes": 11800576,
+        "write_bytes": 4096
+      },
+      {
+        "timestamp": "2021-07-03T13:24:40.110743",
+        "cpu_percent": 41.0,
+        "vmem": 1069985792,
+        "rmem": 225394688,
+        "read_bytes": 20463616,
+        "write_bytes": 4096
+      },
+      {
+        "timestamp": "2021-07-03T13:24:41.112058",
+        "cpu_percent": 56.9,
+        "vmem": 1730412544,
+        "rmem": 275791872,
+        "read_bytes": 30810112,
+        "write_bytes": 4096
+      },
+      {
+        "timestamp": "2021-07-03T13:24:42.113215",
+        "cpu_percent": 114.9,
+        "vmem": 1886920704,
+        "rmem": 292384768,
+        "read_bytes": 43204608,
+        "write_bytes": 73728
+      }
+    ],
+    "time_elapsed": 5.8355443477630615
+  },
+  "sysinfo_end": {
+    "cpu_usage": {
+      "user": 243738.19,
+      "nice": 768.73,
+      "system": 236098.23,
+      "idle": 14767592.59,
+      "iowait": 9114.38,
+      "irq": 0.0,
+      "softirq": 1672.24,
+      "steal": 0.0,
+      "guest": 0.0,
+      "guest_nice": 0.0,
+      "percent": 41.5
+    },
+    "memory_usage": {
+      "virtual": {
+        "total": 16701530112,
+        "available": 1077907456,
+        "percent": 93.5,
+        "used": 14609362944,
+        "free": 430886912,
+        "active": 5245091840,
+        "inactive": 1650192384,
+        "buffers": 120897536,
+        "cached": 1540382720,
+        "shared": 667213824,
+        "slab": 454279168
+      },
+      "swap": {
+        "total": 17052987392,
+        "used": 6834081792,
+        "free": 10218905600,
+        "percent": 40.1,
+        "sin": 21534818304,
+        "sout": 31018754048
+      }
+    },
+    "mounts": [
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37216964608,
+        "disk_free": 9346535424,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sda6",
+        "mountpoint": "/home",
+        "fstype": "ext4",
+        "opts": "rw,relatime,data=ordered",
+        "disk_total": 185904377856,
+        "disk_used": 112427044864,
+        "disk_free": 64010264576,
+        "disk_use_percent": 63.7
+      },
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/var/lib/docker/aufs",
+        "fstype": "ext4",
+        "opts": "rw,relatime,errors=remount-ro,data=ordered",
+        "disk_total": 49080274944,
+        "disk_used": 37216964608,
+        "disk_free": 9346535424,
+        "disk_use_percent": 79.9
+      },
+      {
+        "device": "/dev/sdc1",
+        "mountpoint": "/media/martijn/DATA",
+        "fstype": "fuseblk",
+        "opts": "rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096",
+        "disk_total": 2000396996608,
+        "disk_used": 1115982860288,
+        "disk_free": 884414136320,
+        "disk_use_percent": 55.8
+      }
+    ],
+    "users": [
+      {
+        "name": "martijn",
+        "terminal": "tty7",
+        "host": "localhost",
+        "started": 1623394048.0,
+        "pid": 2506
+      }
+    ]
+  }
+}

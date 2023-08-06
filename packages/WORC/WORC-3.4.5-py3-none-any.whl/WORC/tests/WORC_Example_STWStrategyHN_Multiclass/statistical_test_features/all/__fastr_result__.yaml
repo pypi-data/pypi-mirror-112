@@ -1,0 +1,194 @@
+network_id: WORC_Example_STWStrategyHN_Multiclass
+network_version: '0.0'
+run_id: WORC_Example_STWStrategyHN_Multiclass_2021-07-03T15-24-25
+node_id: statistical_test_features
+node_global_id: fastr:///networks/WORC_Example_STWStrategyHN_Multiclass/0.0/runs/WORC_Example_STWStrategyHN_Multiclass_2021-07-03T15-24-25/nodelist/statistical_test_features
+tool_id: worc/StatisticalTestFeatures:1.0
+tool_version: '1.0'
+sample_id:
+- all
+sample_index:
+- 0
+fastr_version: 3.2.3_tags/3.2.3^0_2ed88fe2
+network_tmpurl: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass
+hold_jobs:
+- WORC_Example_STWStrategyHN_Multiclass___config_classification_source___id_0
+timestamp: '2021-07-03T13:24:34.135269'
+preferred_types:
+  output_csv:
+  - NiftiImageFileCompressed
+  output_png:
+  - NiftiImageFileCompressed
+  output_tex:
+  - NiftiImageFileCompressed
+errors: []
+input_hash:
+  features:
+    features_train_CT0:
+    - 76360ad28f4b4a547cfa4f49b720ba8a
+    - 4057b76891426267d16a2aa91f68abfb
+    - 126dd175790115954f1326489f69ffe8
+    - b48c31651b4bdbdb580637431d144573
+    - 863da138f6ece82fc0e68043ec4d0f0a
+    - 0444f553365d3d26cd00e40228408f62
+    - 5e965a5034e10fadad4194e85dda8727
+    - 94a64bb4ea7c88ef17b8d22f75c9a1c9
+    - 2c8f2c658f852d2685c2fab617b93fe2
+    - 5c06bde0a56a9151d14851593aaaa45b
+    - 112e3b5c91569569c9fb3174e7291d5c
+    - 13c9bb363f482e0e31da992d919f1cd5
+    - bec1a4959b66f94fbfc1f2eaf7952d7a
+    - 3f4ecfd057342faad239b27987c16bc4
+    - 1abbcae643ba99e89eae06bc2e12236e
+    - c530700c243718f9b999ae2cb27679d6
+    - 6c70f5b3e131f208cf3ab51de1c39a21
+    - aaf85680a1f7b97dba896ec8c9ab6a01
+    - a166fbe039bb2c0524b3e6c8510697b6
+    - f997075fa2450e93c44e1e1b0942ab26
+  patientclass:
+  - a80cf11c590b2f185ec62ad505bc0608
+  config:
+  - 9be10c3be9c340824af2e1b3cc3db097
+output_hash:
+  output_csv:
+  - 41ed3208a08b1d707819a1afaf4b3c7c
+  output_png:
+  - cec947839bc45058e1dc6e21c97c0a1e
+  output_tex:
+  - 6cae9e57756b0806f7ead26e82399a67
+status_list:
+- timestamp: '2021-07-03T13:24:34.135289'
+  status: created
+- timestamp: '2021-07-03T13:24:35.853546'
+  status: running
+- timestamp: '2021-07-03T13:24:43.144103'
+  status: execution_done
+output_data:
+  output_csv:
+  - id: CSVFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_csv_0.csv
+  output_png:
+  - id: PNGFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_png_0.png
+  output_tex:
+  - id: TexFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/statistical_test_features/all/output_tex_0.tex
+input_arguments:
+  features:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - features_train_CT0:
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1004_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1077_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1088_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1146_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1159_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1192_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1259_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1260_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1323_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1331_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1339_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1342_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1372_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1491_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1501_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1519_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1524_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1554_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1560_0.hdf5
+      - id: HDF5
+        format: null
+        value: /home/martijn/WORC/output/WORC_Example_STWStrategyHN/Features/features_predict_CT_0_HN1748_0.hdf5
+    jobs: []
+    failed_annotations: []
+  patientclass:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: PatientInfoFile
+        format: null
+        value: /home/martijn/git/WORCTutorial/Data/Examplefiles/pinfo_HN.csv
+    jobs: []
+    failed_annotations: []
+  config:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: Deferred
+        format: null
+        value: val://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/config_classification_source/id_0/__fastr_result__.yaml?outputname=output&nr=0&sampleid=id_0
+    jobs:
+    - WORC_Example_STWStrategyHN_Multiclass___config_classification_source___id_0
+    failed_annotations: []
+output_arguments:
+  output_csv:
+    id: output_csv
+    cardinality: 1
+    datatype: CSVFile
+    requested: true
+  output_png:
+    id: output_png
+    cardinality: 1
+    datatype: PNGFile
+    requested: true
+  output_tex:
+    id: output_tex
+    cardinality: 1
+    datatype: TexFile
+    requested: true
+__class__: fastr.execution.job.Job
+__fastr_version__: 3.2.3_tags/3.2.3^0_2ed88fe2
