@@ -1,0 +1,3 @@
+[console_scripts]
+mis = mask_in_situ.cli:cli
+
