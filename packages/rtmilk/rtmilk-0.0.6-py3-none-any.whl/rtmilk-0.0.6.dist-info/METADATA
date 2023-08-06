@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: rtmilk
+Version: 0.0.6
+Summary: RTM API wrapper
+Home-page: https://github.com/rkhwaja/rtmilk
+License: MIT
+Keywords: RememberTheMilk
+Author: Rehan Khwaja
+Author-email: rehan@khwaja.name
+Requires-Python: >=3.9
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pydantic (>=1.8.1)
+Requires-Dist: requests (>=2.23.0)
+Description-Content-Type: text/markdown
+
+Python wrapper for "Remember the Milk" [API](https://www.rememberthemilk.com/services/api/)
+
+# Usage
+```python
+from rtmmilk import API, RTMError
+
+api = API(API_KEY, SHARED_SECRET, TOKEN)
+
+timeline = api.TasksCreateTimeline().timeline
+try:
+    api.TasksAdd(timeline, 'task name')
+except RTMError as e:
+    print(e)
+```
+
+# Authorization
+```python
+from rtmmilk import AuthorizationSession
+
+authenticationSession = AuthorizationSession(API_KEY, SHARED_SECRET, 'delete')
+input(f"Go to {authenticationSession.url} and authorize. Then Press ENTER")
+token = authenticationSession.Done()
+print(f'Authorization token is {token}')
+```
+
