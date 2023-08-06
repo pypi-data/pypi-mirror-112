@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+diazpdf/__init__.py
+diazpdf/pdf2image.py
+diazpdf/pdf2text.py
+diazpdf.egg-info/PKG-INFO
+diazpdf.egg-info/SOURCES.txt
+diazpdf.egg-info/dependency_links.txt
+diazpdf.egg-info/top_level.txt
