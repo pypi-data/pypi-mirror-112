@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: koreanbots
+Version: 1.0.2
+Summary: Official SDK for Koreanbots.
+Home-page: https://github.com/koreanbots/py-sdk
+Author: Koreanbots
+License: MIT
+Project-URL: Homepage, https://koreanbots.dev/
+Project-URL: Source, https://github.com/koreanbots/py-sdk
+Project-URL: Tracker, https://github.com/koreanbots/py-sdk/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: discord.py
+
+koreanbots
+==========
+
+A Simple Python API wrapper for KoreanBots.
+
+
