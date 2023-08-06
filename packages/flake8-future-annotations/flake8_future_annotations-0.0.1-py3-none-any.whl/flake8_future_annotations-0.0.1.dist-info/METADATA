@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: flake8-future-annotations
+Version: 0.0.1
+Summary: Verifies python 3.7+ files use from __future__ import annotations
+Home-page: https://github.com/tyleryep/flake8-future-annotations
+Author: Tyler Yep
+Author-email: tyep@cs.stanford.edu
+License: MIT
+Keywords: flake8
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flake8
+Requires-Dist: setuptools
+
+# flake8-future-annotations
+Verifies python 3.7+ files use `from __future__ import annotations`
+
+

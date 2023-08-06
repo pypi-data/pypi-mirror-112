@@ -1,0 +1,11 @@
+flake8_future_annotations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flake8_future_annotations/checker.py,sha256=5QY7z5VITsifE3CzVJyA81UTicRgNPXbEn_0PzEi0rU,1005
+flake8_future_annotations/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_checker.py,sha256=Q5TBxH-Rb8dMRBA0YD3qwZpPFNgfCYy_mXKFzwClcYY,576
+flake8_future_annotations-0.0.1.dist-info/LICENSE,sha256=nX0siLcqKcLqKT4FBZNt-Guw3qVriQyV8i1SGViKW74,1066
+flake8_future_annotations-0.0.1.dist-info/METADATA,sha256=_JntamfJuew1TrDWR3hBUKadEOZRMRM5rgfuvCTM9Fw,945
+flake8_future_annotations-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+flake8_future_annotations-0.0.1.dist-info/entry_points.txt,sha256=9ClUtl6qaa5-eAbhwVdMYhe9-u-qrDR2njvhwfPALHE,83
+flake8_future_annotations-0.0.1.dist-info/top_level.txt,sha256=YG0MizIdgZCW-vNXMnF3AYYwWfeJv5fDeadtpXKnKyM,32
+flake8_future_annotations-0.0.1.dist-info/RECORD,,
