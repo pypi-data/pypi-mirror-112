@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+gitlab_multi_group_runner/__init__.py
+gitlab_multi_group_runner/_version.py
+gitlab_multi_group_runner/cli.py
+gitlab_multi_group_runner/config.py
+gitlab_multi_group_runner/gitlab.py
+gitlab_multi_group_runner/utils.py
+gitlab_multi_group_runner.egg-info/PKG-INFO
+gitlab_multi_group_runner.egg-info/SOURCES.txt
+gitlab_multi_group_runner.egg-info/dependency_links.txt
+gitlab_multi_group_runner.egg-info/entry_points.txt
+gitlab_multi_group_runner.egg-info/requires.txt
+gitlab_multi_group_runner.egg-info/top_level.txt
