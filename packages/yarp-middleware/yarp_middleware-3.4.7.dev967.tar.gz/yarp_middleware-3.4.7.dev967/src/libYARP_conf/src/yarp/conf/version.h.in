@@ -1,0 +1,17 @@
+/*
+ * SPDX-FileCopyrightText: 2006-2021 Istituto Italiano di Tecnologia (IIT)
+ * SPDX-FileCopyrightText: 2006-2010 RobotCub Consortium
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+#ifndef YARP_CONFIG_VERSION_H
+#define YARP_CONFIG_VERSION_H
+
+#define YARP_VERSION_MAJOR ${YARP_VERSION_MAJOR}
+#define YARP_VERSION_MINOR ${YARP_VERSION_MINOR}
+#define YARP_VERSION_PATCH ${YARP_VERSION_PATCH}
+#define YARP_VERSION_TWEAK ${YARP_VERSION_TWEAK}
+#define YARP_VERSION "${YARP_VERSION}"
+#define YARP_VERSION_SHORT "${YARP_VERSION_SHORT}"
+
+#endif
