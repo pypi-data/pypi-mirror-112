@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ribocutter
+Version: 0.0.5
+Summary: Design oligos to produce sgRNAs for abundant sequences in a fastq file
+Home-page: https://github.com/Delayed-Gitification/ribocutter.git
+Author: Oscar Wilkins
+Author-email: oscar.wilkins@crick.ac.uk
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: dnaio
+
+UNKNOWN
+
+
