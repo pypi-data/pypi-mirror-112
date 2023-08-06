@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: mcconv
+Version: 0.0.7
+Summary: EIC Monte-Carlo file converter
+Home-page: https://eicweb.phy.anl.gov/monte_carlo/mcconv
+Author: Dmitry Romanov
+Author-email: romanov@jlab.org
+License: MIT
+Description: Converter of MCEG  files from old EIC generators to HEPMC.
+        
+        Provides command line interface (CLI) and python API to convert old (and not old) event
+        generators mainly used for EIC to HepMC.
+        
+        **CLI supported types** (out of the box):
+        
+        - LUND (vanilla pythia6)
+        - LUND GEMC (various generators especially from Clas12)
+        - Pythia6 RadCor (aka Pythia-EIC, Pythia6-BNL, Pythia6-HERMES)
+        - Beagle
+        - Eic-smear (aka Eic-tree)
+        
+        **Python API supported types**
+        
+        - Any type of text event+particles formats
+        - Eic-smear (aka Eic-tree)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown

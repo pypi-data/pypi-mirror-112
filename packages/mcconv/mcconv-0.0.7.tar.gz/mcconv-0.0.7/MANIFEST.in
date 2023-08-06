@@ -1,0 +1,7 @@
+exclude .gitignore
+exclude run_mcconv.py
+exclude test
+exclude doc
+
+include pip_readme.md
+recursive-include mcconv/ *.py
