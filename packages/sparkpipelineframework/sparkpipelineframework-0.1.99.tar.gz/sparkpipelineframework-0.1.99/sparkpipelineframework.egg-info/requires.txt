@@ -1,0 +1,11 @@
+numpy>=1.19.2
+logger
+pyspark==3.1.1
+sparkautomapper>=0.2.34
+pymysql
+furl
+requests>=2.25.1
+scrapy
+boto3
+types-requests~=0.1.11
+types-pymysql~=0.1.5
