@@ -1,0 +1,53 @@
+[tool.black]
+line-length = 88
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = "tests/fixtures/*"
+
+[tool.isort]
+profile = "black"
+extend_skip = "tests/fixtures/"
+
+[tool.pylint.master]
+max-line-length = 100
+load-plugins = [
+    "pylint_pytest",
+]
+
+[tool.pylint."messages control"]
+enable = ["all"]
+disable = [
+    # allow TODO comments
+    "fixme",
+    # allow disables
+    "locally-disabled",
+    "suppressed-message",
+    # covered by isort
+    "ungrouped-imports",
+    # allow classes and functions w/o docstring
+    "missing-docstring",
+    # hard number checks can be ignored, because they are covered in code reviews
+    "too-many-instance-attributes",
+    "too-many-arguments",
+    "too-many-locals",
+    "too-many-branches",
+    "too-few-public-methods",
+    "too-many-nested-blocks",
+    # allow methods not to use self
+    "no-self-use",
+    # currently some code seems duplicated for pylint
+    "duplicate-code",
+    # we are a command line tool and don't want to show all internals
+    "raise-missing-from",
+]
+
+[tool.pylint.basic]
+good-names = [
+    "_",
+    "i",
+    "setUp",
+    "tearDown",
+    "e",
+    "ex",
+]
+no-docstring-rgx = "^_"
