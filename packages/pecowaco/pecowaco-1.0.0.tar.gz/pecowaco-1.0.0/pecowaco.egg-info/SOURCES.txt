@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+pecowaco/GaussFit.py
+pecowaco/Normalize.py
+pecowaco/Strip2DFFT.py
+pecowaco/__init__.py
+pecowaco/plot_utils.py
+pecowaco.egg-info/PKG-INFO
+pecowaco.egg-info/SOURCES.txt
+pecowaco.egg-info/dependency_links.txt
+pecowaco.egg-info/entry_points.txt
+pecowaco.egg-info/requires.txt
+pecowaco.egg-info/top_level.txt
