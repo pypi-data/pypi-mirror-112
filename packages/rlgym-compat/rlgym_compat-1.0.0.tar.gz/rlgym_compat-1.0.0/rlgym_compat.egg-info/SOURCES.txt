@@ -1,0 +1,13 @@
+README.md
+setup.py
+rlgym_compat/__init__.py
+rlgym_compat/common_values.py
+rlgym_compat/game_state.py
+rlgym_compat/physics_object.py
+rlgym_compat/player_data.py
+rlgym_compat/version.py
+rlgym_compat.egg-info/PKG-INFO
+rlgym_compat.egg-info/SOURCES.txt
+rlgym_compat.egg-info/dependency_links.txt
+rlgym_compat.egg-info/requires.txt
+rlgym_compat.egg-info/top_level.txt
