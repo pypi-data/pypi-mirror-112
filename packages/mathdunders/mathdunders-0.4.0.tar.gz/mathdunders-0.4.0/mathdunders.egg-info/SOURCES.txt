@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+mathdunders/__init__.py
+mathdunders/mathdunders.py
+mathdunders/test_mathdunders.py
+mathdunders.egg-info/PKG-INFO
+mathdunders.egg-info/SOURCES.txt
+mathdunders.egg-info/dependency_links.txt
+mathdunders.egg-info/top_level.txt
