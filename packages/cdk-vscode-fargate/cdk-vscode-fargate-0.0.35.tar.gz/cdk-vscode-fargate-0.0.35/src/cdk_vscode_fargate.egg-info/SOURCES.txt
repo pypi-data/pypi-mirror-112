@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cdk_vscode_fargate/__init__.py
+src/cdk_vscode_fargate/py.typed
+src/cdk_vscode_fargate.egg-info/PKG-INFO
+src/cdk_vscode_fargate.egg-info/SOURCES.txt
+src/cdk_vscode_fargate.egg-info/dependency_links.txt
+src/cdk_vscode_fargate.egg-info/requires.txt
+src/cdk_vscode_fargate.egg-info/top_level.txt
+src/cdk_vscode_fargate/_jsii/__init__.py
+src/cdk_vscode_fargate/_jsii/cdk-vscode-fargate@0.0.35.jsii.tgz
