@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: noject
+Version: 0.1.0
+Summary: A pain-free solution for writing in-line SQL safely.
+Author: tlonny
+Author-email: t@lonny.io
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
