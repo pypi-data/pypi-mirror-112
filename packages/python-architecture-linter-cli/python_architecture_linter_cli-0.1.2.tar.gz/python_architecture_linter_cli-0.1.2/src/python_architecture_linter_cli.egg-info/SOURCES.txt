@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.py
+src/python_architecture_linter_cli/__init__.py
+src/python_architecture_linter_cli/lint_command.py
+src/python_architecture_linter_cli.egg-info/PKG-INFO
+src/python_architecture_linter_cli.egg-info/SOURCES.txt
+src/python_architecture_linter_cli.egg-info/dependency_links.txt
+src/python_architecture_linter_cli.egg-info/namespace_packages.txt
+src/python_architecture_linter_cli.egg-info/requires.txt
+src/python_architecture_linter_cli.egg-info/top_level.txt
