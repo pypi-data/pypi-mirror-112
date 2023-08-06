@@ -1,0 +1,12 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+dist-name = "sedgwickz_hello_flit"
+module = "hello_flit"
+author = "sedgwickz"
+author-email = "kunnsh@gmail.com"
+description-file = "README.md"
+classifiers = [ "License :: OSI Approved :: MIT License",]
+
