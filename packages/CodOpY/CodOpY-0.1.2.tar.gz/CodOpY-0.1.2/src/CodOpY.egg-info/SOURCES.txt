@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+src/CodOpY/__init__.py
+src/CodOpY/clone.py
+src/CodOpY/misc.py
+src/CodOpY/optimise.py
+src/CodOpY/plot.py
+src/CodOpY.egg-info/PKG-INFO
+src/CodOpY.egg-info/SOURCES.txt
+src/CodOpY.egg-info/dependency_links.txt
+src/CodOpY.egg-info/not-zip-safe
+src/CodOpY.egg-info/requires.txt
+src/CodOpY.egg-info/top_level.txt
+src/CodOpY/Data/HEK.csv
+src/CodOpY/Data/RE_List.csv
+src/CodOpY/Data/Scer.csv
