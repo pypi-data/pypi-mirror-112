@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/aerocloud/__init__.py
+src/aerocloud/environment.py
+src/aerocloud/packages.py
+src/aerocloud.egg-info/PKG-INFO
+src/aerocloud.egg-info/SOURCES.txt
+src/aerocloud.egg-info/dependency_links.txt
+src/aerocloud.egg-info/top_level.txt
