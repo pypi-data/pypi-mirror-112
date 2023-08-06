@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: pascal-tri
+Version: 1.2.2
+Summary: Module for generating and printing Pascal's Triangle
+Home-page: https://github.com/jack-mil/pascal
+Author: jack-mil
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pascal-triangle
+![image](https://img.shields.io/badge/code%20style-black-000000.svg) &nbsp; &nbsp; &nbsp;
+![GitHub](https://img.shields.io/github/license/jack-mil/pascal-triangle) &nbsp; &nbsp; &nbsp;
+![PyPI](https://img.shields.io/pypi/v/pascal-tri) &nbsp; &nbsp; &nbsp;
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pascal-tri) &nbsp; &nbsp; &nbsp;
+
+
+## Module for generating and printing Pascal's Triangle ##
+### Requires *Python 3.9* (type hints) ###
+
+Explicit implementation of Pascal's Triangle algorithm. Each row can be generated separately from all others. This vastly speeds up time if all you need is row 100 for example.
+This module is intended to be useful for mathematics or anytime a row(s) of Pascal's triangle might be useful.
+
+
+### Installation ###
+*Pascal-triangle* can be installed directly with pip to use as a library and shell command by running `pip install pascal-tri`
+
+OR clone the repo and run `python -m pascal`
+
+
+### Includes methods for ###
+> * generating a list of triangle rows
+> * pretty printing a triangle with correct spacing and alignment
+
+The pascal module defines the following methods, access with
+```py
+from pascal import *
+```
+```py
+    # To generate a explicit row 'n' of Pascal's triangle:
+        calculate_row(n: int) -> PascalRow
+
+    # To generate a list of 'n' rows:
+        pascal(n: int) -> PascalTriangle
+
+    # Pretty print to stdout a triangle with 'n' rows or (optionally) a supplied triangle:
+        print_pascal(n: int, triangle: PascalTriangle = None) -> None
+```
+Can be run as a script as well.
+
+    python -m pascal [-h] [-l LINES]
+      If LINES not specified, runs in interactive loop
+
+
+## Learning objectives ##
+
+This project exists as an exercise in learning these techonlogies/concepts
+ - Python type hinting (VS code intellisense integration)
+ - Making distributable Python packages (PyPi)
+
