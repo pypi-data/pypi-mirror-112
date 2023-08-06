@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: awarc
+Version: 0.0.3
+Summary: tools for working with files archive
+Home-page: https://github.com/17876/awarc.git
+Author: 17876
+Author-email: 17876@protonmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Dist: setuptools (==49.2.0)
+
+UNKNOWN
+
+
