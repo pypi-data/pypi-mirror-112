@@ -1,0 +1,15 @@
+Pyro5>=5.10
+loguru
+msgpack
+numpy
+psutil
+psygnal
+pymmcore
+typing-extensions
+useq-schema
+
+[testing]
+PySide2
+pytest
+pytest-cov
+pytest-qt
