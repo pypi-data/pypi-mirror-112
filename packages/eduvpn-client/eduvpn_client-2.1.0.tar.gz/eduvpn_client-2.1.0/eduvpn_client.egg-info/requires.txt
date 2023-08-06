@@ -1,0 +1,17 @@
+cryptography
+pynacl
+requests
+requests_oauthlib
+wheel
+
+[gui]
+dbus-python
+pygobject
+
+[mypy]
+PyGObject-stubs
+mypy
+
+[test]
+pycodestyle
+pytest
