@@ -1,0 +1,12 @@
+pf_sqlalchemy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pf_sqlalchemy/crud/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pf_sqlalchemy/crud/pfs_crud_exception.py,sha256=Rp9x3EwoI2g9rTfx5ODo0JAG_eFttZnrnsxqMDVoONw,298
+pf_sqlalchemy/crud/pfs_crud_service.py,sha256=vhvdzgdH87rbupQJvFXY8_X90y-UvqsjIsVFhREGr4o,1354
+pf_sqlalchemy/crud/pfs_rest_helper_service.py,sha256=Q_HtVbtxDrUqHyOpTy8XesLA-wLdcQ2v8kEB58Pu0Pc,6770
+pf_sqlalchemy/db/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pf_sqlalchemy/db/orm.py,sha256=W5cePrG2cfrkjvQwBTAbanDK1NCQ9v09-6WwtxDFgjE,791
+flask_pf_sqlalchemy-1.0.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+flask_pf_sqlalchemy-1.0.dist-info/METADATA,sha256=YkDMFPrJDV_TxJ8aGLkrH7duTxIBz0Ee6O0vTLvz-HQ,710
+flask_pf_sqlalchemy-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+flask_pf_sqlalchemy-1.0.dist-info/top_level.txt,sha256=-Cv9IJ9Wic0ruH-gcR_Vx5u-wBLTp1R3abdu7pd86g0,14
+flask_pf_sqlalchemy-1.0.dist-info/RECORD,,
