@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+check_techstack_vulnerabilities/TechStack.py
+check_techstack_vulnerabilities/__init__.py
+check_techstack_vulnerabilities/__main__.py
+check_techstack_vulnerabilities.egg-info/PKG-INFO
+check_techstack_vulnerabilities.egg-info/SOURCES.txt
+check_techstack_vulnerabilities.egg-info/dependency_links.txt
+check_techstack_vulnerabilities.egg-info/requires.txt
+check_techstack_vulnerabilities.egg-info/top_level.txt
