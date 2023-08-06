@@ -1,0 +1,15 @@
+dlproject/__init__.py,sha256=iAVGMxPOYomD8Wh8P-FGPYKs-EEz13HWmUULDOXsjBQ,423
+dlproject/experiments.py,sha256=D0EoJV7JpbmbUU_ZeJ34YRB1YcXT3p-j67HE5Y607yM,940
+dlproject/logging.py,sha256=NXqLv_JytYDgImlcUAa6jIPrWuGwaQzJzsZJZBluANA,771
+dlproject/utils.py,sha256=fAHuoUILfEoS1fn4fNxac6cWk38WNN9NQF2Eb1z8UQU,87
+dlproject/datasets/__init__.py,sha256=pfhbFNNTMqQL7AB8LHcRyjw0QA8AZz3vFsm7mvdIYBk,164
+dlproject/datasets/mnist.py,sha256=KidkjEocEP0bub6g1rbt-HHr4yRI7d7R7sxqoL2nGSA,2017
+dlproject/models/__init__.py,sha256=IveWEgNO5aO_-dDWKextmaHx_X0RCBCoyQFy87psp3Y,84
+dlproject/models/classifier.py,sha256=c3kVYl6QT0YeDiNOusjtXXvMEiM61v_MLiIhRmXwHgo,1281
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_mnist.py,sha256=MHZo1oBxnvHkLMhAOV8EZFO-dP-DL6gVEfZnqh7MfW4,779
+dlproject-0.1.0.dist-info/LICENSE,sha256=ivtJ1_a09a4zE8M3Kr1IAHTU_hB_mjC6pxIftBQzZ1k,1076
+dlproject-0.1.0.dist-info/METADATA,sha256=7iiGWK1APUhziv8qm55jQiFvcK8fUsI9R7TKbIqeJIw,3918
+dlproject-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dlproject-0.1.0.dist-info/top_level.txt,sha256=bJmQo3AujlvO4bFIq9nSbJj26PfyS56mrBx5vYa9hmY,16
+dlproject-0.1.0.dist-info/RECORD,,
