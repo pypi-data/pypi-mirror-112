@@ -1,0 +1,162 @@
+Metadata-Version: 2.1
+Name: wc-bankid-nbu
+Version: 0.1.4
+Summary: SDK for NMU's BankID authorization.
+Home-page: UNKNOWN
+Author: WebCase
+Author-email: info@webcase.studio
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# WebCase NUBUBankId
+
+SDK for NBU\'s BankID authorization.
+
+- Simple API client to collect user data.
+- Small wrapper for EUSignCP library for a simpler data manipulation.
+- Python social auth integration: Authorization Backend.
+
+## Installation
+
+```sh
+pip install wc-bankid-nbu
+```
+
+1. Create folder to store certificates:
+   - By default it's: `/data/certificates`.
+   - Here: https://iit.com.ua/downloads. Find and upload to this folder 2 certficate files:
+     - CACertificates.p7b
+     - CACertificates.Test.p7b
+   - Then 2 certificates like `EU-*.cer` and private key `Key-6.dat` also should be placed there. You will get them from bankid authority.
+2. This step is optional, but desirable. Create a folder, like `/data/lib` or something like that for EUSignCP C Library to store there.
+
+   `wc-bankid-nbu` has a default built in binaries, but it would be better to have them in a separate folder.
+
+   You may copy them from `wc_bankid_nbu/contrib/eu_sign/linux/64` or `32` folder to your special one.
+3. Then all your scripts/server/etc. must run with an `LD_LIBRARY_PATH=/data/lib` environment variable set to a EUSignCP C Library folder path.
+
+## Usage
+
+This example will be for django. But there is only a configuration, that can be easily changed for any other project.
+
+`settings.py`
+
+```python
+# Private key location path and it's password
+# This must be provided:
+WC_BANKID_NBU_SIGNER_PRIVATE_KEY_PATH = '/data/certificates/Key-6.dat'
+WC_BANKID_NBU_SIGNER_PRIVATE_KEY_PASS = '12345677'
+# This parameters are optional. The defaults for them are:
+# Path to a certificates folder.
+WC_BANKID_NBU_SIGNER_FILE_STORE_PATH = '/data/certificates'
+# EUSignCP module, if you need a custom one.
+WC_BANKID_NBU_SIGNER_MODULE = 'wc_bankid_nbu.contrib.eu_sign.EUSignCP'
+# Name of the sign certificate.
+WC_BANKID_NBU_SIGNER_CERTIFICATES_SIGN_NAME = 'EU-5B63D88375D92018040000002E3D0000B1950000.cer'
+# Name of the distribution certificate.
+WC_BANKID_NBU_SIGNER_CERTIFICATES_DISTRIBUTION_NAME = 'EU-5B63D88375D92018040000002E3D0000B2950000.cer'
+```
+
+### Simple user data querying
+
+```python
+from wc_bankid_nbu import (
+  PersonalPhysicalDataQuery, APIClient, PersonalInfoDTO,
+  TAddress, TDocument, FPerson, FAddress, FDocument,
+)
+# Signer settings that was resolved from django configuration.
+from wc_bankid_nbu.contrib.django.conf import signer_settings
+from wc_bankid_nbu import APIClient, Signer
+
+
+user_data_query = (
+  # Type of data query.
+  PersonalPhysicalDataQuery()
+  # General user fields list that we wish to get.
+  .fields(
+    FPerson.FIRST_NAME, FPerson.MIDDLE_NAME, FPerson.LAST_NAME,
+    FPerson.BIRTH_DAY, FPerson.SEX,
+
+    FPerson.PHONE, FPerson.EMAIL, FPerson.RNOKPP,
+    FPerson.IS_HIGH_RISK, FPerson.IS_PEPS, FPerson.IS_RESTRICTED,
+    FPerson.IS_TERRORIST,
+
+    FPerson.IS_UA_RESIDENT,
+  )
+  # We only need an actual user's address.
+  # First parameter is Type of address we need, other parameters - required
+  # address fields.
+  .address(
+    TAddress.FACTUAL,
+    FAddress.COUNTRY, FAddress.REGION, FAddress.DISTRICT, FAddress.CITY,
+    FAddress.STREET, FAddress.STREET_NUMBER, FAddress.FLAT_NUMBER,
+  )
+  # But two documents: Passport in for of a book and international one.
+  # The same principle is for a `.scans()` data.
+  .document(
+    TDocument.PASSPORT_BOOK,
+    FDocument.NAME,
+    FDocument.SERIES, FDocument.NUMBER,
+    FDocument.ISSUED_BY, FDocument.ISSUED_BY_COUNTRY,
+    FDocument.ISSUED_AT, FDocument.EXPIRED_AT,
+  )
+  .document(
+    TDocument.PASSPORT_INTERNATIONAL,
+    FDocument.NAME,
+    FDocument.SERIES, FDocument.NUMBER,
+    FDocument.ISSUED_BY, FDocument.ISSUED_BY_COUNTRY,
+    FDocument.ISSUED_AT, FDocument.EXPIRED_AT,
+  )
+)
+
+client = APIClient(signer=Signer(signer_settings))
+data = client.get_personal_data(user_data_query, access_token)
+
+print(data['data'])
+# > User information.
+print(data['certificate'])
+# > Information about certificate.
+```
+
+### Social auth backend
+
+`auth_backend.py`
+
+```python
+from functools import cached_property
+
+from wc_bankid_nbu.contrib.social_core.backends import BankIDNBUBaseBackend
+# Signer settings that was resolved from django configuration.
+from wc_bankid_nbu.contrib.django.conf import signer_settings
+from wc_bankid_nbu import APIClient, Signer, TestAPIClient
+
+
+__all__ = "BankIDNBU",
+
+
+class BankIDNBU(BankIDNBUBaseBackend):
+  # User data query could be changed like so:
+  # PERSONAL_DATA_QUERY = PersonalPhysicalDataQuery().fields(...)
+
+  @cached_property
+  def client(self):
+    ClientClass = TestAPIClient if self.setting('DEBUG') else APIClient
+
+    return ClientClass(signer=Signer(signer_settings))
+```
+
+## TODO
+
+- [_] Social auth pipeline integrations.
+
+

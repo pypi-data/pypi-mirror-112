@@ -1,0 +1,5 @@
+include wc_bankid_nbu/contrib/eu_sign/*.so
+include wc_bankid_nbu/contrib/eu_sign/linux/64/*.so
+include wc_bankid_nbu/contrib/eu_sign/linux/64/*.ini
+include wc_bankid_nbu/contrib/eu_sign/linux/32/*.so
+include wc_bankid_nbu/contrib/eu_sign/linux/32/*.ini
