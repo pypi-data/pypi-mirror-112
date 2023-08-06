@@ -1,0 +1,6 @@
+[console_scripts]
+elfragmentador_calculate_irt=elfragmentador.cli:calculate_irt
+elfragmentador_convert_sptxt=elfragmentador.cli:convert_sptxt
+elfragmentador_evaluate=elfragmentador.cli:evaluate_checkpoint
+elfragmentador_train=elfragmentador.cli:train
+
