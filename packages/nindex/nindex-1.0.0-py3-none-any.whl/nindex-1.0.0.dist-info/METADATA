@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: nindex
+Version: 1.0.0
+Summary: nindex
+Home-page: UNKNOWN
+Author: Natalie Fearnley
+Author-email: nfearnley@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/nindex/nygame
+Project-URL: Tracker, https://github.com/nindex/nygame/issues
+Keywords: index bisect
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: autopep8 (==1.5.7) ; extra == 'dev'
+Requires-Dist: flake8 (==3.9.2) ; extra == 'dev'
+Requires-Dist: pytest (==6.2.4) ; extra == 'dev'
+
+# nindex
+
+Classes to provide efficient indexing and slicing operations into a list of objects by certain attribute key.
+
+## Installation
+
+```bash
+pip install ninstall
+```
+
+## Usage
+
+1. Create your list of objects:
+```python
+class Item():
+    def __init__(self, value, name):
+        self.value = value
+        self.name = name
+
+items = [
+    Item(1, "alpha"),
+    Item(3, "beta"),
+    Item(8, "gamma"),
+    Item(22, "delta")
+]
+```
+
+2. Wrap the list in a new Index, and specify which attribute will be the key:
+```python
+from nindex import Index
+itemindex = Index(items, "value")
+```
+
+3. Quickly look up objects by attribute key:
+```python
+ # Look for the object with this exact value
+item = itemindex[3]
+print(item.name)
+# 'beta'
+
+# Look for the closest object with less than or equal to this value
+item = itemindex.le(20)
+print(item.name)
+# 'gamma'
+
+# Look for all objects with values in the given range
+items = itemindex[2:22] #
+for item in items:
+    print(item.name)
+# 'beta'
+# 'gamma'
+```
+
+## Limitations
+
+This with *only* work if:
+- The list is sorted
+- The list doesn't change
+- The keyed attributes don't change
+- The keyed attributes contain no duplicate values
+
+
