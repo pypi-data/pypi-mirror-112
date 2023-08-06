@@ -1,0 +1,8 @@
+id: dropbox
+name: Dropbox
+labels:
+  - gui
+  - cloud
+formulas:
+  choco: dropbox
+  winget: Dropbox.Dropbox

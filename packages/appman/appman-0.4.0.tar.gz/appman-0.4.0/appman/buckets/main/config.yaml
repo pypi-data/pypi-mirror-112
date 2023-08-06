@@ -1,0 +1,42 @@
+package-managers:
+  app:
+    windows: [ scoop, choco, npm, pip, cargo, nvm ]
+    ubuntu: [ apt, npm, pip, cargo, nvm, snap ]
+    darwin: [ brew, npm, pip, cargo, nvm ]
+  font:
+    windows: [ scoop ]
+    ubuntu: [ font-local-share ]
+    darwin: [ brew ]
+  driver:
+    any: []
+  provisioned:
+    windows: [ appx ]
+  backend:
+    python:
+      any: [ pip ]
+    node:
+      any: [ npm ]
+  extension:
+    vscode:
+      any: [ vscode-extension ]
+tags:
+  - cli
+  - gui
+  - books
+  - browser
+  - cloud
+  - communication
+  - dev-tools
+  - db
+  - editor
+  - media
+  - music
+  - network
+  - notes
+  - package-manager
+  - prog-langs
+  - reference
+  - security
+  - sysadmin
+  - utils
+  - web-server
