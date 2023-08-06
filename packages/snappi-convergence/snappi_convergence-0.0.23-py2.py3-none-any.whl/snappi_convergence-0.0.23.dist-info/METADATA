@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: snappi-convergence
+Version: 0.0.23
+Summary: A snappi extension for measuring network convergence
+Home-page: https://github.com/open-traffic-generator/snappi-convergence
+Author: Open Traffic Generator
+Author-email: ashutshkumr@gmail.com
+License: MIT
+Keywords: snappi testing open traffic generator automation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing :: Traffic Generation
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=2.7, <4
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pyyaml
+Requires-Dist: jsonpath-ng
+Requires-Dist: typing
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+
+# snappi-convergence
+
+A snappi extension for measuring network convergence.
+
+### Install
+
+```bash
+python -m pip install --upgrade "snappi[convergence]"
+```
+
+### Development Setup
+
+```bash
+git clone --recurse-submodules https://github.com/open-traffic-generator/snappi-convergence.git && cd snappi-convergence
+python do.py setup && python do.py init
+```
+
+
