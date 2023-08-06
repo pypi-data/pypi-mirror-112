@@ -1,0 +1,11 @@
+Flask==2.0.1
+Flask-APScheduler==1.12.2
+Flask-SQLAlchemy==2.5.1
+Flask-HTTPAuth==4.4.0
+Flask-WTF==0.15.1
+WTForms==2.3.3
+PyMySQL==1.0.2
+requests==2.25.1
+beautifulsoup4==4.9.3
+python-dotenv==0.18.0
+dateparser==1.0.0
