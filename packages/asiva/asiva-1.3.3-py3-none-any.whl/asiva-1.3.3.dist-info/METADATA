@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: asiva
+Version: 1.3.3
+Summary: AstroStatistics In Variable Astronomy
+Home-page: UNKNOWN
+Author: P. Saleh, T. Singh & D. Hazarika
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: astropy
+Requires-Dist: bqplot
+Requires-Dist: gatspy
+Requires-Dist: ipyfilechooser
+Requires-Dist: ipywidgets
+Requires-Dist: jupyterlab
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: seaborn
+Requires-Dist: sklearn
+Requires-Dist: statsmodels
+Requires-Dist: voila
+
+UNKNOWN
+
+
