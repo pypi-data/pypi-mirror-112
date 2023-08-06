@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+src/modular_provider_architecture_definition/__init__.py
+src/modular_provider_architecture_definition/definition.py
+src/modular_provider_architecture_definition/validators.py
+src/modular_provider_architecture_definition.egg-info/PKG-INFO
+src/modular_provider_architecture_definition.egg-info/SOURCES.txt
+src/modular_provider_architecture_definition.egg-info/dependency_links.txt
+src/modular_provider_architecture_definition.egg-info/namespace_packages.txt
+src/modular_provider_architecture_definition.egg-info/requires.txt
+src/modular_provider_architecture_definition.egg-info/top_level.txt
