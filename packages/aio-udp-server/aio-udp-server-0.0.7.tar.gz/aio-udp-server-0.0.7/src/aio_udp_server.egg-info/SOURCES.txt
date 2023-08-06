@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/aio_udp_server.egg-info/PKG-INFO
+src/aio_udp_server.egg-info/SOURCES.txt
+src/aio_udp_server.egg-info/dependency_links.txt
+src/aio_udp_server.egg-info/top_level.txt
+src/aio_udp_server.egg-info/zip-safe
+src/aioudp/__init__.py
+src/aioudp/server.py
