@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+marketpsych/__init__.py
+marketpsych/mpwidgets.py
+marketpsych/sftp.py
+marketpsych.egg-info/PKG-INFO
+marketpsych.egg-info/SOURCES.txt
+marketpsych.egg-info/dependency_links.txt
+marketpsych.egg-info/requires.txt
+marketpsych.egg-info/top_level.txt
