@@ -1,0 +1,29 @@
+[tool.black]
+skip-string-normalization = true
+
+
+[tool.pyright]
+include = [
+    "pyright"
+]
+pythonVersion = "3.9"
+
+typeCheckingMode = "strict"
+
+# enable these for now as none of raise any
+# errors anyway
+reportCallInDefaultInitializer = true
+reportImplicitStringConcatenation = true
+
+# executionEnvironments = [
+#   { root = "pyright", pythonVersion = "3.6" },
+#   { root = "pyright", pythonVersion = "3.7" },
+#   { root = "pyright", pythonVersion = "3.8" },
+#   { root = "pyright", pythonVersion = "3.9", pythonPlatform = "Windows" },
+#   { root = "pyright", pythonVersion = "3.9", pythonPlatform = "Darwin" },
+#   { root = "pyright", pythonVersion = "3.9", pythonPlatform = "Linux" },
+# ]
+
+executionEnvironments = [
+  { root = "pyright", pythonVersion = "3.9", pythonPlatform = "Windows" },
+]
