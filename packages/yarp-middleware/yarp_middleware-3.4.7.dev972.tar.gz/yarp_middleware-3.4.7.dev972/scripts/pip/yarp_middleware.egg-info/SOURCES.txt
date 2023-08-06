@@ -1,0 +1,9 @@
+pyproject.toml
+setup.cfg
+setup.py
+yarp_middleware.egg-info/PKG-INFO
+yarp_middleware.egg-info/SOURCES.txt
+yarp_middleware.egg-info/dependency_links.txt
+yarp_middleware.egg-info/entry_points.txt
+yarp_middleware.egg-info/not-zip-safe
+yarp_middleware.egg-info/top_level.txt
