@@ -1,0 +1,4 @@
+[console_scripts]
+fishlifeqc = fishlifeqc.core_fishlife:main
+qcutil = qcutil.cli:main
+
