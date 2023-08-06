@@ -1,0 +1,76 @@
+[tool.poetry]
+name = "flyswot"
+version = "0.2.1"
+description = "flyswot"
+authors = ["Daniel van Strien <daniel.van-strien@bl.uk>"]
+license = "MIT"
+readme = "README.rst"
+homepage = "https://github.com/davanstrien/flyswot"
+repository = "https://github.com/davanstrien/flyswot"
+documentation = "https://flyswot.readthedocs.io"
+classifiers = [
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+
+[tool.poetry.urls]
+Changelog = "https://github.com/davanstrien/flyswot/releases"
+
+[tool.poetry.dependencies]
+python = "^3.7.0"
+rich = "^10.1.0"
+typer = "^0.3.2"
+validators = "^0.18.2"
+toolz = "^0.11.1"
+numpy = "^1.20.2"
+onnxruntime = "^1.7.0"
+Pillow = "^8.0.0"
+typing_extensions = "^3.10.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+coverage = {extras = ["toml"], version = "^5.4"}
+safety = "^1.10.3"
+mypy = "^0.910"
+xdoctest = {extras = ["colors"], version = "^0.15.5"}
+sphinx = "^4.0.3"
+sphinx-autobuild = "^2021.3.14"
+pre-commit = "^2.13.0"
+flake8 = "^3.9.2"
+black = "^21.6b0"
+flake8-bandit = "^2.1.2"
+flake8-bugbear = "^21.3.2"
+flake8-docstrings = "^1.5.0"
+flake8-rst-docstrings = "^0.2.3"
+pep8-naming = "^0.12.0"
+darglint = "^1.7.0"
+reorder-python-imports = "^2.4.0"
+pre-commit-hooks = "^4.0.1"
+sphinx-rtd-theme = "^0.5.1"
+sphinx-click = "^3.0.1"
+Pygments = "^2.8.1"
+hypothesis = "^6.14.2"
+memory-profiler = "^0.58.0"
+pytest-datafiles = "^2.0"
+
+[tool.poetry.scripts]
+flyswot = "flyswot.cli:main"
+
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["flyswot"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 90
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
