@@ -1,0 +1,3 @@
+[console_scripts]
+fload = fload.cmds.fload:main
+
