@@ -1,0 +1,13 @@
+bicleaner_hardrules-1.3.1.data/scripts/bicleaner-hardrules,sha256=O_P-nj-VvzwxX5s0cUwca14b0Ht3izV-kSztFWLuKqg,463
+hardrules/__init__.py,sha256=KAd15P--Aj-3F79_CHM_gTjhfA2yAm2NOtXQqCFPr-8,88
+hardrules/bicleaner_hardrules.py,sha256=BEr6_ZxqK4fP5mBmClFdSTLO6NWPH3KftQmEslUC8zE,16603
+hardrules/hardrules.py,sha256=KP0Jtgvt2z0lAQDsCTUHZ4srcsioEw8qdT0u9Mb5yfw,10266
+hardrules/lm.py,sha256=yC-lVyvsQAn-ccLV1MzHc5EMiR0a7Bk_2Wv5Gw59HRc,13844
+hardrules/tokenizer.py,sha256=_7Yw16-Jg00cW42pYUMPmEJwoYRGZbTIVgYKfIrWXNk,2193
+hardrules/training.py,sha256=qsbJA-0Q1_2aAFn6qKQOdSLllr1lb6ZQpXlks6uo3Fg,6551
+hardrules/util.py,sha256=sz8ll1bkPh2O95SSPShC2PAqh3D9mm6jxcEVVgKhPxY,3122
+bicleaner_hardrules-1.3.1.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+bicleaner_hardrules-1.3.1.dist-info/METADATA,sha256=qQ0six2vw4Xbi_G0ECaVIA6Z1Pmoi3sWVQQKd-j2tDc,11496
+bicleaner_hardrules-1.3.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bicleaner_hardrules-1.3.1.dist-info/top_level.txt,sha256=_rddlBWTMKk4EDNlOEToc3krjbvfZw8mxqSXSauSIb4,10
+bicleaner_hardrules-1.3.1.dist-info/RECORD,,
