@@ -1,0 +1,91 @@
+workflow:
+  rules:
+    - if: $CI_COMMIT_MESSAGE =~ / \[no-ci\]/
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
+    - when: always
+
+stages:
+  - lint
+  - test
+  - deploy
+
+lint:
+  stage: lint
+  image: python:3.8.7-slim
+  tags:
+    - docker_dio
+  script:
+    - pip install tox
+    - tox -e codestyle
+
+test:
+  stage: test
+  image: python:3.8.7
+  variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  only:
+    changes:
+      - kanon/**/*
+  cache:
+    paths:
+      - .cache/pip
+  tags:
+    - docker_dio
+  script:
+    - pip install .
+    - pip install .[test]
+    - mypy
+    - pytest --junitxml=report.xml -p "no:hypothesispytest" --pyargs kanon docs --cov kanon --cov-config=setup.cfg
+    - coverage xml
+  artifacts:
+    reports:
+      junit: report.xml
+      cobertura: coverage.xml
+
+test_notebooks:
+  stage: test
+  image: python:3.8.7
+  tags:
+    - docker_dio
+  allow_failure: true
+  only:
+    changes:
+      - kanon/**/*
+      - examples/**/*
+  script:
+    - pip install tox
+    - tox -e test_notebooks
+
+deploy:testpypi:
+  stage: deploy
+  image: python:3.8.7
+  variables:
+    TWINE_USERNAME: __token__
+    TWINE_PASSWORD: $TWINE_PASSWORD_TESTPYPI
+  tags:
+    - docker_dio
+  when: manual
+  only:
+    - tags
+  script:
+    - pip install twine build --upgrade
+    - python -m build --sdist .
+    - twine upload --repository testpypi dist/*
+
+deploy:pypi:
+  stage: deploy
+  image: python:3.8.7
+  variables:
+    TWINE_USERNAME: __token__
+    TWINE_PASSWORD: $TWINE_PASSWORD_PYPI
+  tags:
+    - docker_dio
+  when: manual
+  only:
+    - tags
+  script:
+    - pip install twine build --upgrade
+    - python -m build --sdist .
+    - twine upload dist/*

@@ -1,0 +1,6 @@
+[console_scripts]
+
+
+[hypothesis]
+_ = kanon.conftest:_hypothesis_sexagesimal_strategy
+

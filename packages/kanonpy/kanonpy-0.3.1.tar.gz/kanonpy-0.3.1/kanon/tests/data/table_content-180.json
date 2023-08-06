@@ -1,0 +1,614 @@
+{
+    "source_value_original": {
+        "args": {
+            "argument1": [
+                {
+                    "value": [
+                        "01",
+                        "00"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "02"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "03"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "04"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "05"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "06"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "07"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "08"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "09"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "10"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "11"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "12"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "13"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "14"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "15"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "16"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "17"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "18"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "value": [
+                        "19"
+                    ],
+                    "comment": "",
+                    "suggested": false,
+                    "critical_apparatus": [
+                        "",
+                        ""
+                    ]
+                }
+            ]
+        },
+        "entry": [
+            {
+                "value": [
+                    "-0",
+                    "02",
+                    "10"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "04",
+                    "19"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "06",
+                    "27"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "08",
+                    "36"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "10",
+                    "44"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "12",
+                    "53"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "15",
+                    "02"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "17",
+                    "10"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "19",
+                    "19"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "21",
+                    "28"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "23",
+                    "36"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "25",
+                    "45"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "27",
+                    "53"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "30",
+                    "01"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "32",
+                    "08"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "34",
+                    "16"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "36",
+                    "23"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "38",
+                    "30"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "value": [
+                    "-0",
+                    "40",
+                    "37"
+                ],
+                "comment": "",
+                "suggested": false,
+                "critical_apparatus": [
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        ]
+    },
+    "entry_type_of_number": "sexagesimal",
+    "entry_number_unit": "degree",
+    "entry_significant_fractional_place": "2",
+    "argument1_name": "Mean Argument of the Sun",
+    "argument1_type_of_number": "integer and sexagesimal",
+    "argument1_number_unit": "degree",
+    "argument1_significant_fractional_place": "0",
+    "edited_text": {
+        "id": "149",
+        "edited_text_title": "Equation of Sun from the Parisian Alfonsine Tables",
+        "date": "2020",
+        "type": "a",
+        "online_resource": null,
+        "comment": null,
+        "public": true,
+        "secondary_source": null,
+        "historian": {
+            "kibana_name": "Kremer R. (and Gislen L.)",
+            "kibana_id": "Historian13"
+        },
+        "page_range": null,
+        "original_texts": [
+            {
+                "id": "70",
+                "text_type": "astronomicalTable",
+                "original_text_title": "Tabula equationis solis",
+                "original_text_title_original_char": null,
+                "language": "Latin",
+                "script": "Latin",
+                "tpq": "1483",
+                "taq": "1483",
+                "page_min": "61",
+                "page_max": "63",
+                "is_folio": false,
+                "comment": "<p>Editio princeps of the Parisian Alfonsine tables<\/p>",
+                "public": true,
+                "created": "2020-06-12T10:58:50+02:00",
+                "updated": "2021-02-04T15:32:48+01:00",
+                "table_type": "Sun | Equation of the Sun",
+                "place": {
+                    "location": "45.4408474,12.31551509999997",
+                    "kibana_name": "Venice, Metropolitan City of Venice, Italy2",
+                    "kibana_id": "Place15"
+                },
+                "primary_source": {
+                    "id": "5",
+                    "prim_type": "ep",
+                    "digital_identifier": "ark:\/12148\/bpt6k60179r",
+                    "prim_title": "Tabule astronomice illustrissimi Alfonsii regis Castelle",
+                    "prim_title_original_char": null,
+                    "date": "1483",
+                    "library": {
+                        "kibana_name": "Paris, FR, Bibliotheque nationale de France",
+                        "kibana_id": "Library4"
+                    },
+                    "kibana_name": "Paris, Bibliotheque nationale de France | Numm-60179, Tabule astronomice illustrissimi Alfonsii regis Castelle, E. Ratdolt, 1483",
+                    "default_title": "Numm-60179 | Bibliotheque nationale de France",
+                    "kibana_id": "PrimarySource5",
+                    "tpq": "1483",
+                    "taq": "1483",
+                    "tpq_date": "1483-01-01",
+                    "taq_date": "1483-01-01",
+                    "places": [
+                        {
+                            "location": "45.4408474,12.31551509999997",
+                            "kibana_name": "Venice, Metropolitan City of Venice, Italy2",
+                            "kibana_id": "Place15"
+                        }
+                    ]
+                },
+                "work": {
+                    "id": "5",
+                    "incipit": null,
+                    "incipit_original_char": null,
+                    "title": "Parisian Alfonsine Tables",
+                    "title_original_char": null,
+                    "taq": "1327",
+                    "tpq": "1320",
+                    "place": {
+                        "location": "48.85661400000001,2.3522219000000177",
+                        "kibana_name": "Paris, France",
+                        "kibana_id": "Place10"
+                    },
+                    "historical_actors": [],
+                    "translator": null,
+                    "tpq_date": "1320-01-01",
+                    "taq_date": "1327-01-01",
+                    "kibana_name": "Parisian Alfonsine Tables\u202a (1320\u20131327) [Unknown creator]",
+                    "kibana_id": "Work5",
+                    "default_title": "Parisian Alfonsine Tables"
+                },
+                "historical_actor": null,
+                "tpq_date": "1483-01-01",
+                "taq_date": "1483-01-01",
+                "kibana_name": "Tabula equationis solis\u202a (1483) ; Paris, Bibliotheque nationale de France | Numm-60179, Tabule astronomice illustrissimi Alfonsii regis Castelle, E. Ratdolt, 1483 , 61-63 ; Parisian Alfonsine Tables\u202a (1320\u20131327) [Unknown creator]",
+                "kibana_id": "OriginalText70"
+            }
+        ],
+        "related_editions_ext": null,
+        "created": "2020-06-12",
+        "updated": "2020-06-12T12:53:46+02:00",
+        "era": null,
+        "kibana_name": "Equation of Sun from the Parisian Alfonsine Tables",
+        "kibana_id": "EditedText149",
+        "intellectual_authors": "Kremer R. (and Gislen L.)",
+        "doi": null
+    },
+    "symmetries": [
+        {
+            "argument": 1,
+            "symtype": "mirror",
+            "offset": 0,
+            "sign": -1,
+            "source": [
+                [
+                    "01"
+                ],
+                [
+                    "18"
+                ]
+            ],
+            "target": [
+                [
+                    "20"
+                ]
+            ]
+        }
+    ]
+}
