@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: python-lavviebot
+Version: 0.0.8
+Summary: A Python library for the Purrsong API utilized by LavvieBot S litterboxes
+Home-page: https://github.com/RobertD502/python-lavviebot
+Author: Robert Drinovac
+Author-email: unlisted@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/RobertD502/python-lavviebot/
+Project-URL: Bug Reports, https://github.com/RobertD502/python-lavviebot/issues
+Keywords: lavviebot,lavviebot s,purrsong
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Python-Lavviebot
+Lavviebot Python API for interfacing with the Lavviebot S Litterbox
+
+
