@@ -1,0 +1,16 @@
+CHANGELOG.md
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+estoverlap/__init__.py
+estoverlap/estoverlap.py
+estoverlap/version.py
+estoverlap.egg-info/PKG-INFO
+estoverlap.egg-info/SOURCES.txt
+estoverlap.egg-info/dependency_links.txt
+estoverlap.egg-info/requires.txt
+estoverlap.egg-info/top_level.txt
+estoverlap/overlap_utils/__init__.py
+estoverlap/overlap_utils/uniform_synchronous.py

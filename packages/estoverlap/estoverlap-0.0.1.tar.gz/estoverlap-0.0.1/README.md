@@ -1,0 +1,95 @@
+# estoverlap
+
+This package compares three different approaches to estimating a bivariate normal model parameters (mean volatility and correlation) from return observations:
+- using standard estimators for 1-day non-overlapping observations (SD)
+- using maximum-likelihood estimators for overlapping observations (MV)
+- using the standard estimators for non-overlapping observtions on overlapping observations (EW)
+The goal is to illustrate that the last approach results in very noisy estimates.  This is based on the paper:
+"Parameter estimation from overlapping observations", Michael A. Clayton, SSRN 2968896.
+
+This has really just been released so that one can quickly produce moving window estimate plots like included in Section 3 of the above paper.  None of the other interesting quantities and produced currently (bias factors, theoretical rmse, estimator rmse ratios, etc.), but if there is sufficient interest I can do so.
+
+# Usage -- Estimate_SD, Estimate_EW, Estimate_MV
+
+The idea is to keep things very simple so that one has access to model parameters quite easily:
+
+	(RET) = Estimate_XX(n,N_A,Returns)
+
+where:
+- n: An integer indicating how many overlapping return observations to use for the analysis (n>=1).  Ignored by SD.
+- N_A: The annualization factor indicting how many single day returns are to be included in a year (or whatever horizon the user wants parameters reported for).
+- Returns: An N1 x 2 numpy array of returns to be included in the estimation (N_1 is the number of 1-day returns).
+- RET: A dictionary returning the estimated parameters (and possibly other things).
+
+Parameters returned:
+- mu_1, mu_2: estimated annualized mean return.
+- var_1, var_2: estimated (unbiased) annualized return variance.
+- sigma_1, sigma_2: estimated (asymptotically unbiased) annualized return volatility.
+- cov: estimated (unbiased) annualized return covariance.
+- corr: estimated (asymptotically unbiased) annualized return correlation.
+
+These functions are pretty trivial and probably not overly robust...
+
+
+# Usage -- write_paths
+
+This is a simple utility to simulate correlated bivariate normal paths and save to file:
+ 
+	write_paths(seed,filename,N_paths,N_1,N_A,mu_1,mu_2,sigma_1,sigma_2,corr)
+
+where:
+- seed: The seed for the random number generator.  It uses numpy.random in a not particularly sophisticated way, and this allows repeatable resullt.  It does mean that if you want different paths you have to explicitly provide different seeds.
+- filename: The filename of the csv file to write the simulated paths to.  
+- N_paths: the number of paths to simulate.  Each path appears as a pair of columns in the csv with headers "Sim_N_1" and "Sim_N_2", N=0...N_paths-1.
+- N_A: the annualization factor to use to convert the annualized parmaeters to single-day parameters used in to simulate single-day returns. 
+- mu_1,...,corr: The parameters to use to simulate returns.
+
+This is also a useful function to show you the format of the file to use for Path_Analysis (see below) when using historical rather than simulated data.
+
+Note that there is a 'date' column in the output file, which is only ever used for labelling results but is included in the simulated path output so that the format of the file is the same as when usig historical returns.
+
+Python/Pandas may whine a bit about dataframe fragmentation -- ignore it, but if it fails you are likely trying to simulate more paths than can rationally be justified.  More than 10,000 is likely overkill.  Not difficult to fix, i just didn't particularly care.
+
+# Usage -- Stats_Analysis
+
+Produces parameter estimates from a number of simulated paths:
+
+	RET = Stats_Analysis(ReturnsFilename,N_paths,N_A,N1,N_overlaps)
+
+where:
+- ReturnsFilename: the name of the csv file that has the simulated returns paths.  Assumes that it is produced by write_paths (above). 
+- N_paths: The number of simulated paths in the file.   
+- N_A: The annualization factor to use in the estimation to produce parameters at the reporting horizon. 
+- N1: The number of 1-day returns that make up each simulated path.
+- N_overlaps: A list of overlap horizons to produce results for.
+- RET: A pandas dataframe containing the estimation retults: each row contains the estimated parameters for a given path and a paticular overlap.
+
+Right now this is pretty simple, leaving statistical analysis of the results to the user.
+
+# Usage -- Path_Analysis
+
+Produces moving-window parameter estimates from a single path:
+
+	RET = Path_Analysis(ReturnsFilename,series,N_A,N1,N_overlaps):
+
+where:
+- ReturnsFilename: the name of the csv file that has the returns path in the format produced by write_paths (above). 
+- series: A list of column headers to use for the analysis, for example: "['Sim_0_1','Sim_0_2']" for a simulated path.  This allows you to have a single csv file with multiple timeseries and perform the analysis on a selected pair.
+- N_A: The annualization factor to use in the estimation to produce parameters at the reporting horizon. 
+- N1: The number of 1-day returns that make up the observtion window.  Parameters are estimated using the first N1 returns, then the N1 returns starting whith the second return, etc..
+- N_overlaps: A list of overlap horizons to produce results for.
+- RET: A pandas dataframe containing the estimation retults: each row contains the estimated parameters for an offset along the path and a paticular overlap.
+
+Right now this is pretty simple, leaving statistical analysis of the results to the user.
+
+# Unit Tests
+
+Yeah... none of these at the moment.
+
+mike.
+
+
+
+
+
+
