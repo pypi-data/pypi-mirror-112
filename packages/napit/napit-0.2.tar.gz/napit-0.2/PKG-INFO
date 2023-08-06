@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: napit
+Version: 0.2
+Summary: A naver api translate client
+Home-page: https://github.com/dolphin2410/napit
+Author: dolphin2410
+Author-email: dolphin2410@outlook.kr
+License: MIT
+Download-URL: https://github.com/dolphin2410/napit/archive/refs/tags/0.2.tar.gz
+Description: UNKNOWN
+Keywords: rest,api,naver
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
