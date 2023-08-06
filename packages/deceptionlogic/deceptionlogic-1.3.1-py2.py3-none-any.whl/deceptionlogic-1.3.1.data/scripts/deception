@@ -1,0 +1,196 @@
+#!python
+"""
+Deception Logic command line tool
+"""
+from __future__ import print_function
+import os
+import sys
+import json
+import argparse
+from deceptionlogic import api, aws
+
+
+def print_json_data(json_data, pretty=False):
+    """
+    Print JSON data, with option of pretty printing
+    """
+    if pretty:
+        print(json.dumps(json_data, indent=4))
+    else:
+        print(json.dumps(json_data))
+
+
+def main():
+    """
+    Main function for Deception Logic CLI tool
+    """
+    try:
+        keyid = os.environ["DECEPTIONLOGIC_KEYID"]
+        secret = os.environ["DECEPTIONLOGIC_SECRET"]
+    except KeyError as error:
+        print("Environment variable not set {}".format(str(error)))
+        sys.exit()
+
+    # Create DeLo object
+    delo = api.Client(keyid, secret)
+
+    # Set base url if env variable is set
+    if "DECEPTIONLOGIC_BASEURL" in os.environ:
+        delo.base_url = os.environ["DECEPTIONLOGIC_BASEURL"]
+
+    # Authenticate to API
+    auth = delo.authenticate()
+
+    # Parse arguments
+    parser = argparse.ArgumentParser(description="Deception Logic CLI")
+    subparsers = parser.add_subparsers(title="commands",
+                                       dest="command",
+                                       help='show command help: deception <command> --help')
+
+    # Agents command
+    parser_agents = subparsers.add_parser("agents", help="Agent operations")
+    parser_agents.add_argument("--list",
+                               help="List all agents",
+                               default=False,
+                               action="store_true")
+
+    parser_agents.add_argument("--id",
+                               help="Filter by agent id",
+                               type=str)
+
+    parser_agents.add_argument("--profile-guid",
+                               help="Change the profile guid of an agent",
+                               type=str,
+                               metavar="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")
+
+    parser_agents.add_argument('--pretty',
+                               help='Print JSON in pretty format.',
+                               default=False,
+                               action="store_true")
+
+    # AgentLogs commands
+    parser_agentlogs = subparsers.add_parser("agentlogs", help="Agent Logs operations")
+    parser_agentlogs.add_argument("--list",
+                                  help="List all agent logs",
+                                  default=False,
+                                  action="store_true")
+
+    parser_agentlogs.add_argument("--id",
+                                  help="Filter by agent id",
+                                  type=str)
+
+    parser_agentlogs.add_argument('--pretty',
+                                  help='Print JSON in pretty format.',
+                                  default=False,
+                                  action="store_true")
+
+    # Events command
+    parser_events = subparsers.add_parser("events", help="Event operations")
+    parser_events.add_argument("--list",
+                               help="List all events",
+                               default=False,
+                               action="store_true")
+
+    parser_events.add_argument("--from-time",
+                               help="Relative time, return results from a given number of weeks (w), days (d), hours (h), minutes (m), or seconds (s) ago.",
+                               default=None,
+                               type=str)
+
+    # Alerts command
+    parser_alerts = subparsers.add_parser("alerts", help="Alert operations")
+    parser_alerts.add_argument("--list",
+                               help="List all alerts",
+                               default=False,
+                               action="store_true")
+
+    # Profiles command
+    parser_profiles = subparsers.add_parser("profiles", help="Profile operations")
+    parser_profiles.add_argument("--list",
+                                 help="List all profiles",
+                                 default=False,
+                                 action="store_true")
+
+    parser_profiles.add_argument("--id",
+                                 help="Filter by profile id",
+                                 type=str)
+
+    parser_profiles.add_argument('--pretty',
+                                 help='Print JSON in pretty format.',
+                                 default=False,
+                                 action="store_true")
+
+    # Services command
+    parser_services = subparsers.add_parser("services", help="Service operations")
+    parser_services.add_argument("--list",
+                                 help="List all services",
+                                 default=False,
+                                 action="store_true")
+
+    parser_services.add_argument("--id",
+                                 help="Filter by service id",
+                                 type=str)
+
+    parser.add_argument('--pretty',
+                        help='Print JSON in pretty format.',
+                        default=False,
+                        action="store_true")
+
+    args = parser.parse_args()
+
+    # If auth is success, execute on arguments
+    if auth["status"] != "success":
+        print("Authentiaction failed.")
+    else:
+        delo.token = auth["token"]
+        delo.identifier = auth["id"]
+
+        if args.command == "agents":
+            if args.list:
+                print_json_data(delo.get_agents(), args.pretty)
+
+            elif args.profile_guid:
+                if args.id is None:
+                    parser.error("--profile-guid requires --id.")
+
+                print_json_data(delo.set_agent_profile(args.id, args.profile_guid), args.pretty)
+
+            elif args.id:
+                print_json_data(delo.get_agent(args.id), args.pretty)
+            else:
+                parser_agents.print_help(sys.stderr)
+                sys.exit(1)
+
+        if args.command == "agentlogs":
+            if args.list:
+                print_json_data(delo.get_agentlogs(), args.pretty)
+            elif args.id:
+                print_json_data(delo.get_agentlogs(args.id), args.pretty)
+            else:
+                parser_agentlogs.print_help(sys.stderr)
+                sys.exit(1)
+
+        if args.command == "events":
+            if args.list:
+                params = {
+                    "from": args.from_time
+                }
+                print_json_data(delo.get_events(params), args.pretty)
+
+        if args.command == "alerts":
+            if args.list:
+                print_json_data(delo.get_alerts(), args.pretty)
+
+        if args.command == "profiles":
+            if args.list:
+                print_json_data(delo.get_profiles(), args.pretty)
+            elif args.id:
+                print_json_data(delo.get_profile(args.id), args.pretty)
+
+        if args.command == "services":
+            if args.list:
+                print_json_data(delo.get_services(), args.pretty)
+            elif args.id:
+                print_json_data(delo.get_service(args.id), args.pretty)
+
+if __name__ == '__main__':
+    main()
