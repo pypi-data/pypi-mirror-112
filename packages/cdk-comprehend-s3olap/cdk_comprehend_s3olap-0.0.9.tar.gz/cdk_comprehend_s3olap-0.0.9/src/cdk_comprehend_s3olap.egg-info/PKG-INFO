@@ -1,0 +1,331 @@
+Metadata-Version: 2.1
+Name: cdk-comprehend-s3olap
+Version: 0.0.9
+Summary: cdk-comprehend-s3olap
+Home-page: https://github.com/HsiehShuJeng/cdk-comprehend-s3olap.git
+Author: Shu-Jeng Hsieh
+License: Apache-2.0
+Project-URL: Source, https://github.com/HsiehShuJeng/cdk-comprehend-s3olap.git
+Description: # cdk-comprehend-s3olap
+        
+        This construct creates the foundation for developers to explore the combination of Amazon S3 Object Lambda and Amazon Comprehend for PII scenarios and it is designed with flexibility, i.e, the developers could tweak arguments via CDK to see how AWS services work and behave.
+        
+        [![License](https://img.shields.io/badge/License-Apache%202.0-green)](https://opensource.org/licenses/Apache-2.0)
+        [![Current cdk version](https://img.shields.io/github/package-json/dependency-version/HsiehShuJeng/cdk-comprehend-s3olap/@aws-cdk/core)](https://github.com/aws/aws-cdk)
+        [![Build](https://github.com/HsiehShuJeng/cdk-comprehend-s3olap/actions/workflows/build.yml/badge.svg)](https://github.com/HsiehShuJeng/cdk-comprehend-s3olap/actions/workflows/build.yml) [![Release](https://github.com/HsiehShuJeng/cdk-comprehend-s3olap/actions/workflows/release.yml/badge.svg)](https://github.com/HsiehShuJeng/cdk-comprehend-s3olap/actions/workflows/release.yml)
+        [![Python](https://img.shields.io/pypi/pyversions/cdk-comprehend-s3olap)](https://pypi.org) [![pip](https://img.shields.io/badge/pip%20install-cdk--comprehend--s3olap-blue)](https://pypi.org/project/cdk-comprehend-s3olap/)
+        [![npm version](https://img.shields.io/npm/v/cdk-comprehend-s3olap)](https://www.npmjs.com/package/cdk-comprehend-s3olap) [![pypi version](https://img.shields.io/pypi/v/cdk-comprehend-s3olap)](https://pypi.org/project/cdk-comprehend-s3olap/) [![Maven](https://img.shields.io/maven-central/v/io.github.hsiehshujeng/cdk-comprehend-s3olap)](https://search.maven.org/search?q=a:cdk-comprehend-s3olap) [![nuget](https://img.shields.io/nuget/v/Comprehend.S3olap)](https://www.nuget.org/packages/Comprehend.S3olap/)
+        
+        # Table of Contents
+        
+        * [Serverless Architecture](#serverless-architecture)
+        
+          * [Access Control](#access-control)
+          * [Redaction](#rerfaction)
+        * [Introduction](#introduction)
+        * [Example](#example)
+        
+          * [Typescript](#typescript)
+          * [Python](#python)
+          * [Java](#java)
+          * [C#](#c)
+        * [Some Notes](#some-notes)
+        
+        # Serverless Architecture
+        
+        ## Access Control
+        
+        **Data Flow**
+        ![image](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2021/05/07/1-2891.jpg)
+        *Ram R. and Austin Q., 2021*
+        **Arhictecture**
+        ![image](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2021/05/07/2-2891.jpg)
+        *Ram R. and Austin Q., 2021*
+        
+        ## Redaction
+        
+        ![image](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2021/05/07/3-2891.jpg)
+        *Ram R. and Austin Q., 2021*
+        ![image](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2021/05/07/4-2891.jpg)
+        *Ram R. and Austin Q., 2021*
+        
+        # Introduction
+        
+        The architecture was introduced by **Ram Ramani** and **Austin Quam** and was posted on the AWS Blog as [*Protect PII using Amazon S3 Object Lambda to process and modify data during retrieval*](https://aws.amazon.com/tw/blogs/machine-learning/protect-pii-using-amazon-s3-object-lambda-to-process-and-modify-data-during-retrieval/).
+        I converted the architecture into a CDK constrcut for 4 programming languages. With this construct, you could manage the properties of IAM roles, the Lambda functions with Amazon Comprehend, and few for the constrcut.
+        Before deploying the construct via the CDK, you could either places the text files, i.e., those for the access control case and redaction case, under a directory with a specific name as the following or just deploying directly yet you need to upload the text files onto the S3 buckets manually yourself. It's all your choie.
+        
+        ```bash
+        # For the access control case.
+        $ cd ${ROOT_DIRECTORY_CDK_APPLICATION}
+        $ mkdir -p files/access_control
+        $ curl -o survey-results.txt https://raw.githubusercontent.com/aws-samples/amazon-comprehend-examples/master/s3_object_lambda_pii_protection_blog/access-control/survey-results.txt
+        $ curl -o innocuous.txt https://raw.githubusercontent.com/aws-samples/amazon-comprehend-examples/master/s3_object_lambda_pii_protection_blog/access-control/innocuous.txt
+        # For the redaction case.
+        $ cd ${ROOT_DIRECTORY_CDK_APPLICATION}
+        $ mkdir -p files/redaction
+        $ curl -o transcript.txt https://raw.githubusercontent.com/aws-samples/amazon-comprehend-examples/master/s3_object_lambda_pii_protection_blog/redaction/transcript.txt
+        ```
+        
+        # Example
+        
+        ## Typescript
+        
+        You could also refer to [here](https://github.com/HsiehShuJeng/cdk-comprehend-s3olap/tree/main/src/demo/typescript).
+        
+        ```bash
+        $ cdk --init language typescript
+        $ yarn add cdk-comprehend-s3olap
+        ```
+        
+        ```python
+        # Example automatically generated without compilation. See https://github.com/aws/jsii/issues/826
+        import aws_cdk.core as cdk
+        from cdk_comprehend_s3olap import ComprehendS3olab
+        
+        class TypescriptStack(cdk.Stack):
+            def __init__(self, scope, id, *, description=None, env=None, stackName=None, tags=None, synthesizer=None, terminationProtection=None, analyticsReporting=None):
+                super().__init__(scope, id, description=description, env=env, stackName=stackName, tags=tags, synthesizer=synthesizer, terminationProtection=terminationProtection, analyticsReporting=analyticsReporting)
+                s3olab = ComprehendS3olab(self, "PiiDemo",
+                    admin_redaction_lambda_config={
+                        "mask_character": " ",
+                        "unsupported_file_handling": "PASS"
+                    },
+                    billing_redaction_lambda_config={
+                        "mask_mode": "REPLACE_WITH_PII_ENTITY_TYPE",
+                        "pii_entity_types": "AGE,DRIVER_ID,IP_ADDRESS,MAC_ADDRESS,PASSPORT_NUMBER,PASSWORD,SSN"
+                    },
+                    cusrt_support_redaction_lambda_config={
+                        "mask_mode": "REPLACE_WITH_PII_ENTITY_TYPE",
+                        "pii_entity_types": " BANK_ACCOUNT_NUMBER,BANK_ROUTING,CREDIT_DEBIT_CVV,CREDIT_DEBIT_EXPIRY,CREDIT_DEBIT_NUMBER,SSN"
+                    }
+                )
+        
+                cdk.CfnOutput(self, "OPiiAccessControlLambdaArn", value=s3olab.pii_access_conrtol_lambda_arn)
+                cdk.CfnOutput(self, "OAdminLambdaArn", value=s3olab.admin_lambda_arn)
+                cdk.CfnOutput(self, "OBillingLambdaArn", value=s3olab.billing_lambda_arn)
+                cdk.CfnOutput(self, "OCustomerSupportLambdaArn", value=s3olab.customer_support_lambda_arn)
+                cdk.CfnOutput(self, "OS3ObjectLambdaGeneralArn", value=s3olab.s3object_lambda_access_control_arn)
+                cdk.CfnOutput(self, "OS3ObjectLambdaAdminArn", value=s3olab.s3object_lambda_admin_arn)
+                cdk.CfnOutput(self, "OS3ObjectLambdaBillingArn", value=s3olab.s3object_lambda_billing_arn)
+                cdk.CfnOutput(self, "OS3ObjectLambdaCustomerSupportArn", value=s3olab.customer_support_lambda_arn)
+        
+        app = cdk.App()
+        TypescriptStack(app, "TypescriptStack",
+            stack_name="Comprehend-S3olap"
+        )
+        ```
+        
+        ## Python
+        
+        You could also refer to [here](https://github.com/HsiehShuJeng/cdk-databrew-cicd/tree/main/src/demo/python).
+        
+        ```bash
+        # upgrading related Python packages
+        $ python -m ensurepip --upgrade
+        $ python -m pip install --upgrade pip
+        $ python -m pip install --upgrade virtualenv
+        # initialize a CDK Python project
+        $ cdk init --language python
+        # make packages installed locally instead of globally
+        $ source .venv/bin/activate
+        $ # add "cdk-comprehend-s3olap==0.0.4" into `setup.py`
+        $ python -m pip install --upgrade -r requirements.txt
+        ```
+        
+        ```python
+        from aws_cdk import core as cdk
+        from cdk_comprehend_s3olap import ComprehendS3olab
+        
+        class PythonStack(cdk.Stack):
+            def __init__(self, scope: cdk.Construct, construct_id: str, **kwargs) -> None:
+                super().__init__(scope, construct_id, **kwargs)
+        
+                s3olab = ComprehendS3olab(self, "PiiDemo",
+                    admin_redaction_lambda_config={
+                        "mask_character": " ",
+                        "unsupported_file_handling": "PASS"
+                    },
+                    billing_redaction_lambda_config={
+                        "mask_mode": "REPLACE_WITH_PII_ENTITY_TYPE",
+                        "pii_entity_types": "AGE,DRIVER_ID,IP_ADDRESS,MAC_ADDRESS,PASSPORT_NUMBER,PASSWORD,SSN"
+                    },
+                    cusrt_support_redaction_lambda_config={
+                        "mask_mode": "REPLACE_WITH_PII_ENTITY_TYPE",
+                        "pii_entity_types": " BANK_ACCOUNT_NUMBER,BANK_ROUTING,CREDIT_DEBIT_CVV,CREDIT_DEBIT_EXPIRY,CREDIT_DEBIT_NUMBER,SSN"
+                    },
+                    example_file_dir="/opt/learning/cdk-comprehend-s3olap/src/demo/python"
+                )
+        
+                cdk.CfnOutput(self, "OPiiAccessControlLambdaArn", value=s3olab.pii_access_conrtol_lambda_arn)
+                cdk.CfnOutput(self, "OAdminLambdaArn", value=s3olab.admin_lambda_arn)
+                cdk.CfnOutput(self, "OBillingLambdaArn", value=s3olab.billing_lambda_arn)
+                cdk.CfnOutput(self, "OCustomerSupportLambdaArn", value=s3olab.customer_support_lambda_arn)
+                cdk.CfnOutput(self, "OS3ObjectLambdaGeneralArn", value=s3olab.s3object_lambda_access_control_arn)
+                cdk.CfnOutput(self, "OS3ObjectLambdaAdminArn", value=s3olab.s3object_lambda_admin_arn)
+                cdk.CfnOutput(self, "OS3ObjectLambdaBillingArn", value=s3olab.s3object_lambda_billing_arn)
+                cdk.CfnOutput(self, "OS3ObjectLambdaCustomerSupportArn", value=s3olab.customer_support_lambda_arn)
+        ```
+        
+        ## Java
+        
+        You could also refer to [here](https://github.com/HsiehShuJeng/cdk-comprehend-s3olap/tree/main/src/demo/java).
+        
+        ```bash
+        $ cdk init --language java
+        $ mvn package # If you include the construct, you need to tweak the test case for Java in order to package with success via Maven.
+        ```xml
+        .
+        .
+        <properties>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <cdk.version>1.112.0</cdk.version>
+            <constrcut.verion>0.0.4</constrcut.verion>
+            <junit.version>5.7.1</junit.version>
+        </properties>
+        .
+        .
+        <dependencies>
+            <!-- AWS Cloud Development Kit -->
+            <dependency>
+                <groupId>software.amazon.awscdk</groupId>
+                <artifactId>core</artifactId>
+                <version>${cdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.hsiehshujeng</groupId>
+                <artifactId>cdk-comprehend-s3olap</artifactId>
+                <version>${constrcut.verion}</version>
+            </dependency>
+            .
+            .
+            .
+        </dependencies>
+        ```
+        
+        ```java
+        package com.myorg;
+        
+        import software.amazon.awscdk.core.CfnOutput;
+        import software.amazon.awscdk.core.CfnOutputProps;
+        import software.amazon.awscdk.core.Construct;
+        import software.amazon.awscdk.core.Stack;
+        import software.amazon.awscdk.core.StackProps;
+        import io.github.hsiehshujeng.cdk.comprehend.s3olap.RedactionLambdaProps;
+        import io.github.hsiehshujeng.cdk.comprehend.s3olap.ComprehendS3olab;
+        import io.github.hsiehshujeng.cdk.comprehend.s3olap.ComprehendS3olabProps;
+        
+        public class JavaStack extends Stack {
+            public JavaStack(final Construct scope, final String id) {
+                this(scope, id, null);
+            }
+        
+            public JavaStack(final Construct scope, final String id, final StackProps props) {
+                super(scope, id, props);
+        
+                ComprehendS3olab s3olab = new ComprehendS3olab(this, "PiiDemo", ComprehendS3olabProps.builder()
+                    .adminRedactionLambdaConfig(
+                        RedactionLambdaProps.builder()
+                            .maskCharacter(" ")
+                            .unsupportedFileHandling("PASS").build())
+                    .billingRedactionLambdaConfig(
+                        RedactionLambdaProps.builder()
+                            .maskMode("REPLACE_WITH_PII_ENTITY_TYPE")
+                            .piiEntityTypes("AGE,DRIVER_ID,IP_ADDRESS,MAC_ADDRESS,PASSPORT_NUMBER,PASSWORD,SSN")
+                            .build())
+                    .cusrtSupportRedactionLambdaConfig(
+                        RedactionLambdaProps.builder()
+                        .maskMode("REPLACE_WITH_PII_ENTITY_TYPE")
+                        .piiEntityTypes("BANK_ACCOUNT_NUMBER,BANK_ROUTING,CREDIT_DEBIT_CVV,CREDIT_DEBIT_EXPIRY,CREDIT_DEBIT_NUMBER,SSN")
+                        .build())
+                    .exampleFileDir("/opt/learning/cdk-comprehend-s3olap/src/demo/java")
+                    .build()
+                    );
+        
+                  new CfnOutput(this, "OPiiAccessControlLambdaArn", CfnOutputProps.builder().value(s3olab.getPiiAccessConrtolLambdaArn()).build());
+                  new CfnOutput(this, "OAdminLambdaArn", CfnOutputProps.builder().value(s3olab.getAdminLambdaArn()).build());
+                  new CfnOutput(this, "OBillingLambdaArn", CfnOutputProps.builder().value(s3olab.getBillingLambdaArn()).build());
+                  new CfnOutput(this, "OCustomerSupportLambdaArn", CfnOutputProps.builder().value(s3olab.getCustomerSupportLambdaArn()).build());
+                  new CfnOutput(this, "OS3ObjectLambdaGeneralArn", CfnOutputProps.builder().value(s3olab.getS3objectLambdaAccessControlArn()).build());
+                  new CfnOutput(this, "OS3ObjectLambdaAdminArn", CfnOutputProps.builder().value(s3olab.getS3objectLambdaAdminArn()).build());
+                  new CfnOutput(this, "OS3ObjectLambdaBillingArn", CfnOutputProps.builder().value(s3olab.getS3objectLambdaBillingArn()).build());
+                  new CfnOutput(this, "OS3ObjectLambdaCustomerSupportArn", CfnOutputProps.builder().value(s3olab.getCustomerSupportLambdaArn()).build());
+            }
+        }
+        ```
+        
+        ## C#
+        
+        You could also refer to [here](https://github.com/HsiehShuJeng/cdk-comprehend-s3olap/tree/main/src/demo/csharp).
+        
+        ```bash
+        $ cdk init --language csharp
+        $ dotnet add src/Csharp package Comprehend.S3olap --version 0.0.8
+        ```
+        
+        ```cs
+        using Amazon.CDK;
+        using ScottHsieh.Cdk;
+        
+        namespace Csharp
+        {
+            public class CsharpStack : Stack
+            {
+                internal CsharpStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)
+                {
+                    var S3olab = new ComprehendS3olab(this, "PiiDemo", new ComprehendS3olabProps
+                    {
+                        AdminRedactionLambdaConfig = new RedactionLambdaProps
+                        {
+                            MaskCharacter = " ",
+                            UnsupportedFileHandling = "PASS"
+                        },
+                        BillingRedactionLambdaConfig = new RedactionLambdaProps
+                        {
+                            MaskMode = "REPLACE_WITH_PII_ENTITY_TYPE",
+                            PiiEntityTypes = "AGE,DRIVER_ID,IP_ADDRESS,MAC_ADDRESS,PASSPORT_NUMBER,PASSWORD,SSN"
+                        },
+                        CusrtSupportRedactionLambdaConfig = new RedactionLambdaProps
+                        {
+                            MaskMode = "REPLACE_WITH_PII_ENTITY_TYPE",
+                            PiiEntityTypes = "BANK_ACCOUNT_NUMBER,BANK_ROUTING,CREDIT_DEBIT_CVV,CREDIT_DEBIT_EXPIRY,CREDIT_DEBIT_NUMBER,SSN"
+                        },
+                        ExampleFileDir = "/opt/learning/cdk-comprehend-s3olap/src/demo/csharp"
+                    });
+        
+                    new CfnOutput(this, "OPiiAccessControlLambdaArn", new CfnOutputProps { Value = S3olab.PiiAccessConrtolLambdaArn });
+                    new CfnOutput(this, "OAdminLambdaArn", new CfnOutputProps { Value = S3olab.AdminLambdaArn });
+                    new CfnOutput(this, "OBillingLambdaArn", new CfnOutputProps { Value = S3olab.BillingLambdaArn });
+                    new CfnOutput(this, "OCustomerSupportLambdaArn", new CfnOutputProps { Value = S3olab.CustomerSupportLambdaArn });
+                    new CfnOutput(this, "OS3ObjectLambdaGeneralArn", new CfnOutputProps { Value = S3olab.S3objectLambdaAccessControlArn });
+                    new CfnOutput(this, "OS3ObjectLambdaAdminArn", new CfnOutputProps { Value = S3olab.S3objectLambdaAdminArn });
+                    new CfnOutput(this, "OS3ObjectLambdaBillingArn", new CfnOutputProps { Value = S3olab.S3objectLambdaBillingArn });
+                    new CfnOutput(this, "OS3ObjectLambdaCustomerSupportArn", new CfnOutputProps { Value = S3olab.CustomerSupportLambdaArn });
+                }
+            }
+        }
+        ```
+        
+        # Some Notes
+        
+        1. You should see similar items as the following diagram displays after deploying the constrcut.
+           ![image](https://raw.githubusercontent.com/HsiehShuJeng/cdk-comprehend-s3olap/main/images/s3olap_console.png)
+        2. After creating the foundation with success, you could switch roles that the consrtcut creates for you and see how **Amazon S3 Object Lambda** works. For what switching roles is, please refer to [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-console.html) for the detail.
+           ![image](https://raw.githubusercontent.com/HsiehShuJeng/cdk-comprehend-s3olap/main/images/switch_roles.png)
+        3. You explore **Amazon S3 Object Lambda** through the Object Lambda access points on the AWS Console and open or download the text files via one of the IAM roles.
+        4. Lambda code that incorporates with **Amazon Comprehend** could be see [here](https://github.com/aws-samples/amazon-comprehend-examples/tree/master/s3_object_lambda_pii_protection_blog).
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Typing :: Typed
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
