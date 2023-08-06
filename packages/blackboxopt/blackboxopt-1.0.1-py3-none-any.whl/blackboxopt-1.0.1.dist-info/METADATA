@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: blackboxopt
+Version: 1.0.1
+Summary: A common interface for blackbox optimization algorithms along with useful helpers like parallel optimization loops, analysis and visualization scripts.
+License: Apache-2.0
+Author: Bosch Center for AI, Robert Bosch GmbH
+Requires-Python: >=3.7.1,<4.0.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: all
+Provides-Extra: bohb
+Provides-Extra: dask
+Provides-Extra: hyperband
+Provides-Extra: testing
+Provides-Extra: visualization
+Requires-Dist: dask (>=2021.2.0,<2022.0.0); extra == "all" or extra == "dask"
+Requires-Dist: distributed (>=2021.2.0,<2022.0.0); extra == "all" or extra == "dask"
+Requires-Dist: numpy (>=1.20.1,<2.0.0); extra == "all" or extra == "hyperband" or extra == "bohb" or extra == "testing"
+Requires-Dist: pandas (>=1.2.4,<2.0.0); extra == "all" or extra == "visualization"
+Requires-Dist: parameterspace (>=0.7.2,<0.8.0)
+Requires-Dist: plotly (>=4.14.3,<5.0.0); extra == "all" or extra == "visualization"
+Requires-Dist: scipy (>=1.6.0,<2.0.0); extra == "all" or extra == "bohb" or extra == "visualization"
+Requires-Dist: statsmodels (>=0.12.2,<0.13.0); extra == "all" or extra == "bohb"
