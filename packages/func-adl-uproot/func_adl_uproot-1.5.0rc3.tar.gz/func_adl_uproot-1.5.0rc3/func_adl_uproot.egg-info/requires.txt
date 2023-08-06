@@ -1,0 +1,11 @@
+awkward>=1.2
+func-adl>=2.2.1
+numpy
+qastle>=0.11.0-rc.0
+uproot>=4
+vector
+
+[test]
+flake8
+pytest
+pytest-cov
