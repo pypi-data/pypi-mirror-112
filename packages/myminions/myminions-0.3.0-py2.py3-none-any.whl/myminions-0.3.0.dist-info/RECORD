@@ -1,0 +1,12 @@
+myminions/__init__.py,sha256=MQ0Th5npEArTJOg6LpLKlD2d1XCSBA3TYwFuqwppLPA,150
+myminions/minions.py,sha256=hP_94yhUlz2C0AwaFFATuaFj0rUuDUH_13VXgmwMsRw,18497
+tests/__init__.py,sha256=UKoh4y8WhJIL8oHluYYpR2drIsxtEUI88ft6UWliU0A,113
+tests/test_pyyaml.py,sha256=cQjhwSHpeWkicxwUj3ifNF5a4l9wNwstNXs_e-Ls8HQ,1631
+tests/resources/resources_index.md,sha256=teHbrSk_a6Iddt8mYn2g0b9q3FGj8C0Spgsqj-ZJs8M,106
+tests/resources/sample-1/.hidden,sha256=NUecbevYq7S4nlhR5FFm6x-pMWJoRILMzDC6-Qjv7MQ,34
+tests/resources/sample-1/file-1.txt,sha256=KGVbyLBVsf2meNfPVM29Ur_OlHW7wBc3JydFc2QHPEI,16
+tests/resources/sample-1/file-2.csv,sha256=PPCl2u-7YF67KX3V74Eo4J-egZRRbzG8rj_G4M70dPU,31
+myminions-0.3.0.dist-info/METADATA,sha256=I-JCWDHbptyUuMvQ7LVzchpEHbUHBd4MneDoPfGPZNw,3596
+myminions-0.3.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+myminions-0.3.0.dist-info/top_level.txt,sha256=waXVXzYZxVhuvksjizNu5Zs4tpQq3Yogmhk0pT8vv98,16
+myminions-0.3.0.dist-info/RECORD,,
