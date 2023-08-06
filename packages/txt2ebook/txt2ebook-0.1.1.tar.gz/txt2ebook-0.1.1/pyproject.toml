@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "txt2ebook"
+version = "0.1.1"
+description = "Console tool to convert txt file to different ebook format"
+authors = ["Kian-Meng Ang <kianmeng@cpan.org>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+homepage = "https://github.com/kianmeng/txt2ebook"
+repository = "https://github.com/kianmeng/txt2ebook"
+keywords = ["txt", "ebook", "epub"]
+classifiers = [
+    "Environment :: Console",
+    "Topic :: Text Processing :: General"
+]
+include = [
+    "CHANGELOG.md",
+    "LICENSE"
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.0.1"
+EbookLib = "^0.17.1"
+Markdown = "^3.3.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+txt2ebook = 'txt2ebook.txt2ebook:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
