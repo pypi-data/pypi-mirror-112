@@ -1,0 +1,3 @@
+[console_scripts]
+pykdebugparser = pykdebugparser.__main__:cli
+
