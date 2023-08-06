@@ -1,0 +1,15 @@
+projpicker/VERSION,sha256=ASrv9LSKshfAWdSwNKRj_ZC8sWsaUsYUsE4jY9QJPr4,12
+projpicker/__init__.py,sha256=-wONJusnqMSf93qsyYSsOIX-nb7e6LAgS6e4I00Lvvk,26
+projpicker/common.py,sha256=eTyrcOPBtwl8ZTfY2XC5P_cbpBUV0m-8NlYdXrhcQjk,2252
+projpicker/coor_latlon.py,sha256=8jvf9ylvrHrH76eDO7Ri9TJNMUq6h17KCVbS-88A5x4,14733
+projpicker/coor_xy.py,sha256=AhMVKIS_fI0ERVgU8XnXF63jVvW8Kn6B7MDKF7_T1kA,8224
+projpicker/gui.py,sha256=9okAMGDrv-RJuDhJJpJzr82vqiS3ParPWP9oNIhkLLE,11771
+projpicker/openstreetmap.py,sha256=iEs45kYQzaMbxOV8_RtQ6e7xvxeFXg-7Rgko2vFTs8Y,7804
+projpicker/projpicker.db,sha256=NQJAYy2xMNMllwkCfP2OLMM_YkzAGxWaGyT8M9vP3gA,2134016
+projpicker/projpicker.py,sha256=Rs97N9MjEQV8dHqeZxUsuiENIGHjevdE5rlJVP_vtPc,97390
+projpicker-0.1.7.post4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+projpicker-0.1.7.post4.dist-info/METADATA,sha256=jhsTj_oBEu1NQpo6xkVIU-FzoBxZ1RenuzuzOgNGdeY,4242
+projpicker-0.1.7.post4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+projpicker-0.1.7.post4.dist-info/entry_points.txt,sha256=5vLe9SNnuDvivTrFIkTxaKwSZAtcUSwhvlIavA4NguA,48
+projpicker-0.1.7.post4.dist-info/top_level.txt,sha256=sU2zEU4JQ88Pcy91sfwM-Yq1I0SX5kvMO3J2fnScK_I,11
+projpicker-0.1.7.post4.dist-info/RECORD,,
