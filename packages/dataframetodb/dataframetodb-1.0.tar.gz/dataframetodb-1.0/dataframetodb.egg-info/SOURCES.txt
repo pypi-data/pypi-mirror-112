@@ -1,0 +1,15 @@
+LICENSE.md
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+dataframetodb/__init__.py
+dataframetodb/column.py
+dataframetodb/table.py
+dataframetodb/utils.py
+dataframetodb.egg-info/PKG-INFO
+dataframetodb.egg-info/SOURCES.txt
+dataframetodb.egg-info/dependency_links.txt
+dataframetodb.egg-info/requires.txt
+dataframetodb.egg-info/top_level.txt
