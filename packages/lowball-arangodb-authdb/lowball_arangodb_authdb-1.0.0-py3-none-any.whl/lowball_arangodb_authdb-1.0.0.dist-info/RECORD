@@ -1,0 +1,12 @@
+lowball_arangodb_authdb/__init__.py,sha256=-X9EA82ywBsDKTyjZk8du3DdhDpdta5yveEiQKRBHYM,42
+lowball_arangodb_authdb/authdb.py,sha256=2tGsVpPOwWDx3z0xy6NiAO5p9ox2-srvcYGdsJTw6EQ,8105
+lowball_arangodb_authdb/token_validators.py,sha256=z490NlfH6AoOAiOss_ATtOsXTJ6jxiKb701GAx_LYaQ,2037
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=B6vXKcpWFRYMV6G7Nxjgi7s4oH8XJ4JcifNGNuDYLxk,20027
+tests/test_authdb.py,sha256=8Lt3ecQj0am6iBWFZHYw69sdStzFHejqYWSHeCpvw34,26706
+tests/test_token_validators.py,sha256=w2mujav4pD9JJkyRxSQUu99jf1BcAGeq6hxcPYEE-GY,3944
+lowball_arangodb_authdb-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+lowball_arangodb_authdb-1.0.0.dist-info/METADATA,sha256=XMfxpEaPUl3G4mxqnr4Zyjb6-xe7T4YH82n4mQSZgLY,481
+lowball_arangodb_authdb-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+lowball_arangodb_authdb-1.0.0.dist-info/top_level.txt,sha256=U4a-JMHow1BUb6OYelqZnN-ZniEkbpymYUwaVP0Wp7k,30
+lowball_arangodb_authdb-1.0.0.dist-info/RECORD,,
