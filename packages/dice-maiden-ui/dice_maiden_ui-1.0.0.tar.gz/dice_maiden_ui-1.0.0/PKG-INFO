@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: dice-maiden-ui
+Version: 1.0.0
+Summary: GUI application designed to generate dice maiden roll commands
+Home-page: https://github.com/jjmar/dice-maiden-ui
+License: GPL-3.0-only
+Author: Justin Martin
+Author-email: jjmardev@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: jsonschema (>=3.2.0,<4.0.0)
+Requires-Dist: pyperclip (>=1.8.2,<2.0.0)
+Project-URL: Repository, https://github.com/jjmar/dice-maiden-ui
+Description-Content-Type: text/markdown
+
+[![CircleCI](https://circleci.com/gh/jjmar/dice-maiden-ui/tree/main.svg?style=svg)](https://circleci.com/gh/jjmar/dice-maiden-ui/tree/main)
+
+
+# dice-maiden-ui
+Python app which helps to generate roll commands for the [dice maiden discord app](https://top.gg/bot/377701707943116800).
+
+You create a configuration file listing the details of your commands. When running the app, you select your configuration file
+which will generate the UI.
+
+Before selecting the command you'd like to roll, select any options for the roll.
+Then upon clicking a command button, the generated roll will be automatically copied to your clipboard.
+
+![Dice Maiden UI](documentation/gui.png)
+
+
+# Installing the app
+
+`pip install dice-maiden-ui`
+
+
+# Running the app
+
+1) Ensure you've created your configuration file - see the [configuration setup doc](documentation/config.md).
+2) Run the app with either `dice_maiden_ui` or `python -m dice_maiden_ui`
+3) In the top left, click `Open` and find your configuration file from step 1
+
+
