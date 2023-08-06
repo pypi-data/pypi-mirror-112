@@ -1,0 +1,12 @@
+financelite/__init__.py,sha256=B_WuKrOxLW_gsDvVkENOC5yrZohK4DinStebNoj0rUg,38
+financelite/exceptions.py,sha256=4W7nVDCj6IuofVKX1YPXQoW7DOpVxY3JTD5FS9Q63gk,220
+financelite/financelite.py,sha256=x9MzIe5dbrs-jlXwbBI8FSQimlmfk4E_0_TV5It6P-g,8467
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_group.py,sha256=JpJftyvIPbZl2eiCHb2LlEwg0Hxd2T1t8xluCnI8-f4,1597
+tests/test_news.py,sha256=OQoU3FgyGj1m9eYHMKAaxF2UznM0RnderfcL5Vg0FnQ,443
+tests/test_stock.py,sha256=fHVn1KiRuCthdBrfiT8QWpUzweOhRAlL81OLLKbaqoo,1128
+financelite-0.1.7.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+financelite-0.1.7.dist-info/METADATA,sha256=weH-HtF8DYXQ0JBG6jScRU2S-4lsS8TUID_4drXrerY,3428
+financelite-0.1.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+financelite-0.1.7.dist-info/top_level.txt,sha256=WhBsUrdgY8IfhT_9u-_rJKTWUStNmjVsj21cBfhtv1c,18
+financelite-0.1.7.dist-info/RECORD,,
