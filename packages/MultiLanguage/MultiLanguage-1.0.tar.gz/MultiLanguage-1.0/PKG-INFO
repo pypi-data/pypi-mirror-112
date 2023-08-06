@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: MultiLanguage
+Version: 1.0
+Summary: Multiple language support database management software
+Home-page: https://github.com/dolphin2410/MultiLanguage
+Author: dolphin2410
+Author-email: dolphin2410@outlook.kr
+License: MIT
+Download-URL: https://github.com/dolphin2410/MultiLanguage/archive/refs/tags/1.0.tar.gz
+Description: UNKNOWN
+Keywords: languages,database,development tools
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
