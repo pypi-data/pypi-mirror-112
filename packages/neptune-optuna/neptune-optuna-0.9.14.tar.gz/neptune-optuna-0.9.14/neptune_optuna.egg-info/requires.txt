@@ -1,0 +1,6 @@
+neptune-client>=0.10.0
+optuna>=2.4.0
+plotly
+sklearn
+
+[all]

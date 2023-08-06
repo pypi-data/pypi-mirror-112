@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+neptune_optuna/__init__.py
+neptune_optuna/_version.py
+neptune_optuna.egg-info/PKG-INFO
+neptune_optuna.egg-info/SOURCES.txt
+neptune_optuna.egg-info/dependency_links.txt
+neptune_optuna.egg-info/not-zip-safe
+neptune_optuna.egg-info/requires.txt
+neptune_optuna.egg-info/top_level.txt
+neptune_optuna/impl/__init__.py
