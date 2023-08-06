@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: helloworldTZ
+Version: 0.0.1
+Summary: Say hello!
+Home-page: http://trevorzhen.com/
+Author: trevorzhen
+Author-email: trevorzhen@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# Hello World
+
+This is an example project demonstrating how to publish a python module to PyPI.py
+
+## Installation
+
+Run the following to install:
+
+'''python
+pip install helloworld
+'''
+
+## Usage
+
+'''python
+from helloworld import say_hello
+
+# Generate "Hello, Everybody!"
+say_hello("Everybody")
+'''
+
