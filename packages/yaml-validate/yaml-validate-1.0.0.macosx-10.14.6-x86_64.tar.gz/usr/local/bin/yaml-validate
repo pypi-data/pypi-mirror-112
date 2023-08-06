@@ -1,0 +1,12 @@
+#!/Applications/Xcode-beta.app/Contents/Developer/usr/bin/python3
+# EASY-INSTALL-ENTRY-SCRIPT: 'yaml-validate==1.0.0','console_scripts','yaml-validate'
+__requires__ = 'yaml-validate==1.0.0'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('yaml-validate==1.0.0', 'console_scripts', 'yaml-validate')()
+    )
