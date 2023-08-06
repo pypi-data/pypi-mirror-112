@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Bookdl
+Version: 0.1.4
+Summary: Download books
+Home-page: http://github.com/kaushalpurohit/Bookdl
+Author: Kaushal Purohit
+Author-email: kpurohit43@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: cloudscraper
+Requires-Dist: bs4
+Requires-Dist: html5lib
+Requires-Dist: selenium
+Requires-Dist: termcolor
+
+Download books from pdfdrive.
+
+
