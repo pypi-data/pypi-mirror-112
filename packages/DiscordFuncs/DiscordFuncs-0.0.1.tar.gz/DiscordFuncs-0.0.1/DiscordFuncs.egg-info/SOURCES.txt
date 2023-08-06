@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+DiscordFuncs/Bot.py
+DiscordFuncs/Webhook.py
+DiscordFuncs/__init__.py
+DiscordFuncs.egg-info/PKG-INFO
+DiscordFuncs.egg-info/SOURCES.txt
+DiscordFuncs.egg-info/dependency_links.txt
+DiscordFuncs.egg-info/requires.txt
+DiscordFuncs.egg-info/top_level.txt
