@@ -1,0 +1,3 @@
+[console_scripts]
+pete = tpd_pete.__main__:main
+
