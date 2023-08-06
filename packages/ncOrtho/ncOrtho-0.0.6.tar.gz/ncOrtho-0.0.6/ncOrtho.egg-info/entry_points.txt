@@ -1,0 +1,5 @@
+[console_scripts]
+ncAnalyze = ncOrtho.analysis.analyze_ncortho:main
+ncCreate = ncOrtho.coreset.coreset:main
+ncSearch = ncOrtho.ncortho:main
+
