@@ -1,0 +1,3 @@
+[console_scripts]
+biosimulators-ginsim = biosimulators_ginsim.__main__:main
+
