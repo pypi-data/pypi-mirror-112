@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+requirements.txt
+setup.py
+element_recognition/__init__.py
+element_recognition/element_recognition.py
+element_recognition/test.py
+element_recognition.egg-info/PKG-INFO
+element_recognition.egg-info/SOURCES.txt
+element_recognition.egg-info/dependency_links.txt
+element_recognition.egg-info/requires.txt
+element_recognition.egg-info/top_level.txt
