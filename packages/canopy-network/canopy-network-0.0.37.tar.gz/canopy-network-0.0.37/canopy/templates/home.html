@@ -1,0 +1,13 @@
+$def with ()
+
+<h1 class=h-card><a class="u-url u-uid p-name"
+href=/>$tx.host.owner["name"][0]</a></h1>
+
+$#:recent
+
+$def head():
+    <link rel=feed type=text/html title="All Posts" src=/all>
+    <link rel=feed type=text/html title="Photos" src=/kinds/photos>
+    <link rel=feed type=text/html title="Bookmarks" src=/kinds/bookmarks>
+    <link rel=feed type=text/html title="Shared Tabs" src=/now/tabs>
+$var head = head
