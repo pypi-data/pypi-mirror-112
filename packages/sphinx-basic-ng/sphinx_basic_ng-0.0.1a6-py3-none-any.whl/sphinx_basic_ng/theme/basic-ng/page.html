@@ -1,0 +1,75 @@
+{# Layout: This is used by _every_ Sphinx content page #}
+{% extends "layout.html" %}
+
+{% block body %}
+{% block announcement %}
+<div class="sb-announcement">
+  {% include "sections/announcement.html" %}
+</div>
+{% endblock %}
+{% block header %}
+<header class="sb-header">
+  <div class="sb-header__inner sb-page-width">
+    {% include "sections/header.html" %}
+  </div>
+</header>
+{% endblock %}
+{% block header_secondary %}
+<header class="sb-header-secondary">
+  <div class="sb-header-secondary__inner sb-page-width">
+    {% include "sections/header-secondary.html" %}
+  </div>
+</header>
+{% endblock %}
+
+<input type="checkbox" class="sb-sidebar-toggle" name="sb-sidebar-toggle--primary" id="sb-sidebar-toggle--primary">
+<input type="checkbox" class="sb-sidebar-toggle" name="sb-sidebar-toggle--secondary" id="sb-sidebar-toggle--secondary">
+<label class="sb-sidebar-overlay" for="sb-sidebar-toggle--primary"></label>
+<label class="sb-sidebar-overlay" for="sb-sidebar-toggle--secondary"></label>
+
+<div class="sb-container">
+  <div class="sb-container__inner sb-page-width">
+    {% block sidebar_primary %}
+    <aside class="sb-sidebar-primary">
+      {% include "sections/sidebar-primary.html" %}
+    </aside>
+    {% endblock %}
+    <main class="sb-main">
+      <div class="sb-content">
+        {% block content %}
+        <div class="sb-article-container">
+          <header class="sb-header-article">
+            {% include "sections/header-article.html" %}
+          </header>
+          <article role="main">
+            {% include "sections/article.html" %}
+          </article>
+          <footer class="sb-footer-article">
+            {% include "sections/footer-article.html" %}
+          </footer>
+        </div>
+        {% endblock %}
+        {% block sidebar_secondary %}
+        <aside class="sb-sidebar-secondary">
+          {% include "sections/sidebar-secondary.html" %}
+        </aside>
+        {% endblock %}
+      </div>
+    {% block footer_content %}
+    <footer class="sb-footer-content">
+      <div class="sb-footer-content__inner">
+        {% include "sections/footer-content.html" %}
+      </div>
+    </footer>
+    {% endblock %}
+    </main>
+  </div>
+</div>
+{% block footer %}
+<footer class="sb-footer">
+  <div class="sb-footer__inner sb-page-width">
+    {% include "sections/footer.html" %}
+  </div>
+</footer>
+{% endblock %}
+{% endblock body %}
