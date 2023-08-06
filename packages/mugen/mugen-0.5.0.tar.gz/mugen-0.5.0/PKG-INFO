@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: mugen
+Version: 0.5.0
+Summary: Mugen - HTTP for Asynchronous Requests
+Home-page: https://github.com/PeterDing/mugen
+License: MIT
+Author: PeterDing
+Author-email: dfhayst@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: httptools (>=0.2.0,<0.3.0)
+Description-Content-Type: text/markdown
+
+## Mugen - HTTP for Asynchronous Requests
+
+Mugen is library for http asynchronous requests.
+
+Only running on python ^3.7
+
+ok, code demo:
+
+```python
+import asyncio
+import mugen
+
+async def task():
+    url = 'https://www.google.com'
+    resp = await mugen.get(url)
+    print(resp.text)
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(task())
+```
+
+See, [Documention](https://peterding.github.io/mugen-docs/).
+
+> Mugen is a name from _Samurai Champloo_ (サムライチャンプル, 混沌武士)
+
+### Feature Support
+
+- Keep-Alive & Connection Pooling
+- DNS cache
+- Sessions with Cookie Persistence
+- Automatic Decompression
+- Automatic Content Decoding
+- HTTP(S)/SOCKS5 Proxy Support
+- Connection Timeouts
+
