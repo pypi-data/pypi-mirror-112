@@ -1,0 +1,4 @@
+Flask>=2
+Werkzeug
+requests-mock
+requests
