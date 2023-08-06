@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: blackdogosint
+Version: 0.1.32
+Summary: api supporting OSINT open source queries
+Author: darkcode357
+Author-email: darkcode357@gmail.com
+Requires-Python: >=3.7,<3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Django (>=3.2.4,<4.0.0)
+Requires-Dist: Pillow (>=8.2.0,<9.0.0)
+Requires-Dist: PySocks (>=1.7.1,<2.0.0)
+Requires-Dist: colored-traceback (>=0.3.0,<0.4.0)
+Requires-Dist: google (>=3.0.0,<4.0.0)
+Requires-Dist: import-linter (>=1.2.1,<2.0.0)
+Requires-Dist: importanize (>=0.7.0,<0.8.0)
+Requires-Dist: isort[requirements_deprecated_finder,pipfile_deprecated_finder] (>=5.9.1,<6.0.0)
+Requires-Dist: mkdocs (>=1.2.1,<2.0.0)
+Requires-Dist: mkdocs-bootswatch (>=1.1,<2.0)
+Requires-Dist: mkdocs-material (>=7.1.9,<8.0.0)
+Requires-Dist: osint (>=0.5,<0.6)
+Requires-Dist: pyright (>=0.0.2,<0.0.3)
+Requires-Dist: pytype (>=2021.6.17,<2022.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: search-engine-parser (>=0.6.2,<0.7.0)
+Requires-Dist: selenium (>=3.141.0,<4.0.0)
+Requires-Dist: six (>=1.16.0,<2.0.0)
+Requires-Dist: socks (>=0,<1)
+Requires-Dist: standalone (>=1.0.1,<2.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: types-freezegun (>=0.1.4,<0.2.0)
+Requires-Dist: types-orjson (>=0.1.1,<0.2.0)
+Requires-Dist: types-pathlib2 (>=0.1.6,<0.2.0)
+Requires-Dist: types-pynamodb (>=0.1,<0.2)
+Requires-Dist: types-pytz (>=2021.1.0,<2022.0.0)
+Requires-Dist: types-six (>=0.1.7,<0.2.0)
+Requires-Dist: types-tabulate (>=0.1.1,<0.2.0)
