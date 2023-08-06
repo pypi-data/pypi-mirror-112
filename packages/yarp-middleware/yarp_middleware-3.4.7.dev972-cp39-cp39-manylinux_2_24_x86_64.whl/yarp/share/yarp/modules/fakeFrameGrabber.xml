@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  SPDX-FileCopyrightText: 2006-2021 Istituto Italiano di Tecnologia (IIT)
+  SPDX-License-Identifier: BSD-3-Clause
+-->
+
+<module>
+    <name>fakeFrameGrabber</name>
+    <description> A fake frame grabber device (start up a fake image source)</description>
+    <version>1.0</version>
+
+    <arguments>
+        <!-- <param default="/yarpview/img:i" required="no" desc="input port name">name</param> -->
+        <param default="320" required="no" desc="desired width of test image">width</param>
+        <param default="240" required="no" desc="desired height of test image">height</param>
+        <param default="0.033" required="no" desc="period of test images in second">period</param>
+        <param default="30" required="no" desc="rate of test images in Hz">freq</param>
+        <param default="line" required="no" desc="bouncy [ball], scrolly [line], grid [grid], grid multisize [size], random [rand], noise [nois], none [none], time test[time]">mode</param>
+        <param default="" required="no" desc="background image to use, if any">src</param>
+        <param default="0.5" required="no" desc="Signal noise ratio ([0.0-1.0] default 0.5)">snr</param>
+        <param default="0" required="no" desc="mirroring disabled by default">mirror</param>
+        <param default="0" required="no" desc="should emit bayer test image?">bayer</param>
+        <param default="0" required="no" desc="should emit a monochrome image?">mono</param>
+        <param default="1.0" required="no" desc="desired horizontal fov of test image">horizontalFov</param>
+        <param default="2.0" required="no" desc="desired vertical fov of test image">verticalFov</param>
+        <param default="3.0" required="no" desc="Physical focal length of the fakeFrameGrabber">physFocalLength</param>
+        <param default="4.0" required="no" desc="Horizontal component of the focal length of the fakeFrameGrabber">focalLengthX</param>
+        <param default="5.0" required="no" desc="Vertical component of the focal length of the fakeFrameGrabber">focalLengthY</param>
+        <param default="6.0" required="no" desc="X coordinate of the principal point of the fakeFrameGrabber">principalPointX</param>
+        <param default="7.0" required="no" desc="Y coordinate of the principal point of the fakeFrameGrabber">principalPointY</param>
+        <param default="8.0" required="no" desc="Radial distortion coefficient of the lens(fake)">k1</param>
+        <param default="9.0" required="no" desc="Radial distortion coefficient of the lens(fake)">k2</param>
+        <param default="10.0" required="no" desc="Radial distortion coefficient of the lens(fake)">k3</param>
+        <param default="11.0" required="no" desc="Tangential distortion of the lens(fake)">t1</param>
+        <param default="12.0" required="no" desc="Tangential distortion of the lens(fake)">t2</param>
+        <param default="1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0" required="no" desc="Matrix that describes the lens' distortion(fake)">rectificationMatrix</param>
+        <param default="FishEye" required="no" desc="Reference to group of parameters describing the distortion model of the camera">distortionModel</param>
+    </arguments>
+
+    <data>
+        <input port_type="service">
+            <type>Rpc</type>
+            <port>/fakeFrameGrabber/quit</port>
+            <required>no</required>
+            <priority>no</priority>
+            <description> a port which receives rpc command such as 'quit'.</description>
+        </input>
+        <output>
+            <type>ImageOfPixelRgb</type>
+            <port carrier="udp">/grabber</port>
+            <description>output image port</description>
+        </output>
+    </data>
+
+    <deployer>yarpdev</deployer>
+
+    <dependencies>
+        <computer>
+        </computer>
+    </dependencies>
+
+    <development>
+        <include></include>
+        <library>YARP</library>
+    </development>
+
+</module>
