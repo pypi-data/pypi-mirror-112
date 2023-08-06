@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+appmath/__init__.py
+appmath.egg-info/PKG-INFO
+appmath.egg-info/SOURCES.txt
+appmath.egg-info/dependency_links.txt
+appmath.egg-info/not-zip-safe
+appmath.egg-info/top_level.txt
+appmath/optimization/__init__.py
+appmath/optimization/uniform.py
+appmath/optimization/unconditional/__init__.py
+appmath/optimization/unconditional/zeroorder/__init__.py
+appmath/optimization/unconditional/zeroorder/onedimensional/__init__.py
+appmath/optimization/unconditional/zeroorder/onedimensional/divhalf.py
