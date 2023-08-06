@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: element-recognition
+Version: 1.0.1
+Summary: You can get element ratio.
+Home-page: http://github.com/yu9824/element_recognition/
+Author: yu9824
+Author-email: yu.9824.job@gmail.com
+Maintainer: yu9824
+Maintainer-email: yu.9824.job@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+# Element Recognition
+## What is this.
+A package that organizes compositions written as strings into pandas.DataFrames, or conversely, generates compositions from mixing ratios by using only `numpy` and `pandas`.
+
+It works well with [ternary_diagram](https://pypi.org/project/ternary-diagram/) (This makes it easy to generate beautiful ternary diagram.).
+Please check it out.
+
+## How to install 
+```bash
+pip install element-recognition
+```
+
+## How to use
+If you want to know in details, see [example](https://github.com/yu-9824/element_recognition/tree/main/example).
+
+
+### Import modules
+```python
+from element_recognition import get_ratio, make_compositions
+```
+
+### ```get_ratio```
+This is a function that returns a pandas.DataFrame of mixing ratios given a compound and a raw material.
+```python
+get_ratio(products = ['LiLa2TiO6'], materials = ['Li2O', 'La2O3', 'TiO2'])
+```
+```
+               Li2O  La2O3  TiO2
+    Li2La2TiO6   1.0   1.0   1.0
+```
+
+### ```make_compositions```
+This function returns the composition formula and the amount of all elements contained as a pandas.DataFrame by giving the raw materials and the mixing ratio.
+```python
+make_compositions(materials = ['Li2O', 'La2O3', 'TiO2'], ratio = [[1, 2, 3]])
+```
+```
+                H   He   Li   Be    B    C    N     O    F   Ne   Na   Mg   Al   Si    P  ...   Rf   Db   Sg   Bh   Hs   Mt   Ds   Rg   Cn   Nh   Fl   Mc   Lv   Ts   Og
+    Li2Ti3La4O13  0.0  0.0  2.0  0.0  0.0  0.0  0.0  13.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  ...  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0
+```
+
+## LICENSE
+see [LICENSE](https://github.com/yu-9824/element_recognition/tree/main/LICENSE).
+
