@@ -1,0 +1,9 @@
+setup.py
+auto1-etl-challenge/__init__.py
+auto1-etl-challenge/constants.py
+auto1-etl-challenge/etl.py
+auto1-etl-challenge/utils.py
+etlpkg.egg-info/PKG-INFO
+etlpkg.egg-info/SOURCES.txt
+etlpkg.egg-info/dependency_links.txt
+etlpkg.egg-info/top_level.txt
