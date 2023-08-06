@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: discourse-basic-bridge
+Version: 0.1.2
+Summary: Discourse Basic Bridge
+Author: Krish Yadav
+Author-email: 7krishyadav@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: bs4 (>=0.0.1,<0.0.2)
+Requires-Dist: lxml (>=4.6.3,<5.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: urllib3 (>=1.26.6,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Discord Basic Bridge
+
+### Version 0.1.1
+
+### Usage:
+
+News: 
+
+```
+import discord_basic_bridge as dbb
+
+napi = dbb.News()
+
+print(napi.news())
+```
