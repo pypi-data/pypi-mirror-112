@@ -1,0 +1,9 @@
+setup.py
+src/__init__.py
+src/mpg_cloud.py
+src/seafile.py
+src/mpg_cloud.egg-info/PKG-INFO
+src/mpg_cloud.egg-info/SOURCES.txt
+src/mpg_cloud.egg-info/dependency_links.txt
+src/mpg_cloud.egg-info/requires.txt
+src/mpg_cloud.egg-info/top_level.txt

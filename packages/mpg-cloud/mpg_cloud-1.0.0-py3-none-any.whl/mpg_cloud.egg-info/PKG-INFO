@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mpg-cloud
+Version: 1.0.0
+Summary: Manage files in Nextcloud.
+Home-page: https://gitlab.gwdg.de/hbenne/mpg_cloud.git
+Author: Hannes Benne
+Author-email: hbenne@mpiwg-berlin.mpg.de
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
