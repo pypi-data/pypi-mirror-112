@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+comphardware/__init__.py
+comphardware/_models.py
+comphardware/data.py
+comphardware/helpers.py
+comphardware/platform_info.py
+comphardware.egg-info/PKG-INFO
+comphardware.egg-info/SOURCES.txt
+comphardware.egg-info/dependency_links.txt
+comphardware.egg-info/requires.txt
+comphardware.egg-info/top_level.txt
+comphardware/resources/cpu-database.json
+comphardware/resources/gpu-database.json
