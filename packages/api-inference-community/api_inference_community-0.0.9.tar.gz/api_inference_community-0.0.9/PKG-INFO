@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: api_inference_community
+Version: 0.0.9
+Summary: A package with helper tools to build an API Inference docker app for Hugging Face API inference using huggingface_hub
+Home-page: http://github.com/huggingface/api-inference-community
+Author: Nicolas Patry
+Author-email: nicolas@huggingface.co
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6.0
+
+UNKNOWN
+
