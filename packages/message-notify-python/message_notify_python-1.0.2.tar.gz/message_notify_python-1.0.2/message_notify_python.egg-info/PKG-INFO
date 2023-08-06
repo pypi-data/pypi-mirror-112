@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: message-notify-python
+Version: 1.0.2
+Summary: message notify
+Home-page: https://github.com/qqingdou/message_notify_python
+Author: alvin
+Author-email: pingtang000@foxmail.com
+License: UNKNOWN
+Description: # message-notify-python
+        message notify of the language python
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
