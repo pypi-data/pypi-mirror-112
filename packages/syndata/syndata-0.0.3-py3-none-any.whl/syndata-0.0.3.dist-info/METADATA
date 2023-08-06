@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: syndata
+Version: 0.0.3
+Summary: Generate synthetic data sets.
+Home-page: https://github.com/mzelling/syndata
+Author: Michael Zellinger
+Author-email: mzellinger@ethz.ch
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/mzelling/syndata/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This package allows you to generate synthetic data sets.
+
