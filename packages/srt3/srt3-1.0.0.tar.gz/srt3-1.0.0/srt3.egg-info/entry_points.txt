@@ -1,0 +1,3 @@
+[console_scripts]
+srt = srt.tools._srt:main
+
