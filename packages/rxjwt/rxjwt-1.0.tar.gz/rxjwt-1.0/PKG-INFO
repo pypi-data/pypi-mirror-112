@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: rxjwt
+Version: 1.0
+Summary: RXJWT - Extendable JWT library for Django REST Framework. This library provides user authorization functions through JSON Web Token (JWT) mechanism.
+Home-page: https://github.com/kormanowsky/rxjwt
+Author: Mikhail Kormanowsky
+Author-email: kormanowsky@gmail.com
+License: MIT
+Download-URL: https://github.com/kormanowsky/rxjwt/archive/refs/tags/v1.0.tar.gz
+Description: UNKNOWN
+Keywords: Django,django-rest,django-auth
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
