@@ -1,0 +1,7 @@
+singer-python==5.12.1
+requests==2.25.0
+tableauserverclient==0.15.0
+
+[dev]
+pylint
+nose
