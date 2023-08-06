@@ -1,0 +1,4 @@
+mistune~=2.0.0rc1
+requests~=2.25.1
+click<8.1.0,>=7.1.2
+rich<10.6,>=10.1
