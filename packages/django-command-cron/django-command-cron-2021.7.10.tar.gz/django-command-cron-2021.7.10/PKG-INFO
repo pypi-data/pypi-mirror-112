@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: django-command-cron
+Version: 2021.7.10
+Summary: Django management commands cron
+Home-page: https://github.com/andrewp-as-is/django-command-cron.py
+License: Unlicense
+Description: [![](https://img.shields.io/badge/released-2021.7.10-green.svg?longCache=True)](https://pypi.org/project/django-command-cron/)
+        [![](https://img.shields.io/badge/license-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+        
+        ### Installation
+        ```bash
+        $ pip install django-command-cron
+        ```
+        
+        ### Pros
+        +   management commands based
+        +   admin interface
+        +   error handling
+        +   logs
+        
+        #### `settings.py`
+        ```python
+        INSTALLED_APPS+=['django_command_cron']
+        ```
+        
+        #### `migrate`
+        ```bash
+        $ python manage.py migrate
+        ```
+        
+        ### Examples
+        ```bash
+        $ python manage.py command_cron
+        ```
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
