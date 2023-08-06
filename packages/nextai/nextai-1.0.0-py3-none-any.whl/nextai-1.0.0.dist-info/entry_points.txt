@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        nextai = nextai.__main__:cli
+    
