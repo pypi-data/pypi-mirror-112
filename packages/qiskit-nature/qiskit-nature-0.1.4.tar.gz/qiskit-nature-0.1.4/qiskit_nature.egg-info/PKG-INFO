@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: qiskit-nature
+Version: 0.1.4
+Summary: Qiskit Nature: A library of quantum computing chemistry/physics experiments
+Home-page: https://github.com/Qiskit/qiskit-nature
+Author: Qiskit Nature Development Team
+Author-email: hello@qiskit.org
+License: Apache-2.0
+Keywords: qiskit sdk quantum nature chemistry physics
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: pyscf
+License-File: LICENSE.txt
+
+Qiskit Nature is a open-source library of quantum computing chemistry/physics experiments.
+ 
+
