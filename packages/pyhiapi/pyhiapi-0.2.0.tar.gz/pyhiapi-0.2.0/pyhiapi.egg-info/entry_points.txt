@@ -1,0 +1,3 @@
+[console_scripts]
+hiapi = hiapi.hi:main
+

@@ -1,0 +1,11 @@
+MANIFEST.in
+README
+setup.py
+hiapi/__init__.py
+hiapi/hi.py
+pyhiapi.egg-info/PKG-INFO
+pyhiapi.egg-info/SOURCES.txt
+pyhiapi.egg-info/dependency_links.txt
+pyhiapi.egg-info/entry_points.txt
+pyhiapi.egg-info/requires.txt
+pyhiapi.egg-info/top_level.txt
