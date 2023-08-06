@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pulledpork3-sublimerobot
+Version: 0.0.1
+Summary: PulledPork3 - A ruleset downloader for Snort3
+Home-page: https://github.com/shirkdog/pulledpork3
+Author: Noah Dietrich
+Author-email: noah_dietrich@86penny.org
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/shirkdog/pulledpork3/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+PulledPork3
+===========
+
+Pulled Pork for Snort3 rule management (Everything is better smoked)
+
+Find us on Libera.Chat (IRC) [`#pulledpork`](https://libera.chat/guides/connect)
+
+Copyright (C) 2021 Noah Dietrich and the PulledPork Team!
+
+## Warning
+This is a placeholder package for PulledPork3, and sholuld not be used at this time.
+Once PulledPork reaches Beta status, we will update this package so you can install PulledPokrk3 through PIP.
+
