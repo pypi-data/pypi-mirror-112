@@ -1,0 +1,9 @@
+
+[:python_version < "3.7"]
+contextvars
+
+[apollo]
+requests
+
+[tests]
+requests
