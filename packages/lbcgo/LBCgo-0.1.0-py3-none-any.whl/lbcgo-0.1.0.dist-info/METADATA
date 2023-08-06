@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: lbcgo
+Version: 0.1.0
+Summary: Data reduction for the LBT's Large Binocular Camera
+License: MIT
+Author: Chris Howk
+Author-email: jhowk@nd.edu
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: astropy (==0)
+Requires-Dist: ccdproc (>=2.2.0,<3.0.0)
+Requires-Dist: numpy (>=1.21.0,<2.0.0)
