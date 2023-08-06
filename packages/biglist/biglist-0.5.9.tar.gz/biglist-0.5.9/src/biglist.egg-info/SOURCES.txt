@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/biglist/__init__.py
+src/biglist/_biglist.py
+src/biglist/_serializer.py
+src/biglist.egg-info/PKG-INFO
+src/biglist.egg-info/SOURCES.txt
+src/biglist.egg-info/dependency_links.txt
+src/biglist.egg-info/requires.txt
+src/biglist.egg-info/top_level.txt
