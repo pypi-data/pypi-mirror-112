@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pysting
+Version: 0.0.1
+Summary: honeycomb object management
+Home-page: https://github.com/walkerever/sting
+Author: Yonghang Wang
+Author-email: wyhang@gmail.com
+License: Apache 2
+Description: # sting
+        honeycomb object management in command line. migrate boards, queries across different owners, datasets, etc.
+        
+Keywords: sting,honeycomb,board,query
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
