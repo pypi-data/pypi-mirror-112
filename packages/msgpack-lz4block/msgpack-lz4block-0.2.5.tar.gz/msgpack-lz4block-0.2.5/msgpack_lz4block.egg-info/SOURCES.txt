@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+msgpack_lz4block/__init__.py
+msgpack_lz4block.egg-info/PKG-INFO
+msgpack_lz4block.egg-info/SOURCES.txt
+msgpack_lz4block.egg-info/dependency_links.txt
+msgpack_lz4block.egg-info/requires.txt
+msgpack_lz4block.egg-info/top_level.txt
+tests/__init__.py
+tests/test_functions.py
