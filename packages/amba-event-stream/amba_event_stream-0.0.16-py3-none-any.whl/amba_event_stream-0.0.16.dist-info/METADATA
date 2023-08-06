@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: amba-event-stream
+Version: 0.0.16
+Summary: amba-event-stream for kafka
+Home-page: UNKNOWN
+Author: Lukas Jesche
+Author-email: lukas.jesche.se@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: kafka
+
+amba-event-stream
+=========
+
+  ![PyPI](https://img.shields.io/pypi/v/amba-event-stream)
+
+amba analytics event stream python package that connects to kafka to produce/connect or process events.
+
+Installation
+------------
+
+`pip install amba-event-stream`
+
+
