@@ -1,0 +1,82 @@
+# Should be named message_interaction.py
+
+import discord
+from .message_components import *
+from .interaction import *
+
+
+__all__ = (
+    "MessageInteraction",
+    "ButtonInteraction"
+)
+
+
+class MessageInteraction(BaseInteraction):
+    """
+    Represents a button interaction.
+    Obtainable via :class:`discord.Context.wait_for_button_click`
+    and in ``on_button_click`` event.
+
+    Attributes
+    ----------
+    author : :class:`discord.Member` | :class:`discord.User`
+        The user that clicked the button
+    channel : :class:`discord.Messageable`
+        The channel where the click happened
+    guild : :class:`discord.Guild` | ``None``
+        The guild where the click happened
+    message : :class:`discord.Message`
+        The message where the button was clicked
+    components : :class:`list`
+        A list of :class:`ActionRow` instances containing other components
+    component : :class:`Component`
+        The component that author interacted with
+    """
+    def __init__(self, client, data):
+        super().__init__(client, data)
+        state = client._connection
+
+        msg_data = data.get("message")
+        if msg_data is None:
+            self.message = None
+            self.components = []
+        else:
+            components = msg_data.pop("components", [])
+            self.components = [ActionRow.from_dict(comp) for comp in components]
+            channel_id = int(msg_data["channel_id"])
+            self.message = discord.Message(
+                state=state,
+                channel=client.get_channel(channel_id),
+                data=msg_data
+            )
+        
+        component_data = data.get("data", {})
+        component_type = component_data.get("component_type", 1)
+        custom_id = component_data.get("custom_id")
+        self.component = None
+        for action_row in self.components:
+            for component in action_row.components:
+                if component.custom_id == custom_id and component.type == component_type:
+                    self.component = component
+                    if component_type == ComponentType.SelectMenu:
+                        self.component._select_options(component_data.get("values", []))
+                    break
+            if self.component is not None:
+                break
+    
+    @property
+    def clicked_button(self) -> Button:
+        if self.component.type == ComponentType.Button:
+            return self.component
+
+    @property
+    def button(self) -> Button:
+        return self.clicked_button
+    
+    @property
+    def select_menu(self) -> SelectMenu:
+        if self.component.type == ComponentType.SelectMenu:
+            return self.component
+
+
+ButtonInteraction = MessageInteraction
