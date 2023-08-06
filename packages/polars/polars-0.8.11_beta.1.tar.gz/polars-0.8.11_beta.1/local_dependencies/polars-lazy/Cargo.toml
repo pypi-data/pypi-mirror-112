@@ -1,0 +1,55 @@
+[dependencies]
+ahash = "0.7"
+itertools = "0.10"
+rayon = "1.5"
+
+[dependencies.polars-arrow]
+path = "../polars-arrow"
+version = "0.14.6"
+
+[dependencies.polars-core]
+default-features = false
+features = ["lazy", "private", "zip_with"]
+path = "../polars-core"
+version = "0.14.6"
+
+[dependencies.polars-io]
+default-features = false
+features = ["lazy", "csv-file"]
+path = "../polars-io"
+version = "0.14.6"
+
+[features]
+compile = []
+cross_join = ["polars-core/cross_join"]
+csv-file = ["polars-io/csv-file"]
+default = ["compile"]
+dot_product = ["polars-core/dot_product"]
+dtype-date32 = ["polars-core/dtype-date32"]
+dtype-date64 = ["polars-core/dtype-date64"]
+dtype-i16 = ["polars-core/dtype-i16"]
+dtype-i8 = ["polars-core/dtype-i8"]
+dtype-u16 = ["polars-core/dtype-u16"]
+dtype-u64 = ["polars-core/dtype-u64", "polars-io/dtype-u64"]
+dtype-u8 = ["polars-core/dtype-u8"]
+fmt = ["polars-core/plain_fmt"]
+future = []
+is_first = ["polars-core/is_first"]
+is_in = ["polars-core/is_in"]
+parquet = ["polars-core/parquet", "polars-io/parquet"]
+private = []
+repeat_by = ["polars-core/repeat_by"]
+round_series = ["polars-core/round_series"]
+temporal = ["polars-core/temporal"]
+
+[package]
+authors = ["ritchie46 <ritchie46@gmail.com>"]
+description = "Lazy query engine for the Polars DataFrame library"
+edition = "2018"
+license = "MIT"
+name = "polars-lazy"
+repository = "https://github.com/ritchie46/polars"
+version = "0.14.6"
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

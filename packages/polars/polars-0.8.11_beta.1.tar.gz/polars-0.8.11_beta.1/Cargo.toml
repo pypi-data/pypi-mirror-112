@@ -1,0 +1,54 @@
+[dependencies]
+libc = "0.2"
+ndarray = "0.14"
+numpy = "0.13.0"
+thiserror = "1.0.20"
+
+[dependencies.mimalloc]
+default-features = false
+version = "*"
+
+[dependencies.polars]
+features = ["zip_with", "simd", "lazy", "strings", "temporal", "random", "object", "csv-file", "pretty_fmt", "performant", "dtype-full", "rows", "private", "round_series", "is_first", "asof_join", "cross_join", "dot_product", "simdutf8"]
+path = "local_dependencies/polars"
+
+[dependencies.polars-core]
+default-features = false
+path = "local_dependencies/polars-core"
+
+[dependencies.pyo3]
+features = ["abi3-py36", "extension-module"]
+version = "0.13"
+
+[dependencies.serde_json]
+optional = true
+version = "1"
+
+[features]
+default = ["pivot", "json", "parquet", "downsample", "ipc", "is_in", "json", "polars/repeat_by"]
+downsample = ["polars/downsample"]
+ipc = ["polars/ipc"]
+is_in = ["polars/is_in"]
+json = ["polars/serde", "serde_json"]
+parquet = ["polars/parquet"]
+pivot = ["polars/pivot"]
+
+[lib]
+crate-type = ["cdylib"]
+name = "polars"
+
+[package]
+authors = ["ritchie46 <ritchie46@gmail.com>"]
+documentation = "https://ritchie46.github.io/polars-book/"
+edition = "2018"
+homepage = "https://github.com/ritchie46/polars"
+license = "MIT"
+name = "py-polars"
+readme = "README.md"
+repository = "https://github.com/ritchie46/polars"
+version = "0.8.11-beta.1"
+[profile.release]
+codegen-units = 1
+lto = "fat"
+
+[workspace]

@@ -1,0 +1,78 @@
+[dependencies]
+ahash = "0.7"
+anyhow = "1.0"
+dirs = "3.0"
+lazy_static = "1.4"
+num = "^0.4.0"
+num_cpus = "1.13.0"
+rayon = "1.5"
+regex = "1.4"
+
+[dependencies.arrow]
+default-features = false
+git = "https://github.com/apache/arrow-rs"
+rev = "a1aace846f29dc4346b01289cad246dd99c2e3ed"
+
+[dependencies.csv]
+optional = true
+version = "1.1"
+
+[dependencies.csv-core]
+optional = true
+version = "0.1.10"
+
+[dependencies.fast-float]
+optional = true
+version = "0.2"
+
+[dependencies.lexical]
+optional = true
+version = "5.2"
+
+[dependencies.memmap]
+optional = true
+package = "memmap2"
+version = "0.2.0"
+
+[dependencies.parquet_lib]
+git = "https://github.com/apache/arrow-rs"
+optional = true
+package = "parquet"
+rev = "a1aace846f29dc4346b01289cad246dd99c2e3ed"
+
+[dependencies.polars-arrow]
+path = "../polars-arrow"
+version = "0.14.6"
+
+[dependencies.polars-core]
+default-features = false
+features = ["private"]
+path = "../polars-core"
+version = "0.14.6"
+
+[dependencies.simdutf8]
+optional = true
+version = "0.1"
+
+[features]
+csv-file = ["csv", "csv-core", "memmap", "fast-float", "lexical", "arrow/csv"]
+dtype-date32 = ["polars-core/dtype-date32"]
+dtype-date64 = ["polars-core/dtype-date64", "polars-core/temporal"]
+dtype-u64 = ["polars-core/dtype-u64"]
+fmt = ["polars-core/plain_fmt"]
+ipc = ["arrow/ipc"]
+json = []
+lazy = []
+parquet = ["polars-core/parquet", "parquet_lib"]
+
+[package]
+authors = ["ritchie46 <ritchie46@gmail.com>"]
+description = "IO related logic for the Polars DataFrame library"
+edition = "2018"
+license = "MIT"
+name = "polars-io"
+repository = "https://github.com/ritchie46/polars"
+version = "0.14.6"
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

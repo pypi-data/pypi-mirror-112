@@ -1,0 +1,104 @@
+[[bench]]
+harness = false
+name = "csv"
+
+[[bench]]
+harness = false
+name = "groupby"
+
+[[bench]]
+harness = false
+name = "collect"
+
+[[bench]]
+harness = false
+name = "take"
+[dependencies.polars-core]
+default-features = false
+features = ["docs", "private"]
+path = "../polars-core"
+version = "0.14.6"
+
+[dependencies.polars-io]
+default-features = false
+optional = true
+path = "../polars-io"
+version = "0.14.6"
+
+[dependencies.polars-lazy]
+default-features = false
+features = ["private"]
+optional = true
+path = "../polars-lazy"
+version = "0.14.6"
+
+[dev-dependencies]
+ahash = "0.7"
+criterion = "0.3"
+lazy_static = "1.4"
+rand = "0.8"
+
+[features]
+asof_join = ["polars-core/asof_join"]
+avx512 = ["polars-core/avx512"]
+checked_arithmetic = ["polars-core/checked_arithmetic"]
+cross_join = ["polars-core/cross_join", "polars-lazy/cross_join"]
+csv-file = ["polars-io", "polars-io/csv-file", "polars-lazy/csv-file"]
+default = ["docs", "zip_with", "csv-file", "temporal", "performant", "plain_fmt", "dtype-slim"]
+docs = ["polars-core/docs"]
+docs-selection = ["csv-file", "json", "parquet", "ipc", "dtype-full", "pivot", "is_in", "sort_multiple", "rows", "docs", "strings", "object", "lazy", "temporal", "random", "zip_with", "round_series", "checked_arithmetic", "ndarray", "downsample", "repeat_by", "is_first", "is_last", "asof_join", "cross_join"]
+dot_product = ["polars-core/dot_product", "polars-lazy/dot_product"]
+downsample = ["polars-core/downsample"]
+dtype-date32 = ["polars-core/dtype-date32", "polars-lazy/dtype-date32"]
+dtype-date64 = ["polars-core/dtype-date64", "polars-lazy/dtype-date64"]
+dtype-duration-ms = ["polars-core/dtype-duration-ms"]
+dtype-duration-ns = ["polars-core/dtype-duration-ns"]
+dtype-full = ["dtype-time64-ns", "dtype-duration-ns", "dtype-duration-ms", "dtype-date32", "dtype-date64", "dtype-i8", "dtype-i16", "dtype-u8", "dtype-u16", "dtype-u64"]
+dtype-i16 = ["polars-core/dtype-i16", "polars-lazy/dtype-i16"]
+dtype-i8 = ["polars-core/dtype-i8", "polars-lazy/dtype-i8"]
+dtype-slim = ["dtype-date32", "dtype-date64"]
+dtype-time64-ns = ["polars-core/dtype-time64-ns"]
+dtype-u16 = ["polars-core/dtype-u16", "polars-lazy/dtype-u16"]
+dtype-u64 = ["polars-core/dtype-u64", "polars-lazy/dtype-u64", "polars-io/dtype-u64"]
+dtype-u8 = ["polars-core/dtype-u8", "polars-lazy/dtype-u8"]
+ipc = ["polars-io", "polars-io/ipc"]
+is_first = ["polars-core/is_first", "polars-lazy/is_first"]
+is_in = ["polars-core/is_in", "polars-lazy/is_in"]
+is_last = ["polars-core/is_last"]
+json = ["polars-io", "polars-io/json"]
+lazy = ["polars-core/lazy", "polars-lazy", "polars-lazy/compile"]
+ndarray = ["polars-core/ndarray"]
+object = ["polars-core/object"]
+parquet = ["polars-io", "polars-core/parquet", "polars-lazy/parquet", "polars-io/parquet"]
+performant = ["polars-core/performant"]
+pivot = ["polars-core/pivot"]
+plain_fmt = ["polars-core/plain_fmt"]
+pretty_fmt = ["polars-core/pretty_fmt"]
+private = []
+random = ["polars-core/random"]
+repeat_by = ["polars-core/repeat_by", "polars-lazy/repeat_by"]
+round_series = ["polars-core/round_series", "polars-lazy/round_series"]
+rows = ["polars-core/rows"]
+serde = ["polars-core/serde"]
+simd = ["polars-core/simd"]
+simdutf8 = ["polars-io/simdutf8"]
+sort_multiple = ["polars-core/sort_multiple"]
+strings = ["polars-core/strings"]
+temporal = ["polars-core/temporal", "polars-lazy/temporal"]
+zip_with = ["polars-core/zip_with"]
+
+[lib]
+bench = false
+
+[package]
+authors = ["ritchie46 <ritchie46@gmail.com>"]
+description = "DataFrame Library based on Apache Arrow"
+edition = "2018"
+license = "MIT"
+name = "polars"
+readme = "../README.md"
+repository = "https://github.com/ritchie46/polars"
+version = "0.14.6"
+[package.metadata.docs.rs]
+features = ["docs-selection"]
+rustdoc-args = ["--cfg", "docsrs"]
