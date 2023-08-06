@@ -1,0 +1,14 @@
+pip
+requests
+urllib3
+flask
+futures
+stomp.py
+unittest2
+pep8
+flake8
+pytest
+nose
+tabulate
+idds-common==0.5.2
+idds-workflow==0.5.2
