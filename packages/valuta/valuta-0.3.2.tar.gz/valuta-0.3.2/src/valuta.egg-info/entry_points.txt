@@ -1,0 +1,4 @@
+[console_scripts]
+valuta-generate-currencies = valuta.cli:generate_currencies
+valuta-list-currencies = valuta.cli:list_currencies
+
