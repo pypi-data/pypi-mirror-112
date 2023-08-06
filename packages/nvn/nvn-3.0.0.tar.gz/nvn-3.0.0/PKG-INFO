@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: nvn
+Version: 3.0.0
+Summary: twint NexT Gen Project Manager
+Home-page: https://github.com/musangtara/nvn
+Author: Ardustri
+Author-email: info@nvn.sh
+License: MPL-2.0-or-later
+Description: # twint
+        Twint, Next gen project manager
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
