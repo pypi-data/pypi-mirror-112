@@ -1,0 +1,1 @@
+__all__ = ['commenter','stdlibs','stdmsg','stdecho','stdboards','stdpersonal','stdmake','stdpackages','stdplatforms','stdprojects','stdserial','uiserial']
