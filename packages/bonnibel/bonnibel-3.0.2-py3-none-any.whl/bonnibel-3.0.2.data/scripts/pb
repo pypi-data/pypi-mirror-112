@@ -1,0 +1,99 @@
+#!python
+
+import click
+import pathlib
+
+def die(message):
+    import sys
+    print("Error: " + message, file=sys.stderr)
+    sys.exit(1)
+
+
+@click.group(invoke_without_command=True)
+@click.option("--output", "-o", metavar="<dir>", default="build",
+        help="The build output directory (if relative, from the project root)")
+@click.pass_context
+def pb(ctx, output):
+    """Bonnibel, the jsix OS build tool
+
+    Bonnibel will search upwards from the current directory
+    for a `project.toml` (unless the --root option is given)
+    """
+    from pathlib import Path
+    from bonnibel import BonnibelError
+    from bonnibel.build_context import BuildContext
+
+    output = Path(output)
+
+    try:
+        if output.is_absolute():
+            ctx.obj = BuildContext.load(output)
+        else:
+            ctx.obj = BuildContext.find(output)
+
+    except BonnibelError as be:
+        die(str(be))
+
+    if ctx.invoked_subcommand is None:
+        ctx.invoke(build)
+
+
+@pb.command()
+@click.option("--config", "-c", metavar="<file>", default=None, nargs=1,
+        type=click.Path(exists=True, file_okay=True, dir_okay=False, readable=True, path_type=pathlib.Path),
+        help="The build configuration file. (Overrides default-config in project.toml)")
+@click.argument("variables", nargs=-1)
+@click.pass_obj
+@click.pass_context
+def init(ctx, bc, config, variables):
+    """Initialize a build directory"""
+
+    bc.initialize(config, __file__, variables)
+    ctx.invoke(generate)
+
+
+@pb.command()
+@click.pass_obj
+def generate(bc):
+    """Regenerate build scripts (called from the build scripts)"""
+    from bonnibel import BonnibelError
+    from bonnibel.module import Module
+    from bonnibel.project import Project
+
+    try:
+        bc.update()
+    except BonnibelError as e:
+        raise click.ClickException(e.message)
+
+    click.secho(f"Generating {bc.project} in {bc.output.relative_to(bc.root)}...", fg="bright_blue")
+
+    for mod in bc.modules.values():
+        mod.generate(bc)
+    bc.project.generate(bc)
+
+
+@pb.command()
+@click.pass_obj
+def info(bc):
+    """Show info about project and build dir"""
+    click.echo(bc)
+    for _, mod in bc.modules:
+        print("    ", mod)
+
+
+@pb.command()
+@click.pass_obj
+def build(bc):
+    """Run Ninja to execute a build (default action)"""
+    bc.exec_ninja()
+
+
+@pb.command()
+@click.pass_obj
+def clean(bc):
+    """Run Ninja to clean a build directory"""
+    bc.exec_ninja('-t', 'clean')
+
+
+if __name__ == "__main__":
+    pb()
