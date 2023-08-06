@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+x2vec/core/__init__.py
+x2vec/core/utils.py
+x2vec/x2vec.egg-info/PKG-INFO
+x2vec/x2vec.egg-info/SOURCES.txt
+x2vec/x2vec.egg-info/dependency_links.txt
+x2vec/x2vec.egg-info/requires.txt
+x2vec/x2vec.egg-info/top_level.txt
