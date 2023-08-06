@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: graphysio
+Version: 2021.7.14.1
+Summary: Graphical time series visualizer and analyzer.
+Home-page: https://github.com/jaj42/GraPhysio
+Author: Jona JOACHIM
+Author-email: jona@joachim.cc
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Requires-Dist: numpy>=1.16.4
+Requires-Dist: pandas>=1.0
+Requires-Dist: pathvalidate>=0.29.0
+Requires-Dist: Pint>=0.9
+Requires-Dist: PyQt5>=5.12.3
+Requires-Dist: pyqtgraph>=0.10.0
+Requires-Dist: pytz>=2019.1
+Requires-Dist: scipy>=1.3.0
+Requires-Dist: sympy>=1.4
+Requires-Dist: typing>=3.7.4
+Requires-Dist: pyarrow>=0.17.0
+Requires-Dist: pyedflib>=0.1.17
+Requires-Dist: attrs>=18.2.0
+
+# GraPhysio
+GraPhysio is a graphical time series visualizer created for physiologic
+data signals from ICU patient monitors. It is however not limited to this.
+It currently supports reading from CSV files.
+It can handle low frequency and high frequency data as well as aggregating
+and synchronizing signals from different sources.
+GraPhysio supports basic mathematical operations and filters and can help
+selecting and exporting time periods.
+Performance is good depending on your hardware for files up to 1 GB.
+
+## Install instructions
+To make GraPhysio work you need Python 3.6 or greater.
+
+You can then install the latest version of GraPhysio by tying the
+following command:
+
+> python -m pip install graphysio
+
+You can launch GraPhysio by typing:
+
+> python -m graphysio
+
+Alternatively, on Windows, you can use the release binaries.
+
