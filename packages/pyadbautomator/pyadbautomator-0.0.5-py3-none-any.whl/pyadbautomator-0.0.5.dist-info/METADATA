@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: pyadbautomator
+Version: 0.0.5
+Summary: PyAdbAutomator is a Python library for automating some android tasks using ADB interface
+Home-page: https://github.com/guifabrin/pyadbautomator
+Author: Guilherme Fabrin Franco
+Author-email: guilherme.fabrin@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/guifabrin/pyadbautomator/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# PyAdbAutomator
+
+PyAdbAutomator is a Python library for automating some android tasks using ADB interface
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install pyadbautomator
+```
+
+## Usage
+
+```python
+from pyadbautomator import PyAdbAutomator
+py_adb_automator = PyAdbAutomator('com.android.chrome', 5)
+py_adb_automator.open()
+url_bar = py_adb_automator.first('resource-id', 'com.android.chrome:id/url_bar')
+if url_bar:
+    url_bar.text('https://github.com/guifabrin')
+py_adb_automator.enter()
+time.sleep(10)
+py_adb_automator.close()
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
