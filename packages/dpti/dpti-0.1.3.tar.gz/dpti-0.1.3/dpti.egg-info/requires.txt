@@ -1,0 +1,6 @@
+apache-airflow>2.0
+scipy
+numpy
+pymbar
+dargs
+dpdispatcher>=0.3
