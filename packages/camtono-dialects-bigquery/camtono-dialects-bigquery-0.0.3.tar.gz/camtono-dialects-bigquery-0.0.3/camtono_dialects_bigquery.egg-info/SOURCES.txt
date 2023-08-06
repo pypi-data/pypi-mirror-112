@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.cfg
+setup.py
+camtono/dialects/bigquery/__init__.py
+camtono/dialects/bigquery/format.py
+camtono/dialects/bigquery/parse.py
+camtono_dialects_bigquery.egg-info/PKG-INFO
+camtono_dialects_bigquery.egg-info/SOURCES.txt
+camtono_dialects_bigquery.egg-info/dependency_links.txt
+camtono_dialects_bigquery.egg-info/requires.txt
+camtono_dialects_bigquery.egg-info/top_level.txt
