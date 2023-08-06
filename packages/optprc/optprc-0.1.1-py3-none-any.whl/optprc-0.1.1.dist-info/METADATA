@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: optprc
+Version: 0.1.1
+Summary: option pricer
+Home-page: https://www.optprc.com
+Author: Julian Gong
+Author-email: juliangong@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jul  6 18:56:07 2021
+
+@author: Yongguang Gong
+"""
+
+option pricer, take from www.optprc.com
+
+
+
