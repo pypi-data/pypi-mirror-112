@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ecom-finder
+Version: 1.0.1
+Summary: Python based library to find any product in ecommerce site using crawling and AI (like audio, images)
+Home-page: https://github.com/MYGITHUBPRIYANKA/ecom_finder
+Author: Priyanka Das
+Author-email: mymailid.priyanka@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Ecom Finder
+[![Python package](https://github.com/MYGITHUBPRIYANKA/ecom_finder/actions/workflows/python-package.yml/badge.svg)](https://github.com/MYGITHUBPRIYANKA/ecom_finder/actions/workflows/python-package.yml)
+
+[![Upload Python Package](https://github.com/MYGITHUBPRIYANKA/ecom_finder/actions/workflows/python-publish.yml/badge.svg)](https://github.com/MYGITHUBPRIYANKA/ecom_finder/actions/workflows/python-publish.yml)
+
+Python based library to find any product in ecommerce site using crawling and AI (like audio, images)
+
+
