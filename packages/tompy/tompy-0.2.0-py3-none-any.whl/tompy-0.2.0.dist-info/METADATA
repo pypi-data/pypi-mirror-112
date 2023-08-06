@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: tompy
+Version: 0.2.0
+Summary: Tompy is the powerful package for time series and statistics.
+Home-page: https://github.com/nanticj/tompy
+Author: Thomas Jeong
+Author-email: nanticj@users.noreply.github.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: httpx
+Requires-Dist: loguru
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pydantic
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: typer
+Requires-Dist: black
+Requires-Dist: isort
+Requires-Dist: mypy
+Requires-Dist: pylint
+Requires-Dist: pytest
+Requires-Dist: twine
+
+UNKNOWN
+
+
