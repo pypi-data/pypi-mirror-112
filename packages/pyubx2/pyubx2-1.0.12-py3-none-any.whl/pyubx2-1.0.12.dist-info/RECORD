@@ -1,0 +1,16 @@
+pyubx2/__init__.py,sha256=BsqAUKGdVhhPc7aHseEd47TYdwqj9UL2A8eh4lGjfSI,588
+pyubx2/_version.py,sha256=WX1I35IfFBxhQ3jtBmv_Q5HIW-OKUP2UeADD4-VWZS4,162
+pyubx2/exceptions.py,sha256=HC4DXtoRJbR3MyH9hWo73aPYH5kAmRAvsWjz_1CnxXY,651
+pyubx2/ubxhelpers.py,sha256=QTAKyMvtmK3wRXfqEbIAJEF2S86CxlSiw72iyoitvBg,4423
+pyubx2/ubxmessage.py,sha256=ET_cL3ahTJvM2xE6HMe0KYmA7dNaY9HUrgexWxjtSLs,33757
+pyubx2/ubxreader.py,sha256=zLTyeVTxW9G4XFWaJH2gzAjtooFtUJtKyNnnL8bIcG0,7616
+pyubx2/ubxtypes_configdb.py,sha256=mazGtvQx-c1z1TJxiz2Wkqkh7Kp5gmBZYp6bq-runR0,38160
+pyubx2/ubxtypes_core.py,sha256=UGR7Tm9PQzc1_VJing6-8uTtN6GzPB-QWaHVDNH2QXY,15033
+pyubx2/ubxtypes_get.py,sha256=VEP0ZO-JdWang5iz0rxE32_bSfiy1ZJ8stHlpAXuLuU,49865
+pyubx2/ubxtypes_poll.py,sha256=tcP9QL2Q5Lm4U95cvWwPS-IKV2tjPLUCOtQ-UpdbCNg,2590
+pyubx2/ubxtypes_set.py,sha256=QP4Pp3po1ZKjv9jJrrmImFn46iX4YewQgioW4EvRzrw,27899
+pyubx2-1.0.12.dist-info/LICENSE,sha256=n1hTlV40HgOFdHADhn3biUs5ognQzRE-BufF7GOuuuI,1613
+pyubx2-1.0.12.dist-info/METADATA,sha256=3NkRr2gj-3A8ftiK_lJwpc-K8BvFMeftCq4TttVx7eY,18639
+pyubx2-1.0.12.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyubx2-1.0.12.dist-info/top_level.txt,sha256=Xrlr7zrBMWK7s0OcjirKi4scjnHHIcDl3WyrZlaxZfs,7
+pyubx2-1.0.12.dist-info/RECORD,,
