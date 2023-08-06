@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+drg2txt/__init__.py
+drg2txt/data.pickle
+drg2txt.egg-info/PKG-INFO
+drg2txt.egg-info/SOURCES.txt
+drg2txt.egg-info/dependency_links.txt
+drg2txt.egg-info/top_level.txt
