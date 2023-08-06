@@ -1,0 +1,13 @@
+testcloud/__init__.py,sha256=a99ZD2lGtW80x9rDpNyRRpwJXZJpJDJUTpkW_-uKcnk,102
+testcloud/cli.py,sha256=9CzMyL4wYRjqc4rsn7euTXRWoPKB6WCJ9NOrm1YbBaw,37573
+testcloud/config.py,sha256=Z9Wmn-etYcqEsSIE_ZlgDRsVKmf6oWojxALT07FzxG4,6366
+testcloud/exceptions.py,sha256=OV3oH9PBsqrzUmW_CKdGHE88eC_8smuDm0hdpLRzaow,1000
+testcloud/image.py,sha256=11gY7K9r_w-OVonOiWmDgxgJV0QZtD9JXMxzGK9Oyzo,9862
+testcloud/instance.py,sha256=N1vukSEhTdKBbyYUB84R2G4TGxGF_T4wArRJrg6pMis,35061
+testcloud/util.py,sha256=7xrSEFzQpUMBEWnkksRvcyizchPduoPAeloSR_st8mc,7279
+testcloud-0.6.0.dist-info/LICENSE,sha256=-cN1ob5KQfe3AwHdg8kcuJ5BVnR4hZt37vN1pS14JQU,18091
+testcloud-0.6.0.dist-info/METADATA,sha256=iM3d7esbZ3SJBEcY73-QRi0nFaol9tUxjQTPuH4mqYI,352
+testcloud-0.6.0.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+testcloud-0.6.0.dist-info/entry_points.txt,sha256=t5Uoha2sAlOb0UREFcTs8z7wGEL__IsYT8drKNtaxGU,50
+testcloud-0.6.0.dist-info/top_level.txt,sha256=XDeB_GNVNtzr8vdk2mUvWSiY8EYYdlc1GnTnpDA2Omc,10
+testcloud-0.6.0.dist-info/RECORD,,
