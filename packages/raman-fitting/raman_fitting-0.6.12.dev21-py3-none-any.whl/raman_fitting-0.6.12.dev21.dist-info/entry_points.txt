@@ -1,0 +1,3 @@
+[console_scripts]
+raman_fitting = raman_fitting.cli:main
+
