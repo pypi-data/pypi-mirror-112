@@ -1,0 +1,30 @@
+ads
+appdirs
+argparse
+bibtexparser>=1.1.0
+dictdiffer
+feedparser
+outdated
+pylatexenc
+pyparsing>=2.4.0
+pyside2>=5.14.0
+pytz
+requests>=2.25
+six
+urllib3>=1.26
+
+[:python_version < "3"]
+faulthandler
+matplotlib<3,>2.2.0
+mock
+unittest2
+
+[:python_version > "3"]
+matplotlib>3.0.0
+
+[dev]
+black
+isort
+pre-commit
+pyyaml
+twine
