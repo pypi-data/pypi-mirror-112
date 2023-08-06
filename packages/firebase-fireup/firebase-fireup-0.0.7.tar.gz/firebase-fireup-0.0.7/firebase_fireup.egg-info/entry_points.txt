@@ -1,0 +1,3 @@
+[console_scripts]
+fireup = fireup.fireup:main
+
