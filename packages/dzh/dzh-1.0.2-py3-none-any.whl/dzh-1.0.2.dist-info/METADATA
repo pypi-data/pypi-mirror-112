@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: dzh
+Version: 1.0.2
+Summary: Argon2 helper
+Home-page: UNKNOWN
+Author: Daduz
+Author-email: <davide.tropea97@gmail.com>
+License: UNKNOWN
+Keywords: daduz
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: PyQRCode
+Requires-Dist: argon2-cffi
+Requires-Dist: pyperclip
+Requires-Dist: pypng
+
+UNKNOWN
+
+

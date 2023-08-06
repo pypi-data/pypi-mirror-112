@@ -1,0 +1,3 @@
+[console_scripts]
+dzh = dzh_src.__main__:main
+
