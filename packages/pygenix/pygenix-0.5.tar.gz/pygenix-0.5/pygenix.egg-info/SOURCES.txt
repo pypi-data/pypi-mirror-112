@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pygenix/__init__.py
+pygenix/ani.py
+pygenix/utils.py
+pygenix.egg-info/PKG-INFO
+pygenix.egg-info/SOURCES.txt
+pygenix.egg-info/dependency_links.txt
+pygenix.egg-info/top_level.txt
