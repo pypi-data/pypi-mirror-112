@@ -1,0 +1,6 @@
+pip
+packaging
+attrdict==2.0.1
+fastcore==1.3.20
+
+[dev]
