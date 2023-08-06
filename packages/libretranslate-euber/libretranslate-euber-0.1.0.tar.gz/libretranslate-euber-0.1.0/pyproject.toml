@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "libretranslate-euber"
+version = "0.1.0"
+description = "My personal porting of libretranslate"
+authors = ["euberdeveloper <euberdeveloper@gmail.com>"]
+license = "GPL"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+argostranslate = "^1.4.0"
+Flask = "^2.0.1"
+flask-swagger = "^0.2.14"
+flask-swagger-ui = "^3.36.0"
+Flask-Limiter = "^1.4"
+waitress = "^2.0.0"
+expiringdict = "^1.2.1"
+pycld2 = "^0.41"
+Morfessor = "^2.0.6"
+polyglot = "^16.7.4"
+appdirs = "^1.4.4"
+APScheduler = "^3.7.0"
+PyICU = "^2.7.4"
+pysqlite3 = "^0.4.6"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+libretranslate-euber = "libretranslate_euber.main:main"
