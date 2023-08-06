@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+optimus_nni/__init__.py
+optimus_nni/optimus_tuner.py
+optimus_nni.egg-info/PKG-INFO
+optimus_nni.egg-info/SOURCES.txt
+optimus_nni.egg-info/dependency_links.txt
+optimus_nni.egg-info/requires.txt
+optimus_nni.egg-info/top_level.txt
