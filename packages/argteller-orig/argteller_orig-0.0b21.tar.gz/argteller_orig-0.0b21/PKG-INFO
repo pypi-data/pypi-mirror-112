@@ -1,0 +1,421 @@
+Metadata-Version: 2.1
+Name: argteller_orig
+Version: 0.0b21
+Summary: Decorator for stylized interactive constructor using DSL and parser.
+Home-page: https://github.com/mozjay0619/argteller
+Author: Jay Kim
+License: DSB 3-clause
+Description: 
+        Argteller
+        =========
+        
+        The argteller package provides the class and method decorators for a self-documenting, highly user-friendly interactive class object constructor. It will ask you for parameters that you need to provide, one by one. It will tell you the options that are available, and ask you for different parameters depending on what you have already provided. You can encode all of these in the custom DSL (domain specific language) script. 
+        
+        
+        Install
+        -------
+        
+        ::
+        
+        	pip install argteller
+        
+        Getting started: topics and parameters
+        --------------------------------------
+        
+        To start using argteller, you must first create a DSL script, either in the form of a text file or a string value. This script contains the names of the parameters as well as other auxiliary information, which we will go over in detail. 
+        
+        The first two, and most basic, pieces of information are: ``topic`` and ``parameter``. The name of a ``topic`` is just a line of string. The name of a ``parameter`` is a line of string preceded by ``-``. Let's look at an example:
+        
+        ::
+        	
+        	person		<--- topic
+        	-height		<--- parameter
+        	-weight
+        	-name
+        
+        We will now apply this DSL script to a Python class. First we need to import the class decorator. Also, we need to put the script either as a string variable or a text file, in which case, we need the path to the file. Let's assume this variable is ``string``. 
+        
+        .. code:: python
+        
+        	from argteller import ArgtellerClassDecorator
+        
+        	@ArgtellerClassDecorator(map_str=string)
+        	class MyClass():
+        	    
+        	    def __init__(self):
+        	    	print('Finally!')
+        
+        	my_object = MyClass()
+        
+        Running the above code will parse the script into tree data structure and prompt the user for the required arguments by recursively traversing down this tree, giving appropriate prompts for the given node.
+        
+        ::
+        
+        	✔ Checking person requirements...     Failed!
+        
+        	Required argument(s):
+        
+        	► height  weight  name
+        
+        Providing an argument for one of the parameter will prompt different set of required arguments:
+        
+        .. code:: python
+        
+        	my_object = MyClass(height=189, name='Tim')
+        
+        ::
+        
+        	✔ Checking person requirements...     Failed!
+        
+        	Required argument(s):
+        
+        	► weight
+        
+        You could have multiple topics:
+        
+        ::
+        	
+        	person		<--- topic
+        	-height
+        	-weight
+        	-name
+        
+        	other_details 	<--- 2nd topic
+        	-hobby
+        	-major
+        
+        It will check them one by one, providing the user an opportunity to partition and organize the parameters by topics:
+        
+        .. code:: python
+        
+        	my_object = MyClass(height=189, weight=80, name='Tim', 
+        	hobby='basketball')
+        
+        ::
+        
+        	✔ Checking person requirements...     Passed!
+        	✔ Checking other_details requirements...     Failed!
+        
+        	Required argument(s):
+        
+        	► major
+        
+        Once you provide all the required parameters, the original ``__init__`` method will be called. 
+        
+        .. code:: python
+        
+        	my_object = MyClass(height=189, weight=80, name='Tim', 
+        	hobby='basketball', major='math')
+        
+        ::
+        
+        	✔ Checking person requirements...     Passed!
+        	✔ Checking other_details requirements...     Passed!
+        	Finally!
+        
+        At this point, all of the parameters are accessible as object fields, anywhere as if they were always there, including from within the ``__init__`` method as well as any other instance methods. 
+        
+        .. code:: python
+        
+        	print(my_object.major)
+        	print(my_object.name)
+        
+        
+        
+        Available options
+        -----------------
+        
+        You can specify available options by preceding the name with a ``tab`` and ``=`` character:
+        
+        ::
+        	
+        	person		
+        	-height
+        	-weight
+        	-name
+        
+        	other_details 	
+        	-hobby
+        	    =basketball		<--- available options
+        	    =soccer
+        	-major
+        
+        .. code:: python
+        
+        	my_object = MyClass(height=189, weight=80, name='Tim')
+        
+        ::
+        
+        	✔ Checking person requirements...     Passed!
+        	✔ Checking other_details requirements...     Failed!
+        
+        	Required argument(s):
+        
+        	► hobby  major
+        
+        	Available [ hobby ] options:
+        
+        	► basketball  soccer
+        
+        
+        Conditional parameters
+        ----------------------
+        
+        What if there is a parameter that's needed only if the ``hobby`` is ``basketball``, such as ``style``, that could be ``indoor`` or ``outdoor``?
+        
+        ::
+        	
+        	person		
+        	-height
+        	-weight
+        	-name
+        
+        	other_details 	
+        	-hobby
+        	    =basketball
+        	        -style		<--- conditional parameter
+        	            =indoor
+        	            =outdoor
+        	    =soccer
+        	-major
+        
+        .. code:: python
+        
+        	my_object = MyClass(height=189, weight=80, name='Tim',
+                           hobby='basketball')
+        
+        ::
+        
+        	✔ Checking person requirements...     Passed!
+        	✔ Checking other_details requirements...     Failed!
+        
+        	Required argument(s):
+        
+        	► major
+        
+        	Required argument(s) for [ basketball ] hobby:
+        
+        	► style
+        
+        	Available [ style ] options:
+        
+        	► indoor  outdoor
+        
+        
+        Optional parameters
+        -------------------
+        
+        You could also have optional parameters, which are parameters that you can leave empty and still pass the topic requirement. For these you use ``+`` character.
+        
+        ::
+        	
+        	person		
+        	-height
+        	-weight
+        	-name
+        	+gender			<--- you can provide this parameter or not
+        
+        	other_details 	
+        	-hobby
+        	    =basketball
+        	        -style		
+        	            =indoor
+        	            =outdoor
+        	    =soccer
+        	-major
+        
+        .. code:: python
+        
+        	my_object = MyClass(height=189, weight=80, name='Tim',
+                           hobby='basketball')
+        
+        ::
+        
+        	✔ Checking person requirements...     Passed!
+        	✔ Checking other_details requirements...     Failed!
+        
+        	Required argument(s):
+        
+        	► major
+        
+        	Required argument(s) for [ basketball ] hobby:
+        
+        	► style
+        
+        	Available [ style ] options:
+        
+        	► indoor  outdoor
+        
+        	Optional argument(s) for person:
+        
+        	► gender
+        
+        
+        Boolean parameter conditioned parameter
+        ---------------------------------------
+        
+        You could have a parameter whose value is either ``True`` or ``False``, and perhaps a conditional parameter depends on this boolean parameter. For these you use ``?`` character. For example:
+        
+        ::
+        	
+        	person		
+        	-height
+        	-weight
+        	-name
+        	+gender			
+        
+        	other_details 	
+        	-hobby
+        	-major
+        	?has_car		<--- only ask for car_brand if this person has_car
+        	    -car_brand
+        
+        .. code:: python
+        
+        	my_object = MyClass(height=189, weight=80, name='Tim',
+        	                   hobby='basketball', has_car=True)
+        
+        ::
+        
+        	✔ Checking person requirements...     Passed!
+        	✔ Checking other_details requirements...     Failed!
+        
+        	Required argument(s):
+        
+        	► major
+        
+        	Required argument(s) for [ has_car ] option:
+        
+        	► car_brand
+        
+        	Optional argument(s) for person:
+        
+        	► gender
+        
+        
+        String examples of the parameter values
+        ---------------------------------------
+        
+        You could provide example for the parameter value with explicit string values. For these you use ``==`` characters.
+        
+        ::
+        
+        	person
+        	-height
+        	-weight
+        	-name
+        	+gender
+        
+        	other_details 
+        	-hobby
+        	-major
+        	?has_car
+        	    -car_brand
+        	        =='Toyota', 'BMW', 'Tesla'		<--- string examples of the value
+        
+        .. code:: python
+        
+        	my_object = MyClass(height=189, weight=80, name='Tim',
+        	                   hobby='basketball', has_car=True)
+        
+        ::
+        
+        	✔ Checking person requirements...     Passed!
+        	✔ Checking other_details requirements...     Failed!
+        
+        	Required argument(s):
+        
+        	► major
+        
+        	Required argument(s) for [ has_car ] option:
+        
+        	► car_brand
+        
+        	Examples for [ car_brand ]: 'Toyota', 'BMW', 'Tesla'
+        
+        	Optional argument(s) for person:
+        
+        	► gender
+        
+        Conditional parameter value assignement
+        ---------------------------------------
+        
+        Lastly, you can assign a value to a parameter depending on which available option argument was chosen:
+        
+        ::
+        
+        	person
+        	-height
+        	-weight
+        	-name
+        	+gender
+        
+        	other_details 
+        	-hobby
+        	    =basketball
+        	        -style
+        	            =indoor
+        	            =outdoor
+        	    =soccer
+        	    =coding
+        	        -major:'comp-sci'
+        	-major
+        
+        .. code:: python
+        
+        	my_object = MyClass(height=189, weight=80, name='Tim',
+                           hobby='coding')
+        
+        ::
+        
+        	✔ Checking person requirements...     Passed!
+        	✔ Checking other_details requirements...     Passed!
+        
+        	Optional argument(s) for person:
+        
+        	► gender
+        	Finally!
+        
+        This object now has ``comp-sci`` string value assigned to ``major`` field because we chose ``coding`` option for the ``hobby`` parameter: 
+        
+        .. code:: python
+        
+        	print(my_object.major)  # comp-sci
+        
+        Subtopics
+        ---------
+        
+        In case there are too many parameters to cover under one topic, but you feel reluctant to branch it out into a separate topic, you have an option of using subtopic. The subtopic only differs in that it adds a tab.
+        
+        ::
+        
+        	main_topic
+        
+        	    sub_topic1
+        	    -param1
+        	    -param2
+        
+        	    sub_topic2
+        	    -param3
+        	    -param4
+        	
+        .. code:: python
+        
+        	my_object = MyClass(param1=1, param2=2)
+        
+        ::
+        
+        	✔ Checking main_topic requirements...     
+        	  ⮑ sub_topic1 requirements...     Passed!
+        	  ⮑ sub_topic2 requirements...     Failed!
+        
+        	Required argument(s):
+        
+        	► param3  param4
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
