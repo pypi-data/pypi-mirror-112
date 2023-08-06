@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+./requirements.txt
+concatrim/__init__.py
+concatrim.egg-info/PKG-INFO
+concatrim.egg-info/SOURCES.txt
+concatrim.egg-info/dependency_links.txt
+concatrim.egg-info/requires.txt
+concatrim.egg-info/top_level.txt
+test/test___init__.py
