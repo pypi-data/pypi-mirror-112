@@ -1,0 +1,9 @@
+README.rst
+setup.py
+sentry_telegram_notification/__init__.py
+sentry_telegram_notification/plugin.py
+sentry_telegram_notification.egg-info/PKG-INFO
+sentry_telegram_notification.egg-info/SOURCES.txt
+sentry_telegram_notification.egg-info/dependency_links.txt
+sentry_telegram_notification.egg-info/entry_points.txt
+sentry_telegram_notification.egg-info/top_level.txt
