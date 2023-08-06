@@ -1,0 +1,3 @@
+[console_scripts]
+kuksa_viss_client = kuksa_viss_client.__main__:main
+
