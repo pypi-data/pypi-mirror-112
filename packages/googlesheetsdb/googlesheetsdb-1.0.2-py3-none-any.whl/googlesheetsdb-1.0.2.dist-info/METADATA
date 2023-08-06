@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: googlesheetsdb
+Version: 1.0.2
+Summary: tools to use google sheets as a relational-ish database because why not
+Home-page: UNKNOWN
+Author: Blitz#6652
+Author-email: <blitz2k4.dev@gmail.com>
+License: UNKNOWN
+Keywords: sheets,google sheets,google,database,db
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth-httplib2
+Requires-Dist: google-auth-oauthlib
+
+UNKNOWN
+
