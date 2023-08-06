@@ -1,0 +1,10 @@
+pip
+futures
+unittest2
+pep8
+flake8
+pytest
+nose
+panda-client
+idds-common==0.5.1
+idds-workflow==0.5.1
