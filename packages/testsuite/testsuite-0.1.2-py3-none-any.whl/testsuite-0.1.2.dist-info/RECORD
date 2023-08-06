@@ -1,0 +1,13 @@
+testsuite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testsuite/clean_xml.py,sha256=hgCktWnabaGIp3lFIMHJMxLrNbybOnBTpml3kV-qrDI,2869
+testsuite/console.py,sha256=ETfhxwvhGPgantASsdMOqzf6Y7ygxKp-iouh1tjOM4I,7229
+testsuite/constants.py,sha256=ytycbf6zsaRD05Vq1Vg5uHA3X_NQ71wRUTuAwF-QT9U,2468
+testsuite/generate_sch.py,sha256=ejCgQfqTUdy2lRqiPPyhqN1j_H7_ir8H6v0xP16CCCU,15007
+testsuite/tests/test_generate_sch.py,sha256=CpiEQxgS58CYbz82k_jBi0H12M2Sn4FMiXSgFIfv-a8,8203
+testsuite/tests/test_validate_sch.py,sha256=hiCQK42R1Zme4GnmjcIVLfwtBv03i1_i3BtFomj8L3k,10323
+testsuite/validate_sch.py,sha256=a0kX1CGBIYP4VejuduEkDUIq4a1bn5RhY6VJK2ddQrE,9347
+testsuite-0.1.2.dist-info/entry_points.txt,sha256=mOztdZRITpv6IAi6UCwsISfoSCRAoYu6YjkM2ImsS_s,52
+testsuite-0.1.2.dist-info/LICENSE.txt,sha256=z7bb0unJCTeXg6UUH85Lq_oJOGQ8IoesbHl1VHISwvk,1988
+testsuite-0.1.2.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+testsuite-0.1.2.dist-info/METADATA,sha256=SeKDKSTfqigEXCogpm-KiyclbdcMzFzi-TsJuZ0EFgk,3665
+testsuite-0.1.2.dist-info/RECORD,,
