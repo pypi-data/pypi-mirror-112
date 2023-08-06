@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ghttp
+Version: 0.0.1
+Summary: This is a simple HTTP server based on gevent WSGIServer.
+Home-page: https://wakie.com
+Author: Wakie
+Author-email: reg@budist.ru
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=2.7
+License-File: LICENSE
+
+UNKNOWN
+
