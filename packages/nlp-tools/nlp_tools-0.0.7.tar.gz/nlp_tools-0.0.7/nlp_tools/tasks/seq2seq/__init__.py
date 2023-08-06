@@ -1,0 +1,1 @@
+from nlp_tools.tasks.seq2seq.model import Seq2Seq

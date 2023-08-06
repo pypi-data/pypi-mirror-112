@@ -1,0 +1,1 @@
+from nlp_tools.tasks.classification.bi_lstm_model import BiLSTM_Model
