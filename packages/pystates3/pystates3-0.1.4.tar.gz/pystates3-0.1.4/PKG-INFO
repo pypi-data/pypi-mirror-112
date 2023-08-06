@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pystates3
+Version: 0.1.4
+Summary: State aware system implemented in python
+Home-page: https://github.com/jasjisdo/pystates3
+License: Apache-2.0
+Author: Jaschar Domann
+Author-email: jasjisdo@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/jasjisdo/pystates3
+Description-Content-Type: text/markdown
+
+# ![pystates3](https://github.com/jasjisdo/pystates3/blob/main/resources/logo.svg)
+State aware system implemented in python
+
