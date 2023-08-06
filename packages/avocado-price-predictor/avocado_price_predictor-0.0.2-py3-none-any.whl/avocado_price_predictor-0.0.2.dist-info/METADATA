@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: avocado-price-predictor
+Version: 0.0.2
+Summary: Web Application to predict Avocado average price using Machine Learning
+Home-page: https://github.com/shaySirek/avocado-price-predictor
+Author: Shay Sirek
+Author-email: shaysirek@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/shaySirek/avocado-price-predictor/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django
+Requires-Dist: djangorestframework
+Requires-Dist: avocado-price-predictor-model
+
+# Avocado Price Predictor
+Web Application to predict avocado average price using [Machine Learning](https://github.com/shaySirek/avocado-price-predictor-model).
+
+# What is about? 
+- [Kaggle Dataset](https://www.kaggle.com/neuromusic/avocado-prices)
+- [Task](https://www.kaggle.com/neuromusic/avocado-prices/tasks?taskId=3524)
+
+# Deployment
+- Locally: `./manage.py runserver`
+- Openshift: `oc process -f openshift.yml | oc create -f -`
+
+---
+![website](https://github.com/shaySirek/avocado-price-predictor/blob/master/website.png)
+
+
