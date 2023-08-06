@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: dg_ai_platform
+Version: 0.1.11
+Summary: A AI container platform.
+Home-page: https://github.com/gd4219/caldron_ai_platform
+Author: Caldron Tech
+Author-email: support@caldrontech.com
+License: UNKNOWN
+Description: # Caldron AI platform
+        
+        version 0.1.8
+        
+        
+        ## How to run hello world demo
+        ##### 1. pip install dg-ai-platform.
+        ##### 2. Login to Caldron AI platform website.
+        ##### 3. You will see a demo app with PID and public key.
+        ##### 4. Paste below code to a blank python file and change #pid# to your demo PID.
+        ##### 5. run this python file.
+        ```bash 
+        from dg_ai_platform.example import ExampleTask
+        from dg_ai_platform.dg_platform import CaldronAI
+        
+        ca = CaldronAI(#pid#, #public_key#, ExampleTask)
+        ca.run()
+        ```
+        ##### 6. Create your task in demo task page.
+        ##### 7. You will see a result on result page.
+        
+        ## Run your own App
+        ##### 1. Create a app then setup inputs and outputs on website.
+        ##### 2. Create yourself class must be implementing ITaskProcess(see below code).
+        ```bash
+        from dg_ai_platform.dg_platform import ITaskProcess
+        
+        class CustomTask(ITaskProcess):
+            def __init__(self):
+                super().__init__()
+        
+            def inference(self, input_list, output_list, options=None):
+                #your logic
+                
+        ```
+        ##### 3.You should be let your logic into function inference(self, input_list, output_list, options=None)
+        * param input_list: all inputs local path in this array. You should be load your all inputs then put it to your model.
+        * param output_list: all outputs local path in this array. You should be save your outputs to these outputs path.
+        * param options: This is a json data. 
+        ##### 4. Run your app with CustomTask
+        ```bash 
+        from your_python_file import CustomTask
+        from dg_ai_platform.dg_platform import CaldronAI
+        
+        ca = CaldronAI(#pid#, #public_key#, CustomTask)
+        ca.run()
+        ```
+        ##### 5. Create your custom task on website.
+        ##### 6. You will see a result on result page.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
