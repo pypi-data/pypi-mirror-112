@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: pnu-true
+Version: 1.1.0
+Summary: return true or false value depending on the command name
+Home-page: https://github.com/Thomas-Le-Dev/true/
+Author: Thomas Tournier
+Author-email: nobody@nowhere.invalid
+License: BSD 3-Clause License
+Project-URL: Bug Tracker, https://github.com/Thomas-Le-Dev/true/issues
+Keywords: pnu-project
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Topic :: Software Development
+Classifier: Topic :: System
+Classifier: Topic :: Utilities
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: License
+
+# Installation
+pip install [pnu-true](https://pypi.org/project/pnu-true/)
+
+# TRUE(1)
+
+## NAME
+true - return true value
+
+## SYNOPSIS
+**true**
+\[--debug\]
+\[--help|-?\]
+\[--version\]
+\[--\]
+
+## DESCRIPTION
+The **true** utility returns with an exit code of zero.
+
+Some shells may provide a builtin true command which is identical to this utility.
+Consult the [builtin(1)](https://www.freebsd.org/cgi/man.cgi?query=builtin) manual page.
+
+### OPTIONS
+Options | Use
+------- | ---
+--debug|Enable debug mode
+--help\|-?|Print usage and a short help message and exit
+--version|Print version and exit
+--|Options processing terminator
+
+## EXIT STATUS
+The **true** utility exits 0 on success, and >0 if an error occurs.
+
+## SEE ALSO
+[builtin(1)](https://www.freebsd.org/cgi/man.cgi?query=builtin),
+[csh(1)](https://www.freebsd.org/cgi/man.cgi?query=csh),
+[false(1)](https://github.com/Thomas-Le-Dev/true/blob/main/FALSE.md),
+[sh(1)](https://www.freebsd.org/cgi/man.cgi?query=sh)
+
+## STANDARDS
+The **true** utility is a standard UNIX/POSIX command.
+It is expected to be IEEE Std 1003.2 (“[POSIX](https://en.wikipedia.org/wiki/POSIX).2”) compatible.
+
+It tries to follow the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide for [Python](https://www.python.org/) code.
+
+## PORTABILITY
+Tested OK under Windows.
+
+## HISTORY
+This version was made for the [PNU project](https://github.com/HubTou/PNU).
+
+## LICENSE
+This utility is available under the [3-clause BSD license](https://opensource.org/licenses/BSD-3-Clause).
+
+## AUTHORS
+This version was written by [Thomas Tournier](https://github.com/Thomas-Le-Dev)
+
+The man page is derived from the [FreeBSD project's one](https://www.freebsd.org/cgi/man.cgi?query=true).
+
+
