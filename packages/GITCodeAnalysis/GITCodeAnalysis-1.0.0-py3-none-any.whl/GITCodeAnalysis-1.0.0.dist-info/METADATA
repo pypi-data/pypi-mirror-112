@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: GITCodeAnalysis
+Version: 1.0.0
+Summary: Git Code Analysis
+Home-page: https://github.com/mxtadmin/code_analysis
+Author: Maoxinteng
+Author-email: 1214403402@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# code_analysis
+
+自用库
+
