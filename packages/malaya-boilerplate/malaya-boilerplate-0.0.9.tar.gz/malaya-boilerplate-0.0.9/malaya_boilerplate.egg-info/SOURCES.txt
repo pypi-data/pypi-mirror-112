@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+malaya_boilerplate/__init__.py
+malaya_boilerplate/backblaze.py
+malaya_boilerplate/frozen_graph.py
+malaya_boilerplate/utils.py
+malaya_boilerplate.egg-info/PKG-INFO
+malaya_boilerplate.egg-info/SOURCES.txt
+malaya_boilerplate.egg-info/dependency_links.txt
+malaya_boilerplate.egg-info/requires.txt
+malaya_boilerplate.egg-info/top_level.txt
