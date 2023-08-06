@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+boopackage/__init__.py
+boopackage/barmodule.py
+boopackage/boomodule.py
+persia_core.egg-info/PKG-INFO
+persia_core.egg-info/SOURCES.txt
+persia_core.egg-info/dependency_links.txt
+persia_core.egg-info/requires.txt
+persia_core.egg-info/top_level.txt

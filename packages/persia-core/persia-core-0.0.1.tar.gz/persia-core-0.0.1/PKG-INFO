@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: persia-core
+Version: 0.0.1
+Summary: An example Python package
+Home-page: https://github.com/activescott/python-package-example
+Author: Scott Willeke
+Author-email: scott@willeke.com
+License: MIT
+Keywords: example package setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: dev
+Provides-Extra: test
+
+Just a package for testing
+
