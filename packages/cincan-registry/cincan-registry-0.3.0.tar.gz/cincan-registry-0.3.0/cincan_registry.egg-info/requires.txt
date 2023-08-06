@@ -1,0 +1,4 @@
+docker>=4.4.1
+python-gitlab>=2.7.1
+pyyaml
+requests
