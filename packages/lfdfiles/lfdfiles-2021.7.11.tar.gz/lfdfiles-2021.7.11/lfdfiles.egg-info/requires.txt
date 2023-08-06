@@ -1,0 +1,9 @@
+numpy>=1.15.1
+tifffile>=2020.9.30
+click
+
+[all]
+matplotlib>=3.2
+czifile>=2019.7.2
+oiffile>=2020.9.18
+netpbmfile>=2020.10.18
