@@ -1,0 +1,211 @@
+#!python
+"""
+Helmix - single file k8s templating solution for deployments and configmaps.
+
+Author: Tomasz bla Fortuna
+License: GPLv3
+"""
+import os
+import sys
+import io
+import traceback as tb
+import argparse
+import subprocess
+import yaml
+import jinja2
+
+
+class HelmixException(Exception):
+    "Handled CLI exceptions"
+
+
+class Helmix:
+    "Handles templates and variables"
+    def __init__(self):
+        self.parms = {}
+
+    def read_vars(self, path):
+        "Update template variables with a data from a YAML file"
+        if path.endswith(".gpg"):
+            handle = self._decrypt_gpg(path)
+            data = yaml.safe_load(handle)
+        else:
+            with open(path, "r") as vars_file:
+                data = yaml.safe_load(vars_file)
+        self._dict_merge(self.parms, data)
+
+    def _dict_merge(self, dst, src, path=""):
+        "Merge dicts recursively with some error handling"
+        for key, value in src.items():
+            if key not in dst:
+                dst[key] = value
+                continue
+            if not isinstance(dst[key], type(value)):
+                raise HelmixException(f"Key '{path}{key}' changes type from "
+                                      f"{type(dst[key]).__name__} to {type(value).__name__}")
+            if isinstance(dst[key], dict):
+                self._dict_merge(dst[key], src[key], path=f"{path}{key}.")
+            else:
+                dst[key] = value
+
+    def render_tmpl(self, tmpl_path):
+        "Render template using jinja"
+        tmpl_path = os.path.realpath(tmpl_path)
+        tmpl_dir, tmpl_name = os.path.dirname(tmpl_path), os.path.basename(tmpl_path)
+
+        env = jinja2.Environment(loader=jinja2.FileSystemLoader(tmpl_dir))
+        env.undefined = jinja2.StrictUndefined
+        try:
+            tmpl = env.get_template(tmpl_name)
+        except jinja2.exceptions.TemplateNotFound as ex:
+            raise HelmixException(f"Template {tmpl_path} was not found") from ex
+        except jinja2.exceptions.TemplateSyntaxError as ex:
+            raise HelmixException(f"Template error {ex.name}:{ex.lineno}: {ex.message}") from ex
+        try:
+            rendered = tmpl.render(**self.parms)
+        except jinja2.exceptions.UndefinedError as ex:
+            frame = tb.extract_tb(sys.exc_info()[2])[-1]
+            msg = f"Template error in {frame.filename}:{frame.lineno}: {ex.message}"
+            msg += f"\nLine: {frame.line}"
+            raise HelmixException(msg) from ex
+        return rendered
+
+    @staticmethod
+    def render_configmap(namespace, config_map, rendered):
+        "Render configmap using given data"
+        yaml_keys = {
+            'apiVersion': 'v1',
+            'data': {
+                os.path.basename(data_path): data
+                for data_path, data in rendered
+            },
+            'kind': 'ConfigMap',
+            'metadata': {
+                'creationTimestamp': None,
+                'name': config_map,
+                'namespace': namespace
+            }
+        }
+        configmap = io.StringIO()
+        yaml.dump(yaml_keys, configmap)
+        configmap.seek(0)
+        return configmap.read()
+
+    @staticmethod
+    def _decrypt_gpg(path):
+        try:
+            # pylint: disable=import-outside-toplevel
+            import gpg
+        except ImportError:
+            print("GPG encrypted files require a python3-gpg GPGME module")
+            sys.exit(110)
+        decrypted = gpg.Data()
+        with open(path, "rb") as vars_file:
+            gpg.Context().decrypt(vars_file, sink=decrypted, verify=False)
+        decrypted.seek(0)
+        return decrypted
+
+
+def parse_args():
+    "Argument parser"
+    parser = argparse.ArgumentParser(description="Simple k8s config generator")
+    parser.add_argument("templates", nargs="*", type=str, metavar="TEMPLATE",
+                        help="template files to build")
+    parser.add_argument("-v", "--vars", metavar="vars.yaml", type=str, action="append",
+                        help="paths to variable files in order")
+    parser.add_argument("--dump", action="store_true",
+                        help="dump final variables")
+
+    cfgs = parser.add_argument_group("Config maps")
+    cfgs.add_argument("-n", "--namespace", default="default",
+                      help="namespace for the config map")
+    cfgs.add_argument("--config-map",
+                      help="Name of the config map to generate from a template")
+
+    k8s = parser.add_argument_group("Instant apply")
+    k8s.add_argument("--apply", action="store_true",
+                     help="instead of printing the template, apply it using kubectl")
+    k8s.add_argument("--kubectl", default="kubectl",
+                     help="path to the kubectl binary, by default uses $PATH")
+    k8s.add_argument("--context", default="default",
+                     help="kubectl context to use, by default 'default'")
+
+    args = parser.parse_args()
+    if not args.vars:
+        parser.error("At least one parameter file is required")
+    if not args.dump and not args.templates:
+        parser.error("At least one template file is required if not dumping parameters")
+
+    return args
+
+
+def kubectl(args, rendered, template_path):
+    "Execute kubectl to apply a rendered template"
+    command = [
+        args.kubectl,
+        "--context", args.context,
+        "apply",
+        "-f", "-"
+    ]
+    try:
+        process = subprocess.Popen(command, stdin=subprocess.PIPE)
+    except FileNotFoundError as ex:
+        raise HelmixException(f"Unable to execute {args.kubectl}, try --kubectl option") from ex
+    process.communicate(rendered.encode('utf-8'))
+    if process.returncode != 0:
+        print(f"Kubectl returned an error {process.returncode} for {template_path}. Exiting.")
+        print("Executed command was:", " ".join(command))
+        sys.exit(process.returncode)
+
+
+def main():
+    "CLI interface for Helmix"
+    args = parse_args()
+
+    helmix = Helmix()
+    try:
+        for path in args.vars:
+            helmix.read_vars(path)
+    except HelmixException as ex:
+        print(f"Variable aggregation from '{path}' failed with error: {ex.args[0]}")
+        sys.exit(100)
+
+    if args.dump:
+        print("Final set of template variables:\n", file=sys.stderr)
+        yaml.dump(helmix.parms, sys.stdout)
+        return
+
+    # Render everything first.
+    try:
+        # [(path, rendered_string), ...]
+        rendered_lst = [
+            (path, helmix.render_tmpl(path))
+            for path in args.templates
+        ]
+    except HelmixException as ex:
+        print(ex.args[0])
+        sys.exit(101)
+
+    if args.config_map:
+        # Rerender as a config-map.
+        rendered_lst = [
+            ("configmap",
+             helmix.render_configmap(args.namespace, args.config_map, rendered_lst))
+        ]
+
+    for template_path, rendered in rendered_lst:
+        if not args.apply:
+            sys.stdout.write(rendered)
+            sys.stdout.write("\n")
+        else:
+            try:
+                kubectl(args, rendered, template_path)
+            except HelmixException as ex:
+                print(ex.args[0])
+                sys.exit(102)
+
+    sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()
