@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: dzh
+Version: 1.0.1
+Summary: Argon2 helper
+Home-page: UNKNOWN
+Author: Daduz
+Author-email: <davide.tropea97@gmail.com>
+License: UNKNOWN
+Keywords: python,daduz
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: Pillow
+Requires-Dist: argon2-cffi
+Requires-Dist: cffi
+Requires-Dist: colorama
+Requires-Dist: django-qrcode
+Requires-Dist: pycparser
+Requires-Dist: pyperclip
+Requires-Dist: qrcode[pil]
+Requires-Dist: six
+
+UNKNOWN
+
+
