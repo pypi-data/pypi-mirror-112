@@ -1,0 +1,51 @@
+{
+    "course": "test_course",
+    "offering": "fall2021",
+    "extension_hours": 24,
+    "review_hours": 1,
+    "revision_hours": 95,
+    "grace_minutes": 30,
+    "default_time_of_day": "23:59",
+    "default_due_time_of_day": "23:59",
+    "default_release_time_of_day": "23:59",
+    "tasks": {
+        "debugTest": {
+            "target": "debugMe.py",
+            "title": "Debugging Task",
+            "desc": "Fix up some code we've given you."
+        },
+        "sceneTest": {
+            "target": "scene.py",
+            "title": "Scene Task",
+            "desc": "Use turtle graphics to make a scene."
+        },
+        "interactiveTest": {
+            "target": "interactive.py",
+            "title": "Interactive Task",
+            "desc": "Make a basic interactive program."
+        },
+        "functionsTest": {
+            "target": "functions.py",
+            "title": "Functions Task",
+            "desc": "Make a basic program using functions."
+        }
+    },
+    "psets": [
+        {
+            "id": "test",
+            "release": "2021-01-01",
+            "due": "2022-01-01",
+            "timing": {
+                "reading": [ 0, 0 ],
+                "pertask": [ 0.1, 0.2 ],
+                "tasks": [ 0, 0 ]
+            },
+            "tasks": [
+                { "id": "debugTest", "partner": false },
+                { "id": "sceneTest", "partner": false },
+                { "id": "interactiveTest", "partner": true, "pool": "p1" },
+                { "id": "functionsTest", "partner": true, "pool": "p1" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+jinja2
+pygments
+flask
+flask_cas
+importlib_resources
+pytest
+
+[tests]
+jinja2
+pygments
+flask
+flask_cas
+importlib_resources
+pytest
