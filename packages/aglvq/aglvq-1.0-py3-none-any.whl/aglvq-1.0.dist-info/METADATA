@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aglvq
+Version: 1.0
+Summary: AGLVQ Package
+Home-page: https://github.com/graebe/aglvq
+Author: ['Torben Graeber', 'Sebastian Vetter']
+Author-email: torbengraebergt@gmail.com
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE.md
+Requires-Dist: keras (==2.3.1)
+Requires-Dist: tensorflow (==2.1.0)
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+
+UNKNOWN
+
