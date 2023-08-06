@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        iguanaresult2csv=iguanaresult2csv.exec.run:cli
+    

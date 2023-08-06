@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+iguanaresult2csv/__init__.py
+iguanaresult2csv/processing.py
+iguanaresult2csv.egg-info/PKG-INFO
+iguanaresult2csv.egg-info/SOURCES.txt
+iguanaresult2csv.egg-info/dependency_links.txt
+iguanaresult2csv.egg-info/entry_points.txt
+iguanaresult2csv.egg-info/requires.txt
+iguanaresult2csv.egg-info/top_level.txt
+iguanaresult2csv/exec/__init__.py
+iguanaresult2csv/exec/run.py
