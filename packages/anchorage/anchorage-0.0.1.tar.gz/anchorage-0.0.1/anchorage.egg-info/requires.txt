@@ -1,0 +1,10 @@
+numpy
+rapidjson
+toml
+Python-Alexandria
+archivenow
+internetarchive
+tqdm
+pyfiglet
+PyInquirer
+prompt_toolkit==1.0.14
