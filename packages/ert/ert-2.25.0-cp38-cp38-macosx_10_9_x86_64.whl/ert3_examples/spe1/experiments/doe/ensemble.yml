@@ -1,0 +1,23 @@
+size: 10
+
+input:
+  -
+    source: storage.designed_field_properties
+    record: field_properties
+  -
+    source: storage.designed_wells
+    record: wells
+
+output:
+    -
+      record: wopt_prod
+    -
+      record: wwpt_prod
+    -
+      record: wgpt_prod
+    -
+      record: wwit_inj
+
+forward_model:
+  driver: local
+  stage: simulate_SPE1
