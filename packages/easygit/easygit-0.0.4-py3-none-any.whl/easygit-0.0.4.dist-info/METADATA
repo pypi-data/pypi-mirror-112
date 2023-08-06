@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: easygit
+Version: 0.0.4
+Summary: Library to learn git
+Home-page: UNKNOWN
+Author: Sharan Babu
+Author-email: sharanbabu2001@gmail.com
+License: UNKNOWN
+Keywords: python,chatbot,git,interactive terminal
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: wit
+Requires-Dist: colorama
+
+# easygit [![Upload Python Package](https://github.com/Sharan-Babu/easygit/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Sharan-Babu/easygit/actions/workflows/python-publish.yml)
+Generate git syntax, commands by interacting with the terminal using natural language.
+
+Documentation: [Link](https://github.com/Sharan-Babu/easygit/wiki/Documentation)
+
+## How to use:
+~~~python
+from easygit import Easygit
+git = Easygit()
+git.interactive()
+~~~
+
+
