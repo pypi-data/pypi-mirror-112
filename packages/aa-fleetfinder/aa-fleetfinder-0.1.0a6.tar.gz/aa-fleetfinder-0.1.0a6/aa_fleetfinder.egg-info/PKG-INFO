@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: aa-fleetfinder
+Version: 0.1.0a6
+Summary: Fleet finder plugin for Alliance Auth
+Home-page: https://github.com/ppfeufer/aa-fleetfinder
+Author: Peter Pfeufer
+Author-email: development@ppfeufer.de
+License: GPLv3
+Description: # AA Fleet Finder
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown
