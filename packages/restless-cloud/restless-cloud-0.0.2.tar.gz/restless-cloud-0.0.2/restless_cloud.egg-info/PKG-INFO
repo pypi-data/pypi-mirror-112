@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: restless-cloud
+Version: 0.0.2
+Summary: A router for AWS Lambda and Azure Functions
+Home-page: UNKNOWN
+Author: Joaquim Ventura
+Author-email: allaphor@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: all
+Provides-Extra: azure
+Provides-Extra: tests
+Provides-Extra: spec
+License-File: LICENSE
+
+UNKNOWN
+
