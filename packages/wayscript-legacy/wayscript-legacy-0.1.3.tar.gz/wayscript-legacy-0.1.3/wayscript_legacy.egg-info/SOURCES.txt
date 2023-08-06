@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+wayscript/__init__.py
+wayscript/client.py
+wayscript/exceptions.py
+wayscript_legacy.egg-info/PKG-INFO
+wayscript_legacy.egg-info/SOURCES.txt
+wayscript_legacy.egg-info/dependency_links.txt
+wayscript_legacy.egg-info/not-zip-safe
+wayscript_legacy.egg-info/requires.txt
+wayscript_legacy.egg-info/top_level.txt
