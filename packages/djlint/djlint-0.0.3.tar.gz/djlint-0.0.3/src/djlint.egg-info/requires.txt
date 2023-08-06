@@ -1,0 +1,5 @@
+click>=7.1.2
+pyyaml>=5.4.1
+
+[colorama]
+colorama>=0.4.3
