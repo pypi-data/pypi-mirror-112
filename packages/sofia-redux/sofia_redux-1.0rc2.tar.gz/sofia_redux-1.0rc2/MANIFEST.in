@@ -1,0 +1,14 @@
+include README.rst
+include CHANGES.rst
+include setup.cfg
+include LICENSE.rst
+include pyproject.toml
+
+recursive-include sofia_redux *.pyx *.c *.pxd
+recursive-include licenses *
+recursive-include scripts *
+
+prune build
+prune docs
+
+global-exclude *.pyc *.o .DS_Store grism/standard_models/*fits
