@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+scripts/ssmtool
+src/ssmtool/__init__.py
+src/ssmtool/__main__.py
+src/ssmtool/config.py
+src/ssmtool/tools.py
+src/ssmtool.egg-info/PKG-INFO
+src/ssmtool.egg-info/SOURCES.txt
+src/ssmtool.egg-info/dependency_links.txt
+src/ssmtool.egg-info/top_level.txt
