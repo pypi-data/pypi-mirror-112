@@ -1,0 +1,12 @@
+LICENSE
+setup.py
+cvtoolbox/__init__.py
+cvtoolbox/base.py
+cvtoolbox/caffe.py
+cvtoolbox/tianchi.py
+cvtoolbox/vis_pth.py
+cvtoolbox.egg-info/PKG-INFO
+cvtoolbox.egg-info/SOURCES.txt
+cvtoolbox.egg-info/dependency_links.txt
+cvtoolbox.egg-info/requires.txt
+cvtoolbox.egg-info/top_level.txt
