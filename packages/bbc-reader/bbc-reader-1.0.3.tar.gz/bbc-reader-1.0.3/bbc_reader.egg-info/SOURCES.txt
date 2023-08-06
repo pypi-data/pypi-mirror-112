@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+BBC/__init__.py
+BBC/__main__.py
+BBC/feed.py
+BBC/viewer.py
+bbc_reader.egg-info/PKG-INFO
+bbc_reader.egg-info/SOURCES.txt
+bbc_reader.egg-info/dependency_links.txt
+bbc_reader.egg-info/entry_points.txt
+bbc_reader.egg-info/requires.txt
+bbc_reader.egg-info/top_level.txt
