@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: figure-parser
+Version: 0.0.1
+Summary: Parser for figure
+Home-page: https://github.com/FigureHook/figure_parser
+License: MIT
+Keywords: parser,figure
+Author: Elton Chou
+Author-email: plscd748@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (==5.2)
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0)
+Requires-Dist: beautifulsoup4 (>=4.9.3)
+Requires-Dist: feedparser (>=6.0.8,<7.0.0)
+Requires-Dist: lxml (>=4.6.3)
+Requires-Dist: pytz (>=2021.1,<2022.0)
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Project-URL: Repository, https://github.com/FigureHook/figure_parser
+Description-Content-Type: text/markdown
+
+## Maker List
+|                | Product parser | Delay parser | Shipment parser |
+| -------------- | -------------- | ------------ | --------------- |
+| GSC            | V              |              | V               |
+| Alter          | V              |              |                 |
+| native         | V              |              |                 |
+| SKYTUBE        |                |              |                 |
+| AMAKUNI        |                |              |                 |
+| KOTOBUKIYA     |                |              |                 |
+| daikikougyou   |                |              |                 |
+| OrchidSeed     |                |              |                 |
+| FLARE          |                |              |                 |
+| PLUM           |                |              |                 |
+| WAVE           |                |              |                 |
+| union-creative |                |              |                 |
+| alphamax       |                |              |                 |
+| ORCATORYS      |                |              |                 |
+| quesQ          |                |              |                 |
+| MegaHouse      |                |              |                 |
+
+## Shop List
+- [ ] TokyoFigure
+- [ ] HobbyJapan
+- [ ] amiami
+- [ ] toranoana
+- [ ] melonbooks
