@@ -1,0 +1,3 @@
+[console_scripts]
+springheel_jacky = springheel_jacky.__main__:main
+
