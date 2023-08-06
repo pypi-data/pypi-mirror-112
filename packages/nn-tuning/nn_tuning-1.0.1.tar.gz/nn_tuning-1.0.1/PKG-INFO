@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: nn_tuning
+Version: 1.0.1
+Summary: Analyse the tuning functions of neurons in artificial neural networks
+Home-page: https://github.com/nn-analysis/nn_tuning
+Author: Jesca Hoogendijk
+Author-email: j.hoogendijk@uu.nl
+License: GNU LGPLv3
+Project-URL: Documentation, https://nn-analysis.github.io/nn_tuning/nn_tuning.html
+Description: Neural Network Tuning Analysis Toolkit
+        ====
+        
+        Analyse neural networks for feature tuning.
+        
+        
+        
+        [Documentation]
+        
+        [Documentation]: https://nn-analysis.github.io/nn_tuning/nn_tuning.html
+        
+        Installation
+        ------------
+        
+            $ pip install nn_analysis
+        
+        Depending on your use you might need to install several other packages.
+        
+        The AlexNet network requires you to install PyTorch and PyTorch vision using:
+        
+            $ pip install torch torchvision
+        
+        PredNet requires a more specific configuration. For PredNet you need to be using python version 3.6 and TensorFlow version < 2.
+        
+        Features
+        --------
+        
+        * Fitting tuning functions to recorded activations of a neural network,
+        * Automatic storage of large tables on disk in understandable folder structures,
+        * Easily [extendable] to other neural networks and stimuli.
+        
+        [extendable]: https://nn-analysis.github.io/nn_tuning/nn_tuning.html#adding-new-neural-networks-to-the-code-analysis-system
+        
+        The above features are explained in more detail in nn_analyis' [documentation].
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
