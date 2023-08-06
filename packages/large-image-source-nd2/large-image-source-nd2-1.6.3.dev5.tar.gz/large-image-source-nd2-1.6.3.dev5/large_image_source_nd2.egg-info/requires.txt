@@ -1,0 +1,8 @@
+large-image>=1.0.0
+nd2reader>=3.3
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[girder]
+girder-large-image>=1.0.0
