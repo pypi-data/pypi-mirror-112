@@ -1,0 +1,295 @@
+@import "chapbook.scss";
+@import "toc.scss";
+@import "webtoon.scss";
+@media screen {
+    /*Fluff*/
+    #fluff {
+        $outer: #f5ad4a;
+        $inner: #B5D3FF;
+        $accent: #FBD66F;
+        $text: #351E17;
+        $csep: #926245;
+        /* Default (small) screens */
+        body {
+            background-color: $outer;
+            color: $text;
+            text-align: center;
+            font-size: 1.5em;
+            font-family: sans-serif;
+            display: grid;
+            grid-template-areas: 'skippy' 'header' 'toc' 'main' 'footer';
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto 1fr;
+            grid-gap: 1em;
+            margin: 0;
+            min-height: 100vh;
+            max-width: 100vw;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        figure {
+            margin-left: 0;
+            padding-left: 0;
+        }
+        main {
+            margin: 0;
+            padding: 0 1em
+        }
+        h1 {
+            margin: 0;
+        }
+        figure {
+            padding: 1em 0;
+            text-align: center;
+            border: none;
+            margin: 0;
+            background: $accent;
+            border: solid medium $outer;
+            border-radius: 1em;
+        }
+        section.page section {
+            padding: 1em
+        }
+        figcaption {
+            padding: 1em 1em 0.5em 1em;
+        }
+        .main ul {
+            padding: 0;
+        }
+        .main ul li {
+            background: $accent;
+            border: solid medium $outer;
+            border-radius: 1em;
+            list-style-type: none;
+            padding: 1em;
+            margin: 0.5em;
+        }
+        .cominavbox {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: auto;
+            align-items: end;
+            li {
+                list-style-type: none;
+            };
+            padding-left: 0;
+        }
+        li + li,
+        p + p {
+            margin-top: 0.5em;
+        }
+        #skippy {
+            text-align: left;
+            grid-area: skippy;
+            margin: 0.5em
+        }
+        main {
+            grid-area: main;
+            background: url("fur_bottom.png") repeat-x bottom left, url("fur_top.png") repeat-x $inner;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            margin-top: 1em;
+        }
+        @include toc;
+        ol {
+            line-height: 2.5em;
+            padding: 0.1em;
+        }
+        header {
+            grid-area: header;
+        }
+        #topnav ul {
+            max-width: 99vw;
+            padding: 0 1em;
+            display: grid;
+            grid: auto-flow / repeat(auto-fit, minmax(40vw, 1fr));
+            align-items: end;
+            grid-gap: 1em;
+            li {
+                list-style-type: none;
+                background: $inner;
+                border: solid medium $outer;
+                border-radius: 1em;
+                padding: 0.5em;
+            }
+        }
+        #commentary,
+        #transcript {
+            text-align: left;
+        }
+        .statline {
+            font-weight: bold;
+        }
+        a:link {
+            color: #16079C;
+            text-decoration: underline;
+        }
+        a:visited {
+            color: #4c056d;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        a:active,
+        a:focus,
+        a:hover {
+            color: #600609;
+        }
+        a:focus, a:active {
+            outline-width: medium;
+            outline-style: solid;
+        }
+        footer {
+            grid-area: footer;
+            margin: 1em 0 0;
+            text-align: left;
+            padding: 1em 0.5em 0;
+        }
+        main > section {
+            text-align: left;
+        }
+        embed,
+        img,
+        object,
+        video {
+            max-width: 99vw;
+            height: auto;
+        }
+        .action {
+            font-weight: bold;
+        }
+        .charname {
+            font-weight: bold;
+        }
+        .char {
+            text-align: left;
+            max-width: 90%;
+        }
+        .charimg {
+            border: solid medium $outer;
+        }
+        .chartraits {
+            margin: 0;
+            padding: 0.5em;
+            width: 100%;
+            background: $accent;
+            border: solid medium $outer;
+            border-radius: 1em;
+            overflow-wrap: break-word;
+            dt:after {
+                content: ":"
+            }
+            dd:after {
+                content: "\A"; white-space: pre;
+            }
+            dd {
+                margin-left: 0em;
+            }
+            dt, dd {
+                display: inline;
+                white-space: pre-wrap;
+                padding: 0.5em 0em
+            }
+            dt {
+                font-weight: bold;
+            };
+        }
+        .chartext {
+            grid-area: description;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0.5em;
+        }
+        .chapterarch,
+        ul.tagslist {
+            list-style-type: none;
+        }
+        ol.tagslist {
+            text-align: left;
+            list-style: decimal inside none;
+        }
+        .char + .char {
+            border-top: solid medium $csep;
+        }
+        /*Medium screens*/
+        @media screen and (min-width: 1024px) {
+            body {
+                margin: 0;
+            }
+            main > div,
+            main > section {
+                padding-left: 1em;
+                padding-right: 1em;
+                width: 80%;
+                margin-top: 1em;
+            }
+            div + div {
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+            .cominavbox {
+                margin: 1em 0;
+            }
+            figure + .cominavbox {
+                margin-top: 0;
+            }
+            figure img {
+                max-width: 100%;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            h3 {
+                font-size: 1em;
+            }
+            #topnav ul {
+                grid: auto-flow / repeat(auto-fit, minmax(10vw, 1fr));
+            }
+            .statline {
+                font-size: 0.8em;
+                text-align: right;
+            }
+            footer p {
+                font-size: 0.7em;
+            }
+            main > section {
+                margin-left: 1em;
+                margin-right: 1em;
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+            .main {
+                padding: 0.5em;
+                margin: auto;
+                max-width: 60%;
+                text-align: center;
+                & p {
+                    margin-left: 0;
+                }
+            }
+            .page {
+                width: initial
+            }
+            .charimg, .chartraits {
+                display: inline-block;
+                max-width: 50%;
+                vertical-align: top;
+            }
+            .chartraits {
+                margin: 0;
+                width: 100%;
+            }
+            .chartext {
+                text-align: left;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+        @include chapbook;
+        @include webtoon;
+    }
+}

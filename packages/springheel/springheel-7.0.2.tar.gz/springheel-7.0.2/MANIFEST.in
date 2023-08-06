@@ -1,0 +1,18 @@
+include README.md
+include CHANGELOG.md
+include AUTHORS
+include LICENSE
+include CODE_OF_CONDUCT.md
+include jackie.png
+include springheel-icon.png
+include springheel-logo.png
+include jackie.svg
+include springheel-logo.svg
+graft springheel
+graft docsource
+graft docs
+prune springheel/themes/.sass-cache
+recursive-exclude springheel/themes *.css.map
+prune springheel/locales/lokalize-scripts
+exclude springheel/locales/main.lqa
+exclude springheel/locales/springheel.lokalize

@@ -1,0 +1,9 @@
+feedgen
+python-slugify
+tqdm
+html-sanitizer
+Pillow
+
+[docs]
+sphinx>=3.4.1
+numpydoc

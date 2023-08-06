@@ -1,0 +1,359 @@
+@import "chapbook.scss";
+@import "toc.scss";
+@import "webtoon.scss";
+@media screen {
+/*Western*/
+    #western {
+        $bg-color: saddlebrown;
+        $box-color: wheat;
+        $borders: saddlebrown;
+        $out-text: #ffd;
+        $in-text: #111;
+        /* Default (small) screens */
+        body {
+            background-color: $bg-color;
+            color: $out-text;
+            text-align: center;
+            font-size: 1.5em;
+            font-family: sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        figure#comic, .page, .archive, main > div, main > section, main > .tagslist {
+            border: double thick $borders;
+        }
+        .intro {
+            border: none;
+        }
+        section, div, footer {
+            text-align: left;
+        }
+        main, figure {
+            margin-left: 0em;
+            padding-left: 0em;
+        }
+        figure, figure img {
+            vertical-align: middle;
+            margin: 0em;
+            padding: 0em;
+        }
+        figure#comic, .page, .archive, #toc {
+            background-color: $box-color;
+            background-image: url("horseshoe.png");
+            background-repeat: no-repeat;
+            background-position: top 0.5em right 0.5em;
+            color: $in-text;
+        }
+        .archive, .main {
+            margin-top: 1em
+        }
+        main > div, main > section, main > .tagslist {
+            background: $box-color;
+            color: $in-text;
+        }
+        h1 {
+            margin: 1em 0em 0em 0em;
+        }
+        h1, h2, h3, h4, h5, p.status {
+            font-variant: small-caps;
+            text-align: center;
+        }
+        h2, h3 {
+            margin-top: 0em;
+        }
+        #comic, .page {
+            padding: 1em 0em 0em 0em;
+            margin: 0em;
+            & img {
+                margin: 0em 0em 1em 0em;
+            }
+        }
+        figcaption {
+            margin-top: 0.5em;
+            margin-bottom: 0em;
+            padding: 0.5em 0em;
+        }
+        .cominavbox {
+            background: #3B1E07;
+            border: double medium $borders;
+            padding: 0.5em;
+            margin: 0em;
+        }
+        #topbox {
+            border-bottom: none;
+        }
+        #botbox {
+            border-top: none;
+        }
+        .cominavbox, .cominavbox li {
+            display: inline-block;
+            padding: 0em;
+            margin: 0em 0.5em 0em 0.5em;
+        }
+        .cominavbox, #skippy {
+            background: #3B1E07;
+            & a:link {
+                color: #bbf;
+                text-decoration: underline
+            };
+            & a:visited {
+                color: #daf;
+            };
+            & a:hover, & a:focus, & a:active {
+                color: #ffaaaa;
+            }
+            & p {
+                margin-left: 0em;
+                text-align: left;
+            }
+        }
+        #skippy {
+            text-align: left;
+            padding: 0.5em;
+            margin-top: 0;
+            border-bottom: double medium saddlebrown;
+        }
+        #topnav {
+            margin-bottom: 0em;
+            & ul {
+                margin: 0em;
+                padding-left: 0em;
+            };
+            & li {
+                display: inline-block;
+                padding: 0.5em;
+                background: $box-color;
+                color: $in-text;
+            };
+            & li + li {
+                margin-left: 1em;
+            };
+            a:link, a:visited {
+                text-decoration: none;
+            };
+            a:hover {
+                text-decoration: underline;
+            };
+        }
+        @include toc;
+        ol, .tagslist {
+            line-height: 2em;
+        }
+        header {
+            margin-top: 0em;
+            padding-top: 0em;
+            padding-bottom: 1em;
+            background-image: url("rope.png");
+            background-repeat: repeat-x;
+            background-position: bottom left;
+            & img {
+                margin-top: 0em;
+                padding-top: 0em;
+                display: inline
+            }
+        }
+        main > div, ol.tagslist {
+                padding: 1em 0.5em;
+                text-align: left;
+                padding: 0.5em;
+        }
+        .statline {
+            font-weight: bold;
+        }
+        a:link {
+            color: #0000c1;
+            text-decoration: underline
+        }
+        a:visited {
+            color: #46284c;
+        }
+        a:hover, a:focus, a:active {
+            color: #700404;
+        }
+        a:focus, a:active {
+            outline-width: medium;
+            outline-style: solid;
+        }
+        footer {
+            color: $in-text;
+            padding-top: 0.5em;
+            margin-top: 1em;
+            background: url("rope.png") repeat-x top left, $box-color url("horseshoe.png") no-repeat bottom right;
+            & p {
+                margin-left: 0em;
+                text-align: left;
+            }
+        }
+        .sbuttons {
+            margin-bottom: 0em;
+        }
+        .archive {
+            vertical-align: top;
+            text-align: left;
+            & h2 {
+                border: none;
+                margin-top: 0.5em;
+            };
+            & ol {
+                margin-top: 0em
+            }
+        }
+        img, embed, object, video {
+            max-width: 100%;
+            height: auto
+        }
+        .action {
+            font-weight: bold;
+        }
+        .chartraits {
+            text-align: left;
+            overflow-wrap: break-word;
+            dt:after {
+                content: ":"
+            };
+            dd:after {
+                content: "\A"; white-space: pre;
+            };
+            dd {
+                margin-left: 0em;
+            };
+            dt, dd {
+                display: inline;
+                white-space: pre-wrap;
+            };
+        }
+        .chartext {
+            border: none;
+        }
+        .status {
+            text-indent: 0.5em;
+            font-weight: bold;
+        }
+        .tagslist, .chapterarch {
+            list-style-type: none;
+            padding-left: 0.5em;
+        }
+        .page section {
+            margin: 1em;
+        }
+        /*Medium screens*/
+        @media screen and (min-width: 1024px) {
+            main > div, section, ol.tagslist, h1, #toc {
+                padding: 1em;
+                margin: 1em 0em 1em 10%;
+                width: 70%;
+                & p {
+                    margin-left: 1em
+                }
+            }
+            figure#comic, .page {
+                padding: 1em 1em 0em 1em;
+                margin: 0em;
+                width: auto;
+            }
+            .page {
+                margin: 0em 1em;
+                & + .page {
+                    margin-top: 1em;
+                }
+            }
+            #botbox {
+                margin-top: 0em;
+            }
+            .transcript {
+                margin-bottom: 0em;
+                margin-top: 0em;
+            }
+            .cominavbox {
+                padding: 1em;
+            }
+            .cominavbox, .cominavbox li {
+                margin: 0.5em 1em 0em 1em;
+            }
+            h1 {
+                font-size: 2em;
+                border-bottom: none;
+                border-top: none;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+            h2 {
+                font-size: 1.5em;
+                margin: 0em;
+                padding: 0.5em 0em 0.5em 0.5em;
+                border-left: none;
+                border-right: none
+            }
+            h3 {
+                font-size: 1.2em;
+                margin-left: 0.5em;
+            }
+            #topnav {
+                text-align: center;
+                background: none;
+            }
+            #topnav li {
+                padding: 1em 1em 0.8em 1em;
+                margin: 0em;
+                border: none;
+                & + li {
+                    margin-left: 0em;
+                    border: none;
+                };
+            }
+            h2, #topnav li {
+                font-weight: normal
+            }
+            .statline {
+                font-size: 0.8em;
+                text-align: right;
+                margin-right: 1em
+            }
+            footer p {
+                font-size: 0.7em;
+                margin-left: 1em
+            }
+            .action {
+                text-indent: 1em;
+            }
+            .intro {
+                padding: 0em;
+                margin: 0em;
+                margin-top: 1em;
+                p {
+                    padding: 0em 0.5em 1em 1em;
+                }
+                img {
+                    padding-top: 1em;
+                }
+                .author {
+                    font-weight: bold;
+                }
+                .desc {
+                    font-weight: bold;
+                }
+            }
+            .char {
+                padding: 0em;
+            }
+            .charimg {
+                margin: 0.5em 1em;
+                border: double medium $borders;
+            };
+            .chartraits {
+                padding: 1em;
+                margin: 0em;
+            };
+            .chartext {
+                border-top: double medium $borders;
+            };
+            .charimg, .chartraits {
+                max-width: 45%;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        @include chapbook;
+        @include webtoon;
+    }
+}

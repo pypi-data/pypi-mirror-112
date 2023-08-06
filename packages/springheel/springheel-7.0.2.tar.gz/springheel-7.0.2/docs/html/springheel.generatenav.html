@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>springheel.generatenav module &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="springheel.genextra module" aria-label="springheel.genextra module" href="springheel.genextra.html" />
+    <link rel="prev" title="springheel.generatearchive module" aria-label="springheel.generatearchive module" href="springheel.generatearchive.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.generatenav module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.generatearchive.html" title="springheel.generatearchive module"
+                aria-label="previous: springheel.generatearchive module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.genextra.html" title="springheel.genextra module"
+                aria-label="next: springheel.genextra module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="module-springheel.generatenav">
+<span id="springheel-generatenav-module"></span><h1>springheel.generatenav module<a class="headerlink" href="#module-springheel.generatenav" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<p>Generate comic navigation.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.generatenav.navGen">
+<span class="sig-prename descclassname"><span class="pre">springheel.generatenav.</span></span><span class="sig-name descname"><span class="pre">navGen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">navdirection</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_num</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_page</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_page</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">series_slug</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">site_style</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translated_strings</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_pages</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">known_pages_real</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">tuple</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_ind</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">images</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chapter_mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel.generatenav.navGen" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Generate navigation boxes and link rel navigation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>navdirection</strong><span class="classifier">str</span></dt><dd><p>Site reading direction. One of ltr or rtl.</p>
+</dd>
+<dt><strong>page_num</strong><span class="classifier">str</span></dt><dd><p>The page number represented as an integer. Zero-padded.</p>
+</dd>
+<dt><strong>first_page</strong><span class="classifier">str</span></dt><dd><p>The number of the first page. Likely be 0 or 1. Zero-padded.</p>
+</dd>
+<dt><strong>last_page</strong><span class="classifier">str</span></dt><dd><p>The number of the latest/final page. Zero-padded.</p>
+</dd>
+<dt><strong>first</strong><span class="classifier">bool</span></dt><dd><p>Whether or not the current page is the first one.</p>
+</dd>
+<dt><strong>final</strong><span class="classifier">bool</span></dt><dd><p>Whether or not the current page is the final one.</p>
+</dd>
+<dt><strong>series_slug</strong><span class="classifier">str</span></dt><dd><p>URL-safe slug for the comic category.</p>
+</dd>
+<dt><strong>site_style</strong><span class="classifier">str</span></dt><dd><p>The theme whose arrows will be used.</p>
+</dd>
+<dt><strong>translated_strings</strong><span class="classifier">dict</span></dt><dd><p>The translation file contents for this site.</p>
+</dd>
+<dt><strong>all_pages</strong><span class="classifier">list of str</span></dt><dd><p>List of all known page numbers for the current category. Used
+to validate navigation and make sure there will not be missing
+pages.</p>
+</dd>
+<dt><strong>known_pages_real</strong><span class="classifier">list of int, float, or tuple</span></dt><dd><p>A list of raw page numbers. Used for alt text so that
+it works as intended with assistive tech.</p>
+</dd>
+<dt><strong>current_ind</strong><span class="classifier">int</span></dt><dd><p>The current strip’s index in all_pages.</p>
+</dd>
+<dt><strong>chapter_mode</strong><span class="classifier">bool, optional</span></dt><dd><p>If True, creates chapter navigation instead of page
+navigation. Defaults to False.</p>
+</dd>
+<dt><strong>images</strong><span class="classifier">dict</span></dt><dd><p>A dictionary mapping image filenames to (width, height) in
+pixels. Used to set the size of arrow images.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>nav</strong><span class="classifier">str</span></dt><dd><p>The generated navigation box.</p>
+</dd>
+<dt><strong>linkrels</strong><span class="classifier">str</span></dt><dd><p>The generated link rel information.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.generatenav.processTup">
+<span class="sig-prename descclassname"><span class="pre">springheel.generatenav.</span></span><span class="sig-name descname"><span class="pre">processTup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">tuple</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_separator</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel.generatenav.processTup" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Convert multiple page numbers to singles.</p>
+<p>Check if page numbers are a usable type, and convert them to such
+if they are not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>page</strong><span class="classifier">int, float, or tuple</span></dt><dd><p>The page number to process.</p>
+</dd>
+<dt><strong>range_separator</strong><span class="classifier">str</span></dt><dd><p>The string (a single character) to use for separating ranges in
+the current language.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>str, int, or float</strong></dt><dd><p>If the input is a tuple (i.e. a range of page numbers), return
+its contents joined by the range separator. Otherwise, the
+original page number (an int or float).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="springheel.generatearchive.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">springheel.generatearchive module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="springheel.genextra.html"
+                        title="next chapter"
+                        aria-label="next chapter">springheel.genextra module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/springheel.generatenav.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.generatenav module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.generatearchive.html" title="springheel.generatearchive module"
+                aria-label="previous: springheel.generatearchive module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.genextra.html" title="springheel.genextra module"
+                aria-label="next: springheel.genextra module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

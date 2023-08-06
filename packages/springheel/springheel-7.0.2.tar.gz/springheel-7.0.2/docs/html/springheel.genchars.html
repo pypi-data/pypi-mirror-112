@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>springheel.genchars module &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="springheel.genchbook module" aria-label="springheel.genchbook module" href="springheel.genchbook.html" />
+    <link rel="prev" title="springheel.genabout module" aria-label="springheel.genabout module" href="springheel.genabout.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.genchars module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.genabout.html" title="springheel.genabout module"
+                aria-label="previous: springheel.genabout module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.genchbook.html" title="springheel.genchbook module"
+                aria-label="next: springheel.genchbook module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="module-springheel.genchars">
+<span id="springheel-genchars-module"></span><h1>springheel.genchars module<a class="headerlink" href="#module-springheel.genchars" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<p>Generate character pages.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.genchars.genCharsPage">
+<span class="sig-prename descclassname"><span class="pre">springheel.genchars.</span></span><span class="sig-name descname"><span class="pre">genCharsPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chars_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">images</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#springheel.genchars.genCharsPage" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Create a characters page from a list of character elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>chars_list</strong><span class="classifier">list of dict</span></dt><dd><p>A list of character file elements.</p>
+</dd>
+<dt><strong>images</strong><span class="classifier">dict</span></dt><dd><p>A dictionary mapping image filenames to (width, height) in
+pixels.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>str</strong></dt><dd><p>The contents of the generated HTML characters page.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.genchars.loadChars">
+<span class="sig-prename descclassname"><span class="pre">springheel.genchars.</span></span><span class="sig-name descname"><span class="pre">loadChars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel.genchars.loadChars" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Try to load a characters file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fp</strong><span class="classifier">str</span></dt><dd><p>The path to the file to open.</p>
+</dd>
+<dt><strong>json_mode</strong><span class="classifier">bool</span></dt><dd><p>Whether to load the file as JSON (True) or plain text (False).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list of dict</strong></dt><dd><p>A list of dictionaries (parsed character file data).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.genchars.parseChars">
+<span class="sig-prename descclassname"><span class="pre">springheel.genchars.</span></span><span class="sig-name descname"><span class="pre">parseChars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">charfile</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel.genchars.parseChars" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Format the contents of a character file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>charfile</strong><span class="classifier">str</span></dt><dd><p>The contents of a character file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list of dict</strong></dt><dd><p>A list of character file elements formatted as dictionaries.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.genchars.saveCharsPage">
+<span class="sig-prename descclassname"><span class="pre">springheel.genchars.</span></span><span class="sig-name descname"><span class="pre">saveCharsPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ccomics</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="springheel.classes.html#springheel.classes.Comic" title="springheel.classes.Comic"><span class="pre">springheel.classes.Comic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">site</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="springheel.classes.html#springheel.classes.Site" title="springheel.classes.Site"><span class="pre">springheel.classes.Site</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">chars_t</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translated_strings</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">site_img_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_site_nav</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">falses</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_rel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icons</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">asyncio.coroutines.coroutine</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel.genchars.saveCharsPage" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Create character pages for every category that should have one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ccomics</strong><span class="classifier">list of Comic</span></dt><dd><p>A list of <code class="xref py py-class docutils literal notranslate"><span class="pre">Comic</span></code> series/categories to check.</p>
+</dd>
+<dt><strong>site</strong><span class="classifier">Site</span></dt><dd><p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Site</span></code> to make pages for.</p>
+</dd>
+<dt><strong>chars_t</strong><span class="classifier">str</span></dt><dd><p>The path to the characters page template.</p>
+</dd>
+<dt><strong>translated_strings</strong><span class="classifier">dict</span></dt><dd><p>The translation file contents for this site.</p>
+</dd>
+<dt><strong>site_img_url</strong><span class="classifier">str</span></dt><dd><p>The full URL of an image that represents this site. Used for
+meta tags.</p>
+</dd>
+<dt><strong>year</strong><span class="classifier">str</span></dt><dd><p>The year(s) to put in the copyright footer.</p>
+</dd>
+<dt><strong>top_site_nav</strong><span class="classifier">str</span></dt><dd><p>The top navigation.</p>
+</dd>
+<dt><strong>falses</strong><span class="classifier">set</span></dt><dd><p>A variety of different “negative” values, as a character image
+string might be False, None, Null, Disable, etc.</p>
+</dd>
+<dt><strong>link_rel</strong><span class="classifier">str</span></dt><dd><p>Link rel values to put into page headers.</p>
+</dd>
+<dt><strong>icons</strong><span class="classifier">str</span></dt><dd><p>Social icons to use in the footer.</p>
+</dd>
+<dt><strong>sep</strong><span class="classifier">str</span></dt><dd><p>A line separator to use in output.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list of coroutine</strong></dt><dd><p>A list of asynchronous file-copying tasks.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="springheel.genabout.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">springheel.genabout module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="springheel.genchbook.html"
+                        title="next chapter"
+                        aria-label="next chapter">springheel.genchbook module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/springheel.genchars.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.genchars module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.genabout.html" title="springheel.genabout module"
+                aria-label="previous: springheel.genabout module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.genchbook.html" title="springheel.genchbook module"
+                aria-label="next: springheel.genchbook module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

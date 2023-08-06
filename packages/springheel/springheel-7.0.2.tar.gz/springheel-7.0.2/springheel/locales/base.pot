@@ -1,0 +1,579 @@
+# Springheel
+# Copyright 2021 Matthew Ellison
+# This file is distributed under the same license as the Springheel package.
+# Matthew Ellison <earthisthering@posteo.de>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Springheel 7.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-21 13:40-0400\n"
+"PO-Revision-Date: 2021-06-05 00:41-0400\n"
+"Last-Translator: Matthew E. <earthisthering@posteo.de>\n"
+"Language-Team: English <>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: addimg.py:50
+msgid "Comic's filename? > "
+msgstr ""
+
+#: addimg.py:66
+msgid ".conf file? > "
+msgstr ""
+
+#: addimg.py:74
+msgid "Title? > "
+msgstr ""
+
+#: addimg.py:75
+msgid "Page number? > "
+msgstr ""
+
+#: addimg.py:81
+msgid "Alt text? (Press Enter to skip) > "
+msgstr ""
+
+#: addimg.py:86
+msgid "Source URL? (Press Enter to skip) > "
+msgstr ""
+
+#: addimg.py:91
+msgid "Commentary? > "
+msgstr ""
+
+#: addimg.py:150
+#, python-brace-format
+msgid "Comic config files in input: {confs}"
+msgstr ""
+
+#: addimg.py:172
+msgid "The strip's image filename"
+msgstr ""
+
+#: addimg.py:177
+msgid "The category .conf file to use"
+msgstr ""
+
+#: addimg.py:182
+msgid "The strip's title"
+msgstr ""
+
+#: addimg.py:187
+msgid "The strip's page number"
+msgstr ""
+
+#: addimg.py:192
+msgid "The strip's chapter number"
+msgstr ""
+
+#: addimg.py:197
+msgid "The strip's extra text"
+msgstr ""
+
+#: addimg.py:202
+msgid "The strip's source URL"
+msgstr ""
+
+#: addimg.py:208
+msgid "Enable JSON output mode"
+msgstr ""
+
+#: addimg.py:212
+msgid "Commentary on the strip"
+msgstr ""
+
+#: addimg.py:254
+msgid "Wrote {os.path.relpath(meta_path)}. Please create a transcript file."
+msgstr ""
+
+#: classes.py:253
+#, python-brace-format
+msgid "Unknown preference {k} found in config file"
+msgstr ""
+
+#: copystuff.py:44
+msgid "Copying theme..."
+msgstr ""
+
+#: copystuff.py:54
+#, python-brace-format
+msgid "Copied theme to {new_path}"
+msgstr ""
+
+#: copystuff.py:58 copystuff.py:229
+#, python-brace-format
+msgid "{i} already exists in the output. To overwrite, remove the existing file from output."
+msgstr ""
+
+#: copystuff.py:86
+msgid "socialbuttons directory not found!"
+msgstr ""
+
+#: copystuff.py:90
+#, python-brace-format
+msgid "Social icons: {icons}"
+msgstr ""
+
+#: copystuff.py:101
+#, python-brace-format
+msgid "Unable to copy {item} from socialbuttons to output."
+msgstr ""
+
+#: copystuff.py:107
+#, python-brace-format
+msgid "Copied feed/social buttons to {socialbuttons_path}"
+msgstr ""
+
+#: copystuff.py:131
+#, python-brace-format
+msgid "Copying {theme} arrows..."
+msgstr ""
+
+#: copystuff.py:139
+#, python-brace-format
+msgid "Not overwriting {theme} arrows in output."
+msgstr ""
+
+#: copystuff.py:145
+#, python-brace-format
+msgid "{old_arrow_path} not found in the currently-set style {theme}."
+msgstr ""
+
+#: copystuff.py:149
+#, python-brace-format
+msgid "{theme} arrows complete."
+msgstr ""
+
+#: copystuff.py:164
+#, python-brace-format
+msgid "Header copied to {path}."
+msgstr ""
+
+#: copystuff.py:222
+#, python-brace-format
+msgid "{source_path} copied to {new_path}"
+msgstr ""
+
+#: copystuff.py:238
+msgid "Concatenated stylesheet written."
+msgstr ""
+
+#: genabout.py:130
+#, python-brace-format
+msgid "Creating about page, but comic {category} has no about section defined. Add one to its .conf file."
+msgstr ""
+
+#: genchars.py:54
+#, python-brace-format
+msgid "{fp} is supposed to be a JSON file, but I can't load it as one. It may be invalid. Trying as YAML..."
+msgstr ""
+
+#: genchars.py:65 parsemeta.py:159
+msgid "An Unbound Local Error has occurred. I'm probably looking for a page that doesn't exist."
+msgstr ""
+
+#: genchars.py:70
+#, python-brace-format
+msgid "The characters page couldn't be built because I couldn't find the characters file at {fp}."
+msgstr ""
+
+#: genchars.py:243
+msgid "Making character pages..."
+msgstr ""
+
+#: genchars.py:250
+#, python-brace-format
+msgid "Loading characters file {fn}."
+msgstr ""
+
+#: genchars.py:337 genchars.py:422
+#, python-brace-format
+msgid "Writing {out_name}..."
+msgstr ""
+
+#: genchars.py:351
+#, python-brace-format
+msgid "No character file found for {category}, skipping..."
+msgstr ""
+
+#: genchars.py:370
+#, python-brace-format
+msgid "Character pages: {character_pages}"
+msgstr ""
+
+#: generatenav.py:122
+msgid "Can't find original page numbers for all pages:"
+msgstr ""
+
+#: generatenav.py:125
+#, python-brace-format
+msgid ""
+"Formatted page numbers: {all_pages}.\n"
+"Original page numbers: {known_pages_real}"
+msgstr ""
+
+#: generatenav.py:132
+msgid "Only one navigation item exists, no reason to create navigation"
+msgstr ""
+
+#: genextra.py:143
+#, python-brace-format
+msgid "Error: file {inp} described in Extras.json does not exist."
+msgstr ""
+
+#: gentrans.py:60
+#, python-brace-format
+msgid "Unable to load translation strings. The string file {strings_path} may be invalid or missing."
+msgstr ""
+
+#: __init__.py:149
+msgid "Finding images..."
+msgstr ""
+
+#: __init__.py:161
+msgid "No images found in input."
+msgstr ""
+
+#: __init__.py:177
+#, python-brace-format
+msgid "{basename} dimensions: {dimensions}"
+msgstr ""
+
+#: __init__.py:182
+#, python-brace-format
+msgid "Metadata and transcript found for {image}."
+msgstr ""
+
+#: __init__.py:190
+#, python-brace-format
+msgid "Metadata found, but no transcript for {image}. Please create {transcr}"
+msgstr ""
+
+#: __init__.py:197
+#, python-brace-format
+msgid "Transcript found, but no metadata for {image}. I can't build the page without metadata. Please create {meta}"
+msgstr ""
+
+#: __init__.py:203
+#, python-brace-format
+msgid "{image} doesn't seem to be a comic, as it is missing a transcript and metadata."
+msgstr ""
+
+#: __init__.py:208
+msgid "The comics list is empty. Please add some comics and then try to build again."
+msgstr ""
+
+#: __init__.py:411
+#, python-brace-format
+msgid "Unable to convert page number(s) \"{page}\" to a usable format."
+msgstr ""
+
+#: __init__.py:567
+msgid "Starting Springheel build"
+msgstr ""
+
+#: __init__.py:586
+#, python-brace-format
+msgid "There is no config value for {field}. Please update your conf.ini."
+msgstr ""
+
+#: __init__.py:670
+msgid "Unable to load translation strings! The translation file strings.json is missing or invalid. Please repair it and try again."
+msgstr ""
+
+#: __init__.py:679
+#, python-brace-format
+msgid "Loading translation strings for {lang}..."
+msgstr ""
+
+#: __init__.py:697
+#, python-brace-format
+msgid "Output file {outf} requested by {var} already exists; not adding to the copying queue, so it won't be overwritten."
+msgstr ""
+
+#: __init__.py:716
+msgid "Initializing strips..."
+msgstr ""
+
+#: __init__.py:729
+#, python-brace-format
+msgid "Unable to parse page number {page}"
+msgstr ""
+
+#: __init__.py:762
+#, python-brace-format
+msgid "Duplicate page numbers found in category {cat}: {dupes}"
+msgstr ""
+
+#: __init__.py:828
+#, python-brace-format
+msgid "No value for {key} in the config file for {cat}."
+msgstr ""
+
+#: __init__.py:907
+msgid "Processing comic pages..."
+msgstr ""
+
+#: __init__.py:1254
+msgid "Status Not Found - Please add one of 'in-progress', 'complete', or 'hiatus' to this comic's .conf file!"
+msgstr ""
+
+#: __init__.py:1259
+#, python-brace-format
+msgid "Generating page for {page}..."
+msgstr ""
+
+#: __init__.py:1407
+#, python-brace-format
+msgid "{fn} is marked as a webtoon, but is missing a pieces field."
+msgstr ""
+
+#: __init__.py:1505
+msgid "Page generated."
+msgstr ""
+
+#: __init__.py:1582
+msgid "Categories have separate themes. Concatenating stylesheets..."
+msgstr ""
+
+#: __init__.py:1589
+msgid "Generating archives..."
+msgstr ""
+
+#: __init__.py:1654
+msgid "Got first and last strips for each series."
+msgstr ""
+
+#: __init__.py:1657
+msgid "Generating archive pages..."
+msgstr ""
+
+#: __init__.py:1707 __init__.py:1756
+msgid "Not generating table of contents, because I couldn't find any chapters."
+msgstr ""
+
+#: __init__.py:1765
+#, python-brace-format
+msgid "Currently working on {category}."
+msgstr ""
+
+#: __init__.py:1821
+#, python-brace-format
+msgid "Comic {cate} expects a chapter, but page #{page} doesn't have one. Please add a chapter to {pagemeta}."
+msgstr ""
+
+#: __init__.py:1950
+#, python-brace-format
+msgid "Writing {archive}..."
+msgstr ""
+
+#: __init__.py:1954
+#, python-brace-format
+msgid "{archive} written."
+msgstr ""
+
+#: __init__.py:1970
+msgid "Generating chapter pages..."
+msgstr ""
+
+#: __init__.py:1988
+#, python-brace-format
+msgid "There aren't any comics in {category} Chapter {chap}. I can't create a chapter without pages."
+msgstr ""
+
+#: __init__.py:2114
+#, python-brace-format
+msgid "Writing {outfn}..."
+msgstr ""
+
+#: __init__.py:2214
+#, python-brace-format
+msgid "Writing {indexh}..."
+msgstr ""
+
+#: __init__.py:2285
+#, python-brace-format
+msgid "Extras page written to {out_file}."
+msgstr ""
+
+#: __init__.py:2300
+msgid "Extra pages are supposed to be generated, but I couldn't load input/Extra.json as valid JSON. Check it for errors and try again."
+msgstr ""
+
+#: __init__.py:2305
+msgid "Not generating extras page (extras_page set to False or input/Extra.json not found)."
+msgstr ""
+
+#: __init__.py:2312
+msgid "Generating tag indices..."
+msgstr ""
+
+#: __init__.py:2388
+#, python-brace-format
+msgid "Tag page written to {out_file}."
+msgstr ""
+
+#: __init__.py:2401
+msgid "Generating about page..."
+msgstr ""
+
+#: __init__.py:2444
+#, python-brace-format
+msgid "Writing {about}..."
+msgstr ""
+
+#: __init__.py:2449
+#, python-brace-format
+msgid "{about} written."
+msgstr ""
+
+#: __init__.py:2484
+#, python-brace-format
+msgid "Generated sitemap at {sitemap_fn}."
+msgstr ""
+
+#: __init__.py:2493
+#, python-brace-format
+msgid "Generated JSON endpoints file at {json_fn}."
+msgstr ""
+
+#: __init__.py:2504
+#, python-brace-format
+msgid "Generated JSON Feed at {jsonfeed_fn}."
+msgstr ""
+
+#: __init__.py:2506
+msgid "Copying files..."
+msgstr ""
+
+#: __init__.py:2509
+msgid "Copying complete."
+msgstr ""
+
+#: __init__.py:2511
+msgid "Springheel compilation complete! ^_^"
+msgstr ""
+
+#: __init__.py:2541
+#, python-brace-format
+msgid "Initializing Springheel site at {dire}."
+msgstr ""
+
+#: __init__.py:2555
+#, python-brace-format
+msgid "Installed to {dir}."
+msgstr ""
+
+#: __init__.py:2558
+msgid "Run springheel-init to create a new site in the current directory, or springheel-build to regenerate the site."
+msgstr ""
+
+#: parsemeta.py:48
+#, python-brace-format
+msgid "File {file_name} not found."
+msgstr ""
+
+#: parsemeta.py:52
+#, python-brace-format
+msgid "An I/O error has occurred. {file_name} seems to exist but I'm unable to open it. It may be corrupt."
+msgstr ""
+
+#: parsemeta.py:59
+#, python-brace-format
+msgid "An Unbound Local Error has occurred on file {file_name}. I'm probably looking for a page that doesn't exist."
+msgstr ""
+
+#: parsemeta.py:123
+#, python-brace-format
+msgid "Error: No value set for {s} in {file_name}. Remaining generation may fail."
+msgstr ""
+
+#: parsemeta.py:154
+msgid "An I/O error has occurred."
+msgstr ""
+
+#: socialbuttons.py:110
+msgid "Twitter"
+msgstr ""
+
+#: socialbuttons.py:121
+msgid "tumblr."
+msgstr ""
+
+#: socialbuttons.py:132
+msgid "Patreon"
+msgstr ""
+
+#: socialbuttons.py:143
+msgid "Liberapay"
+msgstr ""
+
+#: socialbuttons.py:156
+msgid "Pump.io"
+msgstr ""
+
+#: socialbuttons.py:166
+msgid "diaspora*"
+msgstr ""
+
+#: socialbuttons.py:176
+msgid "Mastodon"
+msgstr ""
+
+#: springheelinit.py:111
+#, python-brace-format
+msgid "Springheel directory found at {path}..."
+msgstr ""
+
+#: springheelinit.py:118
+msgid "Could not initialize because the Springheel directory was not found, somehow. I have no idea how you are running this at all. File an issue with the full details, but I may take some time to get back to you."
+msgstr ""
+
+#: springheelinit.py:139
+#, python-brace-format
+msgid "Getting templates from {templates_path}..."
+msgstr ""
+
+#: springheelinit.py:146
+#, python-brace-format
+msgid "The Springheel module was found, but template files do not exist. Please make sure {templates_path} exists and try again."
+msgstr ""
+
+#: springheelinit.py:155
+#, python-brace-format
+msgid "Copying templates and translation strings to {templates_output}..."
+msgstr ""
+
+#: springheelinit.py:170
+msgid "Created conf.ini."
+msgstr ""
+
+#: springheelinit.py:174
+msgid "Couldn't find conf.ini in the Springheel install directory. Did you delete it somehow?"
+msgstr ""
+
+#: springheelinit.py:178
+msgid "conf.ini already exists in output directory; not overwriting."
+msgstr ""
+
+#: springheelinit.py:193
+msgid "Copied arrows..."
+msgstr ""
+
+#: springheelinit.py:195
+msgid "Copied themes..."
+msgstr ""
+
+#: springheelinit.py:197
+msgid "Copied social buttons..."
+msgstr ""
+
+#: springheelinit.py:200
+msgid "Springheel initialized. Have fun! ^_^"
+msgstr ""

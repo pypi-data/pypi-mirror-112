@@ -1,0 +1,1142 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to use Springheel &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="Extending Springheel Sites" aria-label="Extending Springheel Sites" href="extending.html" />
+    <link rel="prev" title="Translation API" aria-label="Translation API" href="translation_api.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">How to use Springheel</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="translation_api.html" title="Translation API"
+                aria-label="previous: Translation API"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="extending.html" title="Extending Springheel Sites"
+                aria-label="next: Extending Springheel Sites"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="how-to-use-springheel">
+<h1>How to use Springheel<a class="headerlink" href="#how-to-use-springheel" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<p>This is a walkthrough for getting Springheel working, setting up a comic
+site, and updating it. (Using an FTP program, registering a domain name,
+creating an SSH key, etc. are outside the scope of this guide.)</p>
+<div class="section" id="get-springheel">
+<h2>Get Springheel<a class="headerlink" href="#get-springheel" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Springheel requires at least <strong>Python 3.7.</strong> Versions before Springheel
+7.0 require Python 3.5. No version will work with Python 2.</p>
+<p>To install from PyPI, simply run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install springheel
+</pre></div>
+</div>
+<p>To install from source, you’ll need the following dependencies:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pypi.org/project/feedgen">Feedgenerator</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/python-slugify">python-slugify</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/tqdm">tdqm</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/html-sanitizer">html-sanitizer</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/Pillow/">Pillow</a></p></li>
+</ul>
+<p>A pre-built version of the documentation is available in the source
+package. Thus, the following dependencies are optional, but are needed
+to build documentation from source:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pypi.org/project/sphinx">Sphinx</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/numpydoc">Numpydoc</a></p></li>
+</ul>
+<p>To build documentation in the HTML format, you will also need a Sphinx
+theme called “pyramida”—you can either edit the value of
+<code class="docutils literal notranslate"><span class="pre">html_theme</span></code> in <code class="docutils literal notranslate"><span class="pre">docsource/conf.py</span></code>, or open your Sphinx theme
+directory and create a symbolic link from the existing “pyramid” theme
+to “pyramida”.</p>
+<p>Navigate to the springheel directory, start up your virtual environment
+if you’re using one, and run <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">install</span></code>. (You may need to run
+this with <code class="docutils literal notranslate"><span class="pre">su</span> <span class="pre">-c</span></code> or <code class="docutils literal notranslate"><span class="pre">--user</span></code> depending on the type of Python
+install you have).</p>
+<p><strong>Important</strong>: If you’re on Windows and get an error about Visual C++
+while installing dependencies (lxml especially), do not panic! Just use
+PyPi to install that specific library directly, then try to install
+springheel again.</p>
+<p>After updating Springheel to a new version, you should generally
+re-initialize any existing comic sites in case there were changes to the
+themes or template files. For major versions in particular, check
+<code class="docutils literal notranslate"><span class="pre">conf.ini</span></code> against the default one in your install directory (it’s
+easier with a graphical merge tool like
+<a class="reference external" href="http://meldmerge.org/">Meld</a>) and add any new configuration options.
+(<code class="docutils literal notranslate"><span class="pre">springheel-init</span></code> doesn’t alter or replace configuration files.)</p>
+</div>
+<div class="section" id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Springheel is designed to be as simple and bare-bones as possible, so
+there are some features it doesn’t have (or just doesn’t have <em>yet</em>).
+E.g.:</p>
+<ul class="simple">
+<li><p>The RSS feed may list items out of order if multiple comics have the
+same posting date.</p></li>
+<li><p>Page commentaries and character descriptions are plain text only (no
+HTML). This is because parsing markup in those blocks would be <em>much</em>
+more complicated and slow.</p></li>
+<li><p>Templates have not been translated into many languages yet, and the
+ones for languages I don’t personally speak may be inaccurate.</p></li>
+<li><p>It’s not possible to have a single site with multiple languages; you
+can only generate separate sites for each language and display links
+to the other sites.</p></li>
+<li><p>There is no out-of-the-box support for ads or analytics. See
+“Extending Springheel Sites” below.</p></li>
+<li><p>Feeds are sitewide (as opposed to one for each individual series out
+of many) and bare-bones. RSS feeds don’t display thumbnails of the
+comic, the strip itself, or anything along those lines. (But this may
+actually be your desired behavior for RSS feeds, in which case,
+super!)</p></li>
+<li><p>Pages do not use any kind of modernizer or polyfill, so they will not
+look <em>exactly</em> the same in older browsers that they do in
+bleeding-edge new ones. They’ll still be perfectly usable, just a bit
+less fancy. Remember, <a class="reference external" href="http://www.edgeofmyseat.com/blog/2002-04-01-it-doesnt-have-to-look-the-same">it doesn’t have to look the
+same</a>.</p></li>
+<li><p>There is no support for responsive image loading with <code class="docutils literal notranslate"><span class="pre">srcset</span></code> or similar yet.</p></li>
+</ul>
+</div>
+<div class="section" id="building-a-site-for-wuffle">
+<h2>Building a site for Wuffle<a class="headerlink" href="#building-a-site-for-wuffle" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>I’ve provided a sort of “sample site” pack based on a few strips from
+<em>Wuffle</em>, a cute comic which is public domain. <a class="reference external" href="https://twinkle-night.net/Downloads/springheel-wuffle-sample-site-pack.zip">Download it
+here</a>
+and let’s walk through the process of using it, step-by-step.</p>
+<div class="section" id="initialization">
+<h3>Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h3>
+<p>To start off, make a directory for this project, and navigate there in
+your terminal of choice. (You should probably put the ZIP file here to
+make sure you don’t lose it.)</p>
+<p>Next, we’ll run the initialization script. On GNU/Linux this is simply
+<code class="docutils literal notranslate"><span class="pre">springheel-init</span></code>.</p>
+<p>On Windows, add Python’s Scripts directory to your system path (if you
+haven’t already), restart as needed, and run <code class="docutils literal notranslate"><span class="pre">springheel-init.exe</span></code>.</p>
+<p>If all goes well, some debug info will appear explaining what is going
+on: the script locates where Springheel was installed, grabs the
+templates and other base assets, and copies them to your current
+directory.</p>
+<p>Now unzip the contents of the <em>Wuffle</em> pack,
+<code class="docutils literal notranslate"><span class="pre">springheel-wuffle-sample-site-pack.zip</span></code>, into the current directory.
+Everything in it <em>except</em> the <code class="docutils literal notranslate"><span class="pre">wuffle_conf.ini</span></code> file should go into
+<code class="docutils literal notranslate"><span class="pre">input</span></code>. Remove the current <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code> file and rename
+<code class="docutils literal notranslate"><span class="pre">wuffle_conf.ini</span></code> to simply <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code>.</p>
+<p>Your directory should now look something like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.
+..
+arrows/
+input/
+socialbuttons/
+templates/
+themes/
+conf.ini
+</pre></div>
+</div>
+<p>Let’s look at each of these in more detail. You can also skip right down
+to “Trying to build” and work out this stuff once you already have a
+generated site to compare it to; the choice is yours.</p>
+<div class="section" id="base-directory">
+<h4>Base directory<a class="headerlink" href="#base-directory" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>This holds the sitewide configuration file and the input and output
+folders.</p>
+<p><code class="docutils literal notranslate"><span class="pre">conf.ini</span></code> is a sitewide configuration file. You’ll definitely want to
+modify it before building, as we’ve done here – some of the defaults are
+deliberately silly or non-working.</p>
+</div>
+<div class="section" id="asset-folders">
+<h4>Asset folders<a class="headerlink" href="#asset-folders" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">arrows</span></code> holds the navigation buttons – they follow the scheme
+{theme}_{direction}. You can easily make your own if you don’t like the
+defaults.</p>
+<p>Social buttons are 24x24 icons that are used to link to social media
+sites, like Twitter or Pump. These are also simple to customize. Adding
+a site that isn’t supported is a bit more involved but still entirely
+possible.</p>
+</div>
+<div class="section" id="input">
+<h4>Input<a class="headerlink" href="#input" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>As per the name, this holds the comic files (images and metadata). Site
+banners and such go here as well. Right now, this should contain:</p>
+<ul class="simple">
+<li><p>10 comic images</p></li>
+<li><p>10 .meta files</p></li>
+<li><p>10 .transcript files</p></li>
+<li><p>1 .conf file</p></li>
+<li><p>1 .chars file</p></li>
+<li><p>2 heading/banner images</p></li>
+</ul>
+</div>
+<div class="section" id="templates">
+<h4>Templates<a class="headerlink" href="#templates" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>These are the templates used to generate the finished pages. One is a
+JSON file that contains all the translations, and the rest are HTML
+files.</p>
+<p>As long as they’re not based on machine translations, improvements to
+any language and pull requests for languages I haven’t provided are
+welcome!</p>
+</div>
+<div class="section" id="themes">
+<h4>Themes<a class="headerlink" href="#themes" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>Themes determine the look and feel of your site. I’ve tried to include a
+big variety of default themes, while also keeping each theme</p>
+<ul class="simple">
+<li><p><strong>small</strong>: even counting graphic assets, the median theme filesize is 16
+KiB; the very largest theme is still under 100 KiB.</p></li>
+<li><p><strong>simple</strong> enough to make your own themes that hook into the existing
+code easily: no nested wrappers or complex positioning. They’re based on
+semantic HTML that should be easy to alter however you wish.</p></li>
+<li><p>and <strong>accessible</strong>, because everyone reads comics. They have big text, use
+color schemes that pass WCAG AAA-level standards for text contrast (no thin
+cyan text on a white background here), highlight active and focused links
+very obviously, and include easily-visible “skip navigation” links, and
+should look fine on most small screens.</p></li>
+</ul>
+<p>All themes share a generic “print” stylesheet, which makes the experience of printing a comic page a bit more pleasant.</p>
+<p>Our <em>Wuffle</em> example uses the <code class="docutils literal notranslate"><span class="pre">plain</span></code> theme for simplicity, but it’s
+by no means the only option. See <a class="reference external" href="themes.html">Themes</a> for more info.</p>
+<div class="section" id="rolling-your-own">
+<h5>Rolling your own<a class="headerlink" href="#rolling-your-own" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h5>
+<p>Creating your own styles is simple enough. Here’s what you must do:</p>
+<ol class="arabic simple">
+<li><p>Go to the <code class="docutils literal notranslate"><span class="pre">themes</span></code> directory, and make a folder there with the
+title of your theme. It must be a unique name, all lowercase, and
+without spaces.</p></li>
+<li><p>Create a file there called <code class="docutils literal notranslate"><span class="pre">style.css</span></code>. How you create
+<code class="docutils literal notranslate"><span class="pre">style.css</span></code> does not matter, as long as it is called that and in
+the right place. For neatness and ease of memory, I usually use Sass
+to make a .scss file in <code class="docutils literal notranslate"><span class="pre">themes</span></code>, and have it compile to a
+<code class="docutils literal notranslate"><span class="pre">style.css</span></code> in a matching directory
+(e.g. themes/plain.scss:themes/plain/style.css). If you’re using any,
+put all other assets, like images, in the same directory as
+<code class="docutils literal notranslate"><span class="pre">style.css</span></code> too.</p></li>
+<li><p>Design your cool CSS theme. This is the easy part. :)</p></li>
+<li><p>Make a set of navigation arrows and put them in <code class="docutils literal notranslate"><span class="pre">arrows</span></code>. For
+compatibility with Springheel’s code, they should be like this (even
+if you want the arrows to point the other way, just follow this
+schema, open up <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code>, and set <code class="docutils literal notranslate"><span class="pre">navdirection</span></code> to <code class="docutils literal notranslate"><span class="pre">rtl</span></code>):</p></li>
+</ol>
+<ul class="simple">
+<li><p>{yourtheme}_first.png (pointing <strong>left</strong>)</p></li>
+<li><p>{yourtheme}_prev.png (pointing <strong>left</strong>)</p></li>
+<li><p>{yourtheme}_next.png (pointing <strong>right</strong>)</p></li>
+<li><p>{yourtheme}_last.png (pointing <strong>right</strong>)</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p><strong>Test out your theme.</strong> Run your colors through <a class="reference external" href="http://webaim.org/resources/contrastchecker/">WebAIM’s Color
+Contrast Checker</a>.
+See what it looks like when zoomed in or out really far. If you can,
+check what it looks like on different browsers and devices, or with
+automatic image-loading turned off. Ask friends for help if you need
+to. Try to validate your stylesheet; it doesn’t necessarily have to
+follow W3’s official specification, but there ought to be a good
+reason why it doesn’t.</p></li>
+<li><p>No, really, actually do #5. Your readers will thank you.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">site_style</span></code> to the theme name you decided on in step 1 and run
+Springheel to regenerate your comic. Your comic site will now be
+themed with your own, custom theme!</p></li>
+</ol>
+<p>One thing to keep in mind that you may have noticed already: each
+theme’s CSS is wrapped in an ID selector, and pages that use a given
+theme set the ID of <code class="docutils literal notranslate"><span class="pre">html</span></code> to that theme’s name. (So, a page that uses
+the “plain” style will have “<code class="docutils literal notranslate"><span class="pre">&lt;html</span> <span class="pre">lang=&quot;[whatever]&quot;</span> <span class="pre">id=&quot;plain&quot;&gt;</span></code>”,
+and plain’s <code class="docutils literal notranslate"><span class="pre">style.css</span></code> only applies to elements within <code class="docutils literal notranslate"><span class="pre">#plain</span></code>.)
+If you don’t do the same, and your site uses multiple themes, it won’t
+display correctly at all and will look very weird.</p>
+</div>
+</div>
+<div class="section" id="setting-comic-metadata">
+<h4>Setting comic metadata<a class="headerlink" href="#setting-comic-metadata" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>The comic images and their metadata will end up in <code class="docutils literal notranslate"><span class="pre">input</span></code>. Springheel
+decides a file is a comic page if it has 1. a matching metadata file and
+2. one of the following extensions (case insensitive):</p>
+<ul class="simple">
+<li><p>.png</p></li>
+<li><p>.gif</p></li>
+<li><p>.jpg or .jpeg</p></li>
+<li><p>.svg</p></li>
+<li><p>.webp (not recommended as many browsers do not support it yet, but
+use your own judgement)</p></li>
+</ul>
+<p>The metadata file has the same name as the comic image, just with the
+extension <code class="docutils literal notranslate"><span class="pre">.meta</span></code>. If the comic has a transcript file (strongly
+encouraged), that will similarly have the extension <code class="docutils literal notranslate"><span class="pre">.transcript</span></code>.</p>
+<p>(In JSON mode, the extensions are <code class="docutils literal notranslate"><span class="pre">.meta.json</span></code> and <code class="docutils literal notranslate"><span class="pre">.transcript.json</span></code>,
+respectively.)</p>
+<p>Comic series as a whole (rather than individual strips) also have
+metadata files. The main one required is a configuration file that ends
+with <code class="docutils literal notranslate"><span class="pre">.conf</span></code>. You can optionally declare a <code class="docutils literal notranslate"><span class="pre">.chars</span></code> file that will
+generate a series character page. And if your comic is divided into
+chapters, you can also add a <code class="docutils literal notranslate"><span class="pre">.chapters</span></code> file that maps chapter
+numbers to chapter titles. We’ll discuss these more shortly.</p>
+<p>The strip <code class="docutils literal notranslate"><span class="pre">.meta</span></code> file will have various key metadata about the comic
+(and the author’s commentary, if applicable), while the <code class="docutils literal notranslate"><span class="pre">.transcript</span></code>
+is, as the name suggests, a textual transcript of the comic’s action and
+dialogue. The .conf file contains important preferences about the
+series. The syntax for these files is fairly straightforward.</p>
+<p>For this example, let’s use a specific <a class="reference external" href="http://www.wufflecomics.com/2012/03/wuffle-and-aunty-pinky-2/">Wuffle
+comic</a>
+– look for <code class="docutils literal notranslate"><span class="pre">Wuffle_2012-03-21-2012_0004_Aunty.jpg</span></code> and its related
+files in the <code class="docutils literal notranslate"><span class="pre">input</span></code> directory.</p>
+<p>Here’s what <code class="docutils literal notranslate"><span class="pre">Wuffle_2012-03-21-2012_0004_Aunty.meta</span></code> looks like:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Wuffle and Aunty Pinky</span>
+  <span class="nt">author</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Piti Yindee</span>
+  <span class="nt">email</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;expunged&gt;</span>
+  <span class="nt">date</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2012-03-21</span>
+  <span class="nt">tags</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4 panel series 1, Aunty Pinky, Wuffle</span>
+  <span class="nt">conf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Wuffle.conf</span>
+  <span class="nt">category</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Wuffle</span>
+  <span class="nt">page</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+  <span class="nt">height</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1429</span>
+  <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1000</span>
+  <span class="nt">language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">en</span>
+  <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
+  <span class="nt">chapter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">alt</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a test of the extra text system.</span>
+<span class="nn">---</span>
+<span class="l l-Scalar l-Scalar-Plain">Meet the new Wuffle&#39;s neighbor, Aunty Pinky aka the money hunger!</span>
+</pre></div>
+</div>
+<p>Here’s the transcript file,
+<code class="docutils literal notranslate"><span class="pre">Wuffle_2012-03-21-2012_0004_Aunty.transcript</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>(Wuffle paints a fence as Aunty Pinky looks on.)
+
+Wuffle
+  It&#39;s done, ma&#39;am.
+
+Pinky
+  Thanks, sweetie.
+
+(Pinky offers Wuffle a wad of money. He looks sheepish.)
+
+Wuffle
+  Oh, it&#39;s fine, ma&#39;am. Please keep your money.
+
+Pinky
+  Oh, well. More for me.
+
+(Pinky begins eating the money.)
+</pre></div>
+</div>
+<p>And finally <code class="docutils literal notranslate"><span class="pre">Wuffle.conf</span></code>, the configuration file for the <em>Wuffle</em>
+series in general:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">[</span><span class="nv">ComicConfig</span><span class="p p-Indicator">]</span>
+
+<span class="l l-Scalar l-Scalar-Plain">category = Wuffle</span>
+<span class="l l-Scalar l-Scalar-Plain">author = Piti Yindee</span>
+<span class="l l-Scalar l-Scalar-Plain">email = &lt;expunged&gt;</span>
+<span class="l l-Scalar l-Scalar-Plain">header = WuffleHeader.jpg</span>
+<span class="l l-Scalar l-Scalar-Plain">banner = WuffleHeader.jpg</span>
+<span class="l l-Scalar l-Scalar-Plain">language = en</span>
+<span class="l l-Scalar l-Scalar-Plain">mode = default</span>
+<span class="l l-Scalar l-Scalar-Plain">status = complete</span>
+<span class="l l-Scalar l-Scalar-Plain">chapters = Wuffle.chapters</span>
+<span class="l l-Scalar l-Scalar-Plain">desc = Public domain funny animal comic</span>
+<span class="l l-Scalar l-Scalar-Plain">chars = Wuffle.chars</span>
+<span class="l l-Scalar l-Scalar-Plain">license = To the extent possible under law, Piti Yindee has waived all copyright and related or neighboring rights to Wuffle Comic.</span>
+<span class="l l-Scalar l-Scalar-Plain">license_uri = http://creativecommons.org/publicdomain/zero/1.0/</span>
+</pre></div>
+</div>
+<p>In <code class="docutils literal notranslate"><span class="pre">.meta</span></code> files, the metadata is sandwiched between the <code class="docutils literal notranslate"><span class="pre">---</span></code>
+lines; below that is the author’s commentary. The strictly needed fields
+are:</p>
+<ul class="simple">
+<li><p><strong>title</strong> (the title of this specific strip or page)</p></li>
+<li><p><strong>author</strong> (you! or rather, whoever is supposed to get the credit for
+posting a page)</p></li>
+<li><p><strong>email</strong> (your email address – this is needed for RSS feed
+generation)</p></li>
+<li><p><strong>date</strong> (the strip’s publication date, in ISO 8601 (YYYY-MM-dd)
+format)</p></li>
+<li><p><strong>category</strong> (the comic/series title)</p></li>
+<li><p><strong>page</strong> (this strip’s page number)</p></li>
+<li><p><strong>language</strong> (ISO 639-1 code)</p></li>
+</ul>
+<p>You can also add a <code class="docutils literal notranslate"><span class="pre">chapter</span></code> number if this strip is part of a
+chapter; <code class="docutils literal notranslate"><span class="pre">alt_text</span></code> for an extra line or two that will appear below the
+comic; and/or <code class="docutils literal notranslate"><span class="pre">source</span></code> (version 7+) if the comic is based on an
+existing work and you want to link to the original.</p>
+<p>The .transcript has the character names, their dialogue indented by 2
+spaces, and actions offset by parentheses. As long as it follows this
+scheme, it’ll be parsed by the HTML transcript generator.</p>
+<p>The .conf file has fields that are required for accurate copyright
+statements, RSS feed generation, and general series organization:</p>
+<ul class="simple">
+<li><p><strong>category</strong> (the name of the series)</p></li>
+<li><p><strong>author</strong> (again: you!)</p></li>
+<li><p><strong>email</strong> (your email address)</p></li>
+<li><p><strong>header</strong> (a header image that will appear at the top of this
+series’ pages)</p></li>
+<li><p><strong>banner</strong> (a banner to identify this series; can be the same as the
+header or different)</p></li>
+<li><p><strong>language</strong> (ISO 639-1 code)</p></li>
+<li><p><strong>chapters</strong> (whether or not the comic is divided into chapters. If
+you set this to True <em>or</em> the name of a <code class="docutils literal notranslate"><span class="pre">.chapters</span></code> file, the
+archives page will automatically be separated by chapter)</p></li>
+<li><p><strong>desc</strong> (a description of the comic; used for the index page and RSS
+feeds)</p></li>
+<li><p><strong>status</strong> (whether the series is finished or not; accepted values
+are <code class="docutils literal notranslate"><span class="pre">in-progress</span></code>, <code class="docutils literal notranslate"><span class="pre">complete</span></code>, and <code class="docutils literal notranslate"><span class="pre">hiatus</span></code>)</p></li>
+<li><p><strong>chars</strong> (optional; the filename of a .chars file. If
+characters_page in <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code> is set to True, this will generate a
+characters page based on the linked file.)</p></li>
+<li><p><strong>about</strong> (optional; if about pages are enabled in conf.ini, a string
+or HTML snippet that describes this comic.)</p></li>
+</ul>
+</div>
+<div class="section" id="automating-the-addition-of-new-strips">
+<h4>Automating the addition of new strips<a class="headerlink" href="#automating-the-addition-of-new-strips" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>(New in version 7)</p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">springheel-addimg</span></code> script to automatically generate
+metadata files for images in input.</p>
+<p>You can provide information like title and page number when prompted,
+or you can do so as command line arguments:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-i <var>INPUT</var></span>, <span class="option">--input <var>INPUT</var></span></kbd></dt>
+<dd><p>The strip’s image filename.</p>
+</dd>
+<dt><kbd><span class="option">-c <var>CONF</var></span>, <span class="option">--conf <var>CONF</var></span></kbd></dt>
+<dd><p>The category .conf file to use.</p>
+</dd>
+<dt><kbd><span class="option">-t <var>TITLE</var></span>, <span class="option">--title <var>TITLE</var></span></kbd></dt>
+<dd><p>The strip’s title.</p>
+</dd>
+<dt><kbd><span class="option">-n <var>NUM</var></span>, <span class="option">--num <var>NUM</var></span></kbd></dt>
+<dd><p>The strip’s page number.</p>
+</dd>
+<dt><kbd><span class="option">-k <var>CHAPTER</var></span>, <span class="option">--chapter <var>CHAPTER</var></span></kbd></dt>
+<dd><p>The strip’s chapter number.</p>
+</dd>
+<dt><kbd><span class="option">-a <var>ALT</var></span>, <span class="option">--alt <var>ALT</var></span></kbd></dt>
+<dd><p>Extra text for the strip.</p>
+</dd>
+<dt><kbd><span class="option">-s <var>SOURCE</var></span>, <span class="option">--source <var>SOURCE</var></span></kbd></dt>
+<dd><p>The strip’s source URL.</p>
+</dd>
+<dt><kbd><span class="option">-j</span>, <span class="option">--json</span></kbd></dt>
+<dd><p>Output metadata as a .meta.json file (for JSON mode).</p>
+</dd>
+<dt><kbd><span class="option">--commentary <var>COMMENTARY</var></span></kbd></dt>
+<dd><p>Commentary on the strip.</p>
+</dd>
+</dl>
+<p>For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ springheel-addimg -i input/test.jpg -c input/Wuffle.conf -t <span class="s2">&quot;Test&quot;</span> -n <span class="m">11</span> -k <span class="m">1</span> -a <span class="s2">&quot;Test extra text&quot;</span> -j --commentary <span class="s2">&quot;Test commentary&quot;</span>
+</pre></div>
+</div>
+<p>…might generate the following test.meta.json:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;Piti Yindee&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;notreallyyindeesemail@notareal.tld&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-03-23&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;conf&quot;</span><span class="p">:</span> <span class="s2">&quot;Wuffle.conf&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Wuffle&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;page&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1429</span><span class="p">,</span>
+       <span class="nt">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+       <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;commentary&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Test commentary&quot;</span><span class="p">],</span>
+       <span class="nt">&quot;chapter&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;alt&quot;</span><span class="p">:</span> <span class="s2">&quot;Test extra text&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Other notes:</p>
+<ul class="simple">
+<li><p>addimg checks for date-like patterns in the filename, and if it
+can’t find any, defaults to the last-modified time reported by
+Python’s <code class="docutils literal notranslate"><span class="pre">os.stat()</span></code>.</p></li>
+<li><p>It can’t yet add tags or pieces (see below); you’ll have to edit
+those in manually.</p></li>
+</ul>
+</div>
+<div class="section" id="webtoon-mode">
+<h4>Webtoon Mode<a class="headerlink" href="#webtoon-mode" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>(New in version 7)</p>
+<p>If you want to make long-strip comics in the style of South Korean
+“<a class="reference external" href="https://en.wikipedia.org/wiki/Webtoon">webtoons</a>”, where comic pages
+are made of multiple image files, you can enable webtoon mode.</p>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">.meta</span></code> file for the first image. In both the category’s
+<code class="docutils literal notranslate"><span class="pre">.conf</span></code> file and the <code class="docutils literal notranslate"><span class="pre">.meta</span></code> file, set <code class="docutils literal notranslate"><span class="pre">mode</span></code> to <code class="docutils literal notranslate"><span class="pre">webtoon</span></code>.</p>
+<p>Then add a <code class="docutils literal notranslate"><span class="pre">pieces</span></code> field to the metadata file that lists all the
+page image files in order, starting from the second one.</p>
+<p>It will look something like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">webtoon</span>
+<span class="nt">pieces</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">longstrip001_002.jpg, longstrip001_003.jpg</span>
+</pre></div>
+</div>
+<p>In JSON mode, <code class="docutils literal notranslate"><span class="pre">pieces</span></code> will be a list, just like tags:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;webtoon&quot;</span><span class="p">,</span>
+<span class="nt">&quot;pieces&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;longstrip001_002.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;longstrip001_003.jpg&quot;</span><span class="p">],</span>
+</pre></div>
+</div>
+<p>This is all that’s needed; Springheel will automatically copy and rename
+the images listed as pieces, and they’ll appear on both comic and
+chapter pages.</p>
+<p>Chapter view will not display pages from webtoon chapters side-by-side,
+no matter how wide the screen is.</p>
+</div>
+<div class="section" id="character-pages">
+<h4>Character pages<a class="headerlink" href="#character-pages" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>Webcomics are notorious for having out-of-date character pages, so I
+made them as easy as possible for Springheel. Here’s all you have to do:</p>
+<ol class="arabic">
+<li><p>Make a file to hold your character markup in <code class="docutils literal notranslate"><span class="pre">input</span></code>. I’d recommend
+calling it with the name of the series and the file extension
+<code class="docutils literal notranslate"><span class="pre">.chars</span></code> to make it easy to remember. Let’s use Wuffle.chars for
+this example.</p></li>
+<li><p>Add the category and language to the top of the characters file,
+followed by a line with “<code class="docutils literal notranslate"><span class="pre">---</span></code>”.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">category</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Wuffle</span>
+<span class="nt">lang</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">en</span>
+<span class="nn">---</span>
+</pre></div>
+</div>
+</li>
+<li><p>Add characters! The syntax is very simple. Mark character names with
+<code class="docutils literal notranslate"><span class="pre">name:</span></code> and a short description or blurb with <code class="docutils literal notranslate"><span class="pre">desc:</span></code>. You can
+optionally add a picture of the character with
+<code class="docutils literal notranslate"><span class="pre">img:</span> <span class="pre">image_filename.ext</span></code>. (If you don’t want an image, use
+<code class="docutils literal notranslate"><span class="pre">img:</span> <span class="pre">None</span></code> instead.) Add a line with just <code class="docutils literal notranslate"><span class="pre">---</span></code> after each
+character to separate them.</p></li>
+<li><p>The default attributes – name and description, and optionally an
+image – will be fine for a basic characters page. But you can add any
+other, custom text attributes you want, and they’ll be displayed too!
+All you have to do is type the attribute label you want, followed by
+a colon, and then the value (one attribute per line). Let’s suppose I
+want to include a “species” field because the <em>Wuffle</em> characters are
+anthropomorphized animals. For Wuffle himself, I’d add
+<code class="docutils literal notranslate"><span class="pre">Species:</span> <span class="pre">Wolf</span></code>. Simple! All custom attributes are put into their
+own little subsection in the compiled page.</p></li>
+<li><p>Add a line to the comic’s configuration file (Wuffle.conf in this
+case) pointing to the character file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">chars = Wuffle.chars</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run Springheel as normal. You’re done! The character page will now be
+generated.</p></li>
+</ol>
+<p>So this character file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">category</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Wuffle</span>
+<span class="nt">lang</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">en</span>
+<span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Wuffle</span>
+<span class="nt">desc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Wuffle is a wolf with a big heart. Currently he&#39;s living as a farmer in a barn that is on a hill near Gingerbread Village. He never turns away from people who need a helping hand. He is also willing to help them out without expecting anything in return. However, Wuffle tends to be naïve and too trusting, which often brings him unexpected trouble.</span>
+<span class="nt">img</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">char-wuffle.jpg</span>
+<span class="nt">Gender</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Male</span>
+<span class="nt">Species</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Wolf</span>
+<span class="nn">---</span>
+<span class="nn">...</span>
+</pre></div>
+</div>
+<p>Would generate a character page like this:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;char&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Wuffle<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;char-wuffle.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Gender<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>Male<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Species<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>Wolf<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Wuffle is a wolf with a big heart. Currently he&#39;s living as a farmer in a barn that is on a hill near Gingerbread Village. He never turns away from people who need a helping hand. He is also willing to help them out without expecting anything in return. However, Wuffle tends to be naïve and too trusting, which often brings him unexpected trouble.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+...
+</pre></div>
+</div>
+<p>Which looks like this in the Plain style:</p>
+<div class="figure align-default" id="id1">
+<img alt="Character example" src="_images/character-example.png" />
+<p class="caption"><span class="caption-text">A simple character profile for Wuffle.</span><a class="headerlink" href="#id1" title="Permalink to this image" aria-label="Permalink to this image">¶</a></p>
+</div>
+<p>Of course, if you don’t want a character page, simply set <code class="docutils literal notranslate"><span class="pre">chars</span></code> in your
+comic’s <code class="docutils literal notranslate"><span class="pre">.conf</span></code> file to “False”.</p>
+</div>
+<div class="section" id="chapter-titles">
+<h4>Chapter titles<a class="headerlink" href="#chapter-titles" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>If you want your work to be divided into chapters, you’ll need a <code class="docutils literal notranslate"><span class="pre">.chapters</span></code>
+file. As described above, add a <code class="docutils literal notranslate"><span class="pre">chapters:</span> <span class="pre">Wuffle.chapters</span></code> line to
+<code class="docutils literal notranslate"><span class="pre">Wuffle.conf</span></code>, then create a file called <code class="docutils literal notranslate"><span class="pre">Wuffle.chapters</span></code>. In theory, all
+you need to put in that file is a list of chapter numbers (one on each line),
+but you can also add titles to the chapters.</p>
+<p>Suppose we want the first chapter to be called “4-Panel Series 1”. We’ll
+add the following line to <code class="docutils literal notranslate"><span class="pre">Wuffle.chapters</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">1 = 4-Panel Series 1</span>
+</pre></div>
+</div>
+<p>That’s it! That title will appear on the archive page, as well as in the
+headings for all pages that are marked as being part of chapter 1.</p>
+<p>Note that series’ chapter settings are currently an either/or thing: you
+can’t have some pages that are part of a chapter and some that are not.
+If you have ones that don’t fit anywhere, I would recommend putting them
+all into a “miscellaneous” chapter, or even converting to a multi-series
+site and treating them as a separate (non-chaptered) series.</p>
+</div>
+<div class="section" id="extras">
+<h4>Extras<a class="headerlink" href="#extras" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>Springheel allows you to create a page to hold various extras. The main
+use case I was imagining was for guest art, wallpapers, textual
+side-stories, etc., but you can really put anything you want there.</p>
+<p>To create an extras page, pop open <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code> and set <code class="docutils literal notranslate"><span class="pre">extras_page</span></code>
+to <code class="docutils literal notranslate"><span class="pre">True</span></code>. Then put a JSON file called <code class="docutils literal notranslate"><span class="pre">Extra.json</span></code> in <code class="docutils literal notranslate"><span class="pre">input</span></code>.
+Here’s an example extras file for my sister’s comic, <em>Brutus</em>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Fanart&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Alucanth&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;The very first Brutus fanart was a wonderful Alucanth by garrick!&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;image&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;garrick_fanart_01.png&quot;</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Brutus MS Paint Poster&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;Also by garrick: a big poster!&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;image&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;garrick_fanart_02.png&quot;</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Just As Brutus&#39;d&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;Bardum contributes an amusing parody...&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;image&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;bardum_fanart_01.png&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;Comic&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Brutus Comic Book Archive&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;CBZ files for offline viewing. Read them with most any modern document viewer.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;Brutus_-_1-8.cbz&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;Brutus Chapters 1–8&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;Brutus_Gaiden.cbz&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;Brutus Gaiden [incomplete]&quot;</span>
+        <span class="p">}]</span>
+    <span class="p">}]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>That will generate an extras page with Comic and Fanart as the
+second-order headings. <code class="docutils literal notranslate"><span class="pre">file</span></code>-type items will appear as textual links,
+and <code class="docutils literal notranslate"><span class="pre">image</span></code>-type ones will appear as image elements with figcaptions.</p>
+<p>Springheel adds file size indicators to links for <code class="docutils literal notranslate"><span class="pre">file</span></code>-type downloads
+automatically:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Comic<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Brutus Comic Book Archive<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>CBZ files for offline viewing. Read them with most any modern document viewer.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;Brutus_-_1-8.cbz&quot;</span><span class="p">&gt;</span>Brutus Chapters 1–8 [2.2 MiB]<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;Brutus_Gaiden.cbz&quot;</span><span class="p">&gt;</span>Brutus Gaiden [incomplete] [132.7 KiB]<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="licensing">
+<h4>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>You are by no means required to relinquish the copyright of a comic
+simply because you built the site for it with Springheel. The licensing
+of your work is <em>entirely</em> your decision.</p>
+<p>That being said, I want to promote <a class="reference external" href="https://freedomdefined.org/Licenses">Free Cultural
+Works</a> in general, so Springheel
+comes with some tools to make it easier to indicate the rights that
+readers have.</p>
+<p>First off, there is a field, <code class="docutils literal notranslate"><span class="pre">license</span></code>, in <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code>. By default it
+is “All rights reserved”. But if you want to release your comic into the
+public domain, as Piti Yindee did for <em>Wuffle</em>, you could do something
+like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">license = To the extent possible under law, Piti Yindee has waived all copyright and related or neighboring rights to Wuffle Comic.</span>
+</pre></div>
+</div>
+<p>Note: if you are releasing your comic into the public domain, <em>please</em>
+make sure to edit <code class="docutils literal notranslate"><span class="pre">country</span></code> in <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code> to list the country you
+are publishing from! This is very important because different countries
+have different laws about the ability of authors to waive copyright.</p>
+<p>If you’d rather use a Creative Commons license, you could add the HTML
+snippet from their <a class="reference external" href="https://creativecommons.org/choose/">license
+chooser</a>, as I do on my own
+site:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">license = &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;&lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot; src=&quot;https://i.creativecommons.org/l/by-sa/4.0/80x15.png&quot; /&gt;&lt;/a&gt; These &lt;span xmlns:dct=&quot;http://purl.org/dc/terms/&quot; href=&quot;http://purl.org/dc/dcmitype/StillImage&quot; rel=&quot;dct:type&quot;&gt;works&lt;/span&gt; by &lt;span xmlns:cc=&quot;http://creativecommons.org/ns#&quot; property=&quot;cc:attributionName&quot;&gt;Garrick&lt;/span&gt; are licensed under a &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;Creative Commons Attribution-ShareAlike 4.0 International License&lt;/a&gt;.</span>
+</pre></div>
+</div>
+<p>We add info on the license to the comic’s <code class="docutils literal notranslate"><span class="pre">.conf</span></code> file as well. For
+public domain works this will be the waiver from before, as well as a
+U.R.I. In <em>Wuffle</em>’s case this might be:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">license = To the extent possible under law, Piti Yindee has waived all copyright and related or neighboring rights to Wuffle Comic.</span>
+<span class="l l-Scalar l-Scalar-Plain">license_uri = http://creativecommons.org/publicdomain/zero/1.0/</span>
+</pre></div>
+</div>
+<p>For a Creative Commons license, it will be the license’s name and
+U.R.L.:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">license = Creative Commons Attribution-ShareAlike 4.0</span>
+<span class="l l-Scalar l-Scalar-Plain">license_uri = http://creativecommons.org/licenses/by-sa/4.0/</span>
+</pre></div>
+</div>
+<p>Now your comic will be nicely marked up with human- and machine-readable
+license info!</p>
+</div>
+<div class="section" id="zero-padding">
+<h4>Zero-padding<a class="headerlink" href="#zero-padding" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>(new in version 5)</p>
+<p>By default, Springheel pads page numbers in URLs with zeros:
+“page_0001”. Notably (to avoid breaking existing links), this isn’t
+automatically updated if the total number of pages goes above 1000. If
+you’re planning ahead and think you’ll need more digits, or (conversely)
+if four digits is too much, just edit the <code class="docutils literal notranslate"><span class="pre">zero_padding</span></code> option in
+<code class="docutils literal notranslate"><span class="pre">conf.ini</span></code>. If you want to turn off zero-padding entirely, simply set
+it to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</div>
+<div class="section" id="linking-multi-language-sites">
+<h4>Linking multi-language sites<a class="headerlink" href="#linking-multi-language-sites" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>(new in version 5.2)</p>
+<p>Let’s say you have a comic in both English and French, and you want to
+handle both with Springheel. You generate a site for the English comics
+and the French ones…but how will French-speakers who go to the English
+site know that the French one even exists? With <code class="docutils literal notranslate"><span class="pre">multilang</span></code>, you can
+put a link to each site’s other language variations.</p>
+<p>Open up your <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code> and uncomment the line beginning with
+<code class="docutils literal notranslate"><span class="pre">multilang</span></code>. It should then look like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">multilang = xx=http://sample-springheel-comic.notarealtld/alanguage,xb=http://sample-springheel-comic.notarealtld/anotherlanguage</span>
+</pre></div>
+</div>
+<p>(If your conf.ini doesn’t have this option, no problem. Either update
+your configuration based on the one that comes with the latest
+Springheel version, or just add this line.)</p>
+<p>Let’s say that we’re working on the English site’s <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code>, and we
+want to add the French version, which is located at the URL
+<code class="docutils literal notranslate"><span class="pre">https://fr.sample-springheel-comic.notarealtld</span></code>. We’ll modify the
+line to:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">multilang = fr=https://fr.sample-springheel-comic.notarealtld</span>
+</pre></div>
+</div>
+<p>And in the French site, we’ll add a link to the English one in the same
+way:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">multilang = en=https://en.sample-springheel-comic.notarealtld</span>
+</pre></div>
+</div>
+<p>Visitors to the English site will then see a link labeled “français” in
+the footer, which goes to the French site – and the French site will
+have an “English” one which goes to, well, the English one. Simple!</p>
+<p>As in the default value, we can add links to multiple languages as well.
+Just separate them with a comma (no spaces). For example, if we made a
+German site too:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">multilang = en=https://en.sample-springheel-comic.notarealtld,de=https://de.sample-springheel-comic.notarealtld</span>
+</pre></div>
+</div>
+<p>Springheel pulls the appropriate language autonyms from the project’s
+<code class="docutils literal notranslate"><span class="pre">strings.json</span></code>. If your desired language isn’t in the default list,
+you can either add it to that file <em>or</em>, in the multilang string, simply
+use the language’s <strong>name</strong> instead of a two-letter code.</p>
+</div>
+<div class="section" id="json-input">
+<h4>JSON Input<a class="headerlink" href="#json-input" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>(new in version 7.0)</p>
+<p>By default, Springheel expects metadata, transcript, and character files
+to use a YAML-like syntax. However, there is a setting in <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code>
+called <code class="docutils literal notranslate"><span class="pre">json_mode</span></code>. If you set this value to <code class="docutils literal notranslate"><span class="pre">True</span></code>, instead of
+reading <code class="docutils literal notranslate"><span class="pre">.meta</span></code> and <code class="docutils literal notranslate"><span class="pre">.transcript</span></code> files, Springheel will look for
+<code class="docutils literal notranslate"><span class="pre">.meta.json</span></code> and <code class="docutils literal notranslate"><span class="pre">.transcript.json</span></code> files, and it will default to
+parsing character files as JSON as well. The output of JSON-based input
+files is exactly the same as with the regular format.</p>
+<p>Here are some example files to show the syntax.</p>
+<div class="section" id="example-meta-json">
+<h5>Example meta.json<a class="headerlink" href="#example-meta-json" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h5>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Wuffle and Aunty Pinky&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;Piti Yindee&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;notarealemail@notareal.tld&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-03-21&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;4 panel series 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Aunty Pinky&quot;</span><span class="p">,</span> <span class="s2">&quot;Wuffle&quot;</span><span class="p">],</span>
+        <span class="nt">&quot;conf&quot;</span><span class="p">:</span> <span class="s2">&quot;Wuffle.conf&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Wuffle&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;page&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="s2">&quot;1429&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;width&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;chapter&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;commentary&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Meet the new Wuffle’s neighbor, Aunty Pinky aka the money hunger!&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The main element is called “<code class="docutils literal notranslate"><span class="pre">metadata</span></code>”. Items that can have multiple
+elements, even if they do only have one in a given file (like the
+commentary in this case), are enclosed in brackets. (If there is more
+than one item in a list, they are separated by commas.) Everything that
+isn’t a list, including boolean values like “False”, should have
+quotation marks.</p>
+</div>
+<div class="section" id="example-transcript-json">
+<h5>Example transcript.json<a class="headerlink" href="#example-transcript-json" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h5>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;transcript&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;line&quot;</span><span class="p">:</span> <span class="s2">&quot;Wuffle paints a fence as Aunty Pinky looks on.&quot;</span>
+    <span class="p">},</span>
+
+    <span class="p">{</span>
+        <span class="nt">&quot;speaker&quot;</span><span class="p">:</span> <span class="s2">&quot;Wuffle&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;line&quot;</span><span class="p">:</span> <span class="s2">&quot;It&#39;s done, ma&#39;am.&quot;</span>
+    <span class="p">},</span>
+
+    <span class="p">{</span>
+        <span class="nt">&quot;speaker&quot;</span><span class="p">:</span> <span class="s2">&quot;Pinky&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;line&quot;</span><span class="p">:</span> <span class="s2">&quot;Thanks, sweetie.&quot;</span>
+    <span class="p">},</span>
+
+    <span class="p">{</span>
+        <span class="nt">&quot;line&quot;</span><span class="p">:</span> <span class="s2">&quot;Pinky offers Wuffle a wad of money. He looks sheepish.&quot;</span>
+    <span class="p">},</span>
+
+    <span class="p">{</span>
+        <span class="nt">&quot;speaker&quot;</span><span class="p">:</span> <span class="s2">&quot;Wuffle&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;line&quot;</span><span class="p">:</span> <span class="s2">&quot;Oh, it&#39;s fine, ma&#39;am. Please keep your money.&quot;</span>
+    <span class="p">},</span>
+
+    <span class="p">{</span>
+        <span class="nt">&quot;speaker&quot;</span><span class="p">:</span> <span class="s2">&quot;Pinky&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;line&quot;</span><span class="p">:</span> <span class="s2">&quot;Oh, well. More for me.&quot;</span>
+    <span class="p">},</span>
+
+    <span class="p">{</span>
+        <span class="nt">&quot;line&quot;</span><span class="p">:</span> <span class="s2">&quot;Pinky begins eating the money.&quot;</span>
+    <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The root element is “<code class="docutils literal notranslate"><span class="pre">transcript</span></code>”. Lines are dictionaries. Speakers
+are identified with “<code class="docutils literal notranslate"><span class="pre">speaker</span></code>”, and dialogue with “<code class="docutils literal notranslate"><span class="pre">line</span></code>”. If a
+line doesn’t have a speaker, it’s parsed as an action/description line.
+You don’t need to wrap it in parentheses (Springheel will do this
+automatically when building).</p>
+</div>
+<div class="section" id="example-json-character-file">
+<h5>Example JSON character file<a class="headerlink" href="#example-json-character-file" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h5>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Wuffle&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;img&quot;</span><span class="p">:</span> <span class="s2">&quot;char-wuffle.jpg&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;Wuffle is a wolf with a big heart. Currently he&#39;s living as a farmer in a barn that is on a hill near Gingerbread Village. He never turns away from people who need a helping hand. He is also willing to help them out without expecting anything in return. However, Wuffle tends to be naïve and too trusting, which often brings him unexpected trouble.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Species&quot;</span><span class="p">:</span> <span class="s2">&quot;Wolf&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Puipui&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;A hedgehog who seems to be able to complain at anything he ever lays his eyes upon, though he never means any harm. Hot-headed and impatient, but surprisingly, Puipui is Wuffle&#39;s best friend and co-worker. It was Wuffle&#39;s idea that working on a farm might help Puipui with his anger management. Though honestly, he prefers eating and sleeping.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;img&quot;</span><span class="p">:</span> <span class="s2">&quot;char-puipui.jpg&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Species&quot;</span><span class="p">:</span> <span class="s2">&quot;Hedgehog&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>This is not substantially different from the conventional format.
+Because the characters file is specified with <code class="docutils literal notranslate"><span class="pre">chars</span></code> in the comic’s
+configuration file, you can name it whatever you like, regardless of
+format. (However, it is recommended that you use the <code class="docutils literal notranslate"><span class="pre">.json</span></code> extension
+for JSON-formatted character files anyway, just to avoid confusion.) If
+JSON-mode Springheel is unable to load a character file as JSON, it will
+attempt to load it as YAML format instead; this will undoubtedly cause
+issues if the <em>actual</em> problem is invalid JSON, so be careful.</p>
+</div>
+</div>
+<div class="section" id="about-pages">
+<h4>About Pages<a class="headerlink" href="#about-pages" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>(new in version 7.0)</p>
+<p>The index page contains descriptions of each comic on the site, but
+you might want to include more detailed information—for example, to
+credit type foundries or crowdfunding patrons, or just to talk about
+the comic’s history or plot with more than one line. For that, you can
+set an About page, and it will appear in the site’s top navigation.</p>
+<p>To enable about pages, open up <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code> and set <code class="docutils literal notranslate"><span class="pre">about</span> <span class="pre">=</span> <span class="pre">True</span></code>.
+Then open the <code class="docutils literal notranslate"><span class="pre">.conf</span></code> file(s) for the comic(s) you want to describe.
+Define the <code class="docutils literal notranslate"><span class="pre">about</span></code> block like thus:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">about = This is an example of the about page system.\nYou can add multiple lines of text.</span>
+</pre></div>
+</div>
+<p>Building produces <code class="docutils literal notranslate"><span class="pre">about.html</span></code>, which contains blocks for each comic
+on the site (including their banners and summaries from the index, so
+you don’t have to repeat the information from the latter). The example
+above would generate a block like this:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>[comic title]<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;[comic banner]&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;author&quot;</span><span class="p">&gt;</span>by [author]<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>[index summary]<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is an example of the about page system.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>You can add multiple lines of text.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>You can also use some HTML, although it gets sanitized with
+<code class="docutils literal notranslate"><span class="pre">html-sanitizer</span></code>. Note that lines are only wrapped in paragraph tags
+if no HTML tags are present, so you’ll have to add them manually in
+this case.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">about = &lt;p&gt;Helscome my wobsite. If you &lt;span style=&quot;bold&quot;&gt;want&lt;/span&gt; to, you can use &lt;a href=&quot;https://example.com&quot;&gt;hyperlinks&lt;/a&gt; and such.&lt;/p&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;http://xn--ndu.xn--zckzah/some-malicious-script.js&quot;&gt;&lt;/script&gt;</span>
+</pre></div>
+</div>
+<p>Results in:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>[comic title]<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;[comic banner]&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;author&quot;</span><span class="p">&gt;</span>by [author]<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>[index summary]<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Helscome my wobsite. If you <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>want<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> to, you can use <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://example.com&quot;</span><span class="p">&gt;</span>hyperlinks<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> and such.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>The following tags are accepted:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h5</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h6</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">strong</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">em</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ul</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ol</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">li</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">br</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sup</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hr</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">i</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruby</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rt</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rb</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dt</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dd</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">del</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ins</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="trying-to-build">
+<h3>Trying to build<a class="headerlink" href="#trying-to-build" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h3>
+<p>Whew! That was quite a bit of text without actually getting to <em>do</em>
+much. For now, let’s just try building the site with the configurations
+and preferences already present in the <em>Wuffle</em> sample pack’s files. It
+should work out of the box, after all.</p>
+<p>You run <code class="docutils literal notranslate"><span class="pre">springheel-build</span></code> in much the same way as
+<code class="docutils literal notranslate"><span class="pre">springheel-init</span></code>:</p>
+<p>On GNU/Linux, it’s <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">springheel-build</span></code></p>
+<p>On Windows it’s
+<code class="docutils literal notranslate"><span class="pre">&lt;Your</span> <span class="pre">Python</span> <span class="pre">install</span> <span class="pre">path&gt;\Scripts\springheel-build.exe</span></code></p>
+<p>Now just sit back and wait for the site to compile.</p>
+<div class="section" id="checking-the-output">
+<h4>Checking the output<a class="headerlink" href="#checking-the-output" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>If <code class="docutils literal notranslate"><span class="pre">springheel-build</span></code> didn’t return any errors, your site <em>should</em>
+appear in <code class="docutils literal notranslate"><span class="pre">output/</span></code>.</p>
+<p>Let’s look at the same strip as before. Here’s a navigation block, the
+type that appears above and below the comic:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;cominavbox&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;topbox&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;wuffle_0001.html#topbox&quot;</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;arrows/plain_first.png&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;First Page&quot;</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>First<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;wuffle_0003.html#topbox&quot;</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;arrows/plain_prev.png&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Previous Page&quot;</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>Previous<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;wuffle_0005.html#topbox&quot;</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;arrows/plain_next.png&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Next Page&quot;</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>Next<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;wuffle_0139.html#topbox&quot;</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;arrows/plain_last.png&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Last Page&quot;</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>Last<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>(This one goes above the strip; the one underneath would have
+<code class="docutils literal notranslate"><span class="pre">id=&quot;botbox&quot;</span></code>.)</p>
+<p>You don’t have to calculate any of this yourself; it’s generated
+automatically!</p>
+<p>Meanwhile, the .transcript will generate the following HTML:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;region&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;transcript&quot;</span><span class="p">&gt;&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Transcript<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;action&quot;</span><span class="p">&gt;</span>(Wuffle paints a fence as Aunty Pinky looks on.)<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;line&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;charname&quot;</span><span class="p">&gt;</span>Wuffle<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>:
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;linedia&quot;</span><span class="p">&gt;</span>It&#39;s done, ma&#39;am.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;line&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;charname&quot;</span><span class="p">&gt;</span>Pinky<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>:
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;linedia&quot;</span><span class="p">&gt;</span>Thanks, sweetie.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;action&quot;</span><span class="p">&gt;</span>(Pinky offers Wuffle a wad of money. He looks sheepish.)<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;line&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;charname&quot;</span><span class="p">&gt;</span>Wuffle<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>:
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;linedia&quot;</span><span class="p">&gt;</span>Oh, it&#39;s fine, ma&#39;am. Please keep your money.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;line&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;charname&quot;</span><span class="p">&gt;</span>Pinky<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>:
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;linedia&quot;</span><span class="p">&gt;</span>Oh, well. More for me.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;action&quot;</span><span class="p">&gt;</span>(Pinky begins eating the money.)<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Which will look something like this in the wild (again, with the Plain
+style):</p>
+<div class="figure align-default" id="id2">
+<img alt="Transcript example" src="_images/transcript-example.png" />
+<p class="caption"><span class="caption-text">Nicely formatted, easy-to-parse dialogue and action.</span><a class="headerlink" href="#id2" title="Permalink to this image" aria-label="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="from-here-on">
+<h3>From here on<a class="headerlink" href="#from-here-on" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h3>
+<p>That should be that; you should have a usable site with all of
+Springheel’s basic features. At this stage, you can fiddle around with
+the settings, make your own themes or assets, and use the Wuffle files
+as a sort of template for what your own comic files should look like.
+When you have a site you’re satisfied with, you can upload it to your
+webserver with the FTP/SSH/etc. client that you like best.</p>
+<div class="section" id="updating">
+<h4>Updating<a class="headerlink" href="#updating" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>Updating your Springheel site is simple. Just add the new strip(s) and
+metadata files to <code class="docutils literal notranslate"><span class="pre">input</span></code>, then run <code class="docutils literal notranslate"><span class="pre">springheel-build</span></code> again. Then
+you can re-upload your newly-updated site and marvel at your RSS feed.</p>
+<p><strong>NOTE:</strong> Springheel rebuilds all pages in <code class="docutils literal notranslate"><span class="pre">output/</span></code> when you update –
+if you’ve made any changes to those files, they’ll be overwritten.
+Conversely (to reduce unnecessary disk rewrites), theme assets and
+stylesheets are not altered if they exist in <code class="docutils literal notranslate"><span class="pre">output/</span></code>. Delete
+<code class="docutils literal notranslate"><span class="pre">output/assets</span></code> and <code class="docutils literal notranslate"><span class="pre">output/arrows</span></code> if you do want to overwrite
+these files.</p>
+</div>
+</div>
+</div>
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">How to use Springheel</a><ul>
+<li><a class="reference internal" href="#get-springheel">Get Springheel</a></li>
+<li><a class="reference internal" href="#limitations">Limitations</a></li>
+<li><a class="reference internal" href="#building-a-site-for-wuffle">Building a site for Wuffle</a><ul>
+<li><a class="reference internal" href="#initialization">Initialization</a><ul>
+<li><a class="reference internal" href="#base-directory">Base directory</a></li>
+<li><a class="reference internal" href="#asset-folders">Asset folders</a></li>
+<li><a class="reference internal" href="#input">Input</a></li>
+<li><a class="reference internal" href="#templates">Templates</a></li>
+<li><a class="reference internal" href="#themes">Themes</a><ul>
+<li><a class="reference internal" href="#rolling-your-own">Rolling your own</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#setting-comic-metadata">Setting comic metadata</a></li>
+<li><a class="reference internal" href="#automating-the-addition-of-new-strips">Automating the addition of new strips</a></li>
+<li><a class="reference internal" href="#webtoon-mode">Webtoon Mode</a></li>
+<li><a class="reference internal" href="#character-pages">Character pages</a></li>
+<li><a class="reference internal" href="#chapter-titles">Chapter titles</a></li>
+<li><a class="reference internal" href="#extras">Extras</a></li>
+<li><a class="reference internal" href="#licensing">Licensing</a></li>
+<li><a class="reference internal" href="#zero-padding">Zero-padding</a></li>
+<li><a class="reference internal" href="#linking-multi-language-sites">Linking multi-language sites</a></li>
+<li><a class="reference internal" href="#json-input">JSON Input</a><ul>
+<li><a class="reference internal" href="#example-meta-json">Example meta.json</a></li>
+<li><a class="reference internal" href="#example-transcript-json">Example transcript.json</a></li>
+<li><a class="reference internal" href="#example-json-character-file">Example JSON character file</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#about-pages">About Pages</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#trying-to-build">Trying to build</a><ul>
+<li><a class="reference internal" href="#checking-the-output">Checking the output</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#from-here-on">From here on</a><ul>
+<li><a class="reference internal" href="#updating">Updating</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="translation_api.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">Translation API</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="extending.html"
+                        title="next chapter"
+                        aria-label="next chapter">Extending Springheel Sites</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tutorial.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">How to use Springheel</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="translation_api.html" title="Translation API"
+                aria-label="previous: Translation API"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="extending.html" title="Extending Springheel Sites"
+                aria-label="next: Extending Springheel Sites"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

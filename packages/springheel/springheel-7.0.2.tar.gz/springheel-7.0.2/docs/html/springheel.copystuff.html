@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>springheel.copystuff module &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="springheel.genabout module" aria-label="springheel.genabout module" href="springheel.genabout.html" />
+    <link rel="prev" title="springheel.command_line module" aria-label="springheel.command_line module" href="springheel.command_line.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.copystuff module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.command_line.html" title="springheel.command_line module"
+                aria-label="previous: springheel.command_line module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.genabout.html" title="springheel.genabout module"
+                aria-label="next: springheel.genabout module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="module-springheel.copystuff">
+<span id="springheel-copystuff-module"></span><h1>springheel.copystuff module<a class="headerlink" href="#module-springheel.copystuff" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.copystuff.copyArrows">
+<em class="property"><span class="pre">async</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.copystuff.</span></span><span class="sig-name descname"><span class="pre">copyArrows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theme</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_arrows_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_arrows_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.copystuff.copyArrows" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Copy navigation arrows to the output folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>theme</strong><span class="classifier">str</span></dt><dd><p>The name of a site theme. Arrows with this prefix will be
+copied.</p>
+</dd>
+<dt><strong>old_arrows_path</strong><span class="classifier">str</span></dt><dd><p>The source directory for arrows.</p>
+</dd>
+<dt><strong>new_arrows_path</strong><span class="classifier">str</span></dt><dd><p>The location in output/ whither the arrows will be copied.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.copystuff.copyButtons">
+<em class="property"><span class="pre">async</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.copystuff.</span></span><span class="sig-name descname"><span class="pre">copyButtons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="springheel.classes.html#springheel.classes.Site" title="springheel.classes.Site"><span class="pre">springheel.classes.Site</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_buttons_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socialbuttons_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translated_strings</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.copystuff.copyButtons" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Copy buttons to the output folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>site</strong><span class="classifier">springheel.classes.Site</span></dt><dd><p>The comic <code class="xref py py-class docutils literal notranslate"><span class="pre">Site</span></code>. Buttons from this site will be copied.</p>
+</dd>
+<dt><strong>old_buttons_path</strong><span class="classifier">str</span></dt><dd><p>The source directory for social buttons.</p>
+</dd>
+<dt><strong>socialbuttons_path</strong><span class="classifier">str</span></dt><dd><p>The location in output/ whither the buttons will be copied.</p>
+</dd>
+<dt><strong>translated_strings</strong><span class="classifier">dict</span></dt><dd><p>The translation file contents for this site.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.copystuff.copyHeader">
+<em class="property"><span class="pre">async</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.copystuff.</span></span><span class="sig-name descname"><span class="pre">copyHeader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_header_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_header_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.copystuff.copyHeader" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Copy a header/banner image to the output folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>old_header_path</strong><span class="classifier">str</span></dt><dd><p>The source directory for the image.</p>
+</dd>
+<dt><strong>new_header_path</strong><span class="classifier">str</span></dt><dd><p>The location in output/ whither the header will be copied.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.copystuff.copyMultiThemes">
+<em class="property"><span class="pre">async</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.copystuff.</span></span><span class="sig-name descname"><span class="pre">copyMultiThemes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">themes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">o_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.copystuff.copyMultiThemes" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenate themes into one stylesheet in the output folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>themes</strong><span class="classifier">list of str</span></dt><dd><p>The names of themes to use.</p>
+</dd>
+<dt><strong>c_path</strong><span class="classifier">str</span></dt><dd><p>The current directory.</p>
+</dd>
+<dt><strong>o_path</strong><span class="classifier">str</span></dt><dd><p>The path to the output directory (i.e. output/).</p>
+</dd>
+<dt><strong>assets_path</strong><span class="classifier">str</span></dt><dd><p>The path to the assets directory in output. Usually “assets”.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.copystuff.copyTheme">
+<em class="property"><span class="pre">async</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.copystuff.</span></span><span class="sig-name descname"><span class="pre">copyTheme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site_theme_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_site_theme_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_ipath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.copystuff.copyTheme" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Copy theme assets to the output folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>site_theme_path</strong><span class="classifier">str</span></dt><dd><p>The source directory for theme assets.</p>
+</dd>
+<dt><strong>new_site_theme_path</strong><span class="classifier">str</span></dt><dd><p>The location in output/ whither the theme will be copied.</p>
+</dd>
+<dt><strong>print_ipath</strong><span class="classifier">str</span></dt><dd><p>Path to the print.css stylesheet.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="springheel.command_line.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">springheel.command_line module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="springheel.genabout.html"
+                        title="next chapter"
+                        aria-label="next chapter">springheel.genabout module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/springheel.copystuff.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.copystuff module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.command_line.html" title="springheel.command_line module"
+                aria-label="previous: springheel.command_line module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.genabout.html" title="springheel.genabout module"
+                aria-label="next: springheel.genabout module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

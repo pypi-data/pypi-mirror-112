@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extending Springheel Sites &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="Frequently Asked Questions" aria-label="Frequently Asked Questions" href="faq.html" />
+    <link rel="prev" title="How to use Springheel" aria-label="How to use Springheel" href="tutorial.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">Extending Springheel Sites</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="tutorial.html" title="How to use Springheel"
+                aria-label="previous: How to use Springheel"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="faq.html" title="Frequently Asked Questions"
+                aria-label="next: Frequently Asked Questions"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="extending-springheel-sites">
+<h1>Extending Springheel Sites<a class="headerlink" href="#extending-springheel-sites" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<p>Springheel projects keep their own copies of the HTML templates
+and translation strings used to generate pages. That means you have to
+re-run <code class="docutils literal notranslate"><span class="pre">springheel-init</span></code> whenever the installed templates are
+updated, but it also makes it possible to tweak the templates to add
+new features. The phrase “HTML templates” in these instructions refers
+to the following files in your project’s <code class="docutils literal notranslate"><span class="pre">templates/</span></code> directory:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">archive-template.html</span></code> (the template for archives and tag pages)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">base-template.html</span></code> (the basic template for comic pages)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chapter-template.html</span></code> (the template for chapter-view pages)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">characters-template.html</span></code> (the template for character pages)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extras-template.html</span></code> (the template for extras pages)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index-template.html</span></code> (the template for the main page)</p></li>
+</ul>
+<p>The local translation string file is located at <code class="docutils literal notranslate"><span class="pre">templates/strings.json</span></code>
+and is just a JSON file mapping strings in various languages, language
+names, and Python variable names. You can edit this file to add new
+languages, fix bad translations, or change the English terms used if
+you desire (e.g. referring to chapters as “Books” or “Tomes” for flavor).
+See the <a class="reference external" href="translation_api.html">Translation API documentation page</a>
+for specifics.</p>
+<p>I’ll note at this juncture that I can’t provide support for the features
+that rely on third-party products or services. I claim no responsibility
+for making sure that your site and content comply with any particular
+laws.</p>
+<div class="section" id="favicons">
+<h2>Favicons<a class="headerlink" href="#favicons" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Creating “proper” favicons is a highly involved process (c.f. <a class="reference external" href="https://meiert.com/en/blog/schmavicons/">A Crime
+Called Favicon</a>). Until this
+changes, I would recommend using an automated utility of some sort to
+generate the icons and HTML snippets rather than crafting them all by
+hand. There are plenty of online and command-line tools that can do so
+at a variety of different price points.</p>
+<p>Each template in <code class="docutils literal notranslate"><span class="pre">templates/</span></code> has a comment like
+<code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">Add</span> <span class="pre">favicon</span> <span class="pre">code</span> <span class="pre">here</span> <span class="pre">--&gt;</span></code> in its <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span></code> matter. Just remove
+that comment and replace it with the lines of markup from the icon tool
+you used (most will probably begin with <code class="docutils literal notranslate"><span class="pre">&lt;link</span> <span class="pre">rel=</span></code>). Then place the
+generated icons directly in <code class="docutils literal notranslate"><span class="pre">output/</span></code>.</p>
+</div>
+<div class="section" id="analytics">
+<h2>Analytics<a class="headerlink" href="#analytics" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Before putting any kind of tracking on your site, read up on the
+legality of user data collection and storage in your jurisdiction. There
+may be strict limitations on things like what you track, how you do so,
+and what you do with it, especially if some of your readers may be
+minors.</p>
+<p>For a static site, you’ll presumably want a JavaScript-based analytics
+tool that doesn’t need a SQL database or the like to run, such as
+<a class="reference external" href="https://github.com/simpleanalytics/scripts">Simple Analytics</a>.
+Depending on what you use and where you live, you may also want/need
+additional libraries (such as <a class="reference external" href="https://cookie-bar.eu/">cookieBAR</a> or
+an age checker).</p>
+<p>The documentation for whatever specific libraries you use will be of
+more use than anything I can tell you, but they’ll <em>probably</em> boil down
+to including a line like
+<code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">src=&quot;[URL</span> <span class="pre">of</span> <span class="pre">some</span> <span class="pre">file</span> <span class="pre">ending</span> <span class="pre">in</span> <span class="pre">.js]&quot;&gt;&lt;/script&gt;</span></code> in your
+pages. Open up the HTML templates and stick each <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> element in
+each one. If your installation instructions tell you to put it at a
+particular location (e.g. in <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span></code> or right before the <code class="docutils literal notranslate"><span class="pre">&lt;/body&gt;</span></code>
+tag), do that. If they need extra CSS, add links to the stylesheets in
+question in the same way.</p>
+</div>
+<div class="section" id="ads-comments-and-share-buttons">
+<h2>Ads, Comments, and Share Buttons<a class="headerlink" href="#ads-comments-and-share-buttons" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Most ad services provide you with a bit of JavaScript you’re supposed to
+add to your pages, and there are plenty of static site-friendly choices
+for comment systems (e.g. <a class="reference external" href="https://disqus.com/">Disqus</a>,
+<a class="reference external" href="https://posativ.org/isso/">Isso</a>, and
+<a class="reference external" href="https://commento.io/">Commento</a>) and social buttons (e.g. <a class="reference external" href="https://github.com/QuadrupleA/private-secure-sharing-buttons">Private
+Secure Share
+Buttons</a>
+and <a class="reference external" href="https://ncase.me/SocialMinusSpying/">Social Minus Spying</a>) that
+similarly rely on small bits of JS.</p>
+<p>As with analytics, just insert the <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> and such where your
+service’s instructions tell you to, in the HTML templates for whatever
+types of page you want it to control. For the particularly minimalist,
+<a class="reference external" href="https://sharingbuttons.io/">Sharingbuttons.io</a> doesn’t even use
+JavaScript; if it’s to your liking, add its HTML in
+<code class="docutils literal notranslate"><span class="pre">base_template.html</span></code> (between <code class="docutils literal notranslate"><span class="pre">{bottom_nav}</span></code> and
+<code class="docutils literal notranslate"><span class="pre">&lt;!--COMMENT</span> <span class="pre">AREA--&gt;</span></code>, I daresay) and its CSS in
+<code class="docutils literal notranslate"><span class="pre">themes/[your</span> <span class="pre">theme]/style.css</span></code>.</p>
+<p>If you need a permalink, just use <code class="docutils literal notranslate"><span class="pre">{url}</span></code> – Springheel 6.0 and higher
+will convert that to the full URL of the page at build time. Note that
+this doesn’t do any URL encoding, but Springheel slugifies page
+filenames anyway, so it’s unlikely to cause issues.</p>
+<p>Advertising is untested, so be warned that some themes may look odd with
+ads in certain places or orientations.</p>
+<p>I will note that just because you <em>can</em> add comments to your site
+doesn’t mean you <em>should</em>. Internet comment culture is not nice, and
+they’re especially cruel to people who create things. Getting constant
+questions about when the next update will be is honestly the <em>best</em>-case
+scenario. Will you be able to handle that? What about people bugging you
+to put things they like in the comic, or take out things they don’t?
+What about people acting just plain hateful, even violent, about both
+your work and you personally? Think carefully about the effects comments
+might have on your mental and physical health before you enable them.</p>
+</div>
+<div class="section" id="right-to-left-languages">
+<h2>Right-to-left Languages<a class="headerlink" href="#right-to-left-languages" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Springheel does not set site language directionality automatically,
+regardless of your <code class="docutils literal notranslate"><span class="pre">&lt;navdirection&gt;</span></code> setting. This is because some
+languages use different directions for different things. For example,
+modern Japanese text is written from left to right when it’s horizontal
+(like most webpages), but first-previous-next-last navigation still goes
+from right to left.</p>
+<p>To make your site display all text from right to left, just open up your
+HTML templates and add <code class="docutils literal notranslate"><span class="pre">dir=&quot;rtl&quot;</span></code> to all <code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span></code> elements.</p>
+</div>
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Extending Springheel Sites</a><ul>
+<li><a class="reference internal" href="#favicons">Favicons</a></li>
+<li><a class="reference internal" href="#analytics">Analytics</a></li>
+<li><a class="reference internal" href="#ads-comments-and-share-buttons">Ads, Comments, and Share Buttons</a></li>
+<li><a class="reference internal" href="#right-to-left-languages">Right-to-left Languages</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tutorial.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">How to use Springheel</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="faq.html"
+                        title="next chapter"
+                        aria-label="next chapter">Frequently Asked Questions</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/extending.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">Extending Springheel Sites</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="tutorial.html" title="How to use Springheel"
+                aria-label="previous: How to use Springheel"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="faq.html" title="Frequently Asked Questions"
+                aria-label="next: Frequently Asked Questions"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Themes &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="Translation API" aria-label="Translation API" href="translation_api.html" />
+    <link rel="prev" title="springheel.wraptag module" aria-label="springheel.wraptag module" href="springheel.wraptag.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">Themes</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.wraptag.html" title="springheel.wraptag module"
+                aria-label="previous: springheel.wraptag module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="translation_api.html" title="Translation API"
+                aria-label="next: Translation API"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="themes">
+<h1>Themes<a class="headerlink" href="#themes" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<div class="section" id="defaults">
+<h2>Defaults<a class="headerlink" href="#defaults" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Springheel comes equipped with a whopping 33 default themes, in order to
+match a wide variety of comic genres. Several of them contain alternate
+“sub-themes”, bringing the practical total to 44. They’re all
+written with <a class="reference external" href="https://sass-lang.com/">Sass</a>, then compiled to a
+Cascading Style Sheet. (This is done separately from the comic
+generation process; Springheel does not contain a Sass parser.)</p>
+<p>To use any of these themes, just enter its name as <code class="docutils literal notranslate"><span class="pre">site_style</span></code> in
+<code class="docutils literal notranslate"><span class="pre">conf.ini</span></code>. Plain is the default.</p>
+<p>If your site contains multiple comic series, you can even set individual
+styles for each one; just set “theme” in that comic’s <code class="docutils literal notranslate"><span class="pre">.conf</span></code> to the
+theme name you want.</p>
+<p>These are the themes available by default:</p>
+<dl>
+<dt>plain</dt><dd><p>An extremely simple theme. Uses no images.</p>
+</dd>
+<dt>dark</dt><dd><p>A simple dark theme. Uses no images.</p>
+</dd>
+<dt>beach</dt><dd><p>A relaxed and fun theme inspired by the blue ocean.</p>
+</dd>
+<dt>berryheart</dt><dd><p>A cozy “country” theme with check prints and strawberries.</p>
+</dd>
+<dt>blacktea</dt><dd><p>A refined and dainty theme with lace and black tea as the main motifs.</p>
+</dd>
+<dt>book</dt><dd><p>An elegant theme inspired by hardbound books.</p>
+</dd>
+<dt>brandy</dt><dd><p>A hard-boiled noir theme of stark light and darkness.</p>
+</dd>
+<dt>cherry</dt><dd><p>A girly pink theme for shoujo dreamers.</p>
+</dd>
+<dt>city</dt><dd><p>A dreamy, twinkly theme.</p>
+</dd>
+<dt>crystal</dt><dd><p>A glittering, lovely, strange, and dark theme.</p>
+</dd>
+<dt>cute</dt><dd><p>A cute, candy-themed pink and brown theme. Might be good for comics about sweets or children.</p>
+</dd>
+<dt>cyber</dt><dd><p>A theme inspired by 90s cyberpunk.</p>
+</dd>
+<dt>elemental</dt><dd><p>A theme based on the classical elements. <strong>Requires configuration before use.</strong></p>
+<p>This theme comes in multiple sub-styles: water, fire, earth, air, spirit, ice, metal, wood, electricity.</p>
+<p>To use one, copy the desired substyle’s CSS file to <code class="docutils literal notranslate"><span class="pre">style.css</span></code>. (If you want to change to a different sub-style later, simply remove the current <code class="docutils literal notranslate"><span class="pre">style.css</span></code> and make another copy.)</p>
+</dd>
+<dt>fairy</dt><dd><p>A fluffy theme with flowers and sparkles.</p>
+</dd>
+<dt>fantasy</dt><dd><p>A lush theme with green, gems, and parchment, perfect for “high fantasy” comics.</p>
+</dd>
+<dt>fluff</dt><dd><p>A fun and fuzzy theme to unleash your wild side.</p>
+</dd>
+<dt>garden</dt><dd><p>A soothing floral theme. <strong>Warning: large theme.</strong></p>
+</dd>
+<dt>gothic</dt><dd><p>featuring blood, roses, and bloody roses.</p>
+</dd>
+<dt>haunted</dt><dd><p>A slightly cute, slightly spooky theme inspired by haunted houses. Suited for comedic horror comics.</p>
+</dd>
+<dt>magiccircle</dt><dd><p>A mysterious, fantastical theme. <strong>Warning: large theme.</strong></p>
+</dd>
+<dt>meikai</dt><dd><p>An eccentric, eclectic theme combining mysticism with machinery.</p>
+</dd>
+<dt>might</dt><dd><p>A bold theme for comics about heroes who are super.</p>
+</dd>
+<dt>note</dt><dd><p>A striking, modern theme, designed to look “native” on phones. Uses no images.</p>
+<p>This theme is specifically designed to be easily customized – check the comments near the top of the CSS file.</p>
+</dd>
+<dt>prayers</dt><dd><p>A peaceful theme in the image of a Shinto shrine. Mostly included because fans of a certain scrolling-shooter game might prefer red-white over black. ^_-</p>
+</dd>
+<dt>revolution</dt><dd><p>A dark theme with hearts, swords, and flowers (specifically roses, and lots of them) for those who want to live nobly and with style. <strong>Warning: large theme.</strong></p>
+</dd>
+<dt>rock</dt><dd><p>A theme with plenty of star power, perfect for comics involving three chords and cowboys of the rhinestone variety.</p>
+</dd>
+<dt>seasonal</dt><dd><p>A theme you can change to match the seasons. <strong>Requires configuration before use.</strong></p>
+<p>This theme comes in four sub-styles. They’re more or less the same, just with different colors and background images. To use one, copy one of the four (<code class="docutils literal notranslate"><span class="pre">spring.css</span></code>, <code class="docutils literal notranslate"><span class="pre">summer.css</span></code>, <code class="docutils literal notranslate"><span class="pre">autumn.css</span></code>, or <code class="docutils literal notranslate"><span class="pre">winter.css</span></code>) to <code class="docutils literal notranslate"><span class="pre">style.css</span></code>. (If you want to change to a different sub-style later, simply remove the current <code class="docutils literal notranslate"><span class="pre">style.css</span></code> and make another copy.)</p>
+</dd>
+<dt>showtime</dt><dd><p>A dramatic theme based on theatrical staging.</p>
+</dd>
+<dt>staples</dt><dd><p>An institutional theme suitable for stories about schools, offices, or similar settings.</p>
+</dd>
+<dt>starship</dt><dd><p>A retro sci-fi theme with stars and metal.</p>
+</dd>
+<dt>steam</dt><dd><p>A “steampunk” theme with plenty of gears.</p>
+</dd>
+<dt>sysadmin</dt><dd><p>A no-nonsense monospaced theme for fighting in the eighties. Uses no images.</p>
+</dd>
+<dt>twothousand</dt><dd><p>A theme inspired by typical comic site designs from the early 2000s. Uses no images.</p>
+</dd>
+<dt>western</dt><dd><p>A rugged theme fit for a cowpoke.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="theme-sizes">
+<h2>Theme Sizes<a class="headerlink" href="#theme-sizes" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>This table lists the file sizes of each theme. Note that if your theme
+contains subthemes, Springheel will copy all subthemes’ assets. The
+figure provided in the Total column assumes that you delete unused
+theme assets manually.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 35%" />
+<col style="width: 24%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Theme Name</p></th>
+<th class="head"><p>CSS/Asset Size</p></th>
+<th class="head"><p>Arrows Size</p></th>
+<th class="head"><p>Total Size</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>beach</p></td>
+<td><p>24 KiB</p></td>
+<td><p>7.2 KiB</p></td>
+<td><p>31.2 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>berryheart</p></td>
+<td><p>8.4 KiB</p></td>
+<td><p>7.7 KiB</p></td>
+<td><p>16.1 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>blacktea</p></td>
+<td><p>10.3 KiB</p></td>
+<td><p>1.8 KiB</p></td>
+<td><p>12.1 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>book</p></td>
+<td><p>13.1 KiB</p></td>
+<td><p>2.8 KiB</p></td>
+<td><p>15.9 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>brandy</p></td>
+<td><p>6.8 KiB</p></td>
+<td><p>23.1 KiB</p></td>
+<td><p>29.8 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>cherry</p></td>
+<td><p>9.3 KiB</p></td>
+<td><p>5.4 KiB</p></td>
+<td><p>14.6 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>city</p></td>
+<td><p>5.3 KiB</p></td>
+<td><p>677 B</p></td>
+<td><p>6 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>crystal</p></td>
+<td><p>8.9 KiB</p></td>
+<td><p>4.7 KiB</p></td>
+<td><p>13.5 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>cute</p></td>
+<td><p>6.7 KiB</p></td>
+<td><p>4.5 KiB</p></td>
+<td><p>11.3 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>cyber</p></td>
+<td><p>6.6 KiB</p></td>
+<td><p>7.9 KiB</p></td>
+<td><p>14.5 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>dark</p></td>
+<td><p>3.7 KiB</p></td>
+<td><p>3.4 KiB</p></td>
+<td><p>7.2 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>elemental</p></td>
+<td><p>6.2–8.1 KiB each</p></td>
+<td><p>2.5 KiB</p></td>
+<td><p>8.7–10.5 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>fairy</p></td>
+<td><p>12.7 KiB</p></td>
+<td><p>14.1 KiB</p></td>
+<td><p>26.8 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>fantasy</p></td>
+<td><p>18.1 KiB</p></td>
+<td><p>18.2 KiB</p></td>
+<td><p>36.3 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>fluff</p></td>
+<td><p>6.4 KiB</p></td>
+<td><p>5.7 KiB</p></td>
+<td><p>12 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>garden</p></td>
+<td><p>63.4 KiB</p></td>
+<td><p>17.7 KiB</p></td>
+<td><p>81.1 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>gothic</p></td>
+<td><p>14.7 KiB</p></td>
+<td><p>19.2 KiB</p></td>
+<td><p>33.9 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>haunted</p></td>
+<td><p>18.8 KiB</p></td>
+<td><p>22 KiB</p></td>
+<td><p>40.9 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>magiccircle</p></td>
+<td><p>74.7 KiB</p></td>
+<td><p>15 KiB</p></td>
+<td><p>89.7 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>meikai</p></td>
+<td><p>11.8 KiB</p></td>
+<td><p>7.8 KiB</p></td>
+<td><p>19.5 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>might</p></td>
+<td><p>5.9 KiB</p></td>
+<td><p>8.2 KiB</p></td>
+<td><p>14.1 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>note</p></td>
+<td><p>7.2 KiB</p></td>
+<td><p>3.5 KiB</p></td>
+<td><p>10.7 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>plain</p></td>
+<td><p>3.4 KiB</p></td>
+<td><p>3.6 KiB</p></td>
+<td><p>6.9 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>prayers</p></td>
+<td><p>6.7 KiB</p></td>
+<td><p>27.4 KiB</p></td>
+<td><p>34.1 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>revolution</p></td>
+<td><p>18.4 KiB</p></td>
+<td><p>5.4 KiB</p></td>
+<td><p>23.7 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>rock</p></td>
+<td><p>8.7 KiB</p></td>
+<td><p>22 KiB</p></td>
+<td><p>30.6 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>seasonal</p></td>
+<td><p>6.8–7.2 KiB each</p></td>
+<td><p>1.6 KiB</p></td>
+<td><p>8.4–8.8 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>showtime</p></td>
+<td><p>19.5 KiB</p></td>
+<td><p>6.7 KiB</p></td>
+<td><p>26.3 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>staples</p></td>
+<td><p>14.9 KiB</p></td>
+<td><p>5.6 KiB</p></td>
+<td><p>20.5 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>starship</p></td>
+<td><p>8.3 KiB</p></td>
+<td><p>684 B</p></td>
+<td><p>9 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>steam</p></td>
+<td><p>17.3 KiB</p></td>
+<td><p>7.8 KiB</p></td>
+<td><p>25 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>sysadmin</p></td>
+<td><p>4.5 KiB</p></td>
+<td><p>412 B</p></td>
+<td><p>4.9 KiB</p></td>
+</tr>
+<tr class="row-even"><td><p>twothousand</p></td>
+<td><p>8.1 KiB</p></td>
+<td><p>4.4 KiB</p></td>
+<td><p>12.5 KiB</p></td>
+</tr>
+<tr class="row-odd"><td><p>western</p></td>
+<td><p>9.5 KiB</p></td>
+<td><p>15.6 KiB</p></td>
+<td><p>25.1 KiB</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="customizing">
+<h2>Customizing<a class="headerlink" href="#customizing" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>If you’re OK with a default theme with some tweaks, make a backup copy
+of that theme’s <code class="docutils literal notranslate"><span class="pre">style.css</span></code> (or its base .scss if you prefer) just in
+case, then fiddle around with the CSS as much as you want. Springheel
+copies the <code class="docutils literal notranslate"><span class="pre">style.css</span></code> file from your selected theme as part of the
+generation process, so make sure to run it once you’re done.</p>
+</div>
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Themes</a><ul>
+<li><a class="reference internal" href="#defaults">Defaults</a></li>
+<li><a class="reference internal" href="#theme-sizes">Theme Sizes</a></li>
+<li><a class="reference internal" href="#customizing">Customizing</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="springheel.wraptag.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">springheel.wraptag module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="translation_api.html"
+                        title="next chapter"
+                        aria-label="next chapter">Translation API</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/themes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">Themes</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.wraptag.html" title="springheel.wraptag module"
+                aria-label="previous: springheel.wraptag module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="translation_api.html" title="Translation API"
+                aria-label="next: Translation API"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,299 @@
+@import "chapbook.scss";
+@import "shadow.scss";
+@import "toc.scss";
+@import "webtoon.scss";
+@media screen {
+/*Rock*/
+    #rock {
+    /* Default (small) screens */
+        body {
+            background: linear-gradient(to bottom, #1c08af 2em, #c8205a 5em, #f89418 8em, #100 12em) fixed;
+            color: #ffffff;
+            text-align: center;
+            font-size: 1.5em;
+            font-family: sans-serif;
+            box-sizing: content-box;
+        }
+        main, figure {
+            margin-left: 0em;
+            padding-left: 0em;
+        }
+        h1 {
+            margin: 0em;
+            font-size: 1.2em;
+            text-shadow: 0em 0em 0.2em #000, 0em 0em 0.3em #000, 0em 0em 0.4em #000, 0em 0em 0.4em #000;
+        }
+        h2 {
+            font-size: 1em;
+        }
+        figure {
+            text-align: center;
+            border: none;
+            padding: 0em;
+            margin-left: 0em;
+            margin-right: 0em;
+            max-width: 99%;
+        }
+        .cominavbox, .cominavbox li {
+            display: inline-block;
+            padding: 0em;
+        }
+        .cominavbox span {
+            background: #100;
+        }
+        #skippy {
+            text-align: left;
+            background: #1c08af;
+            margin: 0em 0em 1em 1em;
+            a {
+                padding: 0.5em 
+            }
+            a:link, a:visited, a:hover, a:focus, a:active {
+                color: #ffffff;
+            }
+            a:focus, a:active {
+                outline: solid medium white;
+                background: #000
+            }
+        }
+        header {
+            margin-top: 2em
+        }
+        #topnav {
+            li {
+                display: inline-block;
+                margin: 1em 2em;
+            }
+        }
+        @include toc;
+        #toc {
+            li {
+                box-shadow: none;
+                background: none;
+            }
+            li + li {
+                margin-left: 0;
+            }
+        }
+        ol {
+            line-height: 2em;
+        }
+        ol li {
+            margin-left: 0em
+        }
+        #commentary, #transcript {
+            text-align: left;
+        }
+        .statline {
+            font-weight: bold;
+        }
+        a:link {
+            color: #7c7cff;
+            text-decoration: underline
+        }
+        a:visited {
+            color: #b97cff;
+        }
+        a:hover, a:focus, a:active {
+            color: #ffffff;
+        }
+        a:focus, a:active {
+            outline-width: medium;
+            outline-style: solid;
+        }
+        footer p {
+            margin-left: 0em;
+            text-align: left;
+        }
+        .archive {
+            text-align: left;
+            margin-top: 1em
+        }
+        #topnav li, main > div, main > section, ol.tagslist, #toc {
+            background: #000;
+            border: solid #3413ff thick;
+            padding: 0.5em;
+        }
+        figure img {
+            border: solid #3413ff thick;
+        }
+        figcaption {
+            margin: 1em 1em 0em 1em;
+            background: #000;
+            border: solid #3413ff medium;
+            padding: 0.5em;
+        }
+        #commentary, #transcript {
+            padding-top: .5em;
+            padding-bottom: .5em;
+            padding-left: 1.2em;
+            padding-right: 1.4em;
+        }
+        img, embed, object, video {
+            max-width: 100%;
+            height: auto;
+        }
+        .archive li {
+            margin-top: 1em;
+        }
+        .char {
+            text-align: left;
+        }
+        .chartext {
+            border: none;
+            box-shadow: none;
+            margin: 0;
+        }
+        .chartraits {
+            font-size: 0.9em;
+            overflow-wrap: break-word;
+            dt:after {
+                content: ":"
+            };
+            dd:after {
+                content: "\A"; white-space: pre;
+            };
+            dd {
+                margin-left: 0em;
+            };
+            dt, dd {
+                display: inline;
+                white-space: pre-wrap;
+            };
+        }
+        .charimg {
+            margin: 1em;
+        };
+        .intro {
+            border: none;
+            margin: 0em;
+            padding: 0em;
+        }
+        ul.tagslist {
+            list-style-type: none;
+            padding-left: 0em
+        }
+        ol.tagslist, .chapterarch {
+            text-align: left;
+            list-style: decimal inside none;
+        }
+        .page {
+            margin: 1em 0em;
+            h2 {
+                text-align: left
+            }
+        }
+    /*Medium screens*/
+        @media screen and (min-width: 1024px) {
+            main {
+                margin: 0em;
+                margin-top: 1em
+            }
+            main > div, main > section, #topnav li, ol.tagslist, #toc {
+                @include shadow(0em, 0em, 0.5em, 0.5em, #fff);
+            }
+            main > div, main > section, ol.tagslist, #extras, #toc {
+                margin: 2em;
+                padding: .5em 1.4em .5em 1.2em;
+                max-width: 80%;
+            }
+            figure {
+                padding: 1em;
+                margin: 0em 0em 0em 1em;
+                & img {
+                    @include shadow(0em, 0em, 1em, 0.5em, #ffb917);
+                }
+            }
+            figcaption {
+                @include shadow(0em, 0em, 0.5em, 0.5em, #ffb917);
+            }
+            .cominavbox li {
+                margin-left: 1em;
+                margin-right: 1em;
+                margin-bottom: 0em;
+            }
+            .cominavbox {
+                margin: 1em;
+                img {
+                    margin-bottom: 0.5em;
+                }
+                li span {
+                    padding: 0.5em
+                }
+            }
+            figure + .cominavbox {
+                margin-top: 0em;
+                margin-bottom: 0em;
+            }
+            h1 {
+                font-size: 1.4em;
+                margin-top: 2em
+            }
+            h2 {
+                font-size: 1.2em;
+                background: url("starw.png") no-repeat top left, #000;
+                background-size: contain;
+                padding-left: 2em;
+            }
+            h3 {
+                font-size: 1em;
+            }
+            #topnav li {
+                padding: 0.5em;
+            }
+            .statline {
+                font-size: 0.8em;
+            }
+            footer p {
+                font-size: 0.7em;
+            }
+            .intro {
+                text-align: left;
+                background: none;
+                box-shadow: none;
+                & h2 {
+                    margin-bottom: 0.5em;
+                };
+                & img {
+                    display: inline;
+                };
+                & .author {
+                    font-size: 0.8em;
+                    font-weight: bold;
+                }
+                & .desc {
+                    font-weight: bold;
+                }
+            }
+            .main, .intro {
+                text-align: left;
+                & p {
+                  text-align: left;
+                  margin: 1em;
+                }
+            }
+            .char {
+                img {
+                    margin: 0em 1em 1em 0em
+                }
+                .chartext {
+                    margin: 0em;
+                    text-align: left
+                }
+                .chartraits, img {
+                    display: inline-block;
+                    vertical-align: top;
+                    max-width: 50%;
+                }
+            }
+            .chartraits {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        @include chapbook;
+        @include webtoon;
+    }
+}

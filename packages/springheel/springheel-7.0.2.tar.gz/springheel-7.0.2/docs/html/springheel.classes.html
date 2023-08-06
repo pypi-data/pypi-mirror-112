@@ -1,0 +1,1573 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>springheel.classes module &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="springheel.command_line module" aria-label="springheel.command_line module" href="springheel.command_line.html" />
+    <link rel="prev" title="springheel.addimg module" aria-label="springheel.addimg module" href="springheel.addimg.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.classes module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.addimg.html" title="springheel.addimg module"
+                aria-label="previous: springheel.addimg module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.command_line.html" title="springheel.command_line module"
+                aria-label="next: springheel.command_line module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="module-springheel.classes">
+<span id="springheel-classes-module"></span><h1>springheel.classes module<a class="headerlink" href="#module-springheel.classes" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="springheel.classes.Arrow">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.classes.</span></span><span class="sig-name descname"><span class="pre">Arrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.classes.Arrow" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A navigation element to go to another page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>relation</strong><span class="classifier">str</span></dt><dd><p>The relationship between the target page and the current
+one. Will be first, prev, next, or last.</p>
+</dd>
+<dt><strong>page</strong><span class="classifier">str</span></dt><dd><p>The page number for the target page.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>long</strong><span class="classifier">str</span></dt><dd><p>The long link text for this arrow, like “Previous Page - 3”.
+(Translated into the site language, of course.) Mostly used by
+assistive technology, to make it easier to tell where a link
+goes without looking at the rest of the page.</p>
+</dd>
+<dt><strong>lrel</strong><span class="classifier">str</span></dt><dd><p>Link relation for this arrow. Either “prev” or “next”, as
+“first” and “last” are not part of the spec.</p>
+</dd>
+<dt><strong>page</strong><span class="classifier">str</span></dt><dd><p>The page number for the target page.</p>
+</dd>
+<dt><strong>relation</strong><span class="classifier">str</span></dt><dd><p>The relationship between the target page and the current one.
+Will be first, prev, next, or last.</p>
+</dd>
+<dt><strong>short</strong><span class="classifier">str</span></dt><dd><p>Short link text for this arrow. “First”, “Previous”, “Next”, or
+“Last” in the site language. Appears beneath arrow images.</p>
+</dd>
+<dt><strong>strings</strong><span class="classifier">dict</span></dt><dd><p>Various strings used by this arrow. “rel”, corresponding to
+self.relation; “long” link text (visible to screen readers),
+and “short” link text (below image).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Arrow.long">
+<span class="sig-name descname"><span class="pre">long</span></span><a class="headerlink" href="#springheel.classes.Arrow.long" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Arrow.lrel">
+<span class="sig-name descname"><span class="pre">lrel</span></span><a class="headerlink" href="#springheel.classes.Arrow.lrel" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Arrow.page">
+<span class="sig-name descname"><span class="pre">page</span></span><a class="headerlink" href="#springheel.classes.Arrow.page" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Arrow.relation">
+<span class="sig-name descname"><span class="pre">relation</span></span><a class="headerlink" href="#springheel.classes.Arrow.relation" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Arrow.short">
+<span class="sig-name descname"><span class="pre">short</span></span><a class="headerlink" href="#springheel.classes.Arrow.short" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Arrow.strings">
+<span class="sig-name descname"><span class="pre">strings</span></span><a class="headerlink" href="#springheel.classes.Arrow.strings" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="springheel.classes.Chapter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.classes.</span></span><span class="sig-name descname"><span class="pre">Chapter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chap_number</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chap_title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.classes.Chapter" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A collection of related <a class="reference internal" href="#springheel.classes.Strip" title="springheel.classes.Strip"><code class="xref py py-class docutils literal notranslate"><span class="pre">Strip</span></code></a> items.</p>
+<p>More specific than <a class="reference internal" href="#springheel.classes.Comic" title="springheel.classes.Comic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comic</span></code></a>. Initialized with the chapter
+number and optionally the chapter title.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>category</strong><span class="classifier">str</span></dt><dd><p>The name of the <a class="reference internal" href="#springheel.classes.Comic" title="springheel.classes.Comic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comic</span></code></a> this chapter belongs to.</p>
+</dd>
+<dt><strong>chap_number</strong><span class="classifier">int</span></dt><dd><p>The number of the chapter.</p>
+</dd>
+<dt><strong>chap_title</strong><span class="classifier">str, optional</span></dt><dd><p>The title of the chapter.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#springheel.classes.Strip" title="springheel.classes.Strip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Strip</span></code></a></dt><dd><p>The elements that <cite>pages</cite> comprises.</p>
+</dd>
+</dl>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>authors</strong><span class="classifier">set</span></dt><dd><p>All authors associated with the chapter. Used for making
+copyright statements in chapter view, etc.</p>
+</dd>
+<dt><strong>category</strong><span class="classifier">str</span></dt><dd><p>The name of the <a class="reference internal" href="#springheel.classes.Comic" title="springheel.classes.Comic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comic</span></code></a> this chapter belongs to.</p>
+</dd>
+<dt><strong>ch_outfn</strong><span class="classifier">str</span></dt><dd><p>The output filename for the chapter-view page. Formatted
+like “{series_slug}_c{padded_chap_number}.html”.</p>
+</dd>
+<dt><strong>chap_number</strong><span class="classifier">int</span></dt><dd><p>The number of the chapter.</p>
+</dd>
+<dt><strong>chap_title</strong><span class="classifier">str, optional</span></dt><dd><p>The title of the chapter.</p>
+</dd>
+<dt><strong>chap_title_escaped</strong><span class="classifier">str, optional</span></dt><dd><p>HTML-safe chap_title, with entity characters escaped.</p>
+</dd>
+<dt><strong>pages</strong><span class="classifier">list of Strip</span></dt><dd><p>All Strips in the chapter.</p>
+</dd>
+<dt><strong>slug</strong><span class="classifier">str</span></dt><dd><p>Slug used for the chapter in the archive table of contents.</p>
+</dd>
+<dt><strong>years</strong><span class="classifier">set</span></dt><dd><p>Initial publication years of comics in this chapter.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="springheel.classes.Comic">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.classes.</span></span><span class="sig-name descname"><span class="pre">Comic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publicdomain</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.classes.Comic" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A comic series or story.</p>
+<p>Initialized with just the name of the comic. The next broadest level
+after <a class="reference internal" href="#springheel.classes.Site" title="springheel.classes.Site"><code class="xref py py-class docutils literal notranslate"><span class="pre">Site</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>category</strong><span class="classifier">str</span></dt><dd><p>The name of the comic.</p>
+</dd>
+<dt><strong>publicdomain</strong><span class="classifier">bool, default: False</span></dt><dd><p>Whether the comic is public domain or not. Necessary for some
+copyright-related stuff.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>about</strong><span class="classifier">str, optional</span></dt><dd><p>A longer description of the comic, used on about pages.</p>
+</dd>
+<dt><strong>author</strong><span class="classifier">str</span></dt><dd><p>The comic’s creator.</p>
+</dd>
+<dt><strong>authors</strong><span class="classifier">list</span></dt><dd><p>A list of all authors associated with a comic. Used just in case
+multiple people worked on different strips of a category.</p>
+</dd>
+<dt><strong>banner</strong><span class="classifier">str</span></dt><dd><p>The comic’s banner that appears on the index page.</p>
+</dd>
+<dt><strong>headerh</strong><span class="classifier">str</span></dt><dd><p>The height of the banner in pixels.</p>
+</dd>
+<dt><strong>headerw</strong><span class="classifier">str</span></dt><dd><p>The width of the banner in pixels.</p>
+</dd>
+<dt><strong>category</strong><span class="classifier">str</span></dt><dd><p>The name of the comic.</p>
+</dd>
+<dt><strong>category_escaped</strong><span class="classifier">str</span></dt><dd><p>HTML-safe category, with entity characters escaped.</p>
+</dd>
+<dt><strong>category_theme</strong><span class="classifier">str, optional</span></dt><dd><p>Theme used by the comic.</p>
+</dd>
+<dt><strong>chapters</strong><span class="classifier">bool</span></dt><dd><p>True if the comic is chaptered, False if not.</p>
+</dd>
+<dt><strong>chapters_dicts</strong><span class="classifier">list, optional</span></dt><dd><p>Dicts with chapter numbers and titles.</p>
+</dd>
+<dt><strong>chapters_file</strong><span class="classifier">str, optional</span></dt><dd><p>If chapters is True, full path to the chapter file.</p>
+</dd>
+<dt><strong>chapters_list</strong><span class="classifier">list, optional</span></dt><dd><p>List of Chapters in the comic.</p>
+</dd>
+<dt><strong>chars_file</strong><span class="classifier">str or None</span></dt><dd><p>If present, the filename of the character file.</p>
+</dd>
+<dt><strong>chars_fn</strong><span class="classifier">str, optional</span></dt><dd><p>The basename of the characters page, if it exists. Will be
+“characters.html” on single-comic sites and “{category-slug}-
+characters.html” on multiple-comic sites.</p>
+</dd>
+<dt><strong>clicense</strong><span class="classifier">str</span></dt><dd><p>The original license name specified in the conf file.</p>
+</dd>
+<dt><strong>conf_c</strong><span class="classifier">dict</span></dt><dd><p>Contents of the comic’s config file.</p>
+</dd>
+<dt><strong>copyright_statement</strong><span class="classifier">str</span></dt><dd><p>An HTML copyright statement.</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier">str</span></dt><dd><p>A description of the comic for the index.</p>
+</dd>
+<dt><strong>email</strong><span class="classifier">str</span></dt><dd><p>The comic creator’s email address, for RSS feeds.</p>
+</dd>
+<dt><strong>fbd_link</strong><span class="classifier">list</span></dt><dd><p>HTML filename of the first strip by date.</p>
+</dd>
+<dt><strong>fbp_link</strong><span class="classifier">list</span></dt><dd><p>HTML filename of the first strip by page number.</p>
+</dd>
+<dt><strong>first_page</strong><span class="classifier">int</span></dt><dd><p>The first page of the comic.</p>
+</dd>
+<dt><strong>header</strong><span class="classifier">str</span></dt><dd><p>Filename for the page header of the comic.</p>
+</dd>
+<dt><strong>headerh</strong><span class="classifier">str</span></dt><dd><p>The height of the page header in pixels.</p>
+</dd>
+<dt><strong>headerw</strong><span class="classifier">str</span></dt><dd><p>The width of the page header in pixels.</p>
+</dd>
+<dt><strong>known_pages</strong><span class="classifier">list</span></dt><dd><p>A list of zero-padded page numbers for this category. Used for
+navigation generation.</p>
+</dd>
+<dt><strong>known_pages_raw</strong><span class="classifier">list</span></dt><dd><p>A list of page numbers for this category. These are the raw
+numbers taken directly from metadata files, so they are strings.
+Some may not be convertible to integers.</p>
+</dd>
+<dt><strong>known_pages_real</strong><span class="classifier">list</span></dt><dd><p>A list of page numbers for this category. These are real numbers
+– ints, floats, or tuples containing ints and/or floats.</p>
+</dd>
+<dt><strong>language</strong><span class="classifier">str</span></dt><dd><p>ISO 639-1 code (2 letters) for the comic’s language.</p>
+</dd>
+<dt><strong>last_page</strong><span class="classifier">int</span></dt><dd><p>The latest page of the comic.</p>
+</dd>
+<dt><strong>lbd_link</strong><span class="classifier">list</span></dt><dd><p>HTML filename of the last strip by date.</p>
+</dd>
+<dt><strong>lbp_link</strong><span class="classifier">list</span></dt><dd><p>HTML filename of the last strip by page number.</p>
+</dd>
+<dt><strong>license</strong><span class="classifier">str</span></dt><dd><p>The comic’s license.</p>
+</dd>
+<dt><strong>license_uri</strong><span class="classifier">str</span></dt><dd><p>The license URI specified in the conf file.</p>
+</dd>
+<dt><strong>mode</strong><span class="classifier">str</span></dt><dd><p>Debug parameter that currently does nothing.</p>
+</dd>
+<dt><strong>pbd</strong><span class="classifier">list</span></dt><dd><p>all Strips in the comic, sorted by date.</p>
+</dd>
+<dt><strong>pbp</strong><span class="classifier">list</span></dt><dd><p>all Strips in the comic, sorted by page number.</p>
+</dd>
+<dt><strong>publicdomain</strong><span class="classifier">bool</span></dt><dd><p>Whether the comic is public domain or not. Necessary for some
+copyright-related stuff.</p>
+</dd>
+<dt><strong>slug</strong><span class="classifier">str</span></dt><dd><p>category slugified for URLs.</p>
+</dd>
+<dt><strong>status</strong><span class="classifier">str</span></dt><dd><p>Whether the comic is still updating or not.</p>
+</dd>
+<dt><strong>statuss</strong><span class="classifier">str</span></dt><dd><p>status but wrapped in &lt;strong&gt; tags.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 77%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>populate:</strong></p></td>
+<td><p>Add initial information to a comic category.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.about">
+<span class="sig-name descname"><span class="pre">about</span></span><a class="headerlink" href="#springheel.classes.Comic.about" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.author">
+<span class="sig-name descname"><span class="pre">author</span></span><a class="headerlink" href="#springheel.classes.Comic.author" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.authors">
+<span class="sig-name descname"><span class="pre">authors</span></span><a class="headerlink" href="#springheel.classes.Comic.authors" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.banner">
+<span class="sig-name descname"><span class="pre">banner</span></span><a class="headerlink" href="#springheel.classes.Comic.banner" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.bannerh">
+<span class="sig-name descname"><span class="pre">bannerh</span></span><a class="headerlink" href="#springheel.classes.Comic.bannerh" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.bannerw">
+<span class="sig-name descname"><span class="pre">bannerw</span></span><a class="headerlink" href="#springheel.classes.Comic.bannerw" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.category">
+<span class="sig-name descname"><span class="pre">category</span></span><a class="headerlink" href="#springheel.classes.Comic.category" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.category_escaped">
+<span class="sig-name descname"><span class="pre">category_escaped</span></span><a class="headerlink" href="#springheel.classes.Comic.category_escaped" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.category_theme">
+<span class="sig-name descname"><span class="pre">category_theme</span></span><a class="headerlink" href="#springheel.classes.Comic.category_theme" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.chapters">
+<span class="sig-name descname"><span class="pre">chapters</span></span><a class="headerlink" href="#springheel.classes.Comic.chapters" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.chapters_dicts">
+<span class="sig-name descname"><span class="pre">chapters_dicts</span></span><a class="headerlink" href="#springheel.classes.Comic.chapters_dicts" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.chapters_file">
+<span class="sig-name descname"><span class="pre">chapters_file</span></span><a class="headerlink" href="#springheel.classes.Comic.chapters_file" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.chapters_list">
+<span class="sig-name descname"><span class="pre">chapters_list</span></span><a class="headerlink" href="#springheel.classes.Comic.chapters_list" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.chars_file">
+<span class="sig-name descname"><span class="pre">chars_file</span></span><a class="headerlink" href="#springheel.classes.Comic.chars_file" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.chars_fn">
+<span class="sig-name descname"><span class="pre">chars_fn</span></span><a class="headerlink" href="#springheel.classes.Comic.chars_fn" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.clicense">
+<span class="sig-name descname"><span class="pre">clicense</span></span><a class="headerlink" href="#springheel.classes.Comic.clicense" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.conf_c">
+<span class="sig-name descname"><span class="pre">conf_c</span></span><a class="headerlink" href="#springheel.classes.Comic.conf_c" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.copyright_statement">
+<span class="sig-name descname"><span class="pre">copyright_statement</span></span><a class="headerlink" href="#springheel.classes.Comic.copyright_statement" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.desc">
+<span class="sig-name descname"><span class="pre">desc</span></span><a class="headerlink" href="#springheel.classes.Comic.desc" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#springheel.classes.Comic.email" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.fbd_link">
+<span class="sig-name descname"><span class="pre">fbd_link</span></span><a class="headerlink" href="#springheel.classes.Comic.fbd_link" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.fbp_link">
+<span class="sig-name descname"><span class="pre">fbp_link</span></span><a class="headerlink" href="#springheel.classes.Comic.fbp_link" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.first_page">
+<span class="sig-name descname"><span class="pre">first_page</span></span><a class="headerlink" href="#springheel.classes.Comic.first_page" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.header">
+<span class="sig-name descname"><span class="pre">header</span></span><a class="headerlink" href="#springheel.classes.Comic.header" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.headerh">
+<span class="sig-name descname"><span class="pre">headerh</span></span><a class="headerlink" href="#springheel.classes.Comic.headerh" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.headerw">
+<span class="sig-name descname"><span class="pre">headerw</span></span><a class="headerlink" href="#springheel.classes.Comic.headerw" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.known_pages">
+<span class="sig-name descname"><span class="pre">known_pages</span></span><a class="headerlink" href="#springheel.classes.Comic.known_pages" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.known_pages_raw">
+<span class="sig-name descname"><span class="pre">known_pages_raw</span></span><a class="headerlink" href="#springheel.classes.Comic.known_pages_raw" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.known_pages_real">
+<span class="sig-name descname"><span class="pre">known_pages_real</span></span><a class="headerlink" href="#springheel.classes.Comic.known_pages_real" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.language">
+<span class="sig-name descname"><span class="pre">language</span></span><a class="headerlink" href="#springheel.classes.Comic.language" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.last_page">
+<span class="sig-name descname"><span class="pre">last_page</span></span><a class="headerlink" href="#springheel.classes.Comic.last_page" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.lbd_link">
+<span class="sig-name descname"><span class="pre">lbd_link</span></span><a class="headerlink" href="#springheel.classes.Comic.lbd_link" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.lbp_link">
+<span class="sig-name descname"><span class="pre">lbp_link</span></span><a class="headerlink" href="#springheel.classes.Comic.lbp_link" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.license">
+<span class="sig-name descname"><span class="pre">license</span></span><a class="headerlink" href="#springheel.classes.Comic.license" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.license_uri">
+<span class="sig-name descname"><span class="pre">license_uri</span></span><a class="headerlink" href="#springheel.classes.Comic.license_uri" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.mode">
+<span class="sig-name descname"><span class="pre">mode</span></span><a class="headerlink" href="#springheel.classes.Comic.mode" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.pbd">
+<span class="sig-name descname"><span class="pre">pbd</span></span><a class="headerlink" href="#springheel.classes.Comic.pbd" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.pbp">
+<span class="sig-name descname"><span class="pre">pbp</span></span><a class="headerlink" href="#springheel.classes.Comic.pbp" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="springheel.classes.Comic.populate">
+<span class="sig-name descname"><span class="pre">populate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comics_base</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.classes.Comic.populate" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Add initial information to a comic category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>site</strong><span class="classifier">Site</span></dt><dd><p>The root comic <a class="reference internal" href="#springheel.classes.Site" title="springheel.classes.Site"><code class="xref py py-class docutils literal notranslate"><span class="pre">Site</span></code></a>.</p>
+</dd>
+<dt><strong>comics_base</strong><span class="classifier">list of Strip</span></dt><dd><p>Strips known to Springheel.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.publicdomain">
+<span class="sig-name descname"><span class="pre">publicdomain</span></span><a class="headerlink" href="#springheel.classes.Comic.publicdomain" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.slug">
+<span class="sig-name descname"><span class="pre">slug</span></span><a class="headerlink" href="#springheel.classes.Comic.slug" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.status">
+<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#springheel.classes.Comic.status" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Comic.statuss">
+<span class="sig-name descname"><span class="pre">statuss</span></span><a class="headerlink" href="#springheel.classes.Comic.statuss" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="springheel.classes.Config">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.classes.</span></span><span class="sig-name descname"><span class="pre">Config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">file_names</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.classes.Config" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A set of various site preferences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>file_names</strong><span class="classifier">str, optional</span></dt><dd><p>Filename of the configuration file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>about</strong><span class="classifier">bool, optional</span></dt><dd><p>Whether or not to generate an “about” page describing each
+comic and link it in the top navigation.</p>
+</dd>
+<dt><strong>base_url</strong><span class="classifier">str</span></dt><dd><p>The root URL for the site. All page URLs are considered relative
+to this.</p>
+</dd>
+<dt><strong>characters_page</strong><span class="classifier">str</span></dt><dd><p>Whether or not to generate character pages. If “True”, character
+file names can be specified in comic config files. If “False”,
+they will be ignored.</p>
+</dd>
+<dt><strong>country</strong><span class="classifier">str</span></dt><dd><p>The legal territory the site is operated from. Mostly used for
+copyright waivers.</p>
+</dd>
+<dt><strong>description</strong><span class="classifier">str</span></dt><dd><p>A description of the site. Appears in feeds and the like.</p>
+</dd>
+<dt><strong>diaspora_url</strong><span class="classifier">str</span></dt><dd><p>Social link. Diaspora* stream. This requires a full URL.</p>
+</dd>
+<dt><strong>dict</strong><span class="classifier">dict</span></dt><dd><p>The original dictionary used to create this object. Based on
+<code class="xref py py-class docutils literal notranslate"><span class="pre">configparser.ConfigParser</span></code>.</p>
+</dd>
+<dt><strong>extras_page</strong><span class="classifier">str</span></dt><dd><p>If “True”, Springheel will convert input/Extra.json to an extras
+page. If “False”, it will be ignored.</p>
+</dd>
+<dt><strong>header_filename</strong><span class="classifier">str</span></dt><dd><p>The name of an image file in <cite>input/</cite> that will appear at the
+top of various pages on the site.</p>
+</dd>
+<dt><strong>image_rename_pattern</strong><span class="classifier">str</span></dt><dd><p>The pattern used for renaming images in output. Available
+replacement items: <code class="docutils literal notranslate"><span class="pre">{titleslug}</span></code> (slugified strip title),
+<code class="docutils literal notranslate"><span class="pre">{author}</span></code>, <code class="docutils literal notranslate"><span class="pre">{height}</span></code>, <code class="docutils literal notranslate"><span class="pre">{width}</span></code>, and <code class="docutils literal notranslate"><span class="pre">{ext}</span></code>. Defaults to
+“<code class="docutils literal notranslate"><span class="pre">{comic}_{page}_{titleslug}_{date}.{ext}</span></code>”.</p>
+</dd>
+<dt><strong>json_mode</strong><span class="classifier">bool</span></dt><dd><p>Whether to look for files ending in “.meta.json” and
+“.transcript.json” (True) or simply “.meta” and “.transcript”
+(False).</p>
+</dd>
+<dt><strong>language</strong><span class="classifier">str</span></dt><dd><p>The language the site is in. An ISO 639-1 code (2 letters).</p>
+</dd>
+<dt><strong>liberapay_handle</strong><span class="classifier">str</span></dt><dd><p>Social link. Liberapay handle. Applied in the form of
+<code class="docutils literal notranslate"><span class="pre">https://liberapay.com/{liberapay_handle}</span></code>.</p>
+</dd>
+<dt><strong>license</strong><span class="classifier">str</span></dt><dd><p>An overall copyright statement for the site. HTML accepted.</p>
+</dd>
+<dt><strong>mastodon_url</strong><span class="classifier">str</span></dt><dd><p>Social link. Mastodon account. This requires a full URL.</p>
+</dd>
+<dt><strong>navdirection</strong><span class="classifier">str</span></dt><dd><p>Either “ltr” or “rtl”. Whether first/previous arrows should
+point to the left and next/last arrows to the right or vice-
+versa.</p>
+</dd>
+<dt><strong>patreon_handle</strong><span class="classifier">str</span></dt><dd><p>Social link. Patreon handle. Applied in the form of
+<code class="docutils literal notranslate"><span class="pre">https://www.patreon.com/{patreon_handle}</span></code>.</p>
+</dd>
+<dt><strong>pump_url</strong><span class="classifier">str</span></dt><dd><p>Social link. Pump microblog. This requires a full URL.</p>
+</dd>
+<dt><strong>rename_images</strong><span class="classifier">str</span></dt><dd><p>If “True”, comic images are renamed according to
+<code class="docutils literal notranslate"><span class="pre">image_rename_pattern</span></code>.</p>
+</dd>
+<dt><strong>site_author</strong><span class="classifier">str</span></dt><dd><p>The person or people considered the owner(s) of the site.</p>
+</dd>
+<dt><strong>site_author_email</strong><span class="classifier">str</span></dt><dd><p>The email address of the owner. Used for RSS feeds because they
+require it for some reason.</p>
+</dd>
+<dt><strong>site_style</strong><span class="classifier">str</span></dt><dd><p>The name of a theme located in <cite>themes/</cite> that will be loaded as
+the overall site style.</p>
+</dd>
+<dt><strong>site_title</strong><span class="classifier">str</span></dt><dd><p>The title of the site as a whole.</p>
+</dd>
+<dt><strong>site_type</strong><span class="classifier">str</span></dt><dd><p>Either “single” or “multi”. If single, only one <a class="reference internal" href="#springheel.classes.Comic" title="springheel.classes.Comic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comic</span></code></a> is on the site. If multi, the site is a hub for multiple works.</p>
+</dd>
+<dt><strong>social_icons</strong><span class="classifier">str</span></dt><dd><p>If “True”, social media links whose configs aren’t set to
+“False” will be displayed on the site. If “False”, they will not
+be generated.</p>
+</dd>
+<dt><strong>store_page</strong><span class="classifier">str</span></dt><dd><p>A URL to link to in the top menu as a store associated with the
+comic, such as a merchandise outlet.</p>
+</dd>
+<dt><strong>tumblr_handle</strong><span class="classifier">str</span></dt><dd><p>Social link. Tumblr blog. Applied in the form of
+<code class="docutils literal notranslate"><span class="pre">http://{tumblr_handle}.tumblr.com</span></code>.</p>
+</dd>
+<dt><strong>twitter_handle</strong><span class="classifier">str</span></dt><dd><p>Social link. A Twitter handle. Applied in the form of
+<code class="docutils literal notranslate"><span class="pre">http://twitter.com/{twitter_handle}</span></code>.</p>
+</dd>
+<dt><strong>zero_padding</strong><span class="classifier">str</span></dt><dd><p>Either an integer indicating the number of digits page and
+chapter numbers should be padded to (defaulting to 4) or False
+to disable zero-padding.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.about">
+<span class="sig-name descname"><span class="pre">about</span></span><a class="headerlink" href="#springheel.classes.Config.about" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.base_url">
+<span class="sig-name descname"><span class="pre">base_url</span></span><a class="headerlink" href="#springheel.classes.Config.base_url" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.characters_page">
+<span class="sig-name descname"><span class="pre">characters_page</span></span><a class="headerlink" href="#springheel.classes.Config.characters_page" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.country">
+<span class="sig-name descname"><span class="pre">country</span></span><a class="headerlink" href="#springheel.classes.Config.country" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#springheel.classes.Config.description" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.diaspora_url">
+<span class="sig-name descname"><span class="pre">diaspora_url</span></span><a class="headerlink" href="#springheel.classes.Config.diaspora_url" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.dict">
+<span class="sig-name descname"><span class="pre">dict</span></span><a class="headerlink" href="#springheel.classes.Config.dict" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.extras_page">
+<span class="sig-name descname"><span class="pre">extras_page</span></span><a class="headerlink" href="#springheel.classes.Config.extras_page" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.header_filename">
+<span class="sig-name descname"><span class="pre">header_filename</span></span><a class="headerlink" href="#springheel.classes.Config.header_filename" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.image_rename_pattern">
+<span class="sig-name descname"><span class="pre">image_rename_pattern</span></span><a class="headerlink" href="#springheel.classes.Config.image_rename_pattern" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.json_mode">
+<span class="sig-name descname"><span class="pre">json_mode</span></span><a class="headerlink" href="#springheel.classes.Config.json_mode" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.language">
+<span class="sig-name descname"><span class="pre">language</span></span><a class="headerlink" href="#springheel.classes.Config.language" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.liberapay_handle">
+<span class="sig-name descname"><span class="pre">liberapay_handle</span></span><a class="headerlink" href="#springheel.classes.Config.liberapay_handle" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.license">
+<span class="sig-name descname"><span class="pre">license</span></span><a class="headerlink" href="#springheel.classes.Config.license" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.mastodon_url">
+<span class="sig-name descname"><span class="pre">mastodon_url</span></span><a class="headerlink" href="#springheel.classes.Config.mastodon_url" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.navdirection">
+<span class="sig-name descname"><span class="pre">navdirection</span></span><a class="headerlink" href="#springheel.classes.Config.navdirection" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.patreon_handle">
+<span class="sig-name descname"><span class="pre">patreon_handle</span></span><a class="headerlink" href="#springheel.classes.Config.patreon_handle" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.pump_url">
+<span class="sig-name descname"><span class="pre">pump_url</span></span><a class="headerlink" href="#springheel.classes.Config.pump_url" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.rename_images">
+<span class="sig-name descname"><span class="pre">rename_images</span></span><a class="headerlink" href="#springheel.classes.Config.rename_images" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.site_author">
+<span class="sig-name descname"><span class="pre">site_author</span></span><a class="headerlink" href="#springheel.classes.Config.site_author" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.site_author_email">
+<span class="sig-name descname"><span class="pre">site_author_email</span></span><a class="headerlink" href="#springheel.classes.Config.site_author_email" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.site_style">
+<span class="sig-name descname"><span class="pre">site_style</span></span><a class="headerlink" href="#springheel.classes.Config.site_style" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.site_title">
+<span class="sig-name descname"><span class="pre">site_title</span></span><a class="headerlink" href="#springheel.classes.Config.site_title" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.site_type">
+<span class="sig-name descname"><span class="pre">site_type</span></span><a class="headerlink" href="#springheel.classes.Config.site_type" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.social_icons">
+<span class="sig-name descname"><span class="pre">social_icons</span></span><a class="headerlink" href="#springheel.classes.Config.social_icons" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.store_page">
+<span class="sig-name descname"><span class="pre">store_page</span></span><a class="headerlink" href="#springheel.classes.Config.store_page" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.tumblr_handle">
+<span class="sig-name descname"><span class="pre">tumblr_handle</span></span><a class="headerlink" href="#springheel.classes.Config.tumblr_handle" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.twitter_handle">
+<span class="sig-name descname"><span class="pre">twitter_handle</span></span><a class="headerlink" href="#springheel.classes.Config.twitter_handle" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Config.zero_padding">
+<span class="sig-name descname"><span class="pre">zero_padding</span></span><a class="headerlink" href="#springheel.classes.Config.zero_padding" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="springheel.classes.EXpage">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.classes.</span></span><span class="sig-name descname"><span class="pre">EXpage</span></span><a class="headerlink" href="#springheel.classes.EXpage" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An extras page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>headings</strong><span class="classifier">list of str</span></dt><dd><p>The page’s navigational headings.</p>
+</dd>
+<dt><strong>content</strong><span class="classifier">str</span></dt><dd><p>The generated HTML for the extras page.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.EXpage.content">
+<span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#springheel.classes.EXpage.content" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.EXpage.headings">
+<span class="sig-name descname"><span class="pre">headings</span></span><a class="headerlink" href="#springheel.classes.EXpage.headings" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="springheel.classes.Site">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.classes.</span></span><span class="sig-name descname"><span class="pre">Site</span></span><a class="headerlink" href="#springheel.classes.Site" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A Springheel comic site.</p>
+<p>The top level of a Springheel instance. It contains all
+<a class="reference internal" href="#springheel.classes.Comic" title="springheel.classes.Comic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comic</span></code></a> series and site-related metadata.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>author</strong><span class="classifier">str</span></dt><dd><p>A single-string version of authors, mostly for compatibility.</p>
+</dd>
+<dt><strong>authors</strong><span class="classifier">list of str</span></dt><dd><p>A list of strings describing authors whose work appears on the
+site.</p>
+</dd>
+<dt><strong>c_path</strong><span class="classifier">str</span></dt><dd><p>The current/root directory for this site.</p>
+</dd>
+<dt><strong>comics</strong><span class="classifier">list of Comic</span></dt><dd><p>A list of <a class="reference internal" href="#springheel.classes.Comic" title="springheel.classes.Comic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comic</span></code></a> series/categories.</p>
+</dd>
+<dt><strong>config</strong><span class="classifier">Config</span></dt><dd><p>Sitewide configuration settings.</p>
+</dd>
+<dt><strong>copyright_statement</strong><span class="classifier">str</span></dt><dd><p>A copyright statement for the site.</p>
+</dd>
+<dt><strong>i_path</strong><span class="classifier">str</span></dt><dd><p>The path to the input directory for the site. Will generally be
+the equivalent of <code class="docutils literal notranslate"><span class="pre">./input/</span></code>.</p>
+</dd>
+<dt><strong>images</strong><span class="classifier">dict</span></dt><dd><p>A dictionary mapping image filenames to (width, height) in
+pixels.</p>
+</dd>
+<dt><strong>jsonpoints</strong><span class="classifier">dict</span></dt><dd><p>Information about the site in JSON format.</p>
+</dd>
+<dt><strong>license</strong><span class="classifier">str</span></dt><dd><p>The license of the overall site.</p>
+</dd>
+<dt><strong>o_path</strong><span class="classifier">str</span></dt><dd><p>The output path for the site. Will generally be the equivalent
+of <code class="docutils literal notranslate"><span class="pre">./output/</span></code>.</p>
+</dd>
+<dt><strong>processed_authors</strong><span class="classifier">dict of str</span></dt><dd><p>Mapping between items from <code class="docutils literal notranslate"><span class="pre">raw_authors</span></code> and their processed
+equivalents.</p>
+</dd>
+<dt><strong>raw_authors</strong><span class="classifier">set of str</span></dt><dd><p>Like <code class="docutils literal notranslate"><span class="pre">authors</span></code>, but the set of unique author strings
+that appear in comic metadata (i.e. without processing for
+multiple authors, etc.).</p>
+</dd>
+<dt><strong>single</strong><span class="classifier">bool</span></dt><dd><p>Whether the site is single-comic or not.</p>
+</dd>
+<dt><strong>sitemap</strong><span class="classifier">list of dict</span></dt><dd><p>Dicts of HTML filenames and last-modified times for all pages.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.author">
+<span class="sig-name descname"><span class="pre">author</span></span><a class="headerlink" href="#springheel.classes.Site.author" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.authors">
+<span class="sig-name descname"><span class="pre">authors</span></span><a class="headerlink" href="#springheel.classes.Site.authors" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.c_path">
+<span class="sig-name descname"><span class="pre">c_path</span></span><a class="headerlink" href="#springheel.classes.Site.c_path" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.comics">
+<span class="sig-name descname"><span class="pre">comics</span></span><a class="headerlink" href="#springheel.classes.Site.comics" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.config">
+<span class="sig-name descname"><span class="pre">config</span></span><a class="headerlink" href="#springheel.classes.Site.config" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.copyright_statement">
+<span class="sig-name descname"><span class="pre">copyright_statement</span></span><a class="headerlink" href="#springheel.classes.Site.copyright_statement" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.i_path">
+<span class="sig-name descname"><span class="pre">i_path</span></span><a class="headerlink" href="#springheel.classes.Site.i_path" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.images">
+<span class="sig-name descname"><span class="pre">images</span></span><a class="headerlink" href="#springheel.classes.Site.images" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.jsonpoints">
+<span class="sig-name descname"><span class="pre">jsonpoints</span></span><a class="headerlink" href="#springheel.classes.Site.jsonpoints" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.license">
+<span class="sig-name descname"><span class="pre">license</span></span><a class="headerlink" href="#springheel.classes.Site.license" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.o_path">
+<span class="sig-name descname"><span class="pre">o_path</span></span><a class="headerlink" href="#springheel.classes.Site.o_path" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.processed_authors">
+<span class="sig-name descname"><span class="pre">processed_authors</span></span><a class="headerlink" href="#springheel.classes.Site.processed_authors" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.raw_authors">
+<span class="sig-name descname"><span class="pre">raw_authors</span></span><a class="headerlink" href="#springheel.classes.Site.raw_authors" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.single">
+<span class="sig-name descname"><span class="pre">single</span></span><a class="headerlink" href="#springheel.classes.Site.single" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Site.sitemap">
+<span class="sig-name descname"><span class="pre">sitemap</span></span><a class="headerlink" href="#springheel.classes.Site.sitemap" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="springheel.classes.Strip">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.classes.</span></span><span class="sig-name descname"><span class="pre">Strip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imagef</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metaf</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transf</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.classes.Strip" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An individual comic page.</p>
+<p>Part of a <a class="reference internal" href="#springheel.classes.Comic" title="springheel.classes.Comic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comic</span></code></a> and optionally a <a class="reference internal" href="#springheel.classes.Chapter" title="springheel.classes.Chapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Chapter</span></code></a>
+as well.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>imagef</strong><span class="classifier">str</span></dt><dd><p>Filename of the strip image.</p>
+</dd>
+<dt><strong>metaf</strong><span class="classifier">str</span></dt><dd><p>Filename of the strip’s metadata file.</p>
+</dd>
+<dt><strong>transf</strong><span class="classifier">str</span></dt><dd><p>Filename of the strip’s transcript file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>alt_text</strong><span class="classifier">str, optional</span></dt><dd><p>Extra text that displays below the strip. Despite the
+name, is not really used as alt text. A more accessible
+version of the title text some comics have.</p>
+</dd>
+<dt><strong>archive_link</strong><span class="classifier">str</span></dt><dd><p>The text that will link to the strip on the Archives page.</p>
+</dd>
+<dt><strong>author</strong><span class="classifier">str</span></dt><dd><p>The strip’s credited author.</p>
+</dd>
+<dt><strong>author_email</strong><span class="classifier">str</span></dt><dd><p>The strip’s author’s email address (for RSS feeds).</p>
+</dd>
+<dt><strong>authors</strong><span class="classifier">list</span></dt><dd><p>All individuals involved with a strip. If multiple people are
+listed in the metadata file, separated by &amp;, /, or +, they’re
+added separately to this list.</p>
+</dd>
+<dt><strong>category</strong><span class="classifier">str</span></dt><dd><p>The strip’s category.</p>
+</dd>
+<dt><strong>chapter</strong><span class="classifier">int/bool</span></dt><dd><p>The chapter number if a strip is part of a chapter. False if
+it is not.</p>
+</dd>
+<dt><strong>clicense</strong><span class="classifier">str</span></dt><dd><p>The name of the strip’s license.</p>
+</dd>
+<dt><strong>commentary</strong><span class="classifier">str</span></dt><dd><p>The strip’s creator commentary.</p>
+</dd>
+<dt><strong>conf_c</strong><span class="classifier">dict</span></dt><dd><p>Contents of the strip’s config file.</p>
+</dd>
+<dt><strong>copyright_statement</strong><span class="classifier">str</span></dt><dd><p>The copyright information used in the footer of the page.</p>
+</dd>
+<dt><strong>date</strong><span class="classifier">datetime.datetime</span></dt><dd><p>The upload date of the strip.</p>
+</dd>
+<dt><strong>date_fmt</strong><span class="classifier">str</span></dt><dd><p>date formatted according to either ISO 8601 or a locale that
+is basically that, like Japanese. Used on archive pages.</p>
+</dd>
+<dt><strong>date_s</strong><span class="classifier">str</span></dt><dd><p>date formatted according to ISO 8601 (YYYY-MM-dd).</p>
+</dd>
+<dt><strong>figcaption</strong><span class="classifier">str, optional</span></dt><dd><p>alt_text wrapped in &lt;figcaption&gt; tags.</p>
+</dd>
+<dt><strong>file_name</strong><span class="classifier">str</span></dt><dd><p>The output filename for the strip image (without “pages/”).</p>
+</dd>
+<dt><strong>h1_title</strong><span class="classifier">str</span></dt><dd><p>The title used as a top-level heading for the strip.</p>
+</dd>
+<dt><strong>header_title</strong><span class="classifier">str</span></dt><dd><p>The string used as an HTML &lt;title&gt; element.</p>
+</dd>
+<dt><strong>height</strong><span class="classifier">str</span></dt><dd><p>The height of the strip image in pixels.</p>
+</dd>
+<dt><strong>html_filename</strong><span class="classifier">str</span></dt><dd><p>The text used as the output filename (ending in “.html”).</p>
+</dd>
+<dt><strong>imagef</strong><span class="classifier">str</span></dt><dd><p>Input filename of the strip image.</p>
+</dd>
+<dt><strong>img</strong><span class="classifier">str</span></dt><dd><p>The output path of the strip image.</p>
+</dd>
+<dt><strong>lang</strong><span class="classifier">str</span></dt><dd><p>ISO 639-1 code (2 letters) for the strip’s language.</p>
+</dd>
+<dt><strong>license</strong><span class="classifier">str</span></dt><dd><p>The copyright status of the strip.</p>
+</dd>
+<dt><strong>metadata</strong><span class="classifier">dict</span></dt><dd><p>The strip’s metadata.</p>
+</dd>
+<dt><strong>metaf</strong><span class="classifier">str</span></dt><dd><p>Input filename of the strip’s metadata file.</p>
+</dd>
+<dt><strong>mode</strong><span class="classifier">str</span></dt><dd><p>Debug parameter that currently does nothing.</p>
+</dd>
+<dt><strong>new_meta</strong><span class="classifier">str</span></dt><dd><p>The output filename for the metadata file.</p>
+</dd>
+<dt><strong>new_transcr</strong><span class="classifier">str</span></dt><dd><p>The output filename for the transcript file.</p>
+</dd>
+<dt><strong>page</strong><span class="classifier">str</span></dt><dd><p>The strip’s page number (directly from the meta file).</p>
+</dd>
+<dt><strong>page_padded</strong><span class="classifier">str</span></dt><dd><p>The strip’s page number formatted with zero-padding.</p>
+</dd>
+<dt><strong>page_real_num</strong><span class="classifier">int, float, or tuple</span></dt><dd><p>The strip’s page number converted to a real number (or a tuple
+containing real numbers).</p>
+</dd>
+<dt><strong>page_url</strong><span class="classifier">str</span></dt><dd><p>The strip’s ultimate URL/permalink.</p>
+</dd>
+<dt><strong>permalink</strong><span class="classifier">str</span></dt><dd><p>HTML permalink to the strip.</p>
+</dd>
+<dt><strong>pieces</strong><span class="classifier">str</span></dt><dd><p>HTML <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> element(s) for this strip.</p>
+</dd>
+<dt><strong>raw_comments</strong><span class="classifier">list of str</span></dt><dd><p>The strip’s commentary without any HTML formatting, etc.</p>
+</dd>
+<dt><strong>series_slug</strong><span class="classifier">str</span></dt><dd><p>URL-safe slug for the strip’s category.</p>
+</dd>
+<dt><strong>sha256</strong><span class="classifier">str</span></dt><dd><p>SHA-256 checksum of the strip image. Included for API purposes.</p>
+</dd>
+<dt><strong>slug</strong><span class="classifier">str</span></dt><dd><p>The HTML filename without the extension, for use as a slug.</p>
+</dd>
+<dt><strong>slugs</strong><span class="classifier">list</span></dt><dd><p>Title and series slugs.</p>
+</dd>
+<dt><strong>source</strong><span class="classifier">str, optional</span></dt><dd><p>If available, the URL of an original work on which this strip is
+based. For translations, freely-licensed comics, etc.</p>
+</dd>
+<dt><strong>statline</strong><span class="classifier">str</span></dt><dd><p>The “posted by x on y date” type line that appears at the
+bottom of the commentary box. HTML paragraph.</p>
+</dd>
+<dt><strong>stat_noperma</strong><span class="classifier">str</span></dt><dd><p>The statline without a “permalink”, for chapter pages.</p>
+</dd>
+<dt><strong>tags</strong><span class="classifier">list, optional</span></dt><dd><p>A list of <a class="reference internal" href="#springheel.classes.Tag" title="springheel.classes.Tag"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tag</span></code></a> items used by the strip.</p>
+</dd>
+<dt><strong>tb</strong><span class="classifier">str</span></dt><dd><p>The formatted HTML transcript block, separated by newlines.</p>
+</dd>
+<dt><strong>title</strong><span class="classifier">str</span></dt><dd><p>The title of the strip.</p>
+</dd>
+<dt><strong>title_slug</strong><span class="classifier">str</span></dt><dd><p>URL-safe slug for the strip’s title.</p>
+</dd>
+<dt><strong>tline</strong><span class="classifier">str</span></dt><dd><p>HTML hyperlinked list of tags attached to the strip.</p>
+</dd>
+<dt><strong>transcript_block</strong><span class="classifier">list</span></dt><dd><p>The &lt;div&gt; elements used to make the transcript block.</p>
+</dd>
+<dt><strong>transcript_c</strong><span class="classifier">str</span></dt><dd><p>The HTML contents of the transcript (no heading, etc.).</p>
+</dd>
+<dt><strong>transf</strong><span class="classifier">str</span></dt><dd><p>Input filename of the strip’s transcript file.</p>
+</dd>
+<dt><strong>width</strong><span class="classifier">str</span></dt><dd><p>The width of the strip image in pixels.</p>
+</dd>
+<dt><strong>year</strong><span class="classifier">int</span></dt><dd><p>The year in which the strip was published.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 66%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>get_matching:</strong></p></td>
+<td><p>Find the Comic this Strip belongs to.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>populate:</strong></p></td>
+<td><p>Add initial information to a comic Strip.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>populate_authors:</strong></p></td>
+<td><p>Add author information for the Strip.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.alt_text">
+<span class="sig-name descname"><span class="pre">alt_text</span></span><a class="headerlink" href="#springheel.classes.Strip.alt_text" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.archive_link">
+<span class="sig-name descname"><span class="pre">archive_link</span></span><a class="headerlink" href="#springheel.classes.Strip.archive_link" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.author">
+<span class="sig-name descname"><span class="pre">author</span></span><a class="headerlink" href="#springheel.classes.Strip.author" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.author_email">
+<span class="sig-name descname"><span class="pre">author_email</span></span><a class="headerlink" href="#springheel.classes.Strip.author_email" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.authors">
+<span class="sig-name descname"><span class="pre">authors</span></span><a class="headerlink" href="#springheel.classes.Strip.authors" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.category">
+<span class="sig-name descname"><span class="pre">category</span></span><a class="headerlink" href="#springheel.classes.Strip.category" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.chapter">
+<span class="sig-name descname"><span class="pre">chapter</span></span><a class="headerlink" href="#springheel.classes.Strip.chapter" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.clicense">
+<span class="sig-name descname"><span class="pre">clicense</span></span><a class="headerlink" href="#springheel.classes.Strip.clicense" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.commentary">
+<span class="sig-name descname"><span class="pre">commentary</span></span><a class="headerlink" href="#springheel.classes.Strip.commentary" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.conf_c">
+<span class="sig-name descname"><span class="pre">conf_c</span></span><a class="headerlink" href="#springheel.classes.Strip.conf_c" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.copyright_statement">
+<span class="sig-name descname"><span class="pre">copyright_statement</span></span><a class="headerlink" href="#springheel.classes.Strip.copyright_statement" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.date">
+<span class="sig-name descname"><span class="pre">date</span></span><a class="headerlink" href="#springheel.classes.Strip.date" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.date_fmt">
+<span class="sig-name descname"><span class="pre">date_fmt</span></span><a class="headerlink" href="#springheel.classes.Strip.date_fmt" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.date_s">
+<span class="sig-name descname"><span class="pre">date_s</span></span><a class="headerlink" href="#springheel.classes.Strip.date_s" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.figcaption">
+<span class="sig-name descname"><span class="pre">figcaption</span></span><a class="headerlink" href="#springheel.classes.Strip.figcaption" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.file_name">
+<span class="sig-name descname"><span class="pre">file_name</span></span><a class="headerlink" href="#springheel.classes.Strip.file_name" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="springheel.classes.Strip.get_matching">
+<span class="sig-name descname"><span class="pre">get_matching</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ccomics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.classes.Strip.get_matching" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Find the <a class="reference internal" href="#springheel.classes.Comic" title="springheel.classes.Comic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comic</span></code></a> this Strip belongs to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ccomics</strong><span class="classifier">list</span></dt><dd><p>A list of Comic objects.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>Comic</strong></dt><dd><p>The matching Comic.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.h1_title">
+<span class="sig-name descname"><span class="pre">h1_title</span></span><a class="headerlink" href="#springheel.classes.Strip.h1_title" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.header_title">
+<span class="sig-name descname"><span class="pre">header_title</span></span><a class="headerlink" href="#springheel.classes.Strip.header_title" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.height">
+<span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#springheel.classes.Strip.height" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.html_filename">
+<span class="sig-name descname"><span class="pre">html_filename</span></span><a class="headerlink" href="#springheel.classes.Strip.html_filename" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.imagef">
+<span class="sig-name descname"><span class="pre">imagef</span></span><a class="headerlink" href="#springheel.classes.Strip.imagef" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.img">
+<span class="sig-name descname"><span class="pre">img</span></span><a class="headerlink" href="#springheel.classes.Strip.img" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.lang">
+<span class="sig-name descname"><span class="pre">lang</span></span><a class="headerlink" href="#springheel.classes.Strip.lang" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.license">
+<span class="sig-name descname"><span class="pre">license</span></span><a class="headerlink" href="#springheel.classes.Strip.license" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.metadata">
+<span class="sig-name descname"><span class="pre">metadata</span></span><a class="headerlink" href="#springheel.classes.Strip.metadata" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.metaf">
+<span class="sig-name descname"><span class="pre">metaf</span></span><a class="headerlink" href="#springheel.classes.Strip.metaf" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.mode">
+<span class="sig-name descname"><span class="pre">mode</span></span><a class="headerlink" href="#springheel.classes.Strip.mode" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.new_meta">
+<span class="sig-name descname"><span class="pre">new_meta</span></span><a class="headerlink" href="#springheel.classes.Strip.new_meta" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.new_transcr">
+<span class="sig-name descname"><span class="pre">new_transcr</span></span><a class="headerlink" href="#springheel.classes.Strip.new_transcr" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.page">
+<span class="sig-name descname"><span class="pre">page</span></span><a class="headerlink" href="#springheel.classes.Strip.page" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.page_padded">
+<span class="sig-name descname"><span class="pre">page_padded</span></span><a class="headerlink" href="#springheel.classes.Strip.page_padded" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.page_real_num">
+<span class="sig-name descname"><span class="pre">page_real_num</span></span><a class="headerlink" href="#springheel.classes.Strip.page_real_num" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.page_url">
+<span class="sig-name descname"><span class="pre">page_url</span></span><a class="headerlink" href="#springheel.classes.Strip.page_url" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.permalink">
+<span class="sig-name descname"><span class="pre">permalink</span></span><a class="headerlink" href="#springheel.classes.Strip.permalink" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.pieces">
+<span class="sig-name descname"><span class="pre">pieces</span></span><a class="headerlink" href="#springheel.classes.Strip.pieces" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="springheel.classes.Strip.populate">
+<span class="sig-name descname"><span class="pre">populate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commentary</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_comments</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">configs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">site</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#springheel.classes.Site" title="springheel.classes.Site"><span class="pre">springheel.classes.Site</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel.classes.Strip.populate" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Add initial information to a comic Strip.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>meta</strong><span class="classifier">dict</span></dt><dd><p>Metadata about the strip.</p>
+</dd>
+<dt><strong>commentary</strong><span class="classifier">str</span></dt><dd><p>The comic’s commentary.</p>
+</dd>
+<dt><strong>raw_comments</strong><span class="classifier">list of str</span></dt><dd><p>Raw commentary lines from the comic’s metadata file.</p>
+</dd>
+<dt><strong>configs</strong><span class="classifier">list of dict</span></dt><dd><p>Configuration files known to Springheel.</p>
+</dd>
+<dt><strong>site</strong><span class="classifier">Site</span></dt><dd><p>The root site</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="springheel.classes.Strip.populate_authors">
+<span class="sig-name descname"><span class="pre">populate_authors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#springheel.classes.Site" title="springheel.classes.Site"><span class="pre">springheel.classes.Site</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.classes.Strip.populate_authors" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Add author information for the Strip.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>site</strong><span class="classifier">Site</span></dt><dd><p>The root site, which usually has author data.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.raw_comments">
+<span class="sig-name descname"><span class="pre">raw_comments</span></span><a class="headerlink" href="#springheel.classes.Strip.raw_comments" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.series_slug">
+<span class="sig-name descname"><span class="pre">series_slug</span></span><a class="headerlink" href="#springheel.classes.Strip.series_slug" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.sha256">
+<span class="sig-name descname"><span class="pre">sha256</span></span><a class="headerlink" href="#springheel.classes.Strip.sha256" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.slug">
+<span class="sig-name descname"><span class="pre">slug</span></span><a class="headerlink" href="#springheel.classes.Strip.slug" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.slugs">
+<span class="sig-name descname"><span class="pre">slugs</span></span><a class="headerlink" href="#springheel.classes.Strip.slugs" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.source">
+<span class="sig-name descname"><span class="pre">source</span></span><a class="headerlink" href="#springheel.classes.Strip.source" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.stat_noperma">
+<span class="sig-name descname"><span class="pre">stat_noperma</span></span><a class="headerlink" href="#springheel.classes.Strip.stat_noperma" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.statline">
+<span class="sig-name descname"><span class="pre">statline</span></span><a class="headerlink" href="#springheel.classes.Strip.statline" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.tags">
+<span class="sig-name descname"><span class="pre">tags</span></span><a class="headerlink" href="#springheel.classes.Strip.tags" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.tb">
+<span class="sig-name descname"><span class="pre">tb</span></span><a class="headerlink" href="#springheel.classes.Strip.tb" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#springheel.classes.Strip.title" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.title_slug">
+<span class="sig-name descname"><span class="pre">title_slug</span></span><a class="headerlink" href="#springheel.classes.Strip.title_slug" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.tline">
+<span class="sig-name descname"><span class="pre">tline</span></span><a class="headerlink" href="#springheel.classes.Strip.tline" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.transcript_block">
+<span class="sig-name descname"><span class="pre">transcript_block</span></span><a class="headerlink" href="#springheel.classes.Strip.transcript_block" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.transcript_c">
+<span class="sig-name descname"><span class="pre">transcript_c</span></span><a class="headerlink" href="#springheel.classes.Strip.transcript_c" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.transf">
+<span class="sig-name descname"><span class="pre">transf</span></span><a class="headerlink" href="#springheel.classes.Strip.transf" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.width">
+<span class="sig-name descname"><span class="pre">width</span></span><a class="headerlink" href="#springheel.classes.Strip.width" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Strip.year">
+<span class="sig-name descname"><span class="pre">year</span></span><a class="headerlink" href="#springheel.classes.Strip.year" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="springheel.classes.Tag">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.classes.</span></span><span class="sig-name descname"><span class="pre">Tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#springheel.classes.Tag" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A tag that classifies comic strips.</p>
+<p>An optional element that can be applied to <a class="reference internal" href="#springheel.classes.Strip" title="springheel.classes.Strip"><code class="xref py py-class docutils literal notranslate"><span class="pre">Strip</span></code></a> items. The
+most specific item available on a Springheel site.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>The name of the tag.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>escaped</strong><span class="classifier">str</span></dt><dd><p>An HTML-safe version of name (no &amp;, &lt;, or &gt;).</p>
+</dd>
+<dt><strong>link</strong><span class="classifier">str</span></dt><dd><p>HTML hyperlink to the tag index URL.</p>
+</dd>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>The name of the tag.</p>
+</dd>
+<dt><strong>rurl</strong><span class="classifier">str</span></dt><dd><p>HTML filename for the tag index.</p>
+</dd>
+<dt><strong>slug</strong><span class="classifier">str</span></dt><dd><p>name slugified for URLs.</p>
+</dd>
+<dt><strong>strips</strong><span class="classifier">list</span></dt><dd><p>Strips to which the tag applies.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>gen_links:</strong></p></td>
+<td><p>Generate links for a Tag.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Tag.escaped">
+<span class="sig-name descname"><span class="pre">escaped</span></span><a class="headerlink" href="#springheel.classes.Tag.escaped" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="springheel.classes.Tag.gen_links">
+<span class="sig-name descname"><span class="pre">gen_links</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">translated_strings</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel.classes.Tag.gen_links" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Generate links for a Tag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>translated_strings</strong><span class="classifier">dict</span></dt><dd><p>The translation file contents for this site.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Tag.link">
+<span class="sig-name descname"><span class="pre">link</span></span><a class="headerlink" href="#springheel.classes.Tag.link" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Tag.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#springheel.classes.Tag.name" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Tag.rurl">
+<span class="sig-name descname"><span class="pre">rurl</span></span><a class="headerlink" href="#springheel.classes.Tag.rurl" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Tag.slug">
+<span class="sig-name descname"><span class="pre">slug</span></span><a class="headerlink" href="#springheel.classes.Tag.slug" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="springheel.classes.Tag.strips">
+<span class="sig-name descname"><span class="pre">strips</span></span><a class="headerlink" href="#springheel.classes.Tag.strips" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="springheel.addimg.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">springheel.addimg module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="springheel.command_line.html"
+                        title="next chapter"
+                        aria-label="next chapter">springheel.command_line module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/springheel.classes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.classes module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.addimg.html" title="springheel.addimg module"
+                aria-label="previous: springheel.addimg module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.command_line.html" title="springheel.command_line module"
+                aria-label="next: springheel.command_line module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

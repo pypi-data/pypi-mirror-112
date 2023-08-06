@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>springheel.command_line module &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="springheel.copystuff module" aria-label="springheel.copystuff module" href="springheel.copystuff.html" />
+    <link rel="prev" title="springheel.classes module" aria-label="springheel.classes module" href="springheel.classes.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.command_line module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.classes.html" title="springheel.classes module"
+                aria-label="previous: springheel.classes module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.copystuff.html" title="springheel.copystuff module"
+                aria-label="next: springheel.copystuff module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="module-springheel.command_line">
+<span id="springheel-command-line-module"></span><h1>springheel.command_line module<a class="headerlink" href="#module-springheel.command_line" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.command_line.caddimg">
+<span class="sig-prename descclassname"><span class="pre">springheel.command_line.</span></span><span class="sig-name descname"><span class="pre">caddimg</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#springheel.command_line.caddimg" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Create a .meta file for a new strip.</p>
+<p>Requires Pillow. All parameters are command-line arguments to be
+passed to <code class="docutils literal notranslate"><span class="pre">springheel-addimg</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input</strong><span class="classifier">str</span></dt><dd><p>Relative path to the image file in input/. Short: “-i”.</p>
+</dd>
+<dt><strong>conf</strong><span class="classifier">str</span></dt><dd><p>Filename of the .conf file for the strip’s category. Short:
+“-c”.</p>
+</dd>
+<dt><strong>title</strong><span class="classifier">str</span></dt><dd><p>The title of the strip. Short: “-t”.</p>
+</dd>
+<dt><strong>num</strong><span class="classifier">str</span></dt><dd><p>The strip’s page number. Short: “-n”.</p>
+</dd>
+<dt><strong>chapter</strong><span class="classifier">str, optional</span></dt><dd><p>The chapter number if a strip is part of a chapter. “False” if
+it is not. Short: “-k” (for “Kapitel”, as C and H were already
+taken).</p>
+</dd>
+<dt><strong>alt</strong><span class="classifier">str, optional</span></dt><dd><p>Extra text that displays below the strip. Despite the
+name, is not really used as alt text. A more accessible
+version of the title text some comics have. Short: “-a”.</p>
+</dd>
+<dt><strong>source</strong><span class="classifier">str, optional</span></dt><dd><p>If not empty, the URL of an original work on which this strip is
+based. For translations, freely-licensed comics, etc. Short:
+“-s”.</p>
+</dd>
+<dt><strong>json</strong><span class="classifier">str, optional</span></dt><dd><p>If present, indicates that output should be saved as JSON.
+Short: “-j”.</p>
+</dd>
+<dt><strong>commentary</strong><span class="classifier">str</span></dt><dd><p>The strip’s creator commentary.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.command_line.cbuild">
+<span class="sig-prename descclassname"><span class="pre">springheel.command_line.</span></span><span class="sig-name descname"><span class="pre">cbuild</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#springheel.command_line.cbuild" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a Springheel site.</p>
+<p>Run with <code class="docutils literal notranslate"><span class="pre">--logging</span></code> to enable logging to <code class="docutils literal notranslate"><span class="pre">springheel.log</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.command_line.cinit">
+<span class="sig-prename descclassname"><span class="pre">springheel.command_line.</span></span><span class="sig-name descname"><span class="pre">cinit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#springheel.command_line.cinit" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize a Springheel project.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.command_line.cversion">
+<span class="sig-prename descclassname"><span class="pre">springheel.command_line.</span></span><span class="sig-name descname"><span class="pre">cversion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#springheel.command_line.cversion" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Print version information.</p>
+</dd></dl>
+
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="springheel.classes.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">springheel.classes module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="springheel.copystuff.html"
+                        title="next chapter"
+                        aria-label="next chapter">springheel.copystuff module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/springheel.command_line.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.command_line module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.classes.html" title="springheel.classes module"
+                aria-label="previous: springheel.classes module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.copystuff.html" title="springheel.copystuff module"
+                aria-label="next: springheel.copystuff module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

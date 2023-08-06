@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>springheel.renameimgs module &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="springheel.slugurl module" aria-label="springheel.slugurl module" href="springheel.slugurl.html" />
+    <link rel="prev" title="springheel.parsetranscript module" aria-label="springheel.parsetranscript module" href="springheel.parsetranscript.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.renameimgs module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.parsetranscript.html" title="springheel.parsetranscript module"
+                aria-label="previous: springheel.parsetranscript module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.slugurl.html" title="springheel.slugurl module"
+                aria-label="next: springheel.slugurl module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="module-springheel.renameimgs">
+<span id="springheel-renameimgs-module"></span><h1>springheel.renameimgs module<a class="headerlink" href="#module-springheel.renameimgs" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<p>Get renamed images.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.renameimgs.renameImages">
+<span class="sig-prename descclassname"><span class="pre">springheel.renameimgs.</span></span><span class="sig-name descname"><span class="pre">renameImages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="springheel.classes.html#springheel.classes.Site" title="springheel.classes.Site"><span class="pre">springheel.classes.Site</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="springheel.classes.html#springheel.classes.Strip" title="springheel.classes.Strip"><span class="pre">springheel.classes.Strip</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_ext</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_ext</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_rename_pattern</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel.renameimgs.renameImages" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Rename images and related data files as necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>site</strong><span class="classifier">Site</span></dt><dd><p>The Site this strip belongs to. Needed for config values.</p>
+</dd>
+<dt><strong>strip</strong><span class="classifier">Strip</span></dt><dd><p>The Strip to process.</p>
+</dd>
+<dt><strong>pages_path</strong><span class="classifier">str</span></dt><dd><p>Path to the pages/ directory in output/.</p>
+</dd>
+<dt><strong>m_ext</strong><span class="classifier">str</span></dt><dd><p>The file extension for metadata files.</p>
+</dd>
+<dt><strong>t_ext</strong><span class="classifier">str</span></dt><dd><p>The file extension for transcript files.</p>
+</dd>
+<dt><strong>image_rename_pattern</strong><span class="classifier">str</span></dt><dd><p>The pattern to use for image renaming.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>renamed_fn</strong><span class="classifier">str</span></dt><dd><p>The new image filename.</p>
+</dd>
+<dt><strong>renamed_path</strong><span class="classifier">str</span></dt><dd><p>The path to the renamed image in output.</p>
+</dd>
+<dt><strong>new_meta</strong><span class="classifier">str</span></dt><dd><p>The new metadata filename.</p>
+</dd>
+<dt><strong>new_transcr</strong><span class="classifier">str</span></dt><dd><p>The new transcript filename.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.renameimgs.renamePieces">
+<span class="sig-prename descclassname"><span class="pre">springheel.renameimgs.</span></span><span class="sig-name descname"><span class="pre">renamePieces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="springheel.classes.html#springheel.classes.Site" title="springheel.classes.Site"><span class="pre">springheel.classes.Site</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="springheel.classes.html#springheel.classes.Strip" title="springheel.classes.Strip"><span class="pre">springheel.classes.Strip</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">piece</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_rename_pattern</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">images</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel.renameimgs.renamePieces" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>File renaming for pieces of webtoon-style comics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>site</strong><span class="classifier">Site</span></dt><dd><p>The Site this strip belongs to. Needed for config values.</p>
+</dd>
+<dt><strong>strip</strong><span class="classifier">Strip</span></dt><dd><p>The “individual strip” from a metadata perspective.</p>
+</dd>
+<dt><strong>pid</strong><span class="classifier">int</span></dt><dd><p>The current piece’s position within the total strip.</p>
+</dd>
+<dt><strong>piece</strong><span class="classifier">str</span></dt><dd><p>The filename of the piece to process.</p>
+</dd>
+<dt><strong>pages_path</strong><span class="classifier">str</span></dt><dd><p>Path to the pages/ directory in output/.</p>
+</dd>
+<dt><strong>image_rename_pattern</strong><span class="classifier">str</span></dt><dd><p>The pattern to use for image renaming.</p>
+</dd>
+<dt><strong>images</strong><span class="classifier">dict</span></dt><dd><p>A dictionary mapping image filenames to (width, height) in
+pixels.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>renamed_fn</strong><span class="classifier">str</span></dt><dd><p>The new image filename.</p>
+</dd>
+<dt><strong>renamed_path</strong><span class="classifier">str</span></dt><dd><p>The path to the renamed image in output.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="springheel.parsetranscript.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">springheel.parsetranscript module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="springheel.slugurl.html"
+                        title="next chapter"
+                        aria-label="next chapter">springheel.slugurl module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/springheel.renameimgs.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.renameimgs module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.parsetranscript.html" title="springheel.parsetranscript module"
+                aria-label="previous: springheel.parsetranscript module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.slugurl.html" title="springheel.slugurl module"
+                aria-label="next: springheel.slugurl module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

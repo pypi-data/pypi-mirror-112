@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translation API &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="How to use Springheel" aria-label="How to use Springheel" href="tutorial.html" />
+    <link rel="prev" title="Themes" aria-label="Themes" href="themes.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">Translation API</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="themes.html" title="Themes"
+                aria-label="previous: Themes"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="tutorial.html" title="How to use Springheel"
+                aria-label="next: How to use Springheel"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="translation-api">
+<h1>Translation API<a class="headerlink" href="#translation-api" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<p>These are the default translation string keys in <code class="docutils literal notranslate"><span class="pre">strings.json</span></code>, as
+well as how they’re used.</p>
+<dl>
+<dt>about_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">About</span></code></p>
+<p>Used in top navigation.</p>
+</dd>
+<dt>all_pages_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">Pages</span> <span class="pre">in</span> <span class="pre">Chapter</span> <span class="pre">{chapter}</span></code></p>
+<p>Used on archives to mark the chapter-view page for a chapter.</p>
+</dd>
+<dt>alt_chapter_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">href=&quot;{ch_outfn}&quot;&gt;{category}</span> <span class="pre">{chapter_s}&lt;/a&gt;,</span> <span class="pre">Page</span> <span class="pre">#{page}</span> <span class="pre">&amp;ldquo;{title}&amp;rdquo;</span></code></p>
+<p>Used on the meta line if the chapter doesn’t have a title.</p>
+</dd>
+<dt>alt_nochapter_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">{category}</span> <span class="pre">Page</span> <span class="pre">#{page}</span> <span class="pre">&amp;ldquo;{title}&amp;rdquo;</span></code></p>
+<p>Used on the meta line if the comic doesn’t have chapters.</p>
+</dd>
+<dt>archive_l_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">#{page}</span> <span class="pre">&amp;ldquo;{title}&amp;rdquo;</span></code></p>
+<p>String used for linking on the archive page.</p>
+</dd>
+<dt>archive_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Archives</span></code></p>
+<p>Used in top navigation.</p>
+</dd>
+<dt>caption_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Commentary</span></code></p>
+<p>Heading used on comic and chapter-view pages.</p>
+</dd>
+<dt>category_chapter_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">{category}</span> <span class="pre">{chapter_s}</span></code></p>
+<p>The category and <code class="docutils literal notranslate"><span class="pre">chapter_s</span></code> combined. Used for the archive table of contents and headings on chapter-view pages.</p>
+</dd>
+<dt>cc</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&lt;span</span> <span class="pre">xmlns:dct=&quot;http://purl.org/dc/terms/&quot;</span> <span class="pre">href=&quot;http://purl.org/dc/dcmitype/StillImage&quot;</span> <span class="pre">property=&quot;dct:title&quot;</span> <span class="pre">rel=&quot;dct:type&quot;&gt;{category}&lt;/span&gt;</span> <span class="pre">by</span> <span class="pre">&lt;a</span> <span class="pre">xmlns:cc=&quot;http://creativecommons.org/ns#&quot;</span> <span class="pre">href=&quot;{base_url}&quot;</span> <span class="pre">property=&quot;cc:attributionName&quot;</span> <span class="pre">rel=&quot;cc:attributionURL&quot;&gt;{author}&lt;/a&gt;</span> <span class="pre">is</span> <span class="pre">licensed</span> <span class="pre">under</span> <span class="pre">a</span> <span class="pre">&lt;a</span> <span class="pre">rel=&quot;license&quot;</span> <span class="pre">href=&quot;{license_uri}&quot;&gt;{clicense}</span> <span class="pre">License&lt;/a&gt;.</span></code></p>
+<p>HTML block for Creative Commons licensing.</p>
+<p>Only used on libre comics.</p>
+</dd>
+<dt>ccpdw</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">rel=&quot;license&quot;</span> <span class="pre">href=&quot;http://creativecommons.org/publicdomain/zero/1.0/&quot;&gt;&lt;/a&gt;To</span> <span class="pre">the</span> <span class="pre">extent</span> <span class="pre">possible</span> <span class="pre">under</span> <span class="pre">law,</span> <span class="pre">&lt;a</span> <span class="pre">rel=&quot;dct:publisher&quot;</span> <span class="pre">href=&quot;{site_url}&quot;&gt;&lt;span</span> <span class="pre">property=&quot;dct:title&quot;&gt;{author}&lt;/span&gt;&lt;/a&gt;</span> <span class="pre">has</span> <span class="pre">waived</span> <span class="pre">all</span> <span class="pre">copyright</span> <span class="pre">and</span> <span class="pre">related</span> <span class="pre">or</span> <span class="pre">neighboring</span> <span class="pre">rights</span> <span class="pre">to</span> <span class="pre">&lt;span</span> <span class="pre">property=&quot;dct:title&quot;&gt;{site_title}&lt;/span&gt;.</span> <span class="pre">This</span> <span class="pre">work</span> <span class="pre">is</span> <span class="pre">published</span> <span class="pre">from:</span> <span class="pre">&lt;span</span> <span class="pre">property=&quot;vcard:Country&quot;</span> <span class="pre">datatype=&quot;dct:ISO3166&quot;</span> <span class="pre">content=&quot;{author_country}&quot;</span> <span class="pre">about=&quot;{site_url}&quot;&gt;{author_country}&lt;/span&gt;.</span></code></p>
+<p>Statement used to waive copyright.</p>
+<p>Only used on public domain comics.</p>
+</dd>
+<dt>chapbook_meta_link_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Page</span> <span class="pre">#{page}</span> <span class="pre">Metadata</span> <span class="pre">({file_ext})</span></code></p>
+<p>Used in WAI-ARIA labels on chapter view pages, so that metadata links are unambiguous. Visible only to screen readers.</p>
+</dd>
+<dt>chapbook_page_alt_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Comic</span> <span class="pre">Page</span> <span class="pre">#{page}</span></code></p>
+<p>Used as alt text for page images on chapter view pages.</p>
+</dd>
+<dt>chapbook_source_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Page</span> <span class="pre">#{page}</span> <span class="pre">Source</span></code></p>
+<p>Used in WAI-ARIA labels for statlines, to make the context of “source” more obvious. Visible only to screen readers.</p>
+</dd>
+<dt>chapbook_transcript_link_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Page</span> <span class="pre">#{page}</span> <span class="pre">Transcript</span> <span class="pre">({file_ext})</span></code></p>
+<p>Used in WAI-ARIA labels on chapter view pages, so that transcript links are unambiguous. Visible only to screen readers.</p>
+</dd>
+<dt>chapter_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Chapter</span> <span class="pre">{chapter}:</span> <span class="pre">{chapter_title}</span></code></p>
+<p>Used on archive pages and for constructing other chapter strings.</p>
+</dd>
+<dt>char_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Characters</span></code></p>
+<p>Used in top navigation.</p>
+</dd>
+<dt>complete_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Complete</span></code></p>
+<p>Status displayed on the index and archive.</p>
+</dd>
+<dt>date_format</dt><dd><p>[<code class="docutils literal notranslate"><span class="pre">&quot;-&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;-&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>]</p>
+<p>List of strings used in conjunction with <cite>strf_format</cite>, corresponding to <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">d</span></code>, respectively. Each element is interleaved with the date format, so you can put things after the month, day, and year numbers.</p>
+</dd>
+<dt>decimal_separator</dt><dd><p><code class="docutils literal notranslate"><span class="pre">.</span></code></p>
+<p>The mark used as a decimal separator in fractional pages.</p>
+</dd>
+<dt>extra_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Extras</span></code></p>
+<p>Used in top navigation.</p>
+</dd>
+<dt>first_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">First</span> <span class="pre">(#{page})</span></code></p>
+<p>Alt text for page navigation. Formatted with a page number.</p>
+</dd>
+<dt>firstch_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">First</span> <span class="pre">Chapter</span> <span class="pre">({page})</span></code></p>
+<p>Chapter navigation button alt text. Formatted with a chapter number.</p>
+</dd>
+<dt>firsts_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">First</span></code></p>
+<p>Showed below navigation arrow.</p>
+</dd>
+<dt>firstsch_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">First</span></code></p>
+<p>Showed below navigation arrow on chapter-view pages.</p>
+<p>Separate from the regular page version because “page” and “chapter” have different grammatical genders in some languages.</p>
+</dd>
+<dt>generator_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Built</span> <span class="pre">with</span> <span class="pre">&lt;a</span> <span class="pre">href=&quot;https://www.twinkle-night.net/Code/springheel.html&quot;&gt;Springheel&lt;/a&gt;</span> <span class="pre">{version}.</span></code></p>
+<p>Springheel advertisement showed on all pages.</p>
+</dd>
+<dt>goarchive_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Go</span> <span class="pre">to</span> <span class="pre">archive</span></code></p>
+<p>Used on the index page.</p>
+</dd>
+<dt>gofirst_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Go</span> <span class="pre">to</span> <span class="pre">first</span> <span class="pre">page</span></code></p>
+<p>Used on the index page.</p>
+</dd>
+<dt>golatest_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Go</span> <span class="pre">to</span> <span class="pre">latest</span> <span class="pre">page</span></code></p>
+<p>Used on the index page.</p>
+</dd>
+<dt>h1_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">{category}</span> <span class="pre">#{page}</span> <span class="pre">&amp;ldquo;{title}&amp;rdquo;</span></code></p>
+<p>Title used for heading elements and meta tags.</p>
+</dd>
+<dt>hiatus_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">hiatus</span></code></p>
+<p>Status displayed on the index and archive.</p>
+</dd>
+<dt>home_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Home</span></code></p>
+<p>Used in top navigation.</p>
+</dd>
+<dt>image_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Image</span></code> <code class="docutils literal notranslate"><span class="pre">:</span></code></p>
+<p>Used on extra pages.</p>
+<p>The English default is actually “Image: ” with the space after the colon, but restructuredText does not like that.</p>
+</dd>
+<dt>inprogress_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">In-progress</span></code></p>
+<p>Status displayed on the index and archive.</p>
+</dd>
+<dt>jsonfeed_descr</dt><dd><p><code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">feed</span> <span class="pre">allows</span> <span class="pre">you</span> <span class="pre">to</span> <span class="pre">read</span> <span class="pre">the</span> <span class="pre">posts</span> <span class="pre">from</span> <span class="pre">this</span> <span class="pre">site</span> <span class="pre">in</span> <span class="pre">any</span> <span class="pre">feed</span> <span class="pre">reader</span> <span class="pre">that</span> <span class="pre">supports</span> <span class="pre">the</span> <span class="pre">JSON</span> <span class="pre">Feed</span> <span class="pre">format.</span> <span class="pre">To</span> <span class="pre">add</span> <span class="pre">this</span> <span class="pre">feed</span> <span class="pre">to</span> <span class="pre">your</span> <span class="pre">reader,</span> <span class="pre">copy</span> <span class="pre">the</span> <span class="pre">following</span> <span class="pre">URL—{jsonfeedurl}—and</span> <span class="pre">add</span> <span class="pre">it</span> <span class="pre">your</span> <span class="pre">reader.</span></code></p>
+<p>Description used in JSON Feeds.</p>
+</dd>
+<dt>jsonfeed_name</dt><dd><p><code class="docutils literal notranslate"><span class="pre">JSON</span> <span class="pre">Feed</span></code></p>
+<p>JSON Feed icon alt text.</p>
+</dd>
+</dl>
+<p>language_names</p>
+<blockquote>
+<div><p>A sub-dictionary mapping various ISO 639-1 language codes to their names in their respective language (e.g. de: Deutsch). Used for multi-language site links.</p>
+</div></blockquote>
+<dl>
+<dt>last_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Last</span> <span class="pre">(#{page})</span></code></p>
+<p>Alt text for page navigation. Formatted with a page number.</p>
+</dd>
+<dt>lastch_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Last</span> <span class="pre">Chapter</span> <span class="pre">({page})</span></code></p>
+<p>Chapter navigation button alt text. Formatted with a chapter number.</p>
+</dd>
+<dt>lasts_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Last</span></code></p>
+<p>Showed below navigation arrow.</p>
+</dd>
+<dt>lastsch_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Last</span></code></p>
+<p>Showed below navigation arrow on chapter-view pages.</p>
+<p>Separate from the regular page version because “page” and “chapter” have different grammatical genders in some languages.</p>
+</dd>
+<dt>meta_link_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Metadata</span> <span class="pre">({file_ext})</span></code></p>
+<p>Used on meta line. Formatted with the type for metadata.</p>
+</dd>
+<dt>meta_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Metadata</span></code></p>
+<p>Heading on comic and chapter-view pages if there is no commentary.</p>
+</dd>
+<dt>next_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Next</span> <span class="pre">(#{page})</span></code></p>
+<p>Alt text for page navigation. Formatted with a page number.</p>
+</dd>
+<dt>nextch_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Next</span> <span class="pre">Chapter</span> <span class="pre">({page})</span></code></p>
+<p>Chapter navigation button alt text. Formatted with a chapter number.</p>
+</dd>
+<dt>nexts_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Next</span></code></p>
+<p>Showed below navigation arrow.</p>
+</dd>
+<dt>nextsch_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Next</span></code></p>
+<p>Showed below navigation arrow on chapter-view pages.</p>
+<p>Separate from the regular page version because “page” and “chapter” have different grammatical genders in some languages.</p>
+</dd>
+<dt>no_comment</dt><dd><p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">author</span> <span class="pre">has</span> <span class="pre">not</span> <span class="pre">provided</span> <span class="pre">commentary</span> <span class="pre">for</span> <span class="pre">this</span> <span class="pre">comic.</span></code></p>
+<p>Used internally if there is no commentary.</p>
+</dd>
+<dt>no_transcript</dt><dd><p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">author</span> <span class="pre">has</span> <span class="pre">not</span> <span class="pre">provided</span> <span class="pre">a</span> <span class="pre">transcript</span> <span class="pre">for</span> <span class="pre">this</span> <span class="pre">comic.</span></code></p>
+<p>Used internally if there is no transcript.</p>
+</dd>
+<dt>notitle_chapter_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Chapter</span> <span class="pre">{chapter}</span></code></p>
+<p>Equivalent of <code class="docutils literal notranslate"><span class="pre">chapter_s</span></code> without a title, for comics that only have chapter numbers.</p>
+</dd>
+<dt>page_alt_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Comic</span> <span class="pre">Page</span></code></p>
+<p>Used as comic page alt text.</p>
+</dd>
+<dt>page_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Page</span></code></p>
+<p>Base word for a comic page. Not currently used, but retained for future purposes.</p>
+</dd>
+<dt>permalink_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Permalink</span></code></p>
+<p>Used on the meta line.</p>
+</dd>
+<dt>prev_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Previous</span> <span class="pre">(#{page})</span></code></p>
+<p>Alt text for page navigation. Formatted with a page number.</p>
+</dd>
+<dt>prevch_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Previous</span> <span class="pre">Chapter</span> <span class="pre">({page})</span></code></p>
+<p>Chapter navigation button alt text. Formatted with a chapter number.</p>
+</dd>
+<dt>prevs_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Previous</span></code></p>
+<p>Showed below navigation arrow.</p>
+</dd>
+<dt>prevsch_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Previous</span></code></p>
+<p>Showed below navigation arrow on chapter-view pages.</p>
+<p>Separate from the regular page version because “page” and “chapter” have different grammatical genders in some languages.</p>
+</dd>
+<dt>range_separator</dt><dd><p><code class="docutils literal notranslate"><span class="pre">–</span></code></p>
+<p>Separator used for year ranges in copyright statements + multi-page numbers.</p>
+</dd>
+<dt>rss_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">RSS</span> <span class="pre">Feed</span></code></p>
+<p>Used for RSS icon alt text.</p>
+</dd>
+<dt>skip_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Skip</span> <span class="pre">to</span> <span class="pre">main</span> <span class="pre">content</span></code></p>
+<p>Skip link text. Used on all pages.</p>
+</dd>
+<dt>source_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Source</span></code></p>
+<p>Used on the meta line to indicate the original URL of a comic.</p>
+</dd>
+<dt>statline_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Posted</span> <span class="pre">by</span> <span class="pre">{author},</span> <span class="pre">{date}</span></code></p>
+<p>Used on the meta line.</p>
+</dd>
+<dt>statline_separator</dt><dd><p>`` &amp;mdash; ``</p>
+<p>Separator element used on the meta line.</p>
+</dd>
+<dt>store_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Store</span></code></p>
+<p>Used in top navigation.</p>
+</dd>
+<dt>strf_format</dt><dd><p><code class="docutils literal notranslate"><span class="pre">%Y{y}%m{m}%d{d}</span></code></p>
+<p>Formatting string passed to strftime. Used on comic and chapter-view pages and in archives.</p>
+</dd>
+<dt>stylesheet_name_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Standard</span></code></p>
+<p>The name of the stylesheet.</p>
+<p>Not visible to most users, honestly.</p>
+</dd>
+<dt>tag_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Tag</span></code></p>
+<p>Used in page title for tag indices.</p>
+</dd>
+<dt>tags_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Tags</span></code></p>
+<p>Used on the meta line and the archive heading.</p>
+</dd>
+<dt>toc_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">of</span> <span class="pre">Contents</span></code></p>
+<p>Used on archives.</p>
+</dd>
+<dt>transcript_link_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Transcript</span> <span class="pre">({file_ext})</span></code></p>
+<p>Used on the meta line. Formatted with the file type of transcripts.</p>
+</dd>
+<dt>transcript_s</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Transcript</span></code></p>
+<p>Heading used on comic and chapter-view pages.</p>
+</dd>
+</dl>
+<div class="section" id="language-coverage">
+<h2>Language Coverage<a class="headerlink" href="#language-coverage" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Language</p></th>
+<th class="head"><p>Strings (#)</p></th>
+<th class="head"><p>Missing Translatable Strings</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>en</p></td>
+<td><p>69</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ja</p></td>
+<td><p>67</p></td>
+<td><p>ccpdw</p></td>
+</tr>
+<tr class="row-even"><td><p>de</p></td>
+<td><p>66</p></td>
+<td><p>ccpdw</p></td>
+</tr>
+<tr class="row-odd"><td><p>es</p></td>
+<td><p>62</p></td>
+<td><p>all_pages_s; ccpdw; jsonfeed_descr; toc_s</p></td>
+</tr>
+<tr class="row-even"><td><p>fr</p></td>
+<td><p>60</p></td>
+<td><p>about_s; all_pages_s; ccpdw; chapbook_page_alt_s; jsonfeed_descr; page_alt_s; toc_s</p></td>
+</tr>
+</tbody>
+</table>
+<p>Other languages’ translations are not yet complete enough to appear in
+this table.</p>
+</div>
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Translation API</a><ul>
+<li><a class="reference internal" href="#language-coverage">Language Coverage</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="themes.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">Themes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tutorial.html"
+                        title="next chapter"
+                        aria-label="next chapter">How to use Springheel</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/translation_api.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">Translation API</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="themes.html" title="Themes"
+                aria-label="previous: Themes"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="tutorial.html" title="How to use Springheel"
+                aria-label="next: How to use Springheel"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

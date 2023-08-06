@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Springheel Changelog &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="prev" title="Frequently Asked Questions" aria-label="Frequently Asked Questions" href="faq.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">Springheel Changelog</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="faq.html" title="Frequently Asked Questions"
+                aria-label="previous: Frequently Asked Questions"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="springheel-changelog">
+<h1>Springheel Changelog<a class="headerlink" href="#springheel-changelog" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<div class="section" id="version-7-0-2">
+<h2>Version 7.0.2<a class="headerlink" href="#version-7-0-2" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2021-07-12</p>
+<ul class="simple">
+<li><p>SHA-256 checksums are now calculated for all strips during the
+generation process, and are available through the site.json endpoints
+file.</p></li>
+<li><p>The endpoints file also adds a list of “authors” for each category,
+and the Springheel version used to build the site. Its listing
+of chapter info is more useful as well.</p></li>
+<li><p>“plain” theme now includes an experimental dark variant activated by
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/&#64;media/prefers-color-scheme">prefers-color-scheme:
+dark</a>.</p></li>
+<li><p>The code has been cleaned up and refactored in several places, mostly
+to reduce repetition.</p></li>
+<li><p>Springheel now automatically adds a trailing slash to the end of
+<code class="docutils literal notranslate"><span class="pre">base_url</span></code> if it is missing.</p></li>
+<li><p>Files referenced on the Extras page are now copied asynchronously.</p></li>
+<li><p>Fixed some errors when comics didn’t have license URIs.</p></li>
+<li><p>Fixed flow direction for chapter pages in right-to-left mode. This
+updates all themes and some templates.</p></li>
+</ul>
+</div>
+<div class="section" id="version-7-0-1">
+<h2>Version 7.0.1<a class="headerlink" href="#version-7-0-1" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2021-06-29</p>
+<ul class="simple">
+<li><p>Minor updates to documentation and file manifest.</p></li>
+<li><p>Improved extra generation’s file size calculator.</p></li>
+</ul>
+</div>
+<div class="section" id="version-7-0-0-chilchuck">
+<h2>Version 7.0.0 “Chilchuck”<a class="headerlink" href="#version-7-0-0-chilchuck" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2021-06-21</p>
+<p>It’s Springheel’s biggest release yet! I’ve changed or improved almost
+every aspect of the program, so there’s almost too much to describe.</p>
+<div class="section" id="new-features">
+<h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Springheel now accepts metadata, transcript, and character files in
+JSON format. It expects the extensions “.meta.json” and
+“.transcript.json” for the former (respectively); character files can
+be named whatever you like, as they’re specified in the comic
+configuration. Set <code class="docutils literal notranslate"><span class="pre">json_mode</span></code> in <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code> to True to try it
+out. The tutorial has detailed syntax examples. Note that generation
+may behave erratically if some input files are JSON and others are
+not; if you’re going to use JSON mode, make sure to convert all
+metadata, transcript, and character files to JSON format first.</p></li>
+<li><p>A new command line script, <code class="docutils literal notranslate"><span class="pre">springheel-addimg</span></code>, will automatically
+generate metadata files for strip images.</p></li>
+<li><p>Springheel now automatically detects sizes for all images, removing
+the need to manually specify them in metadata. Dimensions are also
+stated in the output HTML, so page elements do not move or jitter as
+images load. This feature and <code class="docutils literal notranslate"><span class="pre">springheel-addimg</span></code> add
+<a class="reference external" href="https://pypi.org/project/Pillow/">Pillow</a> as a dependency.</p></li>
+<li><p>You can now create “webtoon”-style comics with multiple image files
+per strip! Set <code class="docutils literal notranslate"><span class="pre">mode</span></code> to “webtoon” in both the comic <code class="docutils literal notranslate"><span class="pre">.conf</span></code> and
+the strip’s metadata, then add a list of image filenames to the
+latter as <code class="docutils literal notranslate"><span class="pre">pieces:</span></code>, à la <code class="docutils literal notranslate"><span class="pre">pieces:</span> <span class="pre">panel2.png,</span> <span class="pre">panel3.png</span></code>.</p></li>
+<li><p>Springheel now contains proper documentation built with Sphinx. It’s
+the future! The rst files can be found in <code class="docutils literal notranslate"><span class="pre">docsource</span></code> when you
+download Springheel’s source code, but they’re mostly just automodule
+stuff, so I don’t know how useful they’ll be. I also built them with
+my own customized theme, so locally-produced output may vary. Note
+that you’ll need the numpydoc extension to build the docs from
+source.</p></li>
+<li><p>Springheel can now generate “about” pages with long descriptions of
+comics, optionally with a subset of HTML. To use it, set <code class="docutils literal notranslate"><span class="pre">about</span></code> to
+True in <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code> and define the about section in the relevant
+<code class="docutils literal notranslate"><span class="pre">.conf</span></code> file with “<code class="docutils literal notranslate"><span class="pre">about</span> <span class="pre">=</span></code>”. You can include line breaks by
+writing <code class="docutils literal notranslate"><span class="pre">\n</span></code> where needed. This feature adds a new dependency on
+<a class="reference external" href="https://pypi.org/project/html-sanitizer">html-sanitizer</a>.</p></li>
+<li><p>Some non-integer page numbers – decimals (like “6.5”) and double-page
+ranges (like “116–117”; en dashes and hyphens both work) – are now
+accepted.</p></li>
+<li><p>Alt text on navigation arrows includes numbers, so assistive tech
+users can more quickly tell where they are actually going (without
+having to look at other areas of the page, identify relevant bits of
+long URLs, etc.).</p></li>
+<li><p>Added a new “chapter view” – if chapters are enabled, you can
+generate pages for each chapter that show all that chapter’s strips
+(and the appropriate metadata) and allow navigation between chapters;
+as with individual comics, navigation will not appear if there is
+only one chapter. On sufficiently wide screens, two pages appear side
+by side, much like pages of a physical book.</p></li>
+<li><p>The separator between stat line elements is now a translatable
+template string, so you can edit it locally if you want a different
+one.</p></li>
+<li><p>Allow setting raw HTML copyright/license statements with
+<code class="docutils literal notranslate"><span class="pre">license_html</span></code> in .conf files.</p></li>
+<li><p>The date formatting string is now editable in strings.json. Caveats:
+for compatibility, there is no single string passed directly to
+strftime. Instead, the values of <code class="docutils literal notranslate"><span class="pre">strf_format</span></code> (default:
+“%Y{y}%m{m}%d{d}”) and <code class="docutils literal notranslate"><span class="pre">date_format</span></code> (list of 3 strings, can be “”)
+are combined. Warning: because of the variety of different areas of
+the code where dates are used, substantial changes to <code class="docutils literal notranslate"><span class="pre">strf_format</span></code>
+may cause unpredictable problems during build.</p></li>
+<li><p>The extras page now indicates the size of downloadable files in
+bytes, kibibytes, or mebibytes.</p></li>
+<li><p>You can now manually specify slugs. For categories, add a line like
+<code class="docutils literal notranslate"><span class="pre">slug</span> <span class="pre">=</span> <span class="pre">desired-slug</span></code> to the <code class="docutils literal notranslate"><span class="pre">.conf</span></code> file. For strips, add
+<code class="docutils literal notranslate"><span class="pre">title_slug:</span> <span class="pre">desired-slug</span></code> to the <code class="docutils literal notranslate"><span class="pre">.meta</span></code> file. (Strip slugs are
+only used in image rename patterns.) This is especially useful for
+non-ASCII languages that get odd output from the existing slug
+system.</p></li>
+<li><p>Added rudimentary support for OpenGraph and Twitter Card tags.</p></li>
+<li><p>If a comic is based on an existing work, you can now add a link to
+the source in its <code class="docutils literal notranslate"><span class="pre">.meta</span></code> file à la
+<code class="docutils literal notranslate"><span class="pre">source:</span> <span class="pre">https://example.com</span></code>, and it will appear in the statline.</p></li>
+<li><p>Springheel’s command-line messages are now translatable with gettext,
+making the program easier to use in other languages.</p></li>
+<li><p>Type hints have been added to all functions.</p></li>
+</ul>
+</div>
+<div class="section" id="new-default-themes">
+<h3>New Default Themes<a class="headerlink" href="#new-default-themes" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>“elemental” subthemes “electricity”, “ice”, “wood”, and “metal”.</p></li>
+<li><p>“staples”</p></li>
+<li><p>“meikai”</p></li>
+<li><p>“berryheart”</p></li>
+<li><p>“blacktea”</p></li>
+</ul>
+</div>
+<div class="section" id="improvements">
+<h3>Improvements<a class="headerlink" href="#improvements" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>File copying and similar features are now performed asynchronously,
+so they should be considerably faster. This increases the minimum
+Python version required to 3.7.</p></li>
+<li><p>Previous/next buttons are no longer displayed if there is only one
+more strip in that direction (i.e., first/previous or next/last have
+the same value), to avoid having multiple buttons going to the same
+page.</p></li>
+<li><p>If only one strip (or chapter) exists in a category, navigation is
+not generated at all.</p></li>
+<li><p>Figure captions are no longer displayed if nothing has been set for
+them. (Of course actual alt text is present for the images
+themselves.)</p></li>
+<li><p>“Permalink” has been added to the stat line.</p></li>
+<li><p>Chapters no longer must have titles (this was intended to be the case
+already, but I forgot).</p></li>
+<li><p>Transcript parsing is much neater and cleaner, and accepts more line
+endings.</p></li>
+<li><p><em>Lots</em> of fixes to make the code faster and cleaner.</p></li>
+<li><p>Tuned up all themes and templates significantly. They are cleaner and
+more accessible all around.</p></li>
+<li><p>The “twothousand” theme in particular has been almost entirely
+rewritten. It should be less ugly and more faithful to the era it
+evokes.</p></li>
+<li><p>Category/chapter/page information has been moved to the stat line
+(“Posted by Jane Smith on such-and-such date”), and links to the
+chapter-view page if applicable.</p></li>
+<li><p>Copyright footer information is more detailed, especially when strips
+in the same category have different authors.</p></li>
+<li><p>Copyright years are now listed as a range from the original posting
+date to the current year as of site-generation time.</p></li>
+<li><p>Meta lines include links to transcript files, instead of just
+metadata files.</p></li>
+<li><p>Springheel now fails to build if a page without a chapter specified
+is in a category that <em>is</em> divided into chapters. (At present,
+Springheel is not designed to allow this.)</p></li>
+<li><p>Post dates are now displayed in archives.</p></li>
+<li><p>On Japanese sites, dates now appear formatted like
+“[year]年[month]月[day]日”, as this isn’t substantially different
+from ISO 8601.</p></li>
+<li><p>Table of contents generation has been expanded to include
+non-chaptered comics.</p></li>
+<li><p>The scrollto preference has been removed, as it was causing issues
+with other necessary features.</p></li>
+<li><p>Comics without transcripts no longer display a message to that effect
+on generated pages. I reasoned that it was confusing to have a
+“transcript” heading if there was in fact no transcript present. The
+JSON endpoints file will still contain
+<code class="docutils literal notranslate"><span class="pre">transcript_c:</span> <span class="pre">&quot;&lt;p&gt;The</span> <span class="pre">author</span> <span class="pre">has</span> <span class="pre">not</span> <span class="pre">provided</span> <span class="pre">a</span> <span class="pre">transcript</span> <span class="pre">for</span> <span class="pre">this</span> <span class="pre">comic.&lt;/p&gt;&quot;</span></code>
+(or the equivalent in the site language) for consistency.</p></li>
+<li><p>In the same vein, comics without commentary do not display the “no
+commentary” message and have the “Commentary” heading switched out
+for “Metadata”.</p></li>
+<li><p>The links to metadata and transcript files now indicate the
+approximate type of file they are. In default mode, this will be
+“YAML” for metadata and “TXT” for transcripts, and in JSON mode,
+“JSON” for both.</p></li>
+<li><p>Made it less annoying to add new fields to <code class="docutils literal notranslate"><span class="pre">strings.json</span></code>.</p></li>
+<li><p>Logging has been improved and now defaults to off. To enable it, just
+add <code class="docutils literal notranslate"><span class="pre">--logging</span></code> as an argument to <code class="docutils literal notranslate"><span class="pre">springheel-build</span></code>.</p></li>
+<li><p>Skip-navigation links are now always visible in all themes, rather
+than being visually hidden until activated.</p></li>
+<li><p>The “home” link in top navigation has been removed, and the header
+image is now a link to the home page.</p></li>
+</ul>
+</div>
+<div class="section" id="bugfixes">
+<h3>Bugfixes<a class="headerlink" href="#bugfixes" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Finally switched the meanings of “header” and “banner” in
+configuration files and templates, and renamed the
+<code class="docutils literal notranslate"><span class="pre">banner_filename</span></code> option in <code class="docutils literal notranslate"><span class="pre">conf.ini</span></code> to <code class="docutils literal notranslate"><span class="pre">header_filename</span></code>.
+This is a backwards-incompatible change. (I originally got them the
+wrong way around by mistake, and was waiting for a major version to
+fix it.)</p></li>
+<li><p>Navigation goes only to <em>existent</em> pages, to avoid 404 errors from
+numbering gaps.</p></li>
+<li><p>If multiple comics on a multi-theme site use the same theme, that
+theme is no longer relentlessly duplicated by the stylesheet
+concatenation process.</p></li>
+<li><p>Comics are now sorted consistently on index and archive pages.</p></li>
+<li><p>Chapter titles no longer contain trailing newlines.</p></li>
+<li><p>If a comic has multiple authors, this is reflected in the JSON Feed.</p></li>
+<li><p>Characters are attributed to the correct comics in the site JSON
+endpoints file.</p></li>
+<li><p>Commentaries no longer contain empty <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> elements.</p></li>
+</ul>
+<p>No matter how many times the Sun rises or the Moon sets, like the
+lodestar above that guides us, may the winds of fortune ever blow your
+way.</p>
+</div>
+</div>
+<div class="section" id="version-6-0-3">
+<h2>Version 6.0.3<a class="headerlink" href="#version-6-0-3" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2020-07-26</p>
+<ul class="simple">
+<li><p>Fixed a bug that kept headers and banners from copying to output
+under some circumstances.</p></li>
+</ul>
+</div>
+<div class="section" id="version-6-0-2">
+<h2>Version 6.0.2<a class="headerlink" href="#version-6-0-2" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2020-07-18</p>
+<ul class="simple">
+<li><p>Removing some accidental JSON debug output from building. ^_^;;</p></li>
+</ul>
+</div>
+<div class="section" id="version-6-0-1">
+<h2>Version 6.0.1<a class="headerlink" href="#version-6-0-1" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2020-07-18</p>
+<ul class="simple">
+<li><p>Replaced awesome-slugify with
+<a class="reference external" href="https://pypi.org/project/python-slugify/">python-slugify</a>, as the
+former is no longer actively developed.</p></li>
+<li><p>Minor updates to JSON Feed generation to comply with version 1.1 of
+the spec.</p></li>
+</ul>
+</div>
+<div class="section" id="version-6-0-0-ukyou">
+<h2>Version 6.0.0 “Ukyou”<a class="headerlink" href="#version-6-0-0-ukyou" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2020-05-27</p>
+<ul class="simple">
+<li><p>Added new themes “fluff”, “crystal”, and “elemental” (which is
+configurable, like “seasonal”).</p></li>
+<li><p>Added progress bars for time-consuming parts of site generation, like
+finding images and creating tag index pages. This feature adds
+<a class="reference external" href="https://pypi.org/project/tqdm/">tdqm</a> as a dependency.</p></li>
+<li><p>Added rudimentary <a class="reference external" href="https://jsonfeed.org/">JSON Feed</a> support. I
+hacked this together myself based on existing JSON endpoint bits; it
+validates, but should be considered experimental.</p></li>
+<li><p>Added feature to generate tables of contents on archive pages if the
+comic has chapters.</p></li>
+<li><p>Improvements to the “book”, “fairy”, “gothic”, and “city” themes.</p></li>
+<li><p>Optimized some graphics slightly. There should be little or no visual
+difference.</p></li>
+<li><p>Cut some unneeded mixin imports from the theme SCSS files.</p></li>
+<li><p>Fixed an error in the default conf.ini – <code class="docutils literal notranslate"><span class="pre">scrollto</span></code> was mistakenly
+listed as <code class="docutils literal notranslate"><span class="pre">skipto</span></code> and so did not work.</p></li>
+<li><p>Fixed several bugs in non-chaptered comic archives.</p></li>
+<li><p>Changed the recommended alternate value of <code class="docutils literal notranslate"><span class="pre">scrollto</span></code> from “comic”
+to “topbox” so that above-strip navigation can still be accessed.
+“comic” is still accepted as a valid value for <code class="docutils literal notranslate"><span class="pre">scrollto</span></code>.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">scrollto</span></code> to archive links as well.</p></li>
+<li><p>Allow disabling <code class="docutils literal notranslate"><span class="pre">scrollto</span></code> by setting it to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p>Added classes and I.D.s to some elements that did not have them.</p></li>
+<li><p>Added social button for Mastodon.</p></li>
+<li><p>RSS feed generation bugfixes: less hacky output selection and comment
+creation, and strips with a more recent date will appear closer to
+the top of the XML file.</p></li>
+<li><p>Cleaned up social media icon code and markup a bit.</p></li>
+<li><p>Removed trailing spaces that were accidentally inserted after speaker
+identifiers in transcripts.</p></li>
+<li><p>Many improvements to the HOWTO.md tutorial file.</p></li>
+<li><p>Adding page URL as an argument to <code class="docutils literal notranslate"><span class="pre">format()</span></code> when generating pages.
+If you want to add something like a “share” button to your page
+templates (per the “Extending Springheel Sites” section of HOWTO.md),
+you can use <code class="docutils literal notranslate"><span class="pre">{url}</span></code> in place of a static permalink. Springheel will
+now replace that with the page’s URL.</p></li>
+<li><p>The default alt text that appears when <code class="docutils literal notranslate"><span class="pre">alt</span></code> is unset is now more
+informative.</p></li>
+<li><p>Page numbering now sensibly allows for page number 0. (It previously
+started from 1.) This allows for cover pages and the like without
+creating confusing constructions like “Page #2 ‘Page 1’”.</p></li>
+<li><p>If they exist, some non-strip assets (e.g. stylesheets, site
+graphics, navigation arrows) are no longer rewritten when building,
+to avoid them being copied and re-copied over and over. Delete
+<code class="docutils literal notranslate"><span class="pre">output/assets</span></code> and <code class="docutils literal notranslate"><span class="pre">output/arrows</span></code> if you do want to overwrite
+these files.</p></li>
+</ul>
+</div>
+<div class="section" id="version-5-2-4">
+<h2>Version 5.2.4<a class="headerlink" href="#version-5-2-4" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-12-29</p>
+<ul class="simple">
+<li><p>Alt text for comic pages is now a translated string.</p></li>
+<li><p>Extra images now have alt text, allowing screen readers on some
+platforms to announce their captions properly.</p></li>
+</ul>
+</div>
+<div class="section" id="version-5-2-3">
+<h2>Version 5.2.3<a class="headerlink" href="#version-5-2-3" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-12-29</p>
+<ul class="simple">
+<li><p>Finally accepted that my paltry attempt to support favicons was in
+error. Users who want to add favicons should edit their site’s local
+templates (the old/bad favicon code has been replaced with a comment
+indicating where to insert the output from a dedicated favicon
+generator) and manually copy the appropriate files into <code class="docutils literal notranslate"><span class="pre">output</span></code>.</p></li>
+<li><p>Fixed a couple of minor HTML errors in templates (mostly extra
+whitespace and single-quoted elements) and the processing of same.</p></li>
+</ul>
+</div>
+<div class="section" id="version-5-2-2">
+<h2>Version 5.2.2<a class="headerlink" href="#version-5-2-2" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-12-16</p>
+<ul class="simple">
+<li><p>Improved metadata parsing a bit.</p></li>
+<li><p>Added missing docstrings.</p></li>
+<li><p>Fixed some quirks in page-footer copyright statements.</p></li>
+<li><p>Cleaned up some unused functions.</p></li>
+<li><p>Updated HOWTO.md</p></li>
+</ul>
+</div>
+<div class="section" id="version-5-2-1">
+<h2>Version 5.2.1<a class="headerlink" href="#version-5-2-1" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-10-31</p>
+<ul class="simple">
+<li><p>Removed the <code class="docutils literal notranslate"><span class="pre">langcodes</span></code> dependency. Multi-language site linking
+should work the same as before, if not better.</p></li>
+<li><p>Added display of the original language code as a fallback if
+Springheel doesn’t know the proper name for a language during
+multi-language site linking.</p></li>
+</ul>
+</div>
+<div class="section" id="version-5-2-0-bossun">
+<h2>Version 5.2.0 “Bossun”<a class="headerlink" href="#version-5-2-0-bossun" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-10-27</p>
+<ul class="simple">
+<li><p>Made it possible to insert links to your Springheel site in other
+languages in the site footer, using the new <code class="docutils literal notranslate"><span class="pre">multilang</span></code> config
+option. Notably, this adds <code class="docutils literal notranslate"><span class="pre">langcodes</span></code> as a dependency (to display
+the language names correctly).</p></li>
+<li><p>Added functionality to generate a JSON file (<code class="docutils literal notranslate"><span class="pre">output/site.json</span></code>)
+with detailed information about the site, including URL endpoints.
+This should theoretically make it easier to extend Springheel sites
+with other programs.</p></li>
+<li><p>Fixed an error in social icon spacing. (Re-init any existing site
+templates.)</p></li>
+<li><p>Updated HOWTO.md</p></li>
+</ul>
+</div>
+<div class="section" id="version-5-1-0-senku">
+<h2>Version 5.1.0 “Senku”<a class="headerlink" href="#version-5-1-0-senku" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-10-23</p>
+<ul class="simple">
+<li><p>Added a configuration option for skip links and comic navigation to
+scroll directly to the comic image, instead of to the page title.</p></li>
+<li><p>Fixed an error that was preventing sites’ local <code class="docutils literal notranslate"><span class="pre">strings.json</span></code>
+files from being used.</p></li>
+<li><p>Completely rewrote comic navigation.</p></li>
+<li><p>Started work on a Spanish translation. It’s incomplete and likely
+weird in many places; I don’t actually speak Spanish. (The
+translation is based entirely on poking around on Spanish webcomic
+sites to see how they render the common terms, double-checking with
+several dictionaries.)</p></li>
+<li><p>Started a French translation in the same way, although I’m even less
+sure of this one’s accuracy.</p></li>
+<li><p>Removed references to GitHub from <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> and templates in
+protest of their contract with ICE.</p></li>
+</ul>
+</div>
+<div class="section" id="version-5-0-3">
+<h2>Version 5.0.3<a class="headerlink" href="#version-5-0-3" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-10-10</p>
+<ul class="simple">
+<li><p>Fixed a major bug where comics on multi-comic sites were added to the
+wrong chapters.</p></li>
+<li><p>Corrected the error message that appears if “status” is unset.</p></li>
+</ul>
+</div>
+<div class="section" id="version-5-0-2">
+<h2>Version 5.0.2<a class="headerlink" href="#version-5-0-2" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-10-2</p>
+<ul class="simple">
+<li><p>Fixed a bug where tag page results weren’t being sorted correctly.</p></li>
+<li><p>Archive page titles for single-comic sites are now translatable.</p></li>
+<li><p>Fixed an error where colons couldn’t be used in some metadata fields.</p></li>
+<li><p>Removed the long-unnecessary language prompt when running
+<code class="docutils literal notranslate"><span class="pre">springheel-init</span></code>.</p></li>
+<li><p>Lots of improvements to all themes. (Make sure to re-run
+<code class="docutils literal notranslate"><span class="pre">springheel-init</span></code> to update your stylesheets)</p></li>
+</ul>
+</div>
+<div class="section" id="version-5-0-1">
+<h2>Version 5.0.1<a class="headerlink" href="#version-5-0-1" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-09-19</p>
+<ul class="simple">
+<li><p>Started escaping most things that will appear as HTML.</p></li>
+</ul>
+</div>
+<div class="section" id="version-5-0-0-azumane">
+<h2>Version 5.0.0 “Azumane”<a class="headerlink" href="#version-5-0-0-azumane" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-09-3</p>
+<ul class="simple">
+<li><p>Added proper tagging system.</p></li>
+<li><p>Added option for zero-padding page numbers.</p></li>
+<li><p>Cleared out some unused stuff from archive and navigation generation
++ the default conf.ini</p></li>
+<li><p>Fixed some issues with image renaming.</p></li>
+<li><p>Fixed error where chaptered works sometimes appeared twice on archive
+pages.</p></li>
+<li><p>Started naming major/minor versions [STRIKEOUT:after hot anime dudes]</p></li>
+</ul>
+</div>
+<div class="section" id="version-4-1-0">
+<h2>Version 4.1.0<a class="headerlink" href="#version-4-1-0" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-07-23</p>
+<ul class="simple">
+<li><p>Springheel now generates XML site maps of comic sites.</p></li>
+<li><p>Cleaned up logging a bit.</p></li>
+</ul>
+</div>
+<div class="section" id="version-4-0-0">
+<h2>Version 4.0.0<a class="headerlink" href="#version-4-0-0" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-06-20</p>
+<ul class="simple">
+<li><p>Added new themes “revolution”, “fairy”, “sysadmin”, and “might”.</p></li>
+<li><p>Separated traits from descriptions on character pages.</p></li>
+<li><p>Fixed major error where a multi-comic site wouldn’t generate if some
+comics had a characters file and some didn’t.</p></li>
+<li><p>Fixed bug where slugs were not URL-safe.</p></li>
+<li><p>Fixed bug where the archive page’s main heading wasn’t getting
+translated.</p></li>
+<li><p>Fixed bug where extras pages used a comic’s title and banner, instead
+of the sitewide ones.</p></li>
+<li><p>Slight improvements to “seasonal” and “showtime” themes.</p></li>
+</ul>
+</div>
+<div class="section" id="version-3-0-3">
+<h2>Version 3.0.3<a class="headerlink" href="#version-3-0-3" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-06-15</p>
+<ul class="simple">
+<li><p>Fixed a very stupid copy+paste error that caused public domain comics
+to be described as published from a U.R.L. (instead of their
+respective country).</p></li>
+</ul>
+</div>
+<div class="section" id="version-3-0-2">
+<h2>Version 3.0.2<a class="headerlink" href="#version-3-0-2" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-06-15</p>
+<ul class="simple">
+<li><p>Did a better job fixing the character bug from the previous version.</p></li>
+<li><p>Fixed an error where non-transcribed comics wouldn’t generate on
+Windows.</p></li>
+<li><p>Fiddled with the markdown in HOWTO.md because it was displaying
+strangely in some programs.</p></li>
+</ul>
+</div>
+<div class="section" id="version-3-0-1">
+<h2>Version 3.0.1<a class="headerlink" href="#version-3-0-1" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-05-25</p>
+<ul class="simple">
+<li><p>Fixed a bug where archives weren’t generating correctly for
+non-chaptered comics.</p></li>
+<li><p>Fixed a bug where the ordering of character attributes changed
+randomly every time the page was regenerated.</p></li>
+<li><p>Updated some information in the default conf.ini file.</p></li>
+</ul>
+</div>
+<div class="section" id="version-3-0-0">
+<h2>Version 3.0.0<a class="headerlink" href="#version-3-0-0" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-05-10</p>
+<ul class="simple">
+<li><p>Added extras page functionality</p></li>
+<li><p>Added new theme “showtime”</p></li>
+<li><p>Corrected <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span></code> elements for character pages</p></li>
+<li><p>Improved logging</p></li>
+</ul>
+</div>
+<div class="section" id="version-2-0-0">
+<h2>Version 2.0.0<a class="headerlink" href="#version-2-0-0" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-02-9</p>
+<ul class="simple">
+<li><p>Condensed template files into one</p></li>
+<li><p>Improved accessibility</p></li>
+<li><p>Updated translations</p></li>
+</ul>
+</div>
+<div class="section" id="version-1-0-2">
+<h2>Version 1.0.2<a class="headerlink" href="#version-1-0-2" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-01-25</p>
+<ul class="simple">
+<li><p>Fixed a bug where archives couldn’t be generated for multi-comic
+sites.</p></li>
+</ul>
+</div>
+<div class="section" id="version-1-0-1">
+<h2>Version 1.0.1<a class="headerlink" href="#version-1-0-1" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-01-25</p>
+<ul class="simple">
+<li><p>Fixed the parts of the readme that said arrow was a dependency (it
+isn’t).</p></li>
+<li><p>Fixed a bug where .sass-cache was getting installed as if it were a
+theme.</p></li>
+</ul>
+</div>
+<div class="section" id="version-1-0-0">
+<h2>Version 1.0.0<a class="headerlink" href="#version-1-0-0" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Date: 2019-01-24</p>
+<ul class="simple">
+<li><p>First public release!</p></li>
+<li><p>Streamlined config files.</p></li>
+<li><p>Tidied up all stylesheets and templates.</p></li>
+<li><p>Added some more translation strings.</p></li>
+<li><p>Refactored a whole lot of code and made it neater.</p></li>
+<li><p>Fixed miscellaneous bugs.</p></li>
+<li><p>Added new themes “rock” and “western”.</p></li>
+<li><p>Added better arrows for some themes.</p></li>
+</ul>
+</div>
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Springheel Changelog</a><ul>
+<li><a class="reference internal" href="#version-7-0-2">Version 7.0.2</a></li>
+<li><a class="reference internal" href="#version-7-0-1">Version 7.0.1</a></li>
+<li><a class="reference internal" href="#version-7-0-0-chilchuck">Version 7.0.0 “Chilchuck”</a><ul>
+<li><a class="reference internal" href="#new-features">New Features</a></li>
+<li><a class="reference internal" href="#new-default-themes">New Default Themes</a></li>
+<li><a class="reference internal" href="#improvements">Improvements</a></li>
+<li><a class="reference internal" href="#bugfixes">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-6-0-3">Version 6.0.3</a></li>
+<li><a class="reference internal" href="#version-6-0-2">Version 6.0.2</a></li>
+<li><a class="reference internal" href="#version-6-0-1">Version 6.0.1</a></li>
+<li><a class="reference internal" href="#version-6-0-0-ukyou">Version 6.0.0 “Ukyou”</a></li>
+<li><a class="reference internal" href="#version-5-2-4">Version 5.2.4</a></li>
+<li><a class="reference internal" href="#version-5-2-3">Version 5.2.3</a></li>
+<li><a class="reference internal" href="#version-5-2-2">Version 5.2.2</a></li>
+<li><a class="reference internal" href="#version-5-2-1">Version 5.2.1</a></li>
+<li><a class="reference internal" href="#version-5-2-0-bossun">Version 5.2.0 “Bossun”</a></li>
+<li><a class="reference internal" href="#version-5-1-0-senku">Version 5.1.0 “Senku”</a></li>
+<li><a class="reference internal" href="#version-5-0-3">Version 5.0.3</a></li>
+<li><a class="reference internal" href="#version-5-0-2">Version 5.0.2</a></li>
+<li><a class="reference internal" href="#version-5-0-1">Version 5.0.1</a></li>
+<li><a class="reference internal" href="#version-5-0-0-azumane">Version 5.0.0 “Azumane”</a></li>
+<li><a class="reference internal" href="#version-4-1-0">Version 4.1.0</a></li>
+<li><a class="reference internal" href="#version-4-0-0">Version 4.0.0</a></li>
+<li><a class="reference internal" href="#version-3-0-3">Version 3.0.3</a></li>
+<li><a class="reference internal" href="#version-3-0-2">Version 3.0.2</a></li>
+<li><a class="reference internal" href="#version-3-0-1">Version 3.0.1</a></li>
+<li><a class="reference internal" href="#version-3-0-0">Version 3.0.0</a></li>
+<li><a class="reference internal" href="#version-2-0-0">Version 2.0.0</a></li>
+<li><a class="reference internal" href="#version-1-0-2">Version 1.0.2</a></li>
+<li><a class="reference internal" href="#version-1-0-1">Version 1.0.1</a></li>
+<li><a class="reference internal" href="#version-1-0-0">Version 1.0.0</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="faq.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">Frequently Asked Questions</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/changelog.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">Springheel Changelog</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="faq.html" title="Frequently Asked Questions"
+                aria-label="previous: Frequently Asked Questions"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

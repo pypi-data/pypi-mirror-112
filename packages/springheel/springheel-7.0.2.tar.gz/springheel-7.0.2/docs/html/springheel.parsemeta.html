@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>springheel.parsemeta module &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="springheel.parsetranscript module" aria-label="springheel.parsetranscript module" href="springheel.parsetranscript.html" />
+    <link rel="prev" title="springheel.parseconf module" aria-label="springheel.parseconf module" href="springheel.parseconf.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.parsemeta module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.parseconf.html" title="springheel.parseconf module"
+                aria-label="previous: springheel.parseconf module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.parsetranscript.html" title="springheel.parsetranscript module"
+                aria-label="next: springheel.parsetranscript module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="module-springheel.parsemeta">
+<span id="springheel-parsemeta-module"></span><h1>springheel.parsemeta module<a class="headerlink" href="#module-springheel.parsemeta" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<p>Parse metadata files.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.parsemeta.dictizeMeta">
+<span class="sig-prename descclassname"><span class="pre">springheel.parsemeta.</span></span><span class="sig-name descname"><span class="pre">dictizeMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#springheel.parsemeta.dictizeMeta" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the plain metadata into a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>m</strong><span class="classifier">list</span></dt><dd><p>A list of lines with colon-separated metadata.</p>
+</dd>
+<dt><strong>file_name</strong><span class="classifier">str</span></dt><dd><p>The path to the metadata file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dict</strong></dt><dd><p>The dictionary-fied metadata.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.parsemeta.getMetaCom">
+<span class="sig-prename descclassname"><span class="pre">springheel.parsemeta.</span></span><span class="sig-name descname"><span class="pre">getMetaCom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meta_raw</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translated_strings</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel.parsemeta.getMetaCom" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Separate the metadata from formatting info and commentary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>meta_raw</strong><span class="classifier">list</span></dt><dd><p>Lines from the metadata file.</p>
+</dd>
+<dt><strong>translated_strings</strong><span class="classifier">dict</span></dt><dd><p>The translation file contents for this site.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>meta_nl</strong><span class="classifier">list</span></dt><dd><p>Metadata lines with key: value pairs.</p>
+</dd>
+<dt><strong>comments</strong><span class="classifier">list</span></dt><dd><p>HTML-escaped creator commentary lines.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.parsemeta.parseMetadata">
+<span class="sig-prename descclassname"><span class="pre">springheel.parsemeta.</span></span><span class="sig-name descname"><span class="pre">parseMetadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translated_strings</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel.parsemeta.parseMetadata" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Read a comic strip metadata file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>file_name</strong><span class="classifier">str</span></dt><dd><p>The path to the metadata file.</p>
+</dd>
+<dt><strong>translated_strings</strong><span class="classifier">dict</span></dt><dd><p>The translation file contents for this site.</p>
+</dd>
+<dt><strong>json_mode</strong><span class="classifier">bool</span></dt><dd><p>Whether to load the metadata file as JSON (True) or plain text
+(False).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>meta</strong><span class="classifier">dict</span></dt><dd><p>A dictionary of strip metadata.</p>
+</dd>
+<dt><strong>commentary</strong><span class="classifier">str</span></dt><dd><p>Creator commentary formatted as HTML paragraphs.</p>
+</dd>
+<dt><strong>c</strong><span class="classifier">list</span></dt><dd><p>Raw commentary block.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.parsemeta.readJsonMeta">
+<span class="sig-prename descclassname"><span class="pre">springheel.parsemeta.</span></span><span class="sig-name descname"><span class="pre">readJsonMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translated_strings</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#springheel.parsemeta.readJsonMeta" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a metadata file in JSON format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>file_name</strong><span class="classifier">str</span></dt><dd><p>The path to the metadata file.</p>
+</dd>
+<dt><strong>translated_strings</strong><span class="classifier">dict</span></dt><dd><p>The translation file contents for this site.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dict</strong></dt><dd><p>A dictionary of strip metadata.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.parsemeta.readMeta">
+<span class="sig-prename descclassname"><span class="pre">springheel.parsemeta.</span></span><span class="sig-name descname"><span class="pre">readMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel.parsemeta.readMeta" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a metadata file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>file_name</strong><span class="classifier">str</span></dt><dd><p>The path to the metadata file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>list of str</strong></dt><dd><p>Lines from the metadata file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="springheel.parseconf.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">springheel.parseconf module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="springheel.parsetranscript.html"
+                        title="next chapter"
+                        aria-label="next chapter">springheel.parsetranscript module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/springheel.parsemeta.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.parsemeta module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.parseconf.html" title="springheel.parseconf module"
+                aria-label="previous: springheel.parseconf module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.parsetranscript.html" title="springheel.parsetranscript module"
+                aria-label="next: springheel.parsetranscript module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>

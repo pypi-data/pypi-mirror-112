@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>springheel.genextra module &#8212; Springheel 7.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramida.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="springheel.genjsonfeed module" aria-label="springheel.genjsonfeed module" href="springheel.genjsonfeed.html" />
+    <link rel="prev" title="springheel.generatenav module" aria-label="springheel.generatenav module" href="springheel.generatenav.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.genextra module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.generatenav.html" title="springheel.generatenav module"
+                aria-label="previous: springheel.generatenav module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.genjsonfeed.html" title="springheel.genjsonfeed module"
+                aria-label="next: springheel.genjsonfeed module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+  <div class="section" id="module-springheel.genextra">
+<span id="springheel-genextra-module"></span><h1>springheel.genextra module<a class="headerlink" href="#module-springheel.genextra" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<p>Generate extras pages.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.genextra.copyExtras">
+<em class="property"><span class="pre">async</span> </em><span class="sig-prename descclassname"><span class="pre">springheel.genextra.</span></span><span class="sig-name descname"><span class="pre">copyExtras</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">copy_queue</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#springheel.genextra.copyExtras" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Asynchronously copy items for the extras page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>copy_queue</strong><span class="classifier">list of dict</span></dt><dd><p>A dictionary indicating the original paths and output paths of
+files to be copied.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.genextra.duH">
+<span class="sig-prename descclassname"><span class="pre">springheel.genextra.</span></span><span class="sig-name descname"><span class="pre">duH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size_in_b</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimal_separator</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#springheel.genextra.duH" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a filesize from bytes to kibibytes or mebibytes.</p>
+<p>Used for indicating the filesize of downloads on extra pages in a
+more human-comprehensible manner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>size_in_b</strong><span class="classifier">int</span></dt><dd><p>The filesize in bytes.</p>
+</dd>
+<dt><strong>decimal_separator</strong><span class="classifier">str</span></dt><dd><p>The decimal separator used by the current site locale.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>str</strong></dt><dd><p>The filesize and unit used.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">springheel</span><span class="o">.</span><span class="n">genextra</span><span class="o">.</span><span class="n">duH</span><span class="p">(</span><span class="mi">2357621</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="go">&#39;2.2 MiB&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="springheel.genextra.gen_extra">
+<span class="sig-prename descclassname"><span class="pre">springheel.genextra.</span></span><span class="sig-name descname"><span class="pre">gen_extra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">o_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extras_j</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translated_strings</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_images</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="springheel.classes.html#springheel.classes.EXpage" title="springheel.classes.EXpage"><span class="pre">springheel.classes.EXpage</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#springheel.genextra.gen_extra" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Generate an extras page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>i_path</strong><span class="classifier">str</span></dt><dd><p>Path to the input folder.</p>
+</dd>
+<dt><strong>o_path</strong><span class="classifier">str</span></dt><dd><p>Path to the output folder.</p>
+</dd>
+<dt><strong>extras_j</strong><span class="classifier">str</span></dt><dd><p>Path to the Extra.json file.</p>
+</dd>
+<dt><strong>translated_strings</strong><span class="classifier">dict</span></dt><dd><p>The translation file contents for this site.</p>
+</dd>
+<dt><strong>all_images</strong><span class="classifier">dict</span></dt><dd><p>A dictionary mapping image filenames to (width, height) in
+pixels.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>EXpage</strong></dt><dd><p>The completed extras page. A <a class="reference internal" href="springheel.classes.html#springheel.classes.EXpage" title="springheel.classes.EXpage"><code class="xref py py-class docutils literal notranslate"><span class="pre">springheel.classes.EXpage</span></code></a>
+object.</p>
+</dd>
+<dt><strong>j</strong><span class="classifier">dict</span></dt><dd><p>Raw JSON of the extras page.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+</main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.svg" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="springheel.generatenav.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">springheel.generatenav module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="springheel.genjsonfeed.html"
+                        title="next chapter"
+                        aria-label="next chapter">springheel.genjsonfeed module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/springheel.genextra.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Springheel 7.0.2 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >springheel</a> &#8594;</li>
+          <li class="nav-item nav-item-2"><a href="springheel.html" >springheel package</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">springheel.genextra module</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="springheel.generatenav.html" title="springheel.generatenav module"
+                aria-label="previous: springheel.generatenav module"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="springheel.genjsonfeed.html" title="springheel.genjsonfeed module"
+                aria-label="next: springheel.genjsonfeed module"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2019–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </footer>
+  </body>
+</html>
