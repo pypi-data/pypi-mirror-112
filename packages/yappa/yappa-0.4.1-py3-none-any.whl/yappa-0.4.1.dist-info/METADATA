@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: yappa
+Version: 0.4.1
+Summary: Easy serverless deploy of python web applications
+Home-page: UNKNOWN
+Author: Egor Korovin
+Author-email: kbkor@yandex.ru
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >3.8.0
+Description-Content-Type: text/markdown
+Requires-Dist: boto3 (>=1.10)
+Requires-Dist: click (>=8.0)
+Requires-Dist: httpx (>=0.18)
+Requires-Dist: yandexcloud (>=0.92)
+Requires-Dist: boltons (>=21.0)
+Requires-Dist: idna (<3,>=2.5)
+Requires-Dist: PyYAML (>=5.0)
+Requires-Dist: furl (>=2.0)
+Requires-Dist: pytz (>=2021)
+
+# Simple and Easy serverless deploy of python web-apps Yandex Cloud
+
+1. create account at Yandex Cloud
+2. use Yappa:
+```shell
+$ yappa setup
+$ yappa deploy
+ ``` 
+
+## that's it!
+
+# Аутентификация в Yandex Cloud
+
+Первоначальный шаг настройки доступа - команда:
+
+```shell 
+$ yappa setup
+``` 
+
+У вас спросят OAuth токен, после yappa создаст сервисный аккаунт и сохранит его ключ доступа в файл .yc. Также на этом
+она сохранит айди облачного каталога в файл конфигурации
+
+разъянить откуда берутся и зачем нужны token, folder_id, .yc
+
+### limitations
+
+installing grpcio on Apple M1
+
