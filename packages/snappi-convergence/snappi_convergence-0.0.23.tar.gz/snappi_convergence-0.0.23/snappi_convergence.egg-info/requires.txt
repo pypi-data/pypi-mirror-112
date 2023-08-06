@@ -1,0 +1,7 @@
+requests
+pyyaml
+jsonpath-ng
+typing
+
+[testing]
+pytest
