@@ -1,0 +1,6 @@
+[console_scripts]
+fortlab = fortlab.__main__:main
+
+[microapp.projects]
+fortlab = fortlab
+
