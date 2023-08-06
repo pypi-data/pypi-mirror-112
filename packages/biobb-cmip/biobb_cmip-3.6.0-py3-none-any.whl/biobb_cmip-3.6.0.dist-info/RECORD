@@ -1,0 +1,11 @@
+biobb_cmip/__init__.py,sha256=dvtb12GPzIRtp_IZswiOV_BLN2nh2c4ZkQb4X_gXy9A,40
+biobb_cmip/cmip/__init__.py,sha256=3quXlQWPPMh_4lNBa07XwA74iB7SAynLdclCKyOjf2o,45
+biobb_cmip/cmip/cmip.py,sha256=vecsYVD_lBKOhAirEQt3pPvadtWscKaiB74rUjFO1Sw,14788
+biobb_cmip/cmip/common.py,sha256=s0msw6qfsOCmz6QpJPw90JqnBP56ghD6__1ZFJoiz68,9047
+biobb_cmip/cmip/titration.py,sha256=8n8YBLJGXE9o8kBlVLYfC1-YF1lhaQ1DJXZvJUOk74M,12781
+biobb_cmip/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biobb_cmip-3.6.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+biobb_cmip-3.6.0.dist-info/METADATA,sha256=1IbGqkf2U8Vnhn6Be4SHQ0tas_0yppc55GhHjwftOQM,4057
+biobb_cmip-3.6.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+biobb_cmip-3.6.0.dist-info/top_level.txt,sha256=WLzNLjCKQXb9wyV5fxBHoDz0Uz2toyMTqCbADOgc8Dk,11
+biobb_cmip-3.6.0.dist-info/RECORD,,
