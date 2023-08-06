@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/msb/__init__.py
+src/msb/server.py
+src/msb/versioncheck.py
+src/msb.egg-info/PKG-INFO
+src/msb.egg-info/SOURCES.txt
+src/msb.egg-info/dependency_links.txt
+src/msb.egg-info/requires.txt
+src/msb.egg-info/top_level.txt
