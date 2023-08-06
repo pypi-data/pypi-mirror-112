@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+StarData/Error.py
+StarData/StarData.py
+StarData/__init__.py
+StarData.egg-info/PKG-INFO
+StarData.egg-info/SOURCES.txt
+StarData.egg-info/dependency_links.txt
+StarData.egg-info/requires.txt
+StarData.egg-info/top_level.txt
