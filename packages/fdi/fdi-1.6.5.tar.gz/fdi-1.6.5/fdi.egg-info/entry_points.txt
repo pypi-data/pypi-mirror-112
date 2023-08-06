@@ -1,0 +1,3 @@
+[console_scripts]
+yaml2python = fdi.dataset.yaml2python:main
+

@@ -1,0 +1,41 @@
+Dockers
+=======
+
+The following dockers are available:
+
+
++--------+---------------+-------+-------------+------------+------------------+--------------+---------------+---------+
+|**Name**|**Description**|**Base |**Installed  |**Default   |**Pull**          | **Build      |**Launch       |**Ports**|
+|        |               |Image**|Packages**   | User**     |                  |Command**     |Command**      |         |
++--------+---------------+-------+-------------+------------+------------------+--------------+---------------+---------+
+|  fdi   |linux with fdi |Ubuntu |  dataset,   | ``fdi``    |  ``docker        |    ``make    |    ``make     |    -    |
+|        |  tested and   | 18.04 |  pal, pns   |            |    pull          |build_docker``|launch_docker``|         |
+|        | ready to run. |       |  and DEV,   |            |mhastro/fdi``     |              |               |         |
+|        |               |       |    SERV     |            |                  |              |               |         |
+|        |               |       |dependencies.|            |                  |              |               |         |
++--------+---------------+-------+-------------+------------+------------------+--------------+---------------+---------+
+|httppool|  Apache HTTP  |Ubuntu |dataset, pal,| ``apache`` |  ``docker pull   |    ``make    |    ``make     |  9884   |
+|        | Pool server,  | 18.04 |pns, and DEV,|(Convenience|mhastro/httppool``|build_server``|launch_server``|         |
+|        |  tested and   |       |    SERV     |  links in  |                  |              |               |         |
+|        |   running.    |       |dependencies.|    home    |                  |              |               |         |
+|        |               |       |             |   dir.)    |                  |              |               |         |
++--------+---------------+-------+-------------+------------+------------------+--------------+---------------+---------+
+
+Login the latest built running container:
+
+.. code-block:: shell
+
+	make it
+
+Stop the latest built running container:
+
+.. code-block:: shell
+
+	make rm_docker
+
+Remove the latest built running container and image:
+
+.. code-block:: shell
+
+	make rm_dockeri
+

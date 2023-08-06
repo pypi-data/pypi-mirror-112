@@ -1,0 +1,10 @@
+variables:
+  GIT_STRATEGY: clone
+test-dataset:
+  stage: test
+  script: make test1
+
+test-pal:
+  stage: test
+  script: make test2
+  
