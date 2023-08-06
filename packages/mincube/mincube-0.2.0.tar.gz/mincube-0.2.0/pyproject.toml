@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "mincube"
+version = "0.2.0"
+description = ""
+authors = ["Vivek Pandit <vivek.pandit@outlook.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+my-script = "minimum_cubes.getCubes:minCubes"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
