@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+etta/__init__.py
+etta/helpers.py
+etta/php_wrappers.py
+etta/sanity.py
+etta.egg-info/PKG-INFO
+etta.egg-info/SOURCES.txt
+etta.egg-info/dependency_links.txt
+etta.egg-info/requires.txt
+etta.egg-info/top_level.txt
