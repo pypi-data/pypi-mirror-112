@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: batconf
+Version: 0.1.2
+Summary: Application configuration tool from the BAT project
+License: MIT
+Author: Lundy Bernard
+Author-email: lundy.bernard@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=5.4.1,<6.0.0)
