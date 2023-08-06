@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+dbt/adapters/openlineage_bigquery/__init__.py
+dbt/adapters/openlineage_bigquery/connections.py
+dbt/adapters/openlineage_bigquery/impl.py
+dbt/adapters/openlineage_bigquery/schema/__init__.py
+dbt/include/openlineage_bigquery/__init__.py
+marquez_dbt_bigquery.egg-info/PKG-INFO
+marquez_dbt_bigquery.egg-info/SOURCES.txt
+marquez_dbt_bigquery.egg-info/dependency_links.txt
+marquez_dbt_bigquery.egg-info/not-zip-safe
+marquez_dbt_bigquery.egg-info/requires.txt
+marquez_dbt_bigquery.egg-info/top_level.txt
