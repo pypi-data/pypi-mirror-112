@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        myfitnesspal-to-sqlite=myfitnesspal_to_sqlite.cli:cli
+    
