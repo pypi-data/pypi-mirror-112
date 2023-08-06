@@ -1,0 +1,5 @@
+[console_scripts]
+gap_fit = quippy.cli:gap_fit
+quip = quippy.cli:quip
+quip-config = quippy.cli:quip_config
+
