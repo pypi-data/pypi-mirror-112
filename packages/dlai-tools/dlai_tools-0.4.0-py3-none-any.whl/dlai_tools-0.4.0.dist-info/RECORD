@@ -1,0 +1,16 @@
+dlai_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dlai_tools/custom_grader.py,sha256=y_2t9Y2NbBSmqSw0t1pIz70jVixGIq6Wr5u-hELs7tc,2341
+dlai_tools/deploy_assignment.py,sha256=v3geIYp1Y4Tzb9WFN2HjOKO6P2eMpAjNSRkkyqTbhBg,8333
+dlai_tools/test_custom_grader.py,sha256=o205L7xgDfVnBK2v9sqStL7BZBrFRZCQoWAGNue5hs0,151
+dlai_tools/test_testing_utils.py,sha256=nLkfIFW8wItbr4WqT7fx72vL783OlSxuwiMmPEE4tU4,2778
+dlai_tools/test_toc.py,sha256=6iGzjN__SMVoMRxwHhWqv-Mnam_azDy13FyyyPXZ5Y0,131
+dlai_tools/test_utils.py,sha256=ZR52rDvUxrxflKPSqyuMcm1h3lSCcyqnvcReS4BWEr0,7200
+dlai_tools/testing_utils.py,sha256=ItPwBghdyTywsA3v-8W-1MCU8D1BUUWedK9_Ar_q_80,6691
+dlai_tools/toc.py,sha256=jUzggCxm9aFBL_in8IJOx4RD-H6rzBZa8FA-nyEck3A,6752
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_add_toc__.py,sha256=Ut1QqXlPpVfajfTR_DW5kqW_w-akA9KV_pHWwQvzzT4,162
+tests/test_test_utils.py,sha256=2hUFmKs15dRqGuMWz-Lu5Y_npTI9xrNvwEroUZ5MGOs,535
+dlai_tools-0.4.0.dist-info/METADATA,sha256=0G87zRZkD-FvHHW3H5yOg9UBgqvjVbi-LvEccuCei2s,563
+dlai_tools-0.4.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dlai_tools-0.4.0.dist-info/top_level.txt,sha256=hUWJVXA3JBPE9W8xtIBZTEUmasf22Evs87YgJyrZSHE,11
+dlai_tools-0.4.0.dist-info/RECORD,,
