@@ -1,0 +1,6 @@
+importlib-metadata>=1.0python_version<'3.8'
+astroid>=1.0
+pylint>=1.0
+
+[dev]
+pytest>=1.0

@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+./pylint_restricted_imports/__init__.py
+pylint_restricted_imports.egg-info/PKG-INFO
+pylint_restricted_imports.egg-info/SOURCES.txt
+pylint_restricted_imports.egg-info/dependency_links.txt
+pylint_restricted_imports.egg-info/requires.txt
+pylint_restricted_imports.egg-info/top_level.txt
