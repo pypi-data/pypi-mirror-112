@@ -1,0 +1,11 @@
+README.md
+event_count_logger.py
+setup.py
+bin/ecl_log_event
+bin/ecl_master
+bin/ecl_reader
+event_count_logger.egg-info/PKG-INFO
+event_count_logger.egg-info/SOURCES.txt
+event_count_logger.egg-info/dependency_links.txt
+event_count_logger.egg-info/requires.txt
+event_count_logger.egg-info/top_level.txt
