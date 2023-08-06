@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: architrice
+Version: 0.0.3
+Summary: Utility to MtG decklists from online sources.
+Home-page: https://github.com/OwenFeik/architrice.git
+Author: Owen Feik
+Author-email: owen.h.feik@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/OwenFeik/architrice/archive/refs/tags/0.0.3.tar.gz
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: bs4
+
+UNKNOWN
+
