@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: tidy3d-dev
+Version: 21.2.1.10
+Summary: A Python API for Tidy3D FDTD Solver
+Home-page: UNKNOWN
+Author: FlexCompute, Inc.
+Author-email: lei@flexcompute.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
