@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+
+import sys
+import os
+rootpath = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+sys.path.append(rootpath)
+
+
+import argparse
+import importlib
+import asyncio
+import functools
+
+# facilitate exiting this complex asyncio/multithreaded program
+import atexit
+from concurrent.futures import thread
+atexit.unregister(thread._python_exit)
+
+from robotjes import client, Timer
+from robotjes.client import aui, config
+
+
+class PlayerClient:
+
+    def __init__(self, args, player_screen):
+        if args.trace:
+            self.trace = True
+        else:
+            self.trace = False
+        self.player_screen = player_screen
+        self.game_id = ""
+        self.player_id = ""
+        self.player_name = ""
+        self.last_recording_tick = {}
+
+    def create_robo(self, game_tick, robo_id):
+        self.player_screen.create_robo(game_tick, robo_id)
+
+    def robo_status(self, game_tick, robo_id, robo_status):
+        self.player_screen.robo_status(game_tick, robo_id, robo_status)
+
+    def issue_command(self, game_tick, robo_id, cmd, reply):
+        self.player_screen.issue_command(game_tick, robo_id, cmd, reply)
+
+
+async def screen_timer(scrn, player, loop):
+    if scrn.has_key():
+        scrn.close()
+        await player.stop()
+    else:
+        scrn.timer()
+
+def load_client(module_name):
+    # load user module that should contain a function like: def execute(robo)
+    execute_entrypoint = None
+    try:
+        module = importlib.import_module(module_name)
+        if hasattr(module, 'execute'):
+            execute_entrypoint = module.execute
+    except Exception as e:
+        print(f"failure to load user module: {str(e)}")
+        exit(1)
+    return execute_entrypoint
+
+async def main(args, script, loop):
+    # create and start player
+    headerline = "Remote"
+    scrn = aui.PlayerDisplay(headerline)
+    clnt = PlayerClient(args, scrn)
+    rest_client = client.RestClient(loop, args.url)
+    handler = client.RemoteEngineHandler(rest_client, args.player, args.name, args.password)
+    player = client.Player(handler, loop, clnt)
+    timer1 = Timer(1, player.timer, True)
+    timer2 = Timer(0.05, functools.partial(screen_timer, scrn, player, loop), True)
+    await player.start_player(script)
+    await player.run_game()
+    timer1.cancel()
+    timer2.cancel()
+
+if __name__ == "__main__":
+    # get commandline arguments
+    parser = argparse.ArgumentParser(description='CommandLineInterface (CLI) for Player')
+    parser.add_argument('--url', type=str, default=config.REST_URL, help='url of the robotjes REST entrypoint')
+    parser.add_argument('--player', type=str, default="me", help='name or id of the umpire')
+    parser.add_argument('--name', type=str, default="game1", help='name of the game to join')
+    parser.add_argument('--password', type=str, default="secret1", help='password needed to enter the game')
+    parser.add_argument('--module', type=str, default="sample.player.player103", help='module containing the player logic')
+    parser.add_argument('--trace', default=False, action="store_true", help='name of the maze to use')
+    args = parser.parse_args()
+
+    script = load_client(args.module)
+
+    if script:
+        aloop = asyncio.get_event_loop()
+        aloop.run_until_complete(main(args, script, aloop))
+        aloop.stop()
+    else:
+        print(f"Need valid script and maze in order to run")
