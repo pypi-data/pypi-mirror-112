@@ -1,0 +1,3 @@
+[console_scripts]
+mongodump-s3 = mongodump_s3.__main__:main
+
