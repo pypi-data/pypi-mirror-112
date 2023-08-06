@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: frigidaire
+Version: 0.11
+Summary: Python API for the Frigidaire 2.0 App
+Home-page: https://github.com/bm1549/frigidaire
+Author: Brian Marks
+License: MIT
+Description: # Frigidaire Python API
+        
+        This is an API wrapper written in Python around the Frigidaire 2.0 App.
+        
+        This was created specifically for use in [home-assistant/core](https://github.com/home-assistant/core) to introduce HomeKit support to Frigidaire air conditioners.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
