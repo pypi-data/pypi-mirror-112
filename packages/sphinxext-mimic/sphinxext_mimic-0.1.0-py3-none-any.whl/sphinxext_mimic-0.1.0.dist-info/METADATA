@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: sphinxext-mimic
+Version: 0.1.0
+Summary: Sphinx Extension to mimic Sphinx TocTrees
+Home-page: https://github.com/wpilibsuite/sphinxext-mimictoc
+Author: Dalton Smith
+Author-email: daltzsmith@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: sphinx (>=3.0)
+
+# sphinxext-mimic
+![ci](https://github.com/wpilibsuite/sphinxext-mimic/workflows/ci/badge.svg)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+Sphinx Extension to create a fake expandable table of contents. It is recommended to `:orphan:` any page where mimic is used to avoid any unexpected behavior.
+
+## Installation
+
+`python -m pip install sphinxext-mimic`
+
+## Requirements
+
+- Sphinx >= 3
+
+## Usage
+Add `sphinxext.mimic` to your extensions list in your `conf.py`
+
+```python
+extensions = [
+   sphinxext.mimic,
+]
+```
+
+Then use
+
+```
+.. mimictoc::
+```
+
+which is compatible with the default `.. toctree::` arguments.
+
+
