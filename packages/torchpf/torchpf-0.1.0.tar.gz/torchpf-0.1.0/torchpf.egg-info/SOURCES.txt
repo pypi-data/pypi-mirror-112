@@ -1,0 +1,16 @@
+README.md
+setup.py
+torchpf/__init__.py
+torchpf/__main__.py
+torchpf/compute_flops.py
+torchpf/compute_madd.py
+torchpf/compute_memory.py
+torchpf/model_hook.py
+torchpf/reporter.py
+torchpf/stat_tree.py
+torchpf/statistics.py
+torchpf.egg-info/PKG-INFO
+torchpf.egg-info/SOURCES.txt
+torchpf.egg-info/dependency_links.txt
+torchpf.egg-info/requires.txt
+torchpf.egg-info/top_level.txt
