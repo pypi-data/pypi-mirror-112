@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cctxpa
+Version: 0.1.6
+Summary: A command line tool for CCTX to analyser pcap and compare with CCTX's observables
+Home-page: https://github.com/zoeyyyzou/cctx-pcap-analyser
+Author: zoeyyy
+Author-email: yzou10@uoguelph.ca
+License: MIT
+Keywords: python cctx pcap cctxpa terminal
+Platform: UNKNOWN
+Requires-Dist: dpkt
+Requires-Dist: progress
+Requires-Dist: requests
+
+UNKNOWN
+
+
