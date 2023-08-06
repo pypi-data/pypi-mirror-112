@@ -1,0 +1,8 @@
+[console_scripts]
+socranop-ctl = socranop.cli:main
+socranop-installtool = socranop.installtool:main
+socranop-session-service = socranop.dbus:service_main
+
+[gui_scripts]
+socranop-gui = socranop.gui:main
+
