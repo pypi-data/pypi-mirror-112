@@ -1,0 +1,5 @@
+[console_scripts]
+c3loc_api = c3loc.api.main:main
+c3loc_api2 = c3loc.api2.main:main
+c3loc_ingest = c3loc.ingest.main:main
+
