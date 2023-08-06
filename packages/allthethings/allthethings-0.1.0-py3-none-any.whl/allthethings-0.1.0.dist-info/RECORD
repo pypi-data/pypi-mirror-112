@@ -1,0 +1,15 @@
+allthethings/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+allthethings/__pkginfo__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+allthethings/daterange.py,sha256=QBigbASHkW8HEG8iqdbYcV9InAKi4XPuZ2wrJ_Zu5UU,5853
+allthethings/dates.py,sha256=9oEo9DcPOtqHEa39EZe-0QGt6L334WKggw99kaLhlEM,573
+allthethings/iterables.py,sha256=kzCinXrefGx_lr01VqIzbmjO4h5-tQL19RgWhIzzs_I,297
+allthethings/ranges.py,sha256=NcZdoNZxdqHwWsYedaFfpuH9Squ8yE_L0geNVzAza80,1740
+tests/__init__.py,sha256=iTw_teUZxYB_s7S7Pm3oHt6-VBZ3S3gn3bnOxxMnATY,64
+tests/test_daterange.py,sha256=uTA_buND0xzYXwIfm4ZMsISjVdakaBORoubO6xIlHDY,6796
+tests/test_iterables.py,sha256=Vr4OweCsaVeYD9rO2BH_tVZ5yALToFkr-9EkbIRd4F0,149
+tests/test_ranges.py,sha256=fP5GIgB1piyXpWXDRYqVFvdENzB02DPa8t_sGGRDLdM,1440
+allthethings-0.1.0.dist-info/LICENSE,sha256=ZeK0oK-ap2QtMPGLN6nSsBr3xAK5XjCF17som2VaCZM,1073
+allthethings-0.1.0.dist-info/METADATA,sha256=5Efm6q3jzz7MArzupSXsd0jzNenOfZWrOEsr2pDVymw,889
+allthethings-0.1.0.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+allthethings-0.1.0.dist-info/top_level.txt,sha256=dUm4qBGcE4bAaaBfLjezpWSe296ZY_3QQAM2EQvSf3I,19
+allthethings-0.1.0.dist-info/RECORD,,
