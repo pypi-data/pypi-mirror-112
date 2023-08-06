@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+MangasOrigines.egg-info/PKG-INFO
+MangasOrigines.egg-info/SOURCES.txt
+MangasOrigines.egg-info/dependency_links.txt
+MangasOrigines.egg-info/entry_points.txt
+MangasOrigines.egg-info/requires.txt
+MangasOrigines.egg-info/top_level.txt
+mangas_origines/__init__.py
+mangas_origines/__main__.py
+mangas_origines/mangas_origines.py
+mangas_origines/utils.py
