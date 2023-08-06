@@ -1,0 +1,13 @@
+odoo/addons/shopinvader_sale_coupon/README.rst,sha256=07lSt17iwpXqUnmy-wREQ_4QGLvxgCzswcyV6KuhEAc,666
+odoo/addons/shopinvader_sale_coupon/__init__.py,sha256=qksdRxAxHhEXpY0NZlTEolhxFILjRI5o7J0O4UrAE04,23
+odoo/addons/shopinvader_sale_coupon/__manifest__.py,sha256=8A2Cst_jXtNDJF4P_gbgzdqXPtFvguL68wBj4Y8BRg8,484
+odoo/addons/shopinvader_sale_coupon/i18n/shopinvader_sale_coupon.pot,sha256=AyzPzY6fvZoAIdVCppv0SiPLoR_D-HBQlYffHd1jWNE,341
+odoo/addons/shopinvader_sale_coupon/services/__init__.py,sha256=A77adpG58meBZfSI_Gj95Yghrp4FHxX9r43qrM-_jn8,47
+odoo/addons/shopinvader_sale_coupon/services/abstract_sale.py,sha256=0ETpVaODpmYrhXvMGbHrrRiGA0Zw_Q4IdXs7CrSDfzE,1877
+odoo/addons/shopinvader_sale_coupon/services/cart.py,sha256=DUPHR8_MwfXFjA18eryjWmgYOHohK76RVUW5IBQByvA,3036
+odoo/addons/shopinvader_sale_coupon/tests/__init__.py,sha256=hOeBowbdIIBdiMr4P9L3bzW-FV9fNKaPhHo9fmEe8I0,24
+odoo/addons/shopinvader_sale_coupon/tests/test_cart.py,sha256=oAUcjYoXVN9VypT0xRJdhl_JggkwEqj-WBI4kSGoJQE,5578
+odoo14_addon_shopinvader_sale_coupon-14.0.1.0.1.dev1.dist-info/METADATA,sha256=CU77jgTat6kZM3NscMiRrVLqe60LAUDBkIrmaVsXVs4,1183
+odoo14_addon_shopinvader_sale_coupon-14.0.1.0.1.dev1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+odoo14_addon_shopinvader_sale_coupon-14.0.1.0.1.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo14_addon_shopinvader_sale_coupon-14.0.1.0.1.dev1.dist-info/RECORD,,
