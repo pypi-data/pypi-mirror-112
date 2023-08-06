@@ -1,0 +1,3 @@
+[console_scripts]
+pycmdtools = pycmdtools.main:main
+
