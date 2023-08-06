@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+deepinsight/__init__.py
+deepinsight/info.py
+deepinsight.egg-info/PKG-INFO
+deepinsight.egg-info/SOURCES.txt
+deepinsight.egg-info/dependency_links.txt
+deepinsight.egg-info/requires.txt
+deepinsight.egg-info/top_level.txt

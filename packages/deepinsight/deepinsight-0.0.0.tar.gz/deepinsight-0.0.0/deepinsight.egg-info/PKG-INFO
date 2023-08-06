@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: deepinsight
+Version: 0.0.0
+Summary: 
+Python module for deep learning tools integration in PyTorch.
+
+Home-page: https://github.com/neurospin-deepinsight/deepinsight
+Author: 
+deepinsight developers
+
+Author-email: antoine.grigis@cea.fr
+License: CeCILL-B
+Description: Python module for deep learning tools integration in PyTorch..
+        
+Platform: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
