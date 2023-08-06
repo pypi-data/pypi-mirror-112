@@ -1,0 +1,1 @@
+from sneakersaio.quicktask import QuickTask
