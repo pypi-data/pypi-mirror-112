@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "checkengine"
+version = "0.2.0"
+description = "Data-quality checks for PySpark"
+authors = ["Bartosz Mikulski <mail@mikulskibartosz.name>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/mikulskibartosz/check-engine"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pyspark = "3.0.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pytest-cov = "^2.10.0"
+pandas = "^1.0.5"
+numpy = "^1.19.0"
+behave = "^1.2.6"
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
