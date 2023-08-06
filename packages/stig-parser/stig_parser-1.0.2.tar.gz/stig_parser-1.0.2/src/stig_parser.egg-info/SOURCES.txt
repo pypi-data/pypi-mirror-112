@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/stig_parser/__init__.py
+src/stig_parser/version.py
+src/stig_parser.egg-info/PKG-INFO
+src/stig_parser.egg-info/SOURCES.txt
+src/stig_parser.egg-info/dependency_links.txt
+src/stig_parser.egg-info/requires.txt
+src/stig_parser.egg-info/top_level.txt
