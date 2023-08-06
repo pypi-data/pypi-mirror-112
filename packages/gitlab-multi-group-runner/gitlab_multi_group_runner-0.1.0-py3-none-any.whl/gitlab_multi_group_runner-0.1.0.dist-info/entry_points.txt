@@ -1,0 +1,3 @@
+[console_scripts]
+gitlab-multi-group-runner = gitlab_multi_group_runner.cli:main
+
