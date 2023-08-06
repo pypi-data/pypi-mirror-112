@@ -1,0 +1,4 @@
+[console_scripts]
+ComputerAutomation = ComputerAutomation.__init__:main
+OnlineTasks = OnlineTasks.__init__:main
+
