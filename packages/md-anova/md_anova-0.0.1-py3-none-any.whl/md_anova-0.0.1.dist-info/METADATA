@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: md-anova
+Version: 0.0.1
+Summary: Computing various components of anova
+Home-page: https://github.com/MadhurimaPaul-87
+Author: Madhurima Paul
+Author-email: mguharoy4@gmail.com
+License: MIT
+Keywords: anova
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+
+Analysis of variance (ANOVA) is a collection of statistical models and their associated estimation procedures (such as the "variation" among and between groups) used to analyze the differences among means.
+This helps in the calculation of F-ratio, SSW, SSB, total means and treatment means.
+
+Change Log
+=============
+
+0.0.1 (09/07/2021)
+----------------------
+- First Release
+
+
