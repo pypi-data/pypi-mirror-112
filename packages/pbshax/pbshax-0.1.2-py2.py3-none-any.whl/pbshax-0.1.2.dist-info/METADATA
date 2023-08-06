@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pbshax
+Version: 0.1.2
+Summary: Tools to assist with bioinformatics on PBS clusters
+Home-page: https://github.com/kdm9/pbshax
+Author: Dr. K. D. Murray
+Author-email: foss@kdmurray.id.au
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/kdm9/pbshax/issues
+Project-URL: Source, https://github.com/kdm9/pbshax
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# PBShax
+
+Missing tools for PBS clusters.
+
+
+## `pbsparallel`
+
+Like a shitty version of GNU parallel that uses `pbs_dsh` as a backend.
+
+## `regionparallel`
+
+Like `pbsparallel`, but with a helper function to iterate over genome regions
+
+
+
