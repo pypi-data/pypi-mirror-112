@@ -1,0 +1,34 @@
+{% extends "base.index" %}
+{% block content %}
+<head>
+  <title>{{ j.blogtitle }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="language" content="{{ j.lang }}">
+  <meta name="description" content="{{ j.blogsubtitle }}"/>
+  <link rel="icon" type="image/ico" href="/image/favicon.ico" />
+  <link rel="canonical" href="{{ j.url }}">
+  <link rel="alternate" type="application/rss+xml" href="/content/rss.xml">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<main>
+<h2><a href="/">{{ j.blogtitle }}</a></h2>
+{{ j.tagline }}
+<nav>
+  {% for tag in j.tags -%}
+    <a href="./tag-{{ tag }}.html">{{ tag }}</a>
+  {% endfor %}
+</nav>
+<ul class="posts">
+  {% for post in j.posts -%}
+    <li>
+      <a href="./content/{{ post.title }}/">{{ post.description }}</a>
+      <span>({{ post.date }}) {{ post.tags }}</span>
+  </li>
+  {% endfor %}
+</ul>
+</main>
+<hr>
+{% endblock %}
+
