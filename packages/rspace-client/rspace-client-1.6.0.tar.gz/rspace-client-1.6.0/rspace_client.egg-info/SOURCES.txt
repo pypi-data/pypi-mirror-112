@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+rspace_client/__init__.py
+rspace_client/advanced_query_builder.py
+rspace_client/client.py
+rspace_client/field_content.py
+rspace_client/utils.py
+rspace_client.egg-info/PKG-INFO
+rspace_client.egg-info/SOURCES.txt
+rspace_client.egg-info/dependency_links.txt
+rspace_client.egg-info/requires.txt
+rspace_client.egg-info/top_level.txt
+rspace_client/tests/__init__.py
+rspace_client/tests/field_content_test.py
