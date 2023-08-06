@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+from pywisp_emibcn.pywisp import main
+
+if __name__ == "__main__":
+   exit(main())
