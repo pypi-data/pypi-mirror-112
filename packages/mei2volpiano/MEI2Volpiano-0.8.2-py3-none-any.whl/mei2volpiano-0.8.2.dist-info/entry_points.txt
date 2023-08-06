@@ -1,0 +1,4 @@
+[console_scripts]
+mei2vol=mei2volpiano:driver.main
+mei2volpiano=mei2volpiano:driver.main
+
