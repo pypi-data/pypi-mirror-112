@@ -1,0 +1,15 @@
+wrapmail/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wrapmail/abstract_mail.py,sha256=Ds3fY37BrA0Dm3QO54SwXDrtulJ27bzZvsk9M5d6fxU,1473
+wrapmail/abstract_sender.py,sha256=PTrcnbKLemthAr4yUIgTi13mcsBzs8m8l6rlSTM1wv8,264
+wrapmail/gmail/Gmail_Sender.py,sha256=Mi4U7SUVVkl_1eC8JUl61u0UAmVruzTx2i3bWcw7FLs,1017
+wrapmail/gmail/Google.py,sha256=MYMlLUV4F1iIh2AZmX-GDWXt9Ry3l0Mw7rjgENZee88,1760
+wrapmail/gmail/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wrapmail/gmail/email.py,sha256=8Fkhm5RarI6lCtAsu0BXyQMJvVqLR5QSDtCLnlR17Hg,260
+wrapmail/smtp/Smtp_Sender.py,sha256=BJScubSChRBxT1WDU7p5CEh_FSSXryRWVZmcZRiZSzc,1178
+wrapmail/smtp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wrapmail/smtp/mail.py,sha256=KWh-L6Angg0QK70vdkJqDijnGZNaFNrz5j3DTziijaA,259
+wrapmail-0.0.1.dist-info/LICENSE,sha256=OlNNYLW_EgXKayvsL8To-Wttfcx3KK-bG-KxKJzlg6I,1073
+wrapmail-0.0.1.dist-info/METADATA,sha256=eqUAfSxY5bGe2yLpvyossGCG7AEAuHMxjVz4g66MCmQ,1545
+wrapmail-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+wrapmail-0.0.1.dist-info/top_level.txt,sha256=6v-urfR5e-EXBTdgkU4Y5eeACfp3yE1mC7V71o_DqEc,9
+wrapmail-0.0.1.dist-info/RECORD,,
