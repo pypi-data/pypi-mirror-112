@@ -1,0 +1,7 @@
+torch
+torchvision
+pytorch-lightning
+hydra-core
+omegaconf
+hydra_colorlog
+numpy
