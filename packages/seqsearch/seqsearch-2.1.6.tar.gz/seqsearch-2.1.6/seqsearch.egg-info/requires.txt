@@ -1,0 +1,12 @@
+autopaths>=1.5.0
+plumbing>=2.10.4
+fasta>=2.2.11
+biopython
+sh
+tqdm
+
+[downloads]
+wget
+
+[ftp]
+ftputil
