@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: TA7291P-driver
+Version: 0.0.1
+Summary: TA7291P driver with pigpio and pca9685 on Raspberry pi
+Home-page: https://github.com/being24/TA7291P_driver
+Author: being24
+Author-email: being24@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PCA9685-wrapper
+
+# TA7291P_driver
+TA7291P with PCA9685 and pigpio
+
+
