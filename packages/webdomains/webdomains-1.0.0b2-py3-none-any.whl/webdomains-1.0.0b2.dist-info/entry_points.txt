@@ -1,0 +1,3 @@
+[console_scripts]
+webdomains = webdomains.cli:cli
+
