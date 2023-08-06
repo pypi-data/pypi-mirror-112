@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: scrape-html
+Version: 0.0.10
+Summary: Get html in string from a page
+Home-page: UNKNOWN
+Author: https://github.com/AndyPythonCode?tab=repositories
+Author-email: andyarciniegas24@gmail.com
+License: UNKNOWN
+Requires-Dist: pydantic
+Requires-Dist: selenium
+
+
+**<h2 align='center'>Get HTML from URL</h2>**
+
