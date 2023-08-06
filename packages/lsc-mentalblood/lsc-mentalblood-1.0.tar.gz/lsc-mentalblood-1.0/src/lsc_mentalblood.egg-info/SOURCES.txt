@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/lsc/__init__.py
+src/lsc/__main__.py
+src/lsc/compileLogicScheme.py
+src/lsc/core.py
+src/lsc_mentalblood.egg-info/PKG-INFO
+src/lsc_mentalblood.egg-info/SOURCES.txt
+src/lsc_mentalblood.egg-info/dependency_links.txt
+src/lsc_mentalblood.egg-info/top_level.txt
