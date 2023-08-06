@@ -1,0 +1,12 @@
+fastapi>=0.65.2
+unimatrix>=0.6.0
+unimatrix.ext.model>=0.3.0
+unimatrix.ext.jose>=0.4.6
+python-multipart
+python-ioc>=1.5.5
+
+[all]
+uvicorn
+
+[uvicorn]
+uvicorn
