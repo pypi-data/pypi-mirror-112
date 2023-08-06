@@ -1,0 +1,12 @@
+torch_pruning/__init__.py,sha256=pg2lLHsfLZkDZi1Bq8DlcnkQpVjq0TfTQvI63Q_AggE,66
+torch_pruning/dependency.py,sha256=JAAnpHxd88gctmCnm0OhLLO90-YY0juIyQ2HXKb3ZJ0,23382
+torch_pruning/utils.py,sha256=TR3AcuNv5KOvfEVF-BiMQ-bl3SJz2acHcEEPQcxZ3Vw,1312
+torch_pruning/prune/__init__.py,sha256=bPow4DXYyGGMvY8iyt7It329ueX4aZ_Y2VwttxmXXz8,76
+torch_pruning/prune/strategy.py,sha256=HCYzLKU0xbmQFTVaqXKRcjwZE8oYZTvjWJ33FHf3650,2581
+torch_pruning/prune/structured.py,sha256=8zzEnQZmX-QhBSS58OkaVrBTnEmYrsIrLTGW6725oGA,7838
+torch_pruning/prune/unstructured.py,sha256=RQBuwU7HfWaft4PB6WnfDKx6IaVDH3Q76NtBHuyhErc,1719
+torch_pruning-0.2.6.dist-info/LICENSE,sha256=c7dap3BLhiZZ3HaSN0tqXdhJcB49Y8VgW-lZM77A7bs,1069
+torch_pruning-0.2.6.dist-info/METADATA,sha256=Ea4Sp1LMcKQP4ZACHLGlWgEONWpgzvz6gRX6ULa_iHU,8701
+torch_pruning-0.2.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+torch_pruning-0.2.6.dist-info/top_level.txt,sha256=7BKinlrc49aZWIR0LIEw8h9CEBrdz1cD73tWrJ5qsyQ,14
+torch_pruning-0.2.6.dist-info/RECORD,,
