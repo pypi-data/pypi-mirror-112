@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: PersonalAssistant
+Version: 0.0.1
+Summary: A package for starting you assistant using python
+Home-page: https://github.com/pypa/PersonalAssistant
+Author: Debadrito Dutta
+Author-email: dipalidutta312@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pypa/PersonalAssistant/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+
+# PersonalAssistant
+
+A module for making a voice assistant
+Quick start guide:
+```
+import PersonalAssistant
+
+# Get your news api key on newsapi website. And give your api key in the parameter 'news_api_key'
+# Disbale less secure apps in your gmail
+
+ass = PersoanlAssistant.Assistant(
+    name='Jarvis', # Name of your assistant
+    voice=0, 
+    news_api_key='your-news-api-key', # Your news api key
+    your_google_pass='your-gmail-password', # You email password
+    your_google_email='your-gmail-email', # Your email
+)
+ass.start # Starts your assistant
+```
+
