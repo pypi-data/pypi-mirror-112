@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+GPTJ/Basic_api.py
+GPTJ/Gptj.py
+GPTJ/ImaginaryFriend.py
+GPTJ/Text2TextGen.py
+GPTJ/__init__.py
+GPTJ/gptj_api.py
+GPTJ/security.py
+gptj.egg-info/PKG-INFO
+gptj.egg-info/SOURCES.txt
+gptj.egg-info/dependency_links.txt
+gptj.egg-info/requires.txt
+gptj.egg-info/top_level.txt
