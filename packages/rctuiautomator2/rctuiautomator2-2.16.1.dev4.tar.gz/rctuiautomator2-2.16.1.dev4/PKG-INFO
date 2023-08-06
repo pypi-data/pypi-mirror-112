@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: rctuiautomator2
+Version: 2.16.1.dev4
+Summary: Python Wrapper for Google Android UiAutomator2 test tool
+Home-page: https://github.com/rct-ai/uiautomator2
+Author: shendezhou
+Author-email: shendezhou@rct.ai
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.6
+Provides-Extra: image
+License-File: LICENSE
+License-File: AUTHORS
+
+Documentation in <https://github.com/rct-ai/uiautomator2>
+
+
+
