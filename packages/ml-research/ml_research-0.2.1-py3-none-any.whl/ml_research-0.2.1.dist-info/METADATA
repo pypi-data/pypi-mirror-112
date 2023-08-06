@@ -1,0 +1,117 @@
+Metadata-Version: 2.1
+Name: ml-research
+Version: 0.2.1
+Summary: Implementation of Machine Learning algorithms, experiments and utilities.
+Home-page: https://github.com/joaopfonseca/research
+Maintainer: J. Fonseca
+Maintainer-email: jpfonseca@novaims.unl.pt
+License: MIT
+Download-URL: https://github.com/joaopfonseca/research
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: imbalanced-learn
+Requires-Dist: research-learn
+Requires-Dist: rich
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: requests
+Requires-Dist: geometric-smote
+Requires-Dist: cluster-over-sampling
+Provides-Extra: dev
+Requires-Dist: click ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: awscli ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: python-dotenv (>=0.5.1) ; extra == 'dev'
+Requires-Dist: Sphinx ; extra == 'dev'
+Requires-Dist: sphinx-material ; extra == 'dev'
+Requires-Dist: numpydoc ; extra == 'dev'
+Requires-Dist: nbsphinx ; extra == 'dev'
+Requires-Dist: recommonmark ; extra == 'dev'
+Requires-Dist: sphinx-markdown-tables ; extra == 'dev'
+Requires-Dist: sphinx-copybutton ; extra == 'dev'
+
+|Python Versions| |Documentation Status|
+
+Research
+========
+
+This repository contains the code developed for all the publications I
+was involved in. The LaTeX and Python code for generating the paper,
+experiments' results and visualizations reported in each paper is
+available (whenever possible) in the paper's directory.
+
+Additionally, contributions at the algorithm level are available in the
+package ``research``.
+
+Project Organization
+--------------------
+
+::
+
+    ├── LICENSE
+    │
+    ├── Makefile           <- Makefile with basic commands
+    │
+    ├── README.md          <- The top-level README for developers using this project.
+    │
+    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+    │
+    ├── publications       <- Research papers published, submitted, or under development.
+    │
+    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+    │                         generated with `pip freeze > requirements.txt`
+    │
+    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+    │
+    ├── research           <- Source code used in publications.
+    │
+    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+
+Installation and Setup
+----------------------
+
+A Python distribution of version 3.7 or higher is required to run this
+project.
+
+Basic Installation
+~~~~~~~~~~~~~~~~~~
+
+The following commands should allow you to setup this project with
+minimal effort:
+
+::
+
+    # Clone the project.
+    git clone https://github.com/joaopfonseca/research.git
+    cd research
+
+    # Create and activate an environment 
+    make environment 
+    conda activate research # Adapt this line accordingly if you're not running conda
+
+    # Install project requirements and the research package
+    make requirements
+
+
+.. |Python Versions| image:: https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9-blue
+.. |Documentation Status| image:: https://readthedocs.org/projects/joaopfonseca-research/badge/?version=latest
+   :target: https://joaopfonseca-research.readthedocs.io/en/latest/?badge=latest
+
+
