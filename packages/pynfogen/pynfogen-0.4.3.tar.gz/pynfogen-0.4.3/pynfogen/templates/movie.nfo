@@ -1,0 +1,38 @@
+{release_name:^>70x68}
+
+  Title    : {title_name}
+  Type     : Movie ({title_year})
+  IMDb     : https://imdb.com/title/{imdb}
+  TMDB     : https://themoviedb.org/{tmdb}
+  Preview  : {preview}
+  Chapters : {chapters_yes_no}
+<?{source:true}?
+  Source :
+  {source:>>2x65}
+?><?{note:true}?
+  Note :
+  {note:>>2x65}
+?>
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
+
+  Video :
+
+  {videos_pretty:>>2x65}
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
+
+  Audio :
+
+  {audio_pretty:>>2x65}
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
+
+  Subtitles :
+  
+  {subtitles_pretty:>>2x65}<?{chapters_named:true}?
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
+
+  Chapters :
+
+  {chapter_entries}%?>
