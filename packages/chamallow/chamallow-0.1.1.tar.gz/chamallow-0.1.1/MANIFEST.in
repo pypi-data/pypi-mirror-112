@@ -1,0 +1,5 @@
+prune tests
+graft chamallow
+global-exclude *.pyc
+include CHANGELOG.rst
+include LICENSE
