@@ -1,0 +1,3 @@
+[console_scripts]
+mindware = mindware.__main__:main
+
