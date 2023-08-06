@@ -1,0 +1,3 @@
+[console_scripts]
+ttsi = ttsi.__main__:main
+
