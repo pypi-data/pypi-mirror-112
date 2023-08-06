@@ -1,0 +1,59 @@
+trigger:
+  branches:
+    include:
+      - releases/*
+      - refs/tags/v*
+
+pr:
+  branches:
+    include:
+    - master
+    - releases/*
+  paths:
+    include:
+    - aqt/*
+    - ci/*
+    - azure-pipelines.yml
+
+jobs:
+- job: MatricesGenerator
+  displayName: Matrices Generator
+  pool:
+    vmImage: 'ubuntu-20.04'
+  steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '3.8'
+        addToPath: true
+    - bash: python ci/generate_azure_pipelines_matrices.py
+      name: mtrx
+      displayName: Generate test matrices and set variables in Azure Pipelines
+
+- job: Mac
+  dependsOn: MatricesGenerator
+  pool:
+    vmImage: 'macOS-10.14'
+  strategy:
+    matrix: $[ dependencies.MatricesGenerator.outputs['mtrx.mac'] ]
+  steps:
+    - script: brew install p7zip
+      displayName: Install 7zip
+    - template: ci/steps.yml
+
+- job: Windows
+  dependsOn: MatricesGenerator
+  pool:
+    vmImage: 'vs2017-win2016'
+  strategy:
+    matrix: $[ dependencies.MatricesGenerator.outputs['mtrx.windows'] ]
+  steps:
+    - template: ci/steps.yml
+
+- job: Linux
+  dependsOn: MatricesGenerator
+  pool:
+    vmImage: 'ubuntu-20.04'
+  strategy:
+    matrix: $[ dependencies.MatricesGenerator.outputs['mtrx.linux'] ]
+  steps:
+    - template: ci/steps.yml
