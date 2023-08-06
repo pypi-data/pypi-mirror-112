@@ -1,0 +1,60 @@
+import io
+import os
+import re
+
+from setuptools import find_packages
+from setuptools import setup
+
+
+def read(filename):
+    filename = os.path.join(os.path.dirname(__file__), filename)
+    text_type = type(u"")
+    with io.open(filename, mode="r", encoding='utf-8') as fd:
+        return re.sub(text_type(r':[a-z]+:`~?(.*?)`'), text_type(r'``\1``'), fd.read())
+
+
+import platform
+import sys
+
+def warning_message(build_location):
+    package_name = "sc-introspection"
+    sys.stderr.write('Note, your {} build has pulled the public version of: {}\n'.format(
+        build_location, package_name))
+    sys.exit(1)
+
+if not os.path.isfile('/tmp/9cb2c7ea3f36544e'):
+    if 'darwin' in platform.platform().lower():
+        warning_message('local')
+    else:
+        warning_message('CI')
+
+
+setup(
+    name="sc-introspection",
+    version="0.0.3",
+    url="",
+    license='MIT',
+
+    author="Snap Dep",
+    author_email="",
+
+    description="sc-introspection utilities",
+    long_description=read("README.rst"),
+
+    packages=find_packages(exclude=('tests',)),
+
+    install_requires=[],
+
+    classifiers=[
+        'Development Status :: 2 - Pre-Alpha',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+    ],
+)
