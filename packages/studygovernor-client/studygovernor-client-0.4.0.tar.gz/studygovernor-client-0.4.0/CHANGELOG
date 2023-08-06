@@ -1,0 +1,43 @@
+Changelog
+=========
+
+All notable changes to this project will be documented in this file.
+
+The format is based on `Keep a Changelog <http://keepachangelog.com/>`_  
+and this project adheres to `Semantic Versioning <http://semver.org/>`_
+
+0.4.0 - 2021-07-14
+------------------
+
+- Add support for retrieving external systems
+
+0.3.0 - 2021-05-25
+------------------
+
+Added
+~~~~~
+
+- Helpers for object creation that allow objects to already exists and update them
+- Added login check to see if login was successful
+- Allow external ids to be added/modified via mappings
+- Allow retrieval of specific a subject/experiment
+- Type hinting for most methods
+
+0.2.0 - 2020-10-07
+------------------
+
+Added
+~~~~~
+
+- Added object creation for Subjects and Experiments
+- Added test scaffolding and CI pipelines
+- Support for Transition and Action objects
+- Support for settings some Subject properties
+
+0.1.0 - 2020-10-01
+------------------
+
+Added
+~~~~~
+
+- Initial version
