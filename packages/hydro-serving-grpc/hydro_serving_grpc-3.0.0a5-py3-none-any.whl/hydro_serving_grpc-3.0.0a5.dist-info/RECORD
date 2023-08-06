@@ -1,0 +1,16 @@
+hydro_serving_grpc/.gitignore,sha256=S5Qyzqdhv8WWmCwAmPtwrQO9_ho29lhBtWR8Io6p1fs,1308
+hydro_serving_grpc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydro_serving_grpc/interpretability/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydro_serving_grpc/interpretability/visualization/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydro_serving_grpc/monitoring/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydro_serving_grpc/monitoring/auto_od/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydro_serving_grpc/monitoring/sonar/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydro_serving_grpc/serving/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydro_serving_grpc/serving/contract/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydro_serving_grpc/serving/discovery/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydro_serving_grpc/serving/gateway/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydro_serving_grpc/serving/manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydro_serving_grpc/serving/runtime/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydro_serving_grpc-3.0.0a5.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+hydro_serving_grpc-3.0.0a5.dist-info/METADATA,sha256=xunRpgqRoTV8LeSADBNgMyhW7u7Rd0i0JmLXMOI8V7k,1050
+hydro_serving_grpc-3.0.0a5.dist-info/RECORD,,
