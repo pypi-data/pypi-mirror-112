@@ -1,0 +1,10 @@
+requests
+
+[cli]
+tabulate
+fire
+
+[server]
+flask
+flask_oidc
+sqlitedict

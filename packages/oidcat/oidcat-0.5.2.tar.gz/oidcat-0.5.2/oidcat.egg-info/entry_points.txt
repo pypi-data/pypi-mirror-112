@@ -1,0 +1,3 @@
+[console_scripts]
+oidcat-admin = oidcat.cli.keycloak:main
+
