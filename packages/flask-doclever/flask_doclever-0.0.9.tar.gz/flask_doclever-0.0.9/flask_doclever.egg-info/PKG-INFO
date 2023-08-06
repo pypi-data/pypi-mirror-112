@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: flask-doclever
+Version: 0.0.9
+Summary: auto generate flask_restful interface document to doclever
+Home-page: https://www.dlyunzhi.com
+Author: liuxu
+Author-email: liuxu@dlyunzhi.com
+License: UNKNOWN
+Description: auto generate flask_restful interface document to doclever
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
