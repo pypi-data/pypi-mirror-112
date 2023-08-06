@@ -1,0 +1,10 @@
+saspy>=3.6
+metakernel>=0.27.5
+jupyter_client>=6
+IPython>=7.12.0
+
+[jlab_ext]
+jupyterlab>=3
+jlab_create_sas_file
+sas2nb
+sas_log_viewer_v2
