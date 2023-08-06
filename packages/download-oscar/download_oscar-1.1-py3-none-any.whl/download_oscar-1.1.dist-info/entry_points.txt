@@ -1,0 +1,4 @@
+[console_scripts]
+dodc = download_oscar.dod:main
+dodg = download_oscar.dod_gui:main
+
