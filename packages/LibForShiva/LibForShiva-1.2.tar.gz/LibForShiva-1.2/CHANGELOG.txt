@@ -1,0 +1,18 @@
+Change Log
+==========
+
+1.0 (08/07/2021)
+----------------
+- First release : Ajout des fonctions contenue dans la libraire MarkupFor3DSlicer. Ainsi que rotatBbox(...) et calcul(...).
+
+1.0.1 (08/07/2021)
+-----------------
+- Second release : Aucun ajout. Juste un patch pour rendre fonctionnel calcul(...).
+
+1.1 (08/07/2021)
+----------------
+- Third release : Changement entier de la fonction calcul(...) pour qu'elle renvoie les coordonnée des trois axes.
+
+1.2 (08/07/2021)
+----------------
+- Fourth release : Changement des fonction de ligne et point.

@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: LibForShiva
+Version: 1.2
+Summary: Librairie de simplification pour Shiva.
+Home-page: UNKNOWN
+Author: Guillaume ROCHE
+Author-email: g.roche1712@protonmail.com
+License: MIT
+Description: Librairie utile pour simplifier le programme. Librairie destinee au projet Shiva.
+        
+        Dependance :
+        
+        - Numpy
+        
+        Fonctions :
+        
+        line(p1,p2,norme,name='vect',large=0.3, color=[0.4, 1.0, 0.0], selectedColor=[1.0, 0.5000076295109484, 0.5000076295109484]) :
+        
+            - p1 : position de depart (x,y,z)
+            - p2 : position d'arriver (x,y,z)
+            - norme : taille de la ligne
+            - name : nom de la ligne (optionnel)
+            - large : largeur de la ligne (optionnel)
+            - color : couleur du Markups (optionnel)
+            - selectedColor : couleur du Markups (optionnel)
+        
+        
+        point(p1,name="point",large=5.0, color=[0.4, 1.0, 0.0], selectedColor=[1.0, 0.5000076295109484, 0.5000076295109484]) :
+        
+            - p1 : position du point (x,y,z)
+            - name : nom du point (optionnel)
+            - large : largeur du point (optionnel)
+            - color : couleur du Markups (optionnel)
+            - selectedColor : couleur du markup (optionnel)
+        
+        
+        final(suite) :
+        
+            - suite : suite contenant tout les dictionnaire creer precedement (Attention, il est imperatif que la condition soit une suite et non un dictionnaire)
+        
+        
+        rotatBbox(vectPro, centroid, coords) :
+        
+            - vectPro : le vecteur propre de l'objet
+            - centroid : le centroid de l'objet
+            - coords : les coordonnees de chaque voxel de l'objet
+        
+        
+        calcul(centroid, long, vectPro) :
+        
+            - centroid : le centroid de l'objet
+            - long : les longueurs renvoyees par rotatBbox(...)
+            - vectPro : le vecteur propre de l'objet
+        
+        Change Log
+        ==========
+        
+        1.0 (08/07/2021)
+        ----------------
+        - First release : Ajout des fonctions contenue dans la libraire MarkupFor3DSlicer. Ainsi que rotatBbox(...) et calcul(...).
+        
+        1.0.1 (08/07/2021)
+        -----------------
+        - Second release : Aucun ajout. Juste un patch pour rendre fonctionnel calcul(...).
+        
+        1.1 (08/07/2021)
+        ----------------
+        - Third release : Changement entier de la fonction calcul(...) pour qu'elle renvoie les coordonnÃ©e des trois axes.
+        
+        1.2 (08/07/2021)
+        ----------------
+        - Fourth release : Changement des fonction de ligne et point.
+Keywords: Shiva
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
