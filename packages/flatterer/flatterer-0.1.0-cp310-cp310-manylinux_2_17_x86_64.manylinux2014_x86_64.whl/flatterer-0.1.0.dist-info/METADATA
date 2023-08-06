@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: flatterer
+Version: 0.1.0
+Requires-Dist: orjson
+Requires-Dist: ijson
+Requires-Dist: click
+Author: David Raznick <kindly@gmail.com>
+Author-email: David Raznick <kindly@gmail.com>
