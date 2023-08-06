@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: hereby
+Version: 0.3.1
+Summary: Small Python library for accessing files in the same folder as your code
+Home-page: https://github.com/hoh/Hereby/
+Author: Hugo Herter
+Author-email: git@hugoherter.com
+License: Apache License 2.0
+Keywords: open relative module file template
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+License-File: LICENSE
+
+UNKNOWN
+
