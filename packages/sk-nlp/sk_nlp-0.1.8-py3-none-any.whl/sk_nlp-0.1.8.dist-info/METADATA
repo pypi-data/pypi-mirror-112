@@ -1,0 +1,685 @@
+Metadata-Version: 2.1
+Name: sk-nlp
+Version: 0.1.8
+Summary: nlp kit.
+Home-page: https://github.com/me/myproject
+Author: wengsongxiu
+Author-email: wengsongxiu@mastercom.cn
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: tensorflow-gpu
+Requires-Dist: bert4keras
+Requires-Dist: sk-common
+
+
+# sk-nlp
+
+[![Travis](https://travis-ci.org/CyberZHG/keras-transformer.svg)](https://travis-ci.org/CyberZHG/keras-transformer)
+[![Coverage](https://coveralls.io/repos/github/CyberZHG/keras-transformer/badge.svg?branch=master)](https://coveralls.io/github/CyberZHG/keras-transformer)
+
+![](https://img.shields.io/badge/keras-tensorflow-blue.svg)
+![](https://img.shields.io/badge/keras-tf.keras-blue.svg)
+![](https://img.shields.io/badge/keras-tf.keras/eager-blue.svg)
+![](https://img.shields.io/badge/keras-tf.keras/2.0_beta-blue.svg)
+
+
+
+📦 项目介绍 (for humans)
+=======================
+
+这个第三方仓库是由深圳市名通科技股份有限公司AI团队提供的。团队致力于为NLP领域，提供一个稳定可靠， 功能完善的NLP常见操作。
+
+
+Installation
+-----
+
+```bash
+cd your_project
+pip install sk-nlp
+```
+
+# Content
+* sk_nlp package
+
+    * [sk_nlp.nlp_feature_extract package](#sk_nlp.nlp_feature_extract package)
+
+      * [sk_nlp.nlp_feature_extract.feature module](#sk_nlp.nlp_feature_extract.feature module)
+
+      * [sk_nlp.nlp_feature_extract.text_filter module](#sk_nlp.nlp_feature_extract.text_filter module)
+
+      * [sk_nlp.nlp_feature_extract.tokenizer module](#sk_nlp.nlp_feature_extract.tokenizer module)
+
+    * [sk_nlp.nlp_feature_embedding package](#sk_nlp.nlp_feature_embedding package)
+
+      * [sk_nlp.nlp_feature_embedding.bert module](#sk_nlp.nlp_feature_embedding.bert module)
+
+      * [sk_nlp.nlp_feature_embedding.similarity module](#sk_nlp.nlp_feature_embedding.similarity module)
+
+      * [sk_nlp.nlp_feature_embedding.w2v module](#sk_nlp.nlp_feature_embedding.w2v module)
+
+
+
+#sk_nlp.nlp_feature_extract package
+**********************************
+
+
+
+##sk_nlp.nlp_feature_extract.feature module
+
+0 使用ac自动机统计给定的词语的词频 1 获取tf-idf特征
+
+class sk_nlp.nlp_feature_extract.feature.CountByAC(pattern_list=[])
+
+   Bases: "object"
+
+   基于ac自动机来统计模式串
+
+   Parameters:
+      **pattern_list** -- 匹配的模式串列表
+
+   build_tree(pattern_list)
+
+      构建模式串前缀树
+
+      Parameters:
+         **pattern_list** -- 模式串列表
+
+   count(sentence)
+
+      统计sentence中关于给定的模式串的频率
+
+      Parameters:
+         **sentence** -- 句子
+
+      Returns:
+         word_count 每个关键词对应的频率
+
+      >>> ac = CountByAC(['杰伦的七', '周杰伦的', '七里香'])
+      >>> result = ac.count('周杰伦的七里香七里香')
+      >>> print(result)
+      {'周杰伦的': 1, '杰伦的七': 1, '七里香': 2}
+
+class sk_nlp.nlp_feature_extract.feature.KeyWordExtract
+
+   Bases: "object"
+
+   关键词抽取算法，基于tf-idf
+
+   get_tf_idf(sentence_list, model_file)
+
+      加载tf-idf模型，返回sentence_list对应的特征和模型
+
+      Parameters:
+         * **sentence_list** -- 句子列表（分词后）
+
+         * **model_file** -- tf-idf模型文件
+
+      Returns:
+         tf_idf_model(模型实例), tfidf_feature(sentence_list对应的tf-
+         idf特征)
+
+      >>> tf_idf_model, tfidf_feature = kwe.get_tf_idf(['杰伦 是 台湾 歌手', '七里香 是 杰伦 创作'], file_conf.tf_idf_file_path)
+      >>> print(tfidf_feature)
+        (0, 4)        0.6316672017376245
+        (0, 3)        0.4494364165239821
+        (0, 2)        0.6316672017376245
+        (1, 3)        0.4494364165239821
+        (1, 1)        0.6316672017376245
+        (1, 0)        0.6316672017376245
+
+   get_topk_keywords(data_list, topk=200)
+
+      得到topk个关键词
+
+      Parameters:
+         * **data_list** -- 句子列表（分词后）
+
+         * **topk** -- tf-idf重要度排序后前topk
+
+      Returns:
+         keywords
+
+      >>> keywords = kwe.get_topk_keywords(['杰伦 是 台湾 歌手', '七里香 是 杰伦 创作'], topk=1)
+      >>> print(keywords)
+      [['歌手']['创作']]
+
+   train_tf_idf(sentence_list, model_file, ngram_range=(1, 1))
+
+      训练tf-idf模型，保存模型，返回模型和特征
+
+      Parameters:
+         * **sentence_list** -- 句子列表（分词后）
+
+         * **model_file** -- tf-idf模型保存文件
+
+      Returns:
+         tf_idf_model, tfidf_feature
+
+
+##sk_nlp.nlp_feature_extract.text_filter module
+
+
+敏感词汇过滤模块，共实现了3个类：NaiveFilter，BSFilter，DFAFilter
+
+class sk_nlp.nlp_feature_extract.text_filter.BSFilter
+
+   Bases: "object"
+
+   宽度优先遍历的方式过滤
+
+   add(keyword)
+
+      新增一个敏感词
+
+      :param keyword:敏感词 :return:无
+
+   filter(message, repl='*')
+
+      过滤掉敏感词
+
+      Parameters:
+         * **message** -- 原始的输入句子
+
+         * **repl** -- 敏感词汇被替换成的字符
+
+      Returns:
+         message 屏蔽掉敏感词汇的句子
+
+      >>> f = BSFilter()
+      >>> question = "台湾是中国的吗"
+      >>> filter_question = f.filter(question)
+      >>> print(question, filter_question)
+      台湾是中国的吗 *是中国的吗
+
+   parse(path)
+
+      加载敏感词汇表
+
+      Parameters:
+         **path** -- 路径为/sk-nlp/data/dirty_word.txt
+
+      Returns:
+class sk_nlp.nlp_feature_extract.text_filter.DFAFilter
+
+   Bases: "object"
+
+   DFA即Deterministic Finite Automaton，也就是确定有穷自动机。 算法核
+   心是建立了以敏感词为基础的许多敏感词树
+
+   add(keyword)
+
+      新增一个敏感词
+
+      :param keyword:敏感词 :return:无
+
+   detect(message)
+
+      判断message是否包含敏感词汇
+
+      :param message:用户输入的句子 :return: True/False
+
+   filter(message, repl='*')
+
+      过滤掉敏感词
+
+      Parameters:
+         * **message** -- 原始的输入句子
+
+         * **repl** -- 敏感词汇被替换成的字符
+
+      Returns:
+         message 屏蔽掉敏感词汇的句子
+
+      >>> f = DFAFilter()
+      >>> question = "台湾是中国的吗"
+      >>> filter_question = f.filter(question)
+      >>> print(question, filter_question)
+      台湾是中国的吗 *是中国的吗
+
+   parse(path)
+
+      加载敏感词汇表
+
+      Parameters:
+         **path** -- 路径为/sk-nlp/data/dirty_word.txt
+
+      Returns:
+class sk_nlp.nlp_feature_extract.text_filter.NaiveFilter
+
+   Bases: "object"
+
+   普通的过滤方式：使用集合的方式过滤，时间复杂度跟集合的大小有关
+
+   filter(message, repl='*')
+
+      过滤掉敏感词
+
+      Parameters:
+         * **message** -- 原始的输入句子
+
+         * **repl** -- 敏感词汇被替换成的字符
+
+      Returns:
+         message：屏蔽掉敏感词汇的句子
+
+      >>> f = NaiveFilter()
+      >>> question = "台湾是中国的吗"
+      >>> filter_question = f.filter(question)
+      >>> print(question, filter_question)
+      台湾是中国的吗 *是中国的吗
+
+   parse(path)
+
+      加载敏感词汇表
+
+      Parameters:
+         **path** -- 路径为/sk-nlp/data/dirty_word.txt
+
+      Returns:
+
+sk_nlp.nlp_feature_extract.tokenizer module
+===========================================
+
+词语粒度的操作模块：分词，去停用词，同义词林转换
+
+class sk_nlp.nlp_feature_extract.tokenizer.SentenceCut(is_lower=True, stopword_list=[], use_chinese_synonyms=False)
+
+   Bases: "object"
+
+   句子分词操作类 目前集成了jieba分词
+
+   cut_word(sentence_list)
+
+      对传进来的句子进行分词
+
+      :param sentence_list:['我爱中国', '我是中国人']
+      :return:seg_lists [['我', '爱', '中国'], ['我', '是', '中国', '
+      人']]  token_count {'我': 2, '爱': 1, '中国': 2, '是': 1, '人':
+      1}
+
+      >>> sen_cut = SentenceCut(use_chinese_synonyms=True)
+      >>> seg_lists, token_count = sen_cut.cut_word(['我爱baidu', '我是中国人'])
+      >>> print(seg_lists, token_count)
+      [['我', '爱', '百度'], ['我', '是', '中国', '人']]
+      {'我': 2, '爱': 1, '百度': 1, '是': 1, '中国': 1, '人': 1}
+
+   load_chinese_synonyms()
+
+      加载同义词林
+
+      Returns:
+         union_find （并查集实例），word_list（同义词林所有的单词集合
+         ）
+
+class sk_nlp.nlp_feature_extract.tokenizer.StopWord(source='', define_stop_word=[])
+
+   Bases: "object"
+
+   停用词操作类： 停用词汇表路径存放在 sk-nlp/data/stopword
+
+   load_stop_word()
+
+      根据不同的self.source加载不同的停用词表
+
+      Returns:
+         stop_word_list 停用词列表
+
+   merge_stop_word(define_stop_word)
+
+      将用户自定义的停用词和用户指定的通用词库合并成一个list
+
+      Parameters:
+         **define_stop_word** -- 用户给的自定义停用词列表 list
+
+      Returns:
+         stop_word_list 停用词列表
+
+#sk_nlp.nlp_feature_embedding package
+************************************
+
+
+
+sk_nlp.nlp_feature_embedding.bert module
+========================================
+
+bert基本模型加载
+
+class sk_nlp.nlp_feature_embedding.bert.MaskLayer(output_dim=768, **kwargs)
+
+   Bases: "keras.engine.base_layer.Layer"
+
+   mask 层，屏蔽掉seg_id为0的词语
+
+   build(input_shape)
+
+      创建层的权重
+
+      :param input_shape:Keras tensor (future input to layer) or
+      list/tuple of Keras tensors :return:
+
+   call(x)
+
+      This is where the layer's logic lives.
+
+      # Arguments
+         inputs: Input tensor, or list/tuple of input tensors.
+         >>**<<kwargs: Additional keyword arguments.
+
+      # Returns
+         A tensor or list/tuple of tensors.
+
+   compute_output_shape(input_shape)
+
+      Computes the output shape of the layer.
+
+      Assumes that the layer will be built to match that input shape
+      provided.
+
+      # Arguments
+         input_shape: Shape tuple (tuple of integers)
+            or list of shape tuples (one per output tensor of the
+            layer). Shape tuples can include None for free dimensions,
+            instead of an integer.
+
+      # Returns
+         An output shape tuple.
+
+class sk_nlp.nlp_feature_embedding.bert.ReverseMaskLayer(**kwargs)
+
+   Bases: "keras.engine.base_layer.Layer"
+
+   反转 mask 层，屏蔽掉seg_id为1的词语
+
+   call(x)
+
+      This is where the layer's logic lives.
+
+      # Arguments
+         inputs: Input tensor, or list/tuple of input tensors.
+         >>**<<kwargs: Additional keyword arguments.
+
+      # Returns
+         A tensor or list/tuple of tensors.
+
+   compute_output_shape(input_shape)
+
+      Computes the output shape of the layer.
+
+      Assumes that the layer will be built to match that input shape
+      provided.
+
+      # Arguments
+         input_shape: Shape tuple (tuple of integers)
+            or list of shape tuples (one per output tensor of the
+            layer). Shape tuples can include None for free dimensions,
+            instead of an integer.
+
+      # Returns
+         An output shape tuple.
+
+class sk_nlp.nlp_feature_embedding.bert.SepLayer(**kwargs)
+
+   Bases: "keras.engine.base_layer.Layer"
+
+   sep mask 层，屏蔽掉sep位置的输出
+
+   call(x)
+
+      This is where the layer's logic lives.
+
+      # Arguments
+         inputs: Input tensor, or list/tuple of input tensors.
+         >>**<<kwargs: Additional keyword arguments.
+
+      # Returns
+         A tensor or list/tuple of tensors.
+
+   compute_output_shape(input_shape)
+
+      Computes the output shape of the layer.
+
+      Assumes that the layer will be built to match that input shape
+      provided.
+
+      # Arguments
+         input_shape: Shape tuple (tuple of integers)
+            or list of shape tuples (one per output tensor of the
+            layer). Shape tuples can include None for free dimensions,
+            instead of an integer.
+
+      # Returns
+         An output shape tuple.
+
+sk_nlp.nlp_feature_embedding.bert.build_model_feature(origin_model, use_cls=False)
+
+   搭建新的句子模型
+
+   Parameters:
+      * **origin_model** -- 原始模型，一般为bert
+
+      * **use_cls** -- 是否使用cls位置的输出
+
+   Returns:
+      model：新模型
+
+sk_nlp.nlp_feature_embedding.bert.encoder(model, data_list, dict_path='/machinelearn/wzh/sk_nlp/sk_nlp/model/bert/chinese_L-12_H-768_A-12/vocab.txt')
+
+   使用句向量模型，将句子转码成句向量
+
+   Parameters:
+      * **model** -- 模型
+
+      * **data_list** -- 句子列表（没有分词）
+
+      * **dict_path** -- bert模型词汇表
+
+   Returns:
+      data_list中的每个句子对应的句向量列表
+
+   >>> origin_model = load_bert_model()
+   >>> new_model = build_model_feature(origin_model)
+   >>> question_list = ["我爱这个伟大的世界", "欣赏世界的风景"]
+   >>> sen_vector_lists = encoder(new_model, question_list)
+   >>> print(sen_vector_lists.shape)
+
+sk_nlp.nlp_feature_embedding.bert.load_bert_model(with_mlm=True, with_pool=False, return_keras_model=True, config_path='/machinelearn/wzh/sk_nlp/sk_nlp/model/bert/chinese_L-12_H-768_A-12/bert_config.json', checkpoint_path='/machinelearn/wzh/sk_nlp/sk_nlp/model/bert/chinese_L-12_H-768_A-12/bert_model.ckpt')
+
+   加载bert 模型
+
+   Parameters:
+      * **with_mlm** -- 是否正则化
+
+      * **with_pool** -- 是否池化
+
+      * **return_keras_model** -- 返回的是keras model 还是 tensorflow
+        模型
+
+      * **config_path** -- bert 模型配置文件路径
+
+      * **checkpoint_path** -- bert 模型路径
+
+   Returns:
+sk_nlp.nlp_feature_embedding.bert.masked_crossentropy(y_true, y_pred)
+
+   mask掉非预测部分，计算交叉熵
+
+   Parameters:
+      * **y_true** -- 真实的Y标签
+
+      * **y_pred** -- 预测的Y标签
+
+   Returns:
+      损失值
+
+
+sk_nlp.nlp_feature_embedding.similarity module
+==============================================
+
+计算各种距离
+
+sk_nlp.nlp_feature_embedding.similarity.get_distance_sim_matrix(matrix1, matrix2, metric='cosine')
+
+   返回2个矩阵的各种距离和相似度
+
+   Parameters:
+      * **matrix1** -- 句子向量1
+
+      * **matrix2** -- 句子向量2
+
+      * **metric** -- 'braycurtis', 'canberra', 'chebyshev',
+        'cityblock', 'correlation',
+
+   'cosine', 'dice', 'euclidean', 'hamming', 'jaccard',
+   'jensenshannon', 'kulsinski', 'mahalanobis', 'matching',
+   'minkowski', 'rogerstanimoto', 'russellrao', 'seuclidean',
+   'sokalmichener', 'sokalsneath', 'sqeuclidean', 'wminkowski', 'yule'
+   :return:
+
+sk_nlp.nlp_feature_embedding.similarity.get_edit_distance(query_sen_list, candidate_sen_list)
+
+   计算编辑距离
+
+   Parameters:
+      * **query_sen_list** -- 如['我爱中国', '美国总统特朗普']
+
+      * **candidate_sen_list** -- 如['我爱地球', '美国总统拜登']
+
+   Returns:
+sk_nlp.nlp_feature_embedding.similarity.get_edit_similarity(distance_matrix, norm=True)
+
+   先反转编辑距离矩阵，得到编辑相似度矩阵，然后可以选择归一化
+
+   Parameters:
+      * **distance_matrix** -- 距离矩阵
+
+      * **norm** -- True/False
+
+   Returns:
+sk_nlp.nlp_feature_embedding.similarity.get_jaccard_sim(sen_list1, sen_list2, norm=False)
+
+   获得杰卡德相似度
+
+   Parameters:
+      * **sen_list1** -- [['我', '爱','中国'], ['美国', '总统', '特朗
+        普']]
+
+      * **sen_list2** -- [['我', '爱','地球'], ['美国', '总统', '拜登
+        ']]
+
+   :param norm:是否对结果进行归一化 :return:
+
+sk_nlp.nlp_feature_embedding.similarity.match_topk(sim_matrix, topk=1, order=0)
+
+   返回相似度矩阵前topk/或者后topk
+
+   Parameters:
+      * **sim_matrix** --
+
+      * **topk** --
+
+      * **order** --
+
+   Returns:
+sk_nlp.nlp_feature_embedding.similarity.normalization(matrix, reversed=True)
+
+   归一化矩阵，按照最后一个维度
+
+   Parameters:
+      * **matrix** --
+
+      * **reversed** --
+
+   Returns:
+
+sk_nlp.nlp_feature_embedding.w2v module
+=======================================
+
+传统的w2v模型:包含skip-gram和cbow 目前有一个从wiki语料训练出来的100维
+度的skip-gram模型
+
+class sk_nlp.nlp_feature_embedding.w2v.WordEmbedding(model_file_path='/machinelearn/wzh/sk_nlp/sk_nlp/model/w2v/skip_gram_wiki2Vec.h5', embedding_dim=100)
+
+   Bases: "object"
+
+   fine_tune(new_seg_list, model_file_path)
+
+      基于已有的w2v模型，使用其他语料进行微调。然后保存模型路径。
+
+      Parameters:
+         * **new_seg_list** -- 新句子（分词后）
+
+         * **model_file_path** -- 模型的保存路径
+
+      Returns:
+      >>> model = WordEmbedding()
+      >>> model.get_embedding()
+      >>> new_seg_list = [['我', '爱','中国'], ['美国', '总统', '特朗普']]
+      >>> model.fine_tune(new_seg_list, file_conf.ft_wiki_sg_file_path)
+
+   get_embedding()
+
+      获取词向量模型的信息
+
+      Returns:
+         embedding_matrix:词向量矩阵；index_word：索引到单词的映射；
+         word_index：单词到索引的映射
+
+   op2model()
+
+      由于w2v的接口太多，不太好封装 这里给出了模型的一些常用操作范例
+
+      Returns:
+   train_vec(sentence_list, model_file_path, window=5, min_count=5, sg=0)
+
+      使用w2v训练词向量
+
+      Parameters:
+         * **sentence_list** -- 句子列表，[['我', '爱','中国'], ['美国
+           ', '总统', '特朗普']]
+
+         * **model_file_path** -- 模型保存路径
+
+         * **window** -- 滑动窗口
+
+         * **min_count** -- 最小词频
+
+         * **sg** -- 0是使用cbow, 1是使用跳字模型
+
+      Returns:
+
+Module contents
+===============
+
+
+Module contents
+===============
+
+
+More Resources
+--------------
+
+-   [where is bert pre-train model]  https://github.com/google-research/bert
+-   [where is stopwords corpus]  https://github.com/goto456/stopwords
+-   [Official Python Packaging User Guide](https://packaging.python.org)
+-   [The Hitchhiker's Guide to Packaging]
+
+License
+-------
+
+This is free and unencumbered software released into the public domain.
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any means.
+
+
+
