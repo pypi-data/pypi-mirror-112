@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: cell-tracking-bc
+Version: 2021.19
+Summary: Base Classes for Cell Tracking in Microscopy
+Home-page: https://gitlab.inria.fr/edebreuv/cell-tracking-bc
+Author: Eric Debreuve
+Author-email: eric.debreuve@univ-cotedazur.fr
+License: UNKNOWN
+Project-URL: Source, https://gitlab.inria.fr/edebreuv/cell-tracking-bc
+Keywords: cell,tracking,microscopy,classes
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: CEA CNRS Inria Logiciel Libre License, version 2.1 (CeCILL-2.1)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.8, <3.9
+Description-Content-Type: text/x-rst
+Requires-Dist: imageio
+Requires-Dist: itk
+Requires-Dist: leb128
+Requires-Dist: matplotlib
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: pca-b-stream
+Requires-Dist: Pillow
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Requires-Dist: tensorflow
+Requires-Dist: tifffile
+Requires-Dist: xlsxwriter
+
+==============================================================
+cell-tracking-BC: Base Classes for Cell Tracking in Microscopy
+==============================================================
+
+.. _installation:
+
+INSTALLATION
+============
+
+The ``cell-tracking-BC`` project is published on the `Python Package Index (PyPI) <https://pypi.org>`_ at: `https://pypi.org/project/cell-tracking-bc <https://pypi.org/project/cell-tracking-bc>`_. It requires version 3.8, or newer, of the interpreter. It should be installable from Python distribution platforms or Integrated Development Environments (IDEs). Otherwise, it can be installed from a command-line console:
+
+- For all users, after acquiring administrative rights:
+    - First installation: ``pip3 install cell-tracking-bc``
+    - Installation update: ``pip3 install --upgrade cell-tracking-bc``
+- For the current user (no administrative rights required):
+    - First installation: ``pip3 install --user cell-tracking-bc``
+    - Installation update: ``pip3 install --user --upgrade cell-tracking-bc``
+
+
+.. note::
+    The command ``pip3`` was used above to emphasize that ``cell-tracking-BC`` requires major version 3 of Python. If ``pip`` defaults to this version, it can of course be used instead.
+
+
+
+Thanks
+======
+
+The project is developed with `PyCharm Community <https://www.jetbrains.com/pycharm>`_.
+
+The code is formatted by `Black <https://github.com/psf/black>`_, *The Uncompromising Code Formatter*.
+
+The imports are ordered by `isort <https://github.com/timothycrosley/isort>`_... *your imports, so you don't have to*.
+
+
