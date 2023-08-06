@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: django-taggit-machinetags
+Version: 1.0.0
+Summary: Machine tagging built upon django-taggit
+Home-page: http://github.com/lpomfrey/django-taggit-machinetags
+Author: Luke Pomfrey
+Author-email: django-taggitmachinetags@lukepomfrey.org
+Maintainer: Luke Pomfrey
+Maintainer-email: django-taggitmachinetags@lukepomfrey.org
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6
+Requires-Dist: django-taggit (>=1.0.0)
+
+Django Taggit Machinetags
+=============================
+
+.. image:: https://badge.fury.io/py/django-taggit-machinetags.png
+    :target: http://badge.fury.io/py/django-taggit-machinetags
+
+.. image:: https://travis-ci.org/lpomfrey/django-taggit-machinetags.png?branch=master
+    :target: https://travis-ci.org/lpomfrey/django-taggit-machinetags
+
+.. image:: https://coveralls.io/repos/lpomfrey/django-taggit-machinetags/badge.png?branch=master
+    :target: https://coveralls.io/r/lpomfrey/django-taggit-machinetags?branch=master
+
+Overview
+--------
+
+This package provides machine tagging (i.e. property:value tagging) built on
+top of `django-taggit <https://github.com/alex/django-taggit>`_.
+
+Installation
+------------
+
+Grab from PyPI with:
+
+::
+
+    $ pip install django-taggit-machinetags
+
+Update your installed apps:
+
+::
+
+    INSTALLED_APPS = (
+        ...
+        'taggit',
+        'taggit_machinetags',
+        ...
+    )
+
+And run the migrations:
+
+::
+
+    $ python manage.py migrate
+
+
+Usage
+-----
+
+Usage is the same as taggit, but tags can now be specified as, colon-separated,
+property-value pairs.
+
+::
+
+    # models.py
+    from django.db import models
+    from taggit_machinetags.managers import MachineTaggableManager
+
+    class MyModel(models.Model):
+
+        name = models.CharField(...)
+        tags = MachineTaggableManager()
+
+    #
+    >>> instance = MyModel.objects.all()[0]
+    >>> instance.tags.add('Property:Value')
+    >>> instance.tags.add('Taggy:McTag')
+    >>> instance.tags.get(namespace='Property')
+    <MachineTag: Property:Value>
+    >> MyModel.objects.filter(tags__slug='taggy:mctag')
+    <MyModel:...>
+
+Creating a tag with the string 'Property:Value' results in a MachineTag with
+the namespace ``namespace=Property``, ``name=Value``,
+``namespace_slug=property``, ``name_slug=value``, and ``slug=property:value``.
+
+
