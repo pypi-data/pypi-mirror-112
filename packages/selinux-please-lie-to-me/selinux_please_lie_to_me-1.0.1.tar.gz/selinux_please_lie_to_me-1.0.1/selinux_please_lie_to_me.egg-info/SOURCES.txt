@@ -1,0 +1,10 @@
+COPYING
+README.md
+setup.cfg
+setup.py
+selinux/__init__.py
+selinux_please_lie_to_me.egg-info/PKG-INFO
+selinux_please_lie_to_me.egg-info/SOURCES.txt
+selinux_please_lie_to_me.egg-info/dependency_links.txt
+selinux_please_lie_to_me.egg-info/not-zip-safe
+selinux_please_lie_to_me.egg-info/top_level.txt
