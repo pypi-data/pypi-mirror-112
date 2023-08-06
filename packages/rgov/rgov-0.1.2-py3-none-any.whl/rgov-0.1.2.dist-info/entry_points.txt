@@ -1,0 +1,3 @@
+[console_scripts]
+rgov=rgov.application:main
+
