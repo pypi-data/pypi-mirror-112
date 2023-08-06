@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+config/config.json
+config/images.json
+test/test_xcross.py
+xcross/__init__.py
+xcross/__init__.py.in
+xcross/__main__.py
+xcross.egg-info/PKG-INFO
+xcross.egg-info/SOURCES.txt
+xcross.egg-info/dependency_links.txt
+xcross.egg-info/entry_points.txt
+xcross.egg-info/top_level.txt
