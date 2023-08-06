@@ -1,0 +1,1 @@
+from qfunction.plot.histogram import plot_probabilities
