@@ -1,0 +1,11 @@
+numpy>=1.16
+segyio
+zfpy
+psutil
+click
+
+[:python_version >= "3.9.0"]
+numpy>=1.20
+
+[zgy]
+zgy2sgz>=0.1.3
