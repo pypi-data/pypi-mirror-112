@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+flickr2kml/__init__.py
+flickr2kml/flickr2kml.py
+flickr2kml/flickr_api_auth.py
+flickr2kml/template_gearth.html
+flickr2kml/template_mymaps.html
+flickr2kml.egg-info/PKG-INFO
+flickr2kml.egg-info/SOURCES.txt
+flickr2kml.egg-info/dependency_links.txt
+flickr2kml.egg-info/entry_points.txt
+flickr2kml.egg-info/requires.txt
+flickr2kml.egg-info/top_level.txt

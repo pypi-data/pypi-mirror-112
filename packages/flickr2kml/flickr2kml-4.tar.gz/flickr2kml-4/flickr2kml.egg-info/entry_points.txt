@@ -1,0 +1,3 @@
+[console_scripts]
+flickr2kml = flickr2kml.flickr2kml:main
+
