@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+cloudflare_kv/__init__.py
+cloudflare_kv/kv.py
+cloudlare_kv.egg-info/PKG-INFO
+cloudlare_kv.egg-info/SOURCES.txt
+cloudlare_kv.egg-info/dependency_links.txt
+cloudlare_kv.egg-info/not-zip-safe
+cloudlare_kv.egg-info/requires.txt
+cloudlare_kv.egg-info/top_level.txt
