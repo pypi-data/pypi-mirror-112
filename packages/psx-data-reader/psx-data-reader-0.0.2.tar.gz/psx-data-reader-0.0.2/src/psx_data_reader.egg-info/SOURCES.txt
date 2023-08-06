@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/psx/__init__.py
+src/psx/web.py
+src/psx_data_reader.egg-info/PKG-INFO
+src/psx_data_reader.egg-info/SOURCES.txt
+src/psx_data_reader.egg-info/dependency_links.txt
+src/psx_data_reader.egg-info/requires.txt
+src/psx_data_reader.egg-info/top_level.txt
