@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+src/archfinder/__init__.py
+src/archfinder/__main__.py
+src/archfinder/archfinder.py
+src/archfinder.egg-info/PKG-INFO
+src/archfinder.egg-info/SOURCES.txt
+src/archfinder.egg-info/dependency_links.txt
+src/archfinder.egg-info/entry_points.txt
+src/archfinder.egg-info/not-zip-safe
+src/archfinder.egg-info/requires.txt
+src/archfinder.egg-info/top_level.txt
