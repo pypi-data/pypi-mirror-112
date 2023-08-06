@@ -1,0 +1,5 @@
+[console_scripts]
+get-tree=rezide.get_tree:main
+get-window-sizes=rezide.get_window_sizes:main
+rzd=rezide.rezide:main
+
