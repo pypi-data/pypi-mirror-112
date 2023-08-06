@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    tap-woocommerce-v3=tap_woocommerce:main
+    
