@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: Mohammed-Daniyal
+Version: 0.0.1
+Summary: A module for A.I
+Home-page: UNKNOWN
+Author: Kittex0/Mohammed Daniyal
+Author-email: kittex0@protonmail.com
+License: MIT
+Description: # 0.0.1
+        We have added "jase_run" which simply takes 3 values 
+        
+        1. Input value
+        2. Questions list
+        3. Answers List
+        
+        then it combines them in to a dictionary and then asks the user for an input and if that input is in the dictionary then it prints the response(from the Answers list)
+        
+        Change Log
+        ==========
+        
+        0.0.1 (11/07/2021)
+        ------------------
+        - First Release
+        - Added jase_run
+Keywords: A.I
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
