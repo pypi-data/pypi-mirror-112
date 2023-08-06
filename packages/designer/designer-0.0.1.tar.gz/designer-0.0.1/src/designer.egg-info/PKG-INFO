@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: designer
+Version: 0.0.1
+Summary: evidence-based and student friendly game library
+Home-page: https://github.com/krishols/playing.git
+Author: krishols, acbart
+Author-email: kris@udel.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# games 
+### An evidence-based and student friendly game library to learn computer science with Python.
+

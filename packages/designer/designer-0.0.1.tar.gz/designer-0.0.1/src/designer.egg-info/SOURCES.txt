@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/designer.egg-info/PKG-INFO
+src/designer.egg-info/SOURCES.txt
+src/designer.egg-info/dependency_links.txt
+src/designer.egg-info/top_level.txt
+src/playing/Direct.py
+src/playing/__init__.py
