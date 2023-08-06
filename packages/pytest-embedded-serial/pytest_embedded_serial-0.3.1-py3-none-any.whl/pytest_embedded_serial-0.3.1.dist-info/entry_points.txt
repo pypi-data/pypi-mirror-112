@@ -1,0 +1,3 @@
+[pytest11]
+pytest_embedded_serial = pytest_embedded_serial.plugin
+
