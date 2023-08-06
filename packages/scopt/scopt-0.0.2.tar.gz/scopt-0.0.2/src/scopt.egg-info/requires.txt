@@ -1,0 +1,11 @@
+
+[publish]
+wheel
+twine
+
+[test]
+mypy
+flake8
+black
+isort
+pytest
