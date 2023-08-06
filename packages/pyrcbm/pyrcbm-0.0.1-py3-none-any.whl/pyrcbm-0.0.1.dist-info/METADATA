@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pyrcbm
+Version: 0.0.1
+Summary: RCbenchmark script generation tools
+Home-page: https://github.com/lirc572/pyrcbm
+Author: lirc572
+Author-email: lirc572@gmail.com
+License: UNKNOWN
+Keywords: rcbenchmark,ulog
+Platform: UNKNOWN
+Requires-Dist: pyulog (>=0.9.0)
+
+UNKNOWN
+
