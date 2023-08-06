@@ -1,0 +1,3 @@
+[console_scripts]
+image-compare = image_comparer.cli:cli
+
