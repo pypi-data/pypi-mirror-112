@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+dunderlab.egg-info/PKG-INFO
+dunderlab.egg-info/SOURCES.txt
+dunderlab.egg-info/dependency_links.txt
+dunderlab.egg-info/not-zip-safe
+dunderlab.egg-info/top_level.txt
