@@ -1,0 +1,14 @@
+marv-api==21.07.0
+lz4
+matplotlib==3.2.*
+mpld3
+numpy
+pillow
+plotly
+pycryptodome
+python-gnupg
+pyyaml
+rosbags
+ruamel.yaml
+utm
+zstandard

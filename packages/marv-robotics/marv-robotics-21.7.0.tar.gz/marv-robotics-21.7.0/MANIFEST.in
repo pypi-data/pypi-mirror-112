@@ -1,0 +1,5 @@
+include *.in
+include *.rst
+include *.txt
+include marv_robotics/matplotlibrc
+recursive-include * *.capnp
