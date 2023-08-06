@@ -1,0 +1,15 @@
+requirements.txt
+setup.cfg
+setup.py
+sibyl/__init__.py
+sibyl/dataexplorer.py
+sibyl/predictor.py
+sibyl/sample.py
+sibyl/models/__init__.py
+sibyl/models/catboostwrapper.py
+sibyl/models/kerasdense.py
+sibyl_ai.egg-info/PKG-INFO
+sibyl_ai.egg-info/SOURCES.txt
+sibyl_ai.egg-info/dependency_links.txt
+sibyl_ai.egg-info/requires.txt
+sibyl_ai.egg-info/top_level.txt
