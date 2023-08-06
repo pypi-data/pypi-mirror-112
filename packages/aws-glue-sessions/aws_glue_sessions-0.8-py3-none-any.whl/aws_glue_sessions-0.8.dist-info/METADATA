@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: aws-glue-sessions
+Version: 0.8
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: hdijupyterutils (>=0.6)
+Requires-Dist: autovizwidget (>=0.6)
+Requires-Dist: ipython (>=4.0.2)
+Requires-Dist: nose
+Requires-Dist: requests
+Requires-Dist: ipykernel (>=4.2.2)
+Requires-Dist: ipywidgets (>5.0.0)
+Requires-Dist: notebook (>=4.2)
+Requires-Dist: tornado (>=4)
+Requires-Dist: requests-kerberos (>=0.8.0)
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: Click
+
+UNKNOWN
+
+

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "python",
+    "-m",
+    "aws_glue_interactive_sessions_kernel.glue_scala_kernel.GlueKernel",
+    "-f",
+    "{connection_file}"
+  ],
+  "display_name": "Glue Spark",
+  "language": "scala"
+}
