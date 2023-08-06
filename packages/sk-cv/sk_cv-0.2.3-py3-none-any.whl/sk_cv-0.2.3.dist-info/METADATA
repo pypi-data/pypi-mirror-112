@@ -1,0 +1,226 @@
+Metadata-Version: 2.1
+Name: sk-cv
+Version: 0.2.3
+Summary: Image processing kit.
+Home-page: https://github.com/me/myproject
+Author: sunzongzong
+Author-email: sunzongzong@mastercom.cn
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [📦 setup.py (for humans)](#-setuppy-for-humans)
+  - [Installation](#installation)
+  - [To Do](#to-do)
+  - [Requirements](#requirements)
+  - [Modules included](#modules-included)
+    - [image_io](#image_io)
+      - [read_image_opencv](#read_image_opencv)
+      - [read_image_image](#read_image_image)
+      - [image_save](#image_save)
+      - [display_image](#display_image)
+    - [image_processing](#image_processing)
+      - [image_type_trans_opencv_image](#image_type_trans_opencv_image)
+      - [image_type_transform](#image_type_transform)
+      - [rotate_angle](#rotate_angle)
+      - [image_lightup](#image_lightup)
+      - [image_erosion](#image_erosion)
+      - [image_dilate](#image_dilate)
+      - [edge_detection](#edge_detection)
+      - [hsv_extract](#hsv_extract)
+      - [remove_outliers](#remove_outliers)
+      - [hough_lines](#hough_lines)
+      - [filtering_function](#filtering_function)
+      - [contour_detection](#contour_detection)
+      - [draw_contour](#draw_contour)
+      - [max_area_contours](#max_area_contours)
+      - [filter_contours_area](#filter_contours_area)
+      - [filter_contours_ratio](#filter_contours_ratio)
+      - [compute_ssim](#compute_ssim)
+  - [More Resources](#more-resources)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+📦 setup.py (for humans)
+=======================
+
+This repo exists to provide [an example setup.py] file, that can be used
+to bootstrap your next Python project. It includes some advanced
+patterns and best practices for `setup.py`, as well as some
+commented–out nice–to–haves.
+
+For example, this `setup.py` provides a `$ python setup.py upload`
+command, which creates a *universal wheel* (and *sdist*) and uploads
+your package to [PyPi] using [Twine], without the need for an annoying
+`setup.cfg` file. It also creates/uploads a new git tag, automatically.
+
+In short, `setup.py` files can be daunting to approach, when first
+starting out — even Guido has been heard saying, "everyone cargo cults
+thems". It's true — so, I want this repo to be the best place to
+copy–paste from :)
+
+[Check out the example!][an example setup.py]
+
+Installation
+-----
+
+```bash
+cd your_project
+
+# Download the setup.py file:
+#  download with wget
+wget https://raw.githubusercontent.com/navdeep-G/setup.py/master/setup.py -O setup.py
+
+#  download with curl
+curl -O https://raw.githubusercontent.com/navdeep-G/setup.py/master/setup.py
+```
+
+To Do
+-----
+
+-   Tests via `$ setup.py test` (if it's concise).
+
+Pull requests are encouraged!
+
+
+Requirements
+--------------
+- opencv_python_headless==4.4.0.46
+- numpy==1.19.3
+- scipy==1.5.2
+- matplotlib==3.3.2
+- Pillow==8.2.0
+
+
+Modules included
+-------------------
+### image_io
+
+######            &emsp;read_image_opencv
+
+&emsp;使用opencv读取图片(支持中英文路径)
+
+###### &emsp;read_image_image
+
+​      使用PIL中的Image读取图片
+
+###### &emsp;image_save
+
+​      保存图片(支持中英文路径)
+
+###### &emsp;display_image 
+
+​      显示图片
+
+### image_processing
+
+######          &emsp;image_type_trans_opencv_image
+
+​      &emsp;&emsp;opencv和Image打开的图片格式转换
+
+######         &emsp;image_type_transform
+
+​      &emsp;&emsp;常用图片格式转换
+
+######         &emsp;rotate_angle
+
+​     &emsp;&emsp; 旋转图片
+
+######         &emsp;image_lightup
+
+​    &emsp;&emsp; 增加亮度
+
+######     &emsp;image_erosion
+
+​         &emsp; 腐蚀
+
+######     &emsp;image_dilate
+
+​         &emsp; 膨胀
+
+######     &emsp;edge_detection
+
+​          &emsp;边缘检测
+
+######     &emsp;hsv_extract
+
+​          &emsp;颜色提取
+
+######     &emsp;remove_outliers
+
+​          &emsp;过滤连通区域
+
+######     &emsp;hough_lines
+
+​          &emsp;霍夫变换
+
+######     &emsp;filtering_function
+
+​         &emsp;均值滤波、高斯滤波、中值滤波
+
+######     &emsp;contour_detection
+
+​         &emsp;检测轮廓
+
+######     &emsp;draw_contour
+
+​         &emsp;在图像上画出全部轮廓
+
+######     &emsp;max_area_contours
+
+​         &emsp;寻找最大轮廓，并画出该轮廓最小外接矩形
+
+######     &emsp;filter_contours_area
+
+​         &emsp;过滤面积较小的轮廓
+
+######     &emsp;filter_contours_ratio
+
+​         &emsp;根据轮廓的最小外接矩形长宽比过滤轮廓
+
+######     &emsp;compute_ssim
+
+​         &emsp;ssim算法计算两张图的相似度
+​      
+​      
+
+More Resources
+--------------
+
+-   [What is setup.py?] on Stack Overflow
+-   [Official Python Packaging User Guide](https://packaging.python.org)
+-   [The Hitchhiker's Guide to Packaging]
+-   [Cookiecutter template for a Python package]
+
+License
+-------
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any means.
+
+[an example setup.py]: https://github.com/navdeep-G/setup.py/blob/master/setup.py
+[PyPi]: https://docs.python.org/3/distutils/packageindex.html
+[Twine]: https://pypi.python.org/pypi/twine
+[image]: https://farm1.staticflickr.com/628/33173824932_58add34581_k_d.jpg
+[What is setup.py?]: https://stackoverflow.com/questions/1471994/what-is-setup-py
+[The Hitchhiker's Guide to Packaging]: https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html
+[Cookiecutter template for a Python package]: https://github.com/audreyr/cookiecutter-pypackage
+
+
