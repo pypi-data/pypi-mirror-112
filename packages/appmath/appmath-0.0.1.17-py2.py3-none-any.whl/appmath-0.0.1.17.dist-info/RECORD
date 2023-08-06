@@ -1,0 +1,16 @@
+appmath/__init__.py,sha256=ODKphrYXK8vrCq_uS0X-l9g4fkYCwnmb7d5bV770_6A,57
+appmath/optimization/__init__.py,sha256=dvtDZcUXLey_G8Z-J2YVe-9QyYCz_eLVraZ1dQyipu4,48
+appmath/optimization/uniform.py,sha256=nMuopThPZZitBk-EiQxSed314JqyaC9qlvaxZrWnKIQ,4698
+appmath/optimization/unconditional/__init__.py,sha256=_SDDJnupl_ay-2-8qlLQbxTfb_2pgr9nRJyhzc3csq8,56
+appmath/optimization/unconditional/zeroorder/__init__.py,sha256=Su1b1e3wpGK87OJ9M1t-u1HKVWp8Y0lyrtzSJGbYqqw,71
+appmath/optimization/unconditional/zeroorder/onedimensional/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appmath/optimization/unconditional/zeroorder/onedimensional/base_method.py,sha256=cSTi6UdxB4rC4nw7Y0W2Oklviz2JhAqut4Rv1uJMVu0,2658
+appmath/optimization/unconditional/zeroorder/onedimensional/dichotomy.py,sha256=WFu-r597XWo83vxAk0D6BbSibV9iDFVU5d7mKlXFnsA,2246
+appmath/optimization/unconditional/zeroorder/onedimensional/divhalf.py,sha256=ayNauyL9FdwbDsstzmBymsAVe1_F2OU3aiano1dZMWQ,2847
+appmath/optimization/unconditional/zeroorder/onedimensional/fibbonachi.py,sha256=HWC92J4f8Irwk7ZGsqNO-VJT7D94w6d88f-SpywhxnE,5868
+appmath/optimization/unconditional/zeroorder/onedimensional/golden_ratio.py,sha256=X4nhlawq0gCDLEGqsi_ucndnK3dv3A17jRzSNZVRVUc,3604
+appmath/optimization/unconditional/zeroorder/onedimensional/uniform.py,sha256=ni-ljWp5yQDnmiz6hYSZ3lz5v2YfIe0sZZ7MooKqnSs,12173
+appmath-0.0.1.17.dist-info/METADATA,sha256=5cxEhmOHWMdxCtKWMfHhclQZT-H68iMbqP8p9Ns7Utg,956
+appmath-0.0.1.17.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+appmath-0.0.1.17.dist-info/top_level.txt,sha256=WWxEsrV0EKzr69iK8H133F7U26u3b_WxvxrC2zaCOtQ,8
+appmath-0.0.1.17.dist-info/RECORD,,
