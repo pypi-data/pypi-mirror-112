@@ -1,0 +1,42 @@
+name: kelvin.sdk.injector.config
+version: 1.0.0
+class_name: InjectorConfig
+description: Injector Configuration
+fields:
+  - name: filenames
+    description: Filenames to load
+    type: string
+    array: true
+  - name: data_type
+    description: Type of data to load from files
+    type: string
+    enum:
+      - CSV: csv
+      - JSON: json
+      - PARQUET: parquet
+      - TABLE: table
+    required: false
+  - name: options
+    description: Additional options for loader
+    type: kelvin.sdk.injector.option:1.0.0
+    array: true
+  - name: repeat
+    description: Loop files continuously
+    type: boolean
+  - name: ignore_timestamps
+    description: Ignore timestamps from files
+    type: boolean
+
+---
+
+name: kelvin.sdk.injector.option
+version: 1.0.0
+class_name: Option
+description: Option
+fields:
+  - name: name
+    description: Option name
+    type: string
+  - name: value
+    description: Option value (JSON-encoded)
+    type: string

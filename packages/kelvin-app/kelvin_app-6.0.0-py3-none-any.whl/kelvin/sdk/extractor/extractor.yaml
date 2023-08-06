@@ -1,0 +1,34 @@
+name: kelvin.sdk.extractor.config
+version: 1.0.0
+class_name: ExtractorConfig
+description: Extractor Configuration
+fields:
+  - name: output_path
+    description: Output path for saving data
+    type: string
+  - name: partition_cols
+    description: Columns to partition data
+    type: string
+    array: true
+  - name: time_resolution
+    description: Time resolution
+    type: string
+    enum:
+      - S: s
+      - L: ms
+      - U: us
+      - N: ns
+    required: false
+  - name: append
+    description: Append data
+    type: boolean
+  - name: batch
+    description: Batch window
+    type: float64
+  - name: delay
+    description: Delay window
+    type: float64
+  - name: retention_window
+    description: Retention window
+    type: float64
+    required: false

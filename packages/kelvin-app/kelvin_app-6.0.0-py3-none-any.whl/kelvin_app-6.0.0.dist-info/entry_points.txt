@@ -1,0 +1,3 @@
+[console_scripts]
+kelvin-app = kelvin.app.__main__:main
+
