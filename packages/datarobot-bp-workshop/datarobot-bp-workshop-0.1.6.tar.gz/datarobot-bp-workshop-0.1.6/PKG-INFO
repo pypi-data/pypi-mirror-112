@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: datarobot-bp-workshop
+Version: 0.1.6
+Summary: This client library is designed to support building DataRobot blueprints.
+Home-page: https://blueprint-workshop.datarobot.com
+Author: datarobot
+Author-email: support@datarobot.com
+Maintainer: datarobot
+Maintainer-email: info@datarobot.com
+License: DataRobot Tool and Utility Agreement
+Description: DataRobot Blueprint Workshop
+        ================================
+        
+        The Blueprint Workshop is built to ensure that constructing and modifying DataRobot blueprints
+        through a programmatic interface is idiomatic, convenient, and powerful.
+        
+        This library requires a `DataRobot`_ account.
+        
+        The easiest way to get started is by reading the
+        `Documentation`_.
+        
+        Prerequisites
+        -----------------
+        Python >= 3.7
+        
+        Ensure your DataRobot account has enabled:
+        - Show Uncensored Blueprints
+        - Enable Customizable Blueprints
+        
+        Installation
+        -----------------
+        Optionally, create a virtual environment
+        
+        ::
+        
+            $ mkvirtualenv -p python3.7 blueprint-workshop
+        
+        
+        Install Graphviz on Linux (to render blueprints):
+        
+        ::
+        
+            $ sudo apt-get install graphviz
+        
+        
+        Install Graphviz on Mac (to render blueprints):
+        
+        ::
+        
+            $ brew install graphviz
+        
+        
+        Install the library!
+        
+        ::
+        
+            $ pip install datarobot-bp-workshop
+        
+        
+        Recommended:
+        
+        ::
+        
+            $ pip install jupyterlab
+        
+        
+        From a folder where you'd like to save your scripts:
+        
+        ::
+        
+            $ jupyter-lab .
+        
+        .. _datarobot: https://datarobot.com
+        .. _documentation: https://blueprint-workshop.datarobot.com
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: release
+Provides-Extra: lint

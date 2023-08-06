@@ -1,0 +1,4 @@
+prune *
+include LICENSE.txt CHANGES.rst setup.py
+recursive-include workshop *.py
+recursive-include docs/examples *.ipynb
