@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "playwbot"
+version = "0.2.0"
+description = "RobotFramework wrapper of Playwright-Python"
+authors = ["radekBednarik <radek.bednarik@tesena.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://radekbednarik.github.io/playwbot/"
+repository = "https://github.com/radekBednarik/playwbot"
+documentation = "https://radekbednarik.github.io/playwbot/"
+keywords = ["playwright", "playwbot", "playwright-python", "test-automation", "robot-framework"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Web Environment",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Framework :: Robot Framework",
+    "Framework :: Robot Framework :: Library",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Education :: Testing"
+]
+packages = [
+    { include = "playwbot" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+robotframework = "^4.0.3"
+playwright = "^1.12.1"
+
+[tool.poetry.dev-dependencies]
+black = "^21.6b0"
+pylint = "^2.8.3"
+mypy = "^0.902"
+isort = "^5.9.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
