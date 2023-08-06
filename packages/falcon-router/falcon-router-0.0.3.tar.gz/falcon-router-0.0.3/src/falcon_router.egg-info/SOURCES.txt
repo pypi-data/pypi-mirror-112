@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/falcon_router/__init__.py
+src/falcon_router/router.py
+src/falcon_router.egg-info/PKG-INFO
+src/falcon_router.egg-info/SOURCES.txt
+src/falcon_router.egg-info/dependency_links.txt
+src/falcon_router.egg-info/requires.txt
+src/falcon_router.egg-info/top_level.txt
