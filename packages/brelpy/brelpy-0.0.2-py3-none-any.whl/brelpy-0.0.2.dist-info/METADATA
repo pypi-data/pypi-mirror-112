@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: brelpy
+Version: 0.0.2
+Summary: Module to connect to Brel-Home hubs.
+Home-page: https://gitlab.com/rogiervandergeer/brelpy
+Author: Rogier van der Geer
+Author-email: rogier@vander-geer.nl
+License: GNU Affero General Public License v3
+Keywords: brel,smarthome,blinds
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Natural Language :: English
+Classifier: Topic :: Home Automation
+Requires-Python: >= 3.6
+License-File: LICENSE
+Requires-Dist: pycryptodome (>=3.10.0)
+Provides-Extra: test
+Requires-Dist: pytest (>=6.2.4) ; extra == 'test'
+Requires-Dist: pytest-mock (>=3.6.1) ; extra == 'test'
+
+# brelpy
+
+A Python package to communicate with the Brel hub.
+
