@@ -1,0 +1,3 @@
+[console_scripts]
+flask-unsign = flask_unsign.__main__:main
+
