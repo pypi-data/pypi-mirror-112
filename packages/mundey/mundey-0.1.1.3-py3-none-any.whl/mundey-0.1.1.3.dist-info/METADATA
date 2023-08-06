@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mundey
+Version: 0.1.1.3
+Summary: Recalibration of TESS target pixel files.
+Home-page: https://github.com/hvidy/mundey
+Author: Tim White and Benjamin Pope
+Author-email: tim.white@sydney.edu.au
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: lightkurve
+Requires-Dist: IPython
+Requires-Dist: tqdm
+
+A Python package for recalibrating TESS target pixel files.
+
+
