@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: dsetnn
+Version: 0.1.1
+Summary: PyTorch implementation of the Differentiable Spatial to Ellipse Transform (DSET). Code extended from the official implementation of DSNT
+Home-page: https://gitlab.uni.lu/agarcia/dset-pytorch
+Author: Albert Garcia
+Author-email: albert.garcia@uni.lu
+License: Apache License 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 10.0
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
