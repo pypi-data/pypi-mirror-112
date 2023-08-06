@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+src/SysInfo/SysInfo.py
+src/SysInfo/__init__.py
+src/SysInfo/main.py
+src/sysinfo_dawidePl.egg-info/PKG-INFO
+src/sysinfo_dawidePl.egg-info/SOURCES.txt
+src/sysinfo_dawidePl.egg-info/dependency_links.txt
+src/sysinfo_dawidePl.egg-info/top_level.txt

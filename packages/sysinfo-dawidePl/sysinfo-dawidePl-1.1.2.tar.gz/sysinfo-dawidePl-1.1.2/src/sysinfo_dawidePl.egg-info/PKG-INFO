@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: sysinfo-dawidePl
+Version: 1.1.2
+Summary: Simple Linux command showing hardware usage data in nice form.
+Home-page: https://github.com/dawidePl/Linux-SysInfo
+Author: dawidePl
+Author-email: dawidefirmowy@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/dawidePl/Linux-SysInfo/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: <=3.6
+Description-Content-Type: text/markdown
+
+# SysInfo
+
+Simple Linux command for newbies made by dawidePl.
+
+## Table of contents
+
+* [General Info](#general-info)
+* [Setup](#setup)
+* [Notes](#notes)
+
+## General Info
+
+SysInfo is Linux command providing informations about hardware usage. Data is shown in simple form, so that non-technical users can fully and easily understand it.
+
+## Setup
+
+Coming in next version.
+
+## Notes
+
+To use this command, you need to have Python with any version below `3.8` ( Python `3.8` and further removed necessary stuff )
+
