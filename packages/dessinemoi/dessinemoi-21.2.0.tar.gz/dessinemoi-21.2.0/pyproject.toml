@@ -1,0 +1,101 @@
+# -- Poetry --------------------------------------------------------------------
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "dessinemoi"
+version = "21.2.0"
+description = "A simple Python factory system"
+authors = ["Vincent Leroy <vincent.leroy@rayference.eu>"]
+maintainers = ["Vincent Leroy <vincent.leroy@rayference.eu>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/leroyvn/dessinemoi"
+documentation  = "https://dessinemoi.readthedocs.io"
+packages = [
+    { include = "dessinemoi", from = "src" },
+]
+
+# -- Dependencies --------------------------------------------------------------
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4"
+attrs = "*"
+
+[tool.poetry.dev-dependencies]
+# test
+pytest = "^3.4"
+pytest-cov = "*"
+codecov = "*"
+# dev
+black = "*"
+isort = ">5"
+conda-lock = "^0.9"
+bump2version = "*"
+# docs
+sphinx = ">=3.1"
+furo = "*"
+sphinx-copybutton = "*"
+sphinx-autodoc-typehints = "*"
+towncrier = "^21.3.0"
+
+[tool.conda-lock]
+channels = ["conda-forge"]
+
+[tool.conda-lock.dependencies]
+setuptools = "*"  # Required to install package in dev mode
+poetry = "*"  # Required to manage dependencies
+
+# -- Coverage ------------------------------------------------------------------
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["dessinemoi"]
+
+[tool.coverage.report]
+show_missing = true
+
+# -- Formatters ----------------------------------------------------------------
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+# -- Changelog management ------------------------------------------------------
+
+[tool.towncrier]
+directory = "changes"
+package = "dessinemoi"
+package_dir = "src"
+filename = "CHANGELOG.rst"
+title_format = false  # Title handled by template
+template = "changes/_template.rst"
+underlines = "-^~"
+wrap = true
+
+[[tool.towncrier.type]]
+directory = "feature"
+name = "Features"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "bugfix"
+name = "Bugfixes"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "removal"
+name = "Deprecations and removals"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "dev"
+name = "Developer-side changes"
+showcontent = true
