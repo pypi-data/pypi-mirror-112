@@ -1,0 +1,31 @@
+from __future__ import absolute_import
+
+from kps_sdk.authentication import Auth
+from kps_sdk.category_entity_kit import CategoryEntityKit
+from kps_sdk.service_domain_entity_kit import ServiceDomainEntityKit
+from kps_sdk.service_domain_info_entity_kit import ServiceDomainInfoEntityKit
+from kps_sdk.node_entity_kit import NodeEntityKit
+from kps_sdk.node_info_entity_kit import NodeInfoEntityKit
+from kps_sdk.user_entity_kit import UserEntityKit
+from kps_sdk.cloud_profile_entity_kit import CloudProfileEntityKit
+from kps_sdk.project_entity_kit import ProjectEntityKit
+from kps_sdk.application_entity_kit import ApplicationEntityKit
+from kps_sdk.application_status_entity_kit import ApplicationStatusEntityKit
+from kps_sdk.data_source_entity_kit import DataSourceEntityKit
+from kps_sdk.data_pipeline_entity_kit import DataPipelineEntityKit
+from kps_sdk.auditlog_entity_kit import AuditLogEntityKit
+from kps_sdk.container_registry_entity_kit import ContainerRegistryEntityKit
+from kps_sdk.ml_model_entity_kit import MLModelEntityKit
+from kps_sdk.ml_model_status_entity_kit import MLModelStatusEntityKit
+from kps_sdk.service_instance_entity_kit import ServiceInstanceEntityKit
+from kps_sdk.service_class_entity_kit import ServiceClassEntityKit
+from kps_sdk.service_binding_entity_kit import ServiceBindingEntityKit
+from kps_sdk.helm_entity_kit import HelmEntityKit
+
+from common import connection_info
+
+authObject = Auth()
+_, token = authObject.loginUsingAuthTag(connection_info.USER_EMAIL, connection_info.USER_PWD)
+Auth.Token = token
+
+
