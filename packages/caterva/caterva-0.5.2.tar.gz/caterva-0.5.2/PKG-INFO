@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: caterva
+Version: 0.5.2
+Summary: Caterva for Python (multidimensional compressed data containers).
+Home-page: https://github.com/Blosc/cat4py
+Author: Blosc Development Team
+Author-email: blosc@blosc.org
+Maintainer: Blosc Development Team
+Maintainer-email: blosc@blosc.org
+License: https://opensource.org/licenses/BSD-3-Clause
+Description: [![Build Status](https://dev.azure.com/blosc/caterva/_apis/build/status/Blosc.cat4py?branchName=master)](https://dev.azure.com/blosc/caterva/_build/latest?definitionId=1&branchName=master)
+        ![Coverage](https://img.shields.io/azure-devops/coverage/blosc/caterva/1)
+        [![Documentation Status](https://readthedocs.org/projects/python-caterva/badge/?version=latest)](https://python-caterva.readthedocs.io/en/latest/?badge=latest)
+        [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Blosc/python-caterva/master?filepath=notebooks%2Fslicing-performance.ipynb)
+        [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
+        
+        # python-caterva
+        
+        Python wrapper for Caterva.  Still on development.
+        
+        ## Clone repo and submodules
+        
+        ```sh
+        git clone --recurse-submodules https://github.com/Blosc/python-caterva
+        ```
+        
+        ## Development workflow
+        
+        ### Install requirements
+        
+        ```sh
+        pip install -r requirements.txt
+        ```
+        
+        ### Compile
+        
+        ```sh
+        python setup.py build_ext --build-type=RelWithDebInfo
+        ```
+        
+        ### Run tests
+        
+        ```sh
+        PYTHONPATH=. pytest
+        ```
+        
+        ### Run bench
+        
+        ```sh
+        PYTHONPATH=. python bench/compare_getslice.py
+        ```
+        
+        ### Installing
+        
+        ```sh
+        CFLAGS='' pip install caterva
+        ```
+        
+        We don't produce wheels yet, so you will currently need a C compiler in order to install cat4py.  The reason why you need the `CFLAGS=''` above is to prevent Anaconda Python injecting their own paths for dependencies (LZ4, Zstd...).
+        
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
