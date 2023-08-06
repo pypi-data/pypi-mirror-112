@@ -1,0 +1,33 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "djanticapi"
+author = "Bin Wen"
+author-email = "caowb@pillar-biosciences.com"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: Django",
+    "Framework :: Django :: 3.0",
+    "Framework :: Django :: 3.1",
+    "Framework :: Django :: 3.2",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+requires = [
+    "Django >=3.1.1",
+    "pydantic >=1.0.0,<2.0.0",
+    "orjson >=3.5.2",
+    "PyJWT>=1.5.2"
+]
+description-file = "README.md"
+requires-python = ">=3.6"
+[tool.isort]
+profile = "black"
+known_third_party = ["django", "pydantic", "restframework api", "orjson"]
+[tool.flit.sdist]
+exclude = ["__pycache__"]
