@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: mySklearn
+Version: 1.0.1
+Summary: A  module  myself sklearn
+Home-page: https://github.com/lijiulin163LJL/mySklearn.git
+Author: xiaoli
+Author-email: ljl_python@163.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: requests
+Requires: urllib3
+Requires: numpy
+Requires: pandas
+Requires: math
+Requires: collections
