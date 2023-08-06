@@ -1,0 +1,3 @@
+[console_scripts]
+matrix-runner-inspect = matrix_runner.inspect:InspectRunner
+
