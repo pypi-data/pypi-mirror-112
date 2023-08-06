@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+koreanbots/__init__.py
+koreanbots/abc.py
+koreanbots/client.py
+koreanbots/decorator.py
+koreanbots/errors.py
+koreanbots/http.py
+koreanbots/model.py
+koreanbots/typing.py
+koreanbots.egg-info/PKG-INFO
+koreanbots.egg-info/SOURCES.txt
+koreanbots.egg-info/dependency_links.txt
+koreanbots.egg-info/requires.txt
+koreanbots.egg-info/top_level.txt
