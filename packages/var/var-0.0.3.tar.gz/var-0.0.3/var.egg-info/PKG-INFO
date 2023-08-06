@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: var
+Version: 0.0.3
+Summary: Different Methods to Estimate the Value-at-Risk of a portfolio.
+Home-page: https://github.com/ibaris/VaR
+Author: Ismail Baris
+Maintainer: Ismail Baris
+License: UNKNOWN
+Description: Different Methods to Estimate the Value-at-Risk of a portfolio.
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: Microsoft

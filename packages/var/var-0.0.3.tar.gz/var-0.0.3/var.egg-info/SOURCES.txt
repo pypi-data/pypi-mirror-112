@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+var/__init__.py
+var/__version__.py
+var/auxiliary.py
+var/methods.py
+var/var.py
+var.egg-info/PKG-INFO
+var.egg-info/SOURCES.txt
+var.egg-info/dependency_links.txt
+var.egg-info/top_level.txt
+var/.info/CHANGELOG
+var/.version/version.dat
+var/data/data.csv
