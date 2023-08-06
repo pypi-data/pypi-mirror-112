@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: NGAsubGMMcoeffsKBCG20post
+Version: 0.0.5
+Summary: A Series of function for Python
+Home-page: https://www.silviasbrainery.com/
+Author: Silvia Mazzoni
+Author-email: silviamazzoni@yahoo.com
+License: (c) Silvia Mazzoni
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+## This package was developed by Silvia Mazzoni, silviamazzoni@yahoo.com
+
+## USAGE
+from eSEESminiPy import showMeUnits
+from eSEESminiPy import SavePlotFigures
+from eSEESminiPy import RunStaticElasticFrameAnalysisInOpenSeesPy
+from eSEESminiPy import runOpenSeesAnalysis
+from eSEESminiPy import DrawThis
+from eSEESminiPy import DrawSFD
+from eSEESminiPy import DrawNodes
+from eSEESminiPy import DrawModel
+from eSEESminiPy import DrawLoads
+from eSEESminiPy import DrawElements
+from eSEESminiPy import DrawDeformedShape
+from eSEESminiPy import DrawBMD
+from eSEESminiPy import DrawAnalysisResults
+from eSEESminiPy import DrawAll
+from eSEESminiPy import DrawAFD
+from eSEESminiPy import DisplayOutputTables
+from eSEESminiPy import DisplayModelDataTables
+from eSEESminiPy import buildModelData
+
+
