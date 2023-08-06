@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+example_wanpy.egg-info/PKG-INFO
+example_wanpy.egg-info/SOURCES.txt
+example_wanpy.egg-info/dependency_links.txt
+example_wanpy.egg-info/top_level.txt
+exwanpy/test.py
