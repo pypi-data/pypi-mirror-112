@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyBAScloudAPI
+Version: 0.3.0
+Summary: A Python package providing binding for the BAScloud API endpoints.
+Home-page: UNKNOWN
+Author: ProFM Facility & Project Management GmbH
+Author-email: info@profm-gmbh.de
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+
+pyBAScloudAPI is a Python packages which wraps the BAScloud REST API (v2.1) endpoints into an interface for programmers to easily use. Based on the C/C++ BAScloudAPI library.
+
