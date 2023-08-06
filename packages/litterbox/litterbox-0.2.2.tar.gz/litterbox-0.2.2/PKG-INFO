@@ -1,0 +1,68 @@
+Metadata-Version: 1.1
+Name: litterbox
+Version: 0.2.2
+Summary: A set of tools to manage all the crap for the CAT Board.
+Home-page: https://github.com/devbisme/litterbox
+Author: Dave Vandenbout
+Author-email: devb@xess.com
+License: MIT
+Description: ===============================
+        litterbox
+        ===============================
+        
+        .. image:: https://img.shields.io/pypi/v/litterbox.svg
+                :target: https://pypi.python.org/pypi/litterbox
+        
+        
+        A set of tools to manage all the crap for the CAT Board.
+        
+        * Free software: MIT license
+        * Documentation: http://devbisme.github.io/litterbox.
+        
+        Features
+        --------
+        
+        * Configure the FPGA on the CAT Board with a bitstream file stored in the Raspberry Pi.
+        * Program the CAT Board serial flash with a bitstream that will be loaded
+            into the FPGA upon power-up or reset.
+        * Erase the serial flash.
+        
+        
+        
+        
+        History
+        -------
+        
+        
+        0.2.2 (2021-07-12)
+        ________________________
+        
+        * Moved ownership from xesscorp to devbisme.
+        
+        
+        0.2.1 (2016-09-07)
+        ________________________
+        
+        * Removed dependency on spi module (python-spi).
+        
+        
+        0.2.0 (2016-09-07)
+        ________________________
+        
+        * python-spi package was incorporated into litterbox and modified to increase transfer rates.
+        * Documentation moved to Github pages.
+        
+        
+        0.1.0 (2016-05-07)
+        ________________________
+        
+        * First release on PyPI.
+        
+Keywords: litterbox
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
