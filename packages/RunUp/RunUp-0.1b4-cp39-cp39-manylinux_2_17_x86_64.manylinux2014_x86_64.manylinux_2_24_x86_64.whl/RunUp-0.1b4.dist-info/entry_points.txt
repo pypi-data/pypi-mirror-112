@@ -1,0 +1,3 @@
+[console_scripts]
+runup = runup.cli:cli
+
