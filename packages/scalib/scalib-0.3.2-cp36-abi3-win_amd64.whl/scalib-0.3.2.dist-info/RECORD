@@ -1,0 +1,17 @@
+scalib/__init__.py,sha256=PKArWDVraXNAXxWCpYzhpvpKcFVAk80HYoeoSJqgSv4,109
+scalib/_scalib_ext.pyd,sha256=Q3CUqNrTVpAWKmsiDlEmYLYq0I7PM4Z_Pb-jxX55CRo,2169344
+scalib/version.py,sha256=ILpGS5luz75UA4w8UMJat7OrGoQ6s5mtvsdf2sM-kMw,147
+scalib/attacks/__init__.py,sha256=3U_QLJr8hZuxIJOahF_7umz-2oV-lN0UPqiAKJaBEk4,36
+scalib/attacks/sascagraph.py,sha256=ozYBKz6mGbrODaPt77RfwY6bvdAPSwzSPDhdsMx60ro,23353
+scalib/metrics/__init__.py,sha256=uDkTairDdn6oIaUcJSQ2TsmIYFfpxDrgtvPoY95_Sx0,48
+scalib/metrics/snr.py,sha256=45aD8dBPz1oklV1ybbXhxqE_2a4i-nACy8r5qJlAZzk,2950
+scalib/metrics/ttest.py,sha256=8ggsGNgUsvhcuk-l6kdIg4ILXteTgSlyu-T2lNZ6ydA,3028
+scalib/modeling/__init__.py,sha256=fHCy0NGhMjOeNoBi8WgUF106Tvg7HWZdPVIGeZs0W30,52
+scalib/modeling/ldaclassifier.py,sha256=RnycWwtkpMT2ACRfowHOpvTl0gVQGspxYTm64XLPprg,10087
+scalib/postprocessing/__init__.py,sha256=MaptSl_cAhSIT1lu1dW_XMwafD4rSoG2tcRyLufw1j4,54
+scalib/postprocessing/rankestimation.py,sha256=ChAS-CIy64qOUCGspWjOEL7mF15qUoQXtdFKrHhg_xk,3783
+scalib-0.3.2.dist-info/COPYING,sha256=4O7bphXVzRuYavtsWzpLGuM3E-fp3HTRna7F4yIfnS4,35184
+scalib-0.3.2.dist-info/METADATA,sha256=LHiWife_MWIsz8GeBEr-5pZvSV8OPrPbGtcE6ovDtoo,7191
+scalib-0.3.2.dist-info/WHEEL,sha256=JPKSD7xGWsxAONUKQHSxETBJiRc79CNcZN6uTQD0kbc,100
+scalib-0.3.2.dist-info/top_level.txt,sha256=Bvp4rWbL1XQaEpmspIqo5Eu-BR1aqY9F6blu_2hYCJM,7
+scalib-0.3.2.dist-info/RECORD,,
