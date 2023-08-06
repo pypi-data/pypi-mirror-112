@@ -1,0 +1,10 @@
+README.md
+setup.py
+chip_data_team_py_slack_notifier.egg-info/PKG-INFO
+chip_data_team_py_slack_notifier.egg-info/SOURCES.txt
+chip_data_team_py_slack_notifier.egg-info/dependency_links.txt
+chip_data_team_py_slack_notifier.egg-info/requires.txt
+chip_data_team_py_slack_notifier.egg-info/top_level.txt
+data_team_py_slack_notifier/__init__.py
+data_team_py_slack_notifier/data_team_py_slack_notifier.py
+test/test_data_team_py_slack_notifier.py
