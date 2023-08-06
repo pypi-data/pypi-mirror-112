@@ -1,0 +1,11 @@
+apt/__init__.py,sha256=ADTsZcSH3pZq6NyiEo9yCPNJURNd3n1Mm_7Sr9tZR0I,142
+apt/utils.py,sha256=KyYwFEnvJ21AvqswG15MXp_mkhdeTfD-DaHbczRlbI4,8998
+apt/anonymization/__init__.py,sha256=LP7sI0A4sXGIUq-svsCZpDM0ysvk3PQD_Yg3JOsxe50,911
+apt/anonymization/anonymizer.py,sha256=AtwCoV-KpNAL4mUdYMPDy0TBT4O5wVw5UcN0rpdHDIA,7530
+apt/minimization/__init__.py,sha256=XpTQQAszQzwx3z7K4r5he-OHgUwYgqkK-e9drF8NloU,1018
+apt/minimization/minimizer.py,sha256=Bk5fMRfFLO2cKr4z4tKhNDZSWaC67JVzyN7NZM4GSUo,29475
+ai_privacy_toolkit-0.0.3.dist-info/LICENSE,sha256=t-ZkY-vak1QWjzid8VIzMds6wT0xEafbk406cLmdj_Q,1088
+ai_privacy_toolkit-0.0.3.dist-info/METADATA,sha256=B1N0pMXEQWmONjwUPwspuqj7vGqR-I8cWLbC2dgXDls,2478
+ai_privacy_toolkit-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ai_privacy_toolkit-0.0.3.dist-info/top_level.txt,sha256=YhgJGFrtuW6lS3VRreO5Qlt5cNTJIPlhJMCFpVEjbJM,4
+ai_privacy_toolkit-0.0.3.dist-info/RECORD,,
