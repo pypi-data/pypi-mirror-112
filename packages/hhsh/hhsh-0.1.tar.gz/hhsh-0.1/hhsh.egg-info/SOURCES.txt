@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+hhsh/__init__.py
+hhsh/__main__.py
+hhsh/hhsh.py
+hhsh.egg-info/PKG-INFO
+hhsh.egg-info/SOURCES.txt
+hhsh.egg-info/dependency_links.txt
+hhsh.egg-info/entry_points.txt
+hhsh.egg-info/requires.txt
+hhsh.egg-info/top_level.txt
+hhsh.egg-info/zip-safe
+tests/__init__.py
+tests/test_hhsh.py
