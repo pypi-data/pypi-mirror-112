@@ -1,0 +1,6 @@
+[console_scripts]
+octadocs=octadocs.cli:app
+
+[mkdocs.plugins]
+octadocs=octadocs.plugin:OctaDocsPlugin
+
