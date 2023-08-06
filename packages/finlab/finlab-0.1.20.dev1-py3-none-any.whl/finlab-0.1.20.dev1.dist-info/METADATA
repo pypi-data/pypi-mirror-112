@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: finlab
+Version: 0.1.20.dev1
+Summary: Analyzing stock has never been easier.
+Home-page: UNKNOWN
+Author: FinLab
+Author-email: finlab.company@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=1.0.3)
+Requires-Dist: pyarrow (>=2.0.0)
+Requires-Dist: lz4
+Requires-Dist: ffn (>=0.3.5)
+Requires-Dist: shioaji
+Requires-Dist: sourcedefender (>=7.1.14)
+Requires-Dist: plotly (>=5.1.0)
+
+# finlab
+Analyzing stock has never been easier.
+
+
+# How to update official package:
+1. change the version in setup.py and finlab/__init__.py
+2. execute upload.sh (with password)
+3. execute upload_encrypted.py (with cloud storage and sourcedefender dependencies)
+
+
