@@ -1,0 +1,6 @@
+gdal>=3.0.1
+geopandas>=0.8.2
+rasterio>=1.2.0
+Fiona>=1.8.18
+rasterio>=1.2.0
+rasterstats>=0.15.0
