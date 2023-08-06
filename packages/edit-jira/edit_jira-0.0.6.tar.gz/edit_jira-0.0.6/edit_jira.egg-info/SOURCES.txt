@@ -1,0 +1,9 @@
+setup.py
+edit_jira.egg-info/PKG-INFO
+edit_jira.egg-info/SOURCES.txt
+edit_jira.egg-info/dependency_links.txt
+edit_jira.egg-info/entry_points.txt
+edit_jira.egg-info/requires.txt
+edit_jira.egg-info/top_level.txt
+jira_tool_edit/__init__.py
+jira_tool_edit/__main__.py
