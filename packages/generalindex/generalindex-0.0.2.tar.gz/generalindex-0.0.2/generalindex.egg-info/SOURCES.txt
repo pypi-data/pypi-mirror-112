@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+generalindex.egg-info/PKG-INFO
+generalindex.egg-info/SOURCES.txt
+generalindex.egg-info/dependency_links.txt
+generalindex.egg-info/top_level.txt
+northgravity/Authenticator.py
+northgravity/DatalakeHandler.py
+northgravity/HTTPCalller.py
+northgravity/StatusHandler.py
+northgravity/TaskHandler.py
+northgravity/Timeseries.py
+northgravity/__init__.py
+test/test.py
