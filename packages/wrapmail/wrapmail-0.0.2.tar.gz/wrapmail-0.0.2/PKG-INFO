@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: wrapmail
+Version: 0.0.2
+Summary: A package that helps to send emails through Python utilizing an OOP logic
+Home-page: UNKNOWN
+Author: Alperen Yıldız
+Author-email: <alperenyildiz@sabanciuniv.edu
+License: UNKNOWN
+Keywords: python,mail,gmail,api,smtp
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# Wrapmail
+
+## Installation 
+
+pip install wrapmail
+
+## Google Gmail API Wrapper Setup
+
+This module comes with a wrapper for Google's Gmail api.
+Google requires authentication for using the Gmail api. In order to use the wrapper, go to google developers console, create project, register Gmail api.
+The only required scope is https://mail.google.com/ Then, you need to download the client_secret json file and include it in your directory.
+
+After you include client_secret.json and instantiated the Gmail class and run the main python file, and automatic authentication window will open and ask you
+to sign in. After signing in, if your authentication was successful you will be prompted by message "authentication flow has completed" and a pickle file will be created. As long as pickle file does not expire and is included in your working directory, you won't need to complete these steps. Do not share your client secret file, its contents or your pickle file. The authenticated email address will be used to send mails.
+
+Since OAuth is used, you don't need to allow for less secure apps in your gmail account.
+
+
+
