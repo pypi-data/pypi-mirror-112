@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pythonabm
+Version: 0.0.4
+Summary: ABM framework for Python
+Home-page: UNKNOWN
+Author: Jack Toppen
+Author-email: jtoppen3@gatech.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Requires-Dist: numpy
+Requires-Dist: numba
+Requires-Dist: opencv-python
+Requires-Dist: psutil
+Requires-Dist: python-igraph
+Requires-Dist: pyyaml
+Requires-Dist: scipy
+
+UNKNOWN
+
+
