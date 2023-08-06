@@ -1,0 +1,9 @@
+MANIFEST.in
+setup.py
+pyi_example_package/__init__.py
+pyi_example_package/hook-pyi_example_package.py
+pyi_example_package.egg-info/PKG-INFO
+pyi_example_package.egg-info/SOURCES.txt
+pyi_example_package.egg-info/dependency_links.txt
+pyi_example_package.egg-info/entry_points.txt
+pyi_example_package.egg-info/top_level.txt

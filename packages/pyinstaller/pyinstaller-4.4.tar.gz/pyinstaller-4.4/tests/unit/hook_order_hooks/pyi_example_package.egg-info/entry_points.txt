@@ -1,0 +1,3 @@
+[pyinstaller40]
+hooks = pyi_example_package.__init__:get_hook_dirs
+
