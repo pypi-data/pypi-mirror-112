@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: sdc-api-py
+Version: 1.2.12
+Summary: An async wrapper for Server-Discord.Com API
+Home-page: https://github.com/TheKing-OfTime/sdc-api.py
+Author: TheKingOfTime
+Author-email: artem.matvienko0@gmai.com
+License: UNKNOWN
+Description: # sdc-api.py
+        * Враппер для https://api.server-discord.com/v2
+        * Документация к API: https://docs.server-discord.com/
+        
+        ## Установка
+        
+        ```
+        pip install sdc_api_py
+        ```
+        
+        # Внимание!
+        ## Враппер полностью асинхронен. Любые вызовы функций следует проводить только в асинхронных функциях
+        
+        ## Использование
+        
+        ### Враппер включает в себя 3 основных класса:
+        
+        
+        
+        #### Monitoring
+        
+        ```py
+        import sdc_api_py
+        
+        monitoring = sdc_api_py.Monitoring(SDC_TOKEN)
+        
+        ...
+        sdc_guild = await monitoring.get_guild(id)  # Использовать в асинхронной функции
+        
+        sdc_guild_place = await monitoring.fetch_guild_place(id)  # Использовать в асинхронной функции
+        
+        sdc_guild_rate = await monitoring.get_guild_rate(id)  # Использовать в асинхронной функции
+        
+        sdc_user_rate = await monitoring.get_user_rate(id)  # Использовать в асинхронной функции
+        ```
+        
+        #### NikaWarns
+        
+        ```py
+        import sdc_api_py
+        
+        Nika = sdc_api_py.NikaWarns(SDC_TOKEN)
+        
+        ...
+        warns = await Nika.fetch_warns(id)  # Использовать в асинхронной функции
+        ```
+        
+        #### Bots
+        
+        ```py
+        import sdc_api_py
+        from discord.ext import commands
+        
+        class BotsSDC(commands.Cog):
+        
+            def __init__(self, bot):
+                self.bot = bot
+        
+            @commands.Cog.listener()
+            async def on_ready(self):
+                bots = sdc_api_py.Bots(self.bot, SDC_TOKEN)
+                bots.create_loop()  #Как аргумент можно использовать время в минутах. Раз в это количество минут будет отправляться статистика.
+                                    #По умолчанию 60 минут. Минимальный порог 30 минут.
+        bot.add_cog(BotsSDC(bot))
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >= 3.7
+Description-Content-Type: text/markdown
