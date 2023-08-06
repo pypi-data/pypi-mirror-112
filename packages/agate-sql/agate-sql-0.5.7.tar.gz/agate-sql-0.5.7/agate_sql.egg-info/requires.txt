@@ -1,0 +1,11 @@
+agate>=1.5.0
+sqlalchemy>=1.0.8
+
+[docs]
+Sphinx>=1.2.2
+sphinx_rtd_theme>=0.1.6
+
+[test]
+crate
+nose>=1.1.2
+geojson
