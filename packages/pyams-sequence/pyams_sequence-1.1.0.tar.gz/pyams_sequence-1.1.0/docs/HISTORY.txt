@@ -1,0 +1,25 @@
+Changelog
+=========
+
+1.1.0
+-----
+ - updated REST api param name
+ - updated REST endpoint in internal reference selection widget
+ - added internal reference label formatter
+
+1.0.3
+-----
+ - updated Pylint score
+ - updated package dependencies
+
+1.0.2
+-----
+ - updated package description
+
+1.0.1
+-----
+ - updated package description
+
+1.0.0
+-----
+ - initial release
