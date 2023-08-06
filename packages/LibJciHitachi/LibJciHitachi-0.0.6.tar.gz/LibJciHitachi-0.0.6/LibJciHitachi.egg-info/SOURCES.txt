@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+JciHitachi/__init__.py
+JciHitachi/api.py
+JciHitachi/connection.py
+JciHitachi/status.py
+JciHitachi/utility.py
+JciHitachi/tests/__init__.py
+JciHitachi/tests/test_login.py
+JciHitachi/tests/test_status.py
+LibJciHitachi.egg-info/PKG-INFO
+LibJciHitachi.egg-info/SOURCES.txt
+LibJciHitachi.egg-info/dependency_links.txt
+LibJciHitachi.egg-info/requires.txt
+LibJciHitachi.egg-info/top_level.txt
