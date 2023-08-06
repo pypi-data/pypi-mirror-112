@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+django_vitess.egg-info/PKG-INFO
+django_vitess.egg-info/SOURCES.txt
+django_vitess.egg-info/dependency_links.txt
+django_vitess.egg-info/requires.txt
+django_vitess.egg-info/top_level.txt
+vitess/__init__.py
+vitess/base.py
+vitess/features.py
