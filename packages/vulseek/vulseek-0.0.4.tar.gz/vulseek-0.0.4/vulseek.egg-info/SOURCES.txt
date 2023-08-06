@@ -1,0 +1,10 @@
+README.md
+setup.py
+vulseek.egg-info/PKG-INFO
+vulseek.egg-info/SOURCES.txt
+vulseek.egg-info/dependency_links.txt
+vulseek.egg-info/entry_points.txt
+vulseek.egg-info/not-zip-safe
+vulseek.egg-info/requires.txt
+vulseek.egg-info/top_level.txt
+vulseek/cli/main.py
