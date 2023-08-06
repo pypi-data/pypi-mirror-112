@@ -1,0 +1,14 @@
+README.md
+setup.py
+discord/ext/oauth/__init__.py
+discord/ext/oauth/client.py
+discord/ext/oauth/errors.py
+discord/ext/oauth/guild.py
+discord/ext/oauth/http.py
+discord/ext/oauth/token.py
+discord/ext/oauth/user.py
+discord_ext_oauth.egg-info/PKG-INFO
+discord_ext_oauth.egg-info/SOURCES.txt
+discord_ext_oauth.egg-info/dependency_links.txt
+discord_ext_oauth.egg-info/requires.txt
+discord_ext_oauth.egg-info/top_level.txt
