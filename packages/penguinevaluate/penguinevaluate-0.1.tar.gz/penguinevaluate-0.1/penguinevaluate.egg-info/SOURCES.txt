@@ -1,0 +1,14 @@
+MANIFEST.in
+pyproject.toml
+setup.py
+penguinevaluate/__init__.py
+penguinevaluate/app.py
+penguinevaluate/constants.py
+penguinevaluate/evaluate.py
+penguinevaluate/get_snowflake_data.py
+penguinevaluate.egg-info/PKG-INFO
+penguinevaluate.egg-info/SOURCES.txt
+penguinevaluate.egg-info/dependency_links.txt
+penguinevaluate.egg-info/not-zip-safe
+penguinevaluate.egg-info/requires.txt
+penguinevaluate.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+include penguinevaluate/snowflake_sales_data.pkl
+include penguinevaluate/get_snowflake_data.py
