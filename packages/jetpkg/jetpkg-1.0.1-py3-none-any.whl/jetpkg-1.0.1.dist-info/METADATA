@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: jetpkg
+Version: 1.0.1
+Summary: jet data query and clean tools
+Home-page: UNKNOWN
+Author: jihaoran
+Author-email: 944816903@qq.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.9
+Requires-Dist: typeguard (==2.12.1)
+Requires-Dist: pandas (==1.2.5)
+Requires-Dist: pathos (==0.2.8)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: simplejson (==3.17.2)
+Requires-Dist: SQLAlchemy (==1.4.20)
+Requires-Dist: tqdm (==4.61.1)
+
+UNKNOWN
+
