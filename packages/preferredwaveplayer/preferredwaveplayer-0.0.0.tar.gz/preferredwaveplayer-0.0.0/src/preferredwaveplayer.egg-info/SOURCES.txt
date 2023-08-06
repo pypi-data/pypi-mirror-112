@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/preferredwave/__init__.py
+src/preferredwave/preferredwaveplayer.py
+src/preferredwaveplayer.egg-info/PKG-INFO
+src/preferredwaveplayer.egg-info/SOURCES.txt
+src/preferredwaveplayer.egg-info/dependency_links.txt
+src/preferredwaveplayer.egg-info/top_level.txt
