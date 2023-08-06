@@ -1,0 +1,3 @@
+[console_scripts]
+sylo = sylo.cmdline:main
+
