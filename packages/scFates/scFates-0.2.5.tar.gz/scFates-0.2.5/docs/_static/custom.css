@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "Lato";
+    src: url("Lato-Regular.ttf");
+}
+
+
+/* Fix logo size */
+img.logo {
+  width: 320px !important;
+  height: 100% !important;
+}
+
+/* ReadTheDocs theme colors */
+
+.wy-nav-top { background-color: #404040 }
+.wy-nav-content { max-width: 900px }
+.wy-side-nav-search { background-color: transparent }
+.wy-side-nav-search input[type="text"] { border-width: 0 }
+
+
+/* Custom classes */
+.small { font-size:40% }
+.smaller, .pr { font-size:70% }
+
+
+/* Custom classes with bootstrap buttons */
+
+.tutorial,
+.tutorial:visited,
+.tutorial:hover
+{
+    /* text-decoration: underline; */
+    font-weight: bold;
+    padding: 2px 5px;
+    white-space: nowrap;
+    max-width: 100%;
+    background: #EF3270;
+    border: solid 1px #EF3270;
+    border-radius: .25rem;
+    font-size: 75%;
+    /* font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace; */
+    color: #404040;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+
+/* Formatting of RTD markup: rubrics and sidebars and admonitions */
+
+/* rubric */
+.rst-content p.rubric {
+    margin-bottom: 6px;
+    font-weight: normal;
+}
+.rst-content p.rubric::after { content: ":" }
+
+/* sidebar */
+.rst-content .sidebar {
+    /* margin: 0px 0px 0px 12px; */
+    padding-bottom: 0px;
+}
+.rst-content .sidebar p {
+    margin-bottom: 12px;
+}
+.rst-content .sidebar p,
+.rst-content .sidebar ul,
+.rst-content .sidebar dl {
+    font-size: 13px;
+}
+
+/* less space after bullet lists in admonitions like warnings and notes */
+.rst-content .section .admonition ul {
+    margin-bottom: 6px;
+}
+
+/* Adjust width of navigation bar on mobile */
+@media screen and (max-width: 768px) {
+	.header-bar {
+		display: none;
+	}
+
+	.wy-nav-content-wrap {
+		margin-left: 0px;
+	}
+
+	.wy-nav-side {
+		width: 300px;
+	}
+
+	.wy-nav-side.shift {
+    	max-width: 320px;
+    }
+
+	/* Fix sidebar adjust */
+	.rst-versions {
+		width: 40%;
+		max-width: 320px;
+	}
+}
+
+/* Handle landscape */
+@media screen and (min-width: 377px) {
+  .wy-nav-content-wrap.shift {
+    left: 320px;
+  }
+}
+
+/* make height responsive for notebook figures */
+img.no-scaled-link {
+    max-width: 100% !important;
+    height: auto !important;
+}

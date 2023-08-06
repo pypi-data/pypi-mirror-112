@@ -1,0 +1,16 @@
+[run]
+branch = True
+omit =
+    scFates/plot/palette_tools.py
+    scFates/logging.py
+    scFates/preprocessing/*
+    scFates/plot/utils.py
+    scFates/tools/utils.py
+    scFates/tools/conversion.py
+
+[report]
+exclude_lines =
+    if copy:
+    if device == "gpu":
+    def palantir_on_seg
+    except Exception as e:
