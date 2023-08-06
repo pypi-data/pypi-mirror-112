@@ -1,0 +1,11 @@
+dbnd==0.44.2
+setuptools
+six
+
+[tests]
+werkzeug==0.16.1
+pytest==4.5.0
+mock
+WTForms<2.3.0
+sh
+SQLAlchemy==1.3.18
