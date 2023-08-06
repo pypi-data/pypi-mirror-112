@@ -1,0 +1,4 @@
+[console_scripts]
+canvasTodoist = src.main:main
+canvastodoist = src.main:main
+
