@@ -1,0 +1,10 @@
+asn1crypto
+asysocks>=0.1.1
+colorama
+minikerberos>=0.2.14
+prompt-toolkit>=3.0.2
+pycryptodomex
+six
+tqdm
+winacl>=0.1.1
+winsspi>=0.0.9
