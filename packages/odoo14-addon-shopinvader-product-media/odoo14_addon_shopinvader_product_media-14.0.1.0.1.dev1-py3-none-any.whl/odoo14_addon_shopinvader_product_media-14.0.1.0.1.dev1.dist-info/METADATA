@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: odoo14-addon-shopinvader-product-media
+Version: 14.0.1.0.1.dev1
+Summary: Index storage media data into external search engine
+Home-page: https://github.com/shopinvader/odoo-shopinvader
+Author: Akretion
+License: AGPL-3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: >=3.6
+Requires-Dist: odoo14-addon-shopinvader
+Requires-Dist: odoo14-addon-storage-media-product
+Requires-Dist: odoo (<14.1dev,>=14.0a)
+
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+   :alt: License: AGPL-3
+
+==========================
+ShopInvader Product Media
+==========================
+
+This module extends the functionality of product media to support your
+ShopInvader Shop
+
+Installation
+============
+
+To install this module, you need to:
+
+#. Install the module
+
+Configuration
+=============
+
+No configuration is required
+
+Usage
+=====
+
+Re-Export your product
+
+Known issues / Roadmap
+======================
+
+* Nothing
+
+Bug Tracker
+===========
+
+Bugs are tracked on `GitHub Issues
+<https://github.com/akretion/odoo-shopinvader/issues>`_. In case of trouble, please
+check there if your issue has already been reported. If you spotted it first,
+help us smashing it by providing a detailed and welcomed feedback.
+
+Credits
+=======
+
+Contributors
+------------
+
+* Sébastien BEAU <sebastien.beau@akretion.com>
+
+Funders
+-------
+
+The development of this module has been financially supported by:
+
+* Akretion R&D
+* Adaptoo
+
+Maintainer
+----------
+
+This module is maintained by Akretion.
+
+
