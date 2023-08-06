@@ -1,0 +1,3 @@
+[console_scripts]
+python_api_machine = python_api_machine.cli:main
+
