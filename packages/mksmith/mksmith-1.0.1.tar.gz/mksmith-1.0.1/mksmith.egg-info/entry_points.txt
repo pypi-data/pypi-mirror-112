@@ -1,0 +1,3 @@
+[console_scripts]
+realpython = mksmith.__main__:main
+
