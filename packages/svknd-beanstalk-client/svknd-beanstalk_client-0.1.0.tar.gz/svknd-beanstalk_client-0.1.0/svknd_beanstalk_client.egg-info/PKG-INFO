@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: svknd-beanstalk-client
+Version: 0.1.0
+Summary: SVKND Beanstalk Client
+Home-page: https://svknd.id
+Author: Irvan Maulana
+Author-email: me@tukangremot.com
+License: MIT
+Description: # Beanstalk Client Package
+        
+        This is a Beanstalk Client Package by SVKND
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
