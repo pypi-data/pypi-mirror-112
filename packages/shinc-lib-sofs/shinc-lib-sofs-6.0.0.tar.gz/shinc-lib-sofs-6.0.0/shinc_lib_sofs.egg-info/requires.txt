@@ -1,0 +1,8 @@
+pytesseract
+twine
+Pillow
+PyPDF2
+rdflib
+pdfplumber
+python-dateutil
+dateparser
