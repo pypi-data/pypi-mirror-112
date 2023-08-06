@@ -1,0 +1,70 @@
+{
+  "protocol": {
+    "name": "Balancer",
+    "type": "Balancer",
+    "version": 1,
+    "chain": "Ethereum",
+    "endpoint": {
+      "ethereum": "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer"
+    }
+  },
+  "entities": {
+    "swap": {
+      "attributes": {
+        "user": [
+          "userAddress",
+          "id"
+        ],
+        "tx_id": [
+          "id"
+        ],
+        "from_token": [
+          "tokenInSym"
+        ],
+        "to_token": [
+          "tokenOutSym"
+        ],
+        "from_token_amount": [
+          "tokenAmountIn"
+        ],
+        "to_token_amount": [
+          "tokenAmountOut"
+        ],
+        "timestamp": [
+          "timestamp"
+        ]
+      },
+      "query": {
+        "name": "swaps",
+        "extra_fields": {},
+        "params": {
+          "orderBy": "timestamp",
+          "pool": "poolAddress"
+        }
+      },
+      "transformations": {}
+    },
+    "pool": {
+      "attributes": {
+        "id": [
+          "id"
+        ],
+        "pool_tokens": [
+          "tokens",
+          "symbol"
+        ]
+      },
+      "query": {
+        "name": "pools",
+        "extra_fields": {},
+        "params": {
+          "orderBy": "id",
+          "initial_value": "0"
+        }
+      },
+      "transformations": {
+        "pool_tokens": "concat_list_symbols"
+      }
+    }
+  }
+}

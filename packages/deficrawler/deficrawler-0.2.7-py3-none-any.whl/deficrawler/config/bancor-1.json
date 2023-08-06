@@ -1,0 +1,50 @@
+{
+  "protocol": {
+    "name": "Bancor",
+    "type": "Bancor",
+    "version": 1,
+    "chain": "Ethereum",
+    "endpoint": {
+      "ethereum": "https://api.thegraph.com/subgraphs/name/blocklytics/bancor"
+    }
+  },
+  "entities": {
+    "swap": {
+      "attributes": {
+        "user": [
+          "trader",
+          "id"
+        ],
+        "tx_id": [
+          "transaction",
+          "id"
+        ],
+        "from_token": [
+          "fromToken",
+          "symbol"
+        ],
+        "to_token": [
+          "toToken",
+          "symbol"
+        ],
+        "from_token_amount": [
+          "amountPurchased"
+        ],
+        "to_token_amount": [
+          "amountReturned"
+        ],
+        "timestamp": [
+          "timestamp"
+        ]
+      },
+      "query": {
+        "name": "swaps",
+        "extra_fields": {},
+        "params": {
+          "orderBy": "timestamp"
+        }
+      },
+      "transformations": []
+    }
+  }
+}
