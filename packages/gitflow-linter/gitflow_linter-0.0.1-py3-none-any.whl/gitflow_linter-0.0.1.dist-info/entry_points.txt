@@ -1,0 +1,4 @@
+[console_scripts]
+gitflow-linter = gitflow_linter:main
+gitflow-linter-plugins = gitflow_linter:available_plugins
+
