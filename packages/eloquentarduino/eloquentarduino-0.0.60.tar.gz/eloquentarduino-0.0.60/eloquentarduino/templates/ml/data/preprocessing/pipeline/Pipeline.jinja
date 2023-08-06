@@ -1,0 +1,71 @@
+{% extends './templates/Namespace.jinja' %}
+
+{% block preamble %}
+
+    #ifndef __PIPELINE__{{ ns }}
+    #define __PIPELINE__{{ ns }}
+
+    #include <cstring>
+
+    {% for library in includes %}
+    #include "{{ library }}"
+    {% endfor %}
+
+    {% include './AbstractStep.jinja' %}
+
+    {% for i, step in enumerate(steps) %}
+    {{ step.port(ns=ns) }}
+    {% endfor %}
+
+{% endblock %}
+
+{% block body %}
+
+
+    class {{ classname }} {
+        public:
+            float X[{{ output_dim }}] = {0};
+            time_t latency = 0;
+
+            /**
+             * Constructor
+             */
+            {{ classname }}() :
+                {% for i, step in enumerate(steps) %}
+                    {% if i > 0 %},{% endif %} step{{ i }}(buffer)
+                {% endfor %}
+            {
+
+            }
+
+            /**
+             * Transform input vector
+             */
+            bool transform(float *x) {
+                memcpy(X, x, sizeof(float) * {{ input_dim }});
+
+                time_t start = micros();
+                bool done =
+                {% for i, step in enumerate(steps) %}
+                    // {{ step.name }}
+                    {% if i > 0 %} && {% endif %} step{{ i }}.transform(X)
+                {% endfor %};
+
+                latency = micros() - start;
+
+                return done;
+            }
+
+        protected:
+            // shared temporary memory for the steps
+            float buffer[{{ working_dim }}] = {0};
+            {% for i, step in enumerate(steps) %}
+                {{ step.name }} step{{ i }};
+            {% endfor %}
+    };
+
+{% endblock %}
+
+{% block footer %}
+#endif
+{% endblock %}
