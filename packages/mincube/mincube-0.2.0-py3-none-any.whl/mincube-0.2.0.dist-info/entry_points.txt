@@ -1,0 +1,3 @@
+[console_scripts]
+my-script=minimum_cubes.getCubes:minCubes
+
