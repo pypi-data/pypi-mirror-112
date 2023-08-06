@@ -1,0 +1,17 @@
+tests/__init__.py,sha256=b_wucdKtmeO91UDHqVsRMQvZRYr-9YLqX24N6F1Pduw,133
+tests/load_pretrained_test.py,sha256=t29LeD479sZZYRql_l5LW6Q7o5fGtq3YctUEaa9pN88,7949
+tests/modeling_albert_test.py,sha256=AeJmgBlgHDQd84NPQhbxsQ3EfAJWtODiEi8IkBnAPbY,7225
+tests/modeling_bert_test.py,sha256=1Nnq9Po7VK_dSlQ0W0s99gE8vmJK90arnR_Fq0U9aaI,5959
+transformers_keras/__init__.py,sha256=Pw498AaJIJWqmiuAWSYNwn4yibqiBTBn36HTcstVlqw,545
+transformers_keras/modeling_albert.py,sha256=drTQZKFQXMMyi8jqHCx4Qaw83V8d4Ar2_httgpgNIL0,18480
+transformers_keras/modeling_bert.py,sha256=GfnjM3h5nEhD4f4IzjYke7vXmSKpZqhC1kQCCHNmE_c,21846
+transformers_keras/modeling_utils.py,sha256=s-U7AqyQvDkasTLbVVlOTP26LZ090W5ukGqOI8gXOSo,3912
+transformers_keras/adapters/__init__.py,sha256=1OohHZRS0Artv62JcKabHY_83qIAfPEmstQcmJEFSas,152
+transformers_keras/adapters/abstract_adapter.py,sha256=GH7jdITX1iZzY3MLQiw4iS2YpRxwNW22IR97mPKDX_Q,2769
+transformers_keras/adapters/albert_adapter.py,sha256=x7zvVU_Fb3fAabelIOzE5chGHhpBClwOQfXeXmEsC-U,6483
+transformers_keras/adapters/bert_adapter.py,sha256=NGX304ELtWPv0cxyuTyOGr9OOEK--Td2R1Hf9syE_L4,3695
+transformers_keras-0.3.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+transformers_keras-0.3.1.dist-info/METADATA,sha256=gAoXLVOIqNry0eYKXFG2A5maoBkrAbB69lNfLv_6nD8,11259
+transformers_keras-0.3.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+transformers_keras-0.3.1.dist-info/top_level.txt,sha256=D63i9u9w3QTszEALKOIZlyhN4ibESdgzuWucYV3wBd0,25
+transformers_keras-0.3.1.dist-info/RECORD,,
