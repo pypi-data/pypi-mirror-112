@@ -1,0 +1,218 @@
+{
+  "src/lib/components/DashJsmole.react.js": {
+    "description": "",
+    "displayName": "DashJsme",
+    "methods": [
+      {
+        "name": "smilesUpdate",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "smiles",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "jmeEvent",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "event",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "atomClick",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "atom",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "bondClick",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "bond",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "atomHover",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "atom",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "bondHover",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "bond",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "height": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The height of rendered componenet",
+        "defaultValue": {
+          "value": "'400px'",
+          "computed": false
+        }
+      },
+      "width": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The width of rendered compnent",
+        "defaultValue": {
+          "value": "'400px'",
+          "computed": false
+        }
+      },
+      "options": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The options for rendered component"
+      },
+      "smiles": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The smiles string of component",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "lineWidth": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The line width of component",
+        "defaultValue": {
+          "value": "1.5",
+          "computed": false
+        }
+      },
+      "atomHover": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The highlighted Atom"
+      },
+      "bondHover": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The highlighted bond"
+      },
+      "atomClick": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The atom clicked of component"
+      },
+      "bondClick": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The bond clicked of component"
+      },
+      "atomsMark": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The atoms marked string atom,color",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "bondsMark": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The bonds marked string bond,color",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "jmeEvent": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "jsmeEvent information"
+      },
+      "src": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The source url for jsme.nocache.js"
+      },
+      "actionCode": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "set  action code for menu"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      }
+    }
+  }
+}
