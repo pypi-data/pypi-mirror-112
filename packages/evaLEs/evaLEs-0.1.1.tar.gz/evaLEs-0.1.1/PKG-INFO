@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: evaLEs
+Version: 0.1.1
+Summary: Evaluate the Lyapunov Spectrum of a Dynamical System
+Home-page: https://github.com/dodogabrie/evaLEs
+Author: Edoardo Gabrielli
+Author-email: dodogabrie97@live.it
+License: GPLv3
+Description: # evaLEs
+        Evaluate the Lyapunov Spectrum of a dynamical system described by ODEs 
+        
+        Project inspirated from [paulrozdeba/pyLyapunov](https://github.com/paulrozdeba/pyLyapunov). 
+        
+        # How to install:
+        ```
+        pip install evaLEs
+        ```
+        
+        
+        [![Build Status](https://www.travis-ci.com/dodogabrie/evaLEs.svg?branch=main)](https://www.travis-ci.com/dodogabrie/evaLEs)
+        [![Documentation Status](https://readthedocs.org/projects/evales/badge/?version=latest)](https://evales.readthedocs.io/en/latest/?badge=latest)
+        
+        
+        # evaLEs v0.1:
+        
+        - Create Package.
+        
+        # evaLEs v0.1.1
+        
+        - Added Discrete Dynamical Systems (maps) support.
+        - Added 1D system (Continuos and Maps) support.
+        - Code reorganized.
+        
+Keywords: Lyapunov,LE,LyapunovExponents,LyapunovSpectrum
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
