@@ -1,0 +1,30 @@
+Changelog
+=========
+
+1.2.3
+-----
+ - use IObjectLabel interface instead of ITableElementName
+
+1.2.2
+-----
+ - updated forms AJAX renderers
+ - Pylint cleanups
+
+1.2.1
+-----
+ - added missing "context" argument to permission check
+ - updated add menus registration for last release of PyAMS_zmi package
+
+1.2.0
+-----
+ - added option to disable two-phases commit on any SQLALchemy engine
+ - added Pyramid setting to manage connections management thread; this setting can also be used
+   to disable this thread completely
+
+1.1.0
+-----
+ - removed support for Python < 3.7
+
+1.0.0
+-----
+ - initial release
