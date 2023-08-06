@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pidm
+Version: 1.0.0
+Summary: A module which can download content in parallel threads and increase download speed
+Home-page: https://github.com/s0ulix/pidm
+Author: s0ulix
+Author-email: sombeerjatt@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/s0ulix/pidm/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Pyidm
+
+This python module help you to download content with multiple parallel threads. So your download speed may increase.
+
