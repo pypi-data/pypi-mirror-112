@@ -1,0 +1,3 @@
+[console_scripts]
+mlctl = mlctl.clis.cli:_mlctl_pass_through
+
