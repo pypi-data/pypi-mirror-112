@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: medux
+Version: 0.0.2
+Summary: "Open Source Electronic Medical Record."
+Home-page: https://www.medux.at
+Author: Christian González
+Author-email: christian.gonzalez@nerdocs.at
+License: AGPLv3+
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: JavaScript
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE.md
+Requires-Dist: django (>=3.1)
+Requires-Dist: gdaps (>=0.5.0)
+Requires-Dist: django-environ
+Requires-Dist: graphene-django
+Requires-Dist: whitenoise
+Requires-Dist: django-unicorn (>=0.30)
+Requires-Dist: django-simple-menu
+Requires-Dist: uvicorn
+Requires-Dist: gunicorn
+Requires-Dist: httptools
+Requires-Dist: uvloop
+Requires-Dist: psycopg2-binary
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Requires-Dist: pytest (==4.6.3) ; extra == 'dev'
+Requires-Dist: pytest-django ; extra == 'dev'
+Requires-Dist: pytest-cov (==2.7.1) ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: django-debug-toolbar ; extra == 'dev'
+
+UNKNOWN
+
