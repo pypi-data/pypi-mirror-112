@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+sphinx_rego.egg-info/PKG-INFO
+sphinx_rego.egg-info/SOURCES.txt
+sphinx_rego.egg-info/dependency_links.txt
+sphinx_rego.egg-info/requires.txt
+sphinx_rego.egg-info/top_level.txt
+sphinxrego/__init__.py
+sphinxrego/ext.py
+sphinxrego/opa.py

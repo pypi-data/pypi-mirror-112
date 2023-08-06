@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: sphinx-rego
+Version: 0.1.1
+Summary: A sphinx extension that automatically documents Open Policy Agent Rego policies using the _rego_metadoc_ property.
+Home-page: https://github.com/zenitysec/sphinx-rego
+Author: Zenity
+Author-email: join@zenity.io
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Software Development :: Documentation
+License-File: LICENSE
+
+A sphinx extension that automatically documents Open Policy Agent Rego policies using the _rego_metadoc_ property. For installation and usage details, see https://github.com/zenitysec/sphinx-rego.
+
