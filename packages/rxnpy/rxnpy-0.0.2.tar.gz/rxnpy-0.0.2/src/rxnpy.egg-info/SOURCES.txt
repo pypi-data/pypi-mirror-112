@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/rxnpy/__init__.py
+src/rxnpy/periodic_table.py
+src/rxnpy.egg-info/PKG-INFO
+src/rxnpy.egg-info/SOURCES.txt
+src/rxnpy.egg-info/dependency_links.txt
+src/rxnpy.egg-info/top_level.txt
