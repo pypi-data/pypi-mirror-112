@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/ebcommander/__init__.py
+src/ebcommander/__main__.py
+src/ebcommander/ebcommander.py
+src/ebcommander.egg-info/PKG-INFO
+src/ebcommander.egg-info/SOURCES.txt
+src/ebcommander.egg-info/dependency_links.txt
+src/ebcommander.egg-info/requires.txt
+src/ebcommander.egg-info/top_level.txt
