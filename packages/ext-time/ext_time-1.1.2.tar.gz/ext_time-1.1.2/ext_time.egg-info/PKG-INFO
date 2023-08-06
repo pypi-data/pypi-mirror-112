@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: ext-time
+Version: 1.1.2
+Summary: shm-时间解析
+Home-page: https://www.baidu.com/
+Author: sunny_shm
+Author-email: 1576396251@qq.com
+License: UNKNOWN
+Description: 天才写的包
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Text Processing :: Indexing
+Classifier: Topic :: Utilities
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
