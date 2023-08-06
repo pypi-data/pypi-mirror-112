@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+
+import argparse
+import pathlib
+import yaml
+
+from configize import configize
+from csgo_handler import CsgoHandler
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        prog="csgo_handler",
+        description="Automatically run programs when CS:GO starts and stops",
+    )
+
+    parser.add_argument(
+        "-c", "--config",
+        help="Explicitly specify config file path",
+    ),
+    parser.add_argument(
+        "-C", "--config_path",
+        help="Specify path in which to search for config, e.g. /etc/csgo_handler",
+    )
+    parser.add_argument(
+        "-D", "--daemon",
+        help="Run as a daemon",
+        action="store_true",
+        default=False,
+    )
+
+    args = parser.parse_args()
+
+    if args.config is None:
+        try:
+            if args.config_path is None:
+                conf = configize(Name="csgo_handler")
+            else:
+                conf = configize(Name="csgo_handler", Path=args.config_path)
+        except ValueError as e:
+            raise ValueError("Configuration file not found") from e
+
+        try:
+            assert isinstance(conf.config["path"], str)
+            assert pathlib.Path(conf.config["path"]).is_file()
+            assert any([
+                isinstance(conf.config["start_script"], str),
+                isinstance(conf.config["start_script"], list),
+            ])
+            assert any([
+                isinstance(conf.config["stop_script"], str),
+                isinstance(conf.config["stop_script"], list),
+            ])
+        except (AssertionError, KeyError) as e:
+            raise ValueError("Invalid configuration") from e
+
+        path = conf.config["path"]
+        start_script = conf.config["start_script"]
+        stop_script = conf.config["stop_script"]
+    else:
+        try:
+            with open(args.config, "r") as f:
+                conf = yaml.load(f, Loader=yaml.SafeLoader)
+            assert isinstance(conf["path"], str)
+            assert pathlib.Path(conf["path"]).is_file()
+            assert any([
+                isinstance(conf["start_script"], str),
+                isinstance(conf["start_script"], list),
+            ])
+            assert any([
+                isinstance(conf["stop_script"], str),
+                isinstance(conf["stop_script"], list),
+            ])
+        except Exception as e:
+            raise ValueError("Invalid configuration") from e
+        
+        path = conf["path"]
+        start_script = conf["start_script"]
+        stop_script = conf["stop_script"]
+
+    cs = CsgoHandler(
+        Path=path,
+        StartScript=start_script,
+        StopScript=stop_script,
+    )
+
+    if args.daemon:
+        cs.daemonize()
+    else:
+        cs.eventloop()
