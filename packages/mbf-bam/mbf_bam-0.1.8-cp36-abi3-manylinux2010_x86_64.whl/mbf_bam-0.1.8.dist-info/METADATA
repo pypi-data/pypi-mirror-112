@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mbf_bam
+Version: 0.1.8
+Summary: Helpers to deal with BAM files
+Keywords: bam high troughput sequencing
+Author: Florian Finkernagel <finkernagel@imt.uni-marburg.de>
+Author-Email: Florian Finkernagel <finkernagel@imt.uni-marburg.de>
+License: MIT
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# mbf_bam
+
+Fast, multi-core read counters and the like based on the BAM fileformat and rust-htslib.
+
+
+Part of the mbf_* suite from https://github.com/IMTMarburg
+
