@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: je-auto-control
+Version: 0.0.5
+Summary: auto control alpha 0.0.3
+Home-page: https://github.com/JE-Chen/Python_AutoControl
+Author: JE-Chen
+Author-email: zenmailman@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Chinese (Traditional)
+Classifier: Operating System :: Microsoft
+Description-Content-Type: text/markdown
+Requires-Dist: je-open-cv
+Requires-Dist: pillow
+Requires-Dist: numpy
+
+# je_auto_control
+
+## install
+```
+pip install je_auto_control
+```
+
+## example 
+
+### mouse
+
+```python
+
+```
+
+### keyboard
+
+```python
+
+```
+
+### screen
+
+```python
+
+```
+
+
