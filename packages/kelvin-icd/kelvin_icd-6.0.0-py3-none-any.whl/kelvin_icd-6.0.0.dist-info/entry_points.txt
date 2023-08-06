@@ -1,0 +1,3 @@
+[console_scripts]
+kelvin-icd = kelvin.icd.__main__:main
+
