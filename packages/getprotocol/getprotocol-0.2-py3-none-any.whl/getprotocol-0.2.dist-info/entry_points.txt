@@ -1,0 +1,3 @@
+[console_scripts]
+getprotocol = getprotocol.getprotocol:main
+
