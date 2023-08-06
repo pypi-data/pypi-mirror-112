@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+exurl/Filter.py
+exurl/__init__.py
+exurl/__main__.py
+exurl/split.py
+exurl.egg-info/PKG-INFO
+exurl.egg-info/SOURCES.txt
+exurl.egg-info/dependency_links.txt
+exurl.egg-info/requires.txt
+exurl.egg-info/top_level.txt
