@@ -1,0 +1,3 @@
+[console_scripts]
+cursive = src.Surveyor:main
+
