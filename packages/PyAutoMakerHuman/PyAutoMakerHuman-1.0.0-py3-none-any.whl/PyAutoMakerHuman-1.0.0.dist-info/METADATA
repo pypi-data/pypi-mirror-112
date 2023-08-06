@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: PyAutoMakerHuman
+Version: 1.0.0
+Summary: 얼굴, 포즈, 손의 랜드마크를 쉽게 가져오기위한 모듈
+Home-page: https://github.com/boa9448/PyAutoMakerHuman
+Author: WDW
+Author-email: boa3465@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/boa9448/PyAutoMakerHuman/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: imutils
+Requires-Dist: scikit-learn
+Requires-Dist: waitress
+Requires-Dist: flask
+Requires-Dist: requests
+Requires-Dist: mediapipe-rpi4 ; platform_system == "Linux"
+Requires-Dist: mediapipe ; platform_system == "Windows"
+
+# PyAutoMakerHuman
+사람과 관련된 자동화 모듈
+
+
+# 설치
+담주에 적음
+# 사용
+담주에 적음22
+
+

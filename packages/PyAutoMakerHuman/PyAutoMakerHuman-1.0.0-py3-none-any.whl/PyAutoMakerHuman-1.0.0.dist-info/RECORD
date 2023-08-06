@@ -1,0 +1,15 @@
+PyAutoMakerHuman/__init__.py,sha256=K10-cAmhjMWYul04Qzke2koM6UL7IKg-1UEEgHJQLfo,276
+PyAutoMakerHuman/face.py,sha256=P_yS-CWCXi8z9YZaAOmTwrjvSJwWD3yqdNZCo6rC9aw,6770
+PyAutoMakerHuman/hand.py,sha256=CipcnKzVrfO9A8OF2zcMGMsJ1PvAkzZoE-ho-aoqrmU,6312
+PyAutoMakerHuman/pose.py,sha256=oXWJnGSuSJiRcV4iORijqyLk6cWaGi9NGa0cVDvxPyE,77
+PyAutoMakerHuman/train.py,sha256=s2zv-qaGP9xTJfYAhasoppgBofEjJMnmOFTT69agR1U,1437
+PyAutoMakerHuman/utils.py,sha256=vO3N_1-DkCmiFO1xt_cD70m45VFo4WbrBwGr5c9tcoo,332
+PyAutoMakerHuman/models/deploy.prototxt,sha256=NNhQQ2-vFYyk5pBTO6J8HezyllNVkpnYDbknQUYzLKc,29881
+PyAutoMakerHuman/models/mask_classifier.tflite,sha256=lll5BnhpRVOgP3S1Aw04kXTYYCenoE1v6sIggxZbMaA,9523708
+PyAutoMakerHuman/models/openface_nn4.small2.v1.t7,sha256=m3LVSuskpkqBNdyo55L3zGdcmaiEppQDUKbO3Pe3ugg,31510785
+PyAutoMakerHuman/models/res10_300x300_ssd_iter_140000.caffemodel,sha256=KlahGlekopWVawZgtKPXa73KIgbElhzqjv59lcfLLy0,10666211
+PyAutoMakerHuman-1.0.0.dist-info/LICENSE,sha256=o7dfraSvkMVDT-cfCUVqmnzM02tUFSf3ySXmdvJjW9o,1085
+PyAutoMakerHuman-1.0.0.dist-info/METADATA,sha256=lqwXcj5VwfAG9NQYY_H6-lOohD_LIkEmOzfwB1X2pQM,1000
+PyAutoMakerHuman-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PyAutoMakerHuman-1.0.0.dist-info/top_level.txt,sha256=ZusNJStTIKpJiJdQzIGdUay2DwtCfLdohKawRAkvkFk,17
+PyAutoMakerHuman-1.0.0.dist-info/RECORD,,
