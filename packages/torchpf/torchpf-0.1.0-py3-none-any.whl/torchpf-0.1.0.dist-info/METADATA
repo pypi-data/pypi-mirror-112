@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: torchpf
+Version: 0.1.0
+Summary: torchpf: A Tool for Pytorch Model Analyzer.
+Home-page: https://github.com/2985578957/torchpf.git
+Author: Swall0w, PC Jiang
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+UNKNOWN
+
+

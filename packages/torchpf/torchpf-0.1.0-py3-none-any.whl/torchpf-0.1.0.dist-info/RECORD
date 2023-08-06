@@ -1,0 +1,14 @@
+torchpf/__init__.py,sha256=XidXVjHWVevg88xHOB3CyPW1GLEjP3RWevPiRJMFtio,686
+torchpf/__main__.py,sha256=7TG8GYsfNjfEUqvAJ_OxLnigzICB3byduCim2REgfJY,1118
+torchpf/compute_flops.py,sha256=kg-PUzVWgsa2hzvhAKtqdYh5ihvIk34BIbdIkkOfTGE,3011
+torchpf/compute_madd.py,sha256=m_r2PnJUWJfZhiHQ4GdUlLDFasOzOkHg9HTlcqW_dsc,4988
+torchpf/compute_memory.py,sha256=vGni-8l0f9o9duaO9BX-ztnAWxE4CIFkFwO_gbTWOJ8,2963
+torchpf/model_hook.py,sha256=8LYi-CAQ8xmsRYfha7pHBaiWZGKaWxd4oH90KnsM9SQ,4601
+torchpf/reporter.py,sha256=Q5F5qanXkvzJJoWQHPiVK3LXKAZLA40pEdIuKHlYuhw,3403
+torchpf/stat_tree.py,sha256=-kAKCWkExDK6hBjiXfAkZfJMB2qN-8kjK9mtZXBaoic,5376
+torchpf/statistics.py,sha256=NWpLlUSS9-2i2T7pugAIBIQsElzw7X5X9wB1A8bSLdU,5280
+torchpf-0.1.0.dist-info/LICENSE,sha256=rUDOORDKSj8yqgDOxMQCNcEWLFs-1UU40EMMnjLsrtM,1071
+torchpf-0.1.0.dist-info/METADATA,sha256=wyH3RWsJgfN5CC_a-zDPDoPk6Ot76Cp9JMLMg0lYTv8,338
+torchpf-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+torchpf-0.1.0.dist-info/top_level.txt,sha256=eIks3Saxt7ZWrIlpuWcEN9MXlzbNw8EkOV90ZzdqrEA,8
+torchpf-0.1.0.dist-info/RECORD,,
