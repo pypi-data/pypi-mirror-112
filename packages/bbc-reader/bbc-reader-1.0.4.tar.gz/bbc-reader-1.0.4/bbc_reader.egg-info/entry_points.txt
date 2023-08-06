@@ -1,0 +1,3 @@
+[console_scripts]
+realbbc = bbc.__main__:main
+

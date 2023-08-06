@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: bbc-reader
+Version: 1.0.4
+Summary: Read the latest BBC news
+Home-page: UNKNOWN
+Author: Khang Nguyen
+Author-email: khangvu.1109@gmail.com
+License: MIT
+Description: BBC
+        ===
+        
+        .. image:: https://img.shields.io/pypi/v/BBC.svg
+            :target: https://pypi.python.org/pypi/BBC
+            :alt: Latest PyPI version
+        
+        .. image:: https://travis-ci.org/kragniz/cookiecutter-pypackage-minimal.png
+           :target: https://travis-ci.org/kragniz/cookiecutter-pypackage-minimal
+           :alt: Latest Travis CI build status
+        
+        Read BBC News
+        
+        Usage
+        -----
+        
+        Installation
+        ------------
+        
+        Requirements
+        ^^^^^^^^^^^^
+        
+        Compatibility
+        -------------
+        
+        Licence
+        -------
+        
+        Authors
+        -------
+        
+        `BBC` was written by `Khang Nguyen <khangvu.1109@gmail.com>`_.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
