@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+chi-square-saranya/__init__.py
+chi-square-saranya/chipyfunction.py
+chi_square_saranya.egg-info/PKG-INFO
+chi_square_saranya.egg-info/SOURCES.txt
+chi_square_saranya.egg-info/dependency_links.txt
+chi_square_saranya.egg-info/top_level.txt

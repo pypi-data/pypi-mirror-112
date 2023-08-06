@@ -1,0 +1,1 @@
+from chi-square-saranya.chipyfunction import chipyfunction
