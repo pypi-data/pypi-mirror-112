@@ -1,0 +1,9 @@
+[
+    {% for page in pages %}
+    {
+        "title": "{{page.title|tojson}}",
+        "file": "{{page.file.name|tojson}}",
+        "content":"{{page.content|tojson}}"
+    }{%if loop.nextitem %},{%endif%}
+    {% endfor %}
+]
