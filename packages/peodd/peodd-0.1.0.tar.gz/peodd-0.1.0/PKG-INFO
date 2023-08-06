@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: peodd
+Version: 0.1.0
+Summary: Script to export the pyproject.toml dev-dependencies to a txt file.
+Home-page: https://github.com/vchrombie/peodd
+License: GPL-3.0+
+Author: Venu Vardhan Reddy Tekula
+Author-email: venuvardhanreddytekula8@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: release-tools (>=0.3.0,<0.4.0)
+Requires-Dist: tomlkit (>=0.5.8,<0.6.0)
+Project-URL: Bug Tracker, https://github.com/vchrombie/peodd/issues
+Project-URL: Repository, https://github.com/vchrombie/peodd
+Description-Content-Type: text/markdown
+
+# peodd
+poetry export, but only for dev-dependencies
+
