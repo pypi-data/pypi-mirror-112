@@ -1,0 +1,17 @@
+pedurma/__init__.py,sha256=c-FXS_Gcu_fFhFfoZVBaVE8Fy42l_rZT7e_N1hvb9wM,221
+pedurma/exceptions.py,sha256=Kq5VhHTWpHQjVmg79o3S-0xQmBCzJ_V05-YSfhj_wk0,185
+pedurma/nalanda_text.py,sha256=mcHbErBoT6UZ3yTZqmgEk82xMLAcrCpr4_uCIIJk46E,3619
+pedurma/notes.py,sha256=3KXbF9R5hlbVGNxRG8m1B5p7qkSR53WVcjpzEcUq0kk,4063
+pedurma/pagination_update.py,sha256=R25OiUsqiXeQ_7uNPj6d0F8Eq2i0dNa8PEZajbZcqQI,4385
+pedurma/pecha.py,sha256=T1wQ6s7hN4HVFNUKOLhnxx2EpzO68pqLcXXD_lhDk4k,1392
+pedurma/preprocess.py,sha256=2Pds8sri0SLvzTNov8TFBbeZOKiVcSPqQ4VYe_GoX6I,11838
+pedurma/reconstruction.py,sha256=MtZCziZk1z-a4HbZ6lNsJBLrnAcL0D-u0JAcaqkHHO8,32641
+pedurma/reinsertion.py,sha256=ixBxo-VEbx9iZC7IR39erPQifVCVe8O8hYZXd0nKmms,506
+pedurma/save_text.py,sha256=gz5YO4K5lVgN3cqI2fraNTzRfWNs8s9A2lHNxxxdUVg,5689
+pedurma/texts.py,sha256=aZxr0vZPx8HbGIpXRJexWUD0zInRBzEXK9wWQhPt3JY,7656
+pedurma/utils.py,sha256=Kvz0SKaDrkJd3qtUE2J4MQ1o4hM_0e9nh-XTVAI8jjw,3595
+pedurma-0.1.26.dist-info/LICENSE,sha256=Ik3_RGJ3XznlSw2UEWPpAcoOWA7XAE0BQuefPQxmfp4,1064
+pedurma-0.1.26.dist-info/METADATA,sha256=tBN91v0EYYUzOE8jf-eEZwQ8UQnKbWIihfbzKBOwv70,705
+pedurma-0.1.26.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pedurma-0.1.26.dist-info/top_level.txt,sha256=TZRgg22gTXuKxqmdsAkN3z2OWwNw-kq3-oyNI5uARks,8
+pedurma-0.1.26.dist-info/RECORD,,
