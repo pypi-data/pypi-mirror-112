@@ -1,0 +1,15 @@
+deepmeta/__init__.py,sha256=YqzWutCN5DbhfeIjqsakPwIjWLQBfsMn-XKjDrtpyLg,170
+deepmeta/_dock_widget.py,sha256=NUT6Ng5WsoirLhIWcJjwR0qhc-DYHeOsmMNmxBcUM4Y,8169
+deepmeta/_version.py,sha256=u0C8rcb-dF4OCM1PtlEu_pVo8tStod1AmmevD1iOuUA,137
+deepmeta/deepmeta_functions.py,sha256=B-dHMuUCSsdzkXAmdceJA1QGFcfCh2hoQqVHIIHinmI,12192
+deepmeta/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deepmeta/_tests/test_dock_widget.py,sha256=ABhaJaQAHynntEW0lRUF_gM6wQPGFgjLaOEcNzKJTMw,3173
+deepmeta/resources/souris_8.tif,sha256=upgg0yjxetQy8P4XhA2NGO_cJP6it8STnKcBUVNOpGY,2112482
+deepmeta/resources/models/model_lungs_weighted.h5,sha256=NmgVM-x6noM_mOvM4MivqarkOWL2OInDSKFZVUsiCWI,6905712
+deepmeta/resources/models/model_metas_weighted.h5,sha256=YDfy1l9TvpYr-VqZEzTAQZ85H84vdZSSU-VaoKmdLP8,6905712
+napari_deepmeta-1.0.dist-info/LICENSE,sha256=29xto5Z9b2EWl8vKJajPfaiUS_5N0IrXa0Behonna5c,1081
+napari_deepmeta-1.0.dist-info/METADATA,sha256=_FtLPanZq84jDJmaFBAp2NKHq7231J6d-homvU_vbK0,5251
+napari_deepmeta-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+napari_deepmeta-1.0.dist-info/entry_points.txt,sha256=dumgUu8YqTKarqaV3kQEuuekJrSpSl7KzppEUwAlVhk,44
+napari_deepmeta-1.0.dist-info/top_level.txt,sha256=waVWvu0uHswguCEBEyWW5CCuSTuYQN8BWmLw7sxOTEY,9
+napari_deepmeta-1.0.dist-info/RECORD,,
