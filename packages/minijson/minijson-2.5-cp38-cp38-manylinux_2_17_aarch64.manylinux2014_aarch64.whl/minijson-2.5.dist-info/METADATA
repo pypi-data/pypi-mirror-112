@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: minijson
+Version: 2.5
+Summary: A library for serializing JSON in a small binary format
+Home-page: https://github.com/Dronehub/minijson
+Author: Piotr Maślanka
+Author-email: piotr.maslanka@dronehub.ai
+License: UNKNOWN
+Project-URL: Documentation, https://minijson.readthedocs.io/
+Project-URL: Code, https://github.com/Dronehub/minijson
+Project-URL: Issue tracker, https://github.com/Dronehub/minijson/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: !=2.7.*,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE
+
+MiniJSON
+========
+
+[![Build Status](https://travis-ci.com/Dronehub/minijson.svg)](https://travis-ci.com/Dronehub/minijson)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/34b392b61482d98ad3f0/test_coverage)](https://codeclimate.com/github/Dronehub/minijson/test_coverage)
+[![Issue Count](https://codeclimate.com/github/Dronehub/minijson/badges/issue_count.svg)](https://codeclimate.com/github/Dronehub/minijson)
+[![Documentation Status](https://readthedocs.org/projects/minijson/badge/?version=latest)](http://minijson.readthedocs.io/en/latest/?badge=latest)
+[![PyPI](https://img.shields.io/pypi/pyversions/minijson.svg)](https://pypi.python.org/pypi/minijson)
+[![PyPI version](https://badge.fury.io/py/minijson.svg)](https://badge.fury.io/py/minijson)
+[![PyPI](https://img.shields.io/pypi/implementation/minijson.svg)](https://pypi.python.org/pypi/minijson)
+
+MiniJSON is a codec for a compact binary representation of JSON.
+
+Usage
+-----
+
+Refer to the [documentation](http://minijson.readthedocs.io/en/latest/?badge=latest)
+for use.
+
+If there are no binary wheels precompiled for this platform, you will need to
+compile it yourself.
+Alternatively, you can
+[file an issue](https://github.com/Dronehub/minijson/issues/new)
+and I'll do my best to compile a wheel for you.
+
+In order to do that you must have `Cython` installed.
+
+
