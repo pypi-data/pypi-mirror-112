@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+tpi_connector/__init__.py
+tpi_connector/connector.py
+tpi_connector.egg-info/PKG-INFO
+tpi_connector.egg-info/SOURCES.txt
+tpi_connector.egg-info/dependency_links.txt
+tpi_connector.egg-info/requires.txt
+tpi_connector.egg-info/top_level.txt
