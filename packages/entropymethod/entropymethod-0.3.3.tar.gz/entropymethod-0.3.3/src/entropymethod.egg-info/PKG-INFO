@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: entropymethod
+Version: 0.3.3
+Summary: Estimate the number of clusters in your data set.
+Home-page: https://github.com/mzelling/entropymethod
+Author: Michael Zellinger
+Author-email: mzellinger@ethz.ch
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/mzelling/entropymethod/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+The Entropy Method is an algorithm to estimate the number of clusters in a data set.
+
+The method relies on the stability principle. Subsamples of your data set are repeatedly clustered into different numbers of clusters; the algorithm then assesses which number of clusters provides the most stable clustering.
+
+For more details, see the pre-print (link to be provided)
+
