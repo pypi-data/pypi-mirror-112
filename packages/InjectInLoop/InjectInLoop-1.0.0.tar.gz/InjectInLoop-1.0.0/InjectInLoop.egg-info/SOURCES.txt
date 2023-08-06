@@ -1,0 +1,9 @@
+README.md
+setup.py
+InjectInLoop.egg-info/PKG-INFO
+InjectInLoop.egg-info/SOURCES.txt
+InjectInLoop.egg-info/dependency_links.txt
+InjectInLoop.egg-info/top_level.txt
+inject_in_loop/__init__.py
+inject_in_loop/base.py
+inject_in_loop/main.py
