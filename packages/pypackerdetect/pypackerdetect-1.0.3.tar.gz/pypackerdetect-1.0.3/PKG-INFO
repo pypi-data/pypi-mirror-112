@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: pypackerdetect
+Version: 1.0.3
+Summary: Re-implementation and packaging of PyPackerDetect
+Home-page: https://github.com/dhondta/PyPackerDetect
+Author: Alexandre D'Hondt
+Author-email: alexandre.dhondt@gmail.com
+License: GPLv3
+Keywords: packing,packed-executable,packing-detection,pe
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Security
+Requires-Python: <4,>=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyPackerDetect
+
+A complete refactoring of [this project](https://github.com/cylance/PyPackerDetect) to a Python package with a console script to detect whether an executable is packed.
+
+[pefile](https://github.com/erocarrera/pefile) is used for PE parsing. [peid](https://github.com/dhondta/peid) is used as implementation of PEiD.
+
+## Setup
+
+```session
+$ pip3 install pypackerdetect
+```
+
+## Usage
+
+```session
+$ pypackerdetect --help
+[...]
+usage examples:
+- pypackerdetect program.exe
+- pypackerdetect program.exe -b
+- pypackerdetect program.exe --low-imports --unknown-sections
+- pypackerdetect program.exe --imports-threshold 5 --bad-sections-threshold 5
+```
+
+## Detection Mechanisms
+
+- PEID signatures
+- Known packer section names
+- Entrypoint in non-standard section
+- Threshhold of non-standard sections reached
+- Low number of imports
+- Overlapping entrypoint sections
+
+
