@@ -1,0 +1,3 @@
+[console_scripts]
+dso = dsocli.cli:cli
+
