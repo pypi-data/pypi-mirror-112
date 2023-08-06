@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: doc-switch
+Version: 0.1.0
+Summary: DocSwitch gives you the freedom to write your Python documentation in any format you want, switching between them effortlessly.
+Home-page: https://github.com/cutewarriorlover/doc_switch
+Author: Cutewarriorlover
+Author-email: cutewarriorlover@gmail.com
+License: MIT license
+Keywords: doc_switch
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: AUTHORS.md
+
+# DocSwitch
+
+![PyPI Badge](https://img.shields.io/pypi/v/doc_switch.svg%0A%20%20%20%20%20:target:%20https://pypi.python.org/pypi/doc_switch)
+![Travis CI Badge](https://img.shields.io/travis/cutewarriorlover/doc_switch.svg%0A%20%20%20%20%20:target:%20https://travis-ci.com/cutewarriorlover/doc_switch)
+![ReadTheDocs Badge](https://readthedocs.org/projects/doc-switch/badge/?version=latest%0A%20%20%20%20%20:target:%20https://doc-switch.readthedocs.io/en/latest/?version=latest%0A%20%20%20%20%20:alt:%20Documentation%20Status)
+
+![PyUp Badge](https://pyup.io/repos/github/cutewarriorlover/doc_switch/shield.svg%0A%20%20:target:%20https://pyup.io/repos/github/cutewarriorlover/doc_switch/%0A%20%20:alt:%20Updates)
+
+DocSwitch gives you the freedom to write your Python documentation in any format you want, switching between them effortlessly.
+
+-   Free software: MIT license
+-   Documentation: <https://doc-switch.readthedocs.io>.
+
+
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## 0.1.0 (2021-07-12)
+
+Added:
+ -  Initial scaffold
+ -  Documentation
+ -  Tests
+ -  CLI basics
+
+
+
