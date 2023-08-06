@@ -1,0 +1,3 @@
+[console_scripts]
+make-local-settings=local_settings:make_local_settings
+
