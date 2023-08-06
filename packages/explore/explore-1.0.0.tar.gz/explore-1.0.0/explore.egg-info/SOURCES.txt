@@ -1,0 +1,9 @@
+LICENCE
+README.rst
+setup.py
+explore/__init__.py
+explore/abstract.py
+explore.egg-info/PKG-INFO
+explore.egg-info/SOURCES.txt
+explore.egg-info/dependency_links.txt
+explore.egg-info/top_level.txt
