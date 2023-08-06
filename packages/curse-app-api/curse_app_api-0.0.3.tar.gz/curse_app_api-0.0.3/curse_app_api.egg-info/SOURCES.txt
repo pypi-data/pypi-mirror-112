@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+curse_app_api/__init__.py
+curse_app_api.egg-info/PKG-INFO
+curse_app_api.egg-info/SOURCES.txt
+curse_app_api.egg-info/dependency_links.txt
+curse_app_api.egg-info/requires.txt
+curse_app_api.egg-info/top_level.txt
+curse_app_api/curse_api/__init__.py
+curse_app_api/curse_api/api.py
+curse_app_api/curse_api/wdapi.py
+curse_app_api/utils/__init__.py
+curse_app_api/utils/helpers.py
+curse_app_api/utils/web_driver.py
