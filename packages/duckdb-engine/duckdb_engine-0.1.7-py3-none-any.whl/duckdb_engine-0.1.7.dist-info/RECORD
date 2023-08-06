@@ -1,0 +1,12 @@
+duckdb_engine/.isort.cfg,sha256=Szp46OuJ92KnKKQN2lzI2-phPxiU4yXxeHZbOfgtb-g,24
+duckdb_engine/__init__.py,sha256=5scAZdkx-GIcZCVrGnYzHQuDyyH__K08TTaXh-SqVVA,4554
+duckdb_engine/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+duckdb_engine/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+duckdb_engine/tests/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+duckdb_engine/tests/test_basic.py,sha256=2ZA4ynxgZ26CivQWOURdBpa0rIuvMZKyZjzRKsju1M4,4011
+duckdb_engine/tests/test_dbapi.py,sha256=F0UqLKKWq3xBAdBHay1axVOCdZTxuARWyeIpFULGIOE,351
+duckdb_engine/tests/test_pandas.py,sha256=OnQidpQrZtJeyp1OOslTLGcmQq8jenSeVNexYK8GjvU,3266
+duckdb_engine-0.1.7.dist-info/entry_points.txt,sha256=sl5Z7EsKTBC7fbqNcoECcmJ04SeiOXvrvpFZSp_8tC4,44
+duckdb_engine-0.1.7.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+duckdb_engine-0.1.7.dist-info/METADATA,sha256=Vj9QVTAsNkpgRmgpdHVq1oL40BjZgxhSN3EAlCljDFU,3466
+duckdb_engine-0.1.7.dist-info/RECORD,,
