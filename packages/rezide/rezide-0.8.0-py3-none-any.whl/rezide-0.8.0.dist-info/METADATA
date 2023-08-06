@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: rezide
+Version: 0.8.0
+Summary: 
+Author: abstractlyZach
+Author-email: zach3lee@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=8.0.0,<9.0.0)
+Requires-Dist: i3ipc (>=2.2.1,<3.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
