@@ -1,0 +1,3 @@
+[console_scripts]
+pickley = pickley.__main__:main
+
