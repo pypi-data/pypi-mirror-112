@@ -1,0 +1,5 @@
+jsonschema-rs>=0.9
+lzip>=1.0
+numpy>=1.20
+requests>=2.25
+toml>=0.10
