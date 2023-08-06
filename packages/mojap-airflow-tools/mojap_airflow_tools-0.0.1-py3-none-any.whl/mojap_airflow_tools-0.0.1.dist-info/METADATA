@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mojap-airflow-tools
+Version: 0.0.1
+Summary: A few wrappers and tools to use airflow on AP
+Author: mojap-data-engineers
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: airflow
+Requires-Dist: apache-airflow[kubernetes] (>=1.10.10,<2.0.0); extra == "airflow"
+Requires-Dist: poetry_version (>=0.1.5)
