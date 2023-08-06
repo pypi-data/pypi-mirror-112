@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+amqp_aio/__init__.py
+amqp_aio.egg-info/PKG-INFO
+amqp_aio.egg-info/SOURCES.txt
+amqp_aio.egg-info/dependency_links.txt
+amqp_aio.egg-info/requires.txt
+amqp_aio.egg-info/top_level.txt
