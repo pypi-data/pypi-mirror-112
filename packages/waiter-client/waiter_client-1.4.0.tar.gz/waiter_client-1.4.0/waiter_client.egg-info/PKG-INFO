@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: waiter-client
+Version: 1.4.0
+Summary: Two Sigma's Waiter CLI
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: test
+
+This package contains Two Sigma's Waiter command line interface, waiter. waiter allows you to create/update/delete/view tokens and also view services across multiple Waiter clusters.
+
