@@ -1,0 +1,3 @@
+[console_scripts]
+cflare = cflare.utils.cli:cli
+
