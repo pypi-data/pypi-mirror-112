@@ -1,0 +1,156 @@
+Silver-Platter
+==============
+
+Silver-Platter makes it possible to contribute automatable changes to source
+code in a version control system.
+
+It automatically creates a local checkout of a remote repository,
+makes user-specified changes, publishes those changes on the remote hosting
+site and then creates a pull request.
+
+In addition to that, it can also perform basic maintenance on branches
+that have been proposed for merging - such as restarting them if they
+have conflicts due to upstream changes.
+
+Silver-Platter powers the Debian Janitor (https://janitor.debian.org/) and
+Kali Janitor (https://kali.janitor.org/). The UI is still a bit rough around
+the edges, I'd be grateful for any feedback from people using it - please file bugs in
+the issue tracker at https://github.com/jelmer/silver-platter/issues/new.
+
+Getting started
+~~~~~~~~~~~~~~~
+
+To log in to a code-hosting site, use ``svp login``::
+
+    svp login https://github.com/
+
+The simplest way to create a change as a merge proposal is to run something like::
+
+    svp run --mode=propose ./framwork.sh https://github.com/jelmer/dulwich
+
+where ``framwork.sh`` makes some modifications to a working copy and prints the
+commit message and body for the pull request to standard out. For example::
+
+    #!/bin/sh
+    sed -i 's/framwork/framework/' README.rst
+    echo "Fix common typo: framwork => framework"
+
+If you leave pending changes, silver-platter will automatically create a commit
+and use the output from the script as the commit message. Scripts also
+create their own commits if they prefer - this is especially useful if they
+would like to create multiple commits.
+
+Recipes
+~~~~~~~
+
+To make this process a little bit easier to repeat, recipe files can be used.
+For this example, create one called ``framwork.yaml`` with the following contents::
+
+    ---
+    name: framwork
+    command: ./framwork.sh
+    mode: propose
+    merge-request:
+      commit-message: Fix a typo
+      description:
+        markdown: |-
+          I spotted that we often mistype *framework* as *framwork*.
+
+To execute this recipe, run::
+
+    svp run --recipe=framwork.yaml https://github.com/jelmer/dulwich
+
+See `example.yaml` for an example recipe with plenty of comments
+
+In addition, you can run a particular recipe over a set of repositories by specifying a candidate list.
+For example, if *candidates.yaml* looked like this::
+
+   ---
+   - url: https://github.com/dulwich/dulwich
+   - url: https://github.com/jelmer/xandikos
+
+then the following command would process each repository in turn::
+
+    svp run --recipe=framwork.yaml --candidates=candidates.yaml
+
+Supported hosters
+~~~~~~~~~~~~~~~~~
+
+At the moment, the following code hosters are supported:
+
+* `GitHub <https://github.com/>`_
+* `Launchpad <https://launchpad.net/>`_
+* `GitLab <https://gitlab.com/>`_ instances, such as Debian's
+  `Salsa <https://salsa.debian.org>`_ or `GNOME's GitLab <https://gitlab.gnome.org/>`_
+
+Working with Debian packages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Several common operations for Debian packages have dedicated subcommands
+under the ``debian-svp`` command. These will also automatically look up
+packaging repository location for any Debian package names that are
+specified.
+
+* *upload-pending*: Build and upload a package and push/propose the
+  changelog updates.
+* *run*: Similar to *svp run* but specific to Debian packages:
+  it ensures that the *upstream* and *pristine-tar* branches are available as
+  well, can optionally update the changelog, and can test that the branch still
+  builds.
+
+Some Debian-specific example recipes are provided in `examples/debian/`:
+
+* *lintian-fixes.yaml*: Run the `lintian-brush
+  <https://packages.debian.org/lintian-brush>`_ command to
+  fix common issues reported by `lintian
+  <https://salsa.debian.org/qa/lintian>`_.
+* *new-upstream-release.yaml*: Merge in a new upstream release.
+* *multi-arch-hints.yaml*: Apply multi-arch hints.
+* *orphan.yaml*: Mark a package as orphaned, update its Maintainer
+  field and move it to the common Debian salsa group.
+* *rules-requires-root.yaml*: Mark a package as "Rules-Requires-Root: no"
+* *cme.yaml*: Run "cme fix dpkg", from the
+  `cme package <https://packages.debian.org/cme>`_.
+
+*debian-svp run* takes package name arguments that will be resolved
+to repository locations from the *Vcs-Git* field in the package.
+
+See ``debian-svp COMMAND --help`` for more details.
+
+Examples running ``debian-svp``::
+
+    # Create merge proposal running lintian-brush against Samba
+    debian-svp run --recipe=examples/lintian-brush.yaml samba
+
+    # Upload pending changes for tdb
+    debian-svp upload-pending tdb
+
+    # Upload pending changes for any packages maintained by Jelmer,
+    # querying vcswatch.
+    debian-svp upload-pending --vcswatch --maintainer jelmer@debian.org
+
+    # Import the latest upstream release for tdb, without testing
+    # the build afterwards.
+    debian-svp run --recipe=examples/debian/new-upstream-release.yaml \
+        --no-build-verify tdb
+
+    # Apply multi-arch hints to tdb
+    debian-svp run --recipe=examples/debian/multiarch-hints.yaml tdb
+
+The following environment variables are provided for Debian packages:
+
+* ``DEB_SOURCE``: the source package name
+* ``DEB_UPDATE_CHANGELOG``: indicates whether a changelog entry should
+  be added. Either "leave" (leave alone) or "update" (update changelog).
+
+Credentials
+~~~~~~~~~~~
+
+The ``svp hosters`` subcommand can be used to display the hosting sites that
+silver-platter is aware of::
+
+    svp hosters
+
+And to log into a new hosting site, simply run ``svp login BASE-URL``, e.g.::
+
+    svp login https://launchpad.net/
