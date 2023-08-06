@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+src/NekoMimi/NekoMimi.py
+src/NekoMimi/__init__.py
+src/NekoMimi.egg-info/PKG-INFO
+src/NekoMimi.egg-info/SOURCES.txt
+src/NekoMimi.egg-info/dependency_links.txt
+src/NekoMimi.egg-info/requires.txt
+src/NekoMimi.egg-info/top_level.txt
