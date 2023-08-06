@@ -1,0 +1,4 @@
+include *.md
+include src/mabledsocli/package.json
+recursive-include src/mabledsocli *.py
+
