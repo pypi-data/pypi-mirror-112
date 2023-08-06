@@ -1,0 +1,10 @@
+{
+  "baseDir": "generatedDirectory",
+  "types": ["json", "csv", "pickle", "tensorflow"],
+  "vocabs": [
+    {"name":"" ,"path": "", "type": ""}
+  ],
+  "artifacts": [
+    {"name":"" ,"path": "", "type": ""}
+  ]
+}
