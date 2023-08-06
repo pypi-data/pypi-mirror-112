@@ -1,0 +1,26 @@
+{#-------------------------------List of Page----------------------------------#}
+{#
+Generate the list of page for a entity.
+Input:
+    topic.name: name of the entity
+    topic: properties defining the entity
+    properties: all properties of the wiki.
+Output: Generates the page List of<entity_plural_name>
+#}
+{#-------------------------------Template-------------------------------------#}
+__NOCACHE__
+{{ topic.query_topic_overview() }}
+
+== {{ topic.pluralName }} ==
+{{ Form.forminput(form=topic.name, button_text='add ' + topic.name) }}
+{{ topic.query_number_entities() }} {{ topic.pluralName }}:
+{{ topic.query_entities() }}
+== See also ==
+{{ SMWPart.getAllAsPageLink(topic) }}
+<div class="toccolours mw-collapsible mw-collapsed" style="width:1024px">
+=== Example rendered with the corresponding Template ===
+<div class="mw-collapsible-content">
+{{ topic.query_entities(format="template", limit=0, template=topic.name, searchlabel="Show examples") }}
+</div>
+</div>
+[[:Category:{{ topic.name }}]]
