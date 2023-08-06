@@ -1,0 +1,3 @@
+[console_scripts]
+projpicker-gui = projpicker_gui:main
+
