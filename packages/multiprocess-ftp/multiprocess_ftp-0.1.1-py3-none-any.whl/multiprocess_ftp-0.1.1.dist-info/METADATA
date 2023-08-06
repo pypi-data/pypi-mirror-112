@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: multiprocess-ftp
+Version: 0.1.1
+Summary: FTP client library
+Author: Chris K
+Author-email: chrisk60331@gmail.com
+Requires-Python: >=3.6.9,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: boto3 (>=1.17.105,<2.0.0)
+Requires-Dist: ftputil (>=5.0.1,<6.0.0)
