@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: ezdev
+Version: 0.0.1
+Summary: Make software development eazy
+Home-page: https://edgetoolkit.github.io/ezdev
+Author: Mingyi Zhang
+Author-email: mingyi.z@outlook.com
+License: MIT
+Keywords: CI,CD,CI/CD,devopts,developer,gitlab-runner
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
+License-File: LICENSE.md
+
+# Make development easy
+
+
+
