@@ -1,0 +1,13 @@
+rfmodel/__init__.py,sha256=wjVZMdqCgLl4vgudtO0n2y8jiWP6_4vohCgZlHclXfo,278
+rfmodel/read_profile.py,sha256=mumBUXfcMqYDFTON0IZZkuPhsaJZ0G_B-wYlt4_werY,465
+rfmodel/rfmodel.py,sha256=dRCXMGl1hgCUTTwTB43IOjcUWJc7Hs1MgBlz29iGFZ4,2531
+rfmodel/rfmodel_types.py,sha256=4BOrcd2_2TO9aNoBkTk1h16tvZNqvqQir--ryKgje3E,829
+rfmodel/util.py,sha256=oMzG-4vraAZ5ZDoIk0y0snpwBFzYGheshXbyTeEY5VA,156
+rfmodel/geod/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rfmodel/geod/geod_backport.py,sha256=5Y5CvOJV1EAF_k2rVDthGUZ7FsONJW8q62Rk48Byboo,13303
+rfmodel/geod/geod_profile.py,sha256=1pnZEI5MDSIDZ83vgM6l_waqgSI9qdAEjd7yibKxDP8,1955
+RFModel-0.0.7.dist-info/LICENSE,sha256=04BBI-DN2gvDZLE-8i-o72XpErzup93LReEgEIRLrEM,1088
+RFModel-0.0.7.dist-info/METADATA,sha256=Cbv9_OzuWocFvxgUR_b3H1TDQl2C7CHohCOiXX7fU4w,1282
+RFModel-0.0.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+RFModel-0.0.7.dist-info/top_level.txt,sha256=9kAflmp0714IXJuzd1pb5-hyOwWdv2dlit8T8PMhsU4,8
+RFModel-0.0.7.dist-info/RECORD,,
