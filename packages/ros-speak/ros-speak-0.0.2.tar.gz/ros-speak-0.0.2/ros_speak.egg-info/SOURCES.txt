@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+ros_speak/__init__.py
+ros_speak/play_sound_lib.py
+ros_speak.egg-info/PKG-INFO
+ros_speak.egg-info/SOURCES.txt
+ros_speak.egg-info/dependency_links.txt
+ros_speak.egg-info/not-zip-safe
+ros_speak.egg-info/top_level.txt
