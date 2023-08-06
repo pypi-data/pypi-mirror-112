@@ -1,0 +1,15 @@
+stempy-1.1.0.dist-info/RECORD,,
+stempy-1.1.0.dist-info/LICENSE,sha256=QJBgecdAep_HzSB0K-kXJseqvy6SF5uH8CVPnhHUi0M,1504
+stempy-1.1.0.dist-info/WHEEL,sha256=_Yihwy7jO6czCqG12iQd4TNNz4Lt_ncZDH2kZx1OgBE,103
+stempy-1.1.0.dist-info/top_level.txt,sha256=y781UigXVGwQbPQglCuxXrzVV_KW3zCDzfYZg-Fk_wE,7
+stempy-1.1.0.dist-info/METADATA,sha256=BwFyouES5zr06nazNY4V-YJ2fuct25XEA2O_jNH6zHU,495
+stempy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stempy/libstem.dylib,sha256=nvT2D3QgbXuPUg8A38dDEYpNBy63Ze3jnTK4d-1je0s,1004128
+stempy/_io.cpython-39-darwin.so,sha256=yWTEF6OjByHkQCR1_EPztOmvObkUtH8imlZuMx_HxdM,237968
+stempy/_image.cpython-39-darwin.so,sha256=DfmX74O8SpMxq_S2PzQqOM1fSkVHZjtZl2fXifojbl8,373904
+stempy/pipeline/__init__.py,sha256=hpGc5LPXKB5aUiBIOYxMnZeAlWay0m1QptJULIbxVu4,1436
+stempy/io/sparse_array.py,sha256=80-av2uLVWhFCpdUHu9D2X8Mw5qsh478J3ACSD8jBEY,25493
+stempy/io/__init__.py,sha256=uC0lZ6o0ViEtOCD4z-a3vmFtVWb6-hVA2NZ4gx3bdKs,8400
+stempy/image/__init__.py,sha256=AfhyhYMlRhizgs7YWHwpa6iBj2tkVL5SyVyLCQ3lXF0,28643
+stempy/.dylibs/libsz.2.dylib,sha256=yEy5UHubVe-zniLM7PzvytOqI-0i8pXii0u6WEiR13s,52448
+stempy/.dylibs/libhdf5.103.dylib,sha256=Y58rxZVkHhLGjLFYVxrqNNi5wWhJyjH3f7wPO5U4yIo,3484808
