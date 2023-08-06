@@ -1,0 +1,104 @@
+Metadata-Version: 1.1
+Name: polyapi
+Version: 5.6.13.0
+Summary: Wrapper for Polymatica API
+Home-page: https://www.polymatica.ru
+Author: Polymatica Rus LLC
+Author-email: development@polymatica.com
+License: MIT
+Description: Библиотека предназначенна для работы с Polymatica API.
+        
+        Первым шагом необходимо импортировать модуль бизнес-логики командой ``from polyapi import business_scenarios as sc``
+        
+        Далее нужно инициализировать класс бизнес-логики.
+        Если используется механизм беспарольной авторизации, то password указывать не нужно.
+        
+        ``sc = sc.BusinessLogic(login="your_login", password="your_password", url="polymatica_server_url")``
+        
+        Скрипты запускаются при помощи методов, находящихся в файле ``business_scenarios.py``
+        
+        Методы класса ``BusinessLogic`` можно посмотреть при помощи стандартной функции Python: ``dir()``
+        
+        Аргументы функций, их смысл, а также прочую docstring-документацию модуля и функций можно посмотреть при помощи стандартной функции Python: ``help()``
+        
+        В модуле ``business_scenarios`` есть функции ``execute_olap_command()`` и ``execute_manager_command()``.
+        ``execute_olap_command()`` должна запускать любые выбранные команды модуля Olap.
+        ``execute_manager_command()`` должна запускать любые выбранные команды модуля Manager.
+        
+        
+        Change Log
+        ==========
+        
+        0.0.1 (08/12/2020)
+        ------------------
+        - First Release
+        
+        0.0.2 (08/12/2020)
+        ------------------
+        - Minor fixes
+        
+        0.0.4 (15/12/2020)
+        ------------------
+        - fix FileNotFoundError
+        
+        0.0.5 (29/12/2020)
+        ------------------
+        - added getLogger
+        - new functions in business_scenarios
+        
+        0.0.6 (15/01/2021)
+        ------------------
+        - fix logging: logs are displayed in stdout (default) or logs can be redirected to file
+        - fix other bugs
+        - added new functions in business_scenarios
+        
+        0.0.8 (17/02/2021)
+        ------------------
+        - fix logging: only significant logs are recorded in DEBUG mode
+        - fix method exceptions: relieved of sys.exit(), now only exceptions are thrown
+        - fix other bugs
+        - added new functions in business_scenarios
+        
+        0.0.9 (12/03/2021)
+        ------------------
+        - fix "load_sphere_chunc" method bug
+        - fix scenario timeout
+        - fix other bugs
+        - added new functions in business_scenarios
+        - rewrite module docstring
+        
+        5.6.10.0 (19/03/2021)
+        ---------------------
+        - fix "get_data_frame" method
+        - fix other bugs
+        - Changed way of PPL versioning; version is now define as "x.y.n.h" where 
+        	"x.y" - version of Polymatica (for example, 5.6),
+        	"n" - version of PPL in association with version of Polymatica,
+        	"h" - number of hotfix.
+        	Example: "5.6.10.0", "5.6.18.1", "5.7.0.0"
+        
+        5.6.11.0 (16/04/2021)
+        ---------------------
+        - added methods for working with charts: graph_create, graph_modify;
+          the following types of graphs are available: lines, cylinders, cumulative cylinders
+        - implemented the ability to execute commands of charts module (execute_graph_command)
+        - fix other bugs
+        
+        5.6.12.0 (22/06/2021)
+        ---------------------
+        - Implemented all graph types, except "Corridors", "Surface", "Graph"
+        - fix bugs for Polymatica 5.7
+        - fix other bugs
+        
+        5.6.13.0 (13/07/2021)
+        ---------------------
+        - fix bugs for Polymatica 5.7
+        - fix other bugs
+        
+Keywords: polymatica
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
