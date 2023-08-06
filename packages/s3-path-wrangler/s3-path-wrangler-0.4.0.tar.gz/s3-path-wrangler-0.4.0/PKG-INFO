@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: s3-path-wrangler
+Version: 0.4.0
+Summary: Provides S3 path manipulation, similar to PurePath in pathlib
+License: Apache 2.0
+Author: Saulius Beinorius
+Author-email: saulius.beinorius@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
