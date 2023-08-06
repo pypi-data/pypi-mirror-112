@@ -1,0 +1,16 @@
+jsonschema
+pydantic
+
+[all]
+requests
+pyyaml
+azure-functions
+
+[azure]
+azure-functions
+
+[spec]
+pyyaml
+
+[tests]
+requests
