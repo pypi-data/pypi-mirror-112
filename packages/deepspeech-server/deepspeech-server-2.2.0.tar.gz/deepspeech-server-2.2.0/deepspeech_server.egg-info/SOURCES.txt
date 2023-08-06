@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+setup.py
+deepspeech_server/__init__.py
+deepspeech_server/decoding.py
+deepspeech_server/deepspeech.py
+deepspeech_server/server.py
+deepspeech_server.egg-info/PKG-INFO
+deepspeech_server.egg-info/SOURCES.txt
+deepspeech_server.egg-info/dependency_links.txt
+deepspeech_server.egg-info/requires.txt
+deepspeech_server.egg-info/top_level.txt
+script/deepspeech-server
