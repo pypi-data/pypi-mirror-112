@@ -1,0 +1,241 @@
+#!/usr/bin/env python3
+from lltk.imports import *
+import os,sys,argparse,multiprocessing as mp
+
+path_self = os.path.realpath(__file__)
+path_code = os.path.abspath(os.path.join(path_self,'..','..'))
+os.environ['PYTHONPATH']=f'{path_code}:'+os.environ.get('PYTHONPATH','')
+sys.path.insert(0,path_code)
+
+
+COMMANDS = [
+	dict(name='show', help='List names and descriptions of all corpora', takes_corpus_obj=False, group='Corpus status'),
+	dict(name='status', help='Get install/installation status for all corpora', takes_corpus_obj=False, group='Corpus status'),
+	dict(name='info', help='Get information about a corpus', takes_corpus_obj=True, group='Corpus status'),
+	dict(name='load', help='Load a corpus in interactive session', takes_corpus_obj=True, group='Downloading corpora'),
+	dict(name='web', help='Run web server', takes_corpus_obj=False, group='Corpus status'),
+
+	dict(name='create', help='Create a corpus with LLTK', takes_corpus_obj=False, group='New corpora'),
+	dict(name='import', help='Import an existing corpus into LLTK', takes_corpus_obj=False, group='New corpora'),
+
+	dict(name='compile', help='Compile corpus from sources', takes_corpus_obj=True, group='Downloading corpora'),
+	dict(name='install', help='Download files of corpus (TXT/XML/metadata/data)', takes_corpus_obj=True, group='Downloading corpora'),
+	dict(name='preprocess', help='Run a sweep of text mining routines', takes_corpus_obj=True, group='Downloading corpora'),
+
+	dict(name='zip', help='Zip and archive a corpus', takes_corpus_obj=True, group='Archiving and sharing'),
+	dict(name='upload', help='Upload to a cloud the zip archives', takes_corpus_obj=True, group='Archiving and sharing'),
+	dict(name='share', help='Get cloud share links for a corpus', takes_corpus_obj=True, group='Archiving and sharing'),
+	dict(name='induct',help='Induct corpus into hall of corpora',takes_corpus_obj=True, group='Archiving and sharing'),
+	dict(name='links', help='Get cloud share links for all corpora',takes_corpus_obj=False, group='Archiving and sharing'),
+	dict(name='configure', help='Check LLTK configuration', takes_corpus_obj=False, group='Configuration')
+	]
+
+#SUBCOMMANDS={}
+#SUBCOMMANDS['create']
+
+
+LOGO="""
+###################################
+# LLTK: Literary Language Toolkit #
+###################################
+"""
+
+def usage():
+	groups=set()
+	lines=[]
+	for cmd_d in COMMANDS:
+		cmd=cmd_d['name']
+		help=cmd_d['help']
+		takes_corpus = cmd_d['takes_corpus_obj']
+		arggroup_name = cmd_d['group']
+
+		if not arggroup_name in groups:
+			groups|={arggroup_name}
+			lines.append('\n\t# '+arggroup_name)
+
+		lines.append('\t{cmd:30s} '.format(cmd=cmd))
+
+	return LOGO + '\n'.join(lines)
+
+
+def main():
+
+	corpus_names = {cname for cname,corp in corpora(load=False,incl_meta_corpora=True)}
+	corpus_ids = {corp['id'] for cname,corp in corpora(load=False,incl_meta_corpora=True)}
+	parser = argparse.ArgumentParser()
+	subparsers = parser.add_subparsers(dest='cmd')
+
+	name='CorpusName'
+	idx='corpus_id'
+
+	## Set defaults
+	path_root_default=os.path.join(PATH_CORPUS,idx)
+	path_code_default=idx+'.py'
+	path_txt_default=os.path.join(path_root_default,'txt')
+	path_xml_default=os.path.join(path_root_default,'xml')
+	path_metadata_default=os.path.join(path_root_default,'metadata.csv')
+	class_name_default = ''.join([x for x in name if x.isalnum() or x=='_'])
+	default_col_id='id'
+	default_col_fn='fn'
+
+	## ADD SUBPARSERS
+	groups={}
+	arggroups = {}
+
+	for cmd_d in COMMANDS:
+		cmd=cmd_d['name']
+		help=cmd_d['help']
+		takes_corpus = cmd_d['takes_corpus_obj']
+		arggroup_name = cmd_d['group']
+
+		groups[cmd] = group = subparsers.add_parser(cmd,help=help)
+		if takes_corpus:
+			groups[cmd].add_argument('corpus',help='A corpus, specified by name or ID (in manifest)')
+
+
+	## CUSTOMIZE SUBPARSERS
+
+	### CREATE
+	groups['create'].add_argument('-name',help='Name of corpus, in CamelCase (e.g. ChadwyckPoetry): ')
+	groups['create'].add_argument('-id',help='ID of corpus, in lowercase (e.g. chadwyck_poetry)')
+	groups['create'].add_argument('-path_root',help='Path to root folder for corpus ee [default: %s]' % path_root_default)
+	groups['create'].add_argument('-path_txt',help='Path to folder of corpus text files [default: %s]' % path_txt_default)
+	groups['create'].add_argument('-path_xml',help='Path to folder of corpus xml files [default: %s]' % path_xml_default)
+	groups['create'].add_argument('-path_metadata',help='Path to corpus metadata (CSV/TSV/XLS/XLSX) [default: %s]' % path_metadata_default)
+	groups['create'].add_argument('-path_python',help='Path to python file [default: %s]' % path_code_default)
+	groups['create'].add_argument('-class_name',help='Name of corpus class within code [default: %s]' % class_name_default)
+	groups['create'].add_argument('-defaults',help='Use defaults (besides name and id]',action='store_true')
+
+
+	## IMPORT
+	groups['import'].add_argument('-name',help='Name of corpus, in CamelCase (e.g. ChadwyckPoetry): ')
+	groups['import'].add_argument('-id',help='ID of corpus, in lowercase (e.g. chadwyck_poetry)')
+	groups['import'].add_argument('-path_root',help='Path to root folder for corpus [default: %s]' % path_root_default)
+	groups['import'].add_argument('-path_txt',help='Path to folder of corpus text files [default: %s]' % path_txt_default)
+	groups['import'].add_argument('-path_xml',help='Path to folder of corpus xml files [default: %s]' % path_xml_default)
+	groups['import'].add_argument('-path_metadata',help='Path to corpus metadata (CSV/TSV/XLS/XLSX) [default: %s]' % path_metadata_default)
+	groups['import'].add_argument('-col_fn',help='Column in metadata to look for TXT or XML filename [default: %s]' % default_col_fn)
+	groups['import'].add_argument('-col_id',help='Column in metadata to look for ID (the TXT or XML filename, but without a filename extension) [default: %s]' % default_col_fn)
+
+	groups['show'].add_argument('-public',help='Show only public data [default: False]',default=False,action='store_true')
+	groups['show'].add_argument('-links',help='Show links in markdown [default: False]',default=False,action='store_true')
+	groups['show'].add_argument('-nolocal',help='Do not display data on machine [default: False]',default=False,action='store_true')
+
+	for cmd in PART_REFERRING_CMDS:
+		groups[cmd].add_argument('-parts',help='Name of data type (metadata/txt/xml/freqs/raw)',default='',nargs='?')
+		# groups[cmd].add_argument('-force',help='Force if data already created?',action='store_true',default=False)
+
+	for cmd in PARALLELIZED_CMDS:
+		groups[cmd].add_argument('-num_proc',help=f'Number of processers [default: {DEFAULT_NUM_PROC}]',default=DEFAULT_NUM_PROC)
+
+	for cmd in set(PART_REFERRING_CMDS) | set(PARALLELIZED_CMDS):
+		groups[cmd].add_argument('-force',help='Force if data already created?',action='store_true',default=False)
+
+
+	parser.add_argument('-quiet',help='No interactive mode',action='store_true')
+	
+	if len(sys.argv)==1:
+		parser.print_help(sys.stderr)
+		sys.exit(1)
+	
+	
+	args = parser.parse_args()
+	parts=args.parts.replace(',',' ').split() if hasattr(args,'parts') else None
+
+
+
+	
+
+
+	# for x in ['corpus','cmd','parallel','quiet','sbatch','slingshot_opts','savedir','hours','part']:
+	# 	if not hasattr(args,x):
+	# 		setattr(args,x,None)
+
+
+
+	## SOLO COMMANDS
+	if args.cmd=='show':
+		show(
+			public_only=args.public is True,
+			link=args.links is not False,
+			show_local=not args.public,
+		)
+
+
+	elif args.cmd=='status':
+		check_corpora()
+
+	elif args.cmd=='web':
+		from lltk.web import run
+		run()
+
+	elif args.cmd=='links':
+		cloud_list()
+
+	elif args.cmd=='configure':
+		configure_prompt()
+
+	elif args.cmd=='create':
+		start_new_corpus_interactive(args)
+
+	elif args.cmd=='create':
+		start_new_corpus_interactive(args)
+
+	elif args.cmd=='import':
+		args.defaults=True
+		start_new_corpus_interactive(args,import_existing=True)
+
+	elif args.cmd=='install' and args.corpus=='metadata':
+		corpora_to_install = [c for cname,c in corpora(incl_meta_corpora=False,load=True) if not c.exists_metadata and hasattr(c,'url_metadata')]
+		for c in tqdm(corpora_to_install):
+			c.install(part='metadata')
+	
+	## COMMANDS ON CORPORA
+	elif args.corpus:
+		if args.cmd!='load':
+			corpus = load_corpus(args.corpus)
+
+		if args.cmd in FUNC_CMDS:
+			cmder = getattr(corpus,args.cmd)
+			_attrs = dict(list(vars(args).items()))
+			# print(_attrs)
+			valid_args=set(valid_args_for(cmder))
+			_attrs = dict((k,v) for k,v in _attrs.items() if k in valid_args)
+			# print(_attrs)
+			# print(cmder, _attrs)
+			cmder(**_attrs)
+
+
+		elif args.cmd=='info' and args.corpus:
+			corpus.info()
+
+		elif args.cmd=='zip' and args.corpus:
+			corpus.zip(ask=not args.quiet, parts=parts if parts else ZIP_PART_DEFAULTS)
+
+		elif args.cmd=='induct' and args.corpus:
+			induct_corpus(corpus)
+
+		# elif args.cmd=='install' and args.corpus:
+		# 	print('hello')
+		# 	corpus.install(ask=not args.quiet,parts=parts if parts else ZIP_PART_DEFAULTS)
+
+		elif args.cmd=='upload' and args.corpus:
+			corpus.upload(ask=not args.quiet,parts=parts if parts else ZIP_PART_DEFAULTS)
+
+		elif args.cmd=='share' and args.corpus:
+			corpus.share() if corpus is not None else share_corpora()
+
+		elif args.cmd=='load':
+			pythonexec = 'ipython' if which('ipython') else 'python'
+			cmds=['import lltk',f"C = corpus = lltk.load('{args.corpus}')"]#,'C.info()']
+			cmdstr='; '.join(cmds)
+			cmd=f'{pythonexec} -i -c "{cmdstr}"'
+			print('\n' + ('\n'.join(cmds)) + '\n')
+			os.system(cmd)
+			exit()
+
+
+
+
+### RUN
+if __name__ == '__main__': main()
