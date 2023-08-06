@@ -1,0 +1,23 @@
+numpy
+scipy
+h5py
+read_acq
+cached_property
+bidict
+pyyaml
+rich
+attrs
+toml
+dill
+
+[:python_version < "3.8"]
+importlib_metadata
+
+[acq]
+read_acq>=0.4<1.0
+
+[dev]
+pre-commit
+tox
+pytest
+pytest-cov
