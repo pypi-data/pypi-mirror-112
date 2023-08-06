@@ -1,0 +1,7 @@
+include dash_gallery/dash_gallery.min.js
+include dash_gallery/dash_gallery.min.js.map
+include dash_gallery/metadata.json
+include dash_gallery/package-info.json
+include README.md
+include LICENSE
+include package.json
