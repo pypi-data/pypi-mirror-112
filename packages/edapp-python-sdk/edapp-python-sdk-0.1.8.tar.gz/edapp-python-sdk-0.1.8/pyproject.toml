@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "edapp-python-sdk"
+version = "0.1.8"
+description = "A Python tool for interacting with the EdApp SDK"
+authors = ["Edd Abrahamsen-Mills <edward.abrahamsen-mills@safetyculture.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.25.1"
+tqdm = "^4.58.0"
+pandas = "^1.2.3"
+html2text = "^2020.1.16"
+openpyxl = "^3.0.6"
+xlsxwriter = "^1.3.7"
+rich = "^10.1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+edapp_export = "edapp_python_sdk.main:edapp_export"
+edapp_survey_report = "edapp_python_sdk.main:export_survey_report"
+edapp_create_groups = "edapp_python_sdk.main:create_new_groups"
+[build-system]
+requires = ["poetry-core>=1.0.0a5"]
+build-backend = "poetry.core.masonry.api"
+

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: edapp-python-sdk
+Version: 0.1.8
+Summary: A Python tool for interacting with the EdApp SDK
+Author: Edd Abrahamsen-Mills
+Author-email: edward.abrahamsen-mills@safetyculture.io
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: html2text (>=2020.1.16,<2021.0.0)
+Requires-Dist: openpyxl (>=3.0.6,<4.0.0)
+Requires-Dist: pandas (>=1.2.3,<2.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: rich (>=10.1.0,<11.0.0)
+Requires-Dist: tqdm (>=4.58.0,<5.0.0)
+Requires-Dist: xlsxwriter (>=1.3.7,<2.0.0)
