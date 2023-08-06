@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: EnvLauncher
+Version: 0.1a1.dev1
+Summary: A GNOME desktop launcher to activate Python development environments.
+Home-page: https://github.com/shawnbrown/envlauncher
+Author: Shawn Brown
+Author-email: shawnbrown@users.noreply.github.com
+License: GNU General Public License v3 (GPLv3)
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Desktop Environment :: Gnome
+Classifier: Topic :: Software Development
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# EnvLauncher
+
+A GNOME desktop launcher to activate Python development environments.
+
+NOTE: This software is pre-alpha and it's not ready for general use.
+
+
+EnvLauncher is Copyright (C) 2021 Shawn Brown.
+
+

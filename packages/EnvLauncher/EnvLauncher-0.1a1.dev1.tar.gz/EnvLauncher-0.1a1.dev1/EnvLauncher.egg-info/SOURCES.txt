@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+envlauncher.py
+setup.py
+EnvLauncher.egg-info/PKG-INFO
+EnvLauncher.egg-info/SOURCES.txt
+EnvLauncher.egg-info/dependency_links.txt
+EnvLauncher.egg-info/entry_points.txt
+EnvLauncher.egg-info/top_level.txt
+scripts/generate_ascii_banner.py
