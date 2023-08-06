@@ -1,0 +1,17 @@
+# MANIAFEST.in - Manifest file for packaging
+
+# I will use a MANIFEST.in file to control which
+# files are being included to the distributions
+# released to PyPI.
+
+# First, include the license
+include LICENSE.txt
+
+# include the README file, the SECURITY advisory and the CONTRIBUTING guidelines
+include README.md
+include SECURITY.md
+include CONTRIBUTING.md
+
+# exclude the GitHub-specific / Git contents
+exclude .github/*
+exclude .gitignore

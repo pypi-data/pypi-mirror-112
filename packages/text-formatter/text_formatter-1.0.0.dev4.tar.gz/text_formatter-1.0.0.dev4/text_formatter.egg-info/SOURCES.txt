@@ -1,0 +1,13 @@
+AUTHORS.txt
+CONTRIBUTING.md
+LICENSE.txt
+MANIFEST.in
+README.md
+SECURITY.md
+setup.py
+text_formatter/__init__.py
+text_formatter/justify.py
+text_formatter.egg-info/PKG-INFO
+text_formatter.egg-info/SOURCES.txt
+text_formatter.egg-info/dependency_links.txt
+text_formatter.egg-info/top_level.txt
