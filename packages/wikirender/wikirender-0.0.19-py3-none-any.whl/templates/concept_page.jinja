@@ -1,0 +1,29 @@
+{#-------------------------------Concept Page---------------------------------#}
+{#
+Generate the concept of page for a entity.
+Input:
+    topic: properties defining the entity
+    properties: all properties of the wiki.
+Output: Generates the page Concept:<topic.name>
+#}
+{#-------------------------------Template-------------------------------------#}
+__NOCACHE__
+{{ topic.render_entity(oneliner=False) }}
+{{ Form.forminput(form="Property", button_text='add Property') }}
+
+=== Documentation ===
+{{ topic.wiki_documentation }}
+
+=== uml ===
+{% include "uml.jinja" %}
+
+{{ '{{' }}#concept:
+ [[Category:{{ topic.name }}]]
+ |{{ topic.plural_name }}
+== See also ==
+{{ SMWPart.getAllAsPageLink(topic) }}
+== Topics ==
+{# Add all topics that are related to this topic as list of page links -#}
+{{ SMW.render_as_list(map(Topic.get_page_link, topic.get_related_topics(properties))) }}
+{{ '}}' }}
+[[:Category:{{ topic.name }}]]
