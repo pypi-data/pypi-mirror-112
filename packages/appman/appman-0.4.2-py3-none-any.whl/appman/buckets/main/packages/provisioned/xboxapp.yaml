@@ -1,0 +1,5 @@
+id: xboxapp
+name: XboxApp
+labels: []
+formulas:
+  appx: Microsoft.XboxApp

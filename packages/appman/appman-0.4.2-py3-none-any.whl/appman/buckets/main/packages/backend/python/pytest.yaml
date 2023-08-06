@@ -1,0 +1,5 @@
+id: pytest
+name: pytest
+labels: []
+formulas:
+  pip: pytest
