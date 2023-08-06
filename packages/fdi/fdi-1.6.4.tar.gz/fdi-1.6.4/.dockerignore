@@ -1,0 +1,13 @@
+docs
+dist
+*~
+*.log
+*.class
+*.stackdump
+doctrees
+__pycache__
+.cache
+*egg-*
+.ipynb_checkpoints
+*.ipynb
+
