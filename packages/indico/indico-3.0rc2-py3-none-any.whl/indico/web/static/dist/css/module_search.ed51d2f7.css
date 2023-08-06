@@ -1,0 +1,58 @@
+.search-client-js-components-___ResultList-module__item___eV2GY { padding: 1em 0; margin-bottom: 0.3em; }
+
+.search-client-js-components-___ResultList-module__item___eV2GY .search-client-js-components-___ResultList-module__header___1_Tkh { font-size: 18px; line-height: 1.2; }
+
+.search-client-js-components-___ResultList-module__item___eV2GY .search-client-js-components-___ResultList-module__description___3pn42 { padding-top: 0.7em; margin-bottom: 0 !important; font-size: 13px; font-style: italic; color: #555; }
+
+.search-client-js-components-___ResultList-module__item___eV2GY .search-client-js-components-___ResultList-module__description___3pn42 .item { padding: 0.1em 0; }
+
+.search-client-js-components-___ResultList-module__item___eV2GY .description { margin-bottom: 0 !important; }
+
+.search-client-js-components-___ResultList-module__item___eV2GY .search-client-js-components-___ResultList-module__summary___3MZWe { margin-bottom: 0.5em; padding-left: 1em; color: #777; }
+
+.search-client-js-components-___ResultList-module__item___eV2GY .search-client-js-components-___ResultList-module__description___3pn42 ul { display: inline; margin: 0; padding: 0; }
+
+.search-client-js-components-___ResultList-module__item___eV2GY .search-client-js-components-___ResultList-module__description___3pn42 li { display: inline; }
+
+.search-client-js-components-___ResultList-module__item___eV2GY .search-client-js-components-___ResultList-module__description___3pn42 li:not(:first-of-type)::before { content: ', '; }
+
+.search-client-js-components-___ResultList-module__item___eV2GY .search-client-js-components-___ResultList-module__description___3pn42 li:nth-of-type(1n + 4) { display: none; }
+
+.search-client-js-components-___ResultList-module__item___eV2GY .search-client-js-components-___ResultList-module__muted___kFQZC { color: #999; }
+
+.search-client-js-components-___ResultList-module__item___eV2GY em { background-color: rgba(0, 164, 228, 0.3); }
+
+.search-client-js-components-___ResultList-module__item___eV2GY .ui.breadcrumb a.section { color: #00a4e4; }
+
+.search-client-js-components-___ResultList-module__pagination___o8mig { display: flex; align-items: center; justify-content: center; }
+
+.search-client-js-components-results-___Path-module__path___2suRO { white-space: nowrap; }
+
+.search-client-js-components-results-___Path-module__path___2suRO .breadcrumb { display: inline-block; font-size: 13px; line-height: 1.2; font-style: italic; width: 100%; padding-right: 3em; /* Reverse ellipsis */ text-overflow: ellipsis; overflow: hidden; direction: rtl; text-align: left; }
+
+.search-client-js-components-results-___Path-module__path___2suRO .breadcrumb .section, .search-client-js-components-results-___Path-module__path___2suRO .breadcrumb .divider { display: inline; direction: ltr; color: inherit; }
+
+.search-client-js-components-results-___Path-module__path___2suRO .breadcrumb .section:hover { color: #007cac; transition: ease-in 0.5s; }
+
+.search-client-js-components-___SearchBar-module__placeholder___2aDFL { font-size: 0.95em; color: #999; }
+
+.search-client-js-components-___SearchBar-module__placeholder___2aDFL .search-client-js-components-___SearchBar-module__label___AlEx- { margin-right: 1em !important; }
+
+.search-client-js-components-___SideBar-module__checkbox___e1uce { display: inline !important; }
+
+.search-client-js-components-___SideBar-module__checkbox___e1uce label { display: inline !important; }
+
+.search-client-js-components-___SideBar-module__capitalize___VVuvy { text-transform: capitalize !important; }
+
+.search-client-js-components-___SearchApp-module__menu___1cg7x { flex-wrap: wrap; padding-bottom: 2px; }
+
+.search-client-js-components-___SearchApp-module__grid___pzU-2 { justify-content: center; }
+
+.search-client-js-components-___SearchApp-module__search-options___1fuEm { display: flex; justify-content: flex-end; }
+
+.search-client-js-components-___SearchApp-module__admin-search-checkbox___qhBTm.ui.checkbox { margin-left: 1rem; }
+
+.search-client-js-components-___SearchApp-module__admin-search-container___39wLU { margin-top: 0.5rem; display: flex; justify-content: flex-end; align-items: center; }
+
+
+/*# sourceMappingURL=module_search.ed51d2f7.css.map*/

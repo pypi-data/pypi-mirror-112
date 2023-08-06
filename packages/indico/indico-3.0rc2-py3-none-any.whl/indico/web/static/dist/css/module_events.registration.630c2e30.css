@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak {
+  display: none;
+}
+
+ng\:form {
+  display: block;
+}
+
+
+/*# sourceMappingURL=module_events.registration.630c2e30.css.map*/

@@ -1,0 +1,2 @@
+(()=>{var e;(e=window).setupRegistrationRequestList=function(){const s=$("#registration-requests");s.on("indico:confirmed",".js-process-request",(function(t){t.preventDefault();const o=$(this);$.ajax({url:o.data("href"),type:o.data("method"),complete:IndicoUI.Dialogs.Util.progress(),error:e.handleAjaxError,success:t=>{e.handleFlashes(t),o.closest("tr").remove(),s.find("tr:not(.js-no-requests)").length||s.find(".js-no-requests").show()}})}))}})();
+//# sourceMappingURL=module_users.ebbbe621.bundle.js.map
