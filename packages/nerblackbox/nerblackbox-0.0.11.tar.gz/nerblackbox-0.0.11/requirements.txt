@@ -1,0 +1,11 @@
+matplotlib
+mlflow~=1.8.0
+pytorch-lightning~=1.3.7
+omegaconf
+seqeval~=1.2.2
+scikit-learn
+tensorboardx
+transformers
+numpy~=1.19.5
+
+dataclasses==0.7; python_version < "3.7"
