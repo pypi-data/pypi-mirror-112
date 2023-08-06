@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: slacktoken
+Version: 0.0.3
+Summary: A library for retrieving a Slack user token from an authenticated Slack application.
+Home-page: https://github.com/chrisgavin/slacktoken/
+License: BSD-2-Clause
+Author: Chris Gavin
+Author-email: chris@chrisgavin.me
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: github_actions
+Requires-Dist: importlib-metadata
+Requires-Dist: requests
+Requires-Dist: versio
+Project-URL: Repository, https://github.com/chrisgavin/slacktoken/
