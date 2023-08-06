@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: enviopack
+Version: 0.3.0
+Summary: Integration Helper with enviopack
+Home-page: https://github.com/fedegobea/enviopack
+Author: Federico Gobea
+Author-email: gitfgobea@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: requests
+
+# enviopack
+
+
