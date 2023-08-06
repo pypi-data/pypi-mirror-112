@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: conjurer
+Version: 0.0.19
+Summary: Python library to help you to perform magic on your data analytics project
+Home-page: https://github.com/not-so-fat/conjurer
+Author: @not-so-fat
+Author-email: conjurer.not.so.fat@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (==1.20.0)
+Requires-Dist: scipy (==1.6.2)
+Requires-Dist: altair (==4.1.0)
+Requires-Dist: IPython (==7.22.0)
+Requires-Dist: gbm-autosplit (==0.0.6)
+Requires-Dist: sklearn-cv-pandas (==0.0.7)
+
+# conjurer
+
+Python library to help you to perform magic on your data analytics project; which helps
+- EDA (load & check data)
+- Automatic machine learning tuning
+
+## Why do I need this?
+
+
+
+
+## Reference
+
+For installation / user guide please refer https://github.com/not-so-fat/conjurer/wiki
+
+
