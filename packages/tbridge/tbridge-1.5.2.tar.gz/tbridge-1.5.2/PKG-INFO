@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: tbridge
+Version: 1.5.2
+Summary: Simulation suite for efficiency testing of galaxy surface brightness profiles.
+Home-page: https://github.com/HSouch/TBRIDGE
+Author: Harrison Souchereau
+Author-email: harrison.souchereau@yale.edu
+License: BSD-3-Clause
+Description: UNKNOWN
+Keywords: galaxies surface brightness profiles
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
