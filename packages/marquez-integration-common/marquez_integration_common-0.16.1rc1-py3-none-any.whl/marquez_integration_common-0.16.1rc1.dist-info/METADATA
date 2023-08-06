@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: marquez-integration-common
+Version: 0.16.1rc1
+Summary: Marquez common python library for integrations
+Home-page: UNKNOWN
+Author: Marquez Project
+License: UNKNOWN
+Keywords: marquez
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: attrs (>=19.3.0)
+Requires-Dist: openlineage-python (==0.0.1rc6)
+Requires-Dist: sqlparse (>=0.3.1)
+Provides-Extra: bigquery
+Requires-Dist: google-api-core (>=1.26.3) ; extra == 'bigquery'
+Requires-Dist: google-auth (>=1.30.0) ; extra == 'bigquery'
+Requires-Dist: google-cloud-bigquery (>=2.15.0) ; extra == 'bigquery'
+Requires-Dist: google-cloud-core (>=1.6.0) ; extra == 'bigquery'
+Requires-Dist: google-crc32c (>=1.1.2) ; extra == 'bigquery'
+Provides-Extra: dbt
+Requires-Dist: dbt-core (>=0.19.1) ; extra == 'dbt'
+Provides-Extra: dev
+Requires-Dist: google-api-core (>=1.26.3) ; extra == 'dev'
+Requires-Dist: google-crc32c (>=1.1.2) ; extra == 'dev'
+Requires-Dist: google-cloud-bigquery (>=2.15.0) ; extra == 'dev'
+Requires-Dist: google-auth (>=1.30.0) ; extra == 'dev'
+Requires-Dist: google-cloud-core (>=1.6.0) ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: dbt-core (>=0.19.1) ; extra == 'dev'
+Requires-Dist: mock ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: mock ; extra == 'tests'
+Requires-Dist: flake8 ; extra == 'tests'
+
+Common modules for OpenLineage integrations.
+
+
