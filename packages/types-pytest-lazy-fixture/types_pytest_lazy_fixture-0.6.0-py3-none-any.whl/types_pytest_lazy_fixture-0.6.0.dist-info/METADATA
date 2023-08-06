@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: types-pytest-lazy-fixture
+Version: 0.6.0
+Summary: Typing stubs for pytest-lazy-fixture
+Home-page: https://github.com/python/typeshed
+License: Apache-2.0 license
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+
+## Typing stubs for pytest-lazy-fixture
+
+This is a PEP 561 type stub package for the `pytest-lazy-fixture` package.
+It can be used by type-checking tools like mypy, PyCharm, pytype etc. to check code
+that uses `pytest-lazy-fixture`. The source for this package can be found at
+https://github.com/python/typeshed/tree/master/stubs/pytest-lazy-fixture. All fixes for
+types and metadata should be contributed there.
+
+See https://github.com/python/typeshed/blob/master/README.md for more details.
+This package was generated from typeshed commit `5e23e2c19a2b0fbbf6479d5e87223992f03cf84e`.
+
+
