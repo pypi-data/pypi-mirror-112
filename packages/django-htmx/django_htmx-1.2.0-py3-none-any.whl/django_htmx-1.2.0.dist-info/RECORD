@@ -1,0 +1,12 @@
+django_htmx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_htmx/http.py,sha256=O9F5II0fHapf7VD04lb2egTnPc6ZB6Rq3Vsj-3Soi8s,274
+django_htmx/jinja.py,sha256=zX00HNcOKXveFw7mgJr6epicXvY-mb4qnIQiuarQUnM,497
+django_htmx/middleware.py,sha256=-J_iGBNm9iU9HCtmVbE3eVMschuvmjLzd2BpdLv4U_Y,1675
+django_htmx/static/django-htmx.js,sha256=rBf98qUa4LHpPEWkA__GFdXc1_9qg8r7GkNsnxx7mRE,720
+django_htmx/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_htmx/templatetags/django_htmx.py,sha256=oiV0gd9b0EIy4OvRwSj9P-A13v71dAnqV1fVs2LSq9k,149
+django_htmx-1.2.0.dist-info/LICENSE,sha256=sL5SQbxsRp-0GtjYiPRqhSKJ4PYL_fOmvOlQjgO9IVw,1061
+django_htmx-1.2.0.dist-info/METADATA,sha256=P7MlZTPqaObieRIcyc0CQCG1zx59OuWKCjJggX69mz0,8299
+django_htmx-1.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_htmx-1.2.0.dist-info/top_level.txt,sha256=-I1lixfq58optWcYlhlgqFvr6vceuoammCYkoav3pjg,12
+django_htmx-1.2.0.dist-info/RECORD,,
