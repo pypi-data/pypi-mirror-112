@@ -1,0 +1,11 @@
+[console_scripts]
+gbd-download-package = gbdmigration.execs:download_packages
+gbd-export-collection = gbdmigration.execs:export_collection
+gbd-export-package = gbdmigration.execs:export_package
+gbd-export-snapincr = gbdmigration.execs:export_snapincr
+gbd-export-snapshot = gbdmigration.execs:export_snapshot
+gbd-import-collection = gbdmigration.execs:import_collection
+gbd-import-package = gbdmigration.execs:import_package
+gbd-migration-delete = gbdmigration.execs:delete_files
+gbd-upload-package = gbdmigration.execs:upload_package
+
