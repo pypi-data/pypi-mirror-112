@@ -1,0 +1,19 @@
+#!/bin/ksh
+# This file is placed in the Public Domain.
+
+daemon="/usr/local/bin/botd"
+
+. /etc/rc.d/rc.subr
+
+rc_reload=NO
+
+rc_pre() {
+            groupadd botd
+            useradd -b /var/lib -d /var/lib/botd -m -g botd botd 2>&1 &
+}
+
+rc_stop() {
+            pkill -f botd
+}
+
+rc_cmd $1
