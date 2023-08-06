@@ -1,0 +1,14 @@
+scikit-image>=0.17.1
+matplotlib>=3.1.1
+scikit-learn>=0.19
+hyperspy>=1.6.2
+diffsims>=0.3
+lmfit>=0.9.12
+numpy>=1.20.0
+pyfai
+ipywidgets
+numba
+orix>=0.3
+pyxem
+xmltodict
+zarr
