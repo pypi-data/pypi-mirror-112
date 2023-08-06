@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: brem
+Version: 1.0.4
+Summary: Basic Remote Execution Manager
+Home-page: https://github.com/paskino/brem
+Author: Alin M Elena, Edoardo Pasca
+Author-email: alin-marin.elena@stfc.ac.uk, edoardo.pasca@stfc.ac.uk
+License: BSD-3
+Description: BREM
+        ####
+        
+        Basic Remote Execution Manager (brem) is a simple Python package that enables the execution
+        on remote machines connected via SSH.
+        
+        Install
+        -------
+        
+        Binary installation is available via pip.
+          
+        .. code ::
+          
+          pip install brem
+          
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Physics

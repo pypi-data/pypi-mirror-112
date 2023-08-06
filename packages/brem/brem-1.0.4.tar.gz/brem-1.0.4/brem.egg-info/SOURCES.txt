@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+setup.py
+brem/__init__.py
+brem/brem.py
+brem/version.py
+brem.egg-info/PKG-INFO
+brem.egg-info/SOURCES.txt
+brem.egg-info/dependency_links.txt
+brem.egg-info/requires.txt
+brem.egg-info/top_level.txt
+brem/ui/RemoteFileDialog.py
+brem/ui/RemoteServerSettingDialog.py
+brem/ui/__init__.py
