@@ -1,0 +1,3 @@
+[console_scripts]
+peid = peid.__main__:main
+
