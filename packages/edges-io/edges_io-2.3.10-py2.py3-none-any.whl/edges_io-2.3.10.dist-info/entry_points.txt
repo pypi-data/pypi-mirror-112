@@ -1,0 +1,3 @@
+[console_scripts]
+edges-io = edges_io.cli:main
+
