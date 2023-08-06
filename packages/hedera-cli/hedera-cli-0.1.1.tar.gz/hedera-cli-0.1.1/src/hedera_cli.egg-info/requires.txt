@@ -1,0 +1,7 @@
+hedera-sdk-py>=2.0.8
+colorama>=0.4.4
+python-dotenv>=0.18.0
+requests>=2.19.1
+
+[:platform_system != "Windows"]
+getch>=1.0

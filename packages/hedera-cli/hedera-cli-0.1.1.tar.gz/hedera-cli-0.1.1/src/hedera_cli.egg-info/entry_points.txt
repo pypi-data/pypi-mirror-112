@@ -1,0 +1,3 @@
+[console_scripts]
+hedera-cli = hedera_cli.main:main
+
