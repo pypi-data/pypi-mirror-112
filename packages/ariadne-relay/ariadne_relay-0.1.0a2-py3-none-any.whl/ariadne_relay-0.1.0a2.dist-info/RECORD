@@ -1,0 +1,17 @@
+ariadne_relay/__init__.py,sha256=TX_-bavRykUC4u0ovOmk3bB9-u6sqCPFwEoDZ47_ES8,1530
+ariadne_relay/base.py,sha256=KoDPNhyjYWLK9ll-tnO7nhxmbjCtCochmZfyhlMBVGE,5086
+ariadne_relay/interfaces.py,sha256=KQ3hzHaL9ufacQK7dBqcCbvRkMe52o4v2zZFANDIuF8,524
+ariadne_relay/node.py,sha256=qWijn6g6JOPV97f8CRPNbau4T1xPG9kV6X1oA2aLf5c,4304
+ariadne_relay/objects.py,sha256=yi0-pq8ilmfe_UaJ8_jwYC26KOXH9_KuZruzf8rk5tU,849
+ariadne_relay/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ariadne_relay/utils.py,sha256=6a5bkSqvG-IDS9bbRpChG_YaXnx6QojsWaHVIjaz3JA,374
+ariadne_relay/connection/__init__.py,sha256=JIme-owS9Ak4oBfxGmcsFcRl8R0VCyysjDuGKGP6Eco,809
+ariadne_relay/connection/base.py,sha256=D95dtbSKEzF2pRKZDYx8SJh4HkmjmCL5_uB-X43V9Lg,3247
+ariadne_relay/connection/proxy.py,sha256=QoSU0OAUrP59jcF5Scb59driwf0uWbL3FrLs17MZdyg,582
+ariadne_relay/connection/reference.py,sha256=jQNetlfPNCGsFG7ZG5-joQtDl_edfZXl0oI2B297J1M,554
+ariadne_relay/connection/snake_case.py,sha256=Ie_DWyheGS0NNpBG_U1BAb2Puj698okChLLsNhN44HA,2983
+ariadne_relay-0.1.0a2.dist-info/LICENSE,sha256=_lFqaPGrBi3RqaVVenjVG44I-WR6YqanRjDAO1B5FHg,1533
+ariadne_relay-0.1.0a2.dist-info/METADATA,sha256=jiEEJP6QpWtdkk938jkfBYr0jgG9nH2aNvE16LU6D2U,6151
+ariadne_relay-0.1.0a2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ariadne_relay-0.1.0a2.dist-info/top_level.txt,sha256=fE0SEQgQaqkTTxJ0Qm1m3TpSjP82RlOEmjhQ1K_kacQ,14
+ariadne_relay-0.1.0a2.dist-info/RECORD,,
