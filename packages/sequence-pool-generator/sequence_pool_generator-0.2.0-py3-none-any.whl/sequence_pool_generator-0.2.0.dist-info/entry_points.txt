@@ -1,0 +1,3 @@
+[console_scripts]
+sequence-pool-generator=sequence_pool_generator.__main__:app
+
