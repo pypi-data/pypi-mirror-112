@@ -1,0 +1,6 @@
+torch>=1.7
+torchvision
+numpy
+matplotlib
+h5py
+sphinxcontrib-katex
