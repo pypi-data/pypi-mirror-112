@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: django-csvmaker
+Version: 1.0
+Summary: django-csvmaker
+Home-page: https://github.com/InnonationTeam/django-csvmaker
+Author: Rosario Amantia, Jessica Chiara Catania, Gianluca Di Franco
+License: BSD
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+
+django-csvmaker is a Django app to generate csv from various types of file or structure.
+
