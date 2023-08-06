@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: django-ninja-apikey
+Version: 0.1.0
+Summary: Easy to use API key authentication for Django Ninja REST Framework
+Home-page: https://github.com/mawassk/django-ninja-apikey
+License: MIT
+Keywords: django,rest,ninja,auth,apikey
+Author: Maximilian Wassink
+Author-email: wassink.maximilian@protonmail.com
+Requires-Python: >=3.6.2,<4.0.0
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Django (>=2.0.13)
+Requires-Dist: django-ninja (>=0.13)
+Project-URL: Repository, https://github.com/mawassk/django-ninja-apikey
+Description-Content-Type: text/markdown
+
+# Django Ninja APIKey - Easy to use API key authentication for Django Ninja REST Framework
+This is an unofficial [Django](https://github.com/django/django) app which makes it **easy** to manage API keys for the [Django Ninja REST Framework](https://github.com/vitalik/django-ninja).
+
+**Key Features:**
+- **Easy** integration in your projects
+- Well integrated in the **admin interface**
+- **Secure** API keys due to hashing 
+- Works with the **standard** user model
+
+## Installation
+
+```
+pip install django-ninja-apikey
+```
+
+## Usage
+Add `ninja_apikey` to your installed apps in your django project:
+```Python
+# settings.py
+
+INSTALLED_APPS = [
+    # ...
+    "ninja_apikey",
+]
+```
+Run the included migrations:
+```
+python manage.py migrate
+```
+Secure an api endpoint with the API keys:
+```Python
+# api.py
+
+from ninja import NinjaAPI
+from ninja_apikey.security import APIKeyAuth
+
+#  ...
+
+auth = APIKeyAuth()
+api = NinjaAPI()
+
+# ...
+
+@api.get("/secure_endpoint", auth=auth)
+def secure_endpoint(request):
+    return f"Hello, {request.user}!" 
+```
+Or secure your whole api (or a specific [router](https://django-ninja.rest-framework.com/tutorial/routers/)) with the API keys:
+```Python
+# api.py
+
+from ninja import NinjaAPI
+from ninja_apikey.security import APIKeyAuth
+
+#  ...
+
+api = NinjaAPI(auth=APIKeyAuth())
+
+# ...
+
+@api.get("/secure_endpoint")
+def secure_endpoint(request):
+    return f"Hello, {request.user}!" 
+```
+You can create now API keys from django's admin interface.
+
+## What next?
+- To support this project, please give a star on GitHub.
+- For any kind of issue feel free to open an Issue.
+- Contributors are welcome! Please refer to `CONTRIBUTING.md`.
