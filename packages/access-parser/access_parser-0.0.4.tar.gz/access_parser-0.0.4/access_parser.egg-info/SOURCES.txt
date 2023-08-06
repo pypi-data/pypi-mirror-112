@@ -1,0 +1,11 @@
+README.md
+setup.py
+access_parser/__init__.py
+access_parser/access_parser.py
+access_parser/parsing_primitives.py
+access_parser/utils.py
+access_parser.egg-info/PKG-INFO
+access_parser.egg-info/SOURCES.txt
+access_parser.egg-info/dependency_links.txt
+access_parser.egg-info/requires.txt
+access_parser.egg-info/top_level.txt
