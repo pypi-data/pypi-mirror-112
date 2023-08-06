@@ -1,0 +1,17 @@
+asttokens<3.0.0,>=2.0.4
+dparse<1.0.0,>=0.5.1
+black>=20.8b0
+pylint<3.0.0,>=2.5.0
+rich
+
+[test]
+pytest==5.3.5
+pytest-cov
+pytest-sugar
+pytest-django
+django-environ==0.4.5
+xeger<1.0.0,>=0.3.5
+freezegun<2.0.0,>=1.1.0
+WebTest<3.0.0,>=2.0.35
+coverage<6.0.0,>=5.5.0
+tox

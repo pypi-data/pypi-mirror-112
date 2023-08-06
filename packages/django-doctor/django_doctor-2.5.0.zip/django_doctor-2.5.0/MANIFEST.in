@@ -1,0 +1,1 @@
+recursive-include django_doctor/wizard *.html *.png *.svg *.ico *.js *.css
