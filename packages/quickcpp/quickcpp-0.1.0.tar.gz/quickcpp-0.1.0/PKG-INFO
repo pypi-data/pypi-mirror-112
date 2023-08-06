@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: quickcpp
+Version: 0.1.0
+Summary: Quickly builds a standalone C++ file and runs the result.
+License: Apache 2.0
+Author: Aurelien Gateau
+Author-email: mail@agateau.com
+Requires-Python: >=3.6.2,<4.0.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
