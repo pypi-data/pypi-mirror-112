@@ -1,0 +1,7 @@
+.answer::before {
+    content: "Avocado Perdicted Average Price: ";
+}
+
+.error::before {
+    content: "Error occured :/ ";
+}

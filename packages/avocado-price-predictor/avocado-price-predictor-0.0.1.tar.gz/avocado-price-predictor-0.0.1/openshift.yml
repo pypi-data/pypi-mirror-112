@@ -1,0 +1,75 @@
+kind: Template
+apiVersion: v1
+metadata:
+  name: avocado-price-predictor
+  labels:
+    template: avocado-price-predictor
+  annotations:
+    openshift.io/display-name: "Avocado Price Predictor"
+message: "Avocado Price Predictor has been created. Visit http://avocado-price-predictor.${DOMAIN}" 
+objects:
+- kind: DeploymentConfig
+  apiVersion: apps.openshift.io/v1  
+  metadata:
+    name: avocado-price-predictor
+    annotations:
+      template.alpha.openshift.io/wait-for-ready: "true"
+  spec:
+    replicas: 1
+    selector:    
+      app: avocado-price-predictor-server
+    template:    
+      metadata:
+        labels:  
+          app: avocado-price-predictor-server
+      spec:
+        containers:
+        - image: shaysirek/avocado-price-predictor
+          name: server
+          ports:
+          - containerPort: 8000
+            protocol: TCP
+          env:
+          - name: HOST
+            value: "avocado-price-predictor.${DOMAIN}"
+          - name: MODEL_URL
+            value: "${MODEL_URL}"
+        restartPolicy: Always
+        imagePullPolicy: Always
+- kind: Service
+  apiVersion: v1
+  metadata:
+    name: avocado-price-predictor
+    annotations:
+      template.openshift.io/expose-service_ip_port: "{.spec.clusterIP}:{.spec.ports[?(.name==\"web\")].port}"
+  spec:
+    selector:
+      app: avocado-price-predictor-server
+    ports:
+    - name: "web"
+      port: 8000
+      targetPort: 8000
+- kind: Route
+  apiVersion: v1
+  metadata: 
+    name: avocado-price-predictor
+    annotations:
+      template.openshift.io/expose-uri: "http://{.spec.host}{.spec.path}"
+  spec:
+    host: "avocado-price-predictor.${DOMAIN}"
+    to:
+      kind: Service
+      name: avocado-price-predictor
+    port:
+      targetPort: 8000
+    tls:
+      termination: edge
+parameters:
+  - name: DOMAIN
+    displayName: Openshift Cluster Domain
+    required: true
+    value: 'apps-crc.testing'
+  - name: MODEL_URL
+    displayName: Model URL
+    required: true
+    value: 'https://drive.google.com/uc?id=1UiH6y3kvlWcGTpH9AV9qsQrjJZ-X9f2s'
