@@ -1,0 +1,4 @@
+[console_scripts]
+deadlink-check = deadlink._cli:check
+deadlink-fix = deadlink._cli:fix
+
