@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        mlsetup = mlsetup.__main__:cli
+    
