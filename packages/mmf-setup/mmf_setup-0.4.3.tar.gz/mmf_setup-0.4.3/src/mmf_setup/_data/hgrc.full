@@ -1,0 +1,66 @@
+# Much of this configuration comes from
+# https://octobus.net/blog/2020-11-26-modern-mercurial.html
+[ui]
+tweakdefaults = true
+# Merge conflict markers in files (they look like "<<<<<<<") are more verbose
+mergemarkers = detailed
+# Uses the internal non-interactive simple merge algorithm for merging
+# files. It will fail if there are any conflicts and leave markers in the
+# partially merged file. Marker will have three sections, one from each
+# side of the merge and one for the base content.
+merge = :merge3
+
+[commands]
+# Require the user to pass a revision (or revset) to "push" instead of pushing
+# all heads by default.
+push.require-revs = true
+
+[paths]
+# Default to the current revision (`.`) when pushing to `default`. 
+default:pushrev = .
+
+[extensions]
+# ==== "Core" extensions ====
+# Extensions that come pre-packaged with Mercurial:
+
+color=
+histedit=
+rebase=
+record=
+shelve=
+strip=
+
+# Automatically finds where to amend the different bits of your working
+# directory into the right changesets and does so interactively.
+absorb =
+
+# These need pip install --user hg-evolve
+evolve =
+topic =
+
+# This needs pip install --user hg-git
+hggit = 
+
+[hooks]
+# This hook adds "%include ../.hgrc" to .hg/hgrc if the .hgrc file exists in
+# the top level.  This allows one to store a set of paths for example.
+# See http://stackoverflow.com/a/24195392/1088938
+# THIS IS A POTENTIAL SECURITY RISK as it allows the repository to execute commands.
+# Be sure to check the .hgrc file in any untrusted repo.
+update = if [ -e .hgrc ] && touch .hg/hgrc                                    \
+                         && ! grep -q '%include \.\./\.hgrc' .hg/hgrc; then   \
+             echo "Repository $(pwd) contains an .hgrc file.";                \
+             echo "Including this in .hg/hgrc is a potential security risk."; \
+             echo "Only do this if you trust the repository.";                \
+             echo;                                                            \
+             printf '%s' "Include this .hgrc in .hg/hgrc? [yN]";              \
+             read -r reply;                                                   \
+             echo;                                                            \
+             case $reply in                                                   \
+               [Yy])                                                          \
+                 echo "Adding '%include ../.hgrc' to '.hg/hgrc'";             \
+                 echo '%include ../.hgrc' >> .hg/hgrc;                        \
+             esac;                                                            \
+         fi
+
+%include hgrc.lga

@@ -1,0 +1,108 @@
+# Mercurial (hg) Init File; -*-Shell-script-*-
+# dest = ~/.hgrc     # Keep this as the 2nd line for mmf_init_setup
+#
+# Here we set the username from the variable LC_HG_USERNAME.  To ensure this is
+# properly set, I recommend adding something like the following to your ssh
+# config file:
+#
+# ~/.ssh/config
+#
+#    Host smc*
+#      ForwardAgent yes
+#      SendEnv LC_HG_USERNAME
+#    Host smcproject1
+#      HostName compute5-us.sagemath.com
+#      User 08ef79bc1...
+#
+# etc.  Then if you set $LC_HG_USERNAME appropriately on your local computer,
+# it will be pushed to the SMC servers when you log in.
+[ui]
+tweakdefaults = true
+username = $LC_HG_USERNAME
+merge = emacs
+paginate = never
+
+# Common global ignores
+ignore.common = ~/.hgignore
+
+[extensions]
+color =
+evolve =
+topic =
+graphlog =
+hgext.convert =
+hgext.extdiff =
+histedit =
+rebase =
+record =
+shelve =
+#amend =
+#mq =
+#purge =
+#strip =
+#transplant =
+
+hggit = 
+
+[alias]
+lga = log -G --template={lg_changeset} -l20
+checkpoint = !$HG commit -m "CHK: Automatic checkpoint" && \
+    $HG phase -fs . || true && \
+    $HG debugsetparents .^1 && \
+    $HG debugrebuildstate
+chk = checkpoint
+
+[color]
+custom.rev = red
+custom.author = blue
+custom.date = green
+custom.branches = red
+
+# Template styling tricks:
+# http://jamie-wong.com/2012/07/11/my-mercurial-setup-and-workflow-at-khan-academy
+# Coloring from http://stackoverflow.com/a/16217915/1088938
+# http://jordi.inversethought.com/blog/customising-mercurial-like-a-pro/
+# https://www.mercurial-scm.org/repo/hg/help/templates
+
+lg.author = blue bold
+lg.changeset.secret = blue bold
+lg.changeset.draft = yellow bold
+lg.changeset.public = red bold
+lg.branches = blue bold
+lg.topics = green bold
+lg.tags = magenta
+lg.bookmarks = red
+lg.description.here = bold
+
+[templatealias]
+lg_author = "{label('lg.author', author|user)}"
+lg_date =   "{label('lg.date', '({date|age})')}"
+lg_phase = "{sub(r'secret', 's', sub(r'draft','d', sub(r'public','p',phase)))}"
+lg_branch = '{label("lg.branch", ifeq(branch, "default", "", branch))}'
+
+lg_changeset = "{label('lg.rev', '{lg_rev}')} \
+               {lg_author} \
+               {lg_date} \
+               {lg_branches}\n \
+               {lg_desc}\n"
+
+lg_desc = '{label(ifcontains(rev, revset("parents()"), 
+                             "lg.description.here",
+                             "lg.description"),
+                  "{desc|firstline|strip}")}'
+# Use : before phase so that I can double click and select revision number
+lg_rev = '{label("lg.changeset.{phase}", "{lg_rev_}")}'
+lg_rev_ = '{rev}:{ifeq(verbosity, r"verbose", "{node|short}:")}{lg_phase}'
+lg_branches = '{label("lg.branches", "{lg_branch}{lg_topics}{lg_bookmarks}{lg_tags}")}'
+lg_tags = '{label("lg.tags", if(tags, " {tags}"))}'
+lg_topics = '{label("lg.topics", if(topics, "[{topics}]"))}'
+lg_bookmarks = '{label("lg.bookmarks", if(bookmarks, " {bookmarks}"))}'
+
+
+[merge-tools]
+emacs.args = -q --eval "(require 'ediff)" --eval "(setq ediff-window-setup-function 'ediff-setup-windows-plain)" --eval "(add-hook 'ediff-quit-hook 'save-buffers-kill-emacs)" --eval "(ediff-merge-with-ancestor \""$local"\" \""$other"\" \""$base"\" nil \""$output"\")"
+
+[hooks]
+pre-commit.username = if [ -z "$LC_HG_USERNAME" ]; then \
+    echo "LC_HG_USERNAME not defined: run 'mmf_setup cocalc -v' for details"; \
+    exit 1; fi

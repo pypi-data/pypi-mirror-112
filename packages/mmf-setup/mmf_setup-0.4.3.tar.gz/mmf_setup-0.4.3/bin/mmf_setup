@@ -1,0 +1,111 @@
+#!/bin/bash
+#
+# Initialize the environment for use with my tools.
+#
+# Several additional options are provided as one-time initializations:
+#   cocalc: Initial a CoCalc project for use as described here:
+#      https://alum.mit.edu/www/mforbes/public/notes/cocalc-workflow/
+
+function usage() {
+    echo "usage: mmf_setup cocalc [options] OR mmf_setup -v [options]"
+    echo
+    echo "The first invocation will setup cocalc.com projects:"
+    echo
+    echo "   mmf_setup cocalc [-v]"
+    echo
+    echo "The second invocation will show which environmental variables will be set,"
+    echo "and can be evaluated to set these in your shell:"
+    echo
+    echo "   mmf_setup -v [options]"
+    echo
+    echo "Valid options for mmf_setup_bash.py are:"
+    echo "$(mmf_setup_bash.py -h)"
+    echo
+    echo "You can set these in your shell by running mmf_setup_bash.py:"
+    echo
+    echo "   eval \"\$(mmf_setup -v [options])\""
+}
+
+BIN_DIR="$(dirname $BASH_SOURCE{0})"
+
+if [[ -n $BASH_VERSION ]] && [[ "$(basename "$0" 2> /dev/null)" == "mmf_setup" ]]; then
+    if [[ -n $1 ]]; then
+        case $1 in
+            -v)
+                shift # move to the next argument
+                echo "# mmf_setup environment:"
+                echo "$(mmf_setup_bash.py $*)"
+                exit 0
+                ;;
+            smc|cocalc)
+                shift # move to the next argument
+                if [[ $1 == -v ]]; then
+                    shift # move to the next argument
+                    echo "DRY RUN: the following is what would happen with the -v option"
+                    echo
+                    not_dry_run=
+                else
+                    not_dry_run=true
+                fi
+                
+                if [[ "$*" ]]; then
+                    echo "Unknown arguments 'mmf_setup cocalc $*':"
+                    echo
+                    usage
+                    exit 1
+                fi
+                   
+                hg="$(type -p hg)"
+                echo "# Installing mercurial, hg-evolve, hg-git, jupytext for python3..."
+                echo "python3 -m pip install --upgrade --user pip mercurial hg-evolve hg-git jupytext"
+                if [[ $not_dry_run ]]; then
+                    python3 -m pip install --upgrade --user pip mercurial hg-evolve hg-git jupytext
+                fi
+
+                DATA_DIR="$(python -c 'import mmf_setup;print(mmf_setup.DATA)')"
+                echo "# Setting up config files for CoCalc..."
+                if [[ $not_dry_run ]]; then
+                    if [[ ! -L ~/.bashrc && -f ~/.bashrc ]]; then
+                       echo "mv ~/.bashrc ~/.bashrc_cocalc"
+                       mv ~/.bashrc ~/.bashrc_cocalc
+                    fi
+                    echo "$BIN_DIR/mmf_initial_setup" -v "$DATA_DIR/config_files/cocalc" $*
+                    "$BIN_DIR/mmf_initial_setup" -v "$DATA_DIR/config_files/cocalc" $*
+                else
+                    if [[ ! -L ~/.bashrc && -f ~/.bashrc ]]; then
+                       echo "mv ~/.bashrc ~/.bashrc_cocalc"
+                    fi
+                    "$BIN_DIR/mmf_initial_setup" --no-action -v "$DATA_DIR/config_files/cocalc" $*
+                fi
+                cat "$DATA_DIR/config_files/cocalc/message.txt"
+
+                exit 0
+                ;;
+            *)
+                usage
+                exit 0
+                ;;
+        esac
+    else
+        usage
+        exit 1
+    fi
+else
+    # Actually source the environment
+    >&2 echo "WARNING: mmf_setup Deprecation - Please do not source mmf_setup in future."
+    if [[ "$1" == -v ]]; then
+        usage
+    else
+        >&2 echo "Replace '. mmf_setup $*' with the following in your .bash_aliases file:"
+        >&2 echo
+        >&2 echo "    eval \"\$(mmf_setup -v $*)\""
+        >&2 echo
+        res="$(mmf_setup_bash.py $*)"
+        errorCode=$?
+        if [[ $errorCode == 0 ]]; then
+            eval "$res"
+        else
+            echo "ERROR: Something went wrong with the command '. mmf_setup $*'"
+        fi
+    fi
+fi

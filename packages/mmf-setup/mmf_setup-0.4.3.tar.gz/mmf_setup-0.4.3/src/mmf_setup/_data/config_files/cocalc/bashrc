@@ -1,0 +1,9 @@
+# Bash Aliases etc.; -*-Shell-script-*-
+# dest=~/.bashrc     # Keep this as the 2nd line for mmf_init_setup
+
+# Insert PATH here so hg can work over ssh with evolve etc.
+export PATH="~/.local/bin/:$PATH"
+
+if [ -f ~/.bashrc_cocalc ]; then
+    . ~/.bashrc_cocalc
+fi
