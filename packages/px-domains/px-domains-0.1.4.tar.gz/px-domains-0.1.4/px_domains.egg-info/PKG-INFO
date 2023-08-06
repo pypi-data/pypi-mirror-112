@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: px-domains
+Version: 0.1.4
+Summary: Simple string domains implementation.
+Home-page: UNKNOWN
+Author: Alex Tkachenko
+Author-email: preusx.dev@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Web Environment
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# Domains
+
+Extended strings for easier usage as a domain namespaces. Such as: `com.package.module`.
+
+

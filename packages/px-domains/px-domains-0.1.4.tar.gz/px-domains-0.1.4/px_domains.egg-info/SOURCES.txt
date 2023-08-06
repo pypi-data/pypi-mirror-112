@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+px_domains/__init__.py
+px_domains/domain.py
+px_domains/registry.py
+px_domains.egg-info/PKG-INFO
+px_domains.egg-info/SOURCES.txt
+px_domains.egg-info/dependency_links.txt
+px_domains.egg-info/requires.txt
+px_domains.egg-info/top_level.txt
