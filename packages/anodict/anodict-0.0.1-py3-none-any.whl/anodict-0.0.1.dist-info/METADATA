@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: anodict
+Version: 0.0.1
+Summary: Annotate your Python dict
+Home-page: https://github.com/keuin/anodict
+Author: Keuin
+Author-email: keuinx@gmail.com
+License: BSD 2-Clause License
+Keywords: dict,deserialize,annotation,json
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+
