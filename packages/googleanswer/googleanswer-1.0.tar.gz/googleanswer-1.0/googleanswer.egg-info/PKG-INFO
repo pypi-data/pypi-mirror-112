@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: googleanswer
+Version: 1.0
+Summary: The supreme Google Search API
+Home-page: https://github.com/sanat-garg/google_search
+Author: Sanat Garg
+Author-email: sanatgarg11@gmail.com
+License: UNKNOWN
+Project-URL: Google Search, https://github.com/sanat-garg/google_search
+Description: Google Search API is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
