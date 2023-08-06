@@ -1,0 +1,3 @@
+[console_scripts]
+cleanpy = cleanpy.__main__:main
+
