@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: stream-sqlite
+Version: 0.0.0
+Summary: Python function to extract all the rows from a SQLite database, without loading the entire file into memory or disk
+Home-page: https://github.com/uktrade/stream-sqlite
+Author: Department for International Trade
+Author-email: sre@digital.trade.gov.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Database
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# stream-sqlite
+
+It can read a table from sqlite page(s)
+Hardcoded database path for convenience
+
+Missing:
+Parsing sql in sqlite_master to identify the table name and the starting page
+no checks for consistency between record size and space allocated to the record
+record overflow
+handling of NO ROWID tables. For the moment, I always output the row index at the beginning of the record
+TESTS
+
+
+Inefficient:
+use recursion to read a page
+several useless seek and read in the routines
+
+
+
+Wrong:
+reading of varint using more than 2 bytes (?)
+use hardcoded page size
+
