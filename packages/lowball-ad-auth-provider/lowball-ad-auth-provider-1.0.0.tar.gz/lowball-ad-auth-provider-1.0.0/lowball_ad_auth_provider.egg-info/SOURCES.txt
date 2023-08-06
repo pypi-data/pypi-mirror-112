@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+lowball_ad_auth_provider/__init__.py
+lowball_ad_auth_provider/auth_provider.py
+lowball_ad_auth_provider.egg-info/PKG-INFO
+lowball_ad_auth_provider.egg-info/SOURCES.txt
+lowball_ad_auth_provider.egg-info/dependency_links.txt
+lowball_ad_auth_provider.egg-info/not-zip-safe
+lowball_ad_auth_provider.egg-info/requires.txt
+lowball_ad_auth_provider.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
+tests/test_lowball_ad_auth_provider/__init__.py
+tests/test_lowball_ad_auth_provider/conftest.py
+tests/test_lowball_ad_auth_provider/test_auth_provider.py
