@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+test_requirements.txt
+ossfs/__init__.py
+ossfs/core.py
+ossfs.egg-info/PKG-INFO
+ossfs.egg-info/SOURCES.txt
+ossfs.egg-info/dependency_links.txt
+ossfs.egg-info/requires.txt
+ossfs.egg-info/top_level.txt
