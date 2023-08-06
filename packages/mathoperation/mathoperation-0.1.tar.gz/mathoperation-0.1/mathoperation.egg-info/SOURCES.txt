@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+mathoperation/__init__.py
+mathoperation/greet.py
+mathoperation/operations.py
+mathoperation.egg-info/PKG-INFO
+mathoperation.egg-info/SOURCES.txt
+mathoperation.egg-info/dependency_links.txt
+mathoperation.egg-info/top_level.txt
