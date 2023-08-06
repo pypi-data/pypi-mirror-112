@@ -1,0 +1,4 @@
+[pytest11]
+selenosis = selenosis.pytest_plugin.selenosis
+tags = selenosis.pytest_plugin.tags
+
