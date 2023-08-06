@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: DKCloudCommand
+Version: 1.0.162rc2
+Summary: DataKitchen Cloud Command Line
+Home-page: UNKNOWN
+Author: DataKitchen
+Author-email: info@datakitchen.io
+License: UNKNOWN
+Keywords: DataKitchen,Cloud,Commandline,Analytics,Agile Data,DataOps
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aniso8601 (==6.0.0)
+Requires-Dist: Jinja2 (==2.7.3)
+Requires-Dist: MarkupSafe (==0.23)
+Requires-Dist: pytz (==2017.2)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: websocket-client (==0.32.0)
+Requires-Dist: click (==7.0)
+Requires-Dist: pyopenssl (==20.0.0)
+Requires-Dist: PyJWT (==1.6.1)
+Requires-Dist: prettytable (==0.7.2)
+Requires-Dist: idna (==2.6)
+Requires-Dist: mixpanel (==4.6.0)
+
+# DKCloudCommand
+## DataKitchen Cloud Command Line
+### Makefile
+
+Building and testing this module is conveniently done using Make. Issue the `make` command to see a list
+of available targets (shown below for convenience). 
+
+    Available commands:
+      lint                run black formatter
+      clean               remove files from last test run (e.g. report_dir, .coverage, etc.) and *.pyc files
+      test                compile and run all unit, integration, and smoke tests
+      clean_pyc           remove all *.pyc files
+      compile             compile python source files
+      clean_unit          remove files from last unit test run (e.g. report_dir, .coverage, etc.)
+      test_unit           run all unit tests
+      clean_integration   remove files from last integration test run (e.g. report_dir, .coverage, etc.)
+      test_integration    run all integration tests
+      test_smoke          run smoke tests
+
+
+[Pre-commit](https://pre-commit.com/) is also included to validate and flag commits that contain code 
+that does not pass [Flake8](http://flake8.pycqa.org/en/latest/) and [YAPF](https://github.com/google/yapf). 
+To use, first install the python package `pip install pre-commit` and then run `pre-commit install`. All 
+future commits will run these tools and deny commits that don't pass. When running YAPF, `pre-commit` will
+make in-place corrections to your code. Therefore, if it fails the YAPF validation on the first commit 
+attempt, simply review the changed files, add, and commit again to resolve.
+
