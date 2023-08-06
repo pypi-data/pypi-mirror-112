@@ -1,0 +1,40 @@
+Metadata-Version: 1.1
+Name: Jare
+Version: 0.0.2
+Summary: A module for A.I
+Home-page: UNKNOWN
+Author: Kittex0/Mohammed Daniyal
+Author-email: kittex0@protonmail.com
+License: MIT
+Description: 
+        jare_run:
+        I have added "jare_run" which simply takes 3 values 
+        
+        1. Input value (input(input value))
+        2. Questions list (questions = ["Hello", "How are you"])
+        3. Answers List (answers = ["Hi", "I am good thanks!"])
+        
+        Then it combines them in to a dictionary and then asks the user for an input and if that input is in the dictionary then it prints the response(from the Answers list)
+        
+        Change Log
+        ==========
+        
+        0.0.1 (11/07/2021)
+        ------------------
+        - First Release
+        - Added jase_run
+        - Changed Name
+        
+        
+        
+        0.0.2 (11/07/2021)
+        ------------------
+        - Changed Name
+        - Added more info in README.md
+Keywords: A.I
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
