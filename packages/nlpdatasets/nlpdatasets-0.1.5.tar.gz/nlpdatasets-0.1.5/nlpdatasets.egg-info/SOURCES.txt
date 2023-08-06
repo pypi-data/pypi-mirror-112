@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+nlpdatasets/__init__.py
+nlpdatasets/__version__.py
+nlpdatasets/cli.py
+nlpdatasets/paths.py
+nlpdatasets/utils.py
+nlpdatasets.egg-info/PKG-INFO
+nlpdatasets.egg-info/SOURCES.txt
+nlpdatasets.egg-info/dependency_links.txt
+nlpdatasets.egg-info/entry_points.txt
+nlpdatasets.egg-info/not-zip-safe
+nlpdatasets.egg-info/requires.txt
+nlpdatasets.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+nlpdatasets = nlpdatasets.cli:run
+
