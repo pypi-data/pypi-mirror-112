@@ -1,0 +1,3 @@
+[console_scripts]
+ardutest=ardutest.__main__:ardutest
+
