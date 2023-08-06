@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: popularity-contest
+Version: 0.1
+Summary: UNKNOWN
+Home-page: https://github.com/yuvipanda/python-popularity-contest
+Author: Yuvi Panda
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: stdlib-list
+Requires-Dist: statsd
+
+UNKNOWN
+
