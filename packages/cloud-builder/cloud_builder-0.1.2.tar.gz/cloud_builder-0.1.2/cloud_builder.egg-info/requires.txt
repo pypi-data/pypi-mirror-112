@@ -1,0 +1,8 @@
+docopt>=0.6.2
+PyYAML
+apscheduler
+kiwi>=9.21.21
+kafka-python
+cerberus
+requests
+psutil
