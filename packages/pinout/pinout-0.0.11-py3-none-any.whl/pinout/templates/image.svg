@@ -1,0 +1,23 @@
+{% if image.svg_data is not none %}
+<g 
+    {% if image.tag %}
+        class="{{ image.tag }}"
+    {% endif %}
+    transform="
+        translate({{ image.x }} {{  image.y }}) 
+        scale({{ image.scale.x }} {{ image.scale.y }})
+    "
+>
+    {{ image.svg_data }}
+</g>
+{% else %}
+<image 
+    {% if tags %}class="{{image.tag}}"{% endif %} 
+    x="{{ image.x }}" 
+    y="{{ image.y }}" 
+    href="{{ image.path }}" 
+    xlink:href="{{ image.path }}" 
+    height="{{ image.height }}" 
+    width="{{ image.width }}"
+/>
+{% endif %}

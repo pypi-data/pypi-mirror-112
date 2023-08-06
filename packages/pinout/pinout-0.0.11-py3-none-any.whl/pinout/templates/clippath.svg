@@ -1,0 +1,6 @@
+<clipPath 
+    id="{{ path.uuid }}"
+    clipPathUnits="userSpaceOnUse"
+>
+    {{ path.render_children() }}
+</clipPath>
