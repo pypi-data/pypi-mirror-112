@@ -1,0 +1,3 @@
+[console_scripts]
+awesome-cli=awesome_cli:main
+
