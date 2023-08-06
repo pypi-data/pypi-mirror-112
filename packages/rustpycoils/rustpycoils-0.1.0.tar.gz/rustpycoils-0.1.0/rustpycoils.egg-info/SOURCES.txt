@@ -1,0 +1,11 @@
+Cargo.toml
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+rustpycoils.egg-info/PKG-INFO
+rustpycoils.egg-info/SOURCES.txt
+rustpycoils.egg-info/dependency_links.txt
+rustpycoils.egg-info/not-zip-safe
+rustpycoils.egg-info/top_level.txt
+src/lib.rs
