@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/pyxios/__init__.py
+src/pyxios/pyxios.py
+src/pyxios.egg-info/PKG-INFO
+src/pyxios.egg-info/SOURCES.txt
+src/pyxios.egg-info/dependency_links.txt
+src/pyxios.egg-info/top_level.txt
