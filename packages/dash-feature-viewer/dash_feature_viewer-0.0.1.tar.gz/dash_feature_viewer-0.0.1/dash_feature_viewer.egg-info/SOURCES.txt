@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+dash_feature_viewer/DashFeatureViewer.py
+dash_feature_viewer/__init__.py
+dash_feature_viewer/_imports_.py
+dash_feature_viewer/dash_feature_viewer.min.js
+dash_feature_viewer/dash_feature_viewer.min.js.map
+dash_feature_viewer/metadata.json
+dash_feature_viewer/package-info.json
+dash_feature_viewer.egg-info/PKG-INFO
+dash_feature_viewer.egg-info/SOURCES.txt
+dash_feature_viewer.egg-info/dependency_links.txt
+dash_feature_viewer.egg-info/requires.txt
+dash_feature_viewer.egg-info/top_level.txt

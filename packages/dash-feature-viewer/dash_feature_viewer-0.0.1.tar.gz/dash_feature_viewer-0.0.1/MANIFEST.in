@@ -1,0 +1,7 @@
+include dash_feature_viewer/dash_feature_viewer.min.js
+include dash_feature_viewer/dash_feature_viewer.min.js.map
+include dash_feature_viewer/metadata.json
+include dash_feature_viewer/package-info.json
+include README.md
+include LICENSE
+include package.json
