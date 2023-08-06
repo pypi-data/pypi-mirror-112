@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: hyccup
+Version: 1.0.0a1.dev2
+Summary: A port of Clojure Hiccup for Hy
+License: MIT
+Keywords: template,html,hiccup,hy
+Author: Guillaume Fayard
+Author-email: guillaume.fayard@pycolore.fr
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: hy (==1.0a1)
