@@ -1,0 +1,12 @@
+bodywork_pipeline_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bodywork_pipeline_utils/logging.py,sha256=e_qsdcB7-ms0SqdhNFRj8gpLaHq-5R1eN_uL-55N1A8,525
+bodywork_pipeline_utils/aws/__init__.py,sha256=dQVA0meD6befdOg8e0pmV2EC8_bCJ4tNYatbUDu0Ew4,529
+bodywork_pipeline_utils/aws/artefacts.py,sha256=0vtyy6va8PTcmE4Hkxs4hDuFh8JGuUC8Kd2GjpztF8Q,7146
+bodywork_pipeline_utils/aws/datasets.py,sha256=xnkG8lWfguKdVXIVuCSTavGcmBLmh6WElqMwrJrEs5E,3129
+bodywork_pipeline_utils/aws/models.py,sha256=fAT09eG0SYZxX7S-8dOgjS1DmpdMfzxgKRghmP8BgkU,4397
+bodywork_pipeline_utils-0.1.0.dist-info/LICENSE,sha256=vmFMxxAPFYpVCVqOOrnWAt8ahQRa8G3r8e6DTjZR-JY,11395
+bodywork_pipeline_utils-0.1.0.dist-info/METADATA,sha256=R4bbE5zMe7oNKO1j_37Z37KZ3DqbhCgbFzMwjgjbTfw,4881
+bodywork_pipeline_utils-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+bodywork_pipeline_utils-0.1.0.dist-info/top_level.txt,sha256=A-xSUG1qtByWUbiWQRI7W3ho-xicwlKqiRLCp850h_o,24
+bodywork_pipeline_utils-0.1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+bodywork_pipeline_utils-0.1.0.dist-info/RECORD,,
