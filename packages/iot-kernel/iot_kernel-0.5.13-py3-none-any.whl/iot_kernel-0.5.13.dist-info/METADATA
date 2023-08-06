@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: iot-kernel
+Version: 0.5.13
+Summary: Jupyter Kernel for MicroPython
+Home-page: https://github.com/iot49/iot-kernel
+Author: Bernhard Boser
+License: MIT
+Keywords: MicroPython,Repl
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: ipykernel (==5.5.5)
+Requires-Dist: iot-device (>=0.5.6)
+Requires-Dist: argparse
+Requires-Dist: paramiko
+Requires-Dist: ipynbname
+
+Jupyter Kernel for MicroPython
+
+
