@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: nztm
+Version: 0.0.3
+Summary: Geo coordinate conversion library between NZTM2000 and WGS84
+Home-page: https://github.com/Synerty/nztm
+Author: Synerty
+Author-email: contact@synerty.com
+License: UNKNOWN
+Download-URL: https://github.com/Synerty/nztm/tarball/0.0.3
+Description: UNKNOWN
+Keywords: nztm,geo,coordinate,synerty
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
