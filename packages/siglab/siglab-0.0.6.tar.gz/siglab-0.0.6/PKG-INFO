@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: siglab
+Version: 0.0.6
+Summary: This OFDM function in sigplot gives us a complete visualization of how Orthogonal Frequency Division Multiplexing occurs.
+Home-page: https://github.com/PrakashMurugan17/sigplot
+Author: Prakash Murugan
+Author-email: nprakashmcoonoor@gmail.com
+License: MIT
+Download-URL: https://github.com/PrakashMurugan17/sigplot/archive/refs/tags/0.0.6.tar.gz
+Description: UNKNOWN
+Keywords: OFDM,QPSK,MODULATION,DEMODULATION
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
