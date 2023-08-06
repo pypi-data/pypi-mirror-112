@@ -1,0 +1,12 @@
+watchmen/__init__.py,sha256=imn63C17O-4LBQmExLxJfFKrcuUYwA0RFB0RUhC2bPA,86
+watchmen/client.py,sha256=cOv199gI5Xv9TMn8skqrvNLcIsotNNXotyBSDjHfcDA,4998
+watchmen/listener.py,sha256=c-4O-HpVSxg9E0cVRni5DlPhxAsufgiSOcwOrnyU4hI,2539
+watchmen/reminder.py,sha256=JicIC82K_7Dex40y-2birlE3-quQM26-MbK32cJL6EQ,2315
+watchmen/server.py,sha256=AK_pDo6k1jQMJEdDjCs21DJr4kHKQPFDerxNlVSmC_k,13237
+watchmen/templates/index.html,sha256=9VvkX8PBnkGkwAQclC3nB7U-xk6zaJjtwHFl3RfxgiE,9357
+watchmen/templates/old_index.html,sha256=66EPYpk54EYiEMYPqJzJKiFGr845XHzDv9wQB8XU4Ms,3389
+gpu_watchmen-0.3.8.dist-info/LICENSE,sha256=_-EaZ4zjDw6_sZwWtDM1iu9ixEseZmJdIWY1sCq3hQM,1062
+gpu_watchmen-0.3.8.dist-info/METADATA,sha256=VvSTC3a8g6lZtAzD6ZkwIfbU3pxTFIuv3GndPqDGm8E,6273
+gpu_watchmen-0.3.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gpu_watchmen-0.3.8.dist-info/top_level.txt,sha256=7PYsbub-5loKaPe9zYZYBVAyahyUioqLTUSMM-xICdo,9
+gpu_watchmen-0.3.8.dist-info/RECORD,,
