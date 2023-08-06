@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: cloud-builder
+Version: 0.1.3
+Summary: Cloud Builder
+Home-page: UNKNOWN
+Author: Marcus Schaefer
+Author-email: marcus.schaefer@gmail.com
+License: GPLv3+
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: System :: Operating System
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+Cloud Builder
+=============
+
+.. |GitHub CI Action| image:: https://github.com/OSInside/cloud-builder/workflows/CILint/badge.svg
+   :target: https://github.com/OSInside/cloud-builder/actions
+
+|GitHub CI Action|
+
+Cloud Builder provides services to stand up a package building
+cluster in cloud(VM) or container clusters.
+
+

@@ -1,0 +1,8 @@
+[console_scripts]
+cb-ctl = cloud_builder.cb_ctl:main
+cb-fetch = cloud_builder.cb_fetch:main
+cb-info = cloud_builder.cb_info:main
+cb-prepare = cloud_builder.cb_prepare:main
+cb-run = cloud_builder.cb_run:main
+cb-scheduler = cloud_builder.cb_scheduler:main
+
