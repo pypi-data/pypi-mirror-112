@@ -1,0 +1,4 @@
+[medux.plugins]
+alerts = medux.alerts:apps.AlertsConfig
+core = medux.core:apps.CoreConfig
+
