@@ -1,0 +1,17 @@
+discord/wrapper/__init__.py,sha256=JXqNP4g48ec5jAqytGTw2G4JBu77xVe7Q_CjDIlBkdA,199
+discord/wrapper/bot.py,sha256=ZN4apboaUmcHLSnYUccgvJJHalM9Jfj1eyEXh6jtoaQ,3437
+discord/wrapper/channel.py,sha256=vbCtUfqCcFOrXwPHCw1yZlq-InT2a-q7K_ZqR2R0OoI,1168
+discord/wrapper/content.py,sha256=RIQEDk8Y0i6eH4-cTe_MGzB0MN8lo2CG8GO1HqcUKBs,437
+discord/wrapper/embed.py,sha256=4Nv-CF8IcgvTcnnz3b5YP5nmOnJLJ7Ha1SMlSwgkSyY,1297
+discord/wrapper/gateway.py,sha256=xMxnpJZH5pC2AHyJ89cl_U3E4wSmyW8WciajNMrJhQI,3342
+discord/wrapper/guild.py,sha256=eKU0t4_EsDQSt0jzmBtirxkvnmDzfTpW8sfaJgMg-XI,1326
+discord/wrapper/http_client.py,sha256=8UyfYpIDKL5WiKurxGoPjKG_vOOoEnw8sPWxm53mz-s,2445
+discord/wrapper/intents.py,sha256=helZfLAUQ0qU5_N6S0et21ln54thnrl7Z5v8D9d3tWA,236
+discord/wrapper/models.py,sha256=k6Bf81gQs2lDpq21wsTrpfDElwYWKxBTSWIgOacOdIU,3118
+discord/wrapper/test_bot.py,sha256=Q-e-Kgv0xV9AjauAkieX-55t7XuKQyS9ZNei0hCokPs,395
+discord/wrapper/test_pac.py,sha256=-xzKYSwjkqx2_EIG2WF2l_seKEvip2hF2m4yDqgMVjY,543
+discord/wrapper/user.py,sha256=2KuHbmo1_pCaQ5uTKElN2CcsCegkYtmrDlfOlbn6V4o,2219
+discord.wrapper-0.3.0.dist-info/METADATA,sha256=PsePH8TggOl4xgV5JFGo08LNqNv0lW1E3Iwulmgxs2Q,2307
+discord.wrapper-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+discord.wrapper-0.3.0.dist-info/top_level.txt,sha256=fJkrNbR-_8ubMBUcDEJBcfkpECrvSEmMrNKgvLlQFoM,8
+discord.wrapper-0.3.0.dist-info/RECORD,,
