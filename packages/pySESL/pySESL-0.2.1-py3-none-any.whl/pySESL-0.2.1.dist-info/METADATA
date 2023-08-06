@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pySESL
+Version: 0.2.1
+Summary: Semi-empirical Sea Level Estimator
+Home-page: UNKNOWN
+Author: Ian Bolliger
+Author-email: ibolliger@rhg.com
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: scipy
+Requires-Dist: xarray
+Requires-Dist: pandas
+
+UNKNOWN
+
