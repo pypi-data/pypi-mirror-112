@@ -1,0 +1,4 @@
+[console_scripts]
+jfp = jfp.jfp:main
+zfp = jfp.jfp:main
+
