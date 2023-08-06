@@ -1,0 +1,3 @@
+[console_scripts]
+lsseq = lsseq.__main__:main
+
