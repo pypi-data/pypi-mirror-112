@@ -1,0 +1,3 @@
+[console_scripts]
+mypy2junit = mypy2junit:main
+
