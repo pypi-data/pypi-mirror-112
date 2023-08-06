@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+XMCDpy.egg-info/PKG-INFO
+XMCDpy.egg-info/SOURCES.txt
+XMCDpy.egg-info/dependency_links.txt
+XMCDpy.egg-info/requires.txt
+XMCDpy.egg-info/top_level.txt
+xmcdpy/__init__.py
+xmcdpy/image_manipulation.py
+xmcdpy/image_reading.py
+xmcdpy/masking.py
+xmcdpy/process_folder_fully.py
+xmcdpy/process_xmcd.py
+xmcdpy/shifts.py
+xmcdpy/stack_display.py
+xmcdpy/version.py
