@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: kaen
+Version: 1.0.1.12
+Summary: kaen is a friendly open source toolkit to help you train and deploy deep learning models in public clouds
+Home-page: https://github.com/CounterFactualAI/kaenai
+Author: CounterFactual.AI LLC
+Author-email: kaen@counterfactual.ai
+License: GPL v3.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Provides-Extra: osds
+Provides-Extra: optuna
+Provides-Extra: spark
+Provides-Extra: latest
+Provides-Extra: all
+Provides-Extra: stable
