@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+jspec/__init__.py
+jspec/constants.py
+jspec/error.py
+jspec/jregex.py
+jspec/parser.py
+jspec/result.py
+jspec.egg-info/PKG-INFO
+jspec.egg-info/SOURCES.txt
+jspec.egg-info/dependency_links.txt
+jspec.egg-info/top_level.txt
+test/test.py
