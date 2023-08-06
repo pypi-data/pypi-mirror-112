@@ -1,0 +1,22 @@
+cvxopt
+deprecation
+graphviz
+intervaltree
+jsonpickle
+lxml
+matplotlib
+networkx
+numpy!=1.19.4
+pandas
+pulp<=2.1
+pydotplus
+pytz
+pyvis
+scikit-learn
+scipy
+stringdist
+sympy
+tqdm
+
+[:python_version < "3.7"]
+ciso8601
