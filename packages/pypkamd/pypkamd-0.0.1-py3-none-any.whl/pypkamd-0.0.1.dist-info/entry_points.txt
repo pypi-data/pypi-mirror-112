@@ -1,0 +1,3 @@
+[console_scripts]
+pypkamd=pypkamd.__main__:main
+
