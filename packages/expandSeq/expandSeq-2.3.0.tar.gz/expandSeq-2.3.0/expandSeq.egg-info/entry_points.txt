@@ -1,0 +1,4 @@
+[console_scripts]
+condenseseq = expandseq.__main__:main
+expandseq = expandseq.__main__:main
+
