@@ -1,0 +1,12 @@
+extreme_parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extreme_parser/amazon/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extreme_parser/amazon/product/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extreme_parser/amazon/product/model.py,sha256=RWJEjjanXZUKlWBF9zp3NZiyxoMLwUTaWJ8SN8OPg7w,195
+extreme_parser/amazon/product/parse.py,sha256=MEbr2inxamRxButPc96XmZY369K_UgxcAKk2rUfQ2l4,3688
+extreme_parser/util/__init__.py,sha256=axL-IsaP1FdGKtU3diS_Qb24XHYBTXzaFul8O30XXk8,134
+extreme_parser/util/parse.py,sha256=TthnzEcqnbZnxwv_M8m8nQgfZx5MC8xRZ7-IosLMAcA,798
+extreme_parser-1.1.0.dist-info/LICENSE,sha256=PrpxESLU5Hg_WQoEd39Hm0rIhqNRZjGGLii2y3ptYv0,1090
+extreme_parser-1.1.0.dist-info/METADATA,sha256=7DfJOhdEVul41UNawAwKPvo-M-ofelOWtU-9kAepwXY,205
+extreme_parser-1.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+extreme_parser-1.1.0.dist-info/top_level.txt,sha256=dFwtDtCy-Cc-OegK1-cr_9fql39AinYK4aXhVl3L9SU,15
+extreme_parser-1.1.0.dist-info/RECORD,,
