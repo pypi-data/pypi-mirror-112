@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+tox.ini
+./rtpTTML/__init__.py
+./rtpTTML/py.typed
+./rtpTTML/ttmlReceiver.py
+./rtpTTML/ttmlTransmitter.py
+rtpTTML.egg-info/PKG-INFO
+rtpTTML.egg-info/SOURCES.txt
+rtpTTML.egg-info/dependency_links.txt
+rtpTTML.egg-info/requires.txt
+rtpTTML.egg-info/top_level.txt
+tests/test_orderedBuffer.py
+tests/test_ttmlReceiver.py
+tests/test_ttmlTransmitter.py
