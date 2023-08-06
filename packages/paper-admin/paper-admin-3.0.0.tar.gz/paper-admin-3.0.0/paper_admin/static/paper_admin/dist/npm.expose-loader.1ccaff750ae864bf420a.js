@@ -1,0 +1,2 @@
+(self.webpackChunkpaper_admin=self.webpackChunkpaper_admin||[]).push([[122],{7672:function(e,t,n){"use strict";e.exports=function(){if("object"==typeof globalThis)return globalThis;var e;try{e=this||new Function("return this")()}catch(e){if("object"==typeof window)return window;if("object"==typeof self)return self;if(void 0!==n.g)return n.g}return e}()}}]);
+//# sourceMappingURL=npm.expose-loader.1ccaff750ae864bf420a.js.map
