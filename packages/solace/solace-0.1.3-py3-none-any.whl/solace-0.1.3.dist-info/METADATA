@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: solace
+Version: 0.1.3
+Summary: A modern microframework for building REST APIs in Python
+Author: Dan Sikes
+Author-email: dansikes7@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Werkzeug (>=2.0.0,<3.0.0)
+Requires-Dist: munch (>=2.5.0,<3.0.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)
