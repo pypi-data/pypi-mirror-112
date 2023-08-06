@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+FastAPIwee.egg-info/PKG-INFO
+FastAPIwee.egg-info/SOURCES.txt
+FastAPIwee.egg-info/dependency_links.txt
+FastAPIwee.egg-info/requires.txt
+FastAPIwee.egg-info/top_level.txt
+fastapiwee/__init__.py
+fastapiwee/pwpd.py
+fastapiwee/crud/__init__.py
+fastapiwee/crud/base.py
+fastapiwee/crud/exceptions.py
+fastapiwee/crud/views.py
+fastapiwee/crud/viewsets.py
+fastapiwee/tests/__init__.py
+fastapiwee/tests/test_pwpd.py
