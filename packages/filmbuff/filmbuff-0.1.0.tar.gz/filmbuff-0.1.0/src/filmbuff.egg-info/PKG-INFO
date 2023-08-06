@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: filmbuff
+Version: 0.1.0
+Summary: A GUI application for creating and managing local film information databases.
+Home-page: https://gitlab.com/emerac/filmbuff
+Author: emerac
+Author-email: 
+License: GPLv3
+Keywords: python,GUI,film,films,movie,movies,information,database,databases,front-end,front-ends,sqlite
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# filmbuff (WIP)
+
+## About
+
+filmbuff is a GUI application used to create a local database of information
+about films in your collection.
+
+Typical database operations are present such as: creating entries (manually
+or automatically using an outside source), querying entries, modifying entries,
+and deleting entries.
+
+After your database is complete, the information contained in the database can
+be exported to a format useable with spreadsheet programs to make a printable
+directory.
+
+## How to Get Started
+
+### Compatibility
+
+TODO
+
+### Installation
+
+TODO
+
+### Usage
+
+TODO
+
+## Contributing
+
+Please report any bugs to the
+[GitLab issue tracker](https://gitlab.com/emerac/filmbuff/-/issues).
+See [CONTRIBUTING](CONTRIBUTING.md) for more details.
+
+## Credits
+
+TODO
+
+## License
+
+This program is free software and is licensed under the GNU General
+Public License. For the full license text, view the [LICENSE](LICENSE)
+file.
+
+Copyright © 2021 emerac
+
+

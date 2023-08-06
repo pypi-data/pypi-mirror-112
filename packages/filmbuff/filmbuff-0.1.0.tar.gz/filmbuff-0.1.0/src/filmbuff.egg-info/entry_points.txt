@@ -1,0 +1,3 @@
+[console_scripts]
+filmbuff = filmbuff.__main__:main
+

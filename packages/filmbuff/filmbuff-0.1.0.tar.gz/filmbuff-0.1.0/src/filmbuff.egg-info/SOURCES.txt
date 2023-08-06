@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/filmbuff/__init__.py
+src/filmbuff/__main__.py
+src/filmbuff/arguments.py
+src/filmbuff/extdata.py
+src/filmbuff/interface.py
+src/filmbuff/metadata.py
+src/filmbuff/tablequery.py
+src/filmbuff.egg-info/PKG-INFO
+src/filmbuff.egg-info/SOURCES.txt
+src/filmbuff.egg-info/dependency_links.txt
+src/filmbuff.egg-info/entry_points.txt
+src/filmbuff.egg-info/requires.txt
+src/filmbuff.egg-info/top_level.txt
