@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/opensignals/__about__.py
+src/opensignals/__init__.py
+src/opensignals/__main__.py
+src/opensignals/features.py
+src/opensignals.egg-info/PKG-INFO
+src/opensignals.egg-info/SOURCES.txt
+src/opensignals.egg-info/dependency_links.txt
+src/opensignals.egg-info/entry_points.txt
+src/opensignals.egg-info/requires.txt
+src/opensignals.egg-info/top_level.txt
+src/opensignals.egg-info/zip-safe
+src/opensignals/data/__init__.py
+src/opensignals/data/yahoo.py
