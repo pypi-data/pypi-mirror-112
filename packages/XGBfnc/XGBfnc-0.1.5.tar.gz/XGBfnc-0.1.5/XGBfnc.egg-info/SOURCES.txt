@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+setup.py
+XGBfnc.egg-info/PKG-INFO
+XGBfnc.egg-info/SOURCES.txt
+XGBfnc.egg-info/dependency_links.txt
+XGBfnc.egg-info/requires.txt
+XGBfnc.egg-info/top_level.txt
+test/test_big.py
+test/test_small.py
+xgbfnc/__init__.py
+xgbfnc/data.py
+xgbfnc/plots.py
+xgbfnc/xgbfnc.py
