@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: decorata
+Version: 0.0.1a4
+Summary: Convenient dataset maker
+Home-page: https://github.com/jinoan/decorata.git
+Author: jinoan
+Author-email: jinoan89@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Decorata
+[![PyPI version](https://badge.fury.io/py/decorata.svg)](https://badge.fury.io/py/decorata)
+
+데코레이타(decorata)는 데이터를 쉽게 전처리 할 수 있는 high-level API library입니다.
+
+
+
+## Usage
+
+### Install
+
+```shell
+$ pip install decorata
+```
+
+
+
+### Basic Usage
+
+1. Base dataset을 선택합니다. Pytorch 기반 데이터셋을 만들려면 `TorchBaseDataset`을 사용합니다. Tensorflow 기반 데이터셋을 만들려면 `TFBaseDataset`을 사용합니다.
+
+   ```python
+   import decorata.data as D
+   
+   dataset = D.TorchBaseDataset(images, labels, classes)
+   ```
+
+2. `decorata.data` 안의 모듈을 이용하여 학습 전 데이터를 처리합니다.
+
+   ```python
+   dataset = D.LoadImages(dataset)
+   dataset = D.ResizeImages(dataset, (256, 256))
+   dataset = D.OneHotLabels(dataset)
+   ```
+
+3. 데이터 로더를 생성하여 학습에 사용합니다.
+
+   ```python
+   from torch.utils.data import DataLoader
+   
+   data_loader = DataLoader(
+       dataset,
+       batch_size = 16,
+       shuffle = False,
+       num_workers = 4
+   )
+   ```
+
+
+
+### Augmentations
+
+Augmentation은 [Albumentations](https://github.com/albumentations-team/albumentations) 라이브러리를 이용하도록 설계했습니다.
+
+`decorata.data.Augmentations`의 인자로 base dataset에서 파생된 인스턴스와 Albumentations 인스턴스를 받습니다.
+
+`decorata.augmentations`에 Albumentations와 함께 사용할 수 있는 모듈을 추가하고 있습니다.
+
+```python
+import albumentations as A
+import decorata.data as D
+import decorata.augmentations as DA
+
+augmentations = A.Compose([
+        A.RandomRotate90(p=1),
+        A.GridDistortion(p=0.8),
+        A.GaussNoise(p=0.75),
+        DA.CutMix(dataset, p=0.8),
+])
+dataset = D.Augmentations(dataset, augmentations)
+```
+
+
+
+### Transforms
+
+`decorata.data.Transforms`를 이용하여 Pytorch의 Transforms를 적용할 수 있습니다.
+
+Augmentation과 동일하게 base dataset에서 파생된 인스턴스와 Albumentations 인스턴스를 인자로 받습니다.
+
+`decorata.transforms`에 Transforms와 함께 사용할 수 있는 모듈을 추가하고 있습니다.
+
+```python
+from torchvision.transforms as T
+import decorata.data as D
+import decorata.transforms as DT
+
+transforms = T.Compose([
+    DT.ToTorchTensor(),
+    DT.TorchNormalize(from_image=True)
+])
+dataset = D.Transforms(dataset, transforms)
+```
+
+
+
