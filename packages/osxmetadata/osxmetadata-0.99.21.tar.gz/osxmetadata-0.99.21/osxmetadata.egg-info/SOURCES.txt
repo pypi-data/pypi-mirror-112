@@ -1,0 +1,22 @@
+COPYING.md
+LICENSE
+README.md
+setup.py
+osxmetadata/__init__.py
+osxmetadata/__main__.py
+osxmetadata/_version.py
+osxmetadata/attributes.py
+osxmetadata/backup.py
+osxmetadata/classes.py
+osxmetadata/constants.py
+osxmetadata/datetime_utils.py
+osxmetadata/debug.py
+osxmetadata/findertags.py
+osxmetadata/osxmetadata.py
+osxmetadata.egg-info/PKG-INFO
+osxmetadata.egg-info/PKG-INFO (Rhet’s MacBook Pro's conflicted copy 2020-09-09)
+osxmetadata.egg-info/SOURCES.txt
+osxmetadata.egg-info/dependency_links.txt
+osxmetadata.egg-info/entry_points.txt
+osxmetadata.egg-info/requires.txt
+osxmetadata.egg-info/top_level.txt
