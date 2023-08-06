@@ -1,0 +1,17 @@
+sample/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+sample/rest_ig.py,sha256=ezgh-RE1oppy28ml74RPDf4ewqFPOMrplbfg6picWLg,2602
+sample/stream_ig.py,sha256=a6ZuBG080vk-kAW0bHVt970Y2iBk1NXmSjRjtSNaXOY,2315
+sample/stream_stock_list_demo.py,sha256=GVE0Ya3kXP5XI-XrEe-PZdDmtA-Ebt7iWGjaIR-8e3w,2576
+trading_ig/__init__.py,sha256=IE3rcY8t4FtpUeD8plAHYnFxqs6E_1dVHdYWc_J1Sc8,743
+trading_ig/config.py,sha256=Db1IwSFLAPUcJf1kfYJGbN-wIXGKbuL_h4RPiI82lL0,1350
+trading_ig/lightstreamer.py,sha256=xOb8UxAhrsKeQx3AHGmQkuLFrKzngzXIifvz6Lu0qnQ,16450
+trading_ig/rest.py,sha256=0hOE_9Jg2X2xLp2fd0UyEqowK7VCJpePM5eVOV7kfa8,62432
+trading_ig/stream.py,sha256=jZ3bkLyAU3OqCI0b4KMXtzrfJnAVSdruy_69IJVXBQg,1923
+trading_ig/utils.py,sha256=mZ32Jzh3qCXDK_Zj_C2FxcbOO18A8mfBETpvLmAtVIs,3212
+trading_ig/version.py,sha256=nR2nafvlSIw3AUw-E56hGrXDJr-AAc67fsNNAZQr0Cs,300
+trading_ig-0.0.10.dist-info/LICENSE,sha256=T4zYDtyi5UlKVDFBLMR-fvDRuKWT_VwIWThyvg5ksys,1505
+trading_ig-0.0.10.dist-info/METADATA,sha256=S_WcYym4W-ceipy5TS3162sTP_dFXP5nqrHzQ3l4RR0,4448
+trading_ig-0.0.10.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+trading_ig-0.0.10.dist-info/entry_points.txt,sha256=lexK7RzT1xMyCvalZCkEXUV_pXjWKxyNU2NGRfSYmuo,40
+trading_ig-0.0.10.dist-info/top_level.txt,sha256=PgHOupZZZol4emQdgIfYpjzo-z3GMwepXCd3XZV7DWk,18
+trading_ig-0.0.10.dist-info/RECORD,,
