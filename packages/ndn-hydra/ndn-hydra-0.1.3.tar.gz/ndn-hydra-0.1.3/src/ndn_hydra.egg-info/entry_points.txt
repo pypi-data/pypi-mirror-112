@@ -1,0 +1,4 @@
+[console_scripts]
+ndn-hydra-client = src.ndn.hydra.client.main:main
+ndn-hydra-repo = src.ndn.hydra.repo.main.main:main
+
