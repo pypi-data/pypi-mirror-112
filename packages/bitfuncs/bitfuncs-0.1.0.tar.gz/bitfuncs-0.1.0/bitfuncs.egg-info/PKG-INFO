@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: bitfuncs
+Version: 0.1.0
+Summary: Some async funcs for trading.
+Home-page: https://gitlab.com/toopy/bitfuncs
+Author: Florent Pigout
+Author-email: florent@toopy.org
+License: MIT
+Keywords: async,functions,trading
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Provides-Extra: backtest
+Provides-Extra: lint
+Provides-Extra: plot
+Provides-Extra: release
+Provides-Extra: test
+Provides-Extra: zipline
+License-File: LICENSE
+
+# BitFuncs
+
+Some async funcs for trading.
+
+## Install
+
+```bash
+(pyenv)$ pip install bitfuncs
+```
+
+## Migrate
+
+```bash
+(pyenv)$ ASYNCSQL_SQL_DIR=bitfuncs/sql python -m asyncsql.migrate schema_0.1.0
+```
+
+## Run Backtest
+
+```bash
+(pyenv)$ chamallow examples/crypto_backtest.yml
+```
+
+## Get Some Results
+
+Best found params and position status as json:
+
+```bash
+$ cat var/BTC.json
+{
+  "macd_fastperiod": 16.0,
+  "macd_slowperiod": 30.0,
+  "macd_signalperiod": 11.0,
+  "position": "none"
+}
+```
+
+## Backtesting html page
+
+```bash
+$ xdg-open var/BTC.html
+.
+```
+
+## License
+
+MIT
+
+
