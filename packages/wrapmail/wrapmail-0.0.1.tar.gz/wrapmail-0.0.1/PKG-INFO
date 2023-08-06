@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: wrapmail
+Version: 0.0.1
+Summary: A package that helps to send emails through Python utilizing an OOP logic
+Home-page: UNKNOWN
+Author: Alperen Yıldız
+Author-email: <alperenyildiz@sabanciuniv.edu
+License: UNKNOWN
+Keywords: python,mail,gmail,api,smtp
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# Easymail
+
+
