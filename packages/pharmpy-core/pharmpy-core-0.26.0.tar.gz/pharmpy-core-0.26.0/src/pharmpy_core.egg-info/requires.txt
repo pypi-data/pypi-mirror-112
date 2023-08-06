@@ -1,0 +1,16 @@
+lark-parser
+sympy>=1.8
+symengine
+pandas>=1.0
+numexpr
+altair
+sphinx
+csscompressor
+beautifulsoup4
+lxml
+numpy>=1.17
+scipy
+dask
+dask[distributed]
+networkx
+appdirs
