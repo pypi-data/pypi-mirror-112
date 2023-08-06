@@ -1,0 +1,6 @@
+[console_scripts]
+jiten = jiten.cli:main
+
+[gui_scripts]
+jiten-gui = jiten.cli:gui_main [gui]
+

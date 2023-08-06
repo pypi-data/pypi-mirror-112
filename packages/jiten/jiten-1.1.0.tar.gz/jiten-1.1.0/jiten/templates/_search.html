@@ -1,0 +1,211 @@
+{# <!--
+
+  File        : templates/_search.html
+  Maintainer  : Felix C. Stegerman <flx@obfusk.net>
+  Date        : 2021-02-18
+
+  Copyright   : Copyright (C) 2021  Felix C. Stegerman
+  Version     : v0.4.0
+  License     : AGPLv3+
+
+--> #}
+{% from "_macros.html" import search, collapsebtn with context %}
+{% macro jmdict(langs, query = "", af = True) %}
+  {% call search("/jmdict", "Query (Regex)", "Search JMDict",
+                 "jmdict-query", "query", query,
+                 "regex to match japanese/english/etc.", af,
+                 collapse = "jmdict-collapse", btn = "info") %}
+    <div class="form-group mb-0 d-inline">
+      <fieldset class="d-inline border p-2 pl-3">
+        <legend>match</legend>
+        <div class="nowrap">
+          <div class="form-check form-check-inline">
+            <input type="checkbox" data-command="+w"
+              class="form-check-input clear-input-checked"
+              id="jmdict-word" name="word" value="yes"
+              {% if not query or query.startswith("+w") %}checked{% endif %} />
+            <label class="form-check-label" for="jmdict-word"
+              title="\b...\b">word</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="checkbox" data-command="+1"
+              class="form-check-input clear-input-unchecked"
+              id="jmdict-1stword" name="1stword" value="yes"
+              {% if query.startswith("+1") %}checked{% endif %} />
+            <label class="form-check-label" for="jmdict-1stword"
+              title="^...\b">1st word</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="checkbox" data-command="+="
+              class="form-check-input clear-input-unchecked"
+              id="jmdict-exact" name="exact" value="yes"
+              {% if query.startswith("+=") %}checked{% endif %} />
+            <label class="form-check-label" for="jmdict-exact"
+              title="^...$">exact</label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="collapse show form-group mb-0" id="jmdict-collapse">
+      <fieldset class="d-inline border p-2 pl-3">
+        <legend>select</legend>
+        <div class="nowrap">
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input"
+              id="jmdict-noun" name="noun" value="yes"
+              {% if request.args.get("noun") == "yes" %}checked{% endif %} />
+            <label class="form-check-label" for="jmdict-noun"
+              title="select nouns">noun</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input"
+              id="jmdict-verb" name="verb" value="yes"
+              {% if request.args.get("verb") == "yes" %}checked{% endif %} />
+            <label class="form-check-label" for="jmdict-verb"
+              title="select verbs">verb</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input"
+              id="jmdict-prio" name="prio" value="yes"
+              {% if request.args.get("prio") == "yes" %}checked{% endif %} />
+            <label class="form-check-label" for="jmdict-prio"
+              title="select priority entries">prio</label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="d-inline border p-2 px-3">
+        <legend>jlpt level(s)</legend>
+        <div class="form-inline d-flex flex-nowrap">
+          {% set jlpt = "-".join(request.args.getlist("jlpt")) %}
+          {% set jlpt = jlpt.split("-")|map('int')|select|list %}
+          {% for x in (jlpt|min, jlpt|max) %}
+            <select class="form-control form-control-sm" name="jlpt">
+              <option value="">&nbsp;</option>
+              {% for n in range(1, 5+1) %}
+                <option value="{{ n }}"
+                  {% if n == x %}selected{% endif %}>N{{ n }}</option>
+              {% endfor %}
+            </select>
+            {% if loop.first %}-{% endif %}
+          {% endfor %}
+        </div>
+      </fieldset>
+      <fieldset class="d-inline border p-2 pl-3">
+        <legend>choose languages</legend>
+        {% for l in J.LANGS %}
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input"
+              id="jmdict-{{ l }}" name="lang" value="{{ l }}"
+              {% if l in langs %}checked{% endif %} />
+            <label class="form-check-label"
+              for="jmdict-{{ l }}">{{ l }}</label>
+          </div>
+        {% endfor %}
+      </fieldset>
+      <br/><br/>
+      For a random entry use
+      <a class="query-example"
+        href="/jmdict?query=%2Brandom"><kbd>+random</kbd></a>.
+    </div>
+  {% endcall %}
+{% endmacro %}
+{% macro kanji(query = "", af = True) %}
+  {% call search("/kanji", "Query (Regex)", "Search Kanji",
+                 "kanji-query", "query", query,
+                 "kanji or regex to match kana/english",
+                 af, collapse = "kanji-collapse") %}
+    <div class="form-group mb-0 d-inline">
+      <fieldset class="d-inline border p-2 pl-3">
+        <legend>match</legend>
+        <div class="form-check form-check-inline">
+          <input type="checkbox" data-command="+w"
+            class="form-check-input clear-input-unchecked"
+            id="kanji-word" name="word" value="yes"
+            {% if query.startswith("+w") %}checked{% endif %} />
+          <label class="form-check-label" for="kanji-word"
+            title="\b...\b">word</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="checkbox" data-command="+="
+            class="form-check-input clear-input-unchecked"
+            id="kanji-exact" name="exact" value="yes"
+            {% if query.startswith("+=") %}checked{% endif %} />
+          <label class="form-check-label" for="kanji-exact"
+            title="^...$">exact</label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="collapse show form-group mb-0" id="kanji-collapse">
+      <br/>
+      <span class="nowrap">
+        To search by
+        <a href="https://en.wikipedia.org/wiki/Kodansha_Kanji_Learner%27s_Dictionary#SKIP"
+          target="_blank" rel="noopener">SKIP code</a>
+        use e.g.
+        <a class="query-example" href="/kanji?query=%2Bs+2-3-3"
+          ><span class="nowrap"><kbd>+s 2-3-3</kbd></span></a>.
+      </span>
+      <span class="nowrap">
+        To search by
+        <span title="select radicals" data-toggle="tooltip" data-placement="top">
+          <a class="btn btn-outline-success btn-sm py-0"
+              href="#" data-toggle="modal" data-target="#radical-modal">
+            radical
+          </a>
+        </span>
+        use e.g.
+        <a class="query-example" href="/kanji?query=%2Br+犭艹田"
+          ><span class="nowrap"><kbd>+r <span class="jap">犭艹田</span></kbd></span></a>.
+      </span>
+      <span class="nowrap">
+        For a random kanji use
+        <a class="query-example"
+          href="/kanji?query=%2Brandom"><kbd>+random</kbd></a>.
+      </span>
+    </div>
+  {% endcall %}
+{% endmacro %}
+{% macro sentences(query = "", af = True) %}
+  {% call search("/sentences", "Query", "Search Sentences",
+                 "sentences-query", "query", query,
+                 "substring to match japanese/english/etc.",
+                 af, collapse = "sentences-collapse") %}
+    <div class="form-group mb-0 d-inline">
+      <fieldset class="d-inline border p-2 pl-3">
+        <legend>select</legend>
+        <div class="form-check form-check-inline">
+          <input type="checkbox" class="form-check-input"
+            id="sentences-audio" name="audio" value="yes"
+            {% if request.args.get("audio") == "yes" %}checked{% endif %} />
+          <label class="form-check-label" for="sentences-audio"
+            title="with audio">audio</label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="collapse show form-group mb-0" id="sentences-collapse">
+      <fieldset class="d-inline border p-2 pl-3">
+        <legend>filter languages</legend>
+        {% for l in S.LANGS %}
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input"
+              id="sentences-{{ l }}" name="lang" value="{{ l }}"
+              {% if l in request.args.getlist("lang") %}checked{% endif %} />
+            <label class="form-check-label"
+              for="sentences-{{ l }}">{{ l }}</label>
+          </div>
+        {% endfor %}
+      </fieldset>
+      <br/><br/>
+      For random sentences use
+      <a class="query-example"
+        href="/sentences?query=%2Brandom"><kbd>+random</kbd></a>.
+    </div>
+  {% endcall %}
+{% endmacro %}
+{% macro stroke(query = "", af = True) %}
+  {% call search("/stroke", "Text", "筆順を示す",
+                 "stroke-query", "query", query,
+                 "漢字か仮名を入力", af,
+                 btn = "primary jap", mb = 0) %}
+  {% endcall %}
+{% endmacro %}

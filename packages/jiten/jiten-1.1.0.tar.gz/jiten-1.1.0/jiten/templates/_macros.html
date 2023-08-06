@@ -1,0 +1,198 @@
+{# <!--
+
+  File        : templates/_macros.html
+  Maintainer  : Felix C. Stegerman <flx@obfusk.net>
+  Date        : 2021-05-14
+
+  Copyright   : Copyright (C) 2021  Felix C. Stegerman
+  Version     : v1.0.0
+  License     : AGPLv3+
+
+--> #}
+{% macro copybtn() %}
+  <button type="button" style="display: none;" title="copy"
+      data-toggle="tooltip" data-placement="top"
+      class="copy-input input-group-text btn btn-dark">
+    <!--
+      Source: https://fonts.gstatic.com/s/i/materialiconssharp/content_copy/v15/24px.svg
+      License: http://www.apache.org/licenses/LICENSE-2.0.txt
+    -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+        viewBox="0 0 24 24" focusable="false">
+      <path d="M0 0h24v24H0V0z" fill="none"/>
+      <path d="M16 1H2v16h2V3h12V1zm5 4H6v18h15V5zm-2 16H8V7h11v14z"
+        fill="currentColor"/>
+    </svg>
+  </button>
+{% endmacro %}
+{% macro input(id, name, value, ph, af = True, copy = False, mb = 2) %}
+  <div class="input-group mr-sm-2 mb-{{ mb }} flex-grow-1">
+    <div class="input-group-prepend">
+      <button type="button" title="{{ "" if nor2h else "a→" }}あ↔ア"
+          data-convert-mode="k2h" data-convert-input="{{ id }}"
+          data-r2h="{{ "no" if nor2h else "yes" }}"
+          data-toggle="tooltip" data-placement="top"
+          class="jap convert-kana input-group-text btn btn-dark disabled"
+        ></button>
+    </div>
+    <input type="text" class="jap form-control"
+      id="{{ id }}" name="{{ name }}" value="{{ value }}" required
+      placeholder="{{ ph }}" {% if af %}autofocus{% endif %} />
+    <div class="input-group-append">
+      {% if copy %}
+        {{ copybtn() }}
+      {% endif %}
+      <button type="button" title="clear"
+          data-toggle="tooltip" data-placement="top"
+          class="clear-input input-group-text btn btn-dark disabled">
+        <!--
+          Source: https://fonts.gstatic.com/s/i/materialiconssharp/close/v14/24px.svg
+          License: http://www.apache.org/licenses/LICENSE-2.0.txt
+        -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+            viewBox="2 2 20 20" focusable="false">
+          <path d="M0 0h24v24H0V0z" fill="none"/>
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+            fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script>
+    $(".convert-kana, .clear-input").removeClass("disabled")
+  </script>
+{% endmacro %}
+{% macro search(action, label, go, id, name, value, ph, af = True,
+                collapse = None, btn = "primary", mb = 2) %}
+  <div class="card">
+    <form class="search-form card-body" action="{{ action }}">
+      <div class="form-group form-inline justify-content-end mb-0">
+        <label class="sr-only" for="{{ id }}">{{ label }}</label>
+        {% set imb = mb or "sm-0 mb-2" %}{# TODO #}
+        {{ input(id, name, value, ph, af, mb = imb) }}
+        <div class="mb-{{ mb }}">
+          {% if id == "kanji-query" %}
+            <div class="d-inline-block mr-1" title="select radicals"
+                data-toggle="tooltip" data-placement="top">
+              <button type="button" class="jap btn btn-secondary"
+                data-toggle="modal" data-target="#radical-modal">部</button>
+            </div>
+          {%- endif -%}
+          {% if id != "stroke-query" %}
+            <div class="d-inline-block mr-2" title="draw kanji"
+                data-toggle="tooltip" data-placement="top">
+              <button type="button" class="jap btn btn-secondary"
+                data-toggle="modal" data-target="#kanjidraw-modal">筆</button>
+            </div>
+          {%- endif -%}
+          <div class="btn-group">
+            <button class="search-button btn btn-{{ btn }}"
+              data-text="{{ go }}">{{ go }}</button>
+            <button type="button" data-toggle="dropdown"
+                class="btn btn-{{ btn }} dropdown-toggle dropdown-toggle-split"
+                aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <h5 class="dropdown-header">Switch to</h5>
+              {% for x in SEARCH %}
+                {% if go != x[1] %}
+                  <a class="search-alt dropdown-item {{ "jap" if M.isjap(x[1]) else "" }}"
+                    data-route="{{ x[0] }}"
+                    href="/{{ x[0] }}">{{ x[1] }}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <script>
+            $("form.search-form .dropdown-toggle").addClass("disabled")
+            $(".search-button").addClass("disabled").text("Loading...")
+            $(".search-form input[type=text]").each((i, e) =>
+              e.selectionStart = e.selectionEnd = $(e).val().length)
+          </script>
+        </div>
+      </div>
+      {% if collapse %}
+        <div class="float-right mt-1 ml-1">
+          {{ collapsebtn(collapse) }}
+        </div>
+      {% endif %}
+      {{ caller() }}
+      {% if collapse and query %}
+        <script>
+          // @license magnet:?xt=urn:btih:0b31508aeb0634b347b8270c7bee4d411b5d4109&dn=agpl-3.0.txt AGPLv3+
+          if (window.innerWidth <= 576) {
+            $("a[data-target='#{{ collapse }}']").attr("aria-expanded", "false")
+            $("#{{ collapse }}").removeClass("show")
+          }
+          // @license-end
+        </script>
+      {% endif %}
+    </form>
+  </div>
+{% endmacro %}
+{% macro topbtn() %}
+  <a href="#" title="go to top"
+      data-toggle="tooltip" data-placement="top"
+      class="btn btn-sm btn-outline-primary">
+    <!--
+      Source: https://fonts.gstatic.com/s/i/materialiconssharp/vertical_align_top/v10/24px.svg
+      License: http://www.apache.org/licenses/LICENSE-2.0.txt
+    -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+        viewBox="0 0 24 24" focusable="false">
+      <path d="M8 11h3v10h2V11h3l-4-4-4 4zM4 3v2h16V3H4z"
+        fill="currentColor"/>
+    </svg>
+  </a>
+{% endmacro %}
+{% macro collapseopen() %}
+  <!--
+    Source: https://fonts.gstatic.com/s/i/materialiconssharp/expand_more/v12/24px.svg
+    License: http://www.apache.org/licenses/LICENSE-2.0.txt
+  -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon collapse-open"
+      viewBox="4 4 16 16" focusable="false">
+    <path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/>
+    <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"
+      fill="currentColor"/>
+  </svg>
+{% endmacro %}
+{% macro collapseclose() %}
+  <!--
+    Source: https://fonts.gstatic.com/s/i/materialiconssharp/expand_less/v10/24px.svg
+    License: http://www.apache.org/licenses/LICENSE-2.0.txt
+  -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon collapse-close"
+      viewBox="4 4 16 16" focusable="false">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z"
+      fill="currentColor"/>
+  </svg>
+{% endmacro %}
+{% macro collapsebtn(target, info = None) %}
+  <div class="d-inline-block" title="collapse/expand"
+      data-toggle="tooltip" data-placement="top">
+    <a class="btn btn-sm btn-outline-primary collapsebtn disabled"
+        href="#{{target }}"
+        data-toggle="collapse" data-target="#{{ target }}"
+        aria-expanded="true" aria-controls="{{ target }}">
+      {{ collapseopen() }}
+      {{ collapseclose() }}
+      {% if info %}
+        <span class="collapse-open">{{ info }}</span>
+      {% endif %}
+    </a>
+  </div>
+{% endmacro %}
+{% macro collapseallbtns() %}
+  <a class="disabled btn btn-sm btn-outline-primary" href="#"
+    id="expand-all">{{ collapseopen() }} Expand All</a>
+  <a class="disabled btn btn-sm btn-outline-primary" href="#"
+    id="collapse-all">{{ collapseclose() }} Collapse All</a>
+{% endmacro %}
+{% macro toggleromajibtn() %}
+  <a class="disabled btn btn-sm btn-outline-primary" href="#"
+    data-roma="{{ "show" if roma else "hide" }}"
+    id="toggle-romaji">Romaji</a>
+{% endmacro %}

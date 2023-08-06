@@ -1,0 +1,166 @@
+body {
+  padding-top: 4.5rem;
+  margin: 0.5rem;
+}
+
+.navbar {
+  padding: .5rem 1rem;
+}
+
+.navbar-nav-svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+a[aria-expanded=true] .collapse-open {
+  display: none;
+}
+
+a[aria-expanded=false] .collapse-close {
+  display: none;
+}
+
+#kanjidraw_canvas {
+  touch-action: none;
+}
+
+#toggle-romaji[data-roma="show"]::before {
+  content: "Hide ";
+}
+
+#toggle-romaji[data-roma="hide"]::before {
+  content: "Show ";
+}
+
+#jmdict-collapse.show, #sentences-collapse.show {
+  display: inline;
+}
+
+.collapse.show + .collapse-alt {
+  display: none;
+}
+
+.collapsing {
+  -webkit-transition: height 0.1s ease;
+  transition:         height 0.1s ease;
+}
+
+.ellipsis {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@font-face {
+  font-family: KanjiStrokeOrders;
+  src: url("/static/font/KanjiStrokeOrders_v4.003.ttf");
+}
+
+@font-face {
+  font-family: "__Noto Serif CJK JP";
+  src: url("/static/font/noto/NotoSerifJP-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "__Noto Sans CJK JP";
+  src: url("/static/font/noto/NotoSansJP-Regular.otf") format("opentype");
+}
+
+.stroke, .kanji {
+  font-family:
+    KanjiStrokeOrders,
+    "Noto Serif CJK JP", "__Noto Serif CJK JP",
+    "Noto Serif CJK SC", "Noto Serif CJK TC",
+    ipaexmincho, ipamincho, serif;
+}
+
+.jap, .kanji:hover, .tooltip {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial,
+    "Noto Sans CJK JP", "__Noto Sans CJK JP",
+    "Noto Sans CJK SC", "Noto Sans CJK TC",
+    ipaexgothic, ipagothic, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.jap:not(.sentence), .tooltip {
+  word-break: keep-all;
+}
+
+.convert-kana::before {
+  content: "あ";
+}
+
+.convert-kana[data-convert-mode="h2k"]::before {
+  content: "ア";
+}
+
+fieldset {
+  vertical-align: top;
+  min-height: 5em;
+}
+
+legend {
+  font-size: 1em;
+  margin: 0;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  width: auto;
+}
+
+input[type=number] {
+  width: 5em;
+}
+
+.selbtn {
+  -webkit-user-select: unset !important;
+  -moz-user-select: unset !important;
+  -ms-user-select: unset !important;
+  user-select: unset !important;
+}
+
+.fakebtn, .notbtn {
+  cursor: unset !important;
+}
+
+.fakebtn:hover, .fakebtn:active {
+  color: inherit !important;
+  background-color: inherit !important;
+}
+
+#radical-modal .square-btn {
+  display: inline-block;
+  width: 1.9rem; /* TODO */
+}
+
+#radicals > .btn {
+  border-width: 5px;
+}
+
+.radical.chosen {
+  border-color: #c87f0a;
+}
+
+.btn-link:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+code, .nowrap {
+  display: inline-block;
+}
+
+iframe {
+  height: 20em;
+}
+
+footer {
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+Flask
+click>=6.0
+kanjidraw>=0.2.1
+
+[gui]
+pywebview>=3.3.5

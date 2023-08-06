@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <!--
+
+    File        : templates/sentences.html
+    Maintainer  : Felix C. Stegerman <flx@obfusk.net>
+    Date        : 2021-06-27
+
+    Copyright   : Copyright (C) 2021  Felix C. Stegerman
+    Version     : v1.0.0
+    License     : AGPLv3+
+
+  -->
+  <head>
+    {% include "_meta.html" %}
+    <style>
+      .play-audio svg {
+        height: 1.9rem; width: 1.9rem;
+      }
+      h6.jap {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    {% from "_macros.html" import topbtn with context %}
+    {% from "_search.html" import sentences with context %}
+    {% include "_nav.html" %}
+    <div class="container">
+      {{ sentences(query) }}
+      {% if query %}
+        {% for e in results %}
+          <br/>
+          <div class="card">
+            <div class="card-header">
+              <span class="float-right">{{ topbtn() }}</span>
+              <h6 class="card-title entry jap sentence mb-1"
+                  title="japanese">
+                {% for c in e.jap -%}
+                  {%- if M.isideo(c) -%}
+                    {%- set rm = krm(c) -%}
+                    {%- if rm -%}
+                      <a class="text-reset"
+                        title="{{ "; ".join(rm[1]) }} 【{{ "、".join(rm[0]) }}】"
+                        data-toggle="tooltip" data-placement="top"
+                        href="/kanji?query={{ c }}">{{ c }}</a>
+                    {%- else -%}
+                      {{ c }}
+                    {%- endif -%}
+                  {%- else -%}
+                    {{ c }}
+                  {%- endif -%}
+                {%- endfor %}
+              </h6>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                {% for lang in S.LANGSFULL %}
+                  <li class="list-group-item p-2 d-flex"
+                      title="{{ lang }}">
+                    {% if e|attr(lang[:3]) %}
+                      {{ e|attr(lang[:3]) }}
+                      <span class="ml-auto align-self-end">
+                        <small class="text-muted">
+                          {{ lang[:3] }}
+                        </small>
+                      </span>
+                    {% else %}
+                      <span class="text-muted">no {{ lang }}</span>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+              <ul class="list-group pt-1">
+                <li class="list-group-item p-2 d-flex align-items-center"
+                    title="miscellaneous">
+                  <span>
+                    <span class="nowrap">
+                      <a class="badge badge-primary"
+                          href="/sentences?query={{ ("+#" + e.id|string)|urlencode }}">
+                        #{{ e.id }}
+                      </a>
+                    </span>
+                    <span class="nowrap">
+                      »
+                      <a href="https://tatoeba.org/eng/sentences/show/{{ e.id }}"
+                        target="_blank" rel="noopener">tatoeba</a>
+                    </span>
+                    {% if e.audio %}
+                      <span class="nowrap">
+                        » audio by {{ e.audio.split(" (")[0] }}
+                      </span>
+                    {% endif %}
+                    <span class="nowrap">
+                      »
+                      <span class="badge badge-secondary">
+                        {{ loop.index }}
+                      </span>
+                    </span>
+                  </span>
+                  {% if e.audio %}
+                    {%- set ha = S.have_audio(e.id) -%}
+                    &nbsp;
+                    <span class="ml-auto">
+                      <a class="play-audio btn btn-primary btn-lg px-1 py-1 {% if not ha %}disabled{% endif %}"
+                          title="Play Audio" data-toggle="tooltip" data-placement="top"
+                          href="/static/audio/{{ e.id }}.mp3">
+                        <!--
+                          Source: https://fonts.gstatic.com/s/i/materialicons/volume_up/v11/24px.svg
+                          License: http://www.apache.org/licenses/LICENSE-2.0.txt
+                        -->
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" focusable="false">
+                          <path d="M0 0h24v24H0z" fill="none"/>
+                          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
+                            fill="currentColor"/>
+                        </svg>
+                      </a>
+                    </span>
+                  {% endif %}
+                </li>
+              </ul>
+            </div>
+          </div>
+        {% else %}
+          <br/>
+          <div class="alert alert-{{ mode }} mb-0 text-center">
+            no results
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    {% include "_footer.html" %}
+  </body>
+</html>
