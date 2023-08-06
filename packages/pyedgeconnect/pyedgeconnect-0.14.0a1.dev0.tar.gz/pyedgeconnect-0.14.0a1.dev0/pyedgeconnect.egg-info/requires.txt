@@ -1,0 +1,9 @@
+requests
+
+[dev]
+black
+flake8
+flake8-rst-docstrings
+isort
+sphinx
+sphinx_rtd_theme
