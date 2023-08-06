@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: gladpy
+Version: 0.0.1
+Summary: GladPy is a small module in Python that is used to adding extensions for Python. It is also used for HTML as it generates HTML elements.
+Home-page: https://github.com/kareemsaf/gladpy
+Author: kareemPypi
+Author-email: s4830866@mkhg.moe.gov.sa
+License: UNKNOWN
+Project-URL: Bug Detector, https://github.com/kareemsaf/gladpy/issues
+Project-URL: Home, https://github.com/kareemsaf/gladpy
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+GladPy is a small module in Python that is used to adding extensions for Python. It is also used for HTML as it generates HTML elements.
+GladPy is also usable for creating variables. Instead of classes, it uses only functions. Thanks for using GladPy! Made by pypi.org user kareemPypi (v0.0.1).
+
