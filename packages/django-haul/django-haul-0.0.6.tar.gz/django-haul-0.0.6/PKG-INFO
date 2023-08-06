@@ -1,0 +1,56 @@
+Metadata-Version: 1.2
+Name: django-haul
+Version: 0.0.6
+Summary: Structured object import/export for Django ORM
+Home-page: https://github.com/elements-storage/haul
+Author: Eugene Pankov`
+Author-email: e.pankov@elements.tv
+License: MIT
+Description: ===========
+        Django-Haul
+        ===========
+        
+        
+        .. image:: https://img.shields.io/pypi/v/haul.svg
+                :target: https://pypi.python.org/pypi/haul
+        
+        .. image:: https://img.shields.io/travis/elements-storage/haul.svg
+                :target: https://travis-ci.com/elements-storage/haul
+        
+        .. image:: https://readthedocs.org/projects/haul/badge/?version=latest
+                :target: https://haul.readthedocs.io/en/latest/?version=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        Object import/export for Django
+        
+        
+        * Free software: MIT license
+        * Documentation: https://haul.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+Keywords: django,orm,export,import
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
