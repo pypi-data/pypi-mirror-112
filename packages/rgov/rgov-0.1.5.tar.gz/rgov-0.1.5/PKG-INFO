@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: rgov
+Version: 0.1.5
+Summary: Check if campsites are available on Recreation.gov
+Author: Jordan Sweet
+Author-email: jsbmgcontact@protonmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cleo (>=0.8.1,<0.9.0)
+Requires-Dist: fake-useragent (>=0.1.11,<0.2.0)
+Requires-Dist: python-daemon (>=2.3.0,<3.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
