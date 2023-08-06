@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyrulo-qt
+Version: 0.1.2
+Summary: Qt widgets to use runtime loading features from pyrulo package
+Home-page: https://github.com/mnicolas94/pyrulo-qt
+Author: Miguel Nicolás-Díaz
+Author-email: miguelcok27@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: propsettings-qt
+Requires-Dist: pyrulo
+Requires-Dist: PySide2
+
+# ***
+
