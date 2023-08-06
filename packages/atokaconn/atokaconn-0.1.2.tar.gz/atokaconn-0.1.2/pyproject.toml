@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "atokaconn"
+version = "0.1.2"
+description = "A package that facilitates connections to and data extractions from the ATOKA API service."
+authors = ["guglielmo <guglielmo@openpolis.it>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/openpolis/atokaconn/"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+requests = "^2.25.1"
+requests-toolbelt = "^0.9.1"
+Faker = "^8.10.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+factory-boy = "^3.2.0"
+flake8 = "^3.9.2"
+coverage = "^5.5"
+genbadge = {version = "^1.0.4", extras = ["all"]}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
