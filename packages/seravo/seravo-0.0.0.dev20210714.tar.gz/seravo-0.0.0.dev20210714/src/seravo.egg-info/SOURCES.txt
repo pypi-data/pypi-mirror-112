@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/seravo/__init__.py
+src/seravo.egg-info/PKG-INFO
+src/seravo.egg-info/SOURCES.txt
+src/seravo.egg-info/dependency_links.txt
+src/seravo.egg-info/requires.txt
+src/seravo.egg-info/top_level.txt
