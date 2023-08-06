@@ -1,0 +1,11 @@
+forte/huggingface/__init__.py,sha256=zgbC2roTyjEFMC9e2JI9YiqV1Sgq_K9kuPSf_UKR6KY,273
+forte/huggingface/bio_ner_predictor.py,sha256=ymcifFeFG1_HBX6DWdl0zLUt7dxhDsmV7i5Ip8E7ZnI,9872
+forte/huggingface/question_and_answering_multi.py,sha256=qnkrvXE3EiIPSEF78aGmT-abSlUc5iBlMmpHL_I6dYk,4976
+forte/huggingface/question_and_answering_single.py,sha256=PexOP1GrKlHT1w_18ggDHkJ6Qe8MwvYWd9aiXY6Cn-Q,5428
+forte/huggingface/token_classification.py,sha256=rxzKfJCQaw9Wi1TmHbvwI4rFdBGdSUWacm30JOJT0dc,9460
+forte/huggingface/transformers_processor.py,sha256=4Sg4Nbtgu5YL5H9GlOYHdgEDTamNX38roJYYIlZUHYM,2768
+forte/huggingface/zero_shot_classifier.py,sha256=5MxFggGbB1xoIYHydfT2O9ESibCiGr9BAHWtw6wAc3U,6630
+forte.huggingface-0.0.1.post2.dist-info/METADATA,sha256=pD1fveOLiBB5PL6nCJ656Zqr-ZWu5Jr_3aeghXYUYso,2810
+forte.huggingface-0.0.1.post2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+forte.huggingface-0.0.1.post2.dist-info/top_level.txt,sha256=DRf-L_eOrVlPdBGHBeoYCyIHm42P0QKwtETln1wpl20,6
+forte.huggingface-0.0.1.post2.dist-info/RECORD,,
