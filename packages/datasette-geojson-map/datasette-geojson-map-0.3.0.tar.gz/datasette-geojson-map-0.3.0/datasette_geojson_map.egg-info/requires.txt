@@ -1,0 +1,8 @@
+datasette
+datasette-geojson
+datasette-leaflet
+
+[test]
+pytest
+pytest-asyncio
+geojson-to-sqlite
