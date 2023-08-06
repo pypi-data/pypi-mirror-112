@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "batmouse"
+version = "0.1.0"
+description = "Python library for querying mouse battery levels."
+authors = ["Tarcísio Eduardo Moreira Crocomo <tarcisioe@pm.me>"]
+packages = [
+    { include = "batmouse" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+pytest-mock = "^3.6.1"
+typer = "^0.3.2"
+typing-extensions = "^3.10.0"
+
+[tool.black]
+skip_string_normalization = true
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
