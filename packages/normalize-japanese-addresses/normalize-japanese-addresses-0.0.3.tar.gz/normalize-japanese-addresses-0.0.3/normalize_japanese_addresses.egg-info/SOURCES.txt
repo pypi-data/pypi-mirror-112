@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+setup.py
+normalize_japanese_addresses/__init__.py
+normalize_japanese_addresses/normalize.py
+normalize_japanese_addresses.egg-info/PKG-INFO
+normalize_japanese_addresses.egg-info/SOURCES.txt
+normalize_japanese_addresses.egg-info/dependency_links.txt
+normalize_japanese_addresses.egg-info/requires.txt
+normalize_japanese_addresses.egg-info/top_level.txt
+normalize_japanese_addresses/library/__init__.py
+normalize_japanese_addresses/library/api.py
+normalize_japanese_addresses/library/japaneseNumerics.py
+normalize_japanese_addresses/library/patchAddr.py
+normalize_japanese_addresses/library/regex.py
+normalize_japanese_addresses/library/utils.py
