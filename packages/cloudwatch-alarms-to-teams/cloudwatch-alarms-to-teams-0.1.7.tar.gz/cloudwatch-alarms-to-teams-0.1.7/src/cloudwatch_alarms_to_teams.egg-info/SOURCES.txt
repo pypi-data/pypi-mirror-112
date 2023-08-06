@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cloudwatch_alarms_to_teams/__init__.py
+src/cloudwatch_alarms_to_teams/py.typed
+src/cloudwatch_alarms_to_teams.egg-info/PKG-INFO
+src/cloudwatch_alarms_to_teams.egg-info/SOURCES.txt
+src/cloudwatch_alarms_to_teams.egg-info/dependency_links.txt
+src/cloudwatch_alarms_to_teams.egg-info/requires.txt
+src/cloudwatch_alarms_to_teams.egg-info/top_level.txt
+src/cloudwatch_alarms_to_teams/_jsii/__init__.py
+src/cloudwatch_alarms_to_teams/_jsii/cloudwatch-alarms-to-teams@0.1.7.jsii.tgz
