@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: spn
+Version: 0.1.1
+Summary: A simple CLI for the Wayback Machine's Save Page Now (SPN) API
+Home-page: https://github.com/chrsclmn/spn
+Author: Chris Coleman
+Author-email: chris@chriscoleman.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: requests
+
+# spn
+
+A simple CLI for the Wayback Machine's Save Page Now (SPN) API.
+
+## Installation
+```bash
+pip install spn
+```
+
+## Usage
+```
+Usage: spn [OPTIONS] [URLS]...
+
+Options:
+  --access-key TEXT              [required]
+  --secret-key TEXT              [required]
+  --stdin
+  --verify
+  --capture-all
+  --capture-outlinks
+  --capture-screenshot
+  --delay-wb-availability
+  --force-get
+  --skip-first-archive
+  --if-not-archived-within TEXT
+  --outlinks-availability
+  --email-result
+  --js-behavior-timeout INTEGER
+  --capture-cookie TEXT
+  --target-username TEXT
+  --target-password TEXT
+  --help                         Show this message and exit.
+```
+
+## Example
+```bash
+export SPN_ACCESS_KEY=YOUR_ACCESS_KEY
+export SPN_SECRET_KEY=YOUR_SECRET_KEY
+
+spn https://your.site/page/1 https://your.site/page/2
+```
+
+## API Keys
+Get your API keys here: https://archive.org/account/s3.php
+
+## API Docs
+https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA/edit
+
+
