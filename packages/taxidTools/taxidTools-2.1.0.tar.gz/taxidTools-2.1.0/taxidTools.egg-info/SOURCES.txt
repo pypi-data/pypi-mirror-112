@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+taxidTools/Lineage.py
+taxidTools/Node.py
+taxidTools/Taxonomy.py
+taxidTools/__init__.py
+taxidTools/__version__.py
+taxidTools/utils.py
+taxidTools.egg-info/PKG-INFO
+taxidTools.egg-info/SOURCES.txt
+taxidTools.egg-info/dependency_links.txt
+taxidTools.egg-info/top_level.txt
