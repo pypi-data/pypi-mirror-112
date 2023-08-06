@@ -1,0 +1,12 @@
+glycebert/__init__.py,sha256=-6FzJtStSBDBgjzp_Cq1x1TgyzACwmwSR12CCJeZRow,284
+glycebert/classifier.py,sha256=mjganEf01NAmhoSuv-hswaUd0p5QxmqsYNjSPqUgfZw,727
+glycebert/fusion_embedding.py,sha256=t4mI_Y69roo8Vnn-4rEIRvK-pD--xYwAyuLFHhOqG20,3661
+glycebert/glyph_embedding.py,sha256=zwjPeolmQnXRdNBNgimxg2icHS_YiELFf5ys4yN2uhU,913
+glycebert/modeling_glycebert.py,sha256=9nPYVa_GXOeQB492xiUV_xwtCBeNVoEVNwowk9tPa6w,23916
+glycebert/pinyin_embedding.py,sha256=WTQlAoH4G2BvlAhBSKbKzoEE2qdYc0iZqxTI-AbMcZ4,2035
+glycebert/tokenization_glycebert_fast.py,sha256=whCbAWjhahwtBasQI9aoPbMN9ai4Xb--NCHYJlw4BaE,3963
+glycebert-0.0.3.dist-info/LICENSE,sha256=fy_0hZf32YM8Kq6cPU5tm3vfH7t8MSKZss-QWs__Foo,1087
+glycebert-0.0.3.dist-info/METADATA,sha256=ZmUDTN1Ub2pC3n96g7oE0cUFfCbpkvoUSBFfEGCmKjo,313
+glycebert-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+glycebert-0.0.3.dist-info/top_level.txt,sha256=4QFnhwZ3Y825Ow87WO-YEf-YTGLA998i-B64zR8-xls,10
+glycebert-0.0.3.dist-info/RECORD,,
