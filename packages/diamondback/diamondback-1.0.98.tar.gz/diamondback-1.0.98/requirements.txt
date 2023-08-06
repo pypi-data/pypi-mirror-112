@@ -1,0 +1,49 @@
+#   Description
+#
+#       Diamondback requirements.
+#
+#   License
+#
+#       BSD-3C. https://github.com/larryturner/diamondback/blob/master/license
+#
+#       © 2018 - 2021 Larry Turner, Schneider Electric Industries SAS. All rights reserved.
+#
+#   Author
+#
+#       Larry Turner, Schneider Electric, Analytics & AI, 2019-09-08.
+#
+#   Definition
+
+ipython >= 7.25.0
+
+ipywidgets >= 7.6.3
+
+jsonpickle >= 2.0.0
+
+jupyter >= 1.0.0
+
+loguru >= 0.5.3
+
+matplotlib >= 3.4.2
+
+nox >= 2021.6.12
+
+numpy >= 1.21.0
+
+pandas >= 1.2.5
+
+pillow >= 8.3.0
+
+pytest >= 6.2.4
+
+requests >= 2.25.1
+
+scipy >= 1.7.0
+
+setuptools >= 57.0.0
+
+sphinx >= 4.0.2
+
+sphinx-pydantic >= 0.1.1
+
+sphinx-rtd-theme >= 0.5.2
