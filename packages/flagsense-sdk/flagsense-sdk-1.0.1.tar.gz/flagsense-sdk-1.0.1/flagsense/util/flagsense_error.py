@@ -1,0 +1,2 @@
+class FlagsenseError(Exception):
+	pass
