@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+src/loginid/__init__.py
+src/loginid/loginid.py
+src/loginid/management.py
+src/loginid.egg-info/PKG-INFO
+src/loginid.egg-info/SOURCES.txt
+src/loginid.egg-info/dependency_links.txt
+src/loginid.egg-info/requires.txt
+src/loginid.egg-info/top_level.txt
+test/test.py
