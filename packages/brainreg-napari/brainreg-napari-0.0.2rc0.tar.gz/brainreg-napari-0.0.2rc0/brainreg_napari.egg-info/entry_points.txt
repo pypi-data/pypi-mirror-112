@@ -1,0 +1,3 @@
+[napari.plugin]
+brainreg-register = brainreg_napari.plugins
+

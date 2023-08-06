@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+brainreg_napari/__init__.py
+brainreg_napari/plugins.py
+brainreg_napari/register.py
+brainreg_napari/util.py
+brainreg_napari.egg-info/PKG-INFO
+brainreg_napari.egg-info/SOURCES.txt
+brainreg_napari.egg-info/dependency_links.txt
+brainreg_napari.egg-info/entry_points.txt
+brainreg_napari.egg-info/requires.txt
+brainreg_napari.egg-info/top_level.txt
