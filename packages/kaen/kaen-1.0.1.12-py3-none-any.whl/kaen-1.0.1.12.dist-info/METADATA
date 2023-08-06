@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: kaen
+Version: 1.0.1.12
+Summary: kaen is a friendly open source toolkit to help you train and deploy deep learning models in public clouds
+Home-page: https://github.com/CounterFactualAI/kaenai
+Author: CounterFactual.AI LLC
+Author-email: kaen@counterfactual.ai
+License: GPL v3.0
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: torch
+Provides-Extra: all
+Requires-Dist: optuna ; extra == 'all'
+Requires-Dist: sklearn ; extra == 'all'
+Requires-Dist: plotly ; extra == 'all'
+Requires-Dist: kaleido ; extra == 'all'
+Requires-Dist: fsspec ; extra == 'all'
+Requires-Dist: pandas ; extra == 'all'
+Requires-Dist: s3fs ; extra == 'all'
+Requires-Dist: numpy ; extra == 'all'
+Requires-Dist: scipy ; extra == 'all'
+Provides-Extra: latest
+Provides-Extra: optuna
+Requires-Dist: optuna ; extra == 'optuna'
+Requires-Dist: sklearn ; extra == 'optuna'
+Requires-Dist: plotly ; extra == 'optuna'
+Requires-Dist: kaleido ; extra == 'optuna'
+Provides-Extra: osds
+Requires-Dist: fsspec ; extra == 'osds'
+Requires-Dist: pandas ; extra == 'osds'
+Requires-Dist: s3fs ; extra == 'osds'
+Provides-Extra: spark
+Requires-Dist: numpy ; extra == 'spark'
+Requires-Dist: pandas ; extra == 'spark'
+Requires-Dist: scipy ; extra == 'spark'
+Provides-Extra: stable
+
+UNKNOWN
+
+
