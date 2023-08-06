@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: sortdir
+Version: 0.2.1
+Summary: Sorting directory files made easy.
+Home-page: https://github.com/yevhenshymotiuk/sortdir
+License: MIT
+Author: Yevhen Shymotiuk
+Author-email: yevhenshymotiuk@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: colorama (>=0.4.4,<0.5.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: watchdog (>=2.1.2,<3.0.0)
+Project-URL: Repository, https://github.com/yevhenshymotiuk/sortdir
+Description-Content-Type: text/plain
+
+#+TITLE: sortdir
+
+#+BEGIN_QUOTE
+Tool to keep your directories clean
+#+END_QUOTE
+
+* Table of contents :TOC_2:
+- [[#installation][Installation]]
+- [[#usage][Usage]]
+- [[#configuration][Configuration]]
+  - [[#example][Example]]
+
+* Installation
+#+BEGIN_SRC shell
+pip install sortdir
+#+END_SRC
+
+* Usage
+When you run the following command the tool will at first perform initial sorting and then start a server which will be watching for new files and moving them to their destination subdirectories defined in your config
+
+#+BEGIN_SRC shell
+sortdir
+#+END_SRC
+
+* Configuration
+Create a config file in one of the following locations:
+- ~$HOME/.sortdir.toml~
+- ~$HOME/.config/sortdir/config.toml~
+
+** Example
+#+BEGIN_SRC toml
+[directories]
+
+    [directories."~/Downloads"]
+    documents = [
+        ".doc",
+        ".docx",
+        ".ods",
+        ".odt",
+        ".pdf",
+        ".ppt",
+        ".pptx",
+        ".txt",
+        ".xls",
+        ".xlsx",
+    ]
+    images = [".gif", ".heic", ".png", ".jpeg", ".jpg"]
+
+    [directories."~/dev"]
+    python = [".py"]
+    javascript = [".js"]
+#+END_SRC
+
