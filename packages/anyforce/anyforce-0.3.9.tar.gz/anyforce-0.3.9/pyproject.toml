@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "anyforce"
+version = "0.3.9"
+description = ""
+authors = ["exherb <i@4leaf.me>"]
+packages = [
+    { include = "anyforce/**/*.py" },
+    { include = "anyforce/py.typed" },
+]
+include = ["README.md"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.65.2"
+uvicorn = {extras = ["standard"], version = "^0.14.0"}
+pydantic = {extras = ["email"], version = "^1.8.2"}
+python-jose = {extras = ["cryptography"], version = "^3.2.0"}
+tortoise-orm = {extras = ["aiomysql"], version = "^0.17.4"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+requests = "^2.25.1"
+python-multipart = "^0.0.5"
+orjson = "^3.5.3"
+python-json-logger = "^2.0.1"
+Jinja2 = "^3.0.1"
+cookiecutter = "^1.7.3"
+aiohttp = "^3.7.4"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.2"
+isort = "^5.9.1"
+black = "^21.6b0"
+pytest = "^6.2.4"
+typer = "^0.3.2"
+types-requests = "^0.1.13"
+asynctest = "^0.13.0"
+pytest-asyncio = "^0.15.1"
+Faker = "^8.8.2"
+pytest-cov = "^2.12.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.isort]
+profile = "black"
+line_length = 79
+multi_line_output = 3
