@@ -1,0 +1,10 @@
+ansiblemetrics~=0.3.7
+imbalanced-learn~=0.7.0
+joblib~=0.17.0
+jsonpickle~=1.4.1
+numpy~=1.19.4
+pandas~=1.1.4
+repository-scorer~=0.2.1
+requests~=2.24.0
+scikit-learn~=0.24.1
+tosca-metrics~=0.0.6
