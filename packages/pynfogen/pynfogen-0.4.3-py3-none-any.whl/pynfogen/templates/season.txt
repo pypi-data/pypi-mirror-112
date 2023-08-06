@@ -1,0 +1,40 @@
+[align=center]<?{banner_image:true}?
+{banner_image:bbimg}
+
+[HR][/HR]
+?>
+{preview_images:bbimg:layout,2x2x0}
+[/align]
+
+[HR][/HR]
+<?{note:true}?
+{note:>>0x100}
+
+[HR][/HR]
+?>
+Release: {release_name}
+Title: {title_name}
+Type: TV ({title_year})
+Season: {season} ({episodes} Episodes)
+IMDb: https://imdb.com/title/{imdb}
+TMDB: https://themoviedb.org/{tmdb}
+TVDB: https://thetvdb.com/?tab=series&id={tvdb}
+Preview: {preview}
+Chapters: {chapters_yes_no}<?{source:true}?
+Source: {source:>>0x100}?>
+
+[HR][/HR]
+
+Video Tracks ({videos:len}):
+{videos_pretty:>>0x68}
+
+Audio Tracks ({audio:len}):
+{audio_pretty:>>0x68}
+
+Subtitle Tracks ({subtitles:len}):
+{subtitles_pretty:>>0x68}
+
+[HR][/HR]
+
+I sincerely hope you enjoy this release!
+Greetz: -RPG -MKVULTRA -FraMeSToR -BHDStudio
