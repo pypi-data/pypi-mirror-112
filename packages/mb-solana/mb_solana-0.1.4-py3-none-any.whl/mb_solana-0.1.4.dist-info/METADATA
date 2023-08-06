@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: mb-solana
+Version: 0.1.4
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.9
+Requires-Dist: click (==8.0.1)
+Requires-Dist: click-aliases (==1.0.1)
+Requires-Dist: PyYAML (==5.4.1)
+Requires-Dist: Jinja2 (==3.0.1)
+Requires-Dist: pydantic (==1.8.2)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: solana (==0.10.0)
+Requires-Dist: mb-commons
+Provides-Extra: dev
+Requires-Dist: pytest (==6.2.4) ; extra == 'dev'
+Requires-Dist: pytest-xdist (==2.3.0) ; extra == 'dev'
+Requires-Dist: pre-commit (==2.13.0) ; extra == 'dev'
+Requires-Dist: wheel (==0.36.2) ; extra == 'dev'
+Requires-Dist: twine (==3.4.1) ; extra == 'dev'
+Requires-Dist: python-dotenv (==0.18.0) ; extra == 'dev'
+
+UNKNOWN
+
