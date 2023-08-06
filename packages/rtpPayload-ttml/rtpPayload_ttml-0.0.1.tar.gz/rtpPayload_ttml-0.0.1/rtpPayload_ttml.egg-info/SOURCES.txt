@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+tox.ini
+./rtpPayload_ttml/__init__.py
+./rtpPayload_ttml/py.typed
+./rtpPayload_ttml/rtpPayload_ttml.py
+./rtpPayload_ttml/utfUtils.py
+rtpPayload_ttml.egg-info/PKG-INFO
+rtpPayload_ttml.egg-info/SOURCES.txt
+rtpPayload_ttml.egg-info/dependency_links.txt
+rtpPayload_ttml.egg-info/requires.txt
+rtpPayload_ttml.egg-info/top_level.txt
+tests/test_rtpPayload_ttml.py
+tests/test_utfUtils.py
