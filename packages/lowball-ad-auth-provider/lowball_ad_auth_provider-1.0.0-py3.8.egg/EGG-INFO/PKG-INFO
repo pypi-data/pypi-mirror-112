@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: lowball-ad-auth-provider
+Version: 1.0.0
+Summary: An Authentication Provider for lowball that uses Active Directory as it's Identity Provider
+Home-page: https://github.com/EmersonElectricCo/lowball-ad-auth-provider
+Author: Isaiah Eichen, Timothy Lemm
+Author-email: compsecmonkey@gmail.com
+License: Apache License 2.0
+Description: An Authentication Provider for lowball that uses Active Directory as it's Identity Provider
+Platform: UNKNOWN
