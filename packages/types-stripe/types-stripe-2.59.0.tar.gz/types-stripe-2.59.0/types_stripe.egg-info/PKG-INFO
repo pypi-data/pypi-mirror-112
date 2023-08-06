@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: types-stripe
+Version: 2.59.0
+Summary: Typing stubs for stripe
+Home-page: https://github.com/python/typeshed
+License: Apache-2.0 license
+Description: ## Typing stubs for stripe
+        
+        This is a PEP 561 type stub package for the `stripe` package.
+        It can be used by type-checking tools like mypy, PyCharm, pytype etc. to check code
+        that uses `stripe`. The source for this package can be found at
+        https://github.com/python/typeshed/tree/master/stubs/stripe. All fixes for
+        types and metadata should be contributed there.
+        
+        See https://github.com/python/typeshed/blob/master/README.md for more details.
+        This package was generated from typeshed commit `0cd4ee39a2fbe17001b1a98929158ffc0b11f664`.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
