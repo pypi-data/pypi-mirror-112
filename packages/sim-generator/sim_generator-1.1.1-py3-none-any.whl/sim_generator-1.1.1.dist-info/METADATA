@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: sim-generator
+Version: 1.1.1
+Summary: A little command line utility to generate pattern images for structured illumination microscopy
+Home-page: https://github.com/bradday4/SIM_GENERATOR
+Author: Brad Day
+Author-email: bradday4@gmaild.com
+License: MIT
+Download-URL: https://github.com/bradday4/SIM_GENERATOR/releases
+Keywords: SIM,Structured Illumination Microscopy,Pattern Generation
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: fire
+Requires-Dist: pillow
+
+UNKNOWN
+
