@@ -1,0 +1,10 @@
+LICENSE
+setup.py
+nonebot_plugin_statistical/__init__.py
+nonebot_plugin_statistical/config.py
+nonebot_plugin_statistical/statistical_handle.py
+nonebot_plugin_statistical/statistical_hook.py
+nonebot_plugin_statistical.egg-info/PKG-INFO
+nonebot_plugin_statistical.egg-info/SOURCES.txt
+nonebot_plugin_statistical.egg-info/dependency_links.txt
+nonebot_plugin_statistical.egg-info/top_level.txt
