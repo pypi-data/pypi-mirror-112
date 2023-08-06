@@ -1,0 +1,3 @@
+[console_scripts]
+pascal = pascal.__main__:main
+
