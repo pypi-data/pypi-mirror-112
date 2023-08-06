@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBook xmlns:qda="urn:QDA-XML:codebook:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="urn:QDA-XML:codebook:1.0"
+          xsi:schemaLocation="urn:QDA-XML:codebook:1.0 http://schema.qdasoftware.org/versions/Codebook/v1.0/Codebook.xsd">
+    <Codes>
+        <Code guid="{5215cc69-b628-4e02-afb9-9beeaee55808}" name="Topics" isCodable="false">
+        </Code>
+        <Code guid="{d7aa29da-519b-4946-9b90-253b6db8fd0a}" name="Economy" isCodable="true"
+              color="#ffff00">
+            <Description>Anything about jobs or taxes or business</Description>
+        </Code>
+        <Code guid="{0dcef2f5-e55c-49da-8c33-9b0803c7aeb4}" name="Health care" isCodable="true" color="#33cc33">
+            <Description>Health care issues, doctor, patients, etc.</Description>
+        </Code>
+        <Code guid="9fa9bcb7-5b59-47a9-8c3e-f65cffdc7520" name="Values" isCodable="false"></Code>
+        <Code guid="{7c108712-b650-4892-ac0b-fc9a10190c3b}" name="Conservatives" isCodable="true"
+              color="#ff0000">
+            <Description>Republicans or right-wing libertarians</Description>
+        </Code>
+        <Code guid="{12365523-1035-4afa-9e7b-281fe0bc51c5}" name="Liberals" isCodable="true"
+              color="#0000ff">
+            <Description>Democrats, socialists, or progressive independents</Description>
+        </Code>
+    </Codes>
+    <Sets/> <!-- not in original doc, but needed for passing all portableQDA tests-->
+</CodeBook>

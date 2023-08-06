@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:QDA-XML:codebook:0:4 Codebook.xsd" origin="ATLAS.ti Win 9.0.19" xmlns="urn:QDA-XML:codebook:0:4">
+  <Codes>
+    <Code guid="2CE89C66-C28D-473B-B5C4-6CF87D20EF04" name="code2" isCodable="true" />
+    <Code guid="FFD939DA-B5DC-4611-A9F8-366495EB0AE2" name="code1" isCodable="true">
+      <Code guid="575CD58B-641A-48C7-BC7B-4F3D2199C776" name="code1.1" isCodable="true" />
+    </Code>
+    <Code guid="1B123EC4-7A16-4189-BAB2-74D37FC18BE8" name="code3" isCodable="false">
+      <Code guid="6305160D-88CA-48AD-AAAF-07397BA748E8" name="code:3.1" isCodable="true" />
+    </Code>
+  </Codes>
+  <Sets>
+    <Set name="codeGroup1::codeGroup1.2" guid="D79FC877-F071-4117-8D25-235AA1062A44">
+      <MemberCode guid="2CE89C66-C28D-473B-B5C4-6CF87D20EF04" />
+      <MemberCode guid="575CD58B-641A-48C7-BC7B-4F3D2199C776" />
+    </Set>
+    <Set name="codeGroup1::codeGroup1.1" guid="754BAFC8-1939-4FAF-9177-0DD313185A1F">
+      <MemberCode guid="FFD939DA-B5DC-4611-A9F8-366495EB0AE2" />
+      <MemberCode guid="575CD58B-641A-48C7-BC7B-4F3D2199C776" />
+    </Set>
+  </Sets>
+</CodeBook>

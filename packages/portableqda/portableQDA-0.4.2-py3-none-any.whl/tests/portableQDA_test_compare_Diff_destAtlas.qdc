@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CodeBook xmlns="urn:QDA-XML:codebook:1.0" xmlns:qda="urn:QDA-XML:codebook:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:QDA-XML:codebook:1.0 http://schema.qdasoftware.org/versions/Codebook/v1.0/Codebook.xsd">
+  <Codes>
+    <Code name="testCodeCommon" guid="4B73E49B-CF68-5E6E-82E9-46FB00B2CEFE" color="#000000" isCodable="true">
+      <Description>test code  in both codebooks Desc</Description>
+    </Code>
+    <Code color="#000000" guid="B3867279-9823-51AF-9D97-5B4A1AE2ABAB" isCodable="true" name="testCode NEw-compareQDC(Sun Mar  7 12:35:30 2021)">
+      <Description>test code Desc New</Description>
+    </Code>
+  </Codes>
+  <Sets>
+    <Set guid="13A0A716-B4AC-5D12-9352-BE56FD4FC9BA" name="testSet NEw-compareQDC(Sun Mar  7 12:35:30 2021)">
+      <Description>testSet desc New</Description>
+    </Set>
+  </Sets>
+</CodeBook>

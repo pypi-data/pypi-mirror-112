@@ -1,0 +1,16 @@
+portableqda/__init__.py,sha256=L4-ixfQrZ5_A-_vsQxGwW1euaos-2YJT_I6Jq-mTCXM,2334
+portableqda/__main__.py,sha256=x19vc4Ah4ThA3Y53nnaXphfRkh76JPaJ_Fv9d-bZIvQ,1141
+portableqda/refi_qda.py,sha256=c5SWTMTzPzwmmesJCTnLGjk60c3G1F6ATVMHEIxDFN8,55360
+tests/REFI-QDA-1-5.qdc,sha256=c-f5qwhKQSkualJ8Jnk0b6wcWggr7kjCaqtgAN9C-Jc,1519
+tests/__init__.py,sha256=UaoYgNVh83nkrA0JgiQSNHNSQXo-fLHiW1P9b3yZWVQ,273
+tests/__main__.py,sha256=Dfd-0z1419arjJu00ySl4xI0pPlzcOQ_boLfH0y73JY,186
+tests/doorstop-core-tests-files-exported.qdc,sha256=MrRF1bjqAV0y52pdiN2Wq4kthwe6WYVk2R3NUcGOGlY,3555
+tests/portableQDA_Atlasti.qdc,sha256=qK8EBMQDROIb32HcfHsJtxSrwERafaLjya9SR-tH4Mc,1216
+tests/portableQDA_test_compare_Diff_destAtlas.qdc,sha256=Zth4xtGtD_1DhYVvJRKDv75ElRUQUgVIRLu2Wkcodvg,907
+tests/test_portableqda.py,sha256=jrpnQW-N73h7PBkHrMYYUBaL19u-n132Bc4KLPpMmKM,182
+tests/test_refi_qda.py,sha256=RhmGEEAvbPTnW-KA1QDHykQN-33FZyiopq9gR4pyfRE,30397
+portableqda-0.4.2.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+portableqda-0.4.2.dist-info/LICENSE.md,sha256=0CDkWrwJhFwDMXgBGzvnr2l7OeTCzNv6LNB-OgyvYq8,7663
+portableqda-0.4.2.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+portableqda-0.4.2.dist-info/METADATA,sha256=8T5G3C9XoQjESeC7fQXme8IL0iS0hUQFGYZ5dCAJwyE,5939
+portableqda-0.4.2.dist-info/RECORD,,
