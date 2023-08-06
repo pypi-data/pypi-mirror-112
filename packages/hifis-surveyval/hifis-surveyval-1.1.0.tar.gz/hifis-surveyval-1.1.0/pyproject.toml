@@ -1,0 +1,100 @@
+# hifis-surveyval
+# Framework to help developing analysis scripts for the HIFIS Software survey.
+#
+# SPDX-FileCopyrightText: 2021 HIFIS Software <support@hifis.net>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+[tool.poetry]
+name = "hifis-surveyval"
+version = "1.1.0"
+description = "This project is used to develop analysis scripts for the HIFIS Software survey."
+license = "GPL-3.0-or-later"
+authors = ["HIFIS Software <software@hifis.net>"]
+homepage = "https://gitlab.hzdr.de/hifis/surveys/hifis-surveyval"
+repository = "https://gitlab.hzdr.de/hifis/surveys/hifis-surveyval"
+documentation = "https://hifis.pages.hzdr.de/surveys/hifis-surveyval"
+readme = "README.md"
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Science/Research',
+    'Topic :: Scientific/Engineering',
+    'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9'
+]
+packages = [
+    {include = "hifis_surveyval", from = "."}
+]
+include = ["LICENSES", "docs/build/html/**/*.*", "hifis_surveyval/files/**/*"]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://gitlab.hzdr.de/hifis/surveys/hifis-surveyval/-/issues"
+"Changelog" = "https://gitlab.hzdr.de/hifis/surveys/hifis-surveyval/-/blob/main/CHANGELOG.md"
+"CI" = "https://gitlab.hzdr.de/hifis/surveys/hifis-surveyval/-/pipelines"
+
+[tool.poetry.scripts]
+hifis-surveyval = "hifis_surveyval.cli:cli"
+
+[tool.poetry.dependencies]
+python = ">=3.7.1,<3.10"
+click = ">=8.0"
+matplotlib = ">=3.2.0"
+numpy = ">=1.18.1"
+pandas = ">=1.3.0"
+pyyaml = ">=5.3.1"
+pydantic = "^1.8.1"
+python-dotenv = "^0.18.0"
+tabulate = "^0.8.9"
+schema = "^0.7.4"
+
+[tool.poetry.dev-dependencies]
+flake8-docstrings = ">=1.5.0"
+isort = ">=5.0.0"
+pytest = ">=3.4.0"
+pytest-cov = ">=2.5.1"
+pytest-pythonpath = ">=0.7.2"
+Sphinx = ">=2.2.0"
+sphinx-rtd-theme = ">=0.4.3"
+black = "^21.6b0"
+flakehell = "^0.9.0"
+flake8 = "==3.9.0"
+recommonmark = "^0.7.1"
+
+[tool.coverage.run]
+omit = ["*/venv/*",
+        "*/tests/*",
+        "*/docs/*",
+        "*/dist/*",
+        "scratch*.py"]
+
+[tool.coverage.html]
+directory = "./htmlcov"
+
+[tool.pytest.ini_options]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning"]
+
+[tool.flakehell.plugins]
+flake8-docstrings = ["+*"]
+pycodestyle = ["+*", "-W503"]
+pyflakes = ["+*"]
+
+[tool.flakehell]
+max_line_length = 79
+
+[tool.isort]
+line_length = 79

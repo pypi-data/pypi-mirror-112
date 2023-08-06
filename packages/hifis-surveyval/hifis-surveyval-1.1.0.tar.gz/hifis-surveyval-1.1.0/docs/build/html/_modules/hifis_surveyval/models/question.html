@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hifis_surveyval.models.question &mdash; hifis_surveyval  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> hifis_surveyval
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/accessing_data.html">Accessing the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/development.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/api.html">API Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">hifis_surveyval</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>hifis_surveyval.models.question</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for hifis_surveyval.models.question</h1><div class="highlight"><pre>
+<span></span><span class="c1"># hifis-surveyval</span>
+<span class="c1"># Framework to help developing analysis scripts for the HIFIS Software survey.</span>
+<span class="c1">#</span>
+<span class="c1"># SPDX-FileCopyrightText: 2021 HIFIS Software &lt;support@hifis.net&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># SPDX-License-Identifier: GPL-3.0-or-later</span>
+<span class="c1">#</span>
+<span class="c1"># This program is free software: you can redistribute it and/or modify</span>
+<span class="c1"># it under the terms of the GNU General Public License as published by</span>
+<span class="c1"># the Free Software Foundation, either version 3 of the License, or</span>
+<span class="c1"># (at your option) any later version.</span>
+<span class="c1">#</span>
+<span class="c1"># This program is distributed in the hope that it will be useful,</span>
+<span class="c1"># but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="c1"># GNU General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1"># You should have received a copy of the GNU General Public License</span>
+<span class="c1"># along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains classes to represent survey questions.</span>
+
+<span class="sd">These can be constructed from YAML through the YamlConstructable abstract</span>
+<span class="sd">class.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1"># alias name to avoid clash with schema.Optional</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Set</span>
+
+<span class="kn">import</span> <span class="nn">schema</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">Series</span>
+
+<span class="kn">from</span> <span class="nn">hifis_surveyval.models.answer_option</span> <span class="kn">import</span> <span class="n">AnswerOption</span>
+<span class="kn">from</span> <span class="nn">hifis_surveyval.models.answer_types</span> <span class="kn">import</span> <span class="n">VALID_ANSWER_TYPES</span>
+<span class="kn">from</span> <span class="nn">hifis_surveyval.models.mixins.identifiable</span> <span class="kn">import</span> <span class="n">Identifiable</span>
+<span class="kn">from</span> <span class="nn">hifis_surveyval.models.mixins.yaml_constructable</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">YamlConstructable</span><span class="p">,</span>
+    <span class="n">YamlDict</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">hifis_surveyval.models.translated</span> <span class="kn">import</span> <span class="n">Translated</span>
+
+
+<div class="viewcode-block" id="Question"><a class="viewcode-back" href="../../../modules/hifis_surveyval.models.html#hifis_surveyval.models.question.Question">[docs]</a><span class="k">class</span> <span class="nc">Question</span><span class="p">(</span><span class="n">YamlConstructable</span><span class="p">,</span> <span class="n">Identifiable</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Questions model concrete questions that could be answered in the survey.</span>
+
+<span class="sd">    They can be constructed from YAML metadata via from_yaml_dictionary(). For</span>
+<span class="sd">    this to be successful the YAML data has to adhere to Question.schema which</span>
+<span class="sd">    describes the required fields and their data types.</span>
+<span class="sd">    Answers then have to be added separately via add_answer().</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">token_ID</span> <span class="o">=</span> <span class="s2">&quot;id&quot;</span>
+    <span class="n">token_LABEL</span> <span class="o">=</span> <span class="s2">&quot;label&quot;</span>
+    <span class="n">token_TEXT</span> <span class="o">=</span> <span class="s2">&quot;text&quot;</span>
+    <span class="n">token_ANSWER_OPTIONS</span> <span class="o">=</span> <span class="s2">&quot;answers&quot;</span>
+    <span class="n">token_DATA_TYPE</span> <span class="o">=</span> <span class="s2">&quot;datatype&quot;</span>
+    <span class="n">token_MANDATORY</span> <span class="o">=</span> <span class="s2">&quot;mandatory&quot;</span>
+
+    <span class="n">schema</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">Schema</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="n">token_ID</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+            <span class="n">token_LABEL</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+            <span class="n">token_TEXT</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+            <span class="n">token_DATA_TYPE</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">VALID_ANSWER_TYPES</span><span class="p">,</span>
+            <span class="n">token_MANDATORY</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+            <span class="n">schema</span><span class="o">.</span><span class="n">Optional</span><span class="p">(</span><span class="n">token_ANSWER_OPTIONS</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">[]):</span> <span class="nb">list</span><span class="p">,</span>
+            <span class="n">schema</span><span class="o">.</span><span class="n">Optional</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="nb">object</span><span class="p">,</span>  <span class="c1"># Catchall for unsupported yaml data</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+
+    <span class="c1"># TODO: log unsupported elements in YAML?</span>
+
+<div class="viewcode-block" id="Question.__init__"><a class="viewcode-back" href="../../../modules/hifis_surveyval.models.html#hifis_surveyval.models.question.Question.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">parent_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">question_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">text</span><span class="p">:</span> <span class="n">Translated</span><span class="p">,</span>
+        <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">answer_type</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
+        <span class="n">mandatory</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">answer_options</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AnswerOption</span><span class="p">],</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize a question object with metadata.</span>
+
+<span class="sd">        The answers have to be added separately via add_answer().</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            parent_id:</span>
+<span class="sd">                The ID of the question collection this question is embedded in.</span>
+<span class="sd">            question_id:</span>
+<span class="sd">                An identifier assigned to the question. Must be unique within</span>
+<span class="sd">                the question collection.</span>
+<span class="sd">            text:</span>
+<span class="sd">                A Translated object representing the text that describes the</span>
+<span class="sd">                question.</span>
+<span class="sd">            label:</span>
+<span class="sd">                A short label that can be used in plotting to represent the</span>
+<span class="sd">                question collection.</span>
+<span class="sd">            answer_type:</span>
+<span class="sd">                The data type of the answers. Must be one of the supported</span>
+<span class="sd">                data types. See also</span>
+<span class="sd">                hifis_surveyval.models.answer_types.VALID_ANSWER_TYPES</span>
+<span class="sd">            mandatory:</span>
+<span class="sd">                Whether there is an answer to this question expected from each</span>
+<span class="sd">                participant in oder to consider the participant&#39;s answer data</span>
+<span class="sd">                complete.</span>
+<span class="sd">            answer_options:</span>
+<span class="sd">                An optional list of predefined answers. If there are none</span>
+<span class="sd">                given, the question can have any answer, otherwise the answer</span>
+<span class="sd">                must be the short ID of the selected answer option.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">question_id</span><span class="p">,</span> <span class="n">parent_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_text</span> <span class="o">=</span> <span class="n">text</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_label</span> <span class="o">=</span> <span class="n">label</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_answer_type</span> <span class="o">=</span> <span class="n">answer_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mandatory</span> <span class="o">=</span> <span class="n">mandatory</span>
+
+        <span class="c1"># Answer options are stored with their short ID as keys for easy</span>
+        <span class="c1"># lookup when associating answers, since answers contain these as</span>
+        <span class="c1"># values when selected.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_answer_options</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">AnswerOption</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">option</span><span class="o">.</span><span class="n">short_id</span><span class="p">:</span> <span class="n">option</span> <span class="k">for</span> <span class="n">option</span> <span class="ow">in</span> <span class="n">answer_options</span>
+        <span class="p">}</span>
+
+        <span class="c1"># The actual answers are not part of the metadata but have to be read</span>
+        <span class="c1"># from other sources in a separate step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_answers</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">answer_type</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></div>
+
+<div class="viewcode-block" id="Question.add_answer"><a class="viewcode-back" href="../../../modules/hifis_surveyval.models.html#hifis_surveyval.models.question.Question.add_answer">[docs]</a>    <span class="k">def</span> <span class="nf">add_answer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Store a given answer to this question.</span>
+
+<span class="sd">        The answer value will be casted to the expected answer type.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            participant_id:</span>
+<span class="sd">                The ID of the participant who gave the answer</span>
+<span class="sd">            value:</span>
+<span class="sd">                The text-version of the answer as stored in the CSV.</span>
+<span class="sd">                If the question is mandatory, the value must not be empty.</span>
+<span class="sd">                If answer options are defined the value must match the short id</span>
+<span class="sd">                of the selected answer option.</span>
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError:</span>
+<span class="sd">                if the question was marked as mandatory but the given value was</span>
+<span class="sd">                 an empty string</span>
+<span class="sd">            KeyError:</span>
+<span class="sd">                If answer options were present, but none of the answer options</span>
+<span class="sd">                had an ID that matched the given value</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Mandatory questions must have an answer</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mandatory</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No answer was given, but it was mandatory&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+            <span class="c1"># Convert empty strings to None to properly indicate that no</span>
+            <span class="c1"># data was provided</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_answer_options</span><span class="p">:</span>
+            <span class="c1"># If answer options are defined, the answer value is expected to</span>
+            <span class="c1"># be the short id of the corresponding answer option</span>
+            <span class="c1"># The label of the option then will be casted to the desired</span>
+            <span class="c1"># data type</span>
+            <span class="n">option</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_answer_options</span><span class="p">[</span><span class="n">value</span><span class="p">]</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_answer_type</span><span class="p">(</span><span class="n">option</span><span class="o">.</span><span class="n">label</span><span class="p">)</span>
+            <span class="c1"># FIXME change: answer option values become a separate field,</span>
+            <span class="c1">#  no longer derived from labels</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># try to cast the answer value to the expected type</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_answer_type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_answers</span><span class="p">[</span><span class="n">participant_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span></div>
+
+<div class="viewcode-block" id="Question.remove_answers"><a class="viewcode-back" href="../../../modules/hifis_surveyval.models.html#hifis_surveyval.models.question.Question.remove_answers">[docs]</a>    <span class="k">def</span> <span class="nf">remove_answers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant_ids</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Remove the answers by the specified participants.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            participant_ids:</span>
+<span class="sd">                The IDs of the participants whose answers are to be removed.</span>
+<span class="sd">                Invalid IDs are ignored.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">participant_id</span> <span class="ow">in</span> <span class="n">participant_ids</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_answers</span><span class="p">[</span><span class="n">participant_id</span><span class="p">]</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">answers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">object</span><span class="p">]]:</span>  <span class="c1"># NOTE (0) below</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Obtain the given answers as read from the survey data.</span>
+
+<span class="sd">        The answers are given as a mapping:</span>
+<span class="sd">        participant ID -&gt; participant answer</span>
+
+<span class="sd">        The participant ID will be a string, while the answers may be</span>
+<span class="sd">        assumed to be of the answer_type of the Question.</span>
+<span class="sd">        If the Question is not mandatory, answers may also be None.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The mapping from participant ID to the participant&#39;s answer for</span>
+<span class="sd">            this question.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_answers</span>
+
+    <span class="c1"># (0) Sadly I found no better way to narrow down the type since I could</span>
+    <span class="c1"># not refer to self._answer_type when specifying the return type.</span>
+    <span class="c1"># Suggestions for improvement are welcome.</span>
+
+<div class="viewcode-block" id="Question.as_series"><a class="viewcode-back" href="../../../modules/hifis_surveyval.models.html#hifis_surveyval.models.question.Question.as_series">[docs]</a>    <span class="k">def</span> <span class="nf">as_series</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Series</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Obtain the answers to this question as a pandas.Series.</span>
+
+<span class="sd">        The series&#39; index are the participant IDs, while data for the</span>
+<span class="sd">        indices are the respective answers.</span>
+
+<span class="sd">        The series will be named with the question&#39;s full ID.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A pandas.Series representing the answers for each participant</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">series</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_answers</span><span class="p">)</span>
+        <span class="n">series</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_id</span>
+        <span class="k">return</span> <span class="n">series</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_from_yaml_dictionary</span><span class="p">(</span><span class="n">yaml</span><span class="p">:</span> <span class="n">YamlDict</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Question&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate a new Question-instance from YAML data.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            yaml:</span>
+<span class="sd">                A YAML dictionary describing the Question</span>
+<span class="sd">            **kwargs:</span>
+<span class="sd">                Must contain the ID of the QuestionCollection-instance to which</span>
+<span class="sd">                the newly generated Question belongs as the parameter</span>
+<span class="sd">                &quot;parent_id&quot;.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            A new Question containing the provided data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">question_id</span> <span class="o">=</span> <span class="n">yaml</span><span class="p">[</span><span class="n">Question</span><span class="o">.</span><span class="n">token_ID</span><span class="p">]</span>
+        <span class="n">parent_id</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;parent_id&quot;</span><span class="p">]</span>
+
+        <span class="n">answer_type</span><span class="p">:</span> <span class="nb">type</span> <span class="o">=</span> <span class="n">VALID_ANSWER_TYPES</span><span class="p">[</span><span class="n">yaml</span><span class="p">[</span><span class="n">Question</span><span class="o">.</span><span class="n">token_DATA_TYPE</span><span class="p">]]</span>
+
+        <span class="n">answer_options</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">AnswerOption</span><span class="o">.</span><span class="n">from_yaml_dictionary</span><span class="p">(</span>
+                <span class="n">yaml</span><span class="o">=</span><span class="n">answer_yaml</span><span class="p">,</span> <span class="n">parent_id</span><span class="o">=</span><span class="n">question_id</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">answer_yaml</span> <span class="ow">in</span> <span class="n">yaml</span><span class="p">[</span><span class="n">Question</span><span class="o">.</span><span class="n">token_ANSWER_OPTIONS</span><span class="p">]</span>
+        <span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">Question</span><span class="p">(</span>
+            <span class="n">question_id</span><span class="o">=</span><span class="n">question_id</span><span class="p">,</span>
+            <span class="n">parent_id</span><span class="o">=</span><span class="n">parent_id</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">yaml</span><span class="p">[</span><span class="n">Question</span><span class="o">.</span><span class="n">token_LABEL</span><span class="p">],</span>
+            <span class="n">text</span><span class="o">=</span><span class="n">Translated</span><span class="p">(</span><span class="n">yaml</span><span class="p">[</span><span class="n">Question</span><span class="o">.</span><span class="n">token_TEXT</span><span class="p">]),</span>
+            <span class="n">answer_type</span><span class="o">=</span><span class="n">answer_type</span><span class="p">,</span>
+            <span class="n">answer_options</span><span class="o">=</span><span class="n">answer_options</span><span class="p">,</span>
+            <span class="n">mandatory</span><span class="o">=</span><span class="n">yaml</span><span class="p">[</span><span class="n">Question</span><span class="o">.</span><span class="n">token_MANDATORY</span><span class="p">],</span>
+        <span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, HIFIS Software.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

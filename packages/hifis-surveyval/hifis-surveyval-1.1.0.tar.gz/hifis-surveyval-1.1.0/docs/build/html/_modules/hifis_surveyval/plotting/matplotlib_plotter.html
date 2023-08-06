@@ -1,0 +1,823 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hifis_surveyval.plotting.matplotlib_plotter &mdash; hifis_surveyval  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> hifis_surveyval
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/accessing_data.html">Accessing the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/development.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/api.html">API Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">hifis_surveyval</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>hifis_surveyval.plotting.matplotlib_plotter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for hifis_surveyval.plotting.matplotlib_plotter</h1><div class="highlight"><pre>
+<span></span><span class="c1"># hifis-surveyval</span>
+<span class="c1"># Framework to help developing analysis scripts for the HIFIS Software survey.</span>
+<span class="c1">#</span>
+<span class="c1"># SPDX-FileCopyrightText: 2021 HIFIS Software &lt;support@hifis.net&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># SPDX-License-Identifier: GPL-3.0-or-later</span>
+<span class="c1">#</span>
+<span class="c1"># This program is free software: you can redistribute it and/or modify</span>
+<span class="c1"># it under the terms of the GNU General Public License as published by</span>
+<span class="c1"># the Free Software Foundation, either version 3 of the License, or</span>
+<span class="c1"># (at your option) any later version.</span>
+<span class="c1">#</span>
+<span class="c1"># This program is distributed in the hope that it will be useful,</span>
+<span class="c1"># but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="c1"># GNU General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1"># You should have received a copy of the GNU General Public License</span>
+<span class="c1"># along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module provides functionality to plot survey data.</span>
+
+<span class="sd">This module is called by survey analysis scripts and is a helper module</span>
+<span class="sd">which processes `pandas` data-frames as input and transforms them into</span>
+<span class="sd">informative plots.</span>
+<span class="sd">The actual plotting is done by utilizing a separate plotting library called</span>
+<span class="sd">`matplotlib`.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">inspect</span> <span class="kn">import</span> <span class="n">FrameInfo</span><span class="p">,</span> <span class="n">getmodulename</span><span class="p">,</span> <span class="n">stack</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">textwrap</span> <span class="kn">import</span> <span class="n">wrap</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">colors</span><span class="p">,</span> <span class="n">pyplot</span><span class="p">,</span> <span class="n">rcParams</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+
+<span class="kn">from</span> <span class="nn">hifis_surveyval.plotting.plotter</span> <span class="kn">import</span> <span class="n">Plotter</span>
+<span class="kn">from</span> <span class="nn">hifis_surveyval.plotting.supported_output_format</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">SupportedOutputFormat</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="MatplotlibPlotter"><a class="viewcode-back" href="../../../modules/hifis_surveyval.plotting.html#hifis_surveyval.plotting.matplotlib_plotter.MatplotlibPlotter">[docs]</a><span class="k">class</span> <span class="nc">MatplotlibPlotter</span><span class="p">(</span><span class="n">Plotter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Provides standardized plotting functionalities with matplotlib.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">_output_pyplot_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_file_stem</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Render pyplot images depending on output settings.</span>
+
+<span class="sd">        Use this after construction a pyplot plot to display the plot or</span>
+<span class="sd">        render it into an image depending on the application settings.</span>
+<span class="sd">        (Basically instead of pyplot.show() or pyplot.savefig())</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            output_file_stem (str):</span>
+<span class="sd">                The stem of the desired filename (without extension).</span>
+<span class="sd">                Defaults to an empty string which will prompt the automatic</span>
+<span class="sd">                generation of a file name from the date of the run and the</span>
+<span class="sd">                module producing the image.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">OUTPUT_FORMAT</span> <span class="o">==</span> <span class="n">SupportedOutputFormat</span><span class="o">.</span><span class="n">SCREEN</span><span class="p">:</span>
+            <span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+            <span class="n">pyplot</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">output_file_stem</span><span class="p">:</span>
+            <span class="c1"># Auto-generate the file stem</span>
+
+            <span class="c1"># Get the calling module&#39;s name, assuming this function is called</span>
+            <span class="c1"># from a survey evaluation script</span>
+            <span class="c1"># Keep in mind that</span>
+            <span class="c1"># * FrameInfo is a named tuple in which the second entry is the</span>
+            <span class="c1">#   fully qualified module name</span>
+            <span class="c1"># * The first element on the stack is this function, the caller is</span>
+            <span class="c1">#   the second frame</span>
+            <span class="n">calling_module_frame</span><span class="p">:</span> <span class="n">FrameInfo</span> <span class="o">=</span> <span class="n">stack</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">calling_module_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">getmodulename</span><span class="p">(</span><span class="n">calling_module_frame</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+            <span class="n">output_file_stem</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">calling_module_name</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="n">file_ending</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">OUTPUT_FORMAT</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">output_file_stem</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">file_ending</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="n">output_path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ANALYSIS_OUTPUT_PATH</span> <span class="o">/</span> <span class="n">file_name</span>
+
+        <span class="k">if</span> <span class="n">output_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Overriding existing output file </span><span class="si">{</span><span class="n">output_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">pyplot</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">output_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">pyplot</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_set_figure_size</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the figure size so the main area fits into the desired space.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            width (float):</span>
+<span class="sd">                Desired plotting space width in inches.</span>
+<span class="sd">            height (float):</span>
+<span class="sd">                Desired plotting space height in inches.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">figure</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+        <span class="n">left</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">subplotpars</span><span class="o">.</span><span class="n">left</span>
+        <span class="n">right</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">subplotpars</span><span class="o">.</span><span class="n">right</span>
+        <span class="n">top</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">subplotpars</span><span class="o">.</span><span class="n">top</span>
+        <span class="n">bottom</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">subplotpars</span><span class="o">.</span><span class="n">bottom</span>
+        <span class="n">figure_width</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">width</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">right</span> <span class="o">-</span> <span class="n">left</span><span class="p">)</span>
+        <span class="n">figure_height</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">height</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">top</span> <span class="o">-</span> <span class="n">bottom</span><span class="p">)</span>
+        <span class="n">figure</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="n">figure_width</span><span class="p">,</span> <span class="n">figure_height</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MatplotlibPlotter.plot_bar_chart"><a class="viewcode-back" href="../../../modules/hifis_surveyval.plotting.html#hifis_surveyval.plotting.matplotlib_plotter.MatplotlibPlotter.plot_bar_chart">[docs]</a>    <span class="k">def</span> <span class="nf">plot_bar_chart</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">data_frame</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span>
+        <span class="n">plot_file_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">show_legend</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">show_value_labels</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">round_value_labels_to_decimals</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Plot given data-frame as a (stacked) bar chart.</span>
+
+<span class="sd">        A pandas DataFrame is used as input data from which a (stacked) bar</span>
+<span class="sd">        chart is generated. This DataFrame need be structured in a particular</span>
+<span class="sd">        way. The actual data values are taken column by column and plotted as</span>
+<span class="sd">        bars for each index entry.</span>
+<span class="sd">        In case of a normal bar chart this means each sequence of bars /</span>
+<span class="sd">        column is put next to each other while each sequence is grouped by the</span>
+<span class="sd">        series / rows and labeled accordingly in the legend.</span>
+<span class="sd">        By contrast in case of a stacked bar chart each sequence of bars /</span>
+<span class="sd">        column is stacked on top of the previous instead of put next to each</span>
+<span class="sd">        other and labeled accordingly in the legend.</span>
+<span class="sd">        The index names are used to label the ticks along the x-axis, while the</span>
+<span class="sd">        column names are used as labels in the legend.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data_frame (DataFrame):</span>
+<span class="sd">                All data needed for this function to plot a stacked bar</span>
+<span class="sd">                chart is encapsulated in this DataFrame.</span>
+<span class="sd">            plot_file_name (str):</span>
+<span class="sd">                Optional file name which is used to store the plot to a</span>
+<span class="sd">                file. If this argument is an empty string (Default) for this</span>
+<span class="sd">                argument, a suitable file name is auto-generated.</span>
+<span class="sd">            show_legend (bool):</span>
+<span class="sd">                Used to control whether a legend is included in the plot or</span>
+<span class="sd">                not. (Default: True)</span>
+<span class="sd">            show_value_labels (bool):</span>
+<span class="sd">                Enable or disable labels to show the values of each bar. (</span>
+<span class="sd">                Default: True)</span>
+<span class="sd">            round_value_labels_to_decimals (int):</span>
+<span class="sd">                Round label values to the number of decimals. (Default: 0)</span>
+<span class="sd">            \*\*kwargs:</span>
+<span class="sd">                stacked (bool):</span>
+<span class="sd">                    Prompts the generation of a stacked bar chart instead on</span>
+<span class="sd">                    bars being grouped side-by-side.</span>
+<span class="sd">                plot_title (str):</span>
+<span class="sd">                    The title text for the plot. (Default: &quot;&quot;)</span>
+<span class="sd">                x_axis_label (str):</span>
+<span class="sd">                    The label for the x-axis. Default: &quot;&quot;)</span>
+<span class="sd">                x_label_rotation (int):</span>
+<span class="sd">                    Allows to rotate the x-axis labels for better</span>
+<span class="sd">                    readability. Value is given in degrees. (Default: 0)</span>
+<span class="sd">                y_axis_label (str):</span>
+<span class="sd">                    The label for the y-axis. Default: &quot;&quot;)</span>
+<span class="sd">                legend_location (str):</span>
+<span class="sd">                    Specifies positioning of the plot&#39;s legend. (Default:</span>
+<span class="sd">                    &quot;best&quot;) See Also: pandas.Axis.legend(loc)</span>
+<span class="sd">                legend_anchor (BboxBase):</span>
+<span class="sd">                    Allows to specify an anchor point for the plot&#39;s legend (</span>
+<span class="sd">                    Default: None) See Also: pandas.Axis.legend(bbox_to_anchor)</span>
+<span class="sd">                ylim (Set[float]):</span>
+<span class="sd">                    Allows to specify the maximum and minimum values of the</span>
+<span class="sd">                    y axis (Default: None) See Also:</span>
+<span class="sd">                    matplotlib.axes.Axes.set_ylim</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;figure.autolayout&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+
+        <span class="c1"># Color map Generation:</span>
+        <span class="c1"># 1. Pick a suitable predefined colormap. Chose one with light colors</span>
+        <span class="c1"># so the value labels can stand out by darkening them.</span>
+        <span class="n">base_color_map</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;Pastel1&quot;</span><span class="p">)</span>
+        <span class="n">color_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">base_color_map</span><span class="o">.</span><span class="n">colors</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_frame</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">color_count</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Attempt to plot a bar chart &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;with more then </span><span class="si">{</span><span class="n">color_count</span><span class="si">}</span><span class="s2"> columns per row.&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Color palette has not enough colors for all of them.&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;(is bar chart a fitting diagram type here?)&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;(Would transposing the data frame help?)&quot;</span>
+            <span class="p">)</span>
+        <span class="c1"># 2. Reduce the colormap to have only as much colors as there are</span>
+        <span class="c1"># columns so each columns color index matches the column index</span>
+        <span class="c1"># (If the colormap were larger one would have to do linear</span>
+        <span class="c1"># interpolation to obtain the proper color.)</span>
+        <span class="n">color_map</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="n">base_color_map</span><span class="o">.</span><span class="n">colors</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+                <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_frame</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+        <span class="c1"># This new colormap is handed to the graph and used in the value labels</span>
+
+        <span class="n">plot_stacked</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;stacked&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">x_rotation</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;x_label_rotation&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">data_frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="n">plot_stacked</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">color_map</span><span class="p">)</span>
+
+        <span class="n">axes</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;plot_title&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;x_axis_label&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;y_axis_label&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span>
+            <span class="n">data_frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+            <span class="n">rotation</span><span class="o">=</span><span class="n">x_rotation</span><span class="p">,</span>
+            <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;right&quot;</span> <span class="k">if</span> <span class="n">x_rotation</span> <span class="k">else</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span>
+            <span class="n">rotation_mode</span><span class="o">=</span><span class="s2">&quot;anchor&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;ylim&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;ylim&quot;</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">show_legend</span><span class="p">:</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+                <span class="n">data_frame</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+                <span class="n">loc</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;legend_location&quot;</span><span class="p">,</span> <span class="s2">&quot;best&quot;</span><span class="p">),</span>
+                <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;legend_anchor&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">show_value_labels</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_add_bar_chart_value_labels</span><span class="p">(</span>
+                <span class="n">data_frame</span><span class="p">,</span>
+                <span class="n">color_map</span><span class="p">,</span>
+                <span class="n">plot_stacked</span><span class="p">,</span>
+                <span class="n">round_value_labels_to_decimals</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_figure_size</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_frame</span><span class="o">.</span><span class="n">index</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_output_pyplot_image</span><span class="p">(</span><span class="n">plot_file_name</span><span class="p">)</span></div>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_add_bar_chart_value_labels</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">data_frame</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span>
+        <span class="n">color_map</span><span class="p">:</span> <span class="n">colors</span><span class="o">.</span><span class="n">Colormap</span><span class="p">,</span>
+        <span class="n">plot_stacked</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">round_value_labels_to_decimals</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add value labels to a bar chart.</span>
+
+<span class="sd">        This is a helper method and not supposed to be called on its own.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data_frame (DataFrame):</span>
+<span class="sd">                The data frame providing the data for the chart.</span>
+<span class="sd">            color_map (Colormap):</span>
+<span class="sd">                The color map used by the bar chart.</span>
+<span class="sd">            plot_stacked (bool):</span>
+<span class="sd">                Whether the chart is a stacked bar chart or not.</span>
+<span class="sd">            round_value_labels_to_decimals (int):</span>
+<span class="sd">                Round label values to the number of decimals. (Default: 0)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">default_font_size</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;font.size&quot;</span><span class="p">]</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+        <span class="c1"># Loop over the data and annotate the actual values</span>
+        <span class="n">column_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_frame</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+        <span class="n">row_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_frame</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">plot_stacked</span><span class="p">:</span>
+            <span class="n">sums</span> <span class="o">=</span> <span class="n">data_frame</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">minimum_value</span> <span class="o">=</span> <span class="n">sums</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+            <span class="n">maximum_value</span> <span class="o">=</span> <span class="n">sums</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">minimum_value</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">minimum_value</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="c1"># The lower boundary of the plotting area</span>
+            <span class="n">y_range</span> <span class="o">=</span> <span class="n">maximum_value</span> <span class="o">-</span> <span class="n">minimum_value</span>
+
+            <span class="c1"># The minimum height until which a label can be included</span>
+            <span class="c1"># directly in the bar as fraction of the plot height</span>
+            <span class="n">min_include_height</span> <span class="o">=</span> <span class="n">y_range</span> <span class="o">/</span> <span class="mi">15</span>
+
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row_count</span><span class="p">):</span>
+                <span class="n">row_sum</span> <span class="o">=</span> <span class="mi">0</span>
+
+                <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">column_count</span><span class="p">):</span>
+                    <span class="n">value</span> <span class="o">=</span> <span class="n">data_frame</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="p">]</span>
+
+                    <span class="c1"># Skip values that can not be plotted in a stacked bar</span>
+                    <span class="c1"># chart</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span> <span class="ow">or</span> <span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+                        <span class="k">continue</span>
+
+                    <span class="n">color</span> <span class="o">=</span> <span class="n">color_map</span><span class="o">.</span><span class="n">colors</span><span class="p">[</span><span class="n">column</span><span class="p">]</span>
+                    <span class="c1"># Darken the color by setting each component to 50%</span>
+                    <span class="n">color_dark</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">component</span> <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="n">color</span><span class="p">]</span>
+
+                    <span class="n">bar_center_y</span> <span class="o">=</span> <span class="n">row_sum</span> <span class="o">+</span> <span class="n">value</span> <span class="o">/</span> <span class="mi">2</span>
+
+                    <span class="c1"># If the value fits inside the bar plot it directly in the</span>
+                    <span class="c1"># center, otherwise move it to the outside and add a line</span>
+                    <span class="c1"># as indicator.</span>
+                    <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">min_include_height</span><span class="p">:</span>
+                        <span class="n">text_x</span> <span class="o">=</span> <span class="n">row</span>
+                        <span class="n">text_y</span> <span class="o">=</span> <span class="n">bar_center_y</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c1"># The label has to go outside the bar</span>
+                        <span class="c1"># The following numbers come from eyeballing and</span>
+                        <span class="c1"># implicit knowledge how the x-axis is organized.</span>
+                        <span class="c1"># See also below in the non-stacked section.</span>
+
+                        <span class="c1"># The text goes to the left of the bar if the column</span>
+                        <span class="c1"># index is an odd number, otherwise the text is offset</span>
+                        <span class="c1"># to the right.</span>
+                        <span class="c1"># 0.375 is the middle of the white space between the</span>
+                        <span class="c1"># section borders (relative coordinates -0.5 … +0.5 )</span>
+                        <span class="c1"># and bar borders (relative coordinates -0.25 … + 0.25)</span>
+                        <span class="n">text_left</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">column</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>
+                        <span class="n">text_x_offset</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.375</span> <span class="k">if</span> <span class="n">text_left</span> <span class="k">else</span> <span class="mf">0.375</span>
+                        <span class="n">line_x_overhang</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.1</span> <span class="k">if</span> <span class="n">text_left</span> <span class="k">else</span> <span class="mf">0.1</span>
+
+                        <span class="c1"># Move the text_y up a bit so it does not overlap the</span>
+                        <span class="c1"># indicator line</span>
+                        <span class="n">text_y</span> <span class="o">=</span> <span class="n">bar_center_y</span> <span class="o">+</span> <span class="n">min_include_height</span> <span class="o">/</span> <span class="mi">4</span>
+                        <span class="n">text_x</span> <span class="o">=</span> <span class="n">row</span> <span class="o">+</span> <span class="n">text_x_offset</span>
+
+                        <span class="c1"># Plot the indicator line</span>
+                        <span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+                            <span class="p">[</span><span class="n">text_x</span> <span class="o">+</span> <span class="n">line_x_overhang</span><span class="p">,</span> <span class="n">row</span><span class="p">],</span>
+                            <span class="p">[</span><span class="n">bar_center_y</span><span class="p">,</span> <span class="n">bar_center_y</span><span class="p">],</span>
+                            <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
+                        <span class="p">)</span>
+
+                    <span class="c1"># Round values to the number of decimals given in parameter</span>
+                    <span class="c1"># round_value_labels_decimals.</span>
+                    <span class="n">value_rounded</span> <span class="o">=</span> <span class="p">(</span>
+                        <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">round_value_labels_to_decimals</span><span class="p">))</span>
+                        <span class="k">if</span> <span class="n">round_value_labels_to_decimals</span> <span class="o">==</span> <span class="mi">0</span>
+                        <span class="k">else</span> <span class="n">value</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">round_value_labels_to_decimals</span><span class="p">)</span>
+                    <span class="p">)</span>
+
+                    <span class="c1"># Values with more than 2 digits get displayed with smaller</span>
+                    <span class="c1"># font size to fit them better</span>
+                    <span class="n">axes</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+                        <span class="n">text_x</span><span class="p">,</span>
+                        <span class="n">text_y</span><span class="p">,</span>
+                        <span class="n">value_rounded</span><span class="p">,</span>
+                        <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+                        <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+                        <span class="n">color</span><span class="o">=</span><span class="n">color_dark</span><span class="p">,</span>
+                        <span class="n">size</span><span class="o">=</span><span class="n">default_font_size</span> <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="k">else</span> <span class="s2">&quot;smaller&quot;</span><span class="p">,</span>
+                    <span class="p">)</span>
+                    <span class="c1"># for next row iteration:</span>
+                    <span class="n">row_sum</span> <span class="o">+=</span> <span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">maximum_value</span> <span class="o">=</span> <span class="n">data_frame</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+            <span class="n">minimum_value</span> <span class="o">=</span> <span class="n">data_frame</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+            <span class="c1"># If not stacked, all bar texts share the same y-component</span>
+            <span class="c1"># This has to account for the possible range of values</span>
+            <span class="c1"># and negative values.</span>
+            <span class="c1"># An offset from the x-axis of 1/10th of the most extreme value was</span>
+            <span class="c1"># chosen for the text labels by iterative eyeballing.</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">maximum_value</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">minimum_value</span><span class="p">):</span>
+                <span class="n">text_y</span> <span class="o">=</span> <span class="n">maximum_value</span> <span class="o">/</span> <span class="mi">10</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">text_y</span> <span class="o">=</span> <span class="n">minimum_value</span> <span class="o">/</span> <span class="mi">10</span>
+
+            <span class="c1"># For the x-offset calculation, negative values mean left,</span>
+            <span class="c1"># positive values mean right.</span>
+            <span class="c1"># The x-axis is subdivided into &lt;row_count&gt; equal sections</span>
+            <span class="c1"># Each section has by definition a width of 1 unit</span>
+            <span class="c1"># The bar area starts at 0.25 units to the left</span>
+            <span class="c1"># and ends at 0.25 units to the right</span>
+            <span class="n">bar_area_offset</span> <span class="o">=</span> <span class="mf">0.25</span>
+            <span class="n">bar_area_width</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+            <span class="c1"># In case of non-stacked plots, the bar area is equally distributed</span>
+            <span class="c1"># across &lt;column_count&gt; bars and each label is offset by a half bar</span>
+            <span class="c1"># width within the bar to center it</span>
+            <span class="n">bar_width</span> <span class="o">=</span> <span class="n">bar_area_width</span> <span class="o">/</span> <span class="n">column_count</span>
+            <span class="n">bar_offset</span> <span class="o">=</span> <span class="n">bar_width</span> <span class="o">/</span> <span class="mi">2</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row_count</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">column_count</span><span class="p">):</span>
+                    <span class="n">color</span> <span class="o">=</span> <span class="n">color_map</span><span class="o">.</span><span class="n">colors</span><span class="p">[</span><span class="n">column</span><span class="p">]</span>
+
+                    <span class="c1"># Darken the color by setting each component to 50%</span>
+                    <span class="n">color</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">component</span> <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="n">color</span><span class="p">]</span>
+
+                    <span class="c1"># Within each bar area the bar for each column starts at:</span>
+                    <span class="n">column_offset</span> <span class="o">=</span> <span class="n">bar_width</span> <span class="o">*</span> <span class="n">column</span>
+                    <span class="c1"># And thus, the final x-component is distributed around</span>
+                    <span class="c1"># &lt;row&gt;, which indicates the center of the section.</span>
+                    <span class="c1"># The bar_area_offset gives the leftmost point of the bar</span>
+                    <span class="c1"># area, the column_offset yields the leftmost point of the</span>
+                    <span class="c1"># current column within the bar area and from there out,</span>
+                    <span class="c1"># the bar_offset gives the center of the bar. So:</span>
+                    <span class="n">text_x</span> <span class="o">=</span> <span class="n">row</span> <span class="o">-</span> <span class="n">bar_area_offset</span> <span class="o">+</span> <span class="n">column_offset</span> <span class="o">+</span> <span class="n">bar_offset</span>
+
+                    <span class="n">value</span> <span class="o">=</span> <span class="n">data_frame</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="p">]</span>
+
+                    <span class="c1"># Round values to the number of digits given in parameter</span>
+                    <span class="c1"># round_value_labels_decimals.</span>
+                    <span class="n">value_rounded</span> <span class="o">=</span> <span class="p">(</span>
+                        <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">round_value_labels_to_decimals</span><span class="p">))</span>
+                        <span class="k">if</span> <span class="n">round_value_labels_to_decimals</span> <span class="o">==</span> <span class="mi">0</span>
+                        <span class="k">else</span> <span class="n">value</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">round_value_labels_to_decimals</span><span class="p">)</span>
+                    <span class="p">)</span>
+
+                    <span class="c1"># Values with more than 2 digits get displayed with smaller</span>
+                    <span class="c1"># font size to fit them better</span>
+                    <span class="n">axes</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+                        <span class="n">text_x</span><span class="p">,</span>
+                        <span class="n">text_y</span><span class="p">,</span>
+                        <span class="n">value_rounded</span><span class="p">,</span>
+                        <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+                        <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+                        <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
+                        <span class="n">size</span><span class="o">=</span><span class="n">default_font_size</span> <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="k">else</span> <span class="s2">&quot;smaller&quot;</span><span class="p">,</span>
+                    <span class="p">)</span>
+
+<div class="viewcode-block" id="MatplotlibPlotter.plot_box_chart"><a class="viewcode-back" href="../../../modules/hifis_surveyval.plotting.html#hifis_surveyval.plotting.matplotlib_plotter.MatplotlibPlotter.plot_box_chart">[docs]</a>    <span class="k">def</span> <span class="nf">plot_box_chart</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">data_frame</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">data_frames</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">plot_file_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate a box chart from the provided data.</span>
+
+<span class="sd">        Each column in the frame corresponds to one box with whiskers.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data_frame (Optional[DataFrame]):</span>
+<span class="sd">                A singular data frame. Syntactic sugar for using</span>
+<span class="sd">                `data_frame=x` instead of `data_frames=[x]`.</span>
+<span class="sd">            data_frames (List[DataFrame]):</span>
+<span class="sd">                A list of data frames. The columns with the same column</span>
+<span class="sd">                index across all the frames are grouped together.</span>
+<span class="sd">            plot_file_name (str):</span>
+<span class="sd">                Optional file name which is used to store the plot to a file.</span>
+<span class="sd">                If this argument is an empty string (Default) for this</span>
+<span class="sd">                argument, a suitable file name is auto-generated.</span>
+<span class="sd">            \*\*kwargs:</span>
+<span class="sd">                plot_title (str):</span>
+<span class="sd">                    The title text for the plot. (Default: &quot;&quot;)</span>
+<span class="sd">                x_axis_label (str):</span>
+<span class="sd">                    The label for the x-axis. Default: &quot;&quot;)</span>
+<span class="sd">                x_label_rotation (int):</span>
+<span class="sd">                    Allows to rotate the x-axis labels for better</span>
+<span class="sd">                    readability. Value is given in degrees. (Default: 0)</span>
+<span class="sd">                y_axis_label (str):</span>
+<span class="sd">                    The label for the y-axis. Default: &quot;&quot;)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;figure.autolayout&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+        <span class="n">x_rotation</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;x_label_rotation&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># Create a new holder for the data frames to not manipulate the default</span>
+        <span class="c1"># parameter</span>
+        <span class="n">_data_frames</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">data_frames</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="k">if</span> <span class="n">data_frames</span> <span class="k">else</span> <span class="p">[]</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">data_frame</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">data_frame</span><span class="o">.</span><span class="n">empty</span><span class="p">):</span>
+            <span class="n">_data_frames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data_frame</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_data_frames</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Attempt to create box plot </span><span class="si">{</span><span class="n">plot_file_name</span><span class="si">}</span><span class="s2"> without &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;data. Skipping this plot.&quot;</span>
+            <span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">column_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="n">_data_frames</span><span class="p">)</span>
+        <span class="n">frame_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">_data_frames</span><span class="p">)</span>
+
+        <span class="n">figure</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;plot_title&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;x_axis_label&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;y_axis_label&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="s2">&quot;on&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s2">&quot;major&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightgray&quot;</span><span class="p">)</span>
+
+        <span class="n">x_tick_labels</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">column_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">column_count</span><span class="p">):</span>
+            <span class="n">group_position</span> <span class="o">=</span> <span class="n">column_index</span> <span class="o">*</span> <span class="n">frame_count</span>
+            <span class="n">data_frame_counter</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="n">_data_frames</span><span class="p">:</span>
+
+                <span class="c1"># Handle frames with fewer columns</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">column_index</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="c1"># Using the factor 0.75 to keep plots of one group closer</span>
+                <span class="c1"># together</span>
+                <span class="n">position</span> <span class="o">=</span> <span class="n">group_position</span> <span class="o">+</span> <span class="n">data_frame_counter</span> <span class="o">*</span> <span class="mf">0.75</span>
+                <span class="n">x_tick_labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">column_index</span><span class="p">])</span>
+                <span class="n">column_frame</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="n">column_index</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+                <span class="n">plot</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+                    <span class="n">column_frame</span><span class="p">,</span>
+                    <span class="n">positions</span><span class="o">=</span><span class="p">[</span><span class="n">position</span><span class="p">],</span>
+                    <span class="n">widths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                    <span class="n">patch_artist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="p">)</span>
+
+                <span class="c1"># Fill the box background so the boxes overlay the grid lines</span>
+                <span class="k">for</span> <span class="n">patch</span> <span class="ow">in</span> <span class="n">plot</span><span class="p">[</span><span class="s2">&quot;boxes&quot;</span><span class="p">]:</span>
+                    <span class="n">patch</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s2">&quot;wheat&quot;</span><span class="p">)</span>
+                <span class="n">data_frame_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span>
+            <span class="n">x_tick_labels</span><span class="p">,</span>
+            <span class="n">rotation</span><span class="o">=</span><span class="n">x_rotation</span><span class="p">,</span>
+            <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;right&quot;</span> <span class="k">if</span> <span class="n">x_rotation</span> <span class="k">else</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span>
+            <span class="n">rotation_mode</span><span class="o">=</span><span class="s2">&quot;anchor&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Adapt the figure to its content</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_figure_size</span><span class="p">(</span><span class="n">column_count</span> <span class="o">*</span> <span class="n">frame_count</span> <span class="o">*</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_output_pyplot_image</span><span class="p">(</span><span class="n">plot_file_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="MatplotlibPlotter.plot_matrix_chart"><a class="viewcode-back" href="../../../modules/hifis_surveyval.plotting.html#hifis_surveyval.plotting.matplotlib_plotter.MatplotlibPlotter.plot_matrix_chart">[docs]</a>    <span class="k">def</span> <span class="nf">plot_matrix_chart</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">data_frame</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span>
+        <span class="n">plot_file_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">invert_colors</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">value_label_decimals</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Plot given data frame as matrix chart.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data_frame (DataFrame):</span>
+<span class="sd">                The data frame to plot.</span>
+<span class="sd">            plot_file_name (str):</span>
+<span class="sd">                (Optional) The file name stem for the output file.</span>
+<span class="sd">            invert_colors (bool):</span>
+<span class="sd">                (Optional) Use an inverted color scheme for plotting. This</span>
+<span class="sd">                is recommended for plotting data that represents the absence of</span>
+<span class="sd">                something. Defaults to False.</span>
+<span class="sd">            value_label_decimals (int):</span>
+<span class="sd">                Round label values to the number of decimals. (Default: 2)</span>
+<span class="sd">            \*\*kwargs:</span>
+<span class="sd">                plot_title (str):</span>
+<span class="sd">                    The title text for the plot. (Dafault: &quot;&quot;)</span>
+<span class="sd">                x_axis_label (str):</span>
+<span class="sd">                    The label for the x-axis. Default: &quot;&quot;)</span>
+<span class="sd">                x_label_rotation (int):</span>
+<span class="sd">                    Allows to rotate the x-axis labels for better</span>
+<span class="sd">                    readability. Value is given in degrees. (Default: 0)</span>
+<span class="sd">                y_axis_label (str):</span>
+<span class="sd">                    The label for the y-axis. Default: &quot;&quot;)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;figure.autolayout&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+        <span class="n">color_map_name</span> <span class="o">=</span> <span class="s2">&quot;Blues_r&quot;</span> <span class="k">if</span> <span class="n">invert_colors</span> <span class="k">else</span> <span class="s2">&quot;Blues&quot;</span>
+        <span class="n">color_map</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="n">color_map_name</span><span class="p">)</span>
+
+        <span class="n">column_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_frame</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+        <span class="n">row_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_frame</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+        <span class="n">x_tick_labels</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">data_frame</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span>
+        <span class="p">]</span>
+
+        <span class="n">x_rotation</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;x_label_rotation&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">figure</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data_frame</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">color_map</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;plot_title&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;x_axis_label&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;y_axis_label&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">column_count</span><span class="p">))</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">row_count</span><span class="p">))</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span>
+            <span class="n">x_tick_labels</span><span class="p">,</span>
+            <span class="n">rotation</span><span class="o">=</span><span class="n">x_rotation</span><span class="p">,</span>
+            <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;right&quot;</span> <span class="k">if</span> <span class="n">x_rotation</span> <span class="k">else</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span>
+            <span class="n">rotation_mode</span><span class="o">=</span><span class="s2">&quot;anchor&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">data_frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+        <span class="c1"># Loop over the data and annotate the actual values</span>
+        <span class="n">upper_limit</span> <span class="o">=</span> <span class="n">data_frame</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.25</span> <span class="o">*</span> <span class="n">upper_limit</span> <span class="k">if</span> <span class="n">invert_colors</span> <span class="k">else</span> <span class="mf">0.75</span> <span class="o">*</span> <span class="n">upper_limit</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row_count</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">column_count</span><span class="p">):</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">data_frame</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">value_label_decimals</span><span class="p">)</span>
+                <span class="n">switch_color</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span>
+                    <span class="p">(</span><span class="n">value</span> <span class="o">&lt;</span> <span class="n">threshold</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">invert_colors</span>
+                    <span class="k">else</span> <span class="p">(</span><span class="n">value</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="p">)</span>
+                <span class="p">)</span>
+                <span class="n">axes</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+                    <span class="n">j</span><span class="p">,</span>
+                    <span class="n">i</span><span class="p">,</span>
+                    <span class="n">value</span><span class="p">,</span>
+                    <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+                    <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+                    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span> <span class="k">if</span> <span class="n">switch_color</span> <span class="k">else</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_output_pyplot_image</span><span class="p">(</span><span class="n">plot_file_name</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, HIFIS Software.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

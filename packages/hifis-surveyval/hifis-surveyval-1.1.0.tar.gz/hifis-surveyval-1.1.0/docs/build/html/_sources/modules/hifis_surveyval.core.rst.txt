@@ -1,0 +1,45 @@
+hifis\_surveyval.core package
+=============================
+
+Submodules
+----------
+
+hifis\_surveyval.core.dispatch module
+-------------------------------------
+
+.. automodule:: hifis_surveyval.core.dispatch
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+hifis\_surveyval.core.preprocess module
+---------------------------------------
+
+.. automodule:: hifis_surveyval.core.preprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+hifis\_surveyval.core.settings module
+-------------------------------------
+
+.. automodule:: hifis_surveyval.core.settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+hifis\_surveyval.core.util module
+---------------------------------
+
+.. automodule:: hifis_surveyval.core.util
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: hifis_surveyval.core
+   :members:
+   :undoc-members:
+   :show-inheritance:

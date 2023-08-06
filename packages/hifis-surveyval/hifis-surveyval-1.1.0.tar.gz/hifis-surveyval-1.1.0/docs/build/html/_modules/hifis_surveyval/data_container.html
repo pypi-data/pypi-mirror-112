@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hifis_surveyval.data_container &mdash; hifis_surveyval  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> hifis_surveyval
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pages/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pages/preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pages/accessing_data.html">Accessing the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pages/development.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pages/api.html">API Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">hifis_surveyval</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>hifis_surveyval.data_container</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for hifis_surveyval.data_container</h1><div class="highlight"><pre>
+<span></span><span class="c1"># hifis-surveyval</span>
+<span class="c1"># Framework to help developing analysis scripts for the HIFIS Software survey.</span>
+<span class="c1">#</span>
+<span class="c1"># SPDX-FileCopyrightText: 2021 HIFIS Software &lt;support@hifis.net&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># SPDX-License-Identifier: GPL-3.0-or-later</span>
+<span class="c1">#</span>
+<span class="c1"># This program is free software: you can redistribute it and/or modify</span>
+<span class="c1"># it under the terms of the GNU General Public License as published by</span>
+<span class="c1"># the Free Software Foundation, either version 3 of the License, or</span>
+<span class="c1"># (at your option) any later version.</span>
+<span class="c1">#</span>
+<span class="c1"># This program is distributed in the hope that it will be useful,</span>
+<span class="c1"># but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="c1"># GNU General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1"># You should have received a copy of the GNU General Public License</span>
+<span class="c1"># along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module provides the definitions for a data container.</span>
+
+<span class="sd">The container is meant to serve as the data source for the individual analysis</span>
+<span class="sd">functions.</span>
+
+<span class="sd">.. currentmodule:: hifis_surveyval.data_container</span>
+<span class="sd">.. moduleauthor:: HIFIS Software &lt;software@hifis.net&gt;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">warning</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+
+<span class="kn">from</span> <span class="nn">hifis_surveyval.models.mixins.identifiable</span> <span class="kn">import</span> <span class="n">Identifiable</span>
+<span class="kn">from</span> <span class="nn">hifis_surveyval.models.mixins.yaml_constructable</span> <span class="kn">import</span> <span class="n">YamlDict</span><span class="p">,</span> <span class="n">YamlList</span>
+<span class="kn">from</span> <span class="nn">hifis_surveyval.models.question</span> <span class="kn">import</span> <span class="n">Question</span>
+<span class="kn">from</span> <span class="nn">hifis_surveyval.models.question_collection</span> <span class="kn">import</span> <span class="n">QuestionCollection</span>
+
+
+<div class="viewcode-block" id="DataContainer"><a class="viewcode-back" href="../../modules/hifis_surveyval.html#hifis_surveyval.data_container.DataContainer">[docs]</a><span class="k">class</span> <span class="nc">DataContainer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The data container holds the data read from the command line.</span>
+
+<span class="sd">    All data is grouped into question collections, which in turn hold the</span>
+<span class="sd">    questions.</span>
+<span class="sd">    During the loading, the DataContainer will keep track of answer sets</span>
+<span class="sd">    which contradict the validation rules set in the metadata (e.g. no</span>
+<span class="sd">    answer being given despite being mandatory.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1">#: Name of the ID column in the Limesurvey CSV data</span>
+    <span class="n">ID_COLUMN_NAME</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;id&quot;</span>
+
+<div class="viewcode-block" id="DataContainer.__init__"><a class="viewcode-back" href="../../modules/hifis_surveyval.html#hifis_surveyval.data_container.DataContainer.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set up an empty data container.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_survey_questions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">QuestionCollection</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_invalid_answer_sets</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></div>
+        <span class="c1"># Track participant IDs with invalid answer sets.</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">survey_questions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">QuestionCollection</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Obtain all survey questions stored in the data container.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A list of QuestionCollections that contain all the survey</span>
+<span class="sd">            questions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_survey_questions</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">invalid_answer_sets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get all participants who gave invalid answers.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A set with the IDs of participants who had their answers marked</span>
+<span class="sd">            as invalid.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_invalid_answer_sets</span>
+
+<div class="viewcode-block" id="DataContainer.load_metadata"><a class="viewcode-back" href="../../modules/hifis_surveyval.html#hifis_surveyval.data_container.DataContainer.load_metadata">[docs]</a>    <span class="k">def</span> <span class="nf">load_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">yaml</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">YamlList</span><span class="p">,</span> <span class="n">YamlDict</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load additional metadata from YAML data.</span>
+
+<span class="sd">        If the given yaml is valid, the received metadata will be added to the</span>
+<span class="sd">        known survey questions.</span>
+<span class="sd">        QuestionCollections that fail to parse will not be added to the survey</span>
+<span class="sd">        questions and the exception will instead be logged as a warning.</span>
+<span class="sd">        It is safe to repeatedly call this function, if multiple sources for</span>
+<span class="sd">        metadata need to be processed.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            yaml:</span>
+<span class="sd">                Either a list of YamlDictionaries or a single YamlDictionary.</span>
+<span class="sd">                Each YamlDictionary is expected to hold a QuestionCollection,</span>
+<span class="sd">                Otherwise parsing will fail.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">yaml</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="c1"># in case this is a single value put it in the list for the</span>
+            <span class="c1"># one-size-fits-all solution below</span>
+            <span class="n">yaml</span> <span class="o">=</span> <span class="p">[</span><span class="n">yaml</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">new_collection_data</span> <span class="ow">in</span> <span class="n">yaml</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_add_collection_from_yaml</span><span class="p">(</span><span class="n">new_collection_data</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">thrown_exception</span><span class="p">:</span>
+                <span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error while parsing metadata: </span><span class="si">{</span><span class="n">thrown_exception</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_add_collection_from_yaml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_collection_yaml</span><span class="p">:</span> <span class="n">YamlDict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a new question collection from YAML and add it to survey data.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            new_collection_yaml:</span>
+<span class="sd">                A YAML mapping containing the data for one question collection.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new_collection</span> <span class="o">=</span> <span class="n">QuestionCollection</span><span class="o">.</span><span class="n">from_yaml_dictionary</span><span class="p">(</span>
+            <span class="n">new_collection_yaml</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">new_collection</span><span class="o">.</span><span class="n">full_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_survey_questions</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Attempt to add QuestionCollection &quot;</span> <span class="s2">&quot;with duplicate ID&quot;</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_survey_questions</span><span class="p">[</span><span class="n">new_collection</span><span class="o">.</span><span class="n">full_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_collection</span>
+
+<div class="viewcode-block" id="DataContainer.load_survey_data"><a class="viewcode-back" href="../../modules/hifis_surveyval.html#hifis_surveyval.data_container.DataContainer.load_survey_data">[docs]</a>    <span class="k">def</span> <span class="nf">load_survey_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">csv_data</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load survey data as given in a CSV file.</span>
+
+<span class="sd">        The data is expected to be given in such a way that the outer list</span>
+<span class="sd">        represents the rows and the inner list the columns within each row</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Separate the header so it does not get in the way of processing later</span>
+        <span class="n">header</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">csv_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">body</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="n">csv_data</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+        <span class="n">question_cache</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Question</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1"># The question cache associates column indices with questions</span>
+        <span class="c1"># It is here to avoid having to constantly look up the questions all</span>
+        <span class="c1"># over again. This expects that in each row the indices for the</span>
+        <span class="c1"># questions are identical.</span>
+
+        <span class="c1"># Step 1: Find the column for the participant IDs</span>
+        <span class="n">id_column_index</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">DataContainer</span><span class="o">.</span><span class="n">ID_COLUMN_NAME</span><span class="p">)</span>
+
+        <span class="c1"># Step 2: Find the Question for each of the headings</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">header</span><span class="p">)):</span>
+            <span class="n">potential_question_id</span> <span class="o">=</span> <span class="n">header</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">question</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">question_for_id</span><span class="p">(</span><span class="n">potential_question_id</span><span class="p">)</span>
+                <span class="n">question_cache</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">question</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">IndexError</span><span class="p">):</span>
+                <span class="c1"># TODO: log ignored columns for potential CSV debugging?</span>
+                <span class="k">continue</span>
+
+        <span class="k">assert</span> <span class="n">id_column_index</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">question_cache</span>
+
+        <span class="c1"># Step 3: Iterate through each row and insert the values for answer</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">body</span><span class="p">:</span>
+            <span class="n">participant_id</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">id_column_index</span><span class="p">]</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="n">question_index</span><span class="p">,</span> <span class="n">question</span><span class="p">)</span> <span class="ow">in</span> <span class="n">question_cache</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">answer</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">question_index</span><span class="p">]</span>
+                <span class="n">question</span><span class="o">.</span><span class="n">add_answer</span><span class="p">(</span><span class="n">participant_id</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataContainer.collection_for_id"><a class="viewcode-back" href="../../modules/hifis_surveyval.html#hifis_surveyval.data_container.DataContainer.collection_for_id">[docs]</a>    <span class="k">def</span> <span class="nf">collection_for_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QuestionCollection</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Query for a given question collection given by its full ID.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            full_id:</span>
+<span class="sd">                The full ID of the question collection to be returned.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            The question collection for the given ID.</span>
+<span class="sd">        Raises:</span>
+<span class="sd">            KeyError - if the collection for the given ID could not be found.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_survey_questions</span><span class="p">[</span><span class="n">full_id</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="DataContainer.question_for_id"><a class="viewcode-back" href="../../modules/hifis_surveyval.html#hifis_surveyval.data_container.DataContainer.question_for_id">[docs]</a>    <span class="k">def</span> <span class="nf">question_for_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Question</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Query for a given question given by its full ID.</span>
+
+<span class="sd">        This is a shorthand for querying questions directly.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            full_id:</span>
+<span class="sd">                The full ID of the question to be returned.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            The question for the given ID.</span>
+<span class="sd">        Raises:</span>
+<span class="sd">            KeyError:</span>
+<span class="sd">                If either the collection or the question for the given ID</span>
+<span class="sd">                could not be found.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">parts</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">full_id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">Identifiable</span><span class="o">.</span><span class="n">HIERARCHY_SEPARATOR</span><span class="p">)</span>
+        <span class="n">collection_id</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">question_id</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">collection</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">collection_for_id</span><span class="p">(</span><span class="n">collection_id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">collection</span><span class="o">.</span><span class="n">question_for_id</span><span class="p">(</span><span class="n">question_id</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataContainer.remove_invalid_answer_sets"><a class="viewcode-back" href="../../modules/hifis_surveyval.html#hifis_surveyval.data_container.DataContainer.remove_invalid_answer_sets">[docs]</a>    <span class="k">def</span> <span class="nf">remove_invalid_answer_sets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Remove answer sets that were marked as invalid.</span>
+
+<span class="sd">        The answers are removed on a per-participant basis.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">collection</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_survey_questions</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">collection</span><span class="o">.</span><span class="n">remove_answers</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_invalid_answer_sets</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataContainer.mark_answers_invalid"><a class="viewcode-back" href="../../modules/hifis_surveyval.html#hifis_surveyval.data_container.DataContainer.mark_answers_invalid">[docs]</a>    <span class="k">def</span> <span class="nf">mark_answers_invalid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant_ids</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Mark the answers given by participants as invalid.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            participant_ids:</span>
+<span class="sd">                The IDs of participants who gave invalid answers.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_invalid_answer_sets</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">participant_ids</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataContainer.mark_answers_valid"><a class="viewcode-back" href="../../modules/hifis_surveyval.html#hifis_surveyval.data_container.DataContainer.mark_answers_valid">[docs]</a>    <span class="k">def</span> <span class="nf">mark_answers_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant_ids</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Mark the answers given by participants as valid.</span>
+
+<span class="sd">        NOTE: This does not restore previously removed invalid answers.</span>
+<span class="sd">        Invalid IDs are silently ignored.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            participant_ids:</span>
+<span class="sd">                The IDs of participants for whom answers are to be marked as</span>
+<span class="sd">                valid.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_invalid_answer_sets</span><span class="o">.</span><span class="n">difference_update</span><span class="p">(</span><span class="n">participant_ids</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">question_collection_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the IDs of all question collections.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A list of question collection IDs as strings.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_survey_questions</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+<div class="viewcode-block" id="DataContainer.data_frame_for_ids"><a class="viewcode-back" href="../../modules/hifis_surveyval.html#hifis_surveyval.data_container.DataContainer.data_frame_for_ids">[docs]</a>    <span class="k">def</span> <span class="nf">data_frame_for_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">requested_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compose a Data Frame form a list of question (collection) IDs.</span>
+
+<span class="sd">        IDs for which no question or question collection can be found will</span>
+<span class="sd">        be skipped. These will be logged at debug level.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            requested_ids:</span>
+<span class="sd">                A list of full question or question collection IDs,</span>
+<span class="sd">                which are to be composed by participant into a single data</span>
+<span class="sd">                frame.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            A single data frame containing the answers of all participants</span>
+<span class="sd">            for the given questions / question collections.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">frame_pieces</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">piece_id</span> <span class="ow">in</span> <span class="n">requested_ids</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">frame_pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_frame_for_id</span><span class="p">(</span><span class="n">piece_id</span><span class="p">))</span>
+            <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+                <span class="k">continue</span>
+
+        <span class="k">return</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">frame_pieces</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_frame_for_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">piece_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Obtain a data frame representation for a Question (Collection) ID.</span>
+
+<span class="sd">        This is a helper method used to transform either questions or</span>
+<span class="sd">        question collections into data frames based on their ID. It a</span>
+<span class="sd">        shortcut to be used in data_frame_for_ids() and not meant to be</span>
+<span class="sd">        called by the user. Use the appropriate functions of questions and</span>
+<span class="sd">        collections instead.</span>
+<span class="sd">        Args:</span>
+<span class="sd">            piece_id:</span>
+<span class="sd">                The full ID of either a question or question collection.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            A data frame matching the answers given per participant for the</span>
+<span class="sd">            question or question collection identified by the provided ID.</span>
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError:</span>
+<span class="sd">                When no Question or QuestionCollection with the given ID</span>
+<span class="sd">                exists.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">collection_for_id</span><span class="p">(</span><span class="n">piece_id</span><span class="p">)</span><span class="o">.</span><span class="n">as_data_frame</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">DataFrame</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">question_for_id</span><span class="p">(</span><span class="n">piece_id</span><span class="p">)</span><span class="o">.</span><span class="n">as_series</span><span class="p">())</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">piece_id</span><span class="si">}</span><span class="s2"> is not a valid &quot;</span> <span class="sa">f</span><span class="s2">&quot;question / collection ID&quot;</span>
+        <span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, HIFIS Software.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

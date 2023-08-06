@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hifis_surveyval.core package &mdash; hifis_surveyval  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="hifis_surveyval.models package" href="hifis_surveyval.models.html" />
+    <link rel="prev" title="hifis_surveyval package" href="hifis_surveyval.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hifis_surveyval
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pages/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/accessing_data.html">Accessing the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/development.html">Developer Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../pages/api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../pages/api.html#cli-interface">CLI Interface</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../pages/api.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="modules.html">hifis_surveyval</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="hifis_surveyval.html">hifis_surveyval package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hifis_surveyval</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../pages/api.html">API Documentation</a> &raquo;</li>
+        
+          <li><a href="modules.html">hifis_surveyval</a> &raquo;</li>
+        
+          <li><a href="hifis_surveyval.html">hifis_surveyval package</a> &raquo;</li>
+        
+      <li>hifis_surveyval.core package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modules/hifis_surveyval.core.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hifis-surveyval-core-package">
+<h1>hifis_surveyval.core package<a class="headerlink" href="#hifis-surveyval-core-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-hifis_surveyval.core.dispatch">
+<span id="hifis-surveyval-core-dispatch-module"></span><h2>hifis_surveyval.core.dispatch module<a class="headerlink" href="#module-hifis_surveyval.core.dispatch" title="Permalink to this headline">¶</a></h2>
+<p>This module allows discovery and dispatch of analysis functions.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="hifis_surveyval.core.dispatch.Dispatcher">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">hifis_surveyval.core.dispatch.</span></span><span class="sig-name descname"><span class="pre">Dispatcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surveyval</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="hifis_surveyval.html#hifis_surveyval.hifis_surveyval.HIFISSurveyval" title="hifis_surveyval.hifis_surveyval.HIFISSurveyval"><span class="pre">hifis_surveyval.hifis_surveyval.HIFISSurveyval</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="hifis_surveyval.html#hifis_surveyval.data_container.DataContainer" title="hifis_surveyval.data_container.DataContainer"><span class="pre">hifis_surveyval.data_container.DataContainer</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hifis_surveyval/core/dispatch.html#Dispatcher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.dispatch.Dispatcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provides analysis function module and execution facilities.</p>
+<p>The operations are based on a module folder and optionally a list of
+module names to be given at initialization.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.core.dispatch.Dispatcher.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surveyval</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="hifis_surveyval.html#hifis_surveyval.hifis_surveyval.HIFISSurveyval" title="hifis_surveyval.hifis_surveyval.HIFISSurveyval"><span class="pre">hifis_surveyval.hifis_surveyval.HIFISSurveyval</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="hifis_surveyval.html#hifis_surveyval.data_container.DataContainer" title="hifis_surveyval.data_container.DataContainer"><span class="pre">hifis_surveyval.data_container.DataContainer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/dispatch.html#Dispatcher.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.dispatch.Dispatcher.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the Dispatcher.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>surveyval (HIFISSurveyval): Passing HIFISSurveyval object in in</dt><dd><p>order to pass it through to
+particular analysis scripts.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.core.dispatch.Dispatcher.discover">
+<span class="sig-name descname"><span class="pre">discover</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/dispatch.html#Dispatcher.discover"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.dispatch.Dispatcher.discover" title="Permalink to this definition">¶</a></dt>
+<dd><p>Discover all potential or selected modules in the module folder.</p>
+<p>Iterate over all modules in the module folder (non-recursive) or
+selected modules only and cache the names of those python (.py) files.
+Exception: __init__.py is excluded.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.core.dispatch.Dispatcher.load_all_modules">
+<span class="sig-name descname"><span class="pre">load_all_modules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/dispatch.html#Dispatcher.load_all_modules"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.dispatch.Dispatcher.load_all_modules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to load and run all discovered modules.</p>
+<p>Make sure to run discover() beforehand.
+If no modules have been discovered, a warning will be logged.
+See Also: load_module()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.core.dispatch.Dispatcher.load_module">
+<span class="sig-name descname"><span class="pre">load_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/dispatch.html#Dispatcher.load_module"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.dispatch.Dispatcher.load_module" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attempt to load a module given by name.</p>
+<p>Exceptions raised from import will be caught and logged as error on
+the console.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>module_name (str): The name of the module, without the .py ending</p>
+</dd>
+<dt>Raises:</dt><dd><p>ImportError: Exception thrown if script could not be loaded.
+AttributeError: Exception thrown if run method could not be
+executed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-hifis_surveyval.core.preprocess">
+<span id="hifis-surveyval-core-preprocess-module"></span><h2>hifis_surveyval.core.preprocess module<a class="headerlink" href="#module-hifis_surveyval.core.preprocess" title="Permalink to this headline">¶</a></h2>
+<p>This module starts a preprocessing script, if it exists.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="hifis_surveyval.core.preprocess.Preprocessor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">hifis_surveyval.core.preprocess.</span></span><span class="sig-name descname"><span class="pre">Preprocessor</span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/preprocess.html#Preprocessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.preprocess.Preprocessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provides running a preprocessing script.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.core.preprocess.Preprocessor.preprocess">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">preprocess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#hifis_surveyval.core.settings.Settings" title="hifis_surveyval.core.settings.Settings"><span class="pre">hifis_surveyval.core.settings.Settings</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="hifis_surveyval.html#hifis_surveyval.data_container.DataContainer" title="hifis_surveyval.data_container.DataContainer"><span class="pre">hifis_surveyval.data_container.DataContainer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="hifis_surveyval.html#hifis_surveyval.data_container.DataContainer" title="hifis_surveyval.data_container.DataContainer"><span class="pre">hifis_surveyval.data_container.DataContainer</span></a></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/preprocess.html#Preprocessor.preprocess"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.preprocess.Preprocessor.preprocess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run preprocessing script.</p>
+<p>Exceptions raised from import will be caught and logged as error on
+the console.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>settings (Settings): The settings of the run.
+data (DataContainer): The data to preprocess.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ImportError: Exception thrown if script could not be loaded.
+AttributeError: Exception thrown if run method could not be
+executed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-hifis_surveyval.core.settings">
+<span id="hifis-surveyval-core-settings-module"></span><h2>hifis_surveyval.core.settings module<a class="headerlink" href="#module-hifis_surveyval.core.settings" title="Permalink to this headline">¶</a></h2>
+<p>This module handles settings.</p>
+<p>It provides:
+* settings classes
+* getter for settings
+* an export function to create a file</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.FileSettings">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">hifis_surveyval.core.settings.</span></span><span class="sig-name descname"><span class="pre">FileSettings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_env_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'&lt;object</span> <span class="pre">object&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file_encoding</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_secrets_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PREPROCESSING_FILENAME</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">PosixPath('preprocess.py')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">METADATA</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">PosixPath('metadata/meta.yml')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SCRIPT_FOLDER</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">PosixPath('scripts')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SCRIPT_NAMES</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OUTPUT_FORMAT</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="hifis_surveyval.plotting.html#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat" title="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat"><span class="pre">hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">SupportedOutputFormat.SCREEN</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OUTPUT_FOLDER</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">PosixPath('output')</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hifis_surveyval/core/settings.html#FileSettings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.settings.FileSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.env_settings.BaseSettings</span></code></p>
+<p>Settings, that the user can change.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.FileSettings.Config">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Config</span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/settings.html#FileSettings.Config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.settings.FileSettings.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Subclass for specification.</p>
+<p>See <a class="reference external" href="https://pydantic-docs.helpmanual.io/usage/model_config/">https://pydantic-docs.helpmanual.io/usage/model_config/</a>
+for details.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.FileSettings.Config.case_sensitive">
+<span class="sig-name descname"><span class="pre">case_sensitive</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.FileSettings.Config.case_sensitive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.FileSettings.METADATA">
+<span class="sig-name descname"><span class="pre">METADATA</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.FileSettings.METADATA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.FileSettings.OUTPUT_FOLDER">
+<span class="sig-name descname"><span class="pre">OUTPUT_FOLDER</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.FileSettings.OUTPUT_FOLDER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.FileSettings.OUTPUT_FORMAT">
+<span class="sig-name descname"><span class="pre">OUTPUT_FORMAT</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="hifis_surveyval.plotting.html#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat" title="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat"><span class="pre">hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat</span></a></em><a class="headerlink" href="#hifis_surveyval.core.settings.FileSettings.OUTPUT_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.FileSettings.PREPROCESSING_FILENAME">
+<span class="sig-name descname"><span class="pre">PREPROCESSING_FILENAME</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.FileSettings.PREPROCESSING_FILENAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.FileSettings.SCRIPT_FOLDER">
+<span class="sig-name descname"><span class="pre">SCRIPT_FOLDER</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.FileSettings.SCRIPT_FOLDER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.FileSettings.SCRIPT_NAMES">
+<span class="sig-name descname"><span class="pre">SCRIPT_NAMES</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hifis_surveyval.core.settings.FileSettings.SCRIPT_NAMES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.FileSettings.validate_preprocessing_script">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">validate_preprocessing_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_validate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pathlib.Path</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/settings.html#FileSettings.validate_preprocessing_script"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.settings.FileSettings.validate_preprocessing_script" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assure, that preprocessing script is a Python file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>to_validate (str):</dt><dd><p>Preprocessing script path as string to be validated.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>Path: Path to the preprocessing script.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.Settings">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">hifis_surveyval.core.settings.</span></span><span class="sig-name descname"><span class="pre">Settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_env_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'&lt;object</span> <span class="pre">object&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file_encoding</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_secrets_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PREPROCESSING_FILENAME</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">PosixPath('preprocess.py')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">METADATA</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">PosixPath('metadata/meta.yml')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SCRIPT_FOLDER</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">PosixPath('scripts')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SCRIPT_NAMES</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OUTPUT_FORMAT</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="hifis_surveyval.plotting.html#hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat" title="hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat"><span class="pre">hifis_surveyval.plotting.supported_output_format.SupportedOutputFormat</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">SupportedOutputFormat.SCREEN</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OUTPUT_FOLDER</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">PosixPath('output')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CONFIG_FILENAME</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">PosixPath('hifis-surveyval.yml')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VERBOSITY</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RUN_TIMESTAMP</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ANALYSIS_OUTPUT_PATH</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TRUE_VALUES</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">{'1',</span> <span class="pre">'On',</span> <span class="pre">'True',</span> <span class="pre">'Y',</span> <span class="pre">'Yes'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FALSE_VALUES</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">{'0',</span> <span class="pre">'False',</span> <span class="pre">'N',</span> <span class="pre">'No',</span> <span class="pre">'Off'}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hifis_surveyval/core/settings.html#Settings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.settings.Settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hifis_surveyval.core.settings.SystemSettings" title="hifis_surveyval.core.settings.SystemSettings"><code class="xref py py-class docutils literal notranslate"><span class="pre">hifis_surveyval.core.settings.SystemSettings</span></code></a>, <a class="reference internal" href="#hifis_surveyval.core.settings.FileSettings" title="hifis_surveyval.core.settings.FileSettings"><code class="xref py py-class docutils literal notranslate"><span class="pre">hifis_surveyval.core.settings.FileSettings</span></code></a></p>
+<p>Merge two sub setting types.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.Settings.ANALYSIS_OUTPUT_PATH">
+<span class="sig-name descname"><span class="pre">ANALYSIS_OUTPUT_PATH</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.Settings.ANALYSIS_OUTPUT_PATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.Settings.CONFIG_FILENAME">
+<span class="sig-name descname"><span class="pre">CONFIG_FILENAME</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.Settings.CONFIG_FILENAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.Settings.FALSE_VALUES">
+<span class="sig-name descname"><span class="pre">FALSE_VALUES</span></span><em class="property"><span class="pre">:</span> <span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hifis_surveyval.core.settings.Settings.FALSE_VALUES" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of strings to be interpreted as boolean ‘False’ when
+parsing the input data.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.Settings.RUN_TIMESTAMP">
+<span class="sig-name descname"><span class="pre">RUN_TIMESTAMP</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.Settings.RUN_TIMESTAMP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.Settings.TRUE_VALUES">
+<span class="sig-name descname"><span class="pre">TRUE_VALUES</span></span><em class="property"><span class="pre">:</span> <span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hifis_surveyval.core.settings.Settings.TRUE_VALUES" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of strings to be interpreted as boolean ‘True’ when
+parsing the input data.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.Settings.VERBOSITY">
+<span class="sig-name descname"><span class="pre">VERBOSITY</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.Settings.VERBOSITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.Settings.create_default_config_file">
+<span class="sig-name descname"><span class="pre">create_default_config_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/settings.html#Settings.create_default_config_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.settings.Settings.create_default_config_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a file to store the config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.Settings.load_config_file">
+<span class="sig-name descname"><span class="pre">load_config_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/settings.html#Settings.load_config_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.settings.Settings.load_config_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an instance of Settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.Settings.set_verbosity">
+<span class="sig-name descname"><span class="pre">set_verbosity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose_count</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/settings.html#Settings.set_verbosity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.settings.Settings.set_verbosity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpret the verbosity option count.</p>
+<p>Set the log levels accordingly.
+The used log level is also stored in the settings.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>verbose_count (int): The amount of verbose option triggers.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.SystemSettings">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">hifis_surveyval.core.settings.</span></span><span class="sig-name descname"><span class="pre">SystemSettings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_env_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'&lt;object</span> <span class="pre">object&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file_encoding</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_secrets_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CONFIG_FILENAME</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">PosixPath('hifis-surveyval.yml')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VERBOSITY</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RUN_TIMESTAMP</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ANALYSIS_OUTPUT_PATH</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TRUE_VALUES</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">{'1',</span> <span class="pre">'On',</span> <span class="pre">'True',</span> <span class="pre">'Y',</span> <span class="pre">'Yes'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FALSE_VALUES</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">{'0',</span> <span class="pre">'False',</span> <span class="pre">'N',</span> <span class="pre">'No',</span> <span class="pre">'Off'}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hifis_surveyval/core/settings.html#SystemSettings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.settings.SystemSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.env_settings.BaseSettings</span></code></p>
+<p>Settings, that are not loaded from file.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.SystemSettings.ANALYSIS_OUTPUT_PATH">
+<span class="sig-name descname"><span class="pre">ANALYSIS_OUTPUT_PATH</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.SystemSettings.ANALYSIS_OUTPUT_PATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.SystemSettings.CONFIG_FILENAME">
+<span class="sig-name descname"><span class="pre">CONFIG_FILENAME</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.SystemSettings.CONFIG_FILENAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.SystemSettings.FALSE_VALUES">
+<span class="sig-name descname"><span class="pre">FALSE_VALUES</span></span><em class="property"><span class="pre">:</span> <span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hifis_surveyval.core.settings.SystemSettings.FALSE_VALUES" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of strings to be interpreted as boolean ‘False’ when
+parsing the input data.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.SystemSettings.RUN_TIMESTAMP">
+<span class="sig-name descname"><span class="pre">RUN_TIMESTAMP</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.SystemSettings.RUN_TIMESTAMP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.SystemSettings.TRUE_VALUES">
+<span class="sig-name descname"><span class="pre">TRUE_VALUES</span></span><em class="property"><span class="pre">:</span> <span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hifis_surveyval.core.settings.SystemSettings.TRUE_VALUES" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of strings to be interpreted as boolean ‘True’ when
+parsing the input data.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.SystemSettings.VERBOSITY">
+<span class="sig-name descname"><span class="pre">VERBOSITY</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#hifis_surveyval.core.settings.SystemSettings.VERBOSITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.SystemSettings.assemble_output_path">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">assemble_output_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_validate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pathlib.Path</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/settings.html#SystemSettings.assemble_output_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.settings.SystemSettings.assemble_output_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assemble path from user settings and datetime.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>to_validate (str):</dt><dd><p>Analysis output path as string to be validated.</p>
+</dd>
+<dt>values (Dict[str, Any]):</dt><dd><p>Parts of the analysis output path to be
+concatenated as an absolute path.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>Path: Path to the output folder of the an analysis run.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.SystemSettings.case_insensitive_values">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">case_insensitive_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_validate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Set</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/settings.html#SystemSettings.case_insensitive_values"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.settings.SystemSettings.case_insensitive_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extend list of values to match all cases.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>to_validate (str): Analysis output path as string to be validated.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>Set: Set of false and true values accepted as boolean values in</dt><dd><p>the data.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hifis_surveyval.core.settings.SystemSettings.set_timestamp">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">set_timestamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_validate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/settings.html#SystemSettings.set_timestamp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.settings.SystemSettings.set_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current datetime.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>to_validate (str): Date-time string to be validated.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: Date-time string in a specific format.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-hifis_surveyval.core.util">
+<span id="hifis-surveyval-core-util-module"></span><h2>hifis_surveyval.core.util module<a class="headerlink" href="#module-hifis_surveyval.core.util" title="Permalink to this headline">¶</a></h2>
+<p>This module provides helper functions.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hifis_surveyval.core.util.create_example_script">
+<span class="sig-prename descclassname"><span class="pre">hifis_surveyval.core.util.</span></span><span class="sig-name descname"><span class="pre">create_example_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#hifis_surveyval.core.settings.Settings" title="hifis_surveyval.core.settings.Settings"><span class="pre">hifis_surveyval.core.settings.Settings</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/util.html#create_example_script"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.util.create_example_script" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an example script from data payload at the default script location.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>settings (Settings):</dt><dd><p>Settings of the analysis run.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hifis_surveyval.core.util.create_preprocessing_script">
+<span class="sig-prename descclassname"><span class="pre">hifis_surveyval.core.util.</span></span><span class="sig-name descname"><span class="pre">create_preprocessing_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#hifis_surveyval.core.settings.Settings" title="hifis_surveyval.core.settings.Settings"><span class="pre">hifis_surveyval.core.settings.Settings</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/util.html#create_preprocessing_script"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.util.create_preprocessing_script" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an empty preprocessing script at the default location.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>settings (Settings):</dt><dd><p>Settings of the analysis run.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hifis_surveyval.core.util.cross_reference_sum">
+<span class="sig-prename descclassname"><span class="pre">hifis_surveyval.core.util.</span></span><span class="sig-name descname"><span class="pre">cross_reference_sum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data:</span> <span class="pre">&lt;MagicMock</span> <span class="pre">id='140701758977600'&gt;</span></em>, <em class="sig-param"><span class="pre">grouping:</span> <span class="pre">&lt;MagicMock</span> <span class="pre">id='140701756048096'&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;MagicMock</span> <span class="pre">id=’140701758977600’&gt;</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/util.html#cross_reference_sum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.util.cross_reference_sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cross references a data frame with a series and count correlations.</p>
+<p>The data frame is processed column-wise.
+For each column, indices are grouped up by their respective value in the
+grouping series and each group is summed up.</p>
+<p>Columns with incomplete data or rows that can not be cross-referenced may
+be dropped.</p>
+<p>In the context of the survey analysis, data usually is a multiple choice
+question, while the grouping series is a single choice question.
+They get matched by the participant IDs and the correlations get summed up.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>data (DataFrame):</dt><dd><p>A data frame of which the columns are to be grouped and summed up.</p>
+</dd>
+<dt>grouping (Series):</dt><dd><p>A series with indices (mostly) matching that of “data”, associating
+each index with a group towards which the values of “data” are to
+be counted.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>DataFrame:</dt><dd><p>A data frame containing the columns from data (minus dropped
+columns) and the unique values of the grouping series as indices.
+Each cell at [column, index] holds the sum of the values in the
+respective column of the data which corresponded to the index in
+the grouping series.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hifis_surveyval.core.util.dataframe_value_counts">
+<span class="sig-prename descclassname"><span class="pre">hifis_surveyval.core.util.</span></span><span class="sig-name descname"><span class="pre">dataframe_value_counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">dataframe:</span> <span class="pre">&lt;MagicMock</span> <span class="pre">id='140701758977600'&gt;</span></em>, <em class="sig-param"><span class="pre">relative_values:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></em>, <em class="sig-param"><span class="pre">drop_nans:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;MagicMock</span> <span class="pre">id=’140701758977600’&gt;</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/util.html#dataframe_value_counts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.util.dataframe_value_counts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Count how often a unique value appears in each column of a data frame.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>dataframe (DataFrame):</dt><dd><p>The data frame of which the values shall be counted.</p>
+</dd>
+<dt>relative_values (bool):</dt><dd><p>Instead of absolute counts fill the cells with their relative
+contribution to the column total</p>
+</dd>
+<dt>drop_nans (bool):</dt><dd><p>Whether to remove the NaN value count. Defaults to True</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>DataFrame:</dt><dd><p>A new data frame with the same columns as the input. The index is
+changed to represent the unique values and the cells contain the
+count of the unique values in the given column.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hifis_surveyval.core.util.filter_and_group_series">
+<span class="sig-prename descclassname"><span class="pre">hifis_surveyval.core.util.</span></span><span class="sig-name descname"><span class="pre">filter_and_group_series</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">base_data:</span> <span class="pre">&lt;MagicMock</span> <span class="pre">id='140701756048096'&gt;</span></em>, <em class="sig-param"><span class="pre">group_by:</span> <span class="pre">&lt;MagicMock</span> <span class="pre">id='140701756048096'&gt;</span></em>, <em class="sig-param"><span class="pre">min_value:</span> <span class="pre">Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></em>, <em class="sig-param"><span class="pre">max_value:</span> <span class="pre">Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;MagicMock</span> <span class="pre">id=’140701758977600’&gt;</span></span></span><a class="reference internal" href="../_modules/hifis_surveyval/core/util.html#filter_and_group_series"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hifis_surveyval.core.util.filter_and_group_series" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter a series and group its values according to another series.</p>
+<p>Generate a sparse DataFrame in which all values of base_data are assigned
+to a column according to the corresponding value for the same index in
+group_by.</p>
+<p>Indexes not present in group_by will result in an empty row.
+Indexes not present in base_data will result in an empty column.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>base_data (Series):</dt><dd><p>The series of which the data is to be sorted and filtered.</p>
+</dd>
+<dt>group_by (Series):</dt><dd><p>A series assigning each index to a group.</p>
+</dd>
+<dt>min_value (Optional[float]):</dt><dd><p>An optional minimum value. All values of base_data below this
+value will be excluded from the result. Not set by default.</p>
+</dd>
+<dt>max_value (Optional[float]):</dt><dd><p>An optional maximum value. All values of base_data above this
+value will be excluded from the result. Not set by default.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>DataFrame:</dt><dd><p>A new DataFrame where each row represents an index of base_data
+and each column is one of the unique values of the group_by series.
+The values of base_data are put into the column where the base_data
+index matches the group_by index.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hifis_surveyval.core">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hifis_surveyval.core" title="Permalink to this headline">¶</a></h2>
+<p>This package provides core functionalities.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="hifis_surveyval.models.html" class="btn btn-neutral float-right" title="hifis_surveyval.models package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="hifis_surveyval.html" class="btn btn-neutral float-left" title="hifis_surveyval package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, HIFIS Software.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

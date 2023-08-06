@@ -1,0 +1,48 @@
+hifis\_surveyval package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   hifis_surveyval.core
+   hifis_surveyval.models
+   hifis_surveyval.plotting
+   hifis_surveyval.printing
+
+Submodules
+----------
+
+hifis\_surveyval.cli module
+---------------------------
+
+.. automodule:: hifis_surveyval.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+hifis\_surveyval.data\_container module
+---------------------------------------
+
+.. automodule:: hifis_surveyval.data_container
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+hifis\_surveyval.hifis\_surveyval module
+----------------------------------------
+
+.. automodule:: hifis_surveyval.hifis_surveyval
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: hifis_surveyval
+   :members:
+   :undoc-members:
+   :show-inheritance:

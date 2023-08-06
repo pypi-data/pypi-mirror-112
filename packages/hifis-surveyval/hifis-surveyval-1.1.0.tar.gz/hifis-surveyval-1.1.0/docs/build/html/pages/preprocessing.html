@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Preprocessing &mdash; hifis_surveyval  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Accessing the Data" href="accessing_data.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hifis_surveyval
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Preprocessing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cleaning-invalid-data">Cleaning Invalid Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="accessing_data.html">Accessing the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hifis_surveyval</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Preprocessing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/pages/preprocessing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="preprocessing">
+<h1>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h1>
+<p>HIFIS-Surveyval comes with the possibility to run a preprocessing script
+before all analysis scripts. Where it is located and how it is named is set
+in the settings.</p>
+<p>Preprocessing is skipped in case no preprocessing script exists.</p>
+<p>You can create an empty preprocessing script with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hifis-surveyval init -p
+</pre></div>
+</div>
+<p>Within the preprocessing script, you need to have a function called
+<code class="docutils literal notranslate"><span class="pre">preprocessing(…)</span></code>, which receives a <code class="docutils literal notranslate"><span class="pre">DataContainer</span></code> Object as argument
+and is expected to return a <code class="docutils literal notranslate"><span class="pre">DataContainer</span></code>-instance.</p>
+<p>The data you receive is the parsed raw data from your survey’s CSV, enriched with the metadata you provided.
+You can do whatever you like within the script and modify the data as you wish.
+Common use-cases would be to filter the data, like dropping incomplete questionnaires.
+If you are concerned about reproducibility it is highly recommended to also publish the preprocessing script along with you raw data and metadata.</p>
+<p>All analysis scripts run afterwards will receive a copy of the
+<cite>DataContainer</cite> returned by the preprocessing script.</p>
+<div class="section" id="cleaning-invalid-data">
+<h2>Cleaning Invalid Data<a class="headerlink" href="#cleaning-invalid-data" title="Permalink to this headline">¶</a></h2>
+<p>A usual task in preprocessing is to remove data that is invalid for any reason.
+The <code class="docutils literal notranslate"><span class="pre">DataContainer</span></code> keeps track of participant IDs for those participants
+that submitted incomplete answer sets.
+An answer set is considered incomplete if not all questions that are marked
+as <cite>mandatory</cite> have been answered.
+You can manually mark the answer sets of participants as invalid by using
+the <code class="docutils literal notranslate"><span class="pre">mark_as_invalid(…)</span></code>-method of the <code class="docutils literal notranslate"><span class="pre">DataContainer</span></code>-instance.
+This can be used to also exclude data that you found to be unfitting after
+manual inspection.</p>
+<p>Contrary, there is also a <code class="docutils literal notranslate"><span class="pre">mark_as_valid(…)</span></code>-method to manually override
+decisions made by the framework.</p>
+<p>After you have marked the answer sets accordingly, you can call the
+<code class="docutils literal notranslate"><span class="pre">remove_invalid_answers()</span></code>-method to clean up all marked answer sets
+across all questions and collections.
+Please note that this will change your data container irrevocably.</p>
+<p>For fine tuning, the <code class="docutils literal notranslate"><span class="pre">QuestionCollection</span></code>- and <code class="docutils literal notranslate"><span class="pre">Question</span></code>-classes also
+offer methods to remove answers of selected participants directly.</p>
+<p>See also the provided example script for implementation details.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="accessing_data.html" class="btn btn-neutral float-right" title="Accessing the Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, HIFIS Software.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
