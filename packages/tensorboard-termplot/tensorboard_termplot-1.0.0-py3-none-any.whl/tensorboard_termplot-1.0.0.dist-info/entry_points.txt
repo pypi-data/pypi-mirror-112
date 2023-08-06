@@ -1,0 +1,3 @@
+[console_scripts]
+tensorboard-termplot = tensorboard_termplot.main:run
+
