@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+famog/__init__.py
+famog.egg-info/PKG-INFO
+famog.egg-info/SOURCES.txt
+famog.egg-info/dependency_links.txt
+famog.egg-info/requires.txt
+famog.egg-info/top_level.txt
