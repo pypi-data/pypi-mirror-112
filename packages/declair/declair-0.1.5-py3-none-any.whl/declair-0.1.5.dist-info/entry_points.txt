@@ -1,0 +1,4 @@
+[console_scripts]
+declair-execute = declair.bin.declair_execute:main
+declair-omniboard = declair.bin.declair_omniboard:main
+
