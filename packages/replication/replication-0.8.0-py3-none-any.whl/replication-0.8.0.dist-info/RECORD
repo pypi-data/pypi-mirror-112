@@ -1,0 +1,17 @@
+replication/__init__.py,sha256=Cns6JDtWocICAIUmXtieyp_A03xgOxJjYb16z6H_U-g,756
+replication/constants.py,sha256=fJyqxYO6hgTMhTXrRJDyH5lVobBqLzj3cU8Fm5hfRss,1428
+replication/exception.py,sha256=znOrzGTdvPo_mp0b4CfZepbPyzt5YpF3OzLsVl-clys,1283
+replication/interface.py,sha256=Exouvfh46R8N5zZkaiS6fkBgybtYCAIUTDyp9ZBl4-8,16287
+replication/objects.py,sha256=So5TjYYieD3UW_kstMBhb24ANcvzmadUccSsmp4hyw8,5826
+replication/porcelain.py,sha256=IMn742oGTF2dwQtc2qHvXa052cbBSRItqpp6JsJJkPs,15217
+replication/protocol.py,sha256=WCbCICxuTaGJCr1woaxbi0b8R4L-cxeLmZo-oj4fGXQ,8104
+replication/repository.py,sha256=yhowfJTsXDPD2NQoH8YLTNKcRkkD0gBaRZ3kaJoBuw8,9051
+replication/server.py,sha256=C5hU3uCalhX2AGQADbDYto5M8TRjiSxSPQFSIdeQo8g,24337
+replication/ttl.py,sha256=5cbql2Q-VRgNcwWVIA8bI_b8J1S5XVcZd1hkLRqVPx8,2527
+replication/utils.py,sha256=ODj641lJv10bBvlqG2IuSTs6__ZOQ9DldWEpPj_qrNk,1552
+replication-0.8.0.dist-info/LICENSE,sha256=OiSrVxYEAB0WqcqVBTg9a016QS1eFHk0G7fRthpedAo,35081
+replication-0.8.0.dist-info/METADATA,sha256=Vc1bqM8mTdTFu_8rDBUqCzPQOrSA5Kw_W2OjtoKhM7E,876
+replication-0.8.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+replication-0.8.0.dist-info/entry_points.txt,sha256=ugGqNxKKLDShJ1zGWocECFCpdPF3RxZNZlsBTrqUM7Y,62
+replication-0.8.0.dist-info/top_level.txt,sha256=muoOaurCAg4yVff9giwfoMBMGYccH8Ps5IvA0HtJ_U8,12
+replication-0.8.0.dist-info/RECORD,,
