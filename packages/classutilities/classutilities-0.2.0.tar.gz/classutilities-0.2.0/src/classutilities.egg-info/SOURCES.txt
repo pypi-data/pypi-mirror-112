@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+src/classutilities/__init__.py
+src/classutilities/classproperty.py
+src/classutilities/configclass.py
+src/classutilities.egg-info/PKG-INFO
+src/classutilities.egg-info/SOURCES.txt
+src/classutilities.egg-info/dependency_links.txt
+src/classutilities.egg-info/top_level.txt
+src/classutilities/tests/__init__.py
+src/classutilities/tests/test_classproperty.py
+src/classutilities/tests/test_configclass.py
