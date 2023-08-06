@@ -1,0 +1,14 @@
+fracture_fea_laf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fracture_fea_laf/_version.py,sha256=jZ5uWOiyV1Hb9rhNyo3bAgfWmHx8_xkueUWpcUrkz_w,21
+fracture_fea_laf/mesh.py,sha256=w4cRHbyjvG8-asHpN4FDtZ673YmtHrAR31jRg0Sb6UY,55557
+fracture_fea_laf/plot.py,sha256=n-0-Le4IMhoUxcfRmuivWQ811hNJrG2GdcFXGFhLYu0,5395
+fracture_fea_laf/postprocess.py,sha256=XYLlimSfqBSKNFVi5_IWEgwEd9lGVpDd22Wu6tyfjRk,6728
+fracture_fea_laf/specimen_geometry.py,sha256=fIH3hsCplPBEdRRbNYoDQrvFdjoIlVdZNygjTKBTYFc,1832
+fracture_fea_laf/utils.py,sha256=_SQPQv4SVoJtF3xO0OZf5Y5ATE7s0Z7OXdtwgV90pSM,2070
+fracture_fea_laf/materials/__init__.py,sha256=F4Vsw1BfiStlypyC-7d8oSniX27IJctb6L0nTiDa5_A,779
+fracture_fea_laf/materials/euromat_A.py,sha256=0gAGN9biXHSpdSFPYHk9KE9Qw-RJT-qFv6xzpLCaPh4,2952
+fracture_fea_laf-0.1.1.dist-info/LICENSE,sha256=C9rGFyvjo27CA7wFuQfZ0BfOSR3a-DDAQx2HN3DqXVg,1091
+fracture_fea_laf-0.1.1.dist-info/METADATA,sha256=jRPqp8-Hmb4zu_fj2joJ_xkhgsnX6E_nzmmcrFaqhCc,1492
+fracture_fea_laf-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fracture_fea_laf-0.1.1.dist-info/top_level.txt,sha256=0P0nXWK4GhzWEqyG0jc3V2oycCLxrV-o655-DP9DGAY,17
+fracture_fea_laf-0.1.1.dist-info/RECORD,,
