@@ -1,0 +1,3 @@
+[console_scripts]
+nvn = nvn.__main__:main
+
