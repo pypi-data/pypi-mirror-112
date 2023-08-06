@@ -1,0 +1,8 @@
+setup.py
+src/knada_bq_connector/__init__.py
+src/knada_bq_connector/bq_connector.py
+src/knada_bq_connector.egg-info/PKG-INFO
+src/knada_bq_connector.egg-info/SOURCES.txt
+src/knada_bq_connector.egg-info/dependency_links.txt
+src/knada_bq_connector.egg-info/requires.txt
+src/knada_bq_connector.egg-info/top_level.txt
