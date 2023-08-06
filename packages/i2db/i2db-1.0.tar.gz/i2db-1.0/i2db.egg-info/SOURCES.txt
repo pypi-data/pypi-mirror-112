@@ -1,0 +1,11 @@
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+i2db/__init__.py
+i2db.egg-info/PKG-INFO
+i2db.egg-info/SOURCES.txt
+i2db.egg-info/dependency_links.txt
+i2db.egg-info/requires.txt
+i2db.egg-info/top_level.txt
