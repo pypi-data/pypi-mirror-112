@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: mynn
+Version: 0.9.4
+Summary: A pure-Python neural network library
+Home-page: https://github.com/davidmascharka/MyNN
+Author: David Mascharka
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: numpy (>=1.13)
+Requires-Dist: mygrad (>=1.6)
+
+
+MyNN is a simple NumPy-centric neural network library that builds on top of MyGrad. It provides
+convenient wrappers for such functionality as
+
+- Convenient neural network layers (e.g. convolutional, dense, batch normalization, dropout)
+- Weight initialization functions (e.g. Glorot, He, uniform, normal)
+- Neural network activation functions (e.g. elu, glu, tanh, sigmoid)
+- Common loss functions (e.g. cross-entropy, KL-divergence, Huber loss)
+- Optimization algorithms (e.g. sgd, adadelta, adam, rmsprop)
+
+MyNN comes complete with several examples to ramp you up to being a fluent user of the library.
+It was written as an extension to MyGrad for rapid prototyping of neural networks with minimal dependencies,
+a clean codebase with excellent documentation, and as a learning tool.
+
+
