@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/matplotlib_dashboard/__init__.py
+src/matplotlib_dashboard/matplotlib_dashboard.py
+src/matplotlib_dashboard.egg-info/PKG-INFO
+src/matplotlib_dashboard.egg-info/SOURCES.txt
+src/matplotlib_dashboard.egg-info/dependency_links.txt
+src/matplotlib_dashboard.egg-info/top_level.txt
