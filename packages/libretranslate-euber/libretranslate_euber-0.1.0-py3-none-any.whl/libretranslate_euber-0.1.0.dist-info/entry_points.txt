@@ -1,0 +1,3 @@
+[console_scripts]
+libretranslate-euber=libretranslate_euber.main:main
+
