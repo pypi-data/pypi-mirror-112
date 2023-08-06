@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/filemanipulator/Examples.py
+src/filemanipulator/__init__.py
+src/filemanipulator/filemanipulator.py
+src/filemanipulator.egg-info/PKG-INFO
+src/filemanipulator.egg-info/SOURCES.txt
+src/filemanipulator.egg-info/dependency_links.txt
+src/filemanipulator.egg-info/top_level.txt
