@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: gee-fwi
+Version: 1.0.3
+Summary: Google Earth Engine Fire Weather Index Calculator
+Home-page: https://github.com/josefmtd/gee-fwi
+Author: Josef Matondang
+Author-email: admin@josefmtd.com
+License: MIT
+Description: UNKNOWN
+Keywords: fire weather index
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
