@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/carleslibs/__init__.py
+src/carleslibs/datetimeutils.py
+src/carleslibs/fileutils.py
+src/carleslibs/pythonutils.py
+src/carleslibs.egg-info/PKG-INFO
+src/carleslibs.egg-info/SOURCES.txt
+src/carleslibs.egg-info/dependency_links.txt
+src/carleslibs.egg-info/top_level.txt
