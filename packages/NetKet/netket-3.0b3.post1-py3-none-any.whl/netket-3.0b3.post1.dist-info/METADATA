@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: netket
+Version: 3.0b3.post1
+Summary: UNKNOWN
+Home-page: http://github.com/netket/netket
+Author: Giuseppe Carleo et al.
+Author-email: netket@netket.org
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: numpy (~=1.18)
+Requires-Dist: scipy (~=1.5)
+Requires-Dist: tqdm (~=4.56)
+Requires-Dist: plum-dispatch (~=1.3)
+Requires-Dist: numba (<0.54,>=0.52)
+Requires-Dist: python-igraph (~=0.9)
+Requires-Dist: jax (<=0.2.17,>0.2.16)
+Requires-Dist: jaxlib (>=0.1.69)
+Requires-Dist: flax (<0.4,>=0.3.0)
+Requires-Dist: orjson (~=3.4)
+Requires-Dist: optax (<0.0.10,>=0.0.2)
+Provides-Extra: all
+Requires-Dist: mpi4py (<4,>=3.0.1) ; extra == 'all'
+Requires-Dist: mpi4jax (~=0.3.1) ; extra == 'all'
+Requires-Dist: pytest (>=6) ; extra == 'all'
+Requires-Dist: pytest-xdist (>=2) ; extra == 'all'
+Requires-Dist: coverage (>=5) ; extra == 'all'
+Requires-Dist: pytest-cov (>=2.10.1) ; extra == 'all'
+Requires-Dist: networkx (~=2.4) ; extra == 'all'
+Requires-Dist: flaky (>=3.7) ; extra == 'all'
+Requires-Dist: pre-commit ; extra == 'all'
+Requires-Dist: black (==21.6b0) ; extra == 'all'
+Requires-Dist: flakehell (>=0.9) ; extra == 'all'
+Requires-Dist: tensorboardx (>=2.0.0) ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: pytest (>=6) ; extra == 'dev'
+Requires-Dist: pytest-xdist (>=2) ; extra == 'dev'
+Requires-Dist: coverage (>=5) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.10.1) ; extra == 'dev'
+Requires-Dist: networkx (~=2.4) ; extra == 'dev'
+Requires-Dist: flaky (>=3.7) ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: black (==21.6b0) ; extra == 'dev'
+Requires-Dist: flakehell (>=0.9) ; extra == 'dev'
+Provides-Extra: mpi
+Requires-Dist: mpi4py (<4,>=3.0.1) ; extra == 'mpi'
+Requires-Dist: mpi4jax (~=0.3.1) ; extra == 'mpi'
+Provides-Extra: tensorboard
+Requires-Dist: tensorboardx (>=2.0.0) ; extra == 'tensorboard'
+
+NetKet is an open-source project delivering cutting-edge
+         methods for the study of many-body quantum systems with artificial
+         neural networks and machine learning techniques.
+
