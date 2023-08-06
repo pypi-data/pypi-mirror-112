@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+ddddocr/__init__.py
+ddddocr/common.onnx
+ddddocr.egg-info/PKG-INFO
+ddddocr.egg-info/SOURCES.txt
+ddddocr.egg-info/dependency_links.txt
+ddddocr.egg-info/requires.txt
+ddddocr.egg-info/top_level.txt
