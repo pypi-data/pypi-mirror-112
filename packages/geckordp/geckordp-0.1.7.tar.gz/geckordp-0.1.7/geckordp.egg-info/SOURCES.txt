@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+geckordp/__init__.py
+geckordp/buffers.py
+geckordp/firefox.py
+geckordp/logger.py
+geckordp/profile.py
+geckordp/rdp_client.py
+geckordp/settings.py
+geckordp/utils.py
+geckordp.egg-info/PKG-INFO
+geckordp.egg-info/SOURCES.txt
+geckordp.egg-info/dependency_links.txt
+geckordp.egg-info/requires.txt
+geckordp.egg-info/top_level.txt
