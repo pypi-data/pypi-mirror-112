@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+include_file/__init__.py
+include_file/__main__.py
+include_file/models.py
+include_file.egg-info/PKG-INFO
+include_file.egg-info/SOURCES.txt
+include_file.egg-info/dependency_links.txt
+include_file.egg-info/requires.txt
+include_file.egg-info/top_level.txt
