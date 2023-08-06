@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: stakenix
+Version: 0.1.12
+Summary: Package for work with different DB's by a simple interface
+License: MIT
+Author: Pavlo Levin
+Author-email: levin@bbq.agency
+Requires-Python: >=3.7.1,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=5.4.1,<6.0.0)
+Requires-Dist: SQLAlchemy (<1.4)
+Requires-Dist: clickhouse-driver (>=0.2.0,<0.3.0)
+Requires-Dist: clickhouse-sqlalchemy (>=0.1.5,<0.2.0)
+Requires-Dist: mysql-connector (>=2.2.9,<3.0.0)
+Requires-Dist: openpyxl (>=3.0.7,<4.0.0)
+Requires-Dist: pandas (>=1.2.3,<2.0.0)
+Requires-Dist: psycopg2-binary (>=2.8.6,<3.0.0)
+Requires-Dist: pymongo (>=3.11.3,<4.0.0)
+Requires-Dist: pyodbc (>=4.0.30,<5.0.0)
+Requires-Dist: sshtunnel (>=0.4.0,<0.5.0)
