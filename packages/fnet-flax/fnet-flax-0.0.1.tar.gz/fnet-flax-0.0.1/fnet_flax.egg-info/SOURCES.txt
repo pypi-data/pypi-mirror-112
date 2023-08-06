@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+fnet_flax/__init__.py
+fnet_flax/model.py
+fnet_flax.egg-info/PKG-INFO
+fnet_flax.egg-info/SOURCES.txt
+fnet_flax.egg-info/dependency_links.txt
+fnet_flax.egg-info/requires.txt
+fnet_flax.egg-info/top_level.txt
+fnet_flax.egg-info/zip-safe
