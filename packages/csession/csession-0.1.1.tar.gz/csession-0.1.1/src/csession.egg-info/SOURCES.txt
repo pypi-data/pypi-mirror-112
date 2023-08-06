@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/csession/__init__.py
+src/csession/customsession.py
+src/csession.egg-info/PKG-INFO
+src/csession.egg-info/SOURCES.txt
+src/csession.egg-info/dependency_links.txt
+src/csession.egg-info/top_level.txt
