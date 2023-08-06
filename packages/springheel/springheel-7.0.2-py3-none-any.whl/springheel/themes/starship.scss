@@ -1,0 +1,338 @@
+@import "chapbook.scss";
+@import "toc.scss";
+@import "webtoon.scss";
+@media screen {
+/*Starship*/
+    #starship {
+    /* Default (small) screens */
+    $bg: #1e1e1e;
+    $outt: #eee;
+    $box: #ebebeb;
+    $int: #222;
+    $acc: #ffff66;
+        body {
+            background-color: $bg;
+            background-image: url(stars.png);
+            background-attachment: fixed;
+            color: $outt;
+            text-align: center;
+            font-size: 1.5em;
+            font-family: sans-serif;
+            margin: 0em;
+            box-sizing: border-box;
+        }
+        main, figure {
+            margin-left: 0em;
+            padding-left: 0em;
+            margin-right: 0em;
+            padding-right: 0em;
+            max-width: 100%;
+        }
+        h1 {
+            margin: 0em;
+            font-size: 2em;
+        }
+        figure#comic, section.page {
+            padding: 0em;
+            text-align: center;
+            border: none;
+            margin: 0em;
+            figcaption {
+                background: $box;
+                color: $int;
+                padding: 0.5em;
+                border: ridge medium $box;
+            }
+        }
+        .cominavbox {
+            background: $bg;
+            border: ridge medium $box;
+        }
+        .cominavbox, .cominavbox li {
+            display: inline-block;
+            padding: 0em;
+        }
+        .cominavbox li {
+            padding: 0.5em;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+        #skippy {
+            text-align: left;
+            margin: 0.5em;
+            a {
+                padding: 0.5em
+            }
+            a:active, a:focus {
+                background: #000;
+            }
+        }
+        #topnav li {
+            display: inline-block;
+        }
+        @include toc;
+        #toc {
+            a {
+                text-shadow: none;
+            }
+            li {
+                background: none
+            }
+        }
+        ol {
+            line-height: 2em
+        }
+        #commentary, #transcript {
+            text-align: left;
+        }
+        .statline {
+            font-weight: bold;
+        }
+        a:link {
+            color: #254893;
+            text-decoration: underline
+        }
+        a:visited {
+            color: #882070;
+        }
+        a:hover {
+            outline: dashed thin currentColor
+        }
+        a:hover, a:focus, a:active {
+            color: #145740;
+        }
+        a:focus, a:active {
+            outline-width: medium;
+            outline-style: solid;
+        }
+        #bannera {
+            a:hover {
+                outline-color: $acc
+            }
+            a:focus, a:active {
+                color: $acc
+            }
+        }
+        footer {
+            border-top: solid thin $acc;
+            margin: 1em 0em 0em 0em;
+            padding: 0em;
+            p {
+                margin-left: 0em;
+                text-align: left;
+            }
+        }
+        footer a, .cominavbox a, #skippy a {
+            &:link {
+                color: #73b9ff;
+            }
+            &:visited {
+                color: #dea6ff;
+            }
+            &:hover, &:focus, &:active {
+                color: $acc;
+            }
+        }
+        main > section, main > .tagslist {
+            text-align: left;
+        }
+        #topnav li, main > div, main > section, main > .tagslist, #toc {
+            background: $box;
+            color: $int;
+            padding: 0.5em;
+            border: ridge medium $box;
+        }
+        #commentary, #transcript {
+            padding-top: .5em;
+            padding-bottom: .5em;
+            padding-left: 1.2em;
+            padding-right: 1.4em;
+        }
+        img, embed, object, video {
+            max-width: 100%;
+            height: auto;
+        }
+        .archive li {
+            margin-top: 1em;
+        }
+        .char {
+            text-align: left;
+        }
+        .chartraits {
+            overflow-wrap: break-word;
+            dt:after {
+                content: ":"
+            }
+            dd:after {
+                content: "\A"; white-space: pre;
+            }
+            dd {
+                margin-left: 0em;
+            }
+            dt, dd {
+                display: inline;
+                white-space: pre-wrap;
+            }
+        }
+        .tagslist, .chapterarch {
+            list-style-type: none;
+            padding-left: 0em;
+        }
+        .archive .status, #extras h2:first-of-type {
+            margin-top: 0em
+        }
+        section.page {
+            width: auto;
+            background: none;
+            section, h2 {
+                background: $box;
+                border: ridge medium $box;
+                padding: 1em;
+            }
+            section {
+                text-align: left;
+                margin: 0em 1em;
+            }
+            figcaption {
+                margin: 0em 1em;
+                width: auto
+            }
+            .statline {
+                border-bottom: ridge medium $box;
+                padding-bottom: 1em;
+            }
+        }
+    /*Medium screens*/
+        @media screen and (min-width: 1024px) {
+            figure#comic, section.page {
+                img {
+                    vertical-align: middle;
+                    border: ridge thick $box;
+                }
+            }
+            .cominavbox {
+                margin: 1em;
+            }
+            .cominavbox li {
+                margin: 0em 1em;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+                border-bottom: inset medium $int;
+            }
+            h3 {
+                font-size: 1.2em
+            }
+            h2, h3, h4, h5, h6, #topnav li {
+                text-shadow: 0.05em 0.05em 0em #ffe;
+                font-weight: normal;
+            }
+            #topnav li {
+                padding: 0.5em;
+                margin: 0em;
+            }
+            .statline {
+                font-size: 0.8em;
+            }
+            footer p {
+                font-size: 0.7em;
+                margin-left: 1em;
+            }
+            main > section {
+                margin: 1em;
+                padding: 1em;
+                & h2 {
+                    margin: 0em 0em 1em 0em;
+                }
+            }
+            main > div, main > section, main > .tagslist, #toc {
+                margin: 1em;
+                width: 80%;
+            }
+            section.page {
+                margin: 1em;
+                width: auto;
+                background: none;
+                section, h2, figcaption {
+                    background: $box;
+                    border: ridge medium $box;
+                    padding: 1em;
+                    width: 80%;
+                }
+                section {
+                    text-align: left;
+                    margin: 0em 1em;
+                }
+                .statline {
+                    border-bottom: ridge medium $box;
+                    padding-bottom: 1em;
+                }
+            }
+            .main {
+                padding: 0.5em;
+                & p {
+                    margin-left: 0em;
+                }
+            }
+            .intro {
+                border: none;
+                margin: 0em;
+                padding: 0em;
+                text-align: left;
+                & h2 {
+                    margin-bottom: 0.5em;
+                };
+                & img {
+                    display: inline;
+                };
+                & .author {
+                    font-size: 0.8em;
+                    font-weight: bold;
+                }
+                & .desc {
+                    font-weight: bold;
+                }
+            }
+            .main, .intro {
+                text-align: left;
+                & p {
+                  text-align: left;
+                  margin: 1em;
+                }
+            }
+            .action {
+                font-weight: bold;
+            }
+            .charname {
+                font-weight: bold
+            }
+            .char {
+                padding: 1em;
+                h2 {
+                    margin-top: 0em;
+                };
+                p {
+                    text-indent: 1em;
+                };
+            }
+            .charimg {
+                margin: 0em 1em 1em 0em;
+                border: ridge medium $box;
+            }
+            .chartraits {
+                margin-top: 0em;
+            }
+            figure#comic, section.page {
+                figure {
+                    margin-left: 0em;
+                    margin-right: 0em;
+                }
+            }
+        }
+        @include chapbook;
+        @include webtoon;
+    }
+}

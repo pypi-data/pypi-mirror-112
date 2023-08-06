@@ -1,0 +1,320 @@
+@import "chapbook.scss";
+@import "webtoon.scss";
+@media screen {
+/*City*/
+    #city {
+    // Blues
+    // $bg: #3161D0;
+    $bg: #23396d;
+    $vbg: #203054;
+    $bc: #3A8CDE;
+    $borders: #375490;
+    // Purples
+    $bgn: #5923a9;
+    $bcn: #9581f8;
+    $vbgn: #2b1152;
+    $moon: #DA8DD3;
+    // Accents
+    $city: #00d3dc;
+    $c: #00edf5;
+    $vc: #99ffff;
+    $twinkle: #ddff77;
+    $t: #ECFFB3;
+    $vt: #ccffcc;
+    /* Default (small) screens */
+        body {
+            background-color: $vbg;
+            color: $vc;
+            text-align: center;
+            font-size: 1.5em;
+            font-family: sans-serif;
+            margin: 0em;            
+            display: grid;
+            grid-template-areas: 'skip' 'header' 'toc' 'main' 'footer';
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto 1fr;
+            grid-gap: 0;
+            margin: 0;
+            min-height: 100vh;
+            max-width: 100vw;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            margin: 0em;
+            grid-area: header;
+        }
+        footer {
+            padding-top: 1em;
+            margin-bottom: 0em;
+            grid-area: footer;
+        }
+        main {
+            grid-area: main;
+        }
+        main, figure {
+            margin-left: 0em;
+            padding-left: 0em;
+        }
+        main > div, main > section, figcaption, #topnav li, .cominavbox, ol.tagslist {
+            background-color: $bg;
+            color: $vt;
+            border: solid thick $twinkle;
+        }
+        main > div, main > section, ol.tagslist {
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-bottom: 1em;
+            margin-top: 1em
+        }
+        ol.tagslist {
+            text-align: left;
+            list-style: decimal inside none;
+        }
+        h1, .sbuttons {
+            margin: 0em;
+        }
+        figure {
+            padding: 0em;
+            margin: 0em;
+            border: none;
+            background: none;
+        }
+        figcaption {
+            padding: 1em;
+        }
+        .cominavbox, .cominavbox li {
+            display: inline-block;
+            padding: 0em;
+        }
+        .cominavbox li {
+            margin: 0em 1em;
+            padding: 0.5em;
+        }
+        ol, main {
+            line-height: 2em;
+        }
+        #skippy {
+            text-align: left;
+            margin: 0em;
+            padding: 0em 0em 1em 1em;
+            background: $vbg;
+            grid-area: skip
+        }
+        #topnav ul {
+            padding-left: 0em;
+            li {
+                display: inline-block;
+                padding: 0.5em;
+                margin: 0.5em 1em
+            }
+        }
+        #toc {
+            grid-area: toc;
+            padding-left: 1em;
+            margin-left: 0em;
+            border: solid thick $twinkle;
+            background: $bg;
+            ol {
+                text-align: left;
+                ol, li {
+                    border: 0;
+                };
+                li {
+                    display: list-item;
+                    list-style-type: decimal;
+                    padding-left: 0em
+                }
+            }
+        }
+        main > div, main > section {
+            text-align: left;
+        }
+        .statline {
+            font-weight: bold;
+        }
+        a:link, a:visited {
+            color: $t;
+            text-decoration: underline
+        }
+        a:hover {
+            text-decoration: underline
+        }
+        a:hover, a:focus, a:active {
+            color: $vc;
+        }
+        a:focus, a:active {
+            outline-width: medium;
+            outline-style: solid;
+        }
+        footer p {
+            margin-left: 0em;
+            text-align: left;
+        }
+        .archive {
+            vertical-align: top;
+            text-align: left;
+        }
+        img, embed, object, video {
+            max-width: 100%;
+            height: auto;
+        }
+        .action {
+            font-weight: bold;
+        }
+        .charname {
+            font-weight: bold
+        }
+        .intro, .chartext {
+            border: none;
+        }
+        .char {
+            text-align: left;
+            dt:after {
+                content: ":"
+            };
+            dd:after {
+                content: "\A"; white-space: pre;
+            };
+            dd {
+                margin-left: 0em;
+            };
+            dt, dd {
+                display: inline;
+                white-space: pre-wrap;
+            };
+            dt {
+                font-weight: bold;
+            };
+            dl {
+                font-size: 0.9em;
+            };
+            img {
+                margin: 1em;
+            };
+        }
+        main > .tagslist {
+            padding: 1em;
+        }
+        section.page figure.comic {
+            margin-left: 0em;
+            margin-right: 0em;
+        }
+    /*Medium screens*/
+        @media screen and (min-width: 1024px) {
+            body {
+                background-color: $vbg;
+                background: url("skyline.png");
+            }
+            figure {
+                margin: 0em 1em;
+                padding: 1em 0em;
+                width: auto;
+            }
+            .comic {
+                margin-left: 0em;
+                margin-right: 0em;
+                padding-left: 0em;
+                padding-right: 0em;
+            }
+            header {
+                background-color: $vbg;
+                background: $vbg url("moon.png") no-repeat top 1em right 1em;
+                h1 {
+                    padding-bottom: 1em;
+                    margin-bottom: 1em;
+                }
+            }
+            main > div, main > section, ol.tagslist, #toc {
+                text-align: left;
+                padding-left: 1em;
+                padding-right: 1em;
+                width: 80%;
+                margin: 1em;
+                h2 {
+                    background: url("5check.png") repeat-x 0% 100%;
+                    margin-bottom: 0.5em;
+                    padding-bottom: 0.5em;
+                }
+            }
+            .cominavbox {
+                margin: 1em 0em 0em 1em;
+                padding: 1em;
+                li {
+                    margin: 0em 1em;
+                }
+            }
+            #botbox {
+                margin-top: 0em
+            }
+            h1 {
+                font-size: 1.6em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            #topnav li {
+                padding-top: 1em;
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-bottom: 0.8em;
+                margin: 0em;
+            }
+            .statline {
+                font-size: 0.8em;
+                text-align: right;
+            }
+            footer {
+                background: $vbg;
+                margin-top: 1em;
+                p {
+                    font-size: 0.7em;
+                    margin-left: 0.5em;
+                }
+            }
+            .action {
+                text-indent: 1em;
+                font-weight: bold;
+            }
+            .main {
+                padding: 0.5em;
+                margin: auto;
+                width: 50%;
+                text-align: left;
+                & p {
+                    margin-left: 0em;
+                };
+                .author {
+                    text-indent: 2em;
+                }
+            }
+            .intro {
+                border: none;
+                margin: 0em 0.2em 0em 0.2em;
+                padding: 0em 0.2em 0em 0.2em;
+                width: 90%;
+                h2 {
+                    margin-top: 0em;
+                    margin-left: 0em;
+                };
+            }
+            .chartraits {
+                margin: 0em;
+                overflow-wrap: break-word;
+                &, .char img {
+                    display: inline-block;
+                    vertical-align: top;
+                    max-width: 50%
+                }
+            }
+            ol.tagslist {
+                padding: 2em;
+                li {
+                    margin-left: 1em;
+                }
+            }
+        }
+        @include chapbook;
+        @include webtoon;
+    }
+}

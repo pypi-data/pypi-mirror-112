@@ -1,0 +1,423 @@
+@import "chapbook.scss";
+@import "shadow.scss";
+@import "toc.scss";
+@import "webtoon.scss";
+@media screen {
+/*Magic Circle*/
+    #magiccircle {
+    $bg-color: #002;
+    $half-bg: rgba(0, 0, 34, 0.75);
+    $borders: #f48bff;
+    $out-text: #f9c2ff;
+    $in-text: #f9c2ff;
+    /* Default (small) screens */
+        body {
+            background: $bg-color;
+            color: $out-text;
+            text-align: center;
+            font-size: 1.5em;
+            font-family: serif;
+            margin: 0;
+            max-width: 100vw;
+            box-sizing: border-box;
+        }
+        main > div, main > section, main > .tagslist, #toc {
+            background: $half-bg;
+            border-top: solid thin $borders;
+            border-bottom: solid thin $borders;
+            color: $in-text;
+        }
+        #topnav li {
+            background: $half-bg;
+            border: solid thin $borders;
+            color: $in-text;
+        }
+        main, figure {
+            margin-left: 0em;
+            padding-left: 0em;
+        }
+        h1 {
+            margin: 0em;
+            text-shadow: 0em 0em 0.2em $bg-color,
+                         0em 0em 0.2em $bg-color,
+                         0em 0em 0.2em $bg-color,
+                         0em 0em 0.2em $bg-color,
+                         0em 0em 0.2em $bg-color,
+                         0em 0em 0.5em $bg-color,
+                         0em 0em 0.5em $bg-color;
+        }
+        figure, .page {
+            margin: 0em;
+            padding-top: 0em;
+            text-align: center;
+            border: none;
+            img {
+                margin: 0em;
+                border: thin solid $borders;
+                vertical-align: middle;
+                max-width: 99%;
+                height: auto
+            }
+        }
+        figcaption {
+            margin-bottom: 0em;
+            padding: 0.5em;
+        }
+        #botbox {
+            margin-top: 0em;
+            border-top: none;
+            li {
+                margin-top: 0em;
+                padding: 0.5em;
+            }
+            margin-bottom: 1em
+        }
+        .cominavbox, .cominavbox li {
+            display: inline-block;
+            padding: 0em;
+        }
+        p + p, li + li, div + div, section + section {
+            margin-top: 0.5em
+        }
+        #skippy {
+            text-align: left;
+            margin: 0em
+        }
+        #topnav {
+            margin-bottom: 1em;
+            & ul {
+                margin: 0em;
+                padding-left: 0em;
+            };
+            & li {
+                display: inline-block;
+                padding: 0.5em;
+            };
+            & a:link {
+                text-decoration: none
+            };
+            & a:hover {
+                text-decoration: underline
+            }
+        }
+        @include toc;
+        #toc {
+            margin: 1em 0em;
+            ol, li {
+                background: none
+            }
+        }
+        ol {
+            line-height: 2em;
+        }
+        header {
+            margin-top: 0em;
+            padding-top: 0em;
+            & img {
+                margin-top: 0em;
+                padding-top: 0em;
+                display: inline
+            }
+        }
+        main > div {
+            text-align: left;
+            padding: 0.5em 0em 0.5em 0.2em;
+        }
+        .statline {
+            font-weight: bold;
+        }
+        a:link {
+            color: #bad3ff;
+            text-decoration: underline
+        }
+        a:visited {
+            color: #d1adff;
+        }
+        a:hover, a:focus, a:active {
+            color: #ffabab;
+        }
+        a:focus, a:active {
+            outline-width: medium;
+            outline-style: solid;
+        }
+        footer {
+            margin-left: 1em;
+            text-align: left;
+            & a:link {
+                color: #bbf;
+                text-decoration: underline
+            };
+            & a:visited {
+                color: #daf;
+            };
+            & a:hover, & a:focus, & a:active {
+                color: #ffaaaa;
+            };
+        }
+        main > section {
+            text-align: left;
+            padding: 0em 1em;
+        }
+        img, embed, object, video {
+            max-width: 100%;
+            height: auto;
+        }
+        .action {
+            font-weight: bold;
+        }
+        .charname {
+            font-weight: bold
+        }
+        .chartext {
+            border: none;
+        }
+        .cominavbox {
+            background: $half-bg;
+            margin-bottom: 0em;
+            border: thin solid $borders;
+            border-bottom: none;
+            li {
+                padding: 0.5em;
+            }
+        }
+        #topbox {
+            border-bottom: none;
+        }
+        #botbox {
+            margin-top: 0em;
+            border: thin solid $borders;
+            border-top: none;
+            li {
+                margin-top: 0em;
+                padding: 0.5em;
+            }
+            margin-bottom: 1em
+        }
+        .intro {
+            border: none;
+            background: none;
+            margin: 0em;
+            padding: 0em;
+            & + .intro {
+                border-top: solid thin $borders;
+            }
+            h2 {
+                margin-top: 0em;
+                padding-top: 0em;
+            }
+        }
+        .char {
+            text-align: left;
+            dt {
+                font-style: italic
+            }
+            dt:after {
+                content: ":"
+            };
+            dd:after {
+                content: "\A"; white-space: pre;
+            };
+            dd {
+                margin-left: 0em;
+            };
+            dt, dd {
+                display: inline;
+                white-space: pre-wrap;
+            };
+            dl {
+                font-size: 0.9em;
+                margin-left: 1em;
+            };
+            img {
+                border: solid thin $borders;
+            };
+            .chartraits {
+                overflow-wrap: break-word
+            }
+        }
+        .charname {
+            margin-left: 1em;
+            padding-top: 1em;
+        };
+        ul.tagslist {
+            list-style-type: none;
+        }
+        ol {
+            text-align: left;
+            list-style: decimal inside none;
+            padding-left: 0em;
+        }
+        ol.tagslist {
+            padding-left: 1em
+        }
+        .page:first-of-type {
+            margin-top: 0em;
+        }
+    /*Medium screens*/
+        @media screen and (min-width: 1024px) {
+            body {
+                background: $bg-color url("glowy-magic-circle.jpg") fixed no-repeat 100% 0%;
+                background-size: 50%;
+            }
+            #comic, .page {
+                padding: 0em;
+                margin: 0em 1em 0em 0em;
+                border: none;
+                width: 100%;
+                img {
+                    border: none;
+                    @include shadow(0em,0em,0.5em,0.5em,$borders);
+                    background: $half-bg;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .page {
+                border: solid thin $borders;
+                margin: 1em 0em 0em 10%;
+                section {
+                    margin-bottom: 1em
+                }
+            }
+            #chapbook img {
+                box-shadow: none
+            }
+            section.page + section.page {
+                margin-top: 2em
+            }
+            figcaption {
+                padding: 1em;
+                margin: 0em 2em;
+                background: $half-bg;
+                border: solid thin $borders;
+            }
+            p {
+                margin-left: 1em
+            }
+            #transcript, #commentary, .archive, .main, .page, ol.tagslist, #toc, .char, .allchars {
+                max-width: 70%;
+                padding: 0em 0em 0.5em 0em;
+                margin: 1em 2em 1em 10%;
+                border: solid thin $borders;
+            }
+            ol.tagslist {
+                padding: 1em
+            }
+            #toc {
+                max-width: 70%;
+                padding: 0em 0em 0.5em 0em;
+                margin: 1em 2em 1em 10%;
+            }
+            .cominavbox {
+                background: $half-bg;
+                border: thin solid $borders;
+                li {
+                    margin-bottom: 1em;
+                    padding-bottom: 1em;
+                }
+            }
+            #botbox {
+                margin-top: 0em;
+                border-top: none;
+                li {
+                    margin-top: 0em;
+                    padding-top: 0.5em;
+                }
+            }
+            .cominavbox, .cominavbox li {
+                margin: 0.5em 1em 0em 1em;
+            }
+            h1 {
+                font-size: 1.5em;
+                border-bottom: none;
+                border-top: none;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                width: 70%;
+                margin-left: 10%;
+            }
+            h2 {
+                font-size: 1.2em;
+                margin: 0em;
+                padding: 0.5em 0em 0.5em 0.5em;
+            }
+            h3 {
+                font-size: 1em;
+                padding-left: 1em;
+            }
+            #topnav {
+                text-align: center;
+                background: none;
+            }
+            #topnav li {
+                padding: 1em 1em 0.8em 1em;
+                margin: 0em;
+                border: solid thin $borders;
+                & + li {
+                    margin-left: 0em;
+                }
+            }
+            .statline {
+                font-size: 0.8em;
+                text-align: right;
+                margin-right: 1em
+            }
+            footer p {
+                font-size: 0.7em;
+                margin-left: 1em
+            }
+            .action {
+                text-indent: 1em;
+            }
+            main > section {
+                padding: 0em 0em 0.5em 0em;
+                width: 80%;
+                ol {
+                    margin-top: 1em;
+                    margin-left: 1em;
+                    margin-right: 2em;
+                    border-right: solid thin $borders;
+                };
+                h2 {
+                    padding: 0em;
+                    margin: 0em;
+                    margin-left: 1em;
+                    margin-top: 0.7em;
+                }
+            }
+            .main {
+                padding: 0.5em;
+                & p {
+                    margin-left: 0em;
+                };
+                .intro h2 {
+                    margin-top: 0.5em
+                }
+            }
+            .char {
+                img {
+                    margin: 0em 2em 1em 1em;
+                }
+                .chartraits {
+                    margin: 0em;
+                    text-align: left;
+                    background: none;
+                    p {
+                        margin: 0em;
+                        padding: 0em
+                    }
+                }
+                .chartraits, img {
+                    display: inline-block;
+                    vertical-align: top;
+                    max-width: 50%;
+                }
+            }
+            .page h2 {
+                margin: 1em;
+            }
+        }
+        @include chapbook;
+        @include webtoon;
+    }
+}

@@ -1,0 +1,253 @@
+@import "toc.scss";
+@import "webtoon.scss";
+@media screen {
+    $text: #ad0135;
+    $box: #fcfae8; // contrast with fg 7.05
+    $bg: #e00145 url("strawbcheck.png") fixed;
+    $accent: #e00145;
+    $borders: solid medium #e00145;
+    @mixin stitch-border($bg, $thread) {
+        background-color: $bg;
+        border-top: medium dashed $thread;
+        border-bottom: medium dashed $thread;
+        box-shadow: 0 0 0 6px $bg;
+        @media screen and (min-width: 1024px) {
+            border-radius: 0.5em;
+            border: medium dashed $thread;
+        }
+    }
+    #berryheart {
+        body {
+            background: $bg;
+            color: $text;
+            font-size: 1.5em;
+            font-family: sans-serif;
+            display: grid;
+            grid-template-areas: 'skippy' 'header' 'toc' 'main' 'footer';
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto 1fr;
+            grid-gap: 1em;
+            margin: 0;
+            min-height: 100vh;
+            max-width: 100vw;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #skippy {
+            text-align: left;
+            grid-area: skippy;
+            background: $box;
+            border-bottom: medium dashed $accent;
+            box-shadow: 0 0 0 6px $box;
+            margin: 0;
+            padding: 0.5em;
+        }
+        #toc {
+            grid-area: toc;
+            padding: 1em;
+            @include stitch-border($box, $accent)
+        }
+        h2, h3 {
+            margin-top: 0.5em;
+        }
+        ol {
+            line-height: 2em
+        }
+        main {
+            grid-area: main;
+            @include stitch-border($box, $accent);
+            max-width: 99vw;
+        }
+        a:link {
+            text-decoration: underline;
+            color: #345289;
+        }
+        a:visited {
+            color: #7d3387;
+        }
+        a:active,
+        a:focus,
+        a:hover {
+            color: #480016;
+        }
+        a:focus, a:active {
+            outline-width: medium;
+            outline-style: solid;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        header {
+            grid-area: header;
+            text-align: center;
+        }
+        footer {
+            grid-area: footer;
+            font-size: 0.8em;
+            align-self: end;
+            background: $box;
+            margin: 0;
+            padding: 0em 1em;
+            border-top: medium dashed $accent;
+            box-shadow: 0 0 0 6px $box;
+            max-width: 99vw;
+        }
+        h1 {
+            background: $box;
+            @include stitch-border($box, $accent);
+            padding: 0.5em;
+            margin-top: 1em;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+        #topnav {
+            max-width: 99vw;
+            padding: 0 1em;
+            margin: 1em 0 0 0;
+            background: $box;
+            @include stitch-border($box, $accent);
+            li {
+                display: inline-block;
+                list-style-type: none;
+                margin: 0em 1em;
+                background: url("strawb.png") left center;
+                background-repeat: no-repeat;
+                padding: 0.5em 0.5em 0.5em 36px;
+
+            }
+        }
+        div,
+        section {
+            padding: 0 1em;
+        }
+        .tagslist,
+        ol {
+            line-height: 2em;
+        }
+        .cominavbox {
+            text-align: center;
+            padding-left: 0;
+            li {
+                display: inline-block;
+                & + li {
+                    margin-left: 10%;
+                }
+            }
+        }
+        .statline {
+            text-align: right;
+        }
+        figure {
+            margin: 0;
+            text-align: center;
+        }
+        .action,
+        .charname {
+            font-weight: bold;
+        }
+        .char {
+            padding: 0em 1em 1em 1em
+        }
+        .status {
+            margin-top: 0em;
+        }
+        .char + .char, .archive + .archive, hr {
+            &:before {
+                content: url("strawb.png");
+                display: block;
+                position: relative;
+                text-align: center;
+                width: 100%;
+            }
+        }
+        .charimg,
+        .chartraits {
+            display: inline-block;
+            vertical-align: top;
+            max-width: 60%;
+        }
+        .chartraits {
+            overflow-wrap: break-word;
+            dt {
+                font-weight: bold;
+            }
+            dt:after {
+                content: ":";
+            }
+            dd:after {
+                content: "\A";
+                white-space: pre;
+            }
+            dd {
+                margin-left: 0;
+            }
+            dd,
+            dt {
+                display: inline;
+            }
+        }
+        ol.tagslist {
+            list-style: decimal inside none;
+        }
+        #chapbook .page {
+            padding: 0em;
+        }
+        #chapbook h2 {
+            padding: 0.5em 0.5em 0 0.5em;
+            text-align: center
+        }
+        @media screen and (min-width: 1024px) {
+            main, #toc {
+                margin: 0 1em;
+            }
+            #topnav {
+                margin: 1em 1em 0 1em;
+            }
+            h1 {
+                margin: 0.5em 0.5em 0 0.5em;
+            }
+        }
+        @include webtoon;
+        @media screen and (min-width: 1366px) {
+            #chapbook {
+                width: auto;
+                background: none;
+                border: none;
+                box-shadow: none;
+            }
+            #chapbook .page {
+                @include stitch-border($box, $accent);
+            }
+            #chapbook:not(.webtoon) {
+                display: grid;
+                grid-gap: 1em;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            #chapbook:not(.webtoon) .cominavbox {
+                grid-column: span 2 / auto;
+            }
+            #chapbook:not(.webtoon) .page {
+                margin: 0em;
+                width: auto;
+                max-width: 50vw;
+                padding: 0;
+            }
+            #chapbook:not(.webtoon) .comic {
+                padding: 0;
+                margin: 0
+            }
+            #chapbook.rtl {
+                direction: rtl;
+                ul, section {
+                    direction: initial;
+                }
+            }
+            #chapbook .page.double {
+                max-width: initial;
+                grid-column-end: span 2;
+            }
+        }
+    }
+}

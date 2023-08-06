@@ -1,0 +1,282 @@
+@import "toc.scss";
+@import "webtoon.scss";
+@import "chapbook.scss";
+@media screen {
+    $text: #111;
+    $box: #fcfffb; // contrast with fg 18.74
+    $bg: $text;
+    $accent: #333;
+    // Link colors - light
+    $llink: #9999FF; // contrast 7.51
+    $lvisit: #F280FF; // contrast 8.37
+    $lactive: #B6F75C; // contrast 14.79
+    // Link colors - dark
+    $dlink: #345289; // contrast 7.68
+    $dvisit: #883A81; // contrast 7.02
+    $dactive: #193800; // contrast 12.97
+    $bsize: 15px;
+    @mixin bbox {
+        background-color: $box;
+        color: $text;
+        border: solid thin $box;
+        border-image-slice: 15;
+        border-image-width: $bsize 0px $bsize 0px;
+        border-image-outset: 10px 0px 10px 0px;
+        border-image-repeat: round repeat;
+        border-image-source: url("wlace.png");
+        @media screen and (min-width: 1024px) {
+            border-image-width: $bsize;
+            border-image-outset: $bsize;
+        }
+    }
+    #blacktea {
+        body {
+            background: $bg;
+            color: $box;
+            font-size: 1.5em;
+            font-family: sans-serif;
+            display: grid;
+            grid-template-areas: 'skippy' 'header' 'toc' 'main' 'footer';
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto 1fr;
+            margin: 0;
+            min-height: 100vh;
+            max-width: 100vw;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #skippy {
+            text-align: left;
+            grid-area: skippy;
+            @include bbox;
+            margin: 0;
+            padding: 0.5em;
+        }
+        #toc {
+            grid-area: toc;
+            padding: 1em;
+            @include bbox;
+        }
+        h2, h3 {
+            margin-top: 0.5em;
+        }
+        ol {
+            line-height: 2em
+        }
+        main {
+            grid-area: main;
+            max-width: 99vw;
+        }
+        header, main, footer, nav {
+            a:link {
+                color: $dlink;
+            };
+            a:visited {
+                color: $dvisit;
+            };
+            a:active,
+            a:focus,
+            a:hover {
+                color: $dactive;
+            };
+        }
+
+        #transcript, #commentary, #comic, .main, .archive, #toc, .cominavbox, .allchars, .char, ol.tagslist {
+            @include bbox;
+            padding: 1em;
+            margin: 2em 0;
+        }
+
+        .page {
+            @include bbox;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            section {
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+        }
+
+        a:link {
+            text-decoration: underline;
+            color: $dlink;
+        }
+        a:visited {
+            color: $dvisit;
+        }
+        a:active,
+        a:focus,
+        a:hover {
+            color: $dactive;
+        }
+        a:focus, a:active {
+            outline-width: medium;
+            outline-style: solid;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        header {
+            grid-area: header;
+            text-align: center;
+            padding: 1em 0;
+        }
+        #bannera {
+            margin: 0;
+            a:link {
+                color: $llink;
+            }
+            a:visited {
+                color: $lvisit;
+            }
+            a:active, a:hover, a:focus {
+                color: $lactive
+            }
+        }
+        footer {
+            grid-area: footer;
+            font-size: 0.8em;
+            align-self: end;
+            @include bbox;
+            margin: 0;
+            padding: 0em 1em;
+            max-width: 99vw;
+        }
+        h1 {
+            @include bbox;
+            padding: 0.5em;
+            margin-top: 1em;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+            font-style: italic;
+            letter-spacing: 0.05em;
+        }
+        #topnav {
+            max-width: 99vw;
+            padding: 0 1em;
+            margin: 1em 0 0 0;
+            @include bbox;
+            li {
+                display: inline-block;
+                list-style-type: none;
+                margin: 0em 1em;
+                padding: 0.5em;
+                
+            }
+        }
+        div,
+        section {
+            padding: 0 1em;
+        }
+        .tagslist,
+        ol {
+            line-height: 2em;
+        }
+        .cominavbox {
+            text-align: center;
+            padding-left: 0;
+            li {
+                display: inline-block;
+                margin-top: 1em;
+                & + li {
+                    margin-left: 10%;
+                }
+            }
+        }
+        .statline {
+            text-align: right;
+        }
+        figure {
+            margin: 0;
+            text-align: center;
+        }
+        #comic {
+            padding: 1em 0;
+        }
+        .action,
+        .charname {
+            font-weight: bold;
+        }
+        .char {
+            padding: 0em 1em 1em 1em
+        }
+        .status {
+            margin-top: 0em;
+        }
+        .charimg,
+        .chartraits {
+            display: inline-block;
+            vertical-align: top;
+            max-width: 60%;
+        }
+        .chartraits {
+            overflow-wrap: break-word;
+            dt {
+                font-weight: bold;
+            }
+            dt:after {
+                content: ":";
+            }
+            dd:after {
+                content: "\A";
+                white-space: pre;
+            }
+            dd {
+                margin-left: 0;
+            }
+            dd,
+            dt {
+                display: inline;
+            }
+        }
+        ol.tagslist {
+            list-style: decimal inside none;
+        }
+        #chapbook h2 {
+            padding: 1em 1em 0 1em;
+            text-align: center
+        }
+        @media screen and (min-width: 1024px) {
+            main {
+                margin: 0.5em 5%;
+            }
+            header {
+                padding: 1em
+            }
+            #transcript, #commentary, #comic, .main, .archive, .cominavbox, .allchars, .char, ol.tagslist {
+                padding: 1em;
+                margin: 2em 1em;
+            }
+            #toc {
+                margin: 2em 5% 1em 5%;
+                padding: 1em;
+            }
+            #topnav {
+                margin: 1em 1em 2em 1em;
+                padding: 0.5em;
+            }
+            ol.tagslist {
+                padding-left: 3em;
+            }
+            #topbox {
+                margin-top: 1em
+            }
+            #botbox {
+                margin-bottom: 1em
+            }
+            h1 {
+                margin: 0.5em 0.5em 0 0.5em;
+            }
+            .page section {
+                padding: 2em;
+            }
+        }
+        @include webtoon;
+        @include chapbook;
+    }
+}

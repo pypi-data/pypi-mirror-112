@@ -1,0 +1,175 @@
+@import "chapbook.scss";
+@import "toc.scss";
+@import "webtoon.scss";
+@mixin borders {
+    border-top: 1rem solid #333;
+    border-bottom: 1rem solid #333;
+    @media screen and (min-width: 1024px) {
+        border-left: 1rem solid #333;
+        border-right: 1rem solid #333;
+    }
+}
+@media screen {
+    $text: #000000;
+    $pipe: 1rem solid #333;
+    $linedbgc: #fff8ea;
+    #staples {
+        body {
+            background-color: wheat;
+            background-image: url("wood.jpg");
+            color: $text;
+            font-size: 1.5em;
+            font-family: sans-serif;
+            display: grid;
+            grid-template-areas: 'skippy' 'header' 'toc' 'main' 'footer';
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto 1fr;
+            grid-gap: 1em;
+            margin: 0;
+            min-height: 100vh;
+            max-width: 100vw;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #skippy {
+            text-align: left;
+            grid-area: skippy;
+            a {
+                padding: 0.5em
+            }
+        }
+        @include toc;
+        #toc {
+            grid-area: toc;
+            padding: 1em;
+            background: #fef5e7 url("lined.png");
+            @include borders;
+        }
+        ol {
+            line-height: 2em
+        }
+        main {
+            grid-area: main;
+            background: #fef5e7 url("lined.png");
+            @include borders;
+            max-width: 99vw;
+        }
+        a:link {
+            text-decoration: underline;
+            color: #2D00D6;
+        }
+        a:visited {
+            color: #6200B8;
+        }
+        a:active,
+        a:focus,
+        a:hover {
+            color: #0A4D0A;
+        }
+        a:active,
+        a:focus {
+            outline: medium solid;
+            background: $linedbgc
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        header {
+            grid-area: header;
+            text-align: center;
+        }
+        footer {
+            grid-area: footer;
+            font-size: 0.8em;
+            align-self: end;
+        }
+        h1 {
+            margin-bottom: 0;
+        }
+        #topnav ul {
+            max-width: 99vw;
+            padding: 0 1em;
+            li {
+                display: inline-block;
+                list-style-type: none;
+                padding: 1em;
+                background: #fef5e7;
+                border: $pipe;
+                margin: 0.5em;
+            }
+        }
+        div,
+        section {
+            padding: 0 0.5em;
+        }
+        .tagslist,
+        ol {
+            line-height: 2em;
+        }
+        ol.tagslist {
+            text-align: left;
+            list-style: decimal inside none;
+        }
+        .cominavbox {
+            text-align: center;
+            padding-left: 0;
+            li {
+                display: inline-block;
+                & + li {
+                    margin-left: 10%;
+                }
+            }
+        }
+        .statline {
+            text-align: right;
+        }
+        figure {
+            margin: 0;
+            text-align: center;
+        }
+        .action,
+        .charname {
+            font-weight: bold;
+        }
+        .char {
+            dt {
+                font-weight: bold;
+            }
+            dt:after {
+                content: ":";
+            }
+            dd:after {
+                content: "\A";
+                white-space: pre;
+            }
+            dd {
+                margin-left: 0;
+            }
+            dd,
+            dt {
+                display: inline;
+            }
+        }
+        .char img,
+        .chartraits {
+            display: inline-block;
+            vertical-align: top;
+            max-width: 60%;
+            overflow-wrap: break-word;
+        }
+        @media screen and (min-width: 1024px) {
+            body {
+                padding: 0 1em;
+            }
+            main {
+                padding: 1em;
+            }
+            figure {
+                padding: 1em 0;
+            }
+        }
+        @include chapbook;
+        @include webtoon;
+    }
+}

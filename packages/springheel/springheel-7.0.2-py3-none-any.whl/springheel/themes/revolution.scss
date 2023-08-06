@@ -1,0 +1,261 @@
+@import "chapbook.scss";
+@import "toc.scss";
+@import "webtoon.scss";
+@media screen {
+/*Revolution*/
+    $bg: #000;
+    $text: lavenderblush;
+    $lac: #e7568d;
+    #revolution {
+    /* Default (small) screens */
+        body {
+            box-sizing: border-box;
+            background-color: $bg;
+            color: $text;
+            text-align: left;
+            font-size: 1.5em;
+            font-family: sans-serif;
+            margin: 0em;
+        }
+        header, main, h1, h2, h3, h4, h5, h6 {
+            text-align: center
+        }
+        main, figure {
+            margin: 0em;
+            padding-left: 0em;
+            padding-right: 0em;
+        }
+        div, section, figure {
+            text-align: left
+        }
+        figure#comic, section.page, main > div, main > section, main > .tagslist, #toc {
+            background: $bg;
+            border: solid thick $lac;
+            border-image-slice: 68 66 70 64;
+            border-image-width: 48px 0px 48px 0px;
+            border-image-outset: 0px 0px 0px 0px;
+            border-image-repeat: round repeat;
+            border-image-source: url("rose_frame.png");
+            border-left: none;
+            border-right: none;
+            padding: 2em 0em;
+            margin: 1em 0em;
+        }
+        h1 {
+            margin: 0em;
+        }
+        figure {
+            text-align: center;
+            border: none;
+        }
+        .cominavbox, .cominavbox li {
+            display: inline-block;
+            padding: 0em;
+        }
+        p + p, li + li {
+            margin-top: 0.5em
+        }
+        #skippy {
+            text-align: left;
+            margin-top: 0em;
+            padding-left: 0.5em
+        }
+        #topnav li {
+            display: inline-block;
+            margin: 0em 0.5em;
+        }
+        @include toc;
+        ol {
+            line-height: 2em
+        }
+        #commentary, #transcript {
+            text-align: left;
+        }
+        .statline {
+            font-weight: bold;
+        }
+        a:link {
+            color: #3e9fff;
+            text-decoration: underline
+        }
+        a:visited {
+            color: #a78ae2;
+        }
+        a:hover {
+            text-decoration: underline
+        }
+        a:hover, a:focus, a:active {
+            color: #f77;
+        }
+        a:focus, a:active {
+            outline-width: medium;
+            outline-style: solid;
+        }
+        footer p {
+            margin-left: 0em;
+            text-align: left;
+        }
+        img, embed, object, video {
+            max-width: 100%;
+            height: auto;
+        }
+        .action {
+            font-weight: bold;
+        }
+        .char {
+            text-align: left;
+            .chartraits {
+                overflow-wrap: break-word;
+            }
+            dt:after {
+                content: ":"
+            }
+            dd:after {
+                content: "\A"; white-space: pre;
+            }
+            dd {
+                margin-left: 0em;
+            }
+            dt, dd {
+                display: inline;
+                white-space: pre-wrap;
+            }
+        }
+        .charname {
+            font-weight: bold;
+        }
+        .charimg {
+          margin: 0em;
+          padding: 0em;
+        }
+        .chartraits {
+          margin: 0em;
+          padding: 0em;
+        }
+        .chardesc {
+          border: none;
+          padding: 0em;
+          margin: 0em;
+          line-height: 2em;
+        }
+        .tagslist {
+            list-style-type: none
+        }
+    /*Medium screens*/
+        @media screen and (min-width: 1024px) {
+            body {
+              background-color: $bg;
+              background: url("sparks.png") bottom right fixed no-repeat, $bg url("sparks.png") top 2em left fixed no-repeat;
+            }
+            figure {
+                margin-left: 1em;
+                margin-top: 0em;
+                margin-bottom: 0em;
+            }
+            main > div, main > section, main > .tagslist {
+                padding: 2em 3em;
+                width: 80%;
+            }
+            div + div {
+                margin-bottom: 0em;
+                margin-top: 1em;
+            }
+            .cominavbox, .cominavbox li {
+                margin-left: 1em;
+                margin-right: 1em;
+                margin-top: 0.5em;
+                margin-bottom: 0em;
+            }
+            figure + .cominavbox {
+                margin-bottom: 1em;
+            }
+            figure#comic, section.page, main > div, main > section, main > .tagslist {
+                background: $bg;
+                border-image-width: 48px 48px 48px 48px;
+              }
+              section {
+                  text-align: left;
+                  margin: 1em;
+              }
+              figure {
+                padding: 0em 2em 2em 2em;
+                &#comic {
+                padding-top: 2em;
+                margin-top: 1em;
+                margin-left: 2em;
+                margin-right: 2em;
+                }
+              }
+              .intro {
+                border: none;
+                margin: 1em;
+                padding: 1em;
+                & + .intro {
+                  padding-top: 0em;
+                  margin-top: 0em;
+                }
+              }
+              figcaption {
+                  padding-left: 2em;
+                  padding-right: 2em;
+              }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            h3 {
+                font-size: 1em;
+            }
+            #topnav li {
+                padding-top: 1em;
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-bottom: 0.8em;
+                margin: 0em;
+            }
+            .statline {
+                font-size: 0.8em;
+                text-align: right;
+            }
+            footer p {
+                font-size: 0.7em;
+                max-width: 75%
+            }
+            main > section {
+                padding: 1em 2em;
+                margin: 1em;
+            }
+            .main {
+                padding: 1em 2em;
+                margin: 1em;
+                text-align: left;
+                & p {
+                    margin-left: 0em;
+                }
+            }
+            .char {
+                text-align: left;
+                img, .chartraits {
+                    display: inline-block;
+                    vertical-align: top;
+                    max-width: 50%;
+                }
+            }
+            .chartraits {
+                margin-left: 1em;
+                line-height: 1.5em
+            }
+            figure img, .page section {
+                max-width: calc(100% - 96px);
+                height: auto
+            }
+            .page section {
+                margin: 0 2.5em
+            }
+        }
+        @include chapbook;
+        @include webtoon;
+    }
+}

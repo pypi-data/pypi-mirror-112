@@ -1,0 +1,6 @@
+[console_scripts]
+springheel = springheel.command_line:cversion
+springheel-addimg = springheel.command_line:caddimg
+springheel-build = springheel.command_line:cbuild
+springheel-init = springheel.command_line:cinit
+

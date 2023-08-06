@@ -1,0 +1,3 @@
+@mixin trans($aspect, $duration, $effect) {
+    transition: $aspect $duration $effect;
+}

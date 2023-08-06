@@ -1,0 +1,428 @@
+@import "toc.scss";
+@import "webtoon.scss";
+@media screen {
+    /*Book*/
+    #book {
+        $bg: #fdf5e6;
+        $out-text: #ffd;
+        $in-text: #111;
+        $minuspages: calc(100% - 144px);
+        /* Default (small) screens */
+        body {
+            background-color: #501916;
+            background: url("leather.jpg");
+            color: $out-text;
+            text-align: center;
+            font-size: 1.5em;
+            font-family: serif;
+            margin: 0em;
+            box-sizing: border-box;
+        }
+        main, figure {
+            margin-left: 0em;
+            padding-left: 0em;
+        }
+        figure#comic, main > div, main > section, main > .tagslist, #toc {
+            background-color: $bg;
+            background-image: url("paper.gif");
+            color: $in-text;
+        }
+        h1 {
+            margin: 0em;
+        }
+        ol {
+            line-height: 2em;
+        }
+        figure#comic {
+            padding: 1em 0em 1em 0em;
+            margin-left: 0em;
+            margin-right: 0em;
+            text-align: center;
+            border: none;
+            img {
+                padding: 0em;
+                margin: 0em;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        p + p, li + li, div + div {
+            margin-top: 0.5em
+        }
+        .cominavbox, .cominavbox li {
+            display: inline-block;
+        }
+        .cominavbox {
+            background-color: $bg;
+            background-image: url("paper.gif");
+            border-radius: 0.5em;
+            width: auto;
+            margin: 0.5em;
+            padding: 0.5em;
+            li {
+                padding: 0em 0.5em;
+                margin: 0em;
+            }
+        }
+        #skippy {
+            text-align: left;
+            margin-top: 0;
+            margin-left: 0.5em;
+            background: #411814;
+        }
+        .allchars {
+            margin-top: 1em
+        }
+        #topnav ul {
+            background-color: $bg;
+            color: $in-text;
+            background-image: url("paper.gif");
+            border-radius: 1.0em;
+            list-style: none;
+            text-align: left;
+            padding: 1em;
+            li:before {
+                content: "\2014 \00a0"
+            }
+        }
+        #topnav.toc {
+            h2 {
+                margin-left: 1em
+            }
+            ol {
+                margin-left: 1em;
+                text-align: left;
+                list-style-type: decimal;
+                li {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        main div, main section {
+            text-align: left;
+        }
+        .statline {
+            font-weight: bold;
+        }
+        a:link {
+            color: #aec2eb;
+            text-decoration: underline
+        }
+        a:visited {
+            color: #d2b6d9;
+        }
+        a:hover {
+            text-decoration: underline
+        }
+        a:hover, a:focus, a:active {
+            color: #ffa4a4;
+        }
+        a:focus, a:active {
+            outline-width: medium;
+            outline-style: solid;
+        }
+        main > div, main > section, .cominavbox, main > .tagslist, #toc, #topnav {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            a:link {
+                color: #214184;
+                text-decoration: underline
+            }
+            a:visited {
+                color: #5c3566;
+            }
+            a:hover {
+                text-decoration: underline
+            }
+            a:hover, a:focus, a:active {
+                color: #cc0000;
+            }
+        }
+        footer p {
+            margin-left: 0em;
+            text-align: left;
+        }
+        .archives {
+            margin-top: 1em;
+            padding-bottom: 1em
+        }
+        .archive {
+            text-align: left;
+        }
+        img, embed, object, video {
+            max-width: 100%;
+            height: auto;
+        }
+        .action {
+            font-weight: bold;
+        }
+        .charname {
+            font-weight: bold
+        }
+        .char {
+            text-align: left;
+            p {
+                text-indent: 1em;
+            }
+        }
+        .charimg {
+            margin: 0.5em;
+        };
+        .chartext {
+            margin: 0em;
+            padding: 0em;
+        }
+        .chartraits {
+            font-size: 0.9em;
+            dt:after {
+                content: ":"
+            };
+            dd:after {
+                content: "\A"; white-space: pre;
+            };
+            dd {
+                margin-left: 0em;
+            };
+            dt, dd {
+                display: inline;
+                white-space: pre-wrap;
+            };
+            dt {
+                font-weight: bold;
+            };
+        }
+        main > section, main > div {
+            padding: 1em 2em;
+            ol {
+                margin-left: 1em;
+                margin-bottom: 0em;
+            };
+        }
+        .tagslist, .chapterarch {
+            list-style-type: none
+        }
+    /*Medium screens*/
+        @media screen and (min-width: 1024px) {
+            figure#comic, section.page {
+                margin: 0em;
+                padding: 1em 0em;
+                img {
+                    padding: 1em 0em;
+                    margin: 0em 72px;
+                    max-width: calc(100vw - 144px);
+                }
+            }
+            main > div, .page section, #toc {
+                padding: 1em;
+                width: 80%;
+                margin-left: 1em;
+                & p, & h2, h3 {
+                    margin-left: 3rem;
+                    margin-right: 3rem;
+                };
+            }
+            #toc {
+                margin: 1em 3em 1em 3em;
+                width: auto;
+                ol {
+                    margin-left: 1em
+                }
+                & > ol {
+                    margin-left: 3em
+                }
+            }
+            #extras {
+              figure, p, h2, h3, ul {
+                margin-left: 3rem;
+                margin-right: 3rem;
+              }
+            }
+            #comic, section.page, main > div, main > section, main > .tagslist, #toc {
+                background-color: $bg;
+                background: url("pages_l.png") repeat-y 0% 0%, url("pages_r.png") repeat-y 100% 0%, url("paper.gif");
+            }
+            div + div {
+                margin-bottom: 0em;
+                margin-top: 1em;
+            }
+            .cominavbox {
+                margin: 1em;
+                li {
+                    margin: 0.5em 1em;
+                    padding: 0.5em 1em;
+                    img {
+                        max-width: inherit;
+                    }
+                }
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            h3 {
+                font-size: 1.1em;
+            }
+            h2, h3, .status {
+                margin-top: 0em;
+            }
+            #topnav ul {
+                width: auto;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding: 0em;
+                display: flex;
+                justify-content: space-around;
+                li {
+                    padding: 1em 0em 0.8em 0em;
+                    margin: 0em;
+                }
+                li:before {
+                    content: none
+                }
+            }
+            .statline {
+                font-size: 0.8em;
+                text-align: right;
+            }
+            footer p {
+                font-size: 0.7em;
+                text-indent: 1em;
+            }
+            .archives {
+                margin: 1em;
+            }
+            main > section {
+                margin: 1em 2em;
+                padding: 1em 3em;
+                ol {
+                    margin-left: 1em;
+                    margin-bottom: 1em;
+                };
+                & + section {
+                    h2 {
+                        margin-top: 0em;
+                        padding-top: 0em;
+                        border-top: none;
+                    }
+                }
+            }
+            .main {
+                padding: 1em 3em;
+                margin: 1em 2em;
+                width: auto;
+                text-align: left;
+                & p {
+                    margin-left: 3em;
+                };
+                & h2 {
+                    margin-left: 2em;
+                    margin-right: 2em;
+                }
+            }
+            .intro, .chartext {
+                background: none;
+            }
+            .author, .charname {
+                font-weight: bold;
+            }
+            .charimg {
+                margin-left: 2em;
+            }
+            .charimg, .chartraits {
+                vertical-align: top;
+                display: inline-block;
+                max-width: 50%;
+            }
+            .chartraits {
+                overflow-wrap: break-word;
+                margin-left: 1em
+            }
+            #chapbook {
+                margin: 1em 0em;
+                width: 99vw;
+            }
+            #chapbook .page {
+                margin: 1em;
+                background-color: $bg;
+                background: url("pages_l.png") repeat-y 0% 0%, url("pages_r.png") repeat-y 100% 0%, url("paper.gif");
+            }
+            #chapbook img {
+                max-width: calc(100vw - 144px - 2em);
+                height: auto;
+                padding: 0;
+                margin: 0 0 0 72px;
+            }
+            #chapbook h2 {
+                text-align: center;
+                margin: 0em 2em;
+            }
+        }
+        @include webtoon;
+        @media screen and (min-width: 1366px) {
+            #chapbook {
+                margin: 1em;
+                background-color: $bg;
+                background: url("pages_l.png") repeat-y 0% 0%, url("pages_r.png") repeat-y 100% 0%, url("paper.gif");
+                max-width: calc(100vw - 72px)
+            }
+            #chapbook .page {
+                background: none;
+                text-align: center;
+            }
+            #chapbook .page:nth-child(even) {
+                text-align: left
+            }
+            #chapbook .page:nth-child(odd) {
+                text-align: right;
+            }
+            #chapbook section {
+                text-align: left
+            }
+            #chapbook img {
+                max-width: calc(100% - 72px);
+                height: auto;
+                margin: 0
+            }
+            #chapbook h2 {
+                margin: 1em 2em;
+            }
+            #chapbook:not(.webtoon) {
+                display: grid;
+                grid-gap: 1em 0em;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            #chapbook:not(.webtoon) .cominavbox {
+                grid-column: span 2 / auto;
+            }
+            #chapbook:not(.webtoon) .page {
+                margin: 0em;
+                width: auto;
+                max-width: 45vw;
+                padding: 0;
+            }
+            #chapbook:not(.webtoon) .comic {
+                padding: 0;
+                margin: 0;
+            }
+            #chapbook.rtl {
+                direction: rtl;
+                ul, section {
+                    direction: initial;
+                }
+            }
+            #chapbook .page.double {
+                max-width: initial;
+                grid-column-end: span 2;
+                img {
+                    max-width: calc(100% - 144px);
+                    height: auto;
+                    margin-left: 72px;
+                    margin-right: 72px;
+                }
+            }
+        }
+    }
+}

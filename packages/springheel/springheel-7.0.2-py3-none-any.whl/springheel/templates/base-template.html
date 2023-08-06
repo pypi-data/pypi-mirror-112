@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="{lang}" id="{site_style}">
+<head>
+<title>{header_title}</title>
+<meta charset="utf-8">
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="initial-scale=1">
+<meta name="generator" content="Springheel">
+{meta_tags}
+<link rel="stylesheet" type="text/css" href="assets/style.css" title="{stylesheet_name_s}" media="screen">
+<link rel="stylesheet" type="text/css" href="assets/print.css" media="print">
+<!-- Add favicon code here -->
+<link rel="home" href="index.html" title="{home_s}">
+<link rel="contents" href="archive.html" title="{archive_s}">
+{linkrels}
+</head>
+<body>
+<p id="skippy"><a href="{skiplink}">{skip_s}</a></p>
+<header>
+<p id="bannera"><a href="index.html"><img id="topbanner" src="{header}" alt="{home_s}" width="{headerw}" height="{headerh}"></a></p>
+<nav id="topnav">
+{top_site_nav}
+</nav>
+<h1 id="comictitle">{h1_title}</h1>
+</header>
+<main role="main" aria-labelledby="comictitle">
+{top_nav}
+<!--PAGE-->
+<figure class="comic{modeclass}" id="comic">
+{img}
+{alt_text}
+</figure>
+<!--END PAGE-->
+{bottom_nav}
+<!--COMMENT AREA-->
+<section id="commentary">
+<h2>{caption_s}</h2>
+{commentary}
+{statline}
+</section>
+<!--CONCLUDE COMMENT AREA-->
+<!--TRANSCRIPT-->
+{tb}
+<!--CONCLUDE TRANSCRIPT-->
+</main>
+<footer role="contentinfo">
+{copyright_statement}
+<p>{generator_s}</p>
+<p class="sbuttons">{icons}</p>
+</footer>
+</body>
+</html>

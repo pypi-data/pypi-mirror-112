@@ -1,0 +1,466 @@
+@import "chapbook.scss";
+@import "toc.scss";
+@import "webtoon.scss";
+@media screen {
+    /*Elemental*/
+    #elemental {
+        $inneri: url("dclouds.png");
+        // Water:
+        // $outerc: #212945;
+        // $outer: url("water.png");
+        // $inner: $inneri #212945;
+        // $accent: #6090f8;
+        // $text: aliceblue;
+        // $hbar: url("waterh.png");
+        // $link: #aabddf;
+        // $visited: #dcbdff;
+        // $active: #ffffff;
+        // $arrowlink: #aabddf;
+        // $arrowvisited: #dcbdff;
+        // $arrowactive: #ffffff;
+        // $shadow: #001;
+        // $borderstyle: ridge;
+        // Fire:
+        // $outerc: #491A18;
+        // $outer: url("lava.png");
+        // $inner: $inneri #491A18;
+        // $accent: #f7de34;
+        // $text: seashell;
+        // $hbar: url("lavah.png");
+        // $link: #FFC08A;
+        // $visited: #dcbdff;
+        // $active: #ffffff;
+        // $arrowlink: #FFC08A;
+        // $arrowvisited: #dcbdff;
+        // $arrowactive: #ffffff;
+        // $shadow: #100;
+        // $borderstyle: ridge;
+        // Earth:
+        // $outerc: #372825;
+        // $outer: url("grass.png");
+        // $inner: $inneri #372825;
+        // $accent: #47cd47;
+        // $text: honeydew;
+        // $hbar: url("grassh.png");
+        // $link: #5BD25B;
+        // $visited: #D1A8FF;
+        // $active: #ffffff;
+        // $arrowlink: #5BD25B;
+        // $arrowvisited: #D1A8FF;
+        // $arrowactive: #ffffff;
+        // $shadow: #111;
+        // $borderstyle: ridge;
+        // Air:
+        // $outerc: LemonChiffon;
+        // $outer: url("gold.png");
+        // $inner: LemonChiffon;
+        // $accent: DodgerBlue;
+        // $text: #351E08;
+        // $hbar: url("goldh.png");
+        // $link: #19348C;
+        // $visited: #6B22BF;
+        // $active: #61451F;
+        // $arrowlink: #aabddf;
+        // $arrowvisited: #dcbdff;
+        // $arrowactive: #ffffff;
+        // $shadow: #ffe;
+        // $borderstyle: ridge;
+        // Spirit:
+        $outerc: #271C36;
+        $outer: url("spirit.png");
+        $inner: $inneri #271C36;
+        $accent: #7B6DA0;
+        $text: lavender;
+        $hbar: url("spirith.png");
+        $link: #aabddf;
+        $visited: #ffaaff;
+        $active: #ffffff;
+        $arrowlink: #aabddf;
+        $arrowvisited: #ffaaff;
+        $arrowactive: #ffffff;
+        $shadow: #101;
+        $borderstyle: ridge;
+        // Ice:
+        // $outerc: #bcd7f2;
+        // $outer: url("ice.png");
+        // $inner: #d3f3fc;
+        // $accent: #def;
+        // $text: #142d48;
+        // $hbar: url("iceh.png");
+        // $link: #19348C;
+        // $visited: #531A93;
+        // $active: #045558;
+        // $arrowlink: #aabddf;
+        // $arrowvisited: #dcbdff;
+        // $arrowactive: #ffffff;
+        // $shadow: #fff;
+        // $borderstyle: outset;
+        // Metal:
+        // $outerc: #d0d0d0;
+        // $outer: url("metal.png");
+        // $inner: #d0d0d0 linear-gradient(to bottom, #c0c0c0 50%, #fff 100%);
+        // $accent: #000;
+        // $text: #292929;
+        // $hbar: url("metalh.png");
+        // $link: #142B76;
+        // $visited: #3F1371;
+        // $active: #000;
+        // $arrowlink: #aabddf;
+        // $arrowvisited: #dcbdff;
+        // $arrowactive: #ffffff;
+        // $shadow: #efefef;
+        // $borderstyle: ridge;
+        // Wood:
+        // $outerc: #deb887;
+        // $outer: url("wood.png");
+        // $inner: #deb887;
+        // $accent: #53210c;
+        // $text: #292929;
+        // $hbar: url("woodh.png");
+        // $link: #1F198A;
+        // $visited: #3b1574;
+        // $active: #53210c;
+        // $arrowlink: #f5deb3;
+        // $arrowvisited: #dcbdff;
+        // $arrowactive: #ffffff;
+        // $shadow: #53210c55;
+        // $borderstyle: solid;
+        // Electricity:
+        // $outerc: #FCE94F;
+        // $outer: url("elec.png");
+        // $inner: #FFF3A2;
+        // $accent: #F8D030;
+        // $text: #292929;
+        // $hbar: url("elech.png");
+        // $link: #0000F0;
+        // $visited: #541EA4;
+        // $active: #064B43;
+        // $arrowlink: #f5deb3;
+        // $arrowvisited: #dcbdff;
+        // $arrowactive: #ffffff;
+        // $shadow: #fff;
+        // $borderstyle: solid;
+        // Default (small) screens:
+        body {
+            background-color: $outerc;
+            background-image: $outer;
+            background-attachment: fixed;
+            color: $text;
+            text-align: center;
+            font-size: 1.5em;
+            font-family: sans-serif;
+            display: grid;
+            grid-template-areas: 'skippy' 'header' 'toc' 'main' 'footer';
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto 1fr;
+            margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        footer {
+            background: $inner;
+            border-top: $borderstyle medium $accent
+        }
+        #toc {
+            grid-area: toc
+        }
+        main, header h1, #topnav ul li {
+            margin-left: 0;
+            padding-left: 0;
+            background: $inner;
+            color: $text;
+            border: $borderstyle medium $accent;
+        }
+        h1 {
+            margin: 0;
+            padding: 0.5em;
+        }
+        figure {
+            padding: 1em 0;
+            text-align: center;
+            border: none;
+            margin: 0;
+        }
+        figcaption {
+            padding: 1em 1em 0.5em;
+        }
+        .main ul {
+            padding: 0;
+        }
+        .main ul li {
+            border: solid medium $accent;
+            list-style-type: none;
+            padding: 1em;
+            margin: 0.5em;
+        }
+        .cominavbox {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: auto;
+            align-items: end;
+            li {
+                list-style-type: none;
+                & a {
+                    &:link img {
+                        background: $arrowlink;
+                    };
+                    &:visited img {
+                        background: $arrowvisited;
+                    };
+                    &:active img, &:hover img, &:focus img {
+                        background: $arrowactive
+                    };
+                };
+                & a img {
+                    border: $borderstyle medium $accent;
+                }
+            };
+            padding-left: 0;
+        }
+        li + li,
+        p + p {
+            margin-top: 0.5em;
+        }
+        #skippy {
+            text-align: left;
+            grid-area: skippy;
+            margin-top: 0em;
+            padding: 0.5em;
+            background: $outerc;
+            color: $text;
+            border-top: $borderstyle medium $accent;
+            border-bottom: $borderstyle medium $accent;
+            a {
+                padding: 0.5em;
+            }
+        }
+        main {
+            grid-area: main;
+            margin-top: 1em;
+        }
+        ol {
+            line-height: 2em;
+            padding: 0 1em;
+        }
+        header {
+            grid-area: header;
+        }
+        #topnav ul {
+            max-width: 99vw;
+            padding: 0 1em;
+            li {
+                display: inline-block;
+                list-style-type: none;
+                padding: 1em;
+            }
+        }
+        @include toc;
+        #toc {
+            background: $inner;
+            color: $text;
+            border: $borderstyle medium $accent;
+            margin: 1em 0em;
+            li {
+                background: none
+            }
+        }
+        ol {
+            line-height: 2em
+        }
+        #commentary,
+        #transcript {
+            text-align: left;
+        }
+        .statline {
+            font-weight: bold;
+        }
+        a:link {
+            color: $link;
+            text-decoration: underline
+        }
+        a:visited {
+            color: $visited;
+        }
+        a:hover, a:focus, a:active {
+            color: $active;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        a:focus, a:active {
+            outline-width: medium;
+            outline-style: solid;
+        }
+        footer {
+            grid-area: footer;
+            margin: 1em 0 0;
+            text-align: left;
+            padding: 1em 0.5em 0;
+        }
+        section {
+            text-align: left;
+        }
+        embed,
+        img,
+        object,
+        video {
+            max-width: 100%;
+            height: auto
+        }
+        .action {
+            font-weight: bold;
+        }
+        .charname {
+            font-weight: bold;
+        }
+        .char {
+            margin: 1em;
+            line-height: 1.5em;
+        }
+        .charname {
+            grid-area: cname;
+        }
+        .charimg {
+            border: $borderstyle medium $accent;
+        }
+        .chartraits {
+            margin: 0 0.5em;
+            padding: 0;
+            width: 100%;
+            text-align: left;
+            dd, dt {
+                margin: 0;
+                padding: 0;
+                display: inline;
+            };
+            dt {
+                margin: 0;
+                padding: 0.5em 0;
+                line-height: 1.5em;
+                white-space: pre;
+                font-weight: bold;
+                &:after {
+                    content: ":";
+                }
+            };
+            dd {
+                white-space: pre-wrap
+            }
+            dd:after {
+                content: "\A";
+                white-space: pre;
+            }
+        }
+        .chartext {
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .chapterarch,
+        ul.tagslist {
+            list-style-type: none;
+        }
+        ol.tagslist {
+            text-align: left;
+            list-style: decimal inside none;
+        }
+        .char + .char {
+            background: $hbar top center no-repeat;
+            padding-top: 1em
+        }
+        .allchars {
+            text-align: center;
+        }
+        main > div, figure#comic, section.page, main > section, main > .tagslist, #toc {
+            padding: 0em 1em;
+        }
+        .webtoon {
+            img {
+                display: block
+            }
+        }
+        /*Medium screens*/
+        @media screen and (min-width: 1024px) {
+            main, #toc {
+                padding: 1em 0em;
+                width: auto;
+                margin: 1em 10%;
+            }
+            header h1 {
+                padding: 0.5em 0em;
+                width: auto;
+                margin: 1em 10% 1em 10%;
+            }
+            main, header h1, footer, #toc {
+                box-shadow: 0em 0em 0.5em 0.5em $shadow
+            }
+            main > div, main > section {
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+            div + div {
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+            #topnav ul, main {
+                margin-top: 0em;
+            }
+            .cominavbox {
+                margin: 1em 0;
+            }
+            figure + .cominavbox {
+                margin-top: 0;
+            }
+            figure img {
+                max-width: 100%;
+                height: auto;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            h3 {
+                font-size: 1em;
+            }
+            .statline {
+                font-size: 0.8em;
+                text-align: right;
+            }
+            footer p {
+                font-size: 0.7em;
+            }
+            main > section {
+                margin-left: 1em;
+                margin-right: 1em;
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+            .main {
+                padding: 0.5em;
+                margin: auto;
+                // max-width: 60%;
+                text-align: center;
+                & p {
+                    margin-left: 0;
+                }
+            }
+            main > section .tagslist {
+                padding-left: 0em;
+                & li {
+                    margin-top: 0em;
+                    display: inline-block;
+                    padding: 0.5em;
+                }
+            }
+            .chartraits, .charimg {
+                display: inline-block;
+                max-width: 50%;
+                height: auto;
+                vertical-align: top
+            }
+        }
+        @include chapbook;
+    }
+}

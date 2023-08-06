@@ -1,0 +1,19 @@
+@mixin toc {
+    nav.toc {
+        ol {
+            text-align: left;
+            padding-left: 1em;
+            margin-left: 1em;
+            li {
+                display: list-item;
+                list-style-type: decimal;
+                padding-left: 0em;
+                padding-top: 0em;
+                padding-bottom: 0em;
+            }
+        };
+        ol ol, li {
+            border: none;
+        };
+    }
+}

@@ -1,0 +1,240 @@
+@import "chapbook.scss";
+@import "toc.scss";
+@import "webtoon.scss";
+@media screen {
+/*Sysadmin*/
+    #sysadmin {
+    // Use #87df32 for green or #ffba00 for amber terminal
+    $a: #87df32;
+    /* Default (small) screens */
+        body {
+            background: #000;
+            color: $a;
+            text-align: left;
+            // Monospace fonts need to be fairly big
+            font-size: 2em;
+            font-family: monospace;
+            margin: 0em;
+            box-sizing: border-box;
+        }
+        main, figure {
+            margin-left: 0em;
+            padding-left: 0em;
+        }
+        header {
+          text-align: center;
+          margin-bottom: 1em
+        }
+        #topnav li {
+          margin: 1.5em
+        }
+        h1, h2, h3, h4, h5, h6 {
+          font-size: 1em;
+          font-weight: normal;
+        }
+        h1 {
+            margin: 0em;
+            text-align: left;
+        }
+        h2, h3 {
+          padding-bottom: 1em;
+          border-bottom: dashed medium $a
+        }
+        figure {
+            border: none;
+            margin: 0em;
+            padding: 0em;
+        }
+        figure#comic, section.page img {
+          padding: 0em;
+          margin: 0em;
+        }
+        .cominavbox {
+            margin: 1em 0em;
+        }
+        .cominavbox, .cominavbox li {
+            display: inline-block;
+            padding: 0em;
+        }
+        .cominavbox li {
+          margin: 0em 1em;
+        }
+        .page h2 {
+            margin-top: 0
+        }
+        #skippy {
+            text-align: left;
+            margin: 0em 0.5em;
+        }
+        #topnav li {
+            display: inline-block;
+        }
+        @include toc;
+        #toc {
+            margin: 1em 0em;
+            border-top: dashed medium $a;
+            border-bottom: dashed medium $a;
+            padding-left: 0em;
+            ol {
+                padding-left: 0em;
+                ol {
+                    margin-left: 0.5em
+                }
+            }
+            h2 {
+                margin: 0.5em 0em 0.5em 0.5em
+            }
+            li {
+                margin: 1em
+            }
+        }
+        ol {
+            line-height: 2em
+        }
+        #commentary, #transcript {
+            text-align: left;
+        }
+        .statline {
+            margin: 0em;
+            padding: 0.5em 0.5em 0em 0.5em;
+            text-align: right;
+            border-top: dashed medium $a
+        }
+        a:link {
+            color: #429eff;
+            text-decoration: underline
+        }
+        a:visited {
+            color: #ac39ff;
+        }
+        a:hover, a:focus, a:active {
+            color: #ffffff;
+        }
+        a:focus, a:active {
+            outline-width: medium;
+            outline-style: solid;
+        }
+        footer p {
+            margin-left: 0em;
+            text-align: left;
+        }
+        .archive {
+            text-align: left;
+        }
+        main > div, main > section, ol.tagslist {
+            padding: 1em;
+            border-top: dashed medium $a;
+            border-bottom: dashed medium $a
+        }
+        #transcript, .page + .page, .char + .char {
+            border-top: none
+        }
+        #extras {
+            margin-top: 1em
+        }
+        #extras h2, #extras h3 {
+          padding-bottom: 0em;
+          border: none;
+          padding-top: 1em;
+          border-top: dashed medium $a
+        }
+        img, embed, object, video {
+            max-width: 100%;
+            height: auto;
+        }
+        .archive li {
+            margin-top: 1em;
+        }
+        .char {
+            text-align: left;
+        }
+        .chartraits {
+            overflow-wrap: break-word;
+            dt:after {
+                content: ":"
+            };
+            dd:after {
+                content: "\A"; white-space: pre;
+            };
+            dd {
+                margin-left: 0em;
+            };
+            dt, dd {
+                display: inline;
+                white-space: pre-wrap;
+            };
+        }
+        .charimg {
+            margin: 1em;
+        };
+        #extras ul {
+            list-style-type: "-"
+        }
+        ul.tagslist {
+            list-style-type: none;
+            padding-left: 0em;
+        }
+        ol.tagslist {
+            text-align: left;
+            list-style: decimal inside none;
+        }
+        @include webtoon;
+    /*Medium screens*/
+        @media screen and (min-width: 1024px) {
+          figure {
+              padding: 1em 0em;
+            }
+            .cominavbox, .cominavbox li {
+                margin: 1em;
+            }
+            #topnav li {
+                padding: 1em;
+                margin: 0em;
+            }
+            main > section {
+                margin: 1em;
+                padding: 0em 1em;
+                & h2 {
+                    margin: 1em 0em 1em 0em;
+                }
+            }
+            main > div, main > section, ol.tagslist, #toc, .page + .page, .char + .char, #transcript {
+                margin: 1em;
+                border: dashed medium $a
+            }
+            #toc ol {
+                padding-left: 1em;
+            }
+            img, embed, object, video {
+                max-width: 100%;
+                height: auto
+            }
+            .main {
+                padding: 1em 1em 0em 1em;
+            }
+            .intro {
+                border: none;
+                margin: 0em;
+                padding: 0em;
+                text-align: left;
+                & h2 {
+                    margin-bottom: 0.5em;
+                };
+                & img {
+                    display: inline;
+                };
+            }
+            .main, .intro {
+                text-align: left;
+                & p {
+                  text-align: left;
+                  margin: 1em;
+                }
+            }
+            .page h2 {
+                padding-top: 1em
+            }
+        }
+        @include chapbook;
+    }
+}
