@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: datahunters
+Version: 0.2.1
+Summary: library for collecting data
+Home-page: https://github.com/perceptance/datahunters
+Author: Jie Feng
+Author-email: jiefeng@perceptance.io
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: atoma (==0.0.17)
+Requires-Dist: attrs (==20.2.0)
+Requires-Dist: bleach (==3.2.1)
+Requires-Dist: boto3 (==1.14.63)
+Requires-Dist: botocore (==1.17.63)
+Requires-Dist: certifi (==2020.6.20)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: colorama (==0.4.3)
+Requires-Dist: datanews (==0.0.7)
+Requires-Dist: defusedxml (==0.6.0)
+Requires-Dist: docutils (==0.15.2)
+Requires-Dist: idna (==2.10)
+Requires-Dist: importlib-metadata (==1.7.0)
+Requires-Dist: iniconfig (==1.0.1)
+Requires-Dist: jmespath (==0.10.0)
+Requires-Dist: keyring (==21.4.0)
+Requires-Dist: more-itertools (==8.5.0)
+Requires-Dist: newsapi-python (==0.2.6)
+Requires-Dist: objectpath (==0.6.1)
+Requires-Dist: packaging (==20.4)
+Requires-Dist: pkginfo (==1.5.0.1)
+Requires-Dist: pluggy (==0.13.1)
+Requires-Dist: praw (==7.1.0)
+Requires-Dist: prawcore (==1.5.0)
+Requires-Dist: py (==1.9.0)
+Requires-Dist: Pygments (==2.7.1)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: pytest (==6.0.2)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: readme-renderer (==26.0)
+Requires-Dist: requests (==2.24.0)
+Requires-Dist: requests-toolbelt (==0.9.1)
+Requires-Dist: rfc3986 (==1.4.0)
+Requires-Dist: s3transfer (==0.3.3)
+Requires-Dist: selenium (==3.141.0)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: toml (==0.10.1)
+Requires-Dist: tqdm (==4.49.0)
+Requires-Dist: twine (==3.2.0)
+Requires-Dist: update-checker (==0.18.0)
+Requires-Dist: urllib3 (==1.25.10)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: websocket-client (==0.57.0)
+Requires-Dist: yapf (==0.30.0)
+Requires-Dist: zipp (==3.1.0)
+
+UNKNOWN
+
+
