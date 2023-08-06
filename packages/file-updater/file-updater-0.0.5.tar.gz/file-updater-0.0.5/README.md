@@ -1,0 +1,26 @@
+# Local file updater
+> A package that allows to backup local files to a specific directory and update already backuped files if they were modified
+
+## Install
+
+`pip install file-updater`
+
+## Console script
+
+`fup.py [Source path] [Destination path]`
+
+Example:
+
+![sample_2](https://user-images.githubusercontent.com/48239596/125615657-73ef7c49-ee57-4f9a-8772-965cd4181977.PNG)
+
+## How to use in code
+
+```python
+from updater import FileUpdater
+
+file_updater = FileUpdater(output_console=True)
+
+file_updater.update_files(
+    path_source=r'C:\Users\riffe\schule\5.klasse\pos\docs', 
+    path_dest=r'C:\Users\riffe\spare\programming\file-update-testfolder')
+```
