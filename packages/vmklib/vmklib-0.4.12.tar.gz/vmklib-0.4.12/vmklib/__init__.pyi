@@ -1,0 +1,3 @@
+PKG_NAME: str
+VERSION: str
+DESCRIPTION: str
