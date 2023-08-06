@@ -1,0 +1,16 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+src/py_webauthn.egg-info/PKG-INFO
+src/py_webauthn.egg-info/SOURCES.txt
+src/py_webauthn.egg-info/dependency_links.txt
+src/py_webauthn.egg-info/requires.txt
+src/py_webauthn.egg-info/top_level.txt
+src/webauthn/__init__.py
+src/webauthn/attestation.py
+src/webauthn/data.py
+src/webauthn/errors.py
+src/webauthn/metadata.py
+src/webauthn/types.py
+src/webauthn/utils.py
