@@ -1,0 +1,17 @@
+boto3
+celery[redis]
+django-ace
+django-admin-list-filter-dropdown
+django-dynamic-preferences
+django-filter
+django-picklefield
+django-polymorphic
+django-widget-tweaks
+django>=3.1
+html2text
+mistune
+psycopg2
+pymysql
+python-slugify
+requests
+sshtunnel
