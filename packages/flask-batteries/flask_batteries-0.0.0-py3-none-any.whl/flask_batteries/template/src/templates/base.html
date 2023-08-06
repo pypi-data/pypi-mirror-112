@@ -1,0 +1,17 @@
+{% raw -%}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Flask app</title>
+	<link rel="icon" type="text/css" href="{{ static_url_for('images/flask-icon.png') }}">
+	<link rel="stylesheet" type="text/css" href="{{ static_url_for('main.css') }}">
+	{% block head %}{% endblock %}
+</head>
+<body>
+{% block body %}{% endblock %}
+
+<script src="{{ static_url_for('main.js') }}"></script>
+</body>
+</html>
+{%- endraw %}

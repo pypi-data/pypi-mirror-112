@@ -1,0 +1,8 @@
+[flask.commands]
+destroy = flask_batteries:destroy
+generate = flask_batteries:generate
+install = flask_batteries:install
+new = flask_batteries:new
+uninstall = flask_batteries:uninstall
+watch = flask_batteries:watch
+
