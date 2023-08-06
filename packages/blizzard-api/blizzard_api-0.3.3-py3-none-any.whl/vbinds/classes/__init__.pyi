@@ -1,0 +1,3 @@
+DEFAULT_CACHE: str
+ID_ENV_KEY: str
+SECRET_ENV_KEY: str
