@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+cwf2neo/__init__.py
+cwf2neo/config_default.yaml
+cwf2neo/cwf2neo.py
+cwf2neo/graph_objects.py
+cwf2neo/neo4j.py
+cwf2neo/utils.py
+cwf2neo.egg-info/PKG-INFO
+cwf2neo.egg-info/SOURCES.txt
+cwf2neo.egg-info/dependency_links.txt
+cwf2neo.egg-info/requires.txt
+cwf2neo.egg-info/top_level.txt
