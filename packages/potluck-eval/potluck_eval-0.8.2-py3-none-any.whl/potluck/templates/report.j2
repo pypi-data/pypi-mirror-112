@@ -1,0 +1,86 @@
+<div class="task_container">
+  <div class="surround">
+    {# TODO: Regrade functionality through potluck server!?! #}
+    <h2 id="{{report.taskid}}" class="task_header">
+      {# TODO: Make this a link to the task instructions? #}
+      {# TODO: Task instructions via potluck server? #}
+      {{report.taskid}}: {{report.evaluation}}
+      {# TODO: points?!? #}
+    </h2>
+    (evaluated {{report.timestamp|timestamp}})
+  </div>
+  <div id="{{report.taskid}}_body" class="task_body with_rubric">
+
+    <!-- The rubric report -->
+    <section class="task_feedback surround">
+      <h3>Rubric report</h3>
+      <div class="evaluation">
+        Overall evaluation:
+        <span class="eval_{{(report.evauation or 'not evaluated').replace(' ', '_')}}">
+          {{report.evaluation|safe}}
+        </span>
+      </div>
+      <div class="summary">
+        {{report.summary|safe}}
+      </div>
+      <div class="warnings">
+        {% for w in warnings %}
+        <div class="warning">{{w|safe}}</div>
+        {% endfor %}
+        <label for="hide_accomplished_goals">
+          <input type="checkbox" id="hide_accomplished_goals">
+          Hide accomplished goals
+        </label>
+      </div>
+      {{(report.rendered_table or '')|safe}}
+    </section>
+
+    <!-- Rendered code -->
+    <div class="sticky_context" id="{{report.taskid}}_code_context">
+      <section
+       class='sticky_bin surround'
+       id="{{report.taskid}}_code"
+       tabindex="0"
+       aria-label="Your code"
+       aria-live="polite"
+      >
+        <h3 class="bin_label" tabindex="0">Your code</h3>
+
+        {% for file in report.files %}
+          <h4>File <code>{{file['filename']}}</code></h4>
+          <div
+           class="task_code"
+           id="{{report.taskid}}_code_{{file.filename|fileslug}}"
+          >
+            <div class="highlight">
+              <div class="eighty_top" aria-hidden="true">
+                80 characters
+                <span class="status_symbol">&rarrb;</span>
+              </div>
+              {{file.code_html|safe}}
+              <div class="eighty" aria-hidden="true">
+                80 characters
+                <span class="status_symbol">&rarrb;</span>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </section>
+    </div>
+
+    <!-- Context results -->
+    <div class="sticky_context" id="{{report.taskid}}_results_context">
+      <section
+       class='sticky_bin surround'
+       id="{{report.taskid}}_contexts"
+       tabindex="0"
+       aria-label="Test results"
+       aria-live="polite"
+      >
+        <h3 class="bin_label" tabindex="0">Test results</h3>
+          {{report.rendered_contexts|safe}}
+      </section>
+    </div>
+    
+  </div>
+</div>
