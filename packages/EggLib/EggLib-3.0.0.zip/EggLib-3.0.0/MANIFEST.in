@@ -1,0 +1,10 @@
+include test/__main__.py
+include test/test_modules/__init__.py
+include test/test_modules/*/*.py
+include test/test_modules/*/correct_files/*
+include test/test_modules/*/erroneous_files/*
+include test/test_modules/test_stats/control_stats/*
+include packaging/compile.py
+include src/cppfiles/*.hpp
+include src/cppfiles/*.epp
+GPL.txt
