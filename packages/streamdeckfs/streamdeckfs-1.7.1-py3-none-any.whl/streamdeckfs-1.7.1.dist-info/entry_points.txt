@@ -1,0 +1,4 @@
+[console_scripts]
+sdfs = streamdeckfs.commands:main
+streamdeckfs = streamdeckfs.commands:main
+
