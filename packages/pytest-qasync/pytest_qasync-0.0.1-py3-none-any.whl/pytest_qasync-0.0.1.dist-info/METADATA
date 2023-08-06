@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: pytest-qasync
+Version: 0.0.1
+Summary: Pytest support for qasync.
+Home-page: https://github.com/innodatalabs/pytest-qasync
+Author: Mike Kroutikov
+Author-email: mkroutikov@innodata.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Testing
+Classifier: Framework :: Pytest
+Requires-Python: >= 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pytest (>=5.4.0)
+Provides-Extra: testing
+Requires-Dist: coverage ; extra == 'testing'
+Requires-Dist: hypothesis (>=5.7.1) ; extra == 'testing'
+
+# pytest-qasync
+
+Pytest plugin to test [qasync](https://pypi.org/project/qasync/).
+
+## Example
+
+```
+import pytest
+
+async def coro():
+    return 1
+
+@pytest.mark.qasync
+async def test_qasync():
+    res = await coro()
+    assert res == 1
+```
+
+## Disclaimer
+
+Code mostly stolen from [pytest-asyncio](https://pypi.org/project/pytest-asyncio) project.
+
+
+
+

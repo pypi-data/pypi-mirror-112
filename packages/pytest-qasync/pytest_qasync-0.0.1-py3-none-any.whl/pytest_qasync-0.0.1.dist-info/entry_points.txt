@@ -1,0 +1,3 @@
+[pytest11]
+qasync = pytest_qasync.plugin
+
