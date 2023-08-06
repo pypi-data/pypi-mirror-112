@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: qiskit-machine-learning
+Version: 0.2.0
+Summary: Qiskit Machine Learning: A library of quantum computing machine learning experiments
+Home-page: https://github.com/Qiskit/qiskit-machine-learning
+Author: Qiskit Machine Learning Development Team
+Author-email: hello@qiskit.org
+License: Apache-2.0
+Keywords: qiskit sdk quantum machine learning ml
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: qiskit-terra (>=0.18.0)
+Requires-Dist: scipy (>=1.4)
+Requires-Dist: numpy (>=1.17)
+Requires-Dist: psutil (>=5)
+Requires-Dist: scikit-learn (>=0.20.0)
+Requires-Dist: fastdtw
+Requires-Dist: setuptools (>=40.1.0)
+Provides-Extra: sparse
+Requires-Dist: sparse ; extra == 'sparse'
+Provides-Extra: torch
+Requires-Dist: torch ; extra == 'torch'
+
+Qiskit Machine Learning is a open-source library of quantum computing machine learning experiments.
+ 
+
