@@ -1,0 +1,3 @@
+[console_scripts]
+oppleio = pyoppleio.__main__:main
+
