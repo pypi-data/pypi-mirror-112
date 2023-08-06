@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: UppercaseName
+Version: 0.0.2
+Summary: A small test package to capatalize names!
+Home-page: https://replit.com/@AaravGaur/My-First-Package
+Author: Aarav Gaur
+Author-email: aaravgaurx@gmail.com
+License: UNKNOWN
+Description: # Test Package
+        For the ```iCanCode``` python advanced class. Source:
+        ```python
+        def UpperName(name):
+          newname = ""
+          splitName = name.split(" ")
+          for name in splitName:
+            newname += name.capatalize() + " 
+          return newname[1:]
+        ```
+        That's it! Your's truly, DaGoodHacker...
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
