@@ -1,0 +1,4 @@
+[console_scripts]
+fds = fds.cli:main
+sdf = fds.cli:main
+
