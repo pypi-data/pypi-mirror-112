@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+   TODO Purpose of the file
+   @project: HSPyLib
+   hspylib.main.hspylib.modules.mock
+      @file: mock_server.py
+   @created: Tue, 4 May 2021
+    @author: <B>H</B>ugo <B>S</B>aporetti <B>J</B>unior"
+      @site: https://github.com/yorevs/hspylib
+   @license: MIT - Please refer to <https://opensource.org/licenses/MIT>
+
+   Copyright 2021, HSPyLib team
+"""
+
+from http.server import HTTPServer
+from random import randint
+from threading import Thread
+from typing import Any, Optional, Tuple
+
+from hspylib.core.enums.http_method import HttpMethod
+from hspylib.modules.mock.mock_request import MockResponse
+from hspylib.modules.mock.mock_server_handler import MockServerHandler
+
+
+class MockServer(HTTPServer):
+    """TODO"""
+
+    RANDOM_PORT = randint(49152, 65535)
+
+    def __init__(self, hostname: str, port: int):
+        self._mocks = {}
+        self.hostname = hostname
+        self.port = port
+        self.version = '0.9.0'
+        super().__init__(self.address(), MockServerHandler)
+
+    def mock(self, method: HttpMethod, url: str) -> Optional[MockResponse]:
+        """TODO"""
+        try:
+            return self._mocks[method][url]
+        except KeyError:
+            return None
+
+    def address(self) -> Tuple[str, int]:
+        """TODO"""
+        return self.hostname, self.port
+
+    def is_allowed(self, method: HttpMethod) -> bool:
+        """TODO"""
+        return method in self._mocks
+
+    def start(self) -> None:
+        """TODO"""
+        runner = ServerThread(self)
+        runner.start()
+
+    def stop(self) -> None:
+        """TODO"""
+        self.shutdown()
+        self.server_close()
+
+    def when_request(self, method: HttpMethod, url: str) -> Any:
+        """TODO"""
+        request = self.mock(method=method, url=url) or MockResponse(self, method, url)
+        self._mocks[method] = self._mocks[method] \
+            if method in self._mocks else {}
+        self._mocks[method][url] = request
+        return request
+
+
+class ServerThread(Thread):
+    def __init__(self, parent: MockServer):
+        super().__init__()
+        self.parent = parent
+
+    def run(self) -> None:
+        self.parent.serve_forever()
