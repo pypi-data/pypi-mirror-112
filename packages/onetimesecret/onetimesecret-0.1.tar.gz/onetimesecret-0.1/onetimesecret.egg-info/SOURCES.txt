@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+onetimesecret/__init__.py
+onetimesecret/onetimesecret.py
+onetimesecret.egg-info/PKG-INFO
+onetimesecret.egg-info/SOURCES.txt
+onetimesecret.egg-info/dependency_links.txt
+onetimesecret.egg-info/requires.txt
+onetimesecret.egg-info/top_level.txt
