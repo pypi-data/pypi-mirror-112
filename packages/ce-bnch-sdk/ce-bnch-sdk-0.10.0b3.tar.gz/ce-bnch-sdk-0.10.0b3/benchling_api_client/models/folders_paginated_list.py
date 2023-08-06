@@ -1,0 +1,69 @@
+from typing import Any, Dict, List, Type, TypeVar
+
+import attr
+
+from ..models.folder import Folder
+
+T = TypeVar("T", bound="FoldersPaginatedList")
+
+
+@attr.s(auto_attribs=True)
+class FoldersPaginatedList:
+    """  """
+
+    _folders: List[Folder]
+    _next_token: str
+
+    def to_dict(self) -> Dict[str, Any]:
+        folders = []
+        for folders_item_data in self._folders:
+            folders_item = folders_item_data.to_dict()
+
+            folders.append(folders_item)
+
+        next_token = self._next_token
+
+        field_dict: Dict[str, Any] = {}
+        field_dict.update(
+            {
+                "folders": folders,
+                "nextToken": next_token,
+            }
+        )
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
+        d = src_dict.copy()
+        folders = []
+        _folders = d.pop("folders")
+        for folders_item_data in _folders:
+            folders_item = Folder.from_dict(folders_item_data)
+
+            folders.append(folders_item)
+
+        next_token = d.pop("nextToken")
+
+        folders_paginated_list = cls(
+            folders=folders,
+            next_token=next_token,
+        )
+
+        return folders_paginated_list
+
+    @property
+    def folders(self) -> List[Folder]:
+        return self._folders
+
+    @folders.setter
+    def folders(self, value: List[Folder]) -> None:
+        self._folders = value
+
+    @property
+    def next_token(self) -> str:
+        return self._next_token
+
+    @next_token.setter
+    def next_token(self, value: str) -> None:
+        self._next_token = value

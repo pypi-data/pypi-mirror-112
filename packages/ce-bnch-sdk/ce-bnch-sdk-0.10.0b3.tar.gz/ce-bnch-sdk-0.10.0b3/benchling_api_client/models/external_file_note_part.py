@@ -1,0 +1,154 @@
+from typing import Any, Dict, List, Type, TypeVar, Union
+
+import attr
+
+from ..extensions import NotPresentError
+from ..models.entry_link import EntryLink
+from ..models.external_file_note_part_type import ExternalFileNotePartType
+from ..types import UNSET, Unset
+
+T = TypeVar("T", bound="ExternalFileNotePart")
+
+
+@attr.s(auto_attribs=True)
+class ExternalFileNotePart:
+    """ An attached user-uploaded file """
+
+    _external_file_id: Union[Unset, str] = UNSET
+    _links: Union[Unset, List[EntryLink]] = UNSET
+    _text: Union[Unset, str] = UNSET
+    _type: Union[Unset, ExternalFileNotePartType] = UNSET
+    _indentation: Union[Unset, int] = 0
+
+    def to_dict(self) -> Dict[str, Any]:
+        external_file_id = self._external_file_id
+        links: Union[Unset, List[Any]] = UNSET
+        if not isinstance(self._links, Unset):
+            links = []
+            for links_item_data in self._links:
+                links_item = links_item_data.to_dict()
+
+                links.append(links_item)
+
+        text = self._text
+        type: Union[Unset, int] = UNSET
+        if not isinstance(self._type, Unset):
+            type = self._type.value
+
+        indentation = self._indentation
+
+        field_dict: Dict[str, Any] = {}
+        field_dict.update({})
+        if external_file_id is not UNSET:
+            field_dict["externalFileId"] = external_file_id
+        if links is not UNSET:
+            field_dict["links"] = links
+        if text is not UNSET:
+            field_dict["text"] = text
+        if type is not UNSET:
+            field_dict["type"] = type
+        if indentation is not UNSET:
+            field_dict["indentation"] = indentation
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
+        d = src_dict.copy()
+        external_file_id = d.pop("externalFileId", UNSET)
+
+        links = []
+        _links = d.pop("links", UNSET)
+        for links_item_data in _links or []:
+            links_item = EntryLink.from_dict(links_item_data)
+
+            links.append(links_item)
+
+        text = d.pop("text", UNSET)
+
+        type = None
+        _type = d.pop("type", UNSET)
+        if _type is not None and _type is not UNSET:
+            type = ExternalFileNotePartType(_type)
+
+        indentation = d.pop("indentation", UNSET)
+
+        external_file_note_part = cls(
+            external_file_id=external_file_id,
+            links=links,
+            text=text,
+            type=type,
+            indentation=indentation,
+        )
+
+        return external_file_note_part
+
+    @property
+    def external_file_id(self) -> str:
+        if isinstance(self._external_file_id, Unset):
+            raise NotPresentError(self, "external_file_id")
+        return self._external_file_id
+
+    @external_file_id.setter
+    def external_file_id(self, value: str) -> None:
+        self._external_file_id = value
+
+    @external_file_id.deleter
+    def external_file_id(self) -> None:
+        self._external_file_id = UNSET
+
+    @property
+    def links(self) -> List[EntryLink]:
+        if isinstance(self._links, Unset):
+            raise NotPresentError(self, "links")
+        return self._links
+
+    @links.setter
+    def links(self, value: List[EntryLink]) -> None:
+        self._links = value
+
+    @links.deleter
+    def links(self) -> None:
+        self._links = UNSET
+
+    @property
+    def text(self) -> str:
+        if isinstance(self._text, Unset):
+            raise NotPresentError(self, "text")
+        return self._text
+
+    @text.setter
+    def text(self, value: str) -> None:
+        self._text = value
+
+    @text.deleter
+    def text(self) -> None:
+        self._text = UNSET
+
+    @property
+    def type(self) -> ExternalFileNotePartType:
+        if isinstance(self._type, Unset):
+            raise NotPresentError(self, "type")
+        return self._type
+
+    @type.setter
+    def type(self, value: ExternalFileNotePartType) -> None:
+        self._type = value
+
+    @type.deleter
+    def type(self) -> None:
+        self._type = UNSET
+
+    @property
+    def indentation(self) -> int:
+        if isinstance(self._indentation, Unset):
+            raise NotPresentError(self, "indentation")
+        return self._indentation
+
+    @indentation.setter
+    def indentation(self, value: int) -> None:
+        self._indentation = value
+
+    @indentation.deleter
+    def indentation(self) -> None:
+        self._indentation = UNSET
