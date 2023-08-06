@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+cblack.py
+setup.cfg
+setup.py
+jwblack.egg-info/PKG-INFO
+jwblack.egg-info/SOURCES.txt
+jwblack.egg-info/dependency_links.txt
+jwblack.egg-info/entry_points.txt
+jwblack.egg-info/not-zip-safe
+jwblack.egg-info/requires.txt
+jwblack.egg-info/top_level.txt
