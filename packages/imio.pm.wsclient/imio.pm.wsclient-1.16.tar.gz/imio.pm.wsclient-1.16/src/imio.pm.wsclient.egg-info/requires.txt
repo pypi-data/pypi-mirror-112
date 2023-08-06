@@ -1,0 +1,8 @@
+setuptools
+collective.z3cform.datagridfield
+imio.pm.locales
+suds-jurko
+
+[test]
+plone.app.testing
+imio.pm.ws
