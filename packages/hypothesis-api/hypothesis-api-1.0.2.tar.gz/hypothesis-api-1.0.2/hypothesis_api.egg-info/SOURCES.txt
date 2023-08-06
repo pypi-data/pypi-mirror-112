@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+hypothesis/__init__.py
+hypothesis/hypothesis.py
+hypothesis_api.egg-info/PKG-INFO
+hypothesis_api.egg-info/SOURCES.txt
+hypothesis_api.egg-info/dependency_links.txt
+hypothesis_api.egg-info/top_level.txt
