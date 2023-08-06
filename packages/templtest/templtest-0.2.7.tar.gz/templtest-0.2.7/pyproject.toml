@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "templtest"
+version = "0.2.7"
+description = "A tool for testing Ansible role templates."
+authors = ["Alexey Busygin <yaabusygin@gmail.com>"]
+license = "GPLv3+"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+ansible = "^2.9"
+packaging = "^20.9"
+
+[tool.poetry.dev-dependencies]
+importlib_resources = { version = "^5.1", python = "<3.7" }
+pylint = "^2.8"
+pydocstyle = "^6.0"
+pycodestyle = "^2.7"
+mypy = "0.812"
+
+[tool.poetry.scripts]
+templtest = 'templtest.cli:main'
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = [
+    # prefer pycodestyle
+    "line-too-long",
+    "unnecessary-semicolon",
+    "trailing-whitespace",
+    "missing-final-newline",
+    "bad-indentation",
+    "multiple-statements",
+    "bare-except",
+
+    # prefer pydocstyle
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+
+    # prefer mypy
+    "syntax-error",
+
+    # actually disable
+    "too-few-public-methods",
+    "duplicate-code"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
