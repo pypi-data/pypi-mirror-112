@@ -1,0 +1,43 @@
+# Taskup [![Build](https://github.com/haneenmahd/taskup/actions/workflows/python-app.yml/badge.svg)](https://github.com/haneenmahd/taskup/actions/workflows/python-app.yml) [![Build PyPi Package](https://github.com/haneenmahd/taskup/actions/workflows/build-package.yml/badge.svg)](https://github.com/haneenmahd/taskup/actions/workflows/build-package.yml)
+**Taskup** is a python based task runner to simplify you build tasks.
+It reads some specific tasks from a special File called `Tasks.json`.
+
+# Installation
+Package not published yet!
+### Using PYPI 
+```
+pip install Taskup
+```
+
+### Using Git
+```
+git clone https://github.com/haneenmahd/taskup
+python main.py [...args]
+```
+
+# Usage
+
+### Creating the config file
+Your Tasks are put inside a file names `Tasks.json`.
+Taskup adds a feature to setup the Tasks.json file for you.
+You can run `Taskup setup` to set it up for you or
+You can manually create the file `Tasks.json`.
+It uses a JSON Format. You can a define a task by
+creating a property inside the file and give it a 
+value.This value is the command that is executed when the user
+runs `Taskup [task-you-specified]`.
+
+### Running Tasks
+You can run tasks by by specifying `Taskup` with
+the task you specified.
+For eg:= `Taskup build`.
+It is gonna throw an error if it fails.
+
+# Contributing
+This is project is build to centralize the user's needs.
+Feel free to open a issue or a PR.
+
+If you wanna contribute to this repo read the contributing guidlines
+
+# License
+Taskup is licensed under MIT. [Read license]('https://github.com/haneenmahd/taskup/blob/master/LICENSE')

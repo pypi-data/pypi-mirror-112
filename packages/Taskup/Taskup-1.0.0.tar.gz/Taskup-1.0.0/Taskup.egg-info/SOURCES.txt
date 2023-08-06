@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Taskup.egg-info/PKG-INFO
+Taskup.egg-info/SOURCES.txt
+Taskup.egg-info/dependency_links.txt
+Taskup.egg-info/entry_points.txt
+Taskup.egg-info/top_level.txt
+bin/Taskup.py
