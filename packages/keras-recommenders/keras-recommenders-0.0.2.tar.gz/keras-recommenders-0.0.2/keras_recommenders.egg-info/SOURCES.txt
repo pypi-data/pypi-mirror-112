@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.py
+keras_recommenders/__init__.py
+keras_recommenders/essm.py
+keras_recommenders/mmoe.py
+keras_recommenders/ple.py
+keras_recommenders/ple_cgc.py
+keras_recommenders/shared_bottom.py
+keras_recommenders.egg-info/PKG-INFO
+keras_recommenders.egg-info/SOURCES.txt
+keras_recommenders.egg-info/dependency_links.txt
+keras_recommenders.egg-info/requires.txt
+keras_recommenders.egg-info/top_level.txt
