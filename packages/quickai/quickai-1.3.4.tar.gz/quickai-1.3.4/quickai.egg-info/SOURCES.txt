@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+quickai/__init__.py
+quickai/image_classification.py
+quickai/text_finetuning.py
+quickai/text_inferance.py
+quickai.egg-info/PKG-INFO
+quickai.egg-info/SOURCES.txt
+quickai.egg-info/dependency_links.txt
+quickai.egg-info/requires.txt
+quickai.egg-info/top_level.txt
