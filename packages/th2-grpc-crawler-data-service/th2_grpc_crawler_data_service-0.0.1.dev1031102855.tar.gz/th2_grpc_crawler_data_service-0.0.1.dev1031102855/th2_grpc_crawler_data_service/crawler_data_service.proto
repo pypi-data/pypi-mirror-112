@@ -1,0 +1,78 @@
+/*
+ * Copyright 2020-2021 Exactpro (Exactpro Systems Limited)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+syntax = "proto3";
+
+package th2.crawler.dataservice;
+
+import "th2_grpc_common/common.proto";
+import "th2_grpc_data_provider/data_provider_template.proto";
+
+option java_multiple_files = true;
+option java_package = "com.exactpro.th2.crawler.dataservice.grpc";
+
+service DataService {
+
+  rpc crawlerConnect (CrawlerInfo) returns (DataServiceInfo) {
+  }
+
+  rpc sendEvent (EventDataRequest) returns (EventResponse) {
+  }
+
+  rpc sendMessage (MessageDataRequest) returns (MessageResponse) {
+  }
+}
+
+message CrawlerInfo {
+  CrawlerId id = 1;
+}
+
+message CrawlerId {
+  string name = 1;
+}
+
+message DataServiceInfo {
+  string name = 1;
+  string version = 2;
+  oneof id {
+    EventID event_id = 3;
+    MessageID message_id = 4;
+  }
+}
+
+message EventDataRequest {
+  CrawlerId id = 1;
+  repeated EventData event_data = 2;
+}
+
+message MessageDataRequest {
+  CrawlerId id = 1;
+  repeated MessageData message_data = 2;
+}
+
+message EventResponse {
+  EventID id = 1;
+  Status status = 2;
+}
+
+message MessageResponse {
+  MessageID id = 1;
+  Status status = 2;
+}
+
+message Status {
+  bool handshake_required = 1;
+}
