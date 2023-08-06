@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: spyc-spc
+Version: 1.0.0
+Summary: Simple tool to help plot SPC data from multiple locations for comparison
+Home-page: https://github.com/fanoway/spyc
+Author: fanoway
+Author-email: 86997883+fanoway@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cheroot (>=8.5.2,<9.0.0)
+Requires-Dist: dash (>=1.20.0,<2.0.0)
+Requires-Dist: docopt (>=0.6.2,<0.7.0)
+Requires-Dist: ipywidgets (>=7.6.3,<8.0.0)
+Requires-Dist: mainentry (>=2.0,<3.0)
+Requires-Dist: numpy (>=1.21.0,<2.0.0)
+Requires-Dist: openpyxl (>=3.0.7,<4.0.0)
+Requires-Dist: pandas (>=1.3.0,<2.0.0)
+Requires-Dist: plotly (>=5.1.0,<6.0.0)
+Description-Content-Type: text/markdown
+
+# SPYC
+*pronounced 'spicy'*
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![build](https://github.com/fanoway/spyc/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/fanoway/spyc/actions/workflows/build.yaml)
+[![codecov](https://codecov.io/gh/fanoway/spyc/branch/main/graph/badge.svg?token=RMHSZXZSLK)](https://codecov.io/gh/fanoway/spyc)
+
+Simple tool to help plot SPC data for production purposes
+
+Supports comparison of measurment data between locations (could also be hijacked to compare production equipment within a single location)
+
+Interactive plots are outputted in ther browser using plotly and dash
+
+## Installation
+pipx is the recommened tool for installation as it will install in a virtual enviroment
+
+```
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+```
+
+spyc can then be installed from  pypi
+
+```
+pipx install spyc-spc
+```
+
+## Usage
+
+spyc can be ran as follows to display the help
+
+```
+spyc
+```
+
+
