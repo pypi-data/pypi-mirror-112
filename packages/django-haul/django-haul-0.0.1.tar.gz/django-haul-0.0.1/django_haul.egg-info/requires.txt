@@ -1,0 +1,4 @@
+django>=3
+djangorestframework>=3
+ruamel.yaml>=0.17
+graphlib-backport>=1.0.3
