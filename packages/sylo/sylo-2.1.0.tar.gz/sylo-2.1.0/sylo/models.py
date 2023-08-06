@@ -1,0 +1,176 @@
+import logging
+from dataclasses import dataclass
+import pandas as pd
+from sylo.definitions import (
+    TIMER_DEFAULTS,
+    DATA_FILE_LOCATION,
+    TODAY_STR,
+    TASK_FILE_LOCATION,
+    CONFIG_FILE_LOCATION,
+)
+from sylo.utils import check_for_file, mins_to_secs
+import tomli
+import csv
+from typing import List
+
+
+logger = logging.getLogger(__name__)
+
+
+@dataclass
+class Rest:
+    mins: int = TIMER_DEFAULTS["rest"]["mins"]
+    secs: int = TIMER_DEFAULTS["rest"]["secs"]
+    bar_color: str = "green"
+
+
+@dataclass
+class Work:
+    mins: int = TIMER_DEFAULTS["work"]["mins"]
+    secs: int = TIMER_DEFAULTS["work"]["secs"]
+    bar_color: str = "red"
+
+
+@dataclass
+class Durations:
+    work = Work
+    rest = Rest
+    total_work_mins: float = 0
+    total_rest_mins: float = 0
+
+    def __post_init__(self):
+        self.work = Work()
+        self.rest = Rest()
+
+
+@dataclass
+class Config:
+    theme_color = "blue"
+    audio_file = None
+    work_time = 25
+    rest_time = 5
+
+
+class ConfigFile:
+    def __init__(self):
+        self.config_file = CONFIG_FILE_LOCATION
+        self.is_config = check_for_file(self.config_file)
+
+    def load_config(self):
+        with open(self.config_file, encoding="utf-8") as f:
+            return tomli.load(f)
+
+    def set_config(self, config: Config, durations_model: Durations):
+        if self.is_config is True:
+            config_file = self.load_config()
+            logger.info(config_file)
+            try:
+                general = config_file["general"]
+                logger.info(f"CONFIG: general from file: {general}")
+                config.theme_color = general["theme"]
+            except KeyError as k:
+                logger.info(k)
+                pass
+            try:
+                general = config_file["general"]
+                config.audio_file = general["audio_file"]
+            except KeyError as k:
+                logger.info(k)
+                pass
+
+            try:
+                durations = config_file["durations"]
+                logger.info(f"CONFIG: durations from file: {durations}")
+                durations_model.work.mins = durations["work"]
+                durations_model.work.secs = mins_to_secs(durations["work"])
+                durations_model.rest.mins = durations["work"]
+                durations_model.rest.secs = mins_to_secs(durations["rest"])
+            except KeyError as k:
+                logger.info(k)
+                pass
+
+
+class DataPersistence:
+    def __init__(self, data_file: str = DATA_FILE_LOCATION):
+        self.data_file = data_file
+        self.file_cols = ["date", "time_worked", "time_rested"]
+
+    def data_refresh(self, durations: Durations):
+        new_df = self.fetch_and_update_values(durations, TODAY_STR)
+        new_df.to_csv(DATA_FILE_LOCATION, sep=",", mode="w", header=False)
+
+    def data_load_on_boot(self, durations: Durations):
+        df = self._read_file()
+        try:
+            filtered_dates = df.loc[TODAY_STR]
+            logger.info("data_load_on_boot Found data for today")
+            work_time_today = float(filtered_dates["time_worked"])
+            rest_time_today = float(filtered_dates["time_rested"])
+            logger.info(f"Work time loaded on boot: {work_time_today}")
+            logger.info(f"Rest time loaded on boot: {rest_time_today}")
+            durations.total_work_mins = work_time_today
+            durations.total_rest_mins = rest_time_today
+        except Exception:
+            logger.info("data_load_on_boot NO DATA for today")
+            filtered_dates = None
+        if filtered_dates is None:
+            durations.total_rest_mins = 0
+            durations.total_work_mins = 0
+
+    def _read_file(self):
+        df = pd.read_csv(self.data_file, header=None, sep=",")
+        df.columns = self.file_cols
+        df.set_index("date", inplace=True, drop=True)
+        return df
+
+    def fetch_and_update_values(self, durations: Durations, date: str = TODAY_STR):
+        df = self._read_file()
+        new_df = pd.DataFrame(
+            {
+                "date": [date],
+                "time_worked": [durations.total_work_mins],
+                "time_rested": [durations.total_rest_mins],
+            },
+            columns=self.file_cols,
+            dtype="float",
+        )
+        new_df.set_index("date", inplace=True, drop=True)
+        out = new_df.combine_first(df)
+        return out
+
+
+def get_tasks(date: str = None):
+    try:
+        with open(TASK_FILE_LOCATION, "r") as read_obj:
+            csv_reader = csv.reader(read_obj)
+            logger.info(f"Returning tasks for {date}")
+            if date:
+                return [row for row in csv_reader if row[1] == date]
+            else:
+                return [row for row in csv_reader]
+    except Exception as e:
+        print(e)
+
+
+def get_max_id_in_csv(tasks: List):
+    if tasks:
+        return max(t[0] for t in tasks)
+    else:
+        return 0
+
+
+def complete_task(task_id: str):
+    row_list = []
+    with open(TASK_FILE_LOCATION, 'r') as readFile:
+        reader = csv.reader(readFile)
+        for row in reader:
+            row_list.append(row)
+            if row[0] == task_id:
+                if row[3] == '1':
+                    row[3] = '0'
+                else:
+                    row[3] = '1'
+
+    with open(TASK_FILE_LOCATION, 'w') as writeFile:
+        writer = csv.writer(writeFile)
+        writer.writerows(row_list)
