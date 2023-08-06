@@ -1,0 +1,212 @@
+Metadata-Version: 2.1
+Name: hyc
+Version: 2.0.3
+Summary: 欢迎使用hyc 库（原Number 库）2.0.3版本，hyc 库是一个关于判断数的性质与因数、倍数等功能以及约分、通分等数字运算的库  Welcome to use hyc library(quondam Number library) 2.0.3,it is a library about the nature of judgment number and the function of factor and multiple, as well as the numeral operation of reduction and general division.
+Home-page: https://github.com/fourlight/hyc
+Author: Jiachen Zou
+Author-email: 873039943@QQ.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flask (>=0.10)
+
+中文（简体）：
+
+欢迎使用hyc 库（原Number 库）2.0.3版本，hyc 库是一个关于判断数的性质与因数、倍数等功能以及约分、通分等数字运算的库
+
+下载方式：
+
+pip install hyc
+
+导入方式： 
+
+from hyc import 需要的模块
+
+或者
+
+import hyc.需要的模块
+
+使用方式：
+
+通过调用函数完成您想要达成的效果，具体请看“各函数讲解”
+
+各函数讲解： 
+
+（num模块）
+
+1.factor() 
+
+该函数是用来寻找一个数的所有因数的，请在括号内填入一个数字，该函数就可以找出括号内数字的所有参数
+
+2.per_num()
+
+该函数是用来判断一个数是否为完全数的，请在括号内填入一个数字，该函数返回True或False
+
+3.pri_num() 
+
+该函数是用来判断一个数是否为质数的，请在括号内填入一个数字，该函数返回True或False
+
+4.even_num()
+
+该函数是用来判断一个数是否为偶数的，请在括号内填入一个数字，该函数返回True或False
+
+5.lcm() 
+
+该函数是用来寻找几个数的最小公倍数的，请在括号内填入一个包含两个或以上数字的列表，请勿填入字符串、浮点数
+
+6.hcf() 
+
+该函数是用来寻找几个数的公因数和最大公因数的，请在括号内填入一个包含两个或以上数字的列表，请勿填入字符串、浮点数；该函数会返回两个值，前一个值为两个数所有的公因数列表，后一个值为两个数的最大公因数
+
+7.pri_factor() 
+
+该函数是用来分解一个数的质因数的，请在括号内填入一个数字，该函数返回‘括号内的数 = 质因数1 * 质因数2 * ...’字符串
+
+8.comprime() 
+
+该函数是用来该函数是用来判断几个数是否为互质数的，请在括号内填入一个包含两个及以上数字的列表，该函数返回True或False
+
+（fraction模块）
+
+请注意：在hyc库里，分数用[分母,分子]的形式表示；如五分之一表示为[5,1]
+
+9.red_fr() 
+
+该函数是用来约分的，请在该函数内填入一个分数，该函数可以将该分数化为最简分数
+
+10.den_di() 
+
+该函数是用来通分的，请在函数内填入一个分数列表，该函数可以将分数列表中的所有分数化为同分母分数
+
+11.fra_ad() 
+
+该函数是一个分数加法运算函数，请在函数内填入一个分数列表，该函数可以将分数列表中的所有分数相加
+
+12.simp_fr() 
+
+该函数是用来判断一个分数是否为最简分数的，请在函数内填入一个分数，该函数返回True或False
+
+13.fra_mult() 
+
+该函数是一个分数乘法运算函数，请在函数内填入一个分数列表，该函数可以将分数列表中的所有分数相乘
+
+14.opposide() 
+
+该函数是用来求一个分数的倒数的，请在函数内填入一个分数，该函数可以找出该分数的倒数
+
+15.fra_divi() 
+
+该函数是一个分数除法运算函数，请在函数内填入一个分数表示被除数，以及填入一个分数列表表示所有除数，该函数可以算出商
+
+16.fra_sub() 
+
+该函数是一个分数减法运算函数，请在函数内填入一个分数表示被减数，以及填入一个分数列表表示所有减数，该函数可以算出差
+
+希望对您有所帮助
+
+ENGLISH: 
+
+Welcome to use hyc library(quondam Number library) 2.0.3,it is a library about the nature of judgment number and the function of factor and multiple, as well as the numeral operation of reduction and general division
+
+Doload mothed:
+
+pip install hyc
+
+Import mothed:
+
+import hyc.(moudle) or from hyc import (moudle)
+
+Use mothed:
+
+Call each function to perform the operation you want to achieve. Please refer to "explanation of each function" for details.
+
+explanation of each function
+
+(num moudle)
+
+1.factor() 
+
+This function is used to find all the factors of a number. Please fill in a number in parenthesis, and the function can find all parameters of the numbers in parenthesis
+
+2.per_num() 
+
+This function is used to determine whether a number is a complete number. Please fill in a number in parenthesis, which returns true or false
+
+3.pri_num()
+
+This function is used to determine whether a number is prime. Please fill in a number in parenthesis, which returns true or false
+
+4.even_num()
+
+This function is used to determine whether a number is even. Please fill in a number in parenthesis, which returns true or false
+
+5.lcm()
+
+This function is used to find the minimum common multiple of several numbers. Please fill in a list of two or more numbers in parenthesis. Do not fill in strings or floating-point numbers
+
+6.hcf()
+
+This function is used to find the common factor and maximum common factor of several numbers. Please fill in a list of two or more numbers in parenthesis. Do not fill in strings and floating-point numbers; The function returns two values, the previous value is the list of all common factors of two numbers, and the latter is the maximum common factor of two numbers
+
+7.pri_factor()
+
+This function is used to decompose the prime factor of a number. Please fill in a number in parenthesis, which returns the string "number in brackets = prime factor 1 * prime factor 2 *..."
+
+8.comprime()
+
+This function is used to determine whether several numbers are mutual prime numbers. Please fill in a list of two or more numbers in parenthesis. The function returns true or false
+
+Please note: in the hyc library, the score is expressed in the form of [denominator, molecule]; If one fifth is expressed as [5,1]
+
+(fraction moudle)
+
+9.red_fr()
+
+This function is used to reduce the score. Please fill in a score in the function, which can make the score the simplest score
+
+10.den_di() 
+
+This function is used for general score. Please fill in a score list in the function, which can convert all scores in the score list into the same denominator scores
+
+11.fra_ad() 
+
+This function is a fractional addition function. Please fill in a score list in the function, which can add all the scores in the score list
+
+12.simp_fr()
+
+This function is used to determine whether a score is the simplest score. Please fill in a score in the function, which returns true or false
+
+13.fra_mult()
+
+This function is a fractional multiplication function. Please fill in a fraction list in the function, which can multiply all the scores in the score list
+
+14.opposide()
+
+This function is used to calculate the reciprocal of a score. Please fill in a score in the function, which can find the reciprocal of the score
+
+15.fra_divi()
+
+This function is a fractional division operation function. Please fill in a fraction in the function to indicate the divisor, and fill in a list of scores to represent all divisor. The function can calculate the quotient
+
+16.fra_sub()
+
+This function is a fractional subtraction function. Please fill in a score in the function to indicate the subtracted number, and fill in a score list to represent all the subtractions. This function can calculate the business trip
+
+I hope it can help you!
+
