@@ -1,0 +1,9 @@
+chardet
+PyYAML
+click
+
+[dev]
+pytest
+
+[full]
+ujson
