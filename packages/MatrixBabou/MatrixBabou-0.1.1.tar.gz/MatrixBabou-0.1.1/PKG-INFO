@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: MatrixBabou
+Version: 0.1.1
+Summary: This library is for linear algebra, Matrix analysis 
+Home-page: https://github.com/mohamedlaminebabou/BABOUMATH/
+Author: Babou Mohamed Lamine 
+Author-email: mohamedlaminebabou@gmail.com
+License: MIT
+Keywords: python,matrix,Matrix product,Matrix analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MatrixBabou
+  
+This library is for matrix analysis and data mining. Its created to facilitate some of notable tools in linear algebra like the matriix decompositions and the classical products (Kronecker, Khatri-Rao, Hadamard..) , and all this function are accelerated.
+
+## Installation
+``` python3 -m pip install --user  MatrixBabou```
+
+## How to use it?.
+Work with matrices , Linear Algebra , Matrix decomposition .
+
+## License
+
+© 2021 
+
+This repository is licensed under the MIT license. See LICENSE for details.
+
+
