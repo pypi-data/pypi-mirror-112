@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: hello-lib
+Version: 0.0.1
+Summary: A lib to do the initial testing.
+Home-page: https://github.com/
+Author: Nancykhullar
+Author-email: nancy.khullar97@gmail.com
+License: UNKNOWN
+Description: basic hello package
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
