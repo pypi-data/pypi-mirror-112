@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+imdabessay/__init__.py
+imdabessay/__main__.py
+imdabessay.egg-info/PKG-INFO
+imdabessay.egg-info/SOURCES.txt
+imdabessay.egg-info/dependency_links.txt
+imdabessay.egg-info/entry_points.txt
+imdabessay.egg-info/requires.txt
+imdabessay.egg-info/top_level.txt
