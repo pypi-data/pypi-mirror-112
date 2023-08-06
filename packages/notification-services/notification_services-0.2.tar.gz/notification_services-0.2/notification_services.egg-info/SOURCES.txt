@@ -1,0 +1,15 @@
+setup.cfg
+setup.py
+notification_services.egg-info/PKG-INFO
+notification_services.egg-info/SOURCES.txt
+notification_services.egg-info/dependency_links.txt
+notification_services.egg-info/requires.txt
+notification_services.egg-info/top_level.txt
+notifier/__init__.py
+notifier/controller.py
+providers/__init__.py
+providers/email.py
+providers/slack.py
+utils/__init__.py
+utils/exceptions.py
+utils/helpers.py
