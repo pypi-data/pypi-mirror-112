@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: h5pPlugin
+Version: 0.0.3
+Summary: H5P package
+Home-page: https://github.com/pypa/sampleproject
+Author: Rasmus Janson
+Author-email: jansonrasmus@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# h5p-plugin
+
+Plugin for rendering h5p components in Sphinx.
+
+Given h5p components, the plugin can be used to easily and with short syntax render h5p components inside .rst files and .md files.
+
+Syntax for rendering in .rst files is:  
+**.. iframe:: id**  
+id has to match with the given h5p components folder name.
+
+Syntax for rendering in .md files is:
+
+**```{eval-rst}**
+
+**.. iframe:: id**
+
+**```**
+
+
+## Configuring h5p path
+
+In order for plugin to find the right path to h5p component folder, the path needs to be specified in projects conf file.
+In conf file, create variable named html_template_url and assign path to it. 
+
