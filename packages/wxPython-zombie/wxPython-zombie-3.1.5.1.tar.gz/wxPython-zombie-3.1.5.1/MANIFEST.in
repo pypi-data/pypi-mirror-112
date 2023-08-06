@@ -1,0 +1,19 @@
+recursive-include   wx  **
+
+recursive-exclude   wx  *.pyc
+recursive-exclude   wx  __pycache__
+recursive-exclude   wx  *.pyd
+recursive-exclude   wx  *.dll
+
+include             *.py wscript bin/waf-* src/*.h
+include             README.txt MANIFEST.bdist_wheel
+
+recursive-include   sip/cpp  **
+recursive-include   sip/siplib  **
+recursive-include   ext  **
+
+prune               ext/wxWidgets/lib/vc*
+prune               ext/wxWidgets/build/msw/vc*
+prune               ext/wxWidgets/docs
+prune               ext/wxWidgets/locale
+exclude             wx/svg/_nanosvg.p* prepare_source.py

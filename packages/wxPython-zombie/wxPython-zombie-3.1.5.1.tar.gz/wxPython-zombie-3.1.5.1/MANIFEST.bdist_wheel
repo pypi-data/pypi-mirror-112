@@ -1,0 +1,6 @@
+recursive-include   wx  **
+
+recursive-exclude   wx  *.pyc
+recursive-exclude   wx  __pycache__
+
+exclude             wx/svg/*.c
