@@ -1,0 +1,8 @@
+tqdm
+six
+
+[all]
+torch
+torchvision
+opencv-python
+flask
