@@ -1,0 +1,14 @@
+include *.txt
+include *.md
+include mofid_normalizer/resource/postagger/UPC_full_model_wapiti
+include mofid_normalizer/resource/postagger/NC_model
+include mofid_normalizer/resource/tokenizer/enDict
+include mofid_normalizer/resource/tokenizer/faDict
+include mofid_normalizer/resource/dependency_parser/total_dep_parser.mco
+include mofid_normalizer/resource/stemmer/stem_irregularNounDict.pckl
+include mofid_normalizer/resource/stemmer/stem_lex.pckl
+include mofid_normalizer/resource/stemmer/stem_verbMap.pckl
+include mofid_normalizer/resource/stemmer/verbStemDict.pckl
+include mofid_normalizer/resource/tokenizer/TokenMerger.pckl
+#include parsivar/resource/spell/onegram.pckl
+#include parsivar/resource/spell/mybigram_lm.pckl
