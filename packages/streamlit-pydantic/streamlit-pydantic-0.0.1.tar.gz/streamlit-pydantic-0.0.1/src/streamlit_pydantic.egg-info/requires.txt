@@ -1,0 +1,15 @@
+streamlit
+
+[dev]
+setuptools
+wheel
+twine
+flake8
+pytest
+pytest-mock
+pytest-cov
+mypy
+black
+pydocstyle
+isort
+lazydocs
