@@ -1,0 +1,16 @@
+README.md
+setup.py
+fracture_fea_laf/__init__.py
+fracture_fea_laf/_version.py
+fracture_fea_laf/mesh.py
+fracture_fea_laf/plot.py
+fracture_fea_laf/postprocess.py
+fracture_fea_laf/specimen_geometry.py
+fracture_fea_laf/utils.py
+fracture_fea_laf.egg-info/PKG-INFO
+fracture_fea_laf.egg-info/SOURCES.txt
+fracture_fea_laf.egg-info/dependency_links.txt
+fracture_fea_laf.egg-info/requires.txt
+fracture_fea_laf.egg-info/top_level.txt
+fracture_fea_laf/materials/__init__.py
+fracture_fea_laf/materials/euromat_A.py

@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: fracture-fea-laf
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Maria S. Yankova
+Author-email: maria.yankova@manchester.ac.uk
+License: MIT license
+Project-URL: GitHub, https://github.com/maria-yankova/fracture-fea-laf
+Description: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/maria-yankova/fracture-fea-laf/HEAD)
+        
+        # fracture-fea-laf
+        
+        Mesh generation tool for standard fracture specimen models with a finite crack tip radius
+        
+        Postprocessing functions for FE data that use a Weibull stress formulation for cleavage fracture prediction
+        
+        
+        
+        # Change Log
+        
+        ## [0.1.1] - 2021.07.08
+        
+        - Added mesh generation
+        
+        ## [0.1.0] - 2021.06.01
+        
+        - Initial release
+        
+Keywords: fea,laf,fracture,materials-science
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
