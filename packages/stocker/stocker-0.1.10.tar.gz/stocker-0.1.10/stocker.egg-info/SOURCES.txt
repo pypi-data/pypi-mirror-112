@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+stocker/__init__.py
+stocker/error.py
+stocker/get_data.py
+stocker/lstm.py
+stocker/predict.py
+stocker.egg-info/PKG-INFO
+stocker.egg-info/SOURCES.txt
+stocker.egg-info/dependency_links.txt
+stocker.egg-info/requires.txt
+stocker.egg-info/top_level.txt
