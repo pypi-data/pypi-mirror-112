@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+
+[dev-packages]
+django-extensions = "*"
+django-debug-toolbar = "*"
+setuptools = "*"
+setuptools_scm = "*"
+wheel = "*"
+conf = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-django = "*"
+config = "*"
+python-memcached = "*"
+
+[requires]
+python_version = "3.9"
