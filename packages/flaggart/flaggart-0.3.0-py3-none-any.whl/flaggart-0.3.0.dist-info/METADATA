@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: flaggart
+Version: 0.3.0
+Summary: Package for retrieving, creating, and performing operations on flags
+License: MIT
+Author: AlDacMac
+Author-email: alasdairmacgdev@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: wikipedia (>=1.4.0,<2.0.0)
