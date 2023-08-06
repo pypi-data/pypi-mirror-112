@@ -1,0 +1,13 @@
+License
+README.md
+pyproject.toml
+setup.cfg
+man/false.1.gz
+man/true.1.gz
+src/pnu_true.egg-info/PKG-INFO
+src/pnu_true.egg-info/SOURCES.txt
+src/pnu_true.egg-info/dependency_links.txt
+src/pnu_true.egg-info/entry_points.txt
+src/pnu_true.egg-info/top_level.txt
+src/true/__init__.py
+src/true/main.py

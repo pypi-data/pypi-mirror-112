@@ -1,0 +1,4 @@
+[console_scripts]
+false = true:main
+true = true:main
+
