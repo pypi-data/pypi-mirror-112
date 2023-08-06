@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: django_json_logging
+Version: 0.0.3
+Summary: Various JSON logging extensions for the Django Framework
+Home-page: https://github.com/vskrachkov/django_json_logging
+Author: Vicheslav Krachkov
+Author-email: vskrachkov@gmail.com
