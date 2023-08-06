@@ -1,0 +1,9 @@
+{
+    "vehicle_speed": 50,
+    "left_led": 0,
+    "right_led": 0,
+    "acc":0,
+    "enable":0,
+    "sample_time_ms": 20,
+    "sample_numbers": 4294967296
+}
