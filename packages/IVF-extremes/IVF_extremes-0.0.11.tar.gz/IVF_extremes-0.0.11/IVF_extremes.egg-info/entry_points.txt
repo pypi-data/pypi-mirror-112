@@ -1,0 +1,4 @@
+[console_scripts]
+IVF_extremes = IVF_extremes.single_check:CLI_single_check
+IVF_extremes_batch = IVF_extremes.batch_check:CLI_batch
+
