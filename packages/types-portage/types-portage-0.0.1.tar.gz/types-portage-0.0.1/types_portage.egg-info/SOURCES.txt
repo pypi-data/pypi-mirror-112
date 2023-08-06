@@ -1,0 +1,8 @@
+setup.py
+portage-stubs/METADATA.toml
+portage-stubs/__init__.pyi
+portage-stubs/versions.pyi
+types_portage.egg-info/PKG-INFO
+types_portage.egg-info/SOURCES.txt
+types_portage.egg-info/dependency_links.txt
+types_portage.egg-info/top_level.txt
