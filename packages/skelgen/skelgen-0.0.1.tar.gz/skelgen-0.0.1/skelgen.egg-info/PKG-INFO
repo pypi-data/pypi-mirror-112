@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: skelgen
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://gitlab.com/bbworld1/skel
+Author: Vincent Wang
+Author-email: vwangsf@gmail.com
+License: MIT
+Download-URL: https://gitlab.com/bbworld1/skel
+Keywords: generator,skeleton,template,tool
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Build Tools
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# skel
+
+A quick skeleton generator for projects.
+
