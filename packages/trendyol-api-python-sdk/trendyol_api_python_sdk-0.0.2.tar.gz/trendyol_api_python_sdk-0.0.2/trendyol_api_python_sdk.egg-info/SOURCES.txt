@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+trendyol_api_python_sdk.egg-info/PKG-INFO
+trendyol_api_python_sdk.egg-info/SOURCES.txt
+trendyol_api_python_sdk.egg-info/dependency_links.txt
+trendyol_api_python_sdk.egg-info/requires.txt
+trendyol_api_python_sdk.egg-info/top_level.txt
+trendyol_sdk/__init__.py
+trendyol_sdk/api.py
+trendyol_sdk/exceptions.py
+trendyol_sdk/services.py
+trendyol_sdk/utils.py
