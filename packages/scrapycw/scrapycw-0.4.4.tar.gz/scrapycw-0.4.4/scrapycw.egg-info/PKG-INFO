@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: scrapycw
+Version: 0.4.4
+Summary: 一个web监控scrapy的工具
+Home-page: https://github.com/erygreat/scrapycw
+Author: erygreat
+Author-email: ery991172821@gmail.com
+License: BSD
+Description: 
+                Scrapycw是一个Scrapy监控程序，你可以通过命令行或者web服务的方式监控Scrapy爬虫运行情况，以及进行运行爬虫等常用操作。
+            
+Keywords: Scrapy Web Monitor
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Pytest
+Classifier: Framework :: Scrapy
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
