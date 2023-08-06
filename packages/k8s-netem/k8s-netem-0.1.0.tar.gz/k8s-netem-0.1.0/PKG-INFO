@@ -1,0 +1,25 @@
+Metadata-Version: 1.0
+Name: k8s-netem
+Version: 0.1.0
+Summary: Cross-pod network-emulation using Linux TC/netem for Kubernetes
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Apache 2.0
+Description: # k8s-netem
+        
+        ## Documentation
+        
+        TODO
+        
+        ## License
+        
+        `k8s-netem` is licensed under the Apache 2.0 license.
+        Please refer to the `LICENSE.md` file for details.
+        
+        ## Credits
+        
+        - Steffen Vogel <svogel2@eonerc.rwth-aachen.de> (RWTH Aachen University)
+        
+Keywords: netem,tc,network,kubernetes
+Platform: UNKNOWN

@@ -1,0 +1,4 @@
+[console_scripts]
+k8s-netem = k8s_netem.run:main
+k8s-netem-webhook = k8s_netem.webhook:main
+
