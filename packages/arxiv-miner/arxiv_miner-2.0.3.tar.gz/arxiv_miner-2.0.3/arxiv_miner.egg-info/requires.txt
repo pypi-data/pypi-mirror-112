@@ -1,0 +1,11 @@
+arxiv==0.5.3
+tex2py
+matplotlib
+pandas
+click
+numpy
+dateparser
+expiringdict
+elasticsearch
+elasticsearch_dsl
+luqum
