@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+distributions/Binomialdistribution.py
+distributions/Gaussiandistribution.py
+distributions/Generaldistribution.py
+distributions/__init__.py
+distributions_by_Flaky.egg-info/PKG-INFO
+distributions_by_Flaky.egg-info/SOURCES.txt
+distributions_by_Flaky.egg-info/dependency_links.txt
+distributions_by_Flaky.egg-info/not-zip-safe
+distributions_by_Flaky.egg-info/top_level.txt
