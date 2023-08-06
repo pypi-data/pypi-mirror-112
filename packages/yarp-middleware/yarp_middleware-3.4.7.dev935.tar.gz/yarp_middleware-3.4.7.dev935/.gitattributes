@@ -1,0 +1,35 @@
+.clang-format                   export-ignore
+.clang-tidy                     export-ignore
+.github/                        export-ignore
+.gitignore                      export-ignore
+.mailmap                        export-ignore
+.ci/                            export-ignore
+
+*.txt                           whitespace=trailing-space,space-before-tab,tab-in-indent
+*.md                            whitespace=trailing-space,space-before-tab,tab-in-indent
+*.dox                           whitespace=trailing-space,space-before-tab,tab-in-indent
+*.qml                           whitespace=trailing-space,space-before-tab,tab-in-indent
+*.msg                           whitespace=trailing-space,space-before-tab,tab-in-indent
+
+*.c                             whitespace=trailing-space,space-before-tab,tab-in-indent,tabwidth=4
+*.h                             whitespace=trailing-space,space-before-tab,tab-in-indent,tabwidth=4
+*.cpp                           whitespace=trailing-space,space-before-tab,tab-in-indent,tabwidth=4
+*.hpp                           whitespace=trailing-space,space-before-tab,tab-in-indent,tabwidth=4
+*.cc                            whitespace=trailing-space,space-before-tab,tab-in-indent,tabwidth=4
+*.thrift                        whitespace=trailing-space,space-before-tab,tab-in-indent,tabwidth=4
+*.xml                           whitespace=trailing-space,space-before-tab,tab-in-indent,tabwidth=4
+*.qrc                           whitespace=trailing-space,space-before-tab,tab-in-indent,tabwidth=4
+
+
+CMakeLists.txt                  whitespace=trailing-space,space-before-tab,tab-in-indent,tabwidth=2
+*.cmake                         whitespace=trailing-space,space-before-tab,tab-in-indent,tabwidth=2
+
+*.vcproj                        text eol=crlf
+*.dsp                           text eol=crlf
+*.dsw                           text eol=crlf
+
+*.png                           binary
+*.jpg                           binary
+*.gif                           binary
+*.tiff                          binary
+*.ico                           binary
