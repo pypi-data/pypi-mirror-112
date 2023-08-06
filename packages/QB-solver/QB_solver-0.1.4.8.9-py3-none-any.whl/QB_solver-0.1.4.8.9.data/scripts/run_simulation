@@ -1,0 +1,4 @@
+#!python
+
+from qb_solver import *
+main()
