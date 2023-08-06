@@ -1,0 +1,38 @@
+import base64
+from Cryptodome.Cipher import AES
+from Cryptodome.Random import get_random_bytes
+         
+class AESEncrypter(object):
+    def __init__(self):
+        self.mode = AES.MODE_CBC
+ 
+    #Encryption function
+    def EncryptString(self, text, phrase):
+        phrase_len = 32
+        while len(phrase) < phrase_len:
+            phrase += phrase
+        phrase = phrase[0:phrase_len]
+        pad = lambda s: s + (phrase_len - len(s) % phrase_len) * chr(phrase_len - len(s) % phrase_len)
+        self.key = phrase
+        IV = get_random_bytes(AES.block_size)
+
+        cryptor = AES.new(self.key.encode("utf8"), self.mode, IV)
+        self.ciphertext = cryptor.encrypt(bytes(pad(text), encoding="utf8"))
+        return base64.b64encode(IV + self.ciphertext).decode()
+
+    #Decryption function
+    def DecryptString(self, text, phrase):
+        phrase_len = 32
+        while len(phrase) < phrase_len:
+            phrase += phrase
+        phrase = phrase[0:phrase_len]
+        self.key = phrase
+        unpad = lambda s: s[0:-ord(s[-1:])]
+        plain_text = base64.b64decode(text)
+        encoded_data = plain_text[AES.block_size:]
+        IV = plain_text[0:AES.block_size]
+
+        cryptor = AES.new(self.key.encode("utf8"), self.mode, IV)
+        decrypted = cryptor.decrypt(encoded_data)
+        return unpad(decrypted).decode()
+ 
