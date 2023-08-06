@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: blahblah
+Version: 1.3.0
+Summary: Fake data generator for district42 schema
+Home-page: https://github.com/nikitanovosibirsk/blahblah
+Author: Nikita Tsvetkov
+Author-email: nikitanovosibirsk@yandex.com
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: niltype (<1.0,>=0.3)
+Requires-Dist: district42 (<1.4,>=1.3)
+
+# blahblah
+
+[![Codecov](https://img.shields.io/codecov/c/github/nikitanovosibirsk/blahblah/master.svg?style=flat-square)](https://codecov.io/gh/nikitanovosibirsk/blahblah)
+[![PyPI](https://img.shields.io/pypi/v/blahblah.svg?style=flat-square)](https://pypi.python.org/pypi/blahblah/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/blahblah?style=flat-square)](https://pypi.python.org/pypi/blahblah/)
+[![Python Version](https://img.shields.io/pypi/pyversions/blahblah.svg?style=flat-square)](https://pypi.python.org/pypi/blahblah/)
+
+(!) Work in progress, breaking changes are possible until v2.0 is released
+
+## Installation
+
+```sh
+pip3 install blahblah
+```
+
+
