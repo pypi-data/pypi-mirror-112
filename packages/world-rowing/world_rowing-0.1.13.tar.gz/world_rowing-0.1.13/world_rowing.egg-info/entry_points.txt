@@ -1,0 +1,3 @@
+[console_scripts]
+world_rowing = world_rowing.cli:run [cli]
+
