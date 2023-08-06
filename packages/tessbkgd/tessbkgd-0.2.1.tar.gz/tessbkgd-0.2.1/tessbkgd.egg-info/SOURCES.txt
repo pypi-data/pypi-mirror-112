@@ -1,0 +1,12 @@
+LICENSE
+README.md
+requirements.txt
+setup.py
+notebooks/iot_Dra_tpf.ipynb
+src/__init__.py
+src/tessbkgd.py
+tessbkgd.egg-info/PKG-INFO
+tessbkgd.egg-info/SOURCES.txt
+tessbkgd.egg-info/dependency_links.txt
+tessbkgd.egg-info/requires.txt
+tessbkgd.egg-info/top_level.txt
