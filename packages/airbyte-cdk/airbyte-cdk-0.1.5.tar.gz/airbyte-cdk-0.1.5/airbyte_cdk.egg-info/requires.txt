@@ -1,0 +1,13 @@
+backoff
+jsonschema==2.6.0
+pendulum
+pydantic==1.6.2
+PyYAML==5.4
+requests
+
+[dev]
+MyPy==0.812
+pytest
+pytest-cov
+pytest-mock
+requests-mock
