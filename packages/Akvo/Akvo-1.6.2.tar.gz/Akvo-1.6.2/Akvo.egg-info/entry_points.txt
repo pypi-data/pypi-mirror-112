@@ -1,0 +1,5 @@
+[console_scripts]
+akvo = akvo.gui.akvoGUI:main
+akvoK0 = akvo.tressel.calcAkvoKernel:main
+akvoQT = akvo.tressel.invertTA:main
+
