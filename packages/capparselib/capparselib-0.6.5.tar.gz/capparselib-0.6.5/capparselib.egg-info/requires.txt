@@ -1,0 +1,12 @@
+lxml==4.6.3
+python-dateutil==2.8.1
+
+[tests]
+chardet
+parameterized
+coverage
+coveralls>=3.0.0
+invoke
+nose
+twine
+chardet>=4.0.0
