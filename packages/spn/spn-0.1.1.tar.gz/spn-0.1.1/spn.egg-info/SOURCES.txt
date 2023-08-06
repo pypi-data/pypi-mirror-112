@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+spn.py
+spn.egg-info/PKG-INFO
+spn.egg-info/SOURCES.txt
+spn.egg-info/dependency_links.txt
+spn.egg-info/entry_points.txt
+spn.egg-info/requires.txt
+spn.egg-info/top_level.txt
