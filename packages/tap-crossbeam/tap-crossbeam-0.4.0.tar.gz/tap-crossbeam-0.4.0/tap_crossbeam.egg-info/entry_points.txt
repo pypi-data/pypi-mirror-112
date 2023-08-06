@@ -1,0 +1,4 @@
+
+          [console_scripts]
+          tap-crossbeam=tap_crossbeam:main
+      
