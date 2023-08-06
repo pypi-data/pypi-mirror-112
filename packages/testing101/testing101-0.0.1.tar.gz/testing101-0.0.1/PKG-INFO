@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: testing101
+Version: 0.0.1
+Summary: A sample Python project
+Home-page: https://github.com/ashutoshaks/testing101
+Author: Ashutosh Kumar Singh
+Author-email: asingh@blotout.io
+License: UNKNOWN
+Description: # testing101
+        
+        Just trying to test out packaging
+Platform: UNKNOWN
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
