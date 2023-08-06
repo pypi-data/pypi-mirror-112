@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+gym_discrete/__init__.py
+gym_discrete.egg-info/PKG-INFO
+gym_discrete.egg-info/SOURCES.txt
+gym_discrete.egg-info/dependency_links.txt
+gym_discrete.egg-info/requires.txt
+gym_discrete.egg-info/top_level.txt
+gym_discrete/envs/__init__.py
+gym_discrete/envs/discrete_env.py
