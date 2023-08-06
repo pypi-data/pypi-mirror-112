@@ -1,0 +1,12 @@
+antiope/__init__.py,sha256=YUj8hGpECn7m084782j5A6tsR4Vi_-XmRlGR5xQUulM,805
+antiope/_version.py,sha256=CnQeI6qrolatOP8V_xTiZ5pUIsbAw2Ru1BDCd_-Tt0U,800
+antiope/aws_account.py,sha256=xjJQbVrFdK_GDYmWe7PC9Nff2GXtb3u0H2nyPE4YHLg,13040
+antiope/aws_organization.py,sha256=KzOorADhwY6ORYXpXBGUcziYcNYn5amLdqvPdsGarYw,3923
+antiope/config.py,sha256=vckDhiXzsMfFDZ7t3r2H39zZbgPDt2q4W5A2Yzn0Bpc,4305
+antiope/foreign_aws_account.py,sha256=jZBMlUTg83LzG2N6OKE-dFw4U9Ks4vHFLiZbiaqHaQk,5086
+antiope/vpc.py,sha256=ahYQ6YjCsx7vLW_gtqj9cL1d7G7yxg3FmN6EV14hF8g,7552
+antiope-1.2.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+antiope-1.2.1.dist-info/METADATA,sha256=1prVNGeNCfzqCW19oCknesWHCkZ9VWyd_cn0OtQH-t0,1034
+antiope-1.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+antiope-1.2.1.dist-info/top_level.txt,sha256=t21E9X-mFZYSeRsBw4m6HMJCKIvjMAJDEKHJHyA1TwY,8
+antiope-1.2.1.dist-info/RECORD,,
