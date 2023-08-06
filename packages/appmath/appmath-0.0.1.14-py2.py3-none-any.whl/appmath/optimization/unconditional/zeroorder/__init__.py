@@ -1,0 +1,1 @@
+from appmath.optimization.unconditional.zeroorder import onedimensional
