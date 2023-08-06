@@ -1,0 +1,13 @@
+gidlogger/__init__.py,sha256=rqPNKoA9kcExEc3dbwLJr1R8uBlsceONzktIm75YNw4,101
+gidlogger/logger_functions.py,sha256=oDAMflJIQg0B1Topv0Ootr__yC8VttX3jXvfuRTMbck,11809
+gidlogger/logging_provider.py,sha256=tOrd6v0Ev0d5jpsRpXxNPLkPIuFQYZHmAwORTS0vujE,134
+gidlogger/utility/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gidlogger/utility/stubs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gidlogger/utility/stubs/appdata_provider.pyi,sha256=obCM9FeHpeVz5W4giacyl4PJxIUVOdgEz5RtAblNYSs,93
+gidlogger/utility/stubs/appdata_storager.pyi,sha256=P_OJf9aO9OAQP0IVR0YdAYAYyP1IeystS44eH7GjisI,151
+gidlogger/utility/stubs/exceptions.pyi,sha256=3-uMz5r5Z2HbN3FFM9hjOsjT1GA1wqL12d9r4T2hcXs,112
+gidlogger/utility/stubs/skeleton_tree.pyi,sha256=FdQjSymAMSwvjRFCUwHd6FlBE9A6hzsseVUbpd5-ZZg,257
+gidlogger-0.1.38.dist-info/LICENSE,sha256=vYszuB4A2h9vBp6RYN-8DQvGB8SenZsr8i0qvSqIVR4,1064
+gidlogger-0.1.38.dist-info/WHEEL,sha256=NLqmsx-ZFZ6gDavYgh2oH0ZSN-KRmpcdEXIZDnYy9Pg,99
+gidlogger-0.1.38.dist-info/METADATA,sha256=e_oePJeC5wPG10-EZm6JPW2ioGLCWRGCc28Vxbrq-U4,261
+gidlogger-0.1.38.dist-info/RECORD,,
