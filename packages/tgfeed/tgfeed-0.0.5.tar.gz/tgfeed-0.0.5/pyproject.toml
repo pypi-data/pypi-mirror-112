@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "tgfeed"
+version = "0.0.5"
+description = "Create feeds in Telegram easily"
+authors = ["Nikolai <magnickolas@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Telethon = "^1.22.0"
+appdirs = "^1.4.4"
+loguru = "^0.5.3"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.910"
+pre-commit = "^2.13.0"
+removestar = "^1.2.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
