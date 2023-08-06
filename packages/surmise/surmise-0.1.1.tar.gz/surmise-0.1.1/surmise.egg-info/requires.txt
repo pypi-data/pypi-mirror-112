@@ -1,0 +1,10 @@
+numpy
+scipy
+
+[docs]
+sphinx
+sphinxcontrib.bibtex
+sphinx_rtd_theme
+
+[extras]
+GPy
