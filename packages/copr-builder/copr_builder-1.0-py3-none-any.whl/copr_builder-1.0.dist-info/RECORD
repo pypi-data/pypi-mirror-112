@@ -1,0 +1,13 @@
+copr_builder/__init__.py,sha256=RfOdoPVxD50uggykLkKOwJavRYfBtGVgKFZe6TtguMc,368
+copr_builder/copr_builder.py,sha256=Ftox0ol21aBov42gTmIE4ySKAzER8xyu94rkq_p4_u8,6218
+copr_builder/copr_project.py,sha256=OOV0_jMmtp1sF8WgNc6Q3Cz3N_JkVzJWL7XSRm6c5ko,8155
+copr_builder/errors.py,sha256=CXz2fiqDQgdMB7nJxrwEjBqEU5GrnZhJwW1OMwcQC00,331
+copr_builder/git_repo.py,sha256=faA1bBcjJlwv224llpPbLgkviOIGbvLn9i_9lPnbv_g,2325
+copr_builder/srpm_builder.py,sha256=shmT-MWZ3CB_-7ZZNxUBBtojtwltN1XUq_bNcA0w-OI,8332
+copr_builder/utils.py,sha256=Og-q7XpMqf139Oc2GqX746w9l9MfqEoI8-FyquzR-Dw,474
+copr_builder-1.0.data/scripts/copr-builder,sha256=_y3wM2bzUSqmycTSFW9uZoAm0L7JO-DAc5gWCoE1xRQ,1608
+copr_builder-1.0.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+copr_builder-1.0.dist-info/METADATA,sha256=3a5ikgdWLsd3xugNg-7ac0CQyvhCD-Pamz-2LCP1yBs,2372
+copr_builder-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+copr_builder-1.0.dist-info/top_level.txt,sha256=bcsgxvzWtlyu6ZjpD0UBgtF4oCigRheOnI-xf2rzXD4,13
+copr_builder-1.0.dist-info/RECORD,,
