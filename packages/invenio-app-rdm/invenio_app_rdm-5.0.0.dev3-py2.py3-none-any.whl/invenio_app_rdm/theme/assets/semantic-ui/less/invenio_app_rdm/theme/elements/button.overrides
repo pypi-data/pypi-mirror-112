@@ -1,0 +1,11 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+@import "@less/invenio_theme/theme/elements/button.overrides";
+
+/** Citation landing page */
+
+.copy.button {
+    margin-right: 0px;
+}
