@@ -1,0 +1,12 @@
+README.md
+setup.py
+forte.elastic.egg-info/PKG-INFO
+forte.elastic.egg-info/SOURCES.txt
+forte.elastic.egg-info/dependency_links.txt
+forte.elastic.egg-info/requires.txt
+forte.elastic.egg-info/top_level.txt
+forte/elastic/__init__.py
+forte/elastic/elastic_indexer.py
+forte/elastic/elastic_search_index_processor.py
+forte/elastic/elastic_search_processor.py
+forte/elastic/elastic_search_query_creator.py
