@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+src/infographics/Figure.py
+src/infographics/Infographic.py
+src/infographics/LKDorlingCartogram.py
+src/infographics/LKMap.py
+src/infographics/__init__.py
+src/infographics/_constants.py
+src/infographics/_utils.py
+src/infographics/dorling_compress.py
+src/infographics/plotx.py
+src/infographics_nuuuwan.egg-info/PKG-INFO
+src/infographics_nuuuwan.egg-info/SOURCES.txt
+src/infographics_nuuuwan.egg-info/dependency_links.txt
+src/infographics_nuuuwan.egg-info/requires.txt
+src/infographics_nuuuwan.egg-info/top_level.txt

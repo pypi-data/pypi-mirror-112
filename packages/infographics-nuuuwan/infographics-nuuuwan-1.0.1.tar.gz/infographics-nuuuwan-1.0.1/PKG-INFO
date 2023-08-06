@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: infographics-nuuuwan
+Version: 1.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/nuuuwan/infographics
+Author: Nuwan I. Senaratna
+Author-email: nuuuwan@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/nuuuwan/infographics/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Infographics
+
+Draw infographics with MatPlotLib and GeoPandas
+
+## Release History
+
+### 1.0.1
+
+* Added Infographic, and Figure
+* Added Examples
+
+### 1.0.0
+
+* Added Dorling Cartogram
+
+## Setup and Install
+
+```
+pip install infographics-nuuuwan
+```
+
+*The source code for this library can be found at https://github.com/nuuuwan/infographics.*
+
+
