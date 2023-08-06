@@ -1,0 +1,3 @@
+[console_scripts]
+attractors=attractors.parser:cli
+
