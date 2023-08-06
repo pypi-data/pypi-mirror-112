@@ -1,0 +1,3 @@
+[console_scripts]
+wisdom-tree = wisdom_tree:run_app
+
