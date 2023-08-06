@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: edx-prefectutils
+Version: 2.0.0
+Summary: Utility code to assist in writing Prefect Flows.
+Home-page: https://github.com/doctoryes/edx_prefectutils
+Author: Julia Eskew
+Author-email: jeskew@edx.org
+License: AGPL
+Keywords: edx_prefectutils
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Requires-Dist: prefect[aws,google,snowflake,viz] (==0.14.5)
+Requires-Dist: backoff
+Requires-Dist: botocore
+Requires-Dist: ciso8601
+Requires-Dist: edx-opaque-keys
+Requires-Dist: paramiko
+Requires-Dist: boto3
+Requires-Dist: hvac
+Requires-Dist: importlib-metadata (<2)
+Requires-Dist: mysql-connector-python
+
+================
+edx-prefectutils
+================
+
+
+
+
+
+
+A utility code written by edX specifically for edX Prefect Flows. It assists writing in edX Prefect Flows.
+
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
