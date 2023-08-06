@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: surmise
+Version: 0.1.1
+Summary: A modular interface for surrogate models and tools
+Home-page: https://github.com/surmising/surmise
+Author: Matthew Plumlee, Özge Sürer, Stefan M. Wild
+Author-email: ozgesurer2019@u.northwestern.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinxcontrib.bibtex ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Provides-Extra: extras
+Requires-Dist: GPy ; extra == 'extras'
+
+UNKNOWN
+
+
