@@ -1,0 +1,22 @@
+pandas>=1.2.5
+scikit-learn>=0.22
+
+[complete]
+alteryx-open-src-update-checker>=2.0.0
+dask[dataframe]!=2020.12.0,>=2.30.0
+
+[complete:python_version != "3.9"]
+koalas>=1.8.0
+pyspark>=3.0.0
+
+[dask]
+dask[dataframe]!=2020.12.0,>=2.30.0
+
+[koalas]
+
+[koalas:python_version != "3.9"]
+pyspark>=3.0.0
+koalas>=1.8.0
+
+[update_checker]
+alteryx-open-src-update-checker>=2.0.0
