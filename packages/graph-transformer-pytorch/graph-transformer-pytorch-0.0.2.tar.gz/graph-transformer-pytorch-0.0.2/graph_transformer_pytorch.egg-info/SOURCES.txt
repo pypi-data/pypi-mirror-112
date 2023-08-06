@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+graph_transformer_pytorch/__init__.py
+graph_transformer_pytorch/graph_transformer_pytorch.py
+graph_transformer_pytorch.egg-info/PKG-INFO
+graph_transformer_pytorch.egg-info/SOURCES.txt
+graph_transformer_pytorch.egg-info/dependency_links.txt
+graph_transformer_pytorch.egg-info/requires.txt
+graph_transformer_pytorch.egg-info/top_level.txt
