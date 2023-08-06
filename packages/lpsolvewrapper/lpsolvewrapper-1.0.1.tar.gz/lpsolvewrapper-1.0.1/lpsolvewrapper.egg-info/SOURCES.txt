@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.py
+lpsolvewrapper/__init__.py
+lpsolvewrapper/liblpsolve55.so
+lpsolvewrapper/lpsolve55-5.5.0.9-py3.6.egg-info
+lpsolvewrapper/lpsolve55.cp36-win_amd64.pyd
+lpsolvewrapper/lpsolve55.cpython-36m-x86_64-linux-gnu.so
+lpsolvewrapper.egg-info/PKG-INFO
+lpsolvewrapper.egg-info/SOURCES.txt
+lpsolvewrapper.egg-info/dependency_links.txt
+lpsolvewrapper.egg-info/not-zip-safe
+lpsolvewrapper.egg-info/top_level.txt
