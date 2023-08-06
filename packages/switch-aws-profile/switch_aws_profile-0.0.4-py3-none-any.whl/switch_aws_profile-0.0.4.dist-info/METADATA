@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: switch-aws-profile
+Version: 0.0.4
+Summary: Switch AWS profile on local
+Home-page: https://github.com/kimisme9386/cli-switch-aws-profile
+Author: Chris Yang
+Author-email: kimisme9386@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyinquirer (==1.0.3)
+
+# Switch AWS Profile on local
+
+| GitHub Actions                                                                                                                                                                                |                                                      Pypi                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------: |
+| [![Deploy](https://github.com/kimisme9386/cli-switch-aws-profile/actions/workflows/deploy.yml/badge.svg)](https://github.com/kimisme9386/cli-switch-aws-profile/actions/workflows/deploy.yml) | [![PyPI version](https://badge.fury.io/py/switch-aws-profile.svg)](https://badge.fury.io/py/switch-aws-profile) |
+
+![demo-swtich-aws-profile](https://user-images.githubusercontent.com/7465652/125384155-0ebbff80-e3cb-11eb-893d-4bae4d252663.gif)
+
+Choose one AWS profile to set default when you have multiple AWS profile.
+
+Typically, the location of credential file is ` ~/.aws/credentials`
+
+## Feature
+
+- Switch AWS profile for setting default
+- Assume role for getting credential base on choosing AWS profile
+
+## prerequisites
+
+- Python3
+- jq
+
+## Credential file examples
+
+No Assume role
+
+```
+[test1]
+aws_access_key_id = AKI11111111111111111
+aws_secret_access_key = aaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbb
+
+[test2]
+aws_access_key_id = AKI22222222222222222
+aws_secret_access_key = cccccccccccccccccccccccdddddddddddddddddd
+```
+
+Assume role
+
+```
+[test1]
+aws_access_key_id = AKI11111111111111111
+aws_secret_access_key = aaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbb
+custom_assume_role = ci-assume-role1
+duration_seconds = 3600
+
+[test2]
+aws_access_key_id = AKI22222222222222222
+aws_secret_access_key = cccccccccccccccccccccccdddddddddddddddddd
+custom_assume_role = ci-assume-role2
+duration_seconds = 3600
+```
+
+If custom_assume_role is specified, the question as `Input your role name to assume role` can be pressed enter to pass it directly.
+
+`duration_seconds` setting same as the custom_assume_role.
+
+
