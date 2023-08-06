@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+igraph/__init__.py
+igraph/_utils.py
+igraph.egg-info/PKG-INFO
+igraph.egg-info/SOURCES.txt
+igraph.egg-info/dependency_links.txt
+igraph.egg-info/top_level.txt

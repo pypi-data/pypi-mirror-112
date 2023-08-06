@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: igraph
+Version: 0.1.14
+Summary: View graph data structures in the IPython notebook (deprecated).
+Home-page: http://github.com/patrickfuller/jgraph/
+Author: Patrick Fuller, Tamas Nepusz
+Author-email: patrickfuller@gmail.com, ntamas@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Framework :: IPython
+Classifier: Topic :: Education :: Computer Aided Instruction (CAI)
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+Deprecation notice
+==================
+
+To avoid name collision with the igraph project, the original igraph visualization
+library has been renamed to `jgraph` in December 2015. The `igraph` package on
+PyPI will soon be used by the igraph project.
+
+The authors of `jgraph` (ex-igraph) and `python-igraph` (soon-to-be igraph)
+project have agreed on a transition period during which old projects still
+using `igraph` as a PyPI dependency will receive an error while trying to
+import igraph in their own projects. The transition period ends on Sep 1 2021.
+
+Things to do now
+----------------
+
+If you wanted to install the graph visualization library by Patrick Fuller,
+please install `jgraph` instead. You have time until Sep 1 2021 to do this.
+
+If you wanted to install the Python interface of the igraph network analysis
+library, please install `python-igraph` instead. After Sep 1 2021, you can
+start installing `igraph` instead. `python-igraph` will keep on working at
+least until Sep 1 2022.
+
+
+
