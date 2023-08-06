@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: spi-pack
+Version: 0.3.4
+Summary: A module to run analysis
+Home-page: https://github.com/lizahina/test
+Author: Elizaveta
+Author-email: ekaduhin@mail.ru
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: datetime
+Requires-Dist: statsmodels
+Requires-Dist: seaborn
+Requires-Dist: scipy
+Requires-Dist: sklearn
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
