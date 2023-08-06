@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ada-client
+Version: 0.0.2
+Summary: A client for getting metadata from the NOIRLab Astro Data Archive.
+Home-page: https://github.com/NOAO/ada-client
+Author: NOIRLab Astro Data Archive
+Author-email: astroarchive@noirlab.edu
+License: UNKNOWN
+Project-URL: NOIRLab Astro Data Archive, https://astroarchive.noirlab.edu/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: pandas (>=1.1.4)
+Requires-Dist: matplotlib (>=3.3.3)
+Requires-Dist: pytest
+Requires-Dist: healpy
+Requires-Dist: sphinx-argparse
+Requires-Dist: Deprecated
+
+# ada-client
+Astro Data Archive Client
+
+
