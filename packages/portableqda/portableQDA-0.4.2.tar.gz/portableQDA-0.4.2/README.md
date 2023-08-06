@@ -1,0 +1,107 @@
+# portableQDA
+
+portableQDA facilitates round-trip information exchange using the [REFI-QDA](https://www.qdasoftware.org) standard: codebooks (QDC files) and QDPX projects. This portable information can be used by any Qualitative Research/[Qualitative Data Analysis (CAQDAS) Software](https://en.wikipedia.org/wiki/Computer-assisted_qualitative_data_analysis_software) conforming to that XML-based standard.
+
+Import/Export formats [QDC and QDPX](https://www.qdasoftware.org/wp-content/uploads/2019/09/REFI-QDA-1-5.pdf) are:   
+
+- suitable for structured archiving of any kind of files, including:
+  + personal corpus of information analysis (text coding, cites, comments)
+  + the source documents themselves (any arbitrary format, including office docs, PDF, html, audio, surverys)
+- well-defined and maintained by the [REF-QDA working group](http://qdasoftware.org)
+- supported and developed by a growing number of participants
+
+Qualitative Research, also known as QDA stands for Qualitative Data Analysis, as known in social sciences. Related Wikipedia article states: “Qualitative research relies on data obtained by the researcher by first-hand observation, interviews, recordings, […]. The data are generally non-numerical. Qualitative methods include ethnography, grounded theory, discourse analysis […]. These methods have been used in sociology, anthropology, and educational research.”
+
+## Installation
+
+```bash
+pip install portableqda
+```
+
+## Basic usage
+
+
+### Testing (specially the output format)
+
+change your current directory to portableQDA's root, then
+
+```bash
+poetry shell
+python tests
+```
+
+produces various codebooks (QDC files) in your home directory, should be suitable for import by your CAQDAS software. 
+
+### Testing the input format
+
+- export a codebook from the QDA software of your choise
+- run the following script:
+```python
+import portableqda
+codebook = portableqda.codebookCls(output="portableQDA-output-test.qdc")
+codebook.readQdcFile(input="/path/to/file-from-first-step.qdc")
+codebook.writeQdcFile()
+```
+- should throw no errors, check the file ```portableQDA-output-test.qdc``` at your home directory for completeness
+- try to import into your CAQDAS software
+
+
+### Developing
+
+You will find examples for many use cases at the ```examples``` directory. Some of them are:
+
+```python
+# examples/ex1_codesAndSets.py
+import portableqda
+#look for output in system logging
+
+codebook = portableqda.codebookCls(output="codebook_example.qdc") #create a codebook
+
+# create 3 codes and group them in two sets
+for number in range(3):
+    codebook.createElement(elementCls=portableqda.codeCls,
+                                                name=f"code{number}",
+                                                sets=["set1","set2"])
+    # for error checking, see examples/ex2_flowControl.py 
+    
+codebook.writeQdcFile() # export the codebook as a REFI-QDA 1.5 compliant QDC file
+```
+
+Look for the file `codebook_example.qdc` at your home directory. You can see more of what's happening (portableQDA is a library thus not intended for direct use), inserting the following code where the comment "look for output in system logging" is, right after the `import portableqda` statement:
+
+```python
+import logging
+handler = logging.StreamHandler(sys.stdout)
+handler.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+portableqda.log.addHandler(handler)
+portableqda.log.setLevel(logging.DEBUG)
+```
+
+Output should look like this:
+
+```log
+portableqda.refi_qda - DEBUG - tree created, root node: 'CodeBook'. see REFI-QDA 1.5
+portableqda.refi_qda - INFO - output is C:\Users\X\codebook_example.qdc
+portableqda.refi_qda - DEBUG - added code code0 to set set1 
+portableqda.refi_qda - DEBUG - added code code2 to set set2 
+portableqda.refi_qda - INFO - exporting as REFI-QDC  codebook to file: C:\Users\X\codebook_example.qdc
+```
+
+
+## Documentation
+
+## Contributing
+
+## Acknowledgents
+
+LMXL: portableQDA relies on the excellent [lxml package](http://lxml.de) for the  underlying tree data structure and  XML handling   
+REFI-QDA: [working group](http://qdasoftware.org) pushing interoperability and open standards   
+
+
+
+
+## License
+
+[GNU Lesser General Public License v3 (LGPLv3)](https://www.gnu.org/licenses/lgpl-3.0.html)
