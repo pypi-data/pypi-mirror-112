@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/gladpy/__init__.py
+src/gladpy/gladpy.py
+src/gladpy.egg-info/PKG-INFO
+src/gladpy.egg-info/SOURCES.txt
+src/gladpy.egg-info/dependency_links.txt
+src/gladpy.egg-info/top_level.txt
