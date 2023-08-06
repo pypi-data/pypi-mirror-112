@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: paramiko-cloud
+Version: 1.1
+Summary: Use cloud-managed keys to sign SSH certificates
+Home-page: https://github.com/jasonrig/paramiko-cloud/
+Author: Jason Rigby
+Author-email: hello@jasonrig.by
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: paramiko
+Requires-Dist: cryptography
+Requires-Dist: protobuf
+Requires-Dist: grpcio-tools
+Provides-Extra: all
+Requires-Dist: boto3 ; extra == 'all'
+Requires-Dist: google-cloud-kms ; extra == 'all'
+Requires-Dist: azure-keyvault-keys ; extra == 'all'
+Requires-Dist: azure-identity ; extra == 'all'
+Provides-Extra: aws
+Requires-Dist: boto3 ; extra == 'aws'
+Provides-Extra: azure
+Requires-Dist: azure-keyvault-keys ; extra == 'azure'
+Requires-Dist: azure-identity ; extra == 'azure'
+Provides-Extra: gcp
+Requires-Dist: google-cloud-kms ; extra == 'gcp'
+
+UNKNOWN
+
