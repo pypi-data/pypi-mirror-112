@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: stickybeak
+Version: 0.7.7
+Summary: Package that makes e2e tests easy.
+Home-page: https://github.com/reloadware/stickybeak
+Author: Damian Krystkiewicz
+Author-email: damian.krystkiewicz@gmail.com
+Requires-Python: >=3.6.2,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: dataclasses (>=0.7,<0.9); python_version >= "3.6" and python_version < "3.7"
+Requires-Dist: dill
+Requires-Dist: requests
+Requires-Dist: typing-extensions
+Requires-Dist: virtualenv
