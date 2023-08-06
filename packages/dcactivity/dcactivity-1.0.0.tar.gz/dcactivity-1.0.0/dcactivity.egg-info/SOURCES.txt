@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+dcactivity/__init__.py
+dcactivity/dcactivity.py
+dcactivity/errors.py
+dcactivity.egg-info/PKG-INFO
+dcactivity.egg-info/SOURCES.txt
+dcactivity.egg-info/dependency_links.txt
+dcactivity.egg-info/requires.txt
+dcactivity.egg-info/top_level.txt
