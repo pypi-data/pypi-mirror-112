@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/traj/__init__.py
+src/traj/fd.py
+src/traj.egg-info/PKG-INFO
+src/traj.egg-info/SOURCES.txt
+src/traj.egg-info/dependency_links.txt
+src/traj.egg-info/top_level.txt
