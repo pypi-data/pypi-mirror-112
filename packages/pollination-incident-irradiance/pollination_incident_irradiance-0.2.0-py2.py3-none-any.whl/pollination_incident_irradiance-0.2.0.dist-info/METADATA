@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: pollination-incident-irradiance
+Version: 0.2.0
+Summary: Incident irradiance recipe for Pollination.
+Home-page: https://github.com/pollination/incident-irradiance
+Author: ladybug-tools
+Author-email: info@ladybug.tools
+Maintainer: mostapha, ladybug-tools
+Maintainer-email: mostapha@ladybug.tools, info@ladybug.tools
+License: PolyForm Shield License 1.0.0, https://polyformproject.org/wp-content/uploads/2020/06/PolyForm-Shield-1.0.0.txt
+Project-URL: icon, https://raw.githubusercontent.com/ladybug-tools/artwork/master/icons_components/ladybug/png/incidentrad.png
+Project-URL: docker, https://hub.docker.com/r/ladybugtools/honeybee-radiance
+Keywords: honeybee,radiance,ladybug-tools,daylight,incident-irradiance
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pollination-honeybee-radiance (>=0.11.8)
+Requires-Dist: pollination-alias (>=0.8.1)
+Requires-Dist: pollination-path (>=0.2.0)
+
+# Incident Irradiance
+
+Incident irradiance recipe for Pollination
+
+This recipe calculates the incident irradiance for each time step provided by a wea file.
+The outputs are stored under `results/direct` and `results/total`. Nighttime hours are
+filtered before running the simulation. To match the results for each of the hours,
+see the list of hours in sun-up-hours.txt.
+
+## Methods
+
+This recipe calculates the total amount of Radiation by calculating the direct sunlight
+radiation from sun disks and adding them to the contribution from indirect sky radiation.
+
+```console
+incident_radiation = direct_sun_radiation + indirect_sky_radiation
+```
+
+The recipe is structured in a manner that ambient bounces are not included.
+
+
