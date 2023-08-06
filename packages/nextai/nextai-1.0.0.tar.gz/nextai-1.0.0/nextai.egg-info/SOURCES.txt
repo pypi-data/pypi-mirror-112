@@ -1,0 +1,12 @@
+README.md
+setup.py
+nextai/__init__.py
+nextai/__main__.py
+nextai/creator.py
+nextai.egg-info/PKG-INFO
+nextai.egg-info/SOURCES.txt
+nextai.egg-info/dependency_links.txt
+nextai.egg-info/entry_points.txt
+nextai.egg-info/requires.txt
+nextai.egg-info/top_level.txt
+nextai/templates/default.zip
