@@ -1,0 +1,15 @@
+name: test_env_cmip6_preprocessing
+channels:
+  - conda-forge
+dependencies:
+  - xarray
+  - xgcm
+  # Dependencies for the pangeo cloud data
+  - intake-esm
+  - gcsfs
+  - zarr
+  # Dependencies for the testing suite
+  - pytest-cov
+  - pytest-xdist
+  - pytest-rerunfailures
+  - codecov
