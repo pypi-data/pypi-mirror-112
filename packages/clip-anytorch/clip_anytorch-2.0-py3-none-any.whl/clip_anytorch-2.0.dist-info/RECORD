@@ -1,0 +1,10 @@
+clip/__init__.py,sha256=15MOspDr7UMhFnlckUcyANCYRRqUwK7dSuD5NPl5Veg,20
+clip/bpe_simple_vocab_16e6.txt.gz,sha256=kkaRrCiOVECSNhFWUq1KolD0ggPeUKnkcipuzUjWgEo,1356917
+clip/clip.py,sha256=xOolT5pYYLsasdnh6rDvVkjAh0UGQUgaa4vtzmFtOek,7403
+clip/model.py,sha256=qN0117pYd-Yf1N4zee4M2KjDlixQQDwpSa0JYdWgJ5M,17242
+clip/simple_tokenizer.py,sha256=0bCfEO09Hiw0NhnLmMv6y5I2PdhgdSakOqf-LWDRW60,4632
+clip_anytorch-2.0.dist-info/LICENSE,sha256=mH5jsy9sif9RYOQpRYqHL_BI5oYLWQo5Euk4-dqPFNs,1064
+clip_anytorch-2.0.dist-info/METADATA,sha256=afEvGtMrXsqYfk7uLj_aqUihpCPaTbQe5JNy4V5guyA,320
+clip_anytorch-2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+clip_anytorch-2.0.dist-info/top_level.txt,sha256=qr0grg7Skv7Se9f25eVy1TC4jJbxlIVbnogG6XbrLjY,5
+clip_anytorch-2.0.dist-info/RECORD,,
