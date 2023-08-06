@@ -1,0 +1,3 @@
+[console_scripts]
+backrooms = backrooms.backrooms:backrooms
+
