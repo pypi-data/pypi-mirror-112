@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: odoo8-addons-oca-account-fiscal-rule
+Version: 8.0.20210709.0
+Summary: Meta package for oca-account-fiscal-rule Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-account-fiscal-position-partner-type
+Requires-Dist: odoo8-addon-account-fiscal-position-rule
+Requires-Dist: odoo8-addon-account-fiscal-position-rule-purchase
+Requires-Dist: odoo8-addon-account-fiscal-position-rule-sale
+Requires-Dist: odoo8-addon-account-fiscal-position-rule-stock
+Requires-Dist: odoo8-addon-account-product-fiscal-classification
+
+UNKNOWN
+
