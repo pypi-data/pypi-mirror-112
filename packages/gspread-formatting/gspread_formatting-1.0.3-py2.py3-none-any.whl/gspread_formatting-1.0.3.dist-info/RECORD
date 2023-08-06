@@ -1,0 +1,14 @@
+gspread_formatting/__init__.py,sha256=qFjOETgqLrMpQH71lGTGxs9MaoJU2Zktx84tT7mGQDo,121
+gspread_formatting/batch.py,sha256=c-w9cMW2u9UpSicR6hoL_LLKcI9YnPfXq_nArSY7MKk,1641
+gspread_formatting/batch_update_requests.py,sha256=eSOjH3U8SvneDIDgT5D2gyDjbSHw0yRiFqvWW4qE2dA,5759
+gspread_formatting/conditionals.py,sha256=jE1H2cayMc_O8a5gXrpG5MO0u_UIwUjWMEZOXHbF9BE,10153
+gspread_formatting/dataframe.py,sha256=xLc-8PVnvEZ9-hLTtXM_nIzrCBjCQRi1vMumCfQdbTU,14302
+gspread_formatting/functions.py,sha256=yee-4e5TOWLvOjbvTwbI7CdOhgxUzrUz1eUEu-IR4WA,5645
+gspread_formatting/models.py,sha256=ZKqKCb3H6poDPAUDsHTKo45U7ZnSJeoKegYUKVF6uTw,10747
+gspread_formatting/util.py,sha256=ph8Z4i4RJF1qKcDf_zj1M77KZVhH1TQciHkr3DDQCFk,5399
+gspread_formatting-1.0.3.dist-info/LICENSE,sha256=XvltYh_jQcqjb8AYEkbA2diKwqS7yJCFOuZvUpQLqy8,1069
+gspread_formatting-1.0.3.dist-info/METADATA,sha256=NrSwu2sQTUdx_DDk-s9wrwQfq4zsXlHzS-PRjlfiGVE,13344
+gspread_formatting-1.0.3.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+gspread_formatting-1.0.3.dist-info/top_level.txt,sha256=a-dE6H7RZMZFDNzRFCuQ87XPNifggySpTz2DTKLCH8M,19
+gspread_formatting-1.0.3.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+gspread_formatting-1.0.3.dist-info/RECORD,,
