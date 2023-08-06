@@ -1,0 +1,10 @@
+README.md
+setup.py
+dolreader/__init__.py
+dolreader/dol.py
+dolreader/exceptions.py
+dolreader/section.py
+dolreader.egg-info/PKG-INFO
+dolreader.egg-info/SOURCES.txt
+dolreader.egg-info/dependency_links.txt
+dolreader.egg-info/top_level.txt
