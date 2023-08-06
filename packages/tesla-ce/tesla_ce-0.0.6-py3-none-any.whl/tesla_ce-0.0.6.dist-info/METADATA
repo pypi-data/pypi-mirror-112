@@ -1,0 +1,156 @@
+Metadata-Version: 2.1
+Name: tesla-ce
+Version: 0.0.6
+Summary: TeSLA CE
+Home-page: https://github.com/tesla-ce/core
+Author: Xavier Baro
+Author-email: xbaro@uoc.edu
+License: UNKNOWN
+Project-URL: Documentation, https://tesla-ce.github.io
+Project-URL: Source, https://github.com/tesla-ce/core
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: alabaster (==0.7.12)
+Requires-Dist: amqp (==5.0.6)
+Requires-Dist: asgiref (==3.4.1)
+Requires-Dist: attrs (==21.2.0)
+Requires-Dist: babel (==2.9.1)
+Requires-Dist: billiard (==3.6.4.0)
+Requires-Dist: boto3 (==1.17.108)
+Requires-Dist: botocore (==1.20.108)
+Requires-Dist: celery (==5.0.5)
+Requires-Dist: certifi (==2021.5.30)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: click-didyoumean (==0.0.3)
+Requires-Dist: click-plugins (==1.1.1)
+Requires-Dist: click-repl (==0.2.0)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: commonmark (==0.9.1)
+Requires-Dist: coreapi (==2.3.3)
+Requires-Dist: coreschema (==0.0.4)
+Requires-Dist: coverage (==5.5)
+Requires-Dist: django-cache-memoize (==0.1.9)
+Requires-Dist: django-celery-beat (==2.2.1)
+Requires-Dist: django-celery-results (==2.2.0)
+Requires-Dist: django-configurations (==2.2)
+Requires-Dist: django-cors-headers (==3.7.0)
+Requires-Dist: django-filter (==2.4.0)
+Requires-Dist: django-prometheus (==2.1.0)
+Requires-Dist: django-redis (==5.0.0)
+Requires-Dist: django-rest-auth (==0.9.5)
+Requires-Dist: django-sslserver (==0.22)
+Requires-Dist: django-storages (==1.11.1)
+Requires-Dist: django-timezone-field (==4.2.1)
+Requires-Dist: django (==3.2.5)
+Requires-Dist: djangorestframework-datatables (==0.6.0)
+Requires-Dist: djangorestframework-simplejwt (==4.7.2)
+Requires-Dist: djangorestframework (==3.12.4)
+Requires-Dist: docutils (==0.17.1)
+Requires-Dist: drf-extensions (==0.7.0)
+Requires-Dist: drf-yasg (==1.20.0)
+Requires-Dist: gevent (==21.1.2)
+Requires-Dist: greenlet (==1.1.0)
+Requires-Dist: html-json-forms (==1.1.1)
+Requires-Dist: hvac[parser] (==0.10.14)
+Requires-Dist: idna (==2.10)
+Requires-Dist: imagesize (==1.2.0)
+Requires-Dist: inflection (==0.5.1)
+Requires-Dist: iniconfig (==1.1.1)
+Requires-Dist: itypes (==1.2.0)
+Requires-Dist: jinja2 (==3.0.1)
+Requires-Dist: jmespath (==0.10.0)
+Requires-Dist: jsonschema (==3.2.0)
+Requires-Dist: kombu (==5.1.0)
+Requires-Dist: markupsafe (==2.0.1)
+Requires-Dist: packaging (==21.0)
+Requires-Dist: pluggy (==0.13.1)
+Requires-Dist: prometheus-client (==0.11.0)
+Requires-Dist: prompt-toolkit (==3.0.19)
+Requires-Dist: py (==1.10.0)
+Requires-Dist: pygments (==2.9.0)
+Requires-Dist: pyhcl (==0.4.4)
+Requires-Dist: pyjwt (==2.1.0)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: pyrsistent (==0.18.0)
+Requires-Dist: pytest-cov (==2.12.1)
+Requires-Dist: pytest-dependency (==0.5.1)
+Requires-Dist: pytest-django (==4.4.0)
+Requires-Dist: pytest (==6.2.4)
+Requires-Dist: python-crontab (==2.5.1)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2021.1)
+Requires-Dist: pyyaml (==5.4.1)
+Requires-Dist: rabbitmq-admin (==0.2)
+Requires-Dist: recommonmark (==0.7.1)
+Requires-Dist: redis (==3.5.3)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: ruamel.yaml.clib (==0.2.6)
+Requires-Dist: ruamel.yaml (==0.17.10)
+Requires-Dist: s3transfer (==0.4.2)
+Requires-Dist: sentry-sdk (==1.3.0)
+Requires-Dist: simplejson (==3.17.2)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: snowballstemmer (==2.1.0)
+Requires-Dist: sphinx (==4.0.3)
+Requires-Dist: sphinxcontrib-applehelp (==1.0.2)
+Requires-Dist: sphinxcontrib-devhelp (==1.0.2)
+Requires-Dist: sphinxcontrib-htmlhelp (==2.0.0)
+Requires-Dist: sphinxcontrib-httpdomain (==1.7.0)
+Requires-Dist: sphinxcontrib-jsmath (==1.0.1)
+Requires-Dist: sphinxcontrib-qthelp (==1.0.3)
+Requires-Dist: sphinxcontrib-serializinghtml (==1.1.5)
+Requires-Dist: sqlparse (==0.4.1)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: uritemplate (==3.0.1)
+Requires-Dist: urllib3 (==1.26.6)
+Requires-Dist: vine (==5.0.0)
+Requires-Dist: wcwidth (==0.2.5)
+Requires-Dist: zope.event (==4.5.0)
+Requires-Dist: zope.interface (==5.4.0)
+Requires-Dist: mysqlclient
+Provides-Extra: all
+Requires-Dist: mysqlclient ; extra == 'all'
+Requires-Dist: psycopg2 ; extra == 'all'
+Provides-Extra: mysql
+Requires-Dist: mysqlclient ; extra == 'mysql'
+Provides-Extra: psql
+Requires-Dist: psycopg2 ; extra == 'psql'
+
+[![PyPi Version](https://img.shields.io/pypi/v/tesla-ce.svg)](https://pypi.python.org/pypi/tesla-ce/)
+[![codecov](https://codecov.io/gh/tesla-ce/core/branch/main/graph/badge.svg?token=PJJQMW981P)](https://codecov.io/gh/tesla-ce/core)
+[![Vulnerability scan](https://github.com/tesla-ce/core/actions/workflows/debricked.yml/badge.svg)](https://github.com/tesla-ce/core/actions/workflows/debricked.yml)
+[![CodeQL](https://github.com/tesla-ce/core/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/tesla-ce/core/actions/workflows/codeql-analysis.yml)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B26246%2Fgithub.com%2Ftesla-ce%2Fcore.svg?type=shield)](https://app.fossa.com/projects/custom%2B26246%2Fgithub.com%2Ftesla-ce%2Fcore?ref=badge_shield)
+[![Quality gate](https://sonar.sunai.uoc.edu/api/project_badges/quality_gate?project=tesla-ce_core)](https://sonar.sunai.uoc.edu/dashboard?id=tesla-ce_core)
+
+# TeSLA CE Core System
+
+| :warning: This repository is **under construction**. Final release of TeSLA Community Edition source code is expected by the **end of 2021** |
+| --- |
+
+## Description
+Description: A description of your project follows. A good description is clear, short, and to the point. Describe the importance of your project, and what it does.
+
+## Installation
+Installation: Installation is the next section in an effective README. Tell other users how to install your project locally. Optionally, include a gif to make the process even more clear for other people.
+
+## Usage
+Usage: The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+
+## Contributing
+Contributing: Larger projects often have sections on contributing to their project, in which contribution instructions are outlined. Sometimes, this is a separate file. If you have specific contribution preferences, explain them so that other developers know how to best contribute to your work. To learn more about how to help others contribute, check out the guide for setting guidelines for repository contributors.
+
+## Credits
+Credits: Include a section for credits in order to highlight and link to the authors of your project.
+
+## License
+This project is licensed under [AGPL v3 licence](http://www.gnu.org/licenses/agpl-3.0).
+
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B26246%2Fgithub.com%2Ftesla-ce%2Fcore.svg?type=large)](https://app.fossa.com/projects/custom%2B26246%2Fgithub.com%2Ftesla-ce%2Fcore?ref=badge_large)
+
+

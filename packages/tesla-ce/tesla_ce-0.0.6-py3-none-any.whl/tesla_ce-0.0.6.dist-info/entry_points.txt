@@ -1,0 +1,4 @@
+[console_scripts]
+manage.py = tesla_ce.manage:main
+tesla_ce = tesla_ce.manage:main
+
