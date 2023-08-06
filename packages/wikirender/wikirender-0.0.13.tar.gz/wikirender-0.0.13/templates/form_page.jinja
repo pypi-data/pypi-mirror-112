@@ -1,0 +1,23 @@
+{#---------------------------------Form Page-----------------------------------#}
+{#
+Generate the form of page for a entity.
+Input:
+    topic: topic entity
+Output: Generates the page Category:<entity_name>
+#}
+{#----------------------------Global Variables--------------------------------#}
+{#-------------------------------Template-------------------------------------#}
+<noinclude>
+{{ Form.forminput(form=topic.name, button_text='add ' + topic.name) }}
+== See also ==
+{{ SMWPart.getAllAsPageLink(topic) }}
+</noinclude>
+<includeonly>
+{# Form control buttons #}
+{{ Form.standard_input_tag(["save","preview","changes","cancel"]) }}
+{{ Form.page_form_function("for template", **{topic.name:True }) }}
+{{ Form.form_table(topic.name, topic.properties) }}
+{{ Form.page_form_function("end template") }}
+{# Form control buttons -#}
+{{ Form.standard_input_tag(["save","preview","changes","cancel"]) }}
+</includeonly>
