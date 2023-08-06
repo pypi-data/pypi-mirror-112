@@ -1,0 +1,4 @@
+pywinauto>=0.6.8
+robotframework>=4.0.3
+pyautogui>=0.9.53
+datetime>=4.3
