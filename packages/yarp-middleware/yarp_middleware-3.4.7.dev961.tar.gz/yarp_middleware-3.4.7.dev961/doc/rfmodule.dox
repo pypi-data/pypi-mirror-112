@@ -1,0 +1,27 @@
+/**
+\page yarp_rfmodule_tutorial The RFModule Class
+
+\tableofcontents
+
+In this tutorial we show more details of how to write a YARP module using the module helper class.
+
+
+\section yarp_rfmodule_tutorial_intro Introduction
+
+The RFModule helper class simplify writing a generic module. It provides support for:
+
+\li Perform periodic activities
+\li Handle signals, catch termination and perform smooth shutdown
+\li Parses messages from a port to monitor module activity and set/get parameters
+\li Use the ResourceFinder class to handle parameters
+
+You do not need to understand the details of yarp::os::ResourceFinder to proceed with this tutorial. However it may be useful: \ref yarp_resource_finder_tutorials.
+
+\section yarp_rfmodule_tutorial_code Code
+
+This is how a module will look like:
+
+\include{lineno} rfmodule/main.cpp
+
+See code in: `examples/rfmodule/main.cpp`
+*/

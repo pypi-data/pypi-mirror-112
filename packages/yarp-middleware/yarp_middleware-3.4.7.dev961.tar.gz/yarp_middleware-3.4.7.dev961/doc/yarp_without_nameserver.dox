@@ -1,0 +1,15 @@
+/**
+\page yarp_without_nameserver Using YARP without a name server
+
+YARP programs usually expect a special YARP name server to be running.
+This can be avoided, if you decide to allocate names yourself.
+If you call a port by a name with a tcp socket number in it:
+
+~~~{.cpp}
+Port p;
+p.open("/myhost:9999");
+~~~
+
+Then no name server is needed.
+
+*/
