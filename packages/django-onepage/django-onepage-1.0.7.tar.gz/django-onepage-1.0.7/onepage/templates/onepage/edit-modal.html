@@ -1,0 +1,15 @@
+<div class="modal lg-modal fade" id="exampleDemoEditModal" tabindex="-1" aria-labelledby="exampleDemoEditModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleDemoEditModalLabel">{% if area_label %}{{ area_label }}{% elif verbose_name %}{{ verbose_name }}{% else %}Update Item{% endif %}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="editModalFormHolder" class="modal-body vcenter">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

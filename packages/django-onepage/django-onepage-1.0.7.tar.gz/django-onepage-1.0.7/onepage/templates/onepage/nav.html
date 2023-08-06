@@ -1,0 +1,32 @@
+{% load onepage_tags %}
+{% menu_items as menus %}
+
+<nav class="sidebar">
+    <div class="dismiss"><i class="fas fa-arrow-left"></i></div>
+    <div class="logo">
+        <h3><a href="index.html">Bootstrap 4 Template with Sidebar Menu</a></h3>
+    </div>
+    <ul class="list-unstyled menu-elements">
+        {% for key, menu in menus.items %}
+        <li>
+            <a href="#{{ menu.id }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">
+                <i class="{{ menu.icon }}"></i>{{ menu.title }}
+            </a>
+            <ul class="collapse list-unstyled" id="{{ menu.id }}">
+                {% for sub_item in menu.submenu %}
+                <li id="{{ sub_item.id }}" class="ajax-four-act-handler"
+                    data-props="{{ sub_item.id }}" data-r-kwargs="{{ sub_item.data_r_kwargs }}"
+                    data-keys="{{ sub_item.data_keys }}"
+                >
+                    <a class="scroll-link" href="#section-3">{{ sub_item.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="dark-light-buttons">
+        <a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+        <a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+    </div>
+</nav>

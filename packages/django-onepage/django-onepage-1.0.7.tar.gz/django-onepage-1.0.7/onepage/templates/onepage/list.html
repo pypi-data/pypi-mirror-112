@@ -1,0 +1,79 @@
+{% load group_perm %}
+
+{% include 'onepage/edit-modal.html' %}
+<div class="row">
+    <div class="col-md-12 col-md-12">
+        <div class="card ">
+            <div class="card-header py-2">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="fs-17 font-weight-600 mb-0">{{ verbose_name }} List</h6>
+                    </div>
+                    {% if add_perm %}
+                    <div class="text-right">
+                        <div id="ajaxTwoActHandlerCreate"></div>
+                        <button
+                            type="button" data-props="{{ data_add_props }}"
+                            class="btn btn-info-soft w-100p mb-2 me-1 {{ ajax_call_add_change }}"
+                        >
+                            <i class="fas fa-plus mr-1"></i> Add New {{ verbose_name }}
+                        </button>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div id="wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <table class="table display table-bordered table-striped table-hover custom-table dataTable dtr-inline"
+                               cellspacing="0" width="100%" role="grid" style="width: 100%;" id="dataTableDynamics">
+                            <thead>
+                                <tr role="row">
+                                    <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="Sl">Sl</th>
+                                    {% for head_item in headers %}
+                                    <th class="sorting_asc {{ head_item }}" rowspan="1" colspan="1" aria-sort="ascending">{{ head_item }}</th>
+                                    {% endfor %}
+                                    <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="Action">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for object in objects %}
+                            <tr role="row" class="odd" data-id="{{ object.id }}">
+                                <td tabindex="0">{{ forloop.counter }}</td>
+                                {% for key, value in object.items %}
+                                <td class="{{ key }}">{{ value|default:"" }}</td>
+                                {% endfor %}
+                                <td class="action">
+                                    {% if change_perm %}
+                                    <a  data-placement="left" data-method="GET"
+                                        class="btn btn-success-soft btn-sm {{ ajax_call_add_change }}"
+                                        data-toggle="tooltip" title="Update" data-props="{{ data_change_props }}"
+                                        >
+                                        <i class="fas fa-edit" aria-hidden="true"></i>
+                                    </a>
+                                    {% endif %}
+                                    {% if delete_perm %}
+                                    <a data-placement="right" data-method="GET"
+                                       class="btn btn-danger-soft btn-sm {{ ajax_call_add_change }}"
+                                       data-toggle="tooltip" title="Delete" data-props="{{ data_delete_props }}"
+                                    >
+                                        <i class="far fa-trash-alt" aria-hidden="true"></i></a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                        <div id="entityEditFormHolder"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    {% if custom_script %}
+    {{ custom_script|safe }}
+    {% endif %}
+</script>

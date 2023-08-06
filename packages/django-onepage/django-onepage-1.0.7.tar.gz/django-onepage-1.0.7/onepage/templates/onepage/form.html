@@ -1,0 +1,60 @@
+{% load widget_tweaks %}
+{% include 'snippets/form-error.html' %}
+
+<div class="modal lg-modal fade" id="{{ data_modal_id|default:"ajaSubmitModalForm" }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{% if area_label %}{{ area_label }}{% elif verbose_name %}Add {{ verbose_name }}{% else %}New Item{% endif %}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body vcenter">
+                    <form id="{{ form_id|default:"ajaxSubmitForm" }}"
+                            class="form g-3 {{ form_class }}"
+                            method="{{ method|default:"POST" }}"
+                            enctype="{{ enctype|default:"multipart/form-data" }}"
+                            data-url="{{ data_url|default:"" }}"
+                            data-modal-id="{{ data_modal_id|default:"ajaSubmitModalForm" }}">
+
+                        {% csrf_token %}
+                        <input type="text" name="model-props" maxlength="100" class="form-control d-none" id="id_model-props" value="{{ form_props }}">
+                        <input type="text" name="r_kwargs" maxlength="100" class="form-control d-none" id="id_r_kwargs" value="{{ form_r_kwargs }}">
+                        <div class="mb-3 row">
+                            {% for field in form.visible_fields %}
+                                <label for="{{ field.label | title }}" class="col-md-2 text-right col-form-label">{{ field.label |title }}
+                                    {% if field.field.required %}
+                                    <i class="text-danger"> * </i>
+                                    {% endif %}
+                                    :
+                                </label>
+                                <div class="col-md-4">
+                                    {{ field }}
+                                </div>
+                            {% if forloop.counter|divisibleby:2 %}
+                                </div>
+                                <div class="mb-3 row">
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="mb-3 row text-right">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-2 text-right">
+                                <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                            </div>
+                            <div class="col-md-2 text-left">
+                                <button
+                                        type="submit" class="btn btn-success">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    {% if custom_script %}
+    {{ custom_script|safe }}
+    {% endif %}
+</script>

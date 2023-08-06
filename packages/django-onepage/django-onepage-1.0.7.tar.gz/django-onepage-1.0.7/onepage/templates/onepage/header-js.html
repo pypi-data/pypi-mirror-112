@@ -1,0 +1,114 @@
+<script>
+    function ajaxFourActHandler(e){
+        var method = e.attr('data-method');
+        var props = e.attr('data-props');
+        var id = e.closest('tr').attr('data-id');
+        var r_kwargs = e.attr('data-r-kwargs');
+        var data_keys = e.attr('data-keys');
+
+        $.ajax({
+            url: '/ajax/four-act-handler/',
+            method: method,
+            data: {
+                'id': id,
+                'model-props': props,
+                'r_kwargs': r_kwargs,
+                'data-keys': data_keys,
+                'data-post-url': '/ajax/two-act-handler/'
+            },
+
+            success: function(data){
+                if (data['action'] == 'view'){
+                    var body_content = $('#bodyContent');
+                    body_content.html(data['html']);
+
+                    $('#dataTableDynamics').DataTable({dom: 'Bfrtip', buttons: ['copy', 'csv', 'excel', 'pdf', 'print']});
+                    window.history.pushState({},"", '/' + props + '/');
+
+                } else if (data['action'] == 'add'){
+                    var add_item_form_holding = $('#ajaxTwoActHandlerCreate');
+                    add_item_form_holding.html(data['html']);
+
+                    var modal = $('#ajaSubmitModalForm');
+                    modal.modal('show');
+                } else if (data['action'] == 'change'){
+                    var change_item_form_holding = $('#editModalFormHolder');
+                    change_item_form_holding.html(data['html']);
+
+                    var modal = $('#exampleDemoEditModal');
+                    modal.modal('show');
+                } else if (data['action'] == 'delete'){
+                    location.reload();
+                }
+            },
+
+            error: function(data){
+                swal("Query not proceed", data.responseJSON.error, "error");
+            }
+        })
+    }
+
+    function ajaxTwoActHandler(e, se){
+        se.preventDefault();
+
+        var method = e.attr('method');
+        var id = e.closest('tr').attr('data-id');
+
+        var modal = $('#ajaSubmitModalForm');
+        modal.modal('hide');
+
+        var modal = $('#exampleDemoEditModal');
+        modal.modal('hide');
+
+        $.ajax({
+            url: '/ajax/two-act-handler/',
+            method: method,
+            data: new FormData(e.get(0)),
+            cache: false,
+            processData: false,
+            contentType: false,
+
+            success: function(data){
+                location.reload();
+            },
+
+            error: function(data){
+                if (data['action'] == 'add'){
+                    var modal = $('#ajaSubmitModalForm');
+                    modal.modal('show');
+
+                } else if (data['action'] == 'change'){
+                    var modal = $('#exampleDemoEditModal');
+                    modal.modal('show');
+                }
+
+                swal("Query not proceed", data.responseJSON.error, "error");
+            }
+        })
+    }
+
+    function updateSelectOptionAjax(caller, target, url="/", method="GET", data={}){
+        $(caller).change(function () {
+            var chang = $(target);
+            var id_restaurant = $(caller + " option:selected").val()
+
+            $.ajax({
+                url: url,
+                method: method,
+                body: JSON.stringify(data)
+
+                success: function(data){
+                    console.log('success', data)
+                    var html = "";
+                    $.each(data.options, function(key, value) {
+                        html += '<option value=' + value.id + '>' + value.food_name + '</option>'
+                    });
+                    chang.html(html)
+                },
+                error: function (data) {
+                    console.log('error', data)
+                }
+            });
+        });
+    }
+</script>
