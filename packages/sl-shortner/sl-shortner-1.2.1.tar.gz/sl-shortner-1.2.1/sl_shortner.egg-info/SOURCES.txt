@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+sl_shortner/__init__.py
+sl_shortner/__main__.py
+sl_shortner.egg-info/PKG-INFO
+sl_shortner.egg-info/SOURCES.txt
+sl_shortner.egg-info/dependency_links.txt
+sl_shortner.egg-info/entry_points.txt
+sl_shortner.egg-info/requires.txt
+sl_shortner.egg-info/top_level.txt
