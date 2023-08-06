@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: fredtools
+Version: 0.5.1
+Summary: FRED tools is a collection of python functions for image manipulation and analysis. See more on https://github.com/jasqs/FREDtools.
+Home-page: https://github.com/jasqs/FREDtools
+Author: FRED Collaboration
+Author-email: jan.gajewski@ifj.edu.pl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8,<4.0
+Description-Content-Type: text/markdown
+Requires-Dist: itk (>=5.2.0.post2)
+Requires-Dist: numba (>=0.53.1)
+Requires-Dist: numpy (>=1.17.4)
+Requires-Dist: pandas (>=1.2.4)
+Requires-Dist: pydicom (>=2.1.2)
+Requires-Dist: dicompyler-core (>=0.5.5)
+Requires-Dist: matplotlib (>=3.4.2)
+Requires-Dist: SimpleITK (>=2.0.2)
+
+# FREDtools
+FRED tools repository
+================================
+
+FRED tools is a collection of python functions for image manipulation and analysis. The basic methods have been developed for analysis of the images produced by the Monte Carlo FRED (www.fred-mc.org) in MetaImage format (*.mha, *.mhd), but they can be applied for images in other formats, e.g. dicom.
+
+Basic Concept
+----------------------------
+The image in the FRED tools is understood to mean scalar or vector image of any dimension from 2D to 5D. All the images read or processed by the functions are SimpleITK (www.simpleitk.readthedocs.io) images, and any SinmpleITK routines can be applied. Check SimpleITK filters (www.simpleitk.readthedocs.io/en/master/filters.html) for available methods of filtering, registration, etc. Because the smallest image dimension supported by SimpleITK is 2D, line profiles, i.e. 1D images are saved as SimpleITK images with the size of only one of the dimension different than one.
+
+Most of the functions have a bool argument ``displayInfo`` (default ``displayInfo=False``) which can be used for displaying a summary of the function results.
+
+Installation
+----------------------------
+The stable version of FRED tools is available via pip.
+
+  $ pip install fredtools
+
+The development version is available on GitHub.
+
+   $ git clone jasqs/FREDtools
+
+
+Development
+----------------------------
+Everyone is invited to support the development of the FRED tools and to add functionalities needed for a specific application.
+All the new functions or classes sould be documented according to numpydoc style. Check numpydoc website(www.numpydoc.readthedocs.io) for the style guide and examples.
+
+
+
