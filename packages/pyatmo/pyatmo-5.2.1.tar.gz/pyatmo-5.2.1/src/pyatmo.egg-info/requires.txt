@@ -1,0 +1,4 @@
+aiohttp~=3.7.4.post0
+oauthlib~=3.1
+requests~=2.24
+requests_oauthlib~=1.3
