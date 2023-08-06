@@ -1,0 +1,15 @@
+axial_positional_embedding
+DALL-E
+einops>=0.3
+ftfy
+g-mlp-pytorch
+pillow
+regex
+taming-transformers-rom1504
+tokenizers
+torch>=1.6
+torchvision
+transformers
+tqdm
+youtokentome
+WebDataset
