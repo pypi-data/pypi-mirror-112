@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+geo_upload_tool/__init__.py
+geo_upload_tool/geo_upload_tool.py
+geo_upload_tool/version.py
+geo_upload_tool.egg-info/PKG-INFO
+geo_upload_tool.egg-info/SOURCES.txt
+geo_upload_tool.egg-info/dependency_links.txt
+geo_upload_tool.egg-info/entry_points.txt
+geo_upload_tool.egg-info/requires.txt
+geo_upload_tool.egg-info/top_level.txt

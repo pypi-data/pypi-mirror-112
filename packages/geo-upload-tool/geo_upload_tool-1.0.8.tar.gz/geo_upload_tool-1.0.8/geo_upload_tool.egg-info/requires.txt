@@ -1,0 +1,7 @@
+docopt
+future
+pandas
+setuptools
+snakemake>=5.8.0
+pysam
+openpyxl

@@ -1,0 +1,3 @@
+[console_scripts]
+gut = geo_upload_tool.geo_upload_tool:main
+

@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: geo-upload-tool
+Version: 1.0.8
+Summary: CLI tool for preparing data submission to Gene Expression Omnibus
+Home-page: https://bitbucket.org/bucab/gut
+Author: Adam Labadorf and the BU CAB Team
+Author-email: labadorf@bu.edu
+License: MIT
+Keywords: sequencing,NGS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: ~=3.4
+
+UNKNOWN
+
