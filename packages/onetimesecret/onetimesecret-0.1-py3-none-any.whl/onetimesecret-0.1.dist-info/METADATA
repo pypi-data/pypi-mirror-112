@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: onetimesecret
+Version: 0.1
+Summary: simple onetimesecret.com client
+Home-page: https://github.com/slashpass/onetimesecret-cli
+Author: Mauricio Reyes
+Author-email: mreyes@talpor.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/slashpass/onetimesecret-cli/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# onetimesecret-cli
+
+A simple python client to use the onetimesecret API https://onetimesecret.com/docs/api
+
+## Install
+
+`pip install onetimesecret`
+
+## Ussage
+
+```
+from onetimesecret import OneTimeSecretCli
+
+cli = OneTimeSecretCli(ONETIMESECRET_USER, ONETIMESECRET_KEY)
+cli.create_link("secret") # return a link like https://onetimesecret.com/secret/xxxxxxxxxxx
+```
+
+
