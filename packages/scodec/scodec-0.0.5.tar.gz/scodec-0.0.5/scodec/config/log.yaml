@@ -1,0 +1,24 @@
+# Spatial Codec Logging Configuration
+# -----------------------------------
+# Copyright © 2020 Christian Sargusingh. All Rights Reserved.
+
+version: 1
+disable_existing_loggers: True
+loggers:
+  # default logger for unregistered modules
+  '':
+    level: 'INFO'
+    handlers: ['console_handler']
+  scodec:
+    level: 'INFO'
+    handlers: ['console_handler']
+    propagate: no
+
+handlers:
+  console_handler:
+    class: 'logging.StreamHandler'
+    formatter: default
+
+formatters:
+  default:
+    format: '%(asctime)s - %(lineno)d - %(levelname)s : %(message)s'
