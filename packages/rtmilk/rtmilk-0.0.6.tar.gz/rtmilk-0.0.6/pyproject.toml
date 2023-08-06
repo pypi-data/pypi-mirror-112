@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "rtmilk"
+version = "0.0.6"
+description = "RTM API wrapper"
+authors = ["Rehan Khwaja <rehan@khwaja.name>"]
+license = "MIT"
+homepage = "https://github.com/rkhwaja/rtmilk"
+keywords = ["RememberTheMilk"]
+readme = "README.md"
+classifiers = [
+	"License :: OSI Approved :: MIT License",
+	"Development Status :: 3 - Alpha",
+	"Intended Audience :: Developers",
+	"Programming Language :: Python :: 3.9"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+requests = ">=2.23.0"
+pydantic = ">=1.8.1"
+
+[tool.poetry.dev-dependencies]
+pytest = ">=5.2"
+# https://github.com/PyCQA/pylint/issues/4420
+pylint = ">=2.6.0, !=2.8.0, !=2.8.1, !=2.8.2"
+pylint-quotes = ">=0.2.1"
+pyperclip = ">=1.8.0"
+python-dateutil = ">=2.8.1"
+python-dotenv = ">=0.17.1"
+
+[tool.pylint.master]
+load-plugins = "pylint_quotes"
+
+[tool.pylint.format]
+indent-string="\t"
+string-quote = "single-avoid-escape"
+
+[tool.pylint.messages_control]
+disable = [
+	"duplicate-code",
+	"invalid-name",
+	"line-too-long",
+	"logging-fstring-interpolation",
+	"missing-docstring",
+	"too-few-public-methods",
+	"too-many-arguments",
+	"too-many-public-methods"
+]
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
