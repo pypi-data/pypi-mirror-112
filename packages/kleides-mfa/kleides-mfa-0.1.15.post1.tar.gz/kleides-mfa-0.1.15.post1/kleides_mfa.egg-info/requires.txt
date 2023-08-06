@@ -1,0 +1,15 @@
+django-otp>=0.7.0
+
+[docs]
+django-otp-yubikey
+readthedocs-sphinx-search==0.1.0
+Sphinx==4.0.3
+sphinx-rtd-theme==0.5.2
+
+[test]
+coverage
+django-otp-yubikey
+factory-boy
+pytest
+pytest-cov
+pytest-django
