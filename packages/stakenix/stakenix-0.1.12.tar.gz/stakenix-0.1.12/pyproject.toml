@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "stakenix"
+version = "0.1.12"
+description = "Package for work with different DB's by a simple interface"
+authors = ["Pavlo Levin <levin@bbq.agency>", "Petro Rykun <p.rykun@bbq.agency>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7.1"
+pyodbc = "^4.0.30"
+mysql-connector = "^2.2.9"
+clickhouse-sqlalchemy = "^0.1.5"
+clickhouse-driver = "^0.2.0"
+pymongo = "^3.11.3"
+sshtunnel = "^0.4.0"
+pandas = "^1.2.3"
+PyYAML = "^5.4.1"
+openpyxl = "^3.0.7"
+psycopg2-binary = "^2.8.6"
+SQLAlchemy = "<1.4"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+mypy = "^0.812"
+unittest = "^0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
