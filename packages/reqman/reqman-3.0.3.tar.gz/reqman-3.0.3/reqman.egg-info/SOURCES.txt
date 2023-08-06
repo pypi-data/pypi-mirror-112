@@ -1,0 +1,16 @@
+README.md
+setup.py
+reqman/__init__.py
+reqman/__main__.py
+reqman/com.py
+reqman/com_httpx.py
+reqman/common.py
+reqman/env.py
+reqman/testing.py
+reqman/xlib.py
+reqman.egg-info/PKG-INFO
+reqman.egg-info/SOURCES.txt
+reqman.egg-info/dependency_links.txt
+reqman.egg-info/entry_points.txt
+reqman.egg-info/requires.txt
+reqman.egg-info/top_level.txt
