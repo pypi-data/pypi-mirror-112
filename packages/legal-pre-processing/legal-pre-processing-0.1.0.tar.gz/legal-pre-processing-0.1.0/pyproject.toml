@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "legal-pre-processing"
+version = "0.1.0"
+description = "Pre processing tools for documents with legal content."
+authors = [
+    "Daniel Henrique Arruda Boeing <daniel.boeing@softplan.com.br>",
+    "Israel Oliveira <israel.oliveira@softplan.com.br>"
+    ]
+license = "MIT"
+readme = "README.md"
+homepage = "https://gitlab.com/israel.oliveira.softplan/legal-pre-processing.git"
+repository = "https://gitlab.com/israel.oliveira.softplan/legal-pre-processing.git"
+keywords = ["legal", "text", "extract"]
+include = [
+    "CHANGELOG.md",
+    "LICENSE",
+    "legal_pre_processing/data/LegalRegExPatterns.json",
+    "legal_pre_processing/data/LegalStopwords.json",
+    "legal_pre_processing/data/TesauroRevisado.json"
+    ]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+poetry-version = "*"
+nltk = "*"
+PyMuPDF = "*"
+unidecode = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+coverage = "*"
+pytest-cov = "*"
+locust = "*"
+flake8 = "*"
+black = "*"
+flake8-black = "*"
+flake8-bandit = "*"
+flake8-bugbear = "*"
+safety = "*"
+pre-commit = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
