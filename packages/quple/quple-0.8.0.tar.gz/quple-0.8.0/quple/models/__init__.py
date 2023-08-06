@@ -1,0 +1,1 @@
+from quple.models.gan.qgan import QGAN
