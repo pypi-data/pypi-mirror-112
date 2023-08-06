@@ -1,0 +1,8 @@
+# flake8: noqa
+from vigorish.tasks.add_to_database import AddToDatabaseTask
+from vigorish.tasks.backup_database import BackupDatabaseTask
+from vigorish.tasks.calculate_avg_pitch_times import CalculateAvgPitchTimesTask
+from vigorish.tasks.fix_orphaned_player_ids import FixOrphanedPlayerIdsTask
+from vigorish.tasks.restore_database import RestoreDatabaseTask
+from vigorish.tasks.sync_data_no_prompts import SyncDataNoPromptsTask
+from vigorish.tasks.update_player_maps import UpdatePlayerIdMapTask, UpdatePlayerTeamMapTask
