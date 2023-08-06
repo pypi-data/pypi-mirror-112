@@ -1,0 +1,8 @@
+recursive-include migration_fixer *.py
+exclude *.py
+exclude *.txt
+exclude *.yaml
+exclude LICENSE
+exclude Makefile
+prune demo
+prune django_migration_fixer
