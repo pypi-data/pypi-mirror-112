@@ -1,0 +1,11 @@
+LICENSE
+README.md
+package.sh
+setup.py
+projpicker_gui/__init__.py
+projpicker_gui/projpicker_gui.py
+projpicker_gui.egg-info/PKG-INFO
+projpicker_gui.egg-info/SOURCES.txt
+projpicker_gui.egg-info/dependency_links.txt
+projpicker_gui.egg-info/entry_points.txt
+projpicker_gui.egg-info/top_level.txt
