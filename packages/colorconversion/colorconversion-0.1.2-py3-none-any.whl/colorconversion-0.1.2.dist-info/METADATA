@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: colorconversion
+Version: 0.1.2
+Summary: converts images from one color table to another
+Home-page: https://github.com/MathieuMoalic/colorconversion
+Author: Mathieu Moalic
+Author-email: matmoa@pm.me
+License: GPL-3.0
+Platform: any
+Requires-Dist: numpy (>=1.20.2)
+
+UNKNOWN
+
+
