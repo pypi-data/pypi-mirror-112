@@ -1,0 +1,10 @@
+pymongo
+requests
+beautifulsoup4
+pycryptodome
+numpy
+minio
+matplotlib
+opencv-python
+h5py
+paddlepaddle~=2.1.0
