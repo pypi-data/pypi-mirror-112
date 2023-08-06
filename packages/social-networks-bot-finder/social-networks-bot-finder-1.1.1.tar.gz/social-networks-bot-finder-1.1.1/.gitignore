@@ -1,0 +1,10 @@
+user.json
+__pycache__
+build
+dist
+.eggs
+*.egg-info
+social-networks-bot-finder
+botfinder/version.py.bak
+botfinder/.!*
+
