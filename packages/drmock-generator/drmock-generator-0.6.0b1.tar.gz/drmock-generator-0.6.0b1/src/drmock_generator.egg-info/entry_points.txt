@@ -1,0 +1,3 @@
+[console_scripts]
+drmock-generator = drmock.commandline:main
+
