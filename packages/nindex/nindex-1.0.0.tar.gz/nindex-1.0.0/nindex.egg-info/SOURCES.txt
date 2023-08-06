@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+nindex/__init__.py
+nindex/index.py
+nindex.egg-info/PKG-INFO
+nindex.egg-info/SOURCES.txt
+nindex.egg-info/dependency_links.txt
+nindex.egg-info/requires.txt
+nindex.egg-info/top_level.txt
+nindex.egg-info/zip-safe
