@@ -1,0 +1,8 @@
+airflow_dbt_python/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_dbt_python/__version__.py,sha256=HfjVOrpTnmZ-xVFCYSVmX50EXaBQeJteUHG-PD6iQs8,22
+airflow_dbt_python/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_dbt_python/operators/dbt.py,sha256=h9lHXCswvrtax-epthyep12Da58cQcX9BI7-52cxh7I,13454
+airflow_dbt_python-0.4.1.dist-info/LICENSE,sha256=8yx5JCe-4cW52JiqVrMlA990r7tuac2foiUryhV9dfY,1073
+airflow_dbt_python-0.4.1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+airflow_dbt_python-0.4.1.dist-info/METADATA,sha256=tAt_nINA9-hFDKLbQJ307sJ8yJ_LG-SGo_pqoenyZCE,7122
+airflow_dbt_python-0.4.1.dist-info/RECORD,,
