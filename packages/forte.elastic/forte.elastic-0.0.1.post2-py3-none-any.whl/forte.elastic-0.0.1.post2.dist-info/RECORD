@@ -1,0 +1,9 @@
+forte/elastic/__init__.py,sha256=OxMKgzqSLtddB8vQcuwE6v-kDSMGLJ-uNn0Zic87oUk,213
+forte/elastic/elastic_indexer.py,sha256=-hHr1Zbw314jYu8Vq0NE1k1lQM_Gl3HndpMv0IxX43c,7924
+forte/elastic/elastic_search_index_processor.py,sha256=i_onJotIU_CR08B_vSVoR3Gi9gl3zHfDfnAva4atZJ8,4326
+forte/elastic/elastic_search_processor.py,sha256=dYmUPTIiW_U80vS-L1YKyr7GaCSh73yK73zRqtQowOU,4985
+forte/elastic/elastic_search_query_creator.py,sha256=yi-RZ1GZ-Jg40w-0vUZxYnxNZVjxS5hubEoKZXDAcic,2376
+forte.elastic-0.0.1.post2.dist-info/METADATA,sha256=hKW6S-xh-h30eKc7Ns9UGVjCIMlGIAptSZ8PNtz-LH8,2759
+forte.elastic-0.0.1.post2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+forte.elastic-0.0.1.post2.dist-info/top_level.txt,sha256=DRf-L_eOrVlPdBGHBeoYCyIHm42P0QKwtETln1wpl20,6
+forte.elastic-0.0.1.post2.dist-info/RECORD,,
