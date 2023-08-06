@@ -1,0 +1,87 @@
+.gitignore
+AUTHORS.md
+CITATION.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
+README.md
+inits.json
+requirements.txt
+run_exotic_linux.sh
+run_exotic_mac.command
+run_exotic_windows.bat
+setup.py
+.github/workflows/python-publish.yml
+Documentation/README.md
+Documentation/Brazilian_Portuguese/Como-executar-o-EXOTIC-na-nuvem-colaborativa-do-Google.pdf
+Documentation/Brazilian_Portuguese/README.md
+Documentation/English/EXOTIC Installation Instructions for Ubuntu.md
+Documentation/English/EXOTIC Installation Instructions for Windows 10.md
+Documentation/English/EXOTIC Installation Instructions for Windows Users.md
+Documentation/English/EXOTIC-Installation-Instructions-for-Mac-Users.md
+Documentation/English/Getting-Started-with-EXOTIC.pdf
+Documentation/English/How-EXOTIC-Works.pdf
+Documentation/English/How-to-Run-EXOTIC-in-Fedora-Linux.md
+Documentation/English/How-to-Run-EXOTIC-in-Google-Cloud-Collab.pdf
+Documentation/English/How-to-Run-EXOTIC-in-openSUSE-Linux.md
+Documentation/English/How-to-Run-EXOTIC-with-the-Python-Notebook.pdf
+Documentation/English/How-to-select-comparision-stars-using-AAVSO-Star-Charts.txt
+Documentation/English/How_to_Use_GitHub.pdf
+Documentation/English/Introduction-to-Exoplanets.pdf
+Documentation/English/example_output.txt
+Documentation/German/Beispiel_Output.txt
+Documentation/German/Benutzung-von-GitHub.pdf
+Documentation/German/EXOTIC-Installationsanweisungen-fuer-Mac-Benutzer.pdf
+Documentation/German/EXOTIC-Installationsanweisungen-fuer-Windows-Benutzer.pdf
+Documentation/German/Einfuehrung-in-Exoplaneten.pdf
+Documentation/German/Wie-EXOTIC-funktioniert.pdf
+Documentation/German/translators.md
+Documentation/Images/Background_Estimate.png
+Documentation/Images/ExoplanetWatch.png
+Documentation/Images/HAT-P-32bExample.png
+Documentation/Images/Hot_pixel_mask.png
+Documentation/Images/centroids.png
+Documentation/Images/exotic_initssaved.png
+Documentation/Images/exotic_inputobs.png
+Documentation/Images/exotic_inputobsinfo.png
+Documentation/Images/exotic_inputplanetparams.png
+Documentation/Images/exotic_loading.png
+Documentation/Images/exotic_planetparams.png
+Documentation/Images/exotic_redmode.png
+Documentation/Images/exotic_runmode.png
+Documentation/Images/exotic_running.png
+Documentation/Images/exotic_saveinits.png
+Documentation/Images/exotic_welcome.png
+Documentation/Images/posterior_sample.png
+Documentation/Images/transitsimple.jpg
+Documentation/Spanish (Español)/Introducción a los Exoplanetas (Introduction-to-Exoplanets) - SPA.docx
+Documentation/Spanish (Español)/translators.md
+Outdated Documentation/EXOTIC-Installation-Instructions-for-Windows-Users.pdf
+Outdated Documentation/How-to-Run-EXOTIC-in-the-Terminal.pdf
+Outdated Documentation/How-to-Update-EXOTIC.pdf
+examples/Exotic_Notebook.ipynb
+examples/interactive_fitter.py
+examples/sampledata.json
+exotic/__init__.py
+exotic/animate.py
+exotic/constants.py
+exotic/exotic.py
+exotic/exotic_gui.py
+exotic/inputs.py
+exotic/output_files.py
+exotic/util.py
+exotic/version.py
+exotic.egg-info/PKG-INFO
+exotic.egg-info/SOURCES.txt
+exotic.egg-info/dependency_links.txt
+exotic.egg-info/entry_points.txt
+exotic.egg-info/not-zip-safe
+exotic.egg-info/requires.txt
+exotic.egg-info/top_level.txt
+exotic/api/__init__.py
+exotic/api/elca.py
+exotic/api/filters.py
+exotic/api/gael_ld.py
+exotic/api/plate_solution.py
+exotic/api/plotting.py
+exotic/api/versioning.py
