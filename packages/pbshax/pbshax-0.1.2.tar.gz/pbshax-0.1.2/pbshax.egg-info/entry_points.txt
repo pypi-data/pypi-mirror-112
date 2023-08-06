@@ -1,0 +1,5 @@
+[console_scripts]
+makeregions = pbshax.main:makeregions
+pbsparallel = pbshax.main:pbsparallel
+regionparallel = pbshax.main:regionparallel
+
