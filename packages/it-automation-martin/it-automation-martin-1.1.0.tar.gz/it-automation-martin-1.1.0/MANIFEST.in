@@ -1,0 +1,5 @@
+include LICENSE *.rst *.toml *.yml *.yaml *.ini *.md
+graft .github
+
+# Tests
+graft tests

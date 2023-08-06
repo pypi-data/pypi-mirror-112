@@ -1,0 +1,7 @@
+requests
+psutil
+reportlab
+
+[test]
+pytest
+pytest-watch
