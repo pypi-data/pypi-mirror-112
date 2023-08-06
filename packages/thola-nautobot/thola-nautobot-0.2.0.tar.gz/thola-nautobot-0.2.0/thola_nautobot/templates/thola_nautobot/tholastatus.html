@@ -1,0 +1,365 @@
+{% extends 'base.html' %}
+{% load buttons %}
+{% load static %}
+{% load custom_links %}
+{% load helpers %}
+
+{% block title %}
+{% if object.device.name == None %}
+Thola Config Status
+{% else %}
+{{object.device.name}} Status
+{% endif %}
+{% endblock %}
+
+{% block header %}
+<div class="row noprint">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><a href="{% url 'plugins:thola_nautobot:tholaconfig_list' %}">Thola Configs</a></li>
+            <li>{{ object.device.name }}</li>
+        </ol>
+    </div>
+</div>
+<div class="pull-right noprint">
+    {% edit_button object use_pk=1 %}
+    {% delete_button object use_pk=1 %}
+</div>
+<h1>
+    {% if object.device.name == None %}
+    {{object.device.device_type.manufacturer.name}} {{object.device.device_type.model}}
+    {% else %}
+    {{object.device.name}}
+    {% endif %} Live Status
+</h1>
+{% include 'inc/created_updated.html' %}
+<div class="pull-right noprint">
+    {% custom_links object %}
+</div>
+<ul class="nav nav-tabs">
+    <li role="presentation">
+        <a href="{{ object.get_absolute_url }}">Thola Config</a>
+    </li>
+    <li role="presentation" class="active">
+        <a href="{% url 'plugins:thola_nautobot:tholaconfig_status' pk=object.pk %}">Live Status</a>
+    </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+{% include 'inc/ajax_loader.html' %}
+<div id="status_row"></div>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            url: "{{ livedata_url }}",
+            dataType: 'json',
+            success: function (json) {
+                /* interfaces */
+                if (json['interfaces'] && json['interfaces']['error']) {
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>Interfaces</strong>\n" +
+                        "</div>\n" +
+                        "<div class=\"panel-body rendered-markdown\">\n" +
+                        "<span class=\"text-danger\">" + json['interfaces']['error'] + "</span>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                } else if (json['interfaces'] && json['interfaces']['interfaces']) {
+                    let interfaces = json['interfaces']['interfaces']
+                    let interface_str = ""
+                    for (let i = 0; i < interfaces.length; i++) {
+                        let admin_status = interfaces[i]['if_admin_status'] === "up" ? "<span class=\"mdi mdi-check-circle text-success\" title=\"up\"></span>" : "<span class=\"mdi mdi-close-circle text-danger\" title=\"down\"></span>"
+                        let oper_status = interfaces[i]['if_oper_status'] === "up" ? "<span class=\"mdi mdi-check-circle text-success\" title=\"up\"></span>" : "<span class=\"mdi mdi-close-circle text-danger\" title=\"down\"></span>"
+                        let phys_address = interfaces[i]['if_phys_address'] != null ? interfaces[i]['if_phys_address'] : "<span class=\"text-muted\">-</span>"
+                        interface_str += "<tr><td>" + interfaces[i]['if_descr'] + "</td><td>" + phys_address + "</td><td>" + admin_status + "</td><td>" + oper_status + "</td></tr>\n"
+                    }
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>Interfaces</strong>\n" +
+                        "</div>\n" +
+                        "<table class=\"table table-hover table-headings\">\n" +
+                        "<thead><tr><th>Description</th><th>Physical address</th><th>Admin status</th><th>Op status</th></tr></thead>" +
+                        "<tbody>\n" +
+                        interface_str +
+                        "</tbody>\n" +
+                        "</table>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                }
+
+                /* cpu */
+                if (json['cpu'] && json['cpu']['error']) {
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>CPU</strong>\n" +
+                        "</div>\n" +
+                        "<div class=\"panel-body rendered-markdown\">\n" +
+                        "<span class=\"text-danger\">" + json['cpu']['error'] + "</span>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                } else if (json['cpu'] && json['cpu']['cpu_load']) {
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>CPU</strong>\n" +
+                        "</div>\n" +
+                        "<div class=\"panel-body rendered-markdown\">\n" +
+                        json['cpu']["cpu_load"] + "%\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                }
+
+                /* memory*/
+                if (json['memory'] && json['memory']['error']) {
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>Memory</strong>\n" +
+                        "</div>\n" +
+                        "<div class=\"panel-body rendered-markdown\">\n" +
+                        "<span class=\"text-danger\">" + json['memory']['error'] + "</span>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                } else if (json['memory'] && json['memory']['memory_usage']) {
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>Memory</strong>\n" +
+                        "</div>\n" +
+                        "<div class=\"panel-body rendered-markdown\">\n" +
+                        json['memory']["memory_usage"] + "%\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                }
+
+                /* disk */
+                if (json['disk'] && json['disk']['error']) {
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>Disk</strong>\n" +
+                        "</div>\n" +
+                        "<div class=\"panel-body rendered-markdown\">\n" +
+                        "<span class=\"text-danger\">" + json['disk']['error'] + "</span>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                } else if (json['disk'] && json['disk']['disk']['storages']) {
+                    let storages = json['disk']['disk']['storages']
+                    let storage_str = ""
+                    for (let i = 0; i < storages.length; i++) {
+                        storage_str += "<tr><td>" + storages[i]['description'] + "</td><td>" + storages[i]['type'] + "</td><td>" + Math.round(storages[i]['used'] / storages[i]['available'] * 100) + "%</td></tr>\n"
+                    }
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>Disk</strong>\n" +
+                        "</div>\n" +
+                        "<table class=\"table table-hover table-headings\">\n" +
+                        "<thead><tr><th>Description</th><th>Type</th><th>Usage</th></tr></thead>" +
+                        "<tbody>\n" +
+                        storage_str +
+                        "</tbody>\n" +
+                        "</table>" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                }
+
+                /* hardware_health */
+                if (json['hardware_health'] && json['hardware_health']['error']) {
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>Hardware health</strong>\n" +
+                        "</div>\n" +
+                        "<div class=\"panel-body rendered-markdown\">\n" +
+                        "<span class=\"text-danger\">" + json['hardware_health']['error'] + "</span>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                } else if (json['hardware_health']) {
+                    let fans = json['hardware_health']['fans']
+                    let health_str = ""
+                    for (let i = 0; i < fans.length; i++) {
+                        health_str += "<tr><td><span class=\"mdi mdi-fan\" title=\"Fan\"'></span></td><td>" + fans[i]['description'] + "</td><td>" + fans[i]['state'] + "</td></tr>\n"
+                    }
+                    let power_supplies = json['hardware_health']['power_supply']
+                    for (let i = 0; i < power_supplies.length; i++) {
+                        health_str += "<tr><td><span class=\"mdi mdi-power-plug\" title=\"Power supply\"></span></td><td>" + power_supplies[i]['description'] + "</td><td>" + power_supplies[i]['state'] + "</td></tr>\n"
+                    }
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>Hardware health</strong>\n" +
+                        "</div>\n" +
+                        "<table class=\"table table-hover table-headings\">\n" +
+                        "<thead><tr><th>Type</th><th>Description</th><th>State</th></tr></thead>" +
+                        "<tbody>\n" +
+                        health_str +
+                        "</tbody>\n" +
+                        "</table>" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                }
+
+                /* ups */
+                if (json['ups'] && json['ups']['error']) {
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>UPS</strong>\n" +
+                        "</div>\n" +
+                        "<div class=\"panel-body rendered-markdown\">\n" +
+                        "<span class=\"text-danger\">" + json['ups']['error'] + "</span>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                } else if (json['ups'] && json['ups']['ups']) {
+                    let main_voltage = json['ups']['ups']['mains_voltage_applied'] ? "<span class=\"mdi mdi-check-circle text-success\" title=\"True\"></span>" : "<span class=\"mdi mdi-close-circle text-danger\" title=\"False\"></span>"
+                    let battery_capacity = json['ups']['ups']['battery_capacity'] !== null ? json['ups']['ups']['battery_capacity'] : "<span class=\"text-muted\">-</span>"
+                    let battery_current = json['ups']['ups']['battery_current'] !== null ? json['ups']['ups']['battery_current'] : "<span class=\"text-muted\">-</span>"
+                    let battery_remaining_time = json['ups']['ups']['battery_remaining_time'] !== null ? json['ups']['ups']['battery_remaining_time'] : "<span class=\"text-muted\">-</span>"
+                    let battery_temperature = json['ups']['ups']['battery_temperature'] !== null ? json['ups']['ups']['battery_temperature'] : "<span class=\"text-muted\">-</span>"
+                    let battery_voltage = json['ups']['ups']['battery_voltage'] !== null ? json['ups']['ups']['battery_voltage'] : "<span class=\"text-muted\">-</span>"
+                    let current_load = json['ups']['ups']['current_load'] !== null ? json['ups']['ups']['current_load'] : "<span class=\"text-muted\">-</span>"
+                    let rectifier_current = json['ups']['ups']['rectifier_current'] !== null ? json['ups']['ups']['rectifier_current'] : "<span class=\"text-muted\">-</span>"
+                    let system_voltage = json['ups']['ups']['system_voltage'] !== null ? json['ups']['ups']['system_voltage'] : "<span class=\"text-muted\">-</span>"
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>UPS</strong>\n" +
+                        "</div>\n" +
+                        "<table class=\"table table-hover panel-body attr-table\">\n" +
+                        "<tbody>\n" +
+                        "<tr><th>Main voltage applied</th><td>" + main_voltage + "</td></tr>\n" +
+                        "<tr><th>Battery capacity</th><td>" + battery_capacity + "</td></tr>\n" +
+                        "<tr><th>Battery current</th><td>" + battery_current + "</td></tr>\n" +
+                        "<tr><th>Battery remaining time</th><td>" + battery_remaining_time + "</td></tr>\n" +
+                        "<tr><th>Battery temperature</th><td>" + battery_temperature + "</td></tr>\n" +
+                        "<tr><th>Battery voltage</th><td>" + battery_voltage + "</td></tr>\n" +
+                        "<tr><th>Current load</th><td>" + current_load + "</td></tr>\n" +
+                        "<tr><th>Rectifier current</th><td>" + rectifier_current + "</td></tr>\n" +
+                        "<tr><th>System voltage</th><td>" + system_voltage + "</td></tr>\n" +
+                        "</tbody>\n" +
+                        "</table>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                }
+
+                /* server */
+                if (json['server'] && json['server']['error']) {
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>Server</strong>\n" +
+                        "</div>\n" +
+                        "<div class=\"panel-body rendered-markdown\">\n" +
+                        "<span class=\"text-danger\">" + json['server']['error'] + "</span>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                } else if (json['server'] && json['server']['server']) {
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>Server</strong>\n" +
+                        "</div>\n" +
+                        "<table class=\"table table-hover panel-body attr-table\">\n" +
+                        "<tbody>\n" +
+                        "<tr><th>Processes</th><td>" + json['server']['server']['procs'] + "</td></tr>\n" +
+                        "<tr><th>Users</th><td>" + json['server']['server']['users'] + "</td></tr>\n" +
+                        "</tbody>\n" +
+                        "</table>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                }
+            },
+            error: function (xhr) {
+                if (xhr.responseText['detail']) {
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>Error</strong>\n" +
+                        "</div>\n" +
+                        "<div class=\"panel-body rendered-markdown\">\n" +
+                        "<span class=\"text-danger\">" + xhr.responseText['detail'] + "</span>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                } else {
+                    $('#status_row').append("" +
+                        "<div class=\"row\">" +
+                        "<div class=\"col-md-6\">\n" +
+                        "<div class=\"panel panel-default\">\n" +
+                        "<div class=\"panel-heading\">\n" +
+                        "<strong>Error</strong>\n" +
+                        "</div>\n" +
+                        "<div class=\"panel-body rendered-markdown\">\n" +
+                        "<span class=\"text-danger\">" + JSON.parse(xhr.responseText)['detail'] + "</span>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>\n" +
+                        "</div>")
+                }
+            }
+        })
+    })
+</script>
+{% endblock %}
