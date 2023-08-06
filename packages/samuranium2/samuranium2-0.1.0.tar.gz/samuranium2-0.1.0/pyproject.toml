@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "samuranium2"
+version = "0.1.0"
+description = ""
+authors = ["Alexis Giovoglanian <alexisgiovoglanian@infovalue.com.ar>"]
+packages = [
+    { include = "src" },
+    { include = "src/**/*.py" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+selenium = "^3.141.0"
+webdriver-manager = "^3.4.2"
+pylint = "^2.9.3"
+Flask = "^2.0.1"
+ddt = "^1.4.2"
+coverage = "^5.5"
+
+[tool.poetry.dev-dependencies]
+build = "^0.5.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
