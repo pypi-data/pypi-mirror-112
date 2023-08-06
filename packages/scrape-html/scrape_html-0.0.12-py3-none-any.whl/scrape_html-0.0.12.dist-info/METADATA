@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: scrape-html
+Version: 0.0.12
+Summary: Get html in string from a page
+Home-page: https://github.com/AndyPythonCode/scrape-html
+Author: Andy J. Arciniega
+Author-email: andyarciniegas24@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Get HTML from URL
+
+```python
+from scraping.scraper import PageSources
+
+page = PageSources('url...')
+
+print(page.get_current_html())
+```
+
+
