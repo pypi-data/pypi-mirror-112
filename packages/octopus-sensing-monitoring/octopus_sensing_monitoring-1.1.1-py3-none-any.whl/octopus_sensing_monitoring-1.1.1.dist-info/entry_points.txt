@@ -1,0 +1,3 @@
+[console_scripts]
+octopus-sensing-monitoring=octopus_sensing_monitoring.main:main
+
