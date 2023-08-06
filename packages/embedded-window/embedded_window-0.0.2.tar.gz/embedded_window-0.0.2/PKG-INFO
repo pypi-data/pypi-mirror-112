@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: embedded_window
+Version: 0.0.2
+Summary: A sliding window that exports to C++
+Home-page: https://github.com/eloquentarduino/embedded_window
+Author: Simone Salerno
+Author-email: eloquentarduino@gmail.com
+License: MIT
+Download-URL: https://github.com/eloquentarduino/embedded_window/blob/master/dist/embedded_window-0.0.2.tar.gz?raw=true
+Description: UNKNOWN
+Keywords: ML,microcontrollers,machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
