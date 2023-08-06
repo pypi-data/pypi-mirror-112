@@ -1,0 +1,3 @@
+[console_scripts]
+cornell = cornell.cornell_server:start_mock_service
+
