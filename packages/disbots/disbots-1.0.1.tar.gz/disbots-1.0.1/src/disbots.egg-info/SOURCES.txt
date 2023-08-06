@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/disbots/__init__.py
+src/disbots.egg-info/PKG-INFO
+src/disbots.egg-info/SOURCES.txt
+src/disbots.egg-info/dependency_links.txt
+src/disbots.egg-info/requires.txt
+src/disbots.egg-info/top_level.txt
