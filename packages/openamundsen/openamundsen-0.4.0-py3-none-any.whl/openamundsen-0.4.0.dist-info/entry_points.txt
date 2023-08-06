@@ -1,0 +1,3 @@
+[console_scripts]
+openamundsen = openamundsen.cli:main
+
