@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: toolbox-py
+Version: 0.0.1
+Summary: A few simple Python utils
+Home-page: UNKNOWN
+Author: xezzz
+Author-email: ezzz.btw@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: unidecode
+Requires-Dist: pymongo
+Requires-Dist: numpy
+
+UNKNOWN
+
+
