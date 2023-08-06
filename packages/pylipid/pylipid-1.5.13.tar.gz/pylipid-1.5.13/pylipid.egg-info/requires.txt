@@ -1,0 +1,13 @@
+mdtraj
+numpy
+pandas
+matplotlib>=3.3.3
+networkx
+scipy
+python-louvain
+logomaker
+statsmodels
+scikit-learn
+tqdm
+p_tqdm
+kneebow
