@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+bin/pb
+bonnibel/__init__.py
+bonnibel/build_context.py
+bonnibel/module.py
+bonnibel/project.py
+bonnibel/rules.ninja
+bonnibel/source.py
+bonnibel/version.py
+bonnibel.egg-info/PKG-INFO
+bonnibel.egg-info/SOURCES.txt
+bonnibel.egg-info/dependency_links.txt
+bonnibel.egg-info/not-zip-safe
+bonnibel.egg-info/requires.txt
+bonnibel.egg-info/top_level.txt
