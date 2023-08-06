@@ -1,0 +1,14 @@
+-e .
+sphinx==4.0.2
+ipykernel
+nbsphinx
+xarray
+pint
+pint_xarray
+numpy
+pandas
+openscm_units
+loguru
+git+https://github.com/xarray-contrib/sphinx-autosummary-accessors@stable
+numpydoc
+matplotlib
