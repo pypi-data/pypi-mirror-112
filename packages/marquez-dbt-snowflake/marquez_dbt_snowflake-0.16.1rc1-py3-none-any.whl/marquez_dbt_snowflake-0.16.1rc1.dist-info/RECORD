@@ -1,0 +1,11 @@
+dbt/adapters/openlineage_snowflake/__init__.py,sha256=Z9Zoy8RLgTbcl-xizGlixRxle-EYNyYq_6p-3p9VCys,648
+dbt/adapters/openlineage_snowflake/connections.py,sha256=UOFeV3VwxAih_kuHHhDBKu3agU24cW4-KCYdgcK7A2g,7228
+dbt/adapters/openlineage_snowflake/impl.py,sha256=5nxfvlZZj1f7CZcujE6FkQRc0f8sPZA0EcDtjTThsZ4,752
+dbt/include/openlineage_snowflake/__init__.py,sha256=MPQnGccFsedAruDmH7jUXQ4DyS19z-jk8Sty9zdMXVc,51
+dbt/include/openlineage_snowflake/dbt_project.yml,sha256=AmuBtXzw_ceEinr9UTkFRh157HiU80Mk0hpPrJo4FaM,88
+dbt/include/openlineage_snowflake/macros/adapters.sql,sha256=UOg5lWXjGzcgxFoa2ZNx-2-88HjOR45xcnl3A5vRdRI,7029
+dbt/include/openlineage_snowflake/macros/catalog.sql,sha256=PEKaHCUN0ysF-r7kpWjnw-nsOpANaGHrWGSKIt19SeY,2526
+marquez_dbt_snowflake-0.16.1rc1.dist-info/METADATA,sha256=DqcL_b2nG4WCXic0m3XkL3MDippkX52pkAMnr4zT1bk,1948
+marquez_dbt_snowflake-0.16.1rc1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+marquez_dbt_snowflake-0.16.1rc1.dist-info/top_level.txt,sha256=B2YH4he17ajilEWOGCKHbRcEJlCuZKwCcgFcLPntLsE,4
+marquez_dbt_snowflake-0.16.1rc1.dist-info/RECORD,,
