@@ -1,0 +1,13 @@
+odoo/addons/sm_connect/__init__.py,sha256=Ax4qLxdb9ATk05MF7cSQ0BdpYCpGVYFy9n4U4zODf9o,46
+odoo/addons/sm_connect/__manifest__.py,sha256=2myVtJKarM6kIcWWMhB43RLM47K6iPFqZTgAultPygA,630
+odoo/addons/sm_connect/demo_credentials.json,sha256=rKBYLjfHVc3nfncD4F_E23Jd4ufjaf2eXAjjs5Lk9Vs,875
+odoo/addons/sm_connect/models/__init__.py,sha256=nLT5kDZEPKGA0rUTB-6EgS1FHtWg1dypQyDlkB36y6g,189
+odoo/addons/sm_connect/models/credential_loader.py,sha256=6yTV_onVFO_ecIRIQ18PZkGcraDIe39K-XLMMDApzJs,2135
+odoo/addons/sm_connect/models/models_sm_carsharing_api_utils.py,sha256=TdvTyY7yZsq3KUGYN_43YHhwPf0mP5OrxW3DJx7zvG4,3777
+odoo/addons/sm_connect/models/models_sm_carsharing_db_utils.py,sha256=fcPTt7DCo2aF2rU8W-dN0MFlWJ8zEElRK5I_ndV9bm8,2673
+odoo/addons/sm_connect/models/models_sm_wordpress_db_utils.py,sha256=KqJMEGy9i2SqSt2Gmo_ePPgWiN7ai8t8FT4sO5BSMo0,4614
+odoo/addons/sm_connect/security/ir.model.access.csv,sha256=EygArynEZn9Oazz44m_d5ckm_gzO8yO1_fjTS7C0hXw,164
+odoo12_addon_sm_connect-12.0.0.0.3.dist-info/METADATA,sha256=BADOTEPjFpb_c_t6cqE5NTrt2g8gqOqiWiZhsQEV8X4,393
+odoo12_addon_sm_connect-12.0.0.0.3.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+odoo12_addon_sm_connect-12.0.0.0.3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_sm_connect-12.0.0.0.3.dist-info/RECORD,,
