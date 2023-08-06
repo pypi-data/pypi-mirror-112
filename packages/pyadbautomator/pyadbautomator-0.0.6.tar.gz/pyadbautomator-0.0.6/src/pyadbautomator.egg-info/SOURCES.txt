@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/pyadbautomator.egg-info/PKG-INFO
+src/pyadbautomator.egg-info/SOURCES.txt
+src/pyadbautomator.egg-info/dependency_links.txt
+src/pyadbautomator.egg-info/top_level.txt
+src/pyadbautomator_package/__init__.py
+src/pyadbautomator_package/pyadbautomator.py
