@@ -1,0 +1,3 @@
+[console_scripts]
+create_integration = createintegration.create_integration:main
+
