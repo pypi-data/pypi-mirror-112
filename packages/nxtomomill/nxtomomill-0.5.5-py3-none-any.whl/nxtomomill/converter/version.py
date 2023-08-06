@@ -1,0 +1,5 @@
+CURRENT_OUTPUT_VERSION = 1.0
+
+
+def version():
+    return CURRENT_OUTPUT_VERSION
