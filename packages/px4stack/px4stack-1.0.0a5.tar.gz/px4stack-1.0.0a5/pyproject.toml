@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "px4stack"
+version = "1.0.0a5"
+description = ""
+authors = ["Quinn Thibeault <quinn.thibeault96@gmail.com>"]
+packages = [
+    {include = "px4stack", from = "src"}
+]
+include = ["px4stack/py.typed"]
+
+[tool.poetry.dependencies]
+python = "^3.6, <3.10"
+docker = "^5.0.0"
+attrs = "^21.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^21.5b0"
+mypy = "^0.812"
+
+[tool.black]
+line-length = 99
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
