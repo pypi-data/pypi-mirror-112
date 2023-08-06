@@ -1,0 +1,13 @@
+setup.py
+libjari/__init__.py
+libjari/colors.py
+libjari/gcal.py
+libjari/geometry.py
+libjari/jdraw.py
+libjari/jpath.py
+libjari.egg-info/PKG-INFO
+libjari.egg-info/SOURCES.txt
+libjari.egg-info/dependency_links.txt
+libjari.egg-info/not-zip-safe
+libjari.egg-info/requires.txt
+libjari.egg-info/top_level.txt
