@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+garfieldapi/__init__.py
+garfieldapi.egg-info/PKG-INFO
+garfieldapi.egg-info/SOURCES.txt
+garfieldapi.egg-info/dependency_links.txt
+garfieldapi.egg-info/top_level.txt
