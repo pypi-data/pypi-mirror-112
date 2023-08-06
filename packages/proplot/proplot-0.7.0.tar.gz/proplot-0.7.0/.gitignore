@@ -1,0 +1,45 @@
+# VIM extras
+.session.vim
+.vimsession
+.*.sw[a-z]
+
+# Ignore auto-generated files
+proplotrc
+rctable.rst
+
+# PyPi stuff
+build
+dist
+.eggs
+*.egg-info
+
+# Local docs builds
+docs/api
+docs/_build
+docs/_static/pygments
+
+# Subfolder used to consider new colormaps
+sources
+
+# Folder of notebooks for testing and bugfixing
+notebooks
+
+# Notebook stuff
+.ipynb_checkpoints
+
+# Python extras
+*.log
+*.pyc
+.*.pyc
+__pycache__
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+
+# Old files
+tmp
+trash
+garbage
