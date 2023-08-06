@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: mainentry
+Version: 2.0
+Summary: Wrapper to replace if __name__ == "__main__": with a decorator
+Home-page: https://github.com/fanoway/main-entry
+Author: fanoway
+Author-email: None
