@@ -1,0 +1,7 @@
+recursive-include lemonadefashion_flask_monitoringdashboard/static *
+recursive-include lemonadefashion_flask_monitoringdashboard/templates *
+include requirements.txt
+include README.md
+include docs/changelog.rst
+include docs/README.rst
+include lemonadefashion_flask_monitoringdashboard/constants.json
