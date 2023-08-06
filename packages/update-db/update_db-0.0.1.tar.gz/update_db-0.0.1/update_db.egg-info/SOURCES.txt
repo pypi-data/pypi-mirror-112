@@ -1,0 +1,9 @@
+LICENSE
+pyproject.toml
+setup.cfg
+update_db/__init__.py
+update_db/update_db.py
+update_db.egg-info/PKG-INFO
+update_db.egg-info/SOURCES.txt
+update_db.egg-info/dependency_links.txt
+update_db.egg-info/top_level.txt
