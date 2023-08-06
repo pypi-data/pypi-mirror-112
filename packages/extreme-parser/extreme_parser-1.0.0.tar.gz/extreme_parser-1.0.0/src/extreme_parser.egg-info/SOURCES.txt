@@ -1,0 +1,15 @@
+LICENSE
+pyproject.toml
+setup.cfg
+src/extreme_parser/__init__.py
+src/extreme_parser.egg-info/PKG-INFO
+src/extreme_parser.egg-info/SOURCES.txt
+src/extreme_parser.egg-info/dependency_links.txt
+src/extreme_parser.egg-info/requires.txt
+src/extreme_parser.egg-info/top_level.txt
+src/extreme_parser/amazon/__init__.py
+src/extreme_parser/amazon/product/__init__.py
+src/extreme_parser/amazon/product/model.py
+src/extreme_parser/amazon/product/parse.py
+src/extreme_parser/util/__init__.py
+src/extreme_parser/util/parse.py
