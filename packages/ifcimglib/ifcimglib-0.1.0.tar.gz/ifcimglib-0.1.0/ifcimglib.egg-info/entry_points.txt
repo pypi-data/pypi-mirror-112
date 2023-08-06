@@ -1,0 +1,4 @@
+[console_scripts]
+cif2lmdb = ifcimglib.cif2lmdb:convert_cmd
+cif2tiff = ifcimglib.cif2tiff:convert_cmd
+
