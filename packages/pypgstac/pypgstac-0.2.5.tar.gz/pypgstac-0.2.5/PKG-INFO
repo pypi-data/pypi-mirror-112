@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pypgstac
+Version: 0.2.5
+Summary: 
+Home-page: https://github.com/stac-utils/pgstac
+Keywords: stac,asyncpg
+Author: David Bitner
+Author-email: bitner@dbspatial.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: asyncio (>=3.4.3,<4.0.0)
+Requires-Dist: asyncpg (>=0.22.0,<0.23.0)
+Requires-Dist: orjson (>=3.5.2,<4.0.0)
+Requires-Dist: smart-open (>=4.2.0,<5.0.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)
+Project-URL: Repository, https://github.com/stac-utils/pgstac
+Description-Content-Type: text/plain
+
+Python tools for working with PGStac
+
