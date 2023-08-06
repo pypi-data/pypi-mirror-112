@@ -1,0 +1,17 @@
+example_plugin/__init__.py,sha256=3A8yQdfmm3Ub0kwuql6BoH4W_uN_EWO4FuiwLLzg4gw,329
+example_plugin/_dock_widget.py,sha256=vSBRvYoAGWQic9CMvRB9rWpYNyrayq130pYbnuEl0mw,1368
+example_plugin/_function.py,sha256=_7f73rXJ9zEcHf9QgJWdzGrobh-VPL8iIz2N3SzJz1w,1708
+example_plugin/_reader.py,sha256=IOtwNOrS_P-9lOiplmV8cxEXxtlW4ko213w_FpYKU_I,2771
+example_plugin/_version.py,sha256=P8W_XGgjz5fygcRdylGsnzMVA8WRVNYCU54UyiKh4-0,142
+example_plugin/_writer.py,sha256=9QuzRlE6chnCP2va0XoCb35cX_caXBJnlmVVMoAukfM,463
+example_plugin/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_plugin/_tests/test_dock_widget.py,sha256=LTpqZK8MNzYol-19g2JFV1pg8KGRLq7yNEcpM9CWE7M,699
+example_plugin/_tests/test_function.py,sha256=evVqwADfTcb9DCsy1LTBCoEwjWbohN1BjbxOEpq-L4k,116
+example_plugin/_tests/test_reader.py,sha256=1S1Af7RBoegd6Y3hbX1G-QbDmhv0X8lurjUdokGw_iY,975
+example_plugin/_tests/test_writer.py,sha256=Ofp6yL3YKp8yOGYjrraQSBDbawISIVjpwjVEFrX53yk,126
+example_plugin-0.0.5.dist-info/LICENSE,sha256=vfnK_2DHfjbO3Cj21j9_b7hF2paUbgg668oGzpEJ40g,1490
+example_plugin-0.0.5.dist-info/METADATA,sha256=pWthkcdjIFFpcstAxzI7RFAB8WyitYzF1SeonYAaiZ4,3040
+example_plugin-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+example_plugin-0.0.5.dist-info/entry_points.txt,sha256=GVhxzCge6hk8E2jW1i0Cv_-_fuJJzePVFZZyaObZF_c,49
+example_plugin-0.0.5.dist-info/top_level.txt,sha256=rEkpCUDP6R44WMeWvYTQEJJHKKbdPd2johRto6tbN_M,15
+example_plugin-0.0.5.dist-info/RECORD,,
