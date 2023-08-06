@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+close_numerical_matches/__init__.py
+close_numerical_matches/find_matches.py
+close_numerical_matches/version.py
+close_numerical_matches.egg-info/PKG-INFO
+close_numerical_matches.egg-info/SOURCES.txt
+close_numerical_matches.egg-info/dependency_links.txt
+close_numerical_matches.egg-info/requires.txt
+close_numerical_matches.egg-info/top_level.txt
