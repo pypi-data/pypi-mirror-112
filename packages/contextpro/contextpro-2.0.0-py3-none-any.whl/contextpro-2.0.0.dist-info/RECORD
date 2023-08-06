@@ -1,0 +1,11 @@
+contextpro/__init__.py,sha256=Xi5UDi3bUCr3csC_SY9sP_LAMs3giKtM9jA_J61qxSg,1784
+contextpro/_exceptions.py,sha256=DBVR8uUsoOgwqMjaHGMC_1Ggl_58ZW-Buwh39DK-QxM,118
+contextpro/_processing.py,sha256=ZK9TtwxqfXuThtbibwspjLXdQxU1LxE3b4R_TKm5nRk,2131
+contextpro/feature_extraction.py,sha256=N2pUoyYeHxutHFnvX3VzUIYmaPfC7VYNUEIpht1veBY,2226
+contextpro/normalization.py,sha256=SmI3vPnBrvU7XOVjzmJqwSEVu_zbNXJ-9Y8_2MHESBQ,23257
+contextpro/statistics.py,sha256=gN9oRe9kvcyxKVuYXr72-BvKHTGx_sS6pP3RJTfgTD8,14226
+contextpro/tokenization.py,sha256=G_Ioe0NduRhRzKk5LfurQtHUJrLfrVqy2gFRg9D_rqs,3650
+contextpro-2.0.0.dist-info/LICENSE,sha256=v4jXWqWHljFVrN58HXC4gjVy4tnbPNuFHVnPLCzG-SA,1072
+contextpro-2.0.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+contextpro-2.0.0.dist-info/METADATA,sha256=80kXtd2koPFJVc7i-O2QoYjmMs3_kA9oGVB7lGSldTQ,7620
+contextpro-2.0.0.dist-info/RECORD,,
