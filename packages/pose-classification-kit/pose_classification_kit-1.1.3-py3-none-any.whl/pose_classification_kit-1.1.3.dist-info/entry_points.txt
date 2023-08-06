@@ -1,0 +1,4 @@
+[console_scripts]
+export-datasets=pose_classification_kit.scripts.dataset_export:run
+pose-classification-app=pose_classification_kit.app:run
+
