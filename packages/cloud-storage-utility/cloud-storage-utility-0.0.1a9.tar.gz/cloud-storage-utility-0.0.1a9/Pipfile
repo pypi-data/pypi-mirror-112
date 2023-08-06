@@ -1,0 +1,43 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+test = "pytest"
+test-coverage = "pytest --cov-report xml --cov ./cloud_storage_utility"
+format = "black ./cloud_storage_utility ./scripts ./tests"
+import-sort = "isort ./cloud_storage_utility ./scripts ./tests"
+lint = "flake8 ./cloud_storage_utility ./scripts ./tests"
+build = "python3 setup.py sdist bdist_wheel"
+documentation = "pdoc -o docs -d google ./cloud_storage_utility"
+
+[packages]
+click = "*"
+python-dotenv = "*"
+tqdm = "*"
+colorama = "*"
+aiohttp = "*"
+xmltodict = "*"
+setuptools-scm = "*"
+
+[dev-packages]
+setuptools = "*"
+wheel = "*"
+twine = "*"
+flake8 = "*"
+black = "*"
+isort = "*"
+pytest = "*"
+pytest-mock = "*"
+pytest-cov = "*"
+pytest-asyncio = "*"
+mypy = "*"
+pdoc = "*"
+tox = "*"
+tox-pipenv = "*"
+aioresponses = "*"
+pre-commit = "*"
+
+[pipenv]
+allow_prereleases = true
