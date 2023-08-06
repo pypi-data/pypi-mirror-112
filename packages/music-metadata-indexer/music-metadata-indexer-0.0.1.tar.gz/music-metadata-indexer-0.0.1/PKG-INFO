@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: music-metadata-indexer
+Version: 0.0.1
+Summary: A basic library to index music file metadata to a sqlite database.
+Home-page: https://github.com/deafmute1/music-metadata-indexer
+Author: Ethan Djeric
+Author-email: ethan@ethandjeric.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/deafmute1/music-metadata-indexer/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# music-metadata-indexer
+
+
+
+# TODO
+- Better metadata support for implementating code? 
+- Allow removal of songs from the database without rebuilding
+- Implement startup db build that doesn't delete the db and rebuild from scratch
+
+
+# Requirements 
+`pip install music-tag sqlite-utils watchdog`
+
+

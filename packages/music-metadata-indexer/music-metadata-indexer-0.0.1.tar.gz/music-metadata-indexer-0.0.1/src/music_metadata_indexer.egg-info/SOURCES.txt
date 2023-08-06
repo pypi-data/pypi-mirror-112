@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/mmindexer/__init__.py
+src/mmindexer/index.py
+src/mmindexer/scan.py
+src/music_metadata_indexer.egg-info/PKG-INFO
+src/music_metadata_indexer.egg-info/SOURCES.txt
+src/music_metadata_indexer.egg-info/dependency_links.txt
+src/music_metadata_indexer.egg-info/requires.txt
+src/music_metadata_indexer.egg-info/top_level.txt
