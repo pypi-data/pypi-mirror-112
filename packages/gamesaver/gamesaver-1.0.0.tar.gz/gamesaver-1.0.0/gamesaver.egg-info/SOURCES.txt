@@ -1,0 +1,14 @@
+README.md
+setup.py
+gamesaver/__init__.py
+gamesaver/__main__.py
+gamesaver/config.py
+gamesaver/output.py
+gamesaver/src.py
+gamesaver/util.py
+gamesaver.egg-info/PKG-INFO
+gamesaver.egg-info/SOURCES.txt
+gamesaver.egg-info/dependency_links.txt
+gamesaver.egg-info/entry_points.txt
+gamesaver.egg-info/requires.txt
+gamesaver.egg-info/top_level.txt

@@ -1,0 +1,162 @@
+<!--
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+-->
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <img src="https://mjn-reame-logos.s3.us-east-2.amazonaws.com/gs_logo.png" alt="Logo" width="80">
+
+  <h3 align="center">Game Saver</h3>
+
+  <p align="center">
+    Find the best deals on pc games from the terminal
+  </p>
+</p>
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+Instead of spending hours, browsing different sites for the best deals on video games, use Game Saver.
+Game Saver is an easy CLI tool to find the best deals on pc games from various sites like Steam, Gamestop, and more.
+
+![demo](https://media.giphy.com/media/nt7R8kDesReZUMMitG/giphy.gif)
+
+### Built With
+
+- [Python](https://www.python.org/)
+- [Click](https://click.palletsprojects.com/en/8.0.x/)
+- [Rich](https://github.com/willmcgugan/rich)
+- [CheapShark API](https://apidocs.cheapshark.com/#a2620d3f-683e-0396-61e7-3fe4d30ea376)
+<!-- GETTING STARTED -->
+
+## Installation
+
+### Using Pip
+
+```sh
+pip install gamesaver
+```
+
+### Manual
+
+```sh
+git clone git@github.com:michaelnavs/gamesaver.git
+```
+
+```sh
+cd gamesaver
+```
+
+```sh
+python setup.py install
+```
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+### Search for all deals
+
+```sh
+gamesaver search
+```
+
+### Search deals for specific game title
+
+```sh
+gamesaver search '<game_title>'
+```
+
+```sh
+gamesaver search -t '<game_title>'
+```
+
+```sh
+gamesaver search --title '<game_title>'
+```
+
+### Search deals from a specific store
+
+```sh
+gamesaver search -s '<store_name>'
+```
+
+```sh
+gamesaver search --store '<store_name>'
+```
+
+<!-- ROADMAP -->
+
+## Roadmap
+
+See the [open issues](https://github.com/michaelnavs/gamesaver/issues) for a list of proposed features (and known issues).
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+
+## Contact
+
+Michael Navarro - [@michaeljnavs](https://twitter.com/michaeljnavs)
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+<!--
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/michaelnavs/PyYouTube/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/michaelnavs/PyYouTube/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/michaelnavs/PyYouTube/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/michaelnavs/PyYouTube/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/michaelnavs/PyYouTube/blob/master/LICENSE.txt
+-->
