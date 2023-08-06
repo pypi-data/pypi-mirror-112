@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "configmerger"
+version = "0.1.0"
+description = "merge multi level configurations"
+authors = ["Cologler <skyoflw@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Cologler/configmerger-python"
+
+[tool.poetry.dependencies]
+python = ">3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
