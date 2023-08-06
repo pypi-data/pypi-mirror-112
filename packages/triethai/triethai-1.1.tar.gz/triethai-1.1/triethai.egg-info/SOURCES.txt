@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+dict.txt
+setup.cfg
+setup.py
+triethai/__init__.py
+triethai/triethai.py
+triethai.egg-info/PKG-INFO
+triethai.egg-info/SOURCES.txt
+triethai.egg-info/dependency_links.txt
+triethai.egg-info/top_level.txt
