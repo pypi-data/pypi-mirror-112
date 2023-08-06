@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: neocrym_sphinx_theme
+Version: 0.0.7
+Summary: A clean customisable Sphinx documentation theme.
+Home-page: https://github.com/neocrym/neocrym-sphinx-theme
+Author: Neocrym Records Inc.
+Author-email: engineering@neocrym.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Theme
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Requires-Dist: beautifulsoup4
+Requires-Dist: sphinx ~= 3.0
+Requires-Dist: myst-parser ; extra == "doc"
+Requires-Dist: sphinx-copybutton ; extra == "doc"
+Requires-Dist: sphinx-inline-tabs ; extra == "doc"
+Requires-Dist: docutils != 0.17 ; extra == "doc"
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Requires-Dist: pytest-xdist ; extra == "test"
+Provides-Extra: doc
+Provides-Extra: test
+
+# neocrym-sphinx-theme
+
+This is a modified version of the [Furo theme](https://github.com/pradyunsg/furo) for internal use at [Neocrym](https://www.neocrym.com).
+
+## Differences from Furo
+
+### Absolute URLs for logos and favicons
+
+The `light_logo` and `dark_logo` keys in the `html_theme_options` variable are ABSOLUTE URLs. Do not use relative URLs.
+
+For example, this is an example `conf.py` that sets a light and dark logo:
+```python
+html_theme_options = dict(
+    light_logo="https://static.neocrym.com/images/scalarstop/v1/1x/scalarstop-wordmark-color-black-on-transparent--1x.png",
+    dark_logo="https://static.neocrym.com/images/scalarstop/v1/1x/scalarstop-wordmark-color-white-on-transparent--1x.png",
+    sidebar_hide_name=True,
+)
+```
+
+The `html_favicon` variable also now only accepts absolute URLs.
