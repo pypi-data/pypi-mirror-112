@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/eons/Constants.py
+src/eons/DataContainer.py
+src/eons/Datum.py
+src/eons/Errors.py
+src/eons/Executor.py
+src/eons/SelfRegistering.py
+src/eons/UserFunctor.py
+src/eons/__init__.py
+src/eons/__main__.py
+src/eons.egg-info/PKG-INFO
+src/eons.egg-info/SOURCES.txt
+src/eons.egg-info/dependency_links.txt
+src/eons.egg-info/top_level.txt
