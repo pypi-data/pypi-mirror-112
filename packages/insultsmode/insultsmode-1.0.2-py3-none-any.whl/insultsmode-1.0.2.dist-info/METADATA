@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: insultsmode
+Version: 1.0.2
+Summary: Generates offensive quotes
+Home-page: https://kirillsaint.xyz
+Author: kirillsaint
+Author-email: kirillsaint@wtfuck.tk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+Generates offensive quotes
+
+Small documentation:
+
+The "ru()" method invokes a quote in Russian
+The "en()" method invokes a quote in English
+
+Example:
+
+import insultsmode
+
+print(insultsmode.ru())
+print(insultsmode.en())
+
+
