@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: testrungit19
+Version: 0.0.1
+Summary: Library to learn git
+Home-page: UNKNOWN
+Author: Sharan
+Author-email: sharanbabu2001@gmail.com
+License: UNKNOWN
+Keywords: python,wit,git
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Description-Content-Type: text/markdown
+Requires-Dist: wit
+Requires-Dist: colorama
+
+UNKNOWN
+
+
