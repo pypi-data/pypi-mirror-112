@@ -1,0 +1,173 @@
+Metadata-Version: 2.1
+Name: MapProxy
+Version: 1.13.1
+Summary: An accelerating proxy for tile and web map services
+Home-page: https://mapproxy.org
+Author: Oliver Tonnhofer
+Author-email: olt@omniscale.de
+License: Apache Software License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: Proxy Servers
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Scientific/Engineering :: GIS
+Requires-Dist: Pillow (!=2.4.0)
+Requires-Dist: PyYAML (>=3.0)
+
+MapProxy is an open source proxy for geospatial data. It caches, accelerates and transforms data from existing map services and serves any desktop or web GIS client.
+
+.. image:: https://mapproxy.org/mapproxy.png
+
+MapProxy is a tile cache, but also offers many new and innovative features like full support for WMS clients.
+
+MapProxy is released under the Apache Software License 2.0, runs on Unix/Linux and Windows and is easy to install and to configure.
+
+Go to https://mapproxy.org/ for more information.
+
+The documentation is available at: https://mapproxy.org/docs/latest/
+
+Changes
+-------
+Nightly
+~~~~~~~~~~~~~~~~~
+
+
+1.13.1 2021-07-13
+~~~~~~~~~~~~~~~~~
+
+Improvements:
+
+- Support cookie management for HTTP sources.
+
+Fixes:
+
+- Security fix for local file disclosure (#526).
+
+1.13.0 2020-11-18
+~~~~~~~~~~~~~~~~~
+
+Improvements:
+
+- Proj: Support for PROJ>=5 via pyproj.
+- Services: New hide_exception_url option to hide source URLs.
+- Tile sources: Support '@' in URL path (e.g. /0/0/0@2x.png)
+
+Fixes:
+
+- Various fixes for Python 3.8 compatibility.
+- WMS: Always query WMS server in supported SRS.
+- Fix warnings for tagged layer sources in layers.
+- Demo: Fix capabilites "as HTML" when running behind a proxy
+
+
+1.12.0 2019-08-30
+~~~~~~~~~~~~~~~~~
+
+Improvements:
+
+- Cache: Rescale tiles existing tiles with new upscale_tiles/downscale_tiles option.
+- Cache: Finer control for reprojection sources with preferred_src_proj option.
+- WMS: Add georeference to TIFF images (GeoTIFF).
+- WMS: Support for compressed TIFF images (LZW/JPEG).
+- WMS: Advertise MaxWidth/MaxHeight.
+- WMTS: Support for FeatureInfo requests.
+- WMS/ArcGIS: Add on_error handler (similar to on_error handling for tile sources).
+- WMS/WMTS: Add keyword_list to capabilities.
+- S3: Support for custom S3 server and ACL.
+- autoconfig: Support for username/password in URL.
+
+Fixes:
+
+- Various fixes for Python 3.6 and 3.7 compatibility.
+- Set explicit permissions for write_atomic on Windows.
+
+
+Other:
+
+- WMS: Respond with highest supported WMS version (1.3.0 by default).
+- Test: Now uses pytest instead of nosetest for all unit and system tests.
+- YAML: Always use load_safe to support PyYAML >3 without warnings.
+- Paster and eventlet specific code removed.
+
+
+1.11.1 2019-08-06
+~~~~~~~~~~~~~~~~~
+
+Fixes:
+
+- Fix Cross Site Scripting (XSS) issue in demo service. Fix for #322 did not
+  properly escaped input used in JavaScript examples. Found by Janek Vind.
+
+  A targeted attack could be used for information disclosure. For
+  example: Session cookies of a third party application running on
+  the same domain.
+
+
+1.11.0 2017-11-20
+~~~~~~~~~~~~~~~~~
+
+Improvements:
+
+- Improve reprojection performance and accuracy.
+- ArcGIS compact cache: Support for version 2.
+- ArcGIS compact cache: Improve performance for version 1.
+- ArcGIS compact cache: Add ``mapproxy-util defrag`` to reduce bundle size
+  after tiles were removed/updated.
+- ArcGIS REST source: Support opts.map and seed_only.
+- Use systems CA certs by default and fix ssl_no_cert_checks
+  for Python >=2.7.9 and >=3.4
+- WMS: Improve Bounding Boxes in Capabilities.
+- Mapserver: Find mapserv binary in PATH environment.
+
+Fixes:
+
+- Seed: Always show last log line (100%).
+- Fix saving transparent PNGs for some versions of Pillow
+  (workaround for Pillow bug #2633)
+- SQLite: Fix possible errors on first request after start.
+- Demo: Fix demo client with `use_grid_names`.
+- serve-develop: Fix header encoding for Python 3.
+- Seed: Fix --interactive for Python 3.
+- Support tagged layers for sources with colons in name.
+- Support # character in Basis Authentication password.
+- Fix import error with shapely>=1.6
+- Fix duplicate level caches when using WMTS KVP with MBtile/SQLite/CouchDB.
+
+Other:
+
+- Remove support for Python 2.6
+
+1.10.4 2017-08-17
+~~~~~~~~~~~~~~~~~
+
+Fixes:
+
+- Fix Cross Site Scripting (XSS) issue in demo service (#322).
+  A targeted attack could be used for information disclosure. For
+  example: Session cookies of a third party application running on
+  the same domain.
+
+
+1.10.3 2017-07-07
+~~~~~~~~~~~~~~~~~
+
+Fixes:
+
+- Fix crash during clipping
+- Fix bilinear/bicubic resampling from cropped source
+- Fix loading empty coverages
+
+
+Older changes
+-------------
+See https://raw.github.com/mapproxy/mapproxy/master/CHANGES.txt
+
+
