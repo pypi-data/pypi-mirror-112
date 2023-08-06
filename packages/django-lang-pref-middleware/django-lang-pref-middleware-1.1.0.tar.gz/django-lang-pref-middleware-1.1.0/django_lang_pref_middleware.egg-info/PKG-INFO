@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: django-lang-pref-middleware
+Version: 1.1.0
+Summary: Django middleware for setting the user's language preference at request time.
+Home-page: https://github.com/edx/django-lang-pref-middleware
+Author: edX
+Author-email: oscm@edx.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE.txt
+License-File: NOTICE.txt
+License-File: AUTHORS
+
+Django Language Preference Middleware
+=====================================
+
+This repo contains basic middleware that retrieves a user's language 
+preference and sets it on the request session.
+
+Usage
+=====
+Subclass `LanguagePreferenceMiddleware` and override the
+`get_user_language_preference` method.
+
+Your new middleware should be
+tested by including `LangPrefMiddlewareTestCaseMixin` in your test case and
+overriding the `middleware_class`, `get_user`, and 
+`set_user_language_preference` attributes.
+
+Testing
+=======
+
+    $ make validate
+
+
+How to Contribute
+-----------------
+
+Contributions are very welcome, but for legal reasons, you must submit a signed
+[individual contributor's agreement](http://code.edx.org/individual-contributor-agreement.pdf)
+before we can accept your contribution. See our
+[CONTRIBUTING](https://github.com/edx/edx-platform/blob/master/CONTRIBUTING.rst)
+file for more information -- it also contains guidelines for how to maintain
+high code quality, which will make your contribution more likely to be accepted.
+
+
