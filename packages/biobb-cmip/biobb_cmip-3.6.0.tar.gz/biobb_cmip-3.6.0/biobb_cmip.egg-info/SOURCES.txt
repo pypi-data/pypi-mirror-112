@@ -1,0 +1,13 @@
+README.md
+setup.py
+biobb_cmip/__init__.py
+biobb_cmip.egg-info/PKG-INFO
+biobb_cmip.egg-info/SOURCES.txt
+biobb_cmip.egg-info/dependency_links.txt
+biobb_cmip.egg-info/requires.txt
+biobb_cmip.egg-info/top_level.txt
+biobb_cmip/cmip/__init__.py
+biobb_cmip/cmip/cmip.py
+biobb_cmip/cmip/common.py
+biobb_cmip/cmip/titration.py
+biobb_cmip/test/__init__.py
