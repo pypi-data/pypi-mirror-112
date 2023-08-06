@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/tkinterflow/__init__.py
+src/tkinterflow/flowmethods.py
+src/tkinterflow.egg-info/PKG-INFO
+src/tkinterflow.egg-info/SOURCES.txt
+src/tkinterflow.egg-info/dependency_links.txt
+src/tkinterflow.egg-info/top_level.txt
