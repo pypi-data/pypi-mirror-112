@@ -1,0 +1,3 @@
+[console_scripts]
+dice_maiden_ui=dice_maiden_ui.__main__:run
+
