@@ -1,0 +1,71 @@
+default:
+  image: python
+
+# avoid running duplicate pipelines for both topic head and MR
+# see: https://docs.gitlab.com/ee/ci/yaml/#switch-between-branch-pipelines-and-merge-request-pipelines
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_REF_NAME =~ /^topic\/.*/  && $CI_OPEN_MERGE_REQUESTS'
+      when: never
+    - when: always
+
+stages:
+  - lint
+  - tests
+  - after-tests
+
+before_script:
+  - pip install tox
+
+flake8:
+  stage: lint
+  script: tox -e flake8
+
+check-manifest:
+  stage: lint
+  script: tox -e check-manifest
+
+black:
+  stage: lint
+  script: tox -e black
+
+yamllint:
+  rules:
+    - changes:
+        - "**/*.yaml"
+        - "**/*.yml"
+  stage: lint
+  before_script:
+    - pip install tox
+  script:
+    - tox -e yamllint
+
+# If you have mypy set up
+# mypy:
+#   stage: lint
+#   script: tox -e mypy
+
+py3:
+  stage: tests
+  script: tox -e py3
+
+# If you have your project on readthedocs, you can automatically trigger its
+# build by setting:
+# - READTHEDOCS_TOKEN
+# - READTHEDOCS_ID
+# in your heptapod project Settings > CI/CD > Variables.
+# You can find those secrets by creating a new integration in your readthedocs
+# project here: https://readthedocs.org/dashboard/cubicweb_%(cubename)s/integrations/
+#
+# Related documentation:
+# https://docs.readthedocs.io/en/latest/webhooks.html#using-the-generic-api-integration
+#
+# trigger-readthedocs:
+#   only:
+#     refs:
+#       - branch/default
+#   stage: after-tests
+#   script:
+#   # regarding the " everywhere when there is a '%%': yaml is extremly weird when %% are involved
+#   - curl -X POST -d "token=${READTHEDOCS_TOKEN}" https://readthedocs.org/api/v2/webhook/cubicweb_%(cubename)s/${READTHEDOCS_ID} -w "\nhttp code:"\ "%%{http_code}\n" -f

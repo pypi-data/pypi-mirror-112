@@ -1,0 +1,91 @@
+3.32.0 (2021-07-13)
+===================
+
+🔐 Security, breaking changes
+----------------------------
+
+:file:`self.w` API has been changed to automatically escape arguments used to format the string to mitiage XSS attacks.
+
+This means that instead of writting:
+
+.. code:: python
+
+    self.w("some %s string %s" % (a, b))
+
+You need to write:
+
+.. code:: python
+
+    self.w("some %s string %s", a, b)
+
+And CubicWeb will escapes all arguments given to :file:`self.w` which are :file:`a` and :file:`b` here.
+
+If for a specific reason (for example generating javascript) you don't want to escape the arguments of :file:`self.w` you can use the :file:`escape` kwarg argument of :file:`self.w` like this:
+
+.. code:: python
+
+    self.w("some %s string %s", a, b, escape=False)
+
+This is normally retrocompatible since :file:`self.w` old API with only one argument still works (but you **shouldn't** use it anymore) but if you have been giving a custom function as :file:`self.w` you'll need to adapt the API of this function to match :file:`self.w` new API which is:
+
+.. code:: python
+
+    def w(self, string, *args, **kwargs, escape=False): ...
+
+Also note that :file:`UStringIO.write` function has also been modified to be compatible with :file:`self.w` new API (so if you are using it you won't need to port this code).
+
+A CSRF protection machanism has been integrated in CubicWeb using Pyramid CSRF built in protection. Regarding breaking changes:
+
+- Cubicweb now only works **with pyramid**
+- if you are only using cubicweb "web" without ajax and you have been doing advanced modification at the session management level this shouldn't break anything for you
+- if you are doing POST/PUT/DELETE... requests using AJAX, you need to adapt you code to send the csrf_token otherwise all you requests will be denied. This is explain in the AJAX seciton of the documentation: :ref:`csrf_protection`
+
+The whole mechanism is explained in the documentation: :ref:`csrf_protection`
+
+🚧 Other breaking changes
+------------------------
+
+We decide to stop releasing cubicweb as debian packages. Thanks for all the fishes.
+
+🎉 New features
+--------------
+
+- add a component to disable RQL suggestions: :file:`cubicweb.web.views.magicsearch.RQLNoSuggestionsBuilder`
+
+👷 Bug fixes
+-----------
+
+- [reledit] display reledit for a relation if some conditions are satisfied ([1] the relation dont have rqlexpr permissions and can be deleted [2] at least one of related entites can be deleted)
+- pyramid/predicates: avoid to show an error without a session connection
+- be sure db-statement-timeout is not None
+- correctly transform cubicweb.web.RemoteCallFailed into pyramid corresponding exceptions, this allow to propagate the correct content type (for example for json exceptions)
+- "cubicweb-ctl list" now supports multiple dependencies constraints
+
+🤖 Continuous integration
+------------------------
+
+- coverage: gitlab-ci is able to read the coverage report we produce
+- disable from-forge for now since we aren't using them
+- fix path to coverage-*.xml for non-reports artifacts
+- flake8: integrate flake8-gl-codeclimate for QA reports
+- integrate junit reports style for tests errors in gitlab
+- optimisation: allow to interrupt started jobs that can be replaced
+- pytest-html: generate self contained html file for easier test repport browsing
+- trigger py3-* jobs on tox.ini/.gitlab-ci.yml/requirements modifications
+- use gitlab readthedocs integration
+
+🤷 Various changes
+-----------------
+
+- fix error cases when internationalizable is not defined on rdef
+- improve docstring in web.views.basecontrollers
+
+📋 Developer experience
+--------------------
+
+- using black on the whole project \o/ (thx for hg format-source)
+- debug/ux: display traceback of stderr when exception in addition of the html page
+- testing: activate debug mode during testing
+- ux: display on stdout the requests made to the server like nginx
+- ux: display traceback on stderr on request failure
+- ux: logger.info for selected view by ViewController

@@ -1,0 +1,8 @@
+pytest
+pytest-subtests
+pytest-html
+git+https://github.com/Psycojoker/pytest-capture-deprecatedwarnings
+pytest-cov
+pdbpp
+pytest-pudb
+pytest-profiling

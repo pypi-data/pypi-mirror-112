@@ -1,0 +1,56 @@
+3.31.1 (2021-05-18)
+===================
+
+Revert
+------
+
+- backed out changeset bcb633bd791d, don’t give event to notify_on_commit
+  Notification are done using Operation, and Operation do not have a event
+  attribute, because they can be used for several event.
+  Moreover, this commit (bcb633bd791d) changed the prototype of the
+  notify_on_commit without giving the right event to the Operation (which is a
+  singleton).
+
+
+3.31 (2021-05-04)
+=================
+
+New features
+------------
+
+- handle same_site cookies configuration in pyramid.ini
+- order: add support for order by NULLS LAST and NULLS FIRST
+- improve default cubicweb skeleton
+
+Bug fixes
+---------
+
+- create anonymous user at runtime if it doesn't exist already.
+- dbcreate: don't ask confirmation to create schema in automatic
+- hooks/notification: BREAKING CHANGE correctly initialize operation with event attribute
+- RQLExpression: performance issue on RQLExpressions using EXISTS()
+  *BREAKING CHANGE*: explicitly use EXISTS in RQLExpression for permissions
+- fix some security issues
+
+Documentation
+-------------
+
+- tuto: add structure of "enhance views" museum tutorial part.
+- tuto: redact "React in a CubicWeb view" museum tuto part.
+- tuto: rename cubicweb-tuto to tuto, avoiding confusion with cubicweb_tuto
+
+Continuous integration
+----------------------
+
+- gitlab-ci: set expiration delay to 2 weeks for artifacts
+- image is no longer a global keyword, use default
+- rename jobs names to match global conventions
+- test skeleton own tox in the CI
+
+Various changes
+---------------
+
+- cleanup: Remove migrations for 3.21 and less
+- py3: Rename `raw_input` (that does not exist anymore) to `input`
+- tests: create a .nobackup file in the data/database directory
+  (https://forge.extranet.logilab.fr/cubicweb/cubicweb/-/issues/298)
