@@ -1,0 +1,16 @@
+BlizzGameData/Battlenet.py,sha256=MYtlUdz1w7gO-Wo3clcj7gDXWzcrBCfiMBBUZ_KdC34,1762
+BlizzGameData/GameData.py,sha256=e0Z1jgU_nsgiHVQrMrCqybPdr0mXYXtNax7-CjOSwps,2960
+BlizzGameData/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+BlizzGameData/loggerConfig.py,sha256=5cQr8q1yq2fYo9sRMX13kA9_9N87howVx3I4eBaCeyM,801
+BlizzGameData/api_resources/AuctionHouse.py,sha256=XqToNpkIrLyeVxUwt0hdDIX1ufqSgQruCzrJ7CVUyIk,616
+BlizzGameData/api_resources/ConnectedRealm.py,sha256=VRlRi_GpGhRVnUVWJn1MLmVsfY2qYO4lkmAm_re1N-0,1214
+BlizzGameData/api_resources/Realm.py,sha256=GJRmHiSVwJYarc1MIageWV5wy0rU3FXVQsYlrPcgfX4,1006
+BlizzGameData/api_resources/Resource.py,sha256=OB-srCswj8tcY10RawYtyU200acAIKgEflNTMUQi2O8,564
+BlizzGameData/api_resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+BlizzGameData/oauth_flows/ClientCredentials.py,sha256=t3BMr7EwcvjwXigcnJGxaSvz0ibqQ7Q0LuQbxDR8dbY,2092
+BlizzGameData/oauth_flows/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+BlizzGameData-0.0.7.dist-info/LICENSE,sha256=HDbMJ7oItmxTn3jVtZFi6jUFAHovset5jzAPUderjOc,1073
+BlizzGameData-0.0.7.dist-info/METADATA,sha256=GaaO_zlQRH5mE3obkydfN0mhSXqo2A9ijSJs0fM-IBY,721
+BlizzGameData-0.0.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+BlizzGameData-0.0.7.dist-info/top_level.txt,sha256=4K8OFNT-h5_iP0yTZr8XTppk2I4mAH8EQCFPfrTrhoc,14
+BlizzGameData-0.0.7.dist-info/RECORD,,
