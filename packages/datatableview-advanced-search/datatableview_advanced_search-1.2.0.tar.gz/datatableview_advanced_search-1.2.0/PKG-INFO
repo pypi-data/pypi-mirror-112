@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: datatableview_advanced_search
+Version: 1.2.0
+Summary: Allows a user to use logical operators in the datatableview search window
+Home-page: https://github.com/icmanage/django-datatable-view-adv-query
+Author: Steven Klass
+Author-email: sklass@icmanage.com
+License: UNKNOWN
+Download-URL: https://github.com/icmanage/django-datatable-view-adv-query/archive/1.2.0.tar.gz
+Project-URL: Bug Reports, https://github.com/icmanage/django-datatable-view-adv-query/issues
+Project-URL: Say Thanks!, http://saythanks.io/to/rh0dium
+Project-URL: Source, https://github.com/icmanage/django-datatable-view-adv-query
+Keywords: django datatableview
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# django-datatable-view-adv-query
+
+This is a small repo to allow user to use an advanced search in the search window.
+
+For example this is now possible:
+
+ `(name="Foo Man" OR name=Bar) AND modified_date >= 12/25/2017`
+
+Learn more https://github.com/icmanage/django-datatable-view-adv-query>.
+
+### Build Process:
+1.  Update the `__version_info__` inside of the application. Commit and push.
+2.  Tag the release with the version. `git tag <version> -m "Release"; git push --tags`
+3.  Build the release `rm -rf dist build *egg-info; python setup.py sdist bdist_wheel`
+4.  Upload the data `twine upload dist/*`
+
+
