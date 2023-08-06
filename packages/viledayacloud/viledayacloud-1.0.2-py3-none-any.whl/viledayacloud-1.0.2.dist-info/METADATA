@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: viledayacloud
+Version: 1.0.2
+Summary: Classes and functions to use in software integration with Yandex Cloud services
+Home-page: https://www.vileda-professional.com/
+Author: FHCS GmbH
+Author-email: support@fhcs.zendesk.com
+License: Creative Commons Attribution 4.0 International
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Other Environment
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+License-File: LICENSE.txt
+Requires-Dist: aiohttp (>=3.7.4.post0)
+
+UNKNOWN
+
