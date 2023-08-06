@@ -1,0 +1,3 @@
+[console_scripts]
+mlphon = mlphon.cli:main
+
