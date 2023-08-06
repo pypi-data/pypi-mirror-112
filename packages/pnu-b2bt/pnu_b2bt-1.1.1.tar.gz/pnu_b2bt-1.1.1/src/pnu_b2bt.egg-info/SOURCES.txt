@@ -1,0 +1,14 @@
+License
+README.md
+pyproject.toml
+setup.cfg
+man/b2bt.1.gz
+man/b2bt.5.gz
+src/b2bt/__init__.py
+src/b2bt/main.py
+src/pnu_b2bt.egg-info/PKG-INFO
+src/pnu_b2bt.egg-info/SOURCES.txt
+src/pnu_b2bt.egg-info/dependency_links.txt
+src/pnu_b2bt.egg-info/entry_points.txt
+src/pnu_b2bt.egg-info/requires.txt
+src/pnu_b2bt.egg-info/top_level.txt
