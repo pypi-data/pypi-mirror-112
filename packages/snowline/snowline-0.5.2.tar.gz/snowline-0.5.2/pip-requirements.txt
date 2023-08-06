@@ -1,0 +1,7 @@
+numpy
+scipy
+git+git://github.com/pypmc/pypmc
+iminuit
+flake8
+coveralls
+pytest-html
