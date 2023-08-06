@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: somfy_protect_api
+Version: 0.1.6
+Summary: Python3 API Client for Somfy Protect (Home Alarm)
+Home-page: https://github.com/Minims/somfy-protect-api
+Author: Minims
+Author-email: github@minims.fr
+License: GNU General Public License v3.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6.1,<4.0
