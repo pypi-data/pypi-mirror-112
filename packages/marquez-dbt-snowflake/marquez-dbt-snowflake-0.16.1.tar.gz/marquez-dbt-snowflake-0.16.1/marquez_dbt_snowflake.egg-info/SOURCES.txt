@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+dbt/adapters/openlineage_snowflake/__init__.py
+dbt/adapters/openlineage_snowflake/connections.py
+dbt/adapters/openlineage_snowflake/impl.py
+dbt/include/openlineage_snowflake/__init__.py
+marquez_dbt_snowflake.egg-info/PKG-INFO
+marquez_dbt_snowflake.egg-info/SOURCES.txt
+marquez_dbt_snowflake.egg-info/dependency_links.txt
+marquez_dbt_snowflake.egg-info/not-zip-safe
+marquez_dbt_snowflake.egg-info/requires.txt
+marquez_dbt_snowflake.egg-info/top_level.txt
