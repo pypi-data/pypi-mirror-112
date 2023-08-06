@@ -1,0 +1,10 @@
+astunparse
+future-annotations
+ipykernel
+ipython
+jupyter
+jupyterlab>=3.0
+mypy
+nbclassic>=0.2.8
+nest_asyncio
+traitlets
