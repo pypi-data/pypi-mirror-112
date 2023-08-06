@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+
+    <record id="view_car_config_groups_locals_window" model="ir.actions.act_window">
+      <field name="name">Local groups config</field>
+      <field name="res_model">smp.smp_car_config_groups_locals</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_car_config_groups_locals_list" model="ir.ui.view">
+      <field name="name">smp.smp_car_config_groups_locals.tree</field>
+      <field name="model">smp.smp_car_config_groups_locals</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_car_config_groups_locals_form" model="ir.ui.view">
+      <field name="name">smp.smp_car_config_groups_locals.form</field>
+      <field name="model">smp.smp_car_config_groups_locals</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit" version="7.0" delete="false">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="name"/>
+                </group>
+                <group>
+                  <field name="car_configs_related" widget="many2many_list"></field>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <menuitem name="Local groups config" id="car_config_groups_locals" 
+      parent="sm_partago_invoicing.menu_root" action="view_car_config_groups_locals_window"/>
+
+  </data>
+</odoo>
