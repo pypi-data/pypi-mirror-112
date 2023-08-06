@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ardutest
+Version: 0.0.3
+Summary: Wrapper around the arductl library to run falsifications using PSY-Taliro
+License: MIT
+Author: Aniruddh Chandratre
+Author-email: achand75@asu.edu
+Requires-Python: >=3.7.1,<3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: MAVProxy (>=1.8.38,<2.0.0)
+Requires-Dist: docker (>=5.0.0,<6.0.0)
+Requires-Dist: dronekit (>=2.9.2,<3.0.0)
+Requires-Dist: numpy (>=1.20.3,<2.0.0)
+Requires-Dist: partx (==0.0.24c)
+Requires-Dist: pydantic (>=1.8.2,<2.0.0)
+Requires-Dist: pymavlink (>=2.4.15,<3.0.0)
