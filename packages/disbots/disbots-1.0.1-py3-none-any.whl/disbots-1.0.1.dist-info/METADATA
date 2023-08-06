@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: disbots
+Version: 1.0.1
+Summary: A library made for disbots.xyz
+Home-page: UNKNOWN
+Author: RoyalDj9730322
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: aiohttp
+
+# disbotlist 
+useful library for [disbots.xyz](https://disbots.xyz)
+
+## Installation
+```
+pip install disbots
+```
+## example 
+Server Count Post :
+```python
+from disbots import disbots
+from discord.ext import commands
+
+client = commands.Bot(command_prefix="!") 
+dbl = disbots(client,"token of disbots")
+
+@client.event
+async def on_ready():
+  x = await dbl.serverCountPost()
+  print(x)
+
+client.run("token")
+```
+
+
