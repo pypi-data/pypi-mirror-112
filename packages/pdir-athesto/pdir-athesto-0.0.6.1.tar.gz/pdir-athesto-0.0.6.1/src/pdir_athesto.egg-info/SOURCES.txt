@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/pdir/__init__.py
+src/pdir/pdir.py
+src/pdir_athesto.egg-info/PKG-INFO
+src/pdir_athesto.egg-info/SOURCES.txt
+src/pdir_athesto.egg-info/dependency_links.txt
+src/pdir_athesto.egg-info/top_level.txt
