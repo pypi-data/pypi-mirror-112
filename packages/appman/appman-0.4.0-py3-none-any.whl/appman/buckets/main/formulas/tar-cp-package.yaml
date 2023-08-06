@@ -1,0 +1,12 @@
+os: linux
+commands:
+  install: >-
+    NAME=$(basename $source)
+    && wget -q -O ~/tmp/${NAME} $source
+    && sudo tar -C $destination -xzf ~/tmp/${NAME}
+    && rm ~/tmp/${NAME}
+args:
+  - source
+  - destination
+requires:
+  - wget

@@ -1,0 +1,6 @@
+id: mopidy-scrobbler
+name: mopidy-scrobbler
+labels: []
+formulas:
+  pip: mopidy-scrobbler
+comments: install with sudo

@@ -1,0 +1,6 @@
+id: conemu
+name: ConEmu
+labels:
+  - gui
+formulas:
+  choco: ConEmu
