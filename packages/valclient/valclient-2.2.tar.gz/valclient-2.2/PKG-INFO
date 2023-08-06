@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: valclient
+Version: 2.2
+Summary: Wrapper for VALORANT's client API
+Home-page: https://github.com/colinhartigan/valclient.py
+Author: colinh
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/colinhartigan/valclient.py/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# valclient.py
+
+### API wrapper for VALORANT's client API
+
+## Example
+
+```python
+from valclient.client import Client
+
+client = Client(region="na")
+client.activate()
+
+# get MatchID of latest match
+history = client.fetch_match_history(queue_id="unrated")
+print(history["History"][0]["MatchID"])
+```
+
+## Docs
+
+Check out [Techdoodle's awesome documentation](https://github.com/techchrism/valorant-api-docs/tree/trunk/docs)
+
+
