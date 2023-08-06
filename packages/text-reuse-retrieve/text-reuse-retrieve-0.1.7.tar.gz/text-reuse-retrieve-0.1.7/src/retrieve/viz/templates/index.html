@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Text-reuse Heat-map</title>
+    <link rel="stylesheet" href="static/vendor/css/bulma-0.9.0.min.css">
+    <link rel="stylesheet" href="static/main.css">
+    <script src="static/vendor/js/jquery-3.5.1.min.js"></script>
+    <script src="static/utils.js"></script>
+    <script src="static/tabs.js"></script>
+  </head>
+  <body>
+
+    <section class="hero is-dark is-small">
+      <div class="hero-body">
+    	<div class="container">
+    	  <h1 class="title">Retrieve Viz</h1>
+    	  <h2 class="subtitle">Text-reuse visualization panel</h2>
+    	</div>
+      </div>
+    </section>
+
+    <section class="section" style="padding: 1rem 1.5rem;">
+
+      <!-- tabs -->
+      <div class="tabs is-centered is-medium">
+	<ul>
+	  <li id="home-tab" class="is-active">
+	    <a onClick="switchToTab('home')">Home</a>
+	  </li>
+	  <li id="heatmap-tab" class="is-active">
+	    <a onClick="switchToTab('heatmap')">Heatmap</a>
+	  </li>
+	  <li id="doc-tab">
+	    <a onClick="switchToTab('doc')">Documents</a>
+	  </li>
+	</ul>
+      </div>
+
+      <!-- content -->
+      <div class="container has-text-centered">
+	<!-- home -->
+	<div id="home-content">
+	  <div class="columns">
+	    <div class="column is-one-fifth"></div>
+	    <div class="column is-three-fifths">
+	      Retrieve visualization panel showing a dot-plot of the found reuse cases.
+	      <br>
+	      Clicking on a dot takes you to a page displaying the actual texts in the match.
+	      <br>
+	      In the future, this page will have more documentation as well as bells and whistles.
+	      <br>
+	      Until then, please use with care.
+	    </div>
+	    <div class="column is-one-fifth"></div>
+	  </div>
+	</div>
+
+	<!-- heatmap -->
+	<div id="heatmap-content">
+	  <!-- metadata -->
+	  <div id="heatmap-metadata" class="container has-text-centered"></div>
+	  <div id="heatmap-viz"></div>
+	</div>
+
+	<!-- documents -->
+	<div id="doc-content" class="is-hidden">
+	  <div id="doc-metadata" class="container has-text-centered"></div>
+	  <br>
+	  <div class="columns">
+	    <!-- left column -->
+	    <div class="column">
+	      <article class="message is-dark">
+		<div class="message-header">
+		  <p id="doc1-id"></p>
+		</div>
+		<div class="message-body" id="doc1-text">
+		  
+		</div>
+	      </article>
+	    </div>	    
+	    <!-- right column -->
+	    <div class="column">
+	      <article class="message is-dark">
+		<div class="message-header">
+		  <p id="doc2-id"></p>
+		</div>
+		<div class="message-body" id="doc2-text">
+		</div>
+	      </article>
+	    </div>
+	  </div>
+	</div>
+
+      </div>
+      
+    </section>
+
+    <footer class="footer" style="padding: 1.5rem 1.2rem 3rem;">
+      <div class="container">
+	<div class="content has-text-centered">
+    	  <p><strong>Retrieve</strong> © 2020 <a href="https://www.github.com/emanjavacas/retrieve">Enrique Manjavacas</a></p>
+	</div>
+      </div>
+    </footer>
+    
+  </body>
+
+  <script src="static/vendor/js/d3-color.v1.min.js"></script>
+  <script src="static/vendor/js/d3-interpolate.v1.min.js"></script>
+  <script src="static/vendor/js/d3-scale-chromatic.v1.min.js"></script>
+  <script src="static/vendor/js/d3.v4.min.js"></script>
+  <script src="static/main.js"></script>
+
+</html>
