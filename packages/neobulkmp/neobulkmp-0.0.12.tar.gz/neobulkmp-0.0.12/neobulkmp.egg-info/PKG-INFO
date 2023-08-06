@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: neobulkmp
+Version: 0.0.12
+Summary: Tool for multiprocessed dataloading into a neo4j db, without node blocking
+Home-page: UNKNOWN
+Author: Tim Bleimehl
+Author-email: tim.bleimehl@helmholtz-muenchen.de
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Provides-Extra: test
+
+UNKNOWN
+
