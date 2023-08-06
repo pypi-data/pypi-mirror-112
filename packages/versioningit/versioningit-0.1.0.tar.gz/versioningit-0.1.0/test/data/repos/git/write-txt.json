@@ -1,0 +1,8 @@
+{
+    "version": "0.1.0.post1+gab17034",
+    "write_file": {
+        "sdist_path": "src/mypackage/version.txt",
+        "wheel_path": "mypackage/version.txt",
+        "contents": "0.1.0.post1+gab17034\n"
+    }
+}
