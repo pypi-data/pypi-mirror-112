@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Bird-Similarity
+Version: 0.0.1
+Summary: This model has been trained on Resnet50 and tested on AUC with 93% accuracy
+Home-page: https://github.com/tobysuwindra/Bird-Similarity
+Author: Toby Suwindra
+Author-email: tsuwindra@gmail.com
+License: UNKNOWN
+Description: # Birdnet
+        Model Similarity Bird
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
