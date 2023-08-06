@@ -1,0 +1,48 @@
+image: nastja/nastja-build:clang
+
+stages:
+  - build
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+  - pip3 install sphinx
+  - pip3 install pandas
+  - pip3 install pyvista
+  - pip3 install pbr
+  - cd docs && make html && cd ..
+  - mv docs/_build/html/ public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
+build:
+  stage: build
+  script:
+  - pip3 install sphinx
+  - pip3 install pandas
+  - pip3 install pyvista
+  - pip3 install pbr
+  - pip3 install build
+  - pip3 install twine
+  - export SKIP_GENERATE_AUTHORS=1
+  - export SKIP_WRITE_GIT_CHANGELOG=1
+  - |
+    cat <<EOT >> ~/.pypirc
+    [pypi]
+    username = __token__
+    password = $PYPITOKEN
+    a = $CI_COMMIT_TAG
+    EOT
+  - echo $CI_COMMIT_TAG
+  - rm -rf dist
+  - mkdir -p dist
+  - python3 -m build
+  - cat ~/.pypirc
+  - python3 -m twine upload dist/*
+  - rm ~/.pypirc
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^v(\d+\.)?(\d+\.)?(\d+)$/'
