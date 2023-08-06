@@ -1,0 +1,3 @@
+[console_scripts]
+pixiu = pixiu.main:main
+
