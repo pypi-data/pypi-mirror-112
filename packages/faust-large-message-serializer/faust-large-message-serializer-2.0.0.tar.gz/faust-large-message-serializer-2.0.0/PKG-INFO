@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: faust-large-message-serializer
+Version: 2.0.0
+Summary: Faust serializer that serializes large messages on Amazon S3 or Azure Blob Storage
+Home-page: https://github.com/bakdata/faust-s3-backed-serializer
+Author: bakdata
+Author-email: opensource@bakdata.com
