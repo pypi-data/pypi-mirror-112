@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: sls-json-fast
+Version: 0.1.0
+Summary: aliyun sls log python for json
+Author: JimZhang
+Author-email: zzl22100048@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aliyun-log-python-sdk (>=0.6.54,<0.7.0)
+Description-Content-Type: text/markdown
+
+# 阿里云日志服务 for JSON
+
+## 使用
+
+- `ALIYUN_LOG_ENDPOINT` 日志服务端点，默认根据环境自动配置内外网
+- `ALIYUN_LOG_ACCESSID` 阿里云 access id
+- `ALIYUN_LOG_ACCESSKEY` 阿里云 access key
+- `ALIYUN_LOG_PROJECT` 阿里云日志项目名
+- `ALIYUN_LOG_STORE` 阿里云日志存储库名
