@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: lpsolvewrapper
+Version: 1.0.1
+Summary: Python3.6 wrapper for compiled lpsolve bindings
+Home-page: https://github.com/theweiyu/lpsolvewrapper
+Author: Weiyu Chen
+License: UNKNOWN
+Keywords: lpsolve python3 wrapper compiled
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/plain
+License-File: LICENSE.txt
+
+C source code compiled for python 3.6 and wrapper to avoid multiple fragmented library files needing to be correctly located in linux environment.
+
