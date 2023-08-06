@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "ddebug"
+version = "0.4.0"
+description = "python library with a set of tools for simple debugging of python programs"
+authors = ["matan h <matan.honig2@gmail.com>"]
+license = "MIT"
+
+readme = "README.md"
+homepage = "https://github.com/matan-h/ddebug"
+# repository = "https://github.com/matan-h/ddebug"
+# documentation = "https://github.com/matan-h/ddebug"
+keywords = [
+    "ddebug",
+    "debug",
+    "simple",
+    "quick",
+    "easy",
+    "dd",
+    "debuging"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.6,<4.0" # the <4.0 is because rich Python requirement
+snoop = "*" # main require
+icecream = "*" # main require
+rich = "*" # main require
+friendly = "*" # dd-traceback errors require
+# optional
+watchpoints = { version ="*",optional = true } # watch require
+deepdiff = { version ="*",optional = true } # dd.diff require
+pdbr = { version ="*",optional = true } # post pdb require
+inputimeout = { version ="*",optional = true } # post pdb require
+
+
+
+[tool.poetry.extras]
+full = ["watchpoints", "deepdiff", "pdbr", "inputimeout"]
+no-pdbr = ["watchpoints"]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+
+[tool.poetry.urls]
+issues = "https://github.com/matan-h/ddebug/issues"
