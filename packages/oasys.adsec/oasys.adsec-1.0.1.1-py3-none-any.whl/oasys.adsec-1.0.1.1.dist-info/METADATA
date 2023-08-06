@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: oasys.adsec
+Version: 1.0.1.1
+Summary: Structural analysis and design of sections.
+Home-page: https://www.oasys-software.com/products/structural/adsec/
+Author: Oasys
+Author-email: oasys@arup.com
+License: Proprietary License
+Project-URL: Bug Tracker, https://www.oasys-software.com/contact-us/
+Project-URL: Documentation, https://arup-group.github.io/oasys-combined/adsec-api/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE.pdf
+License-File: LICENCE.txt
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: cffi (==1.14.5)
+Requires-Dist: clr-loader (==0.1.5)
+Requires-Dist: pycparser (==2.20)
+Requires-Dist: wincertstore (==0.2)
+
+AdSec carries out non-linear analysis of structural cross-sections of reinforced concrete, steel or fibre-reinforced polymer. Analysis options are available for strength and serviceability limit states in accordance with various international design standards.
+
