@@ -1,0 +1,155 @@
+devops
+******
+
+
+Description
+===========
+
+Use the DevOps CLI to create a DevOps project to group the pipelines,
+add reference to target deployment environments, add artifacts to
+deploy,  and create deployment pipelines needed to deploy your
+software.
+
+
+Available Commands
+==================
+
+* deploy-artifact
+
+  * create-generic-artifact
+
+  * create-inline-artifact
+
+  * create-ocir-artifact
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-generic-artifact
+
+  * update-inline-artifact
+
+  * update-ocir-artifact
+
+* deploy-environment
+
+  * create-compute-instance-environment
+
+  * create-function-environment
+
+  * create-oke-cluster-environment
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-compute-instance-environment
+
+  * update-function-environment
+
+  * update-oke-cluster-environment
+
+* deploy-pipeline
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* deploy-stage
+
+  * create-deploy-compute-instance-group-stage
+
+  * create-deploy-function-stage
+
+  * create-deploy-oke-stage
+
+  * create-invoke-function-stage
+
+  * create-load-balancer-traffic-shift-stage
+
+  * create-manual-approval-stage
+
+  * create-wait-stage
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-deploy-compute-instance-group-stage
+
+  * update-deploy-function-stage
+
+  * update-deploy-oke-stage
+
+  * update-invoke-function-stage
+
+  * update-load-balancer-traffic-shift-stage
+
+  * update-manual-approval-stage
+
+  * update-wait-stage
+
+* deployment
+
+  * approve
+
+  * cancel
+
+  * create-pipeline-deployment
+
+  * create-pipeline-redeployment
+
+  * create-single-stage-deployment
+
+  * get
+
+  * list
+
+  * update
+
+* project
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list
