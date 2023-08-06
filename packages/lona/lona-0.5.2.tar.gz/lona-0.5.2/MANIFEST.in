@@ -1,0 +1,8 @@
+recursive-include lona/templates/ *
+recursive-include lona/client/ *
+recursive-include lona/contrib/*/static/ *
+
+global-exclude .*
+global-exclude *~
+global-exclude *.swp
+global-exclude *.pyc
