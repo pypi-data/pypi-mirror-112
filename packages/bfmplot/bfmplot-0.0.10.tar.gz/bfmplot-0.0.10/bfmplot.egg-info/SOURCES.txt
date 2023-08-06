@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+README.rst
+setup.cfg
+setup.py
+bfmplot/__init__.py
+bfmplot/cividis.py
+bfmplot/colormaps.py
+bfmplot/sequences.py
+bfmplot/test.py
+bfmplot/tools.py
+bfmplot.egg-info/PKG-INFO
+bfmplot.egg-info/SOURCES.txt
+bfmplot.egg-info/dependency_links.txt
+bfmplot.egg-info/not-zip-safe
+bfmplot.egg-info/requires.txt
+bfmplot.egg-info/top_level.txt
