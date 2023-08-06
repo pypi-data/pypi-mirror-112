@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: mehr
+Version: 0.0.1
+Summary: Helpers
+Home-page: http://pypi.python.org/pypi/mehr/
+Author: Moraxno
+Author-email: robertbock.98@googlemail.com
+License: LICENSE.txt
+Download-URL: https://github.com/Moraxno/py-mehr/archive/refs/tags/v0.0.1.tar.gz
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE.txt
+
+# py-mehr
+Python package hosting toolboxes and helper functions
+
+
