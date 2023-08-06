@@ -1,0 +1,11 @@
+README.rst
+setup.py
+ttsi/__init__.py
+ttsi/__main__.py
+ttsi/app.py
+ttsi.egg-info/PKG-INFO
+ttsi.egg-info/SOURCES.txt
+ttsi.egg-info/dependency_links.txt
+ttsi.egg-info/entry_points.txt
+ttsi.egg-info/requires.txt
+ttsi.egg-info/top_level.txt
