@@ -1,0 +1,16 @@
+transmorph/__init__.py,sha256=n9FPGYVK2U-J6NrPinK49RqDvZ0tCLxIrF1YN7amT3Y,59
+transmorph/constants.py,sha256=l4UNbEZUdQ8fnxv4TVYUQmzUz2-RVdJ3jJAvWGOYUE8,112
+transmorph/density.py,sha256=LbVcX3ijay6cSYfmhMv1Rg__jndfVaYghouLgKh9n2g,2821
+transmorph/integration.py,sha256=ytibtvyGBGTb2m4_i4ScLdi1bOOOdRLBMRdvABMSqtc,5356
+transmorph/tdata.py,sha256=mtIZNS5cuJI_io0DAHsBCuhgoGrWFLP1OsRnWeon_SM,11046
+transmorph/transmorph.py,sha256=Cgpp93B5q2L72o0D9-eMB_wG76RfpC7hjpCMIX_IC6g,22103
+transmorph/utils.py,sha256=fD4gq1-Ah_9QL6LtKGjlgl4Z_C1IMGat_SdbVsyrXmM,4182
+transmorph/datasets/__init__.py,sha256=oCZjdIhbmNV9xm-XxkP6D7YGGVn3tNPTuz9VaCYHT4o,107
+transmorph/datasets/real_datasets.py,sha256=DlriOMhpp33w8qJWY6bVY9M08jiBVDjBIRevrzb_cJc,529
+transmorph/tests/__init__.py,sha256=1oLL20yLB1GL9IbFiZD8OReDqiCpFr-yetIR6x1cNkI,23
+transmorph/tests/test_integration.py,sha256=HcwK7AuiOr7gW4ffIl2udUx-sxwEzG10cfR5H7XDpHA,13057
+transmorph-0.0.8.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+transmorph-0.0.8.dist-info/METADATA,sha256=LbQeEnc4XOxM2dSJvwPcjv_Nx0ebb6Ud9wo25UibX54,3317
+transmorph-0.0.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+transmorph-0.0.8.dist-info/top_level.txt,sha256=BpDbfrDR3sWwTiXGapKkSSjGI6riKm4Iof2-7u8bLDs,11
+transmorph-0.0.8.dist-info/RECORD,,
