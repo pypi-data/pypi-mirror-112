@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/parsagon_local_drivers/__init__.py
+src/parsagon_local_drivers.egg-info/PKG-INFO
+src/parsagon_local_drivers.egg-info/SOURCES.txt
+src/parsagon_local_drivers.egg-info/dependency_links.txt
+src/parsagon_local_drivers.egg-info/requires.txt
+src/parsagon_local_drivers.egg-info/top_level.txt
