@@ -1,0 +1,17 @@
+LICENSE.txt
+NOTICE.txt
+README.md
+setup.cfg
+setup.py
+easy_kclpy/__init__.py
+easy_kclpy/kinesis_processor.py
+easy_kclpy/version.py
+easy_kclpy.egg-info/PKG-INFO
+easy_kclpy.egg-info/SOURCES.txt
+easy_kclpy.egg-info/dependency_links.txt
+easy_kclpy.egg-info/requires.txt
+easy_kclpy.egg-info/top_level.txt
+easy_kclpy/utils/__init__.py
+easy_kclpy/utils/generate_kcl_properties_file_from_env.py
+easy_kclpy/utils/kinesis_to_file_processor.py
+easy_kclpy/utils/launch_multilangdaemon.py
