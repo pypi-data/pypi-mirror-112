@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2020 Splunk Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+[tool.poetry]
+name = "splunktalib"
+version = "2.0.1"
+description = "Supporting library for Splunk Add-ons"
+authors = ["rfaircloth-splunk <rfaircloth@splunk.com>"]
+license = "Apache-2.0"
+repository = "https://github.com/splunk/addonfactory-ta-library-python"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+sortedcontainers = "^2"
+httplib2 = "^0"
+defusedxml = "^0"
+
+[tool.poetry.dev-dependencies]
+mock = "^4"
+pytest-expect = "^1.1.0"
+pytest = "^6"
+pytest-cov = "^2"
+poetry-dynamic-versioning = "^0.13.0"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+
+[build-system]
+requires = ["poetry>=1.0.0"]
+build-backend = "poetry.masonry.api"
