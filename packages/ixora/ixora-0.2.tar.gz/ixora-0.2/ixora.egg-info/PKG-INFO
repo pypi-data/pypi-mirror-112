@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: ixora
+Version: 0.2
+Summary: Automate force-directed graph
+Home-page: https://github.com/qeeqbox/ixora
+Author: QeeqBox
+Author-email: gigaqeeq@gmail.com
+License: AGPL-3.0
+Description: .. image:: https://raw.githubusercontent.com/qeeqbox/ixora/main/readme/ixora_logo.png
+        
+        #
+        Ixora package is used to automate d3.js graph with specific options for our projects
+        
+Platform: UNKNOWN
+Requires-Python: >=3
