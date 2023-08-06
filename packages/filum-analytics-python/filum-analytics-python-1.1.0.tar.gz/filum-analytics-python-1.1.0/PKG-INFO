@@ -1,0 +1,29 @@
+Metadata-Version: 1.2
+Name: filum-analytics-python
+Version: 1.1.0
+Summary: The official Python SDK for Filum BDP
+Home-page: https://github.com/Filum-AI/filum-python-sdk
+Author: Filum AI
+Author-email: hiep@filum.ai
+Maintainer: Filum AI
+Maintainer-email: hiep@filum.ai
+License: MIT License
+Description: 
+        Filum aims to be the first and the BEST Business Data Platform in South East Asia.
+        Filum Python SDK help you to transform data into Filum events with ease
+        This is the official Python package that realizes the Filum Standard Event Schema.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

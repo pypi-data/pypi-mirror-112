@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+filum_analytics/__init__.py
+filum_analytics/client.py
+filum_analytics/consumer.py
+filum_analytics/request.py
+filum_analytics/utils.py
+filum_analytics/version.py
+filum_analytics/schema/filum_event_schema.json
+filum_analytics_python.egg-info/PKG-INFO
+filum_analytics_python.egg-info/SOURCES.txt
+filum_analytics_python.egg-info/dependency_links.txt
+filum_analytics_python.egg-info/requires.txt
+filum_analytics_python.egg-info/top_level.txt

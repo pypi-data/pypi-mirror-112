@@ -1,0 +1,435 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "anonymous_id": "",
+            "user_id": "b9336c976e21ced4595ab470786a687893909f35daa74ff7fa55073628e97315",
+            "context": [
+                {
+                    "key": "name",
+                    "value": {
+                        "string_value": "filum-python-sdk"
+                    }
+                },
+                {
+                    "key": "version",
+                    "value": {
+                        "string_value": "0.0.1"
+                    }
+                }
+            ],
+            "timestamp": "2020-10-23T04:04:51.722499+00:00",
+            "original_timestamp": "2020-10-23T04:04:51.722444+00:00",
+            "sent_at": "2020-10-23T04:04:51.722444+00:00",
+            "received_at": "2020-10-23T04:04:51.722444+00:00",
+            "event_name": "Purchase",
+            "event_type": "track",
+            "event_params": [
+                {
+                    "key": "create_at",
+                    "value": {
+                        "string_value": "2/1"
+                    }
+                },
+                {
+                    "key": "shipping_order_id",
+                    "value": {
+                        "string_value": "EN105548613VN"
+                    }
+                },
+                {
+                    "key": "phone",
+                    "value": {
+                        "string_value": "987191935"
+                    }
+                },
+                {
+                    "key": "name",
+                    "value": {
+                        "string_value": "Nguỹen thu huong"
+                    }
+                },
+                {
+                    "key": "shipping_status",
+                    "value": {
+                        "string_value": "Đã phát thành công"
+                    }
+                },
+                {
+                    "key": "shipping_fee",
+                    "value": {
+                        "string_value": "21400"
+                    }
+                },
+                {
+                    "key": "total_amount",
+                    "value": {
+                        "string_value": "300000"
+                    }
+                },
+                {
+                    "key": "item_list",
+                    "value": {
+                        "string_value": "1 cốc  BEU"
+                    }
+                },
+                {
+                    "key": "processing_1",
+                    "value": {
+                        "string_value": ""
+                    }
+                },
+                {
+                    "key": "processing_3",
+                    "value": {
+                        "string_value": ""
+                    }
+                },
+                {
+                    "key": "category",
+                    "value": {
+                        "string_value": ""
+                    }
+                },
+                {
+                    "key": "return_reason",
+                    "value": {
+                        "string_value": ""
+                    }
+                },
+                {
+                    "key": "note",
+                    "value": {
+                        "string_value": ""
+                    }
+                },
+                {
+                    "key": "post",
+                    "value": {
+                        "string_value": "Bưu điện HN"
+                    }
+                },
+                {
+                    "key": "sales_name",
+                    "value": {
+                        "string_value": ""
+                    }
+                },
+                {
+                    "key": "source",
+                    "value": {
+                        "string_value": "GoogleSheetSource"
+                    }
+                },
+                {
+                    "key": "channel",
+                    "value": {
+                        "string_value": "FacebookAds"
+                    }
+                }
+            ],
+            "origin": "Copy of THEO DÕI CỐC BEU T1/2020*||*2*||*0",
+            "event_id": "b23e6830-e8da-4887-9697-873cbfa57735"
+        }
+    ],
+    "required": [
+        "anonymous_id",
+        "user_id",
+        "context",
+        "timestamp",
+        "original_timestamp",
+        "sent_at",
+        "received_at",
+        "event_name",
+        "event_type",
+        "event_params",
+        "origin",
+        "event_id"
+    ],
+    "properties": {
+        "anonymous_id": {
+            "$id": "#/properties/anonymous_id",
+            "type": "string",
+            "title": "The anonymous_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                ""
+            ]
+        },
+        "user_id": {
+            "$id": "#/properties/user_id",
+            "type": "string",
+            "title": "The user_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "b9336c976e21ced4595ab470786a687893909f35daa74ff7fa55073628e97315"
+            ]
+        },
+        "context": {
+            "$id": "#/properties/context",
+            "type": "array",
+            "title": "The context schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "key": "name",
+                        "value": {
+                            "string_value": "filum-python-sdk"
+                        }
+                    },
+                    {
+                        "key": "version",
+                        "value": {
+                            "string_value": "0.0.1"
+                        }
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/context/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/context/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "key": "name",
+                                "value": {
+                                    "string_value": "filum-python-sdk"
+                                }
+                            }
+                        ],
+                        "required": [
+                            "key",
+                            "value"
+                        ],
+                        "properties": {
+                            "key": {
+                                "$id": "#/properties/context/items/anyOf/0/properties/key",
+                                "type": "string",
+                                "title": "The key schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "name"
+                                ]
+                            },
+                            "value": {
+                                "$id": "#/properties/context/items/anyOf/0/properties/value",
+                                "type": "object",
+                                "title": "The value schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "string_value": "filum-python-sdk"
+                                    }
+                                ],
+                                "required": [
+                                    "string_value"
+                                ],
+                                "properties": {
+                                    "string_value": {
+                                        "$id": "#/properties/context/items/anyOf/0/properties/value/properties/string_value",
+                                        "type": "string",
+                                        "title": "The string_value schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "filum-python-sdk"
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        },
+        "timestamp": {
+            "$id": "#/properties/timestamp",
+            "type": "string",
+            "title": "The timestamp schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2020-10-23T04:04:51.722499+00:00"
+            ]
+        },
+        "original_timestamp": {
+            "$id": "#/properties/original_timestamp",
+            "type": "string",
+            "title": "The original_timestamp schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2020-10-23T04:04:51.722444+00:00"
+            ]
+        },
+        "sent_at": {
+            "$id": "#/properties/sent_at",
+            "type": "string",
+            "title": "The sent_at schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2020-10-23T04:04:51.722444+00:00"
+            ]
+        },
+        "received_at": {
+            "$id": "#/properties/received_at",
+            "type": "string",
+            "title": "The received_at schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2020-10-23T04:04:51.722444+00:00"
+            ]
+        },
+        "event_name": {
+            "$id": "#/properties/event_name",
+            "type": "string",
+            "title": "The event_name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Purchase"
+            ]
+        },
+        "event_type": {
+            "$id": "#/properties/event_type",
+            "type": "string",
+            "title": "The event_type schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "track"
+            ]
+        },
+        "event_params": {
+            "$id": "#/properties/event_params",
+            "type": "array",
+            "title": "The event_params schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "key": "create_at",
+                        "value": {
+                            "string_value": "2/1"
+                        }
+                    },
+                    {
+                        "key": "shipping_order_id",
+                        "value": {
+                            "string_value": "EN105548613VN"
+                        }
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/event_params/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/event_params/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "key": "create_at",
+                                "value": {
+                                    "string_value": "2/1"
+                                }
+                            }
+                        ],
+                        "required": [
+                            "key",
+                            "value"
+                        ],
+                        "properties": {
+                            "key": {
+                                "$id": "#/properties/event_params/items/anyOf/0/properties/key",
+                                "type": "string",
+                                "title": "The key schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "create_at"
+                                ]
+                            },
+                            "value": {
+                                "$id": "#/properties/event_params/items/anyOf/0/properties/value",
+                                "type": "object",
+                                "title": "The value schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "string_value": "2/1"
+                                    }
+                                ],
+                                "required": [
+                                    "string_value"
+                                ],
+                                "properties": {
+                                    "string_value": {
+                                        "$id": "#/properties/event_params/items/anyOf/0/properties/value/properties/string_value",
+                                        "type": "string",
+                                        "title": "The string_value schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "2/1"
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        },
+        "origin": {
+            "$id": "#/properties/origin",
+            "type": "string",
+            "title": "The origin schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Copy of THEO DÕI CỐC BEU T1/2020*||*2*||*0"
+            ]
+        },
+        "event_id": {
+            "$id": "#/properties/event_id",
+            "type": "string",
+            "title": "The event_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "b23e6830-e8da-4887-9697-873cbfa57735"
+            ]
+        }
+    },
+    "additionalProperties": true
+}
