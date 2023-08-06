@@ -1,0 +1,21 @@
+#Hunspell dictionaries path
+dictpath: /home/mbanon//paracrawl-fastspell/hunspell-dicts/
+
+#This is how hunspell files (.dic and .aff) are named in dictpath
+hunspell_codes:
+    ca: ca/index
+    gl: gl/index
+    nb: nb/index
+    nn: nn/index
+    da: da/index
+    bs: bs/bs_BA
+    cs: cs/index
+    sk: sk/index
+    hr: hr/index
+    me: me/sr_ME
+    mk: mk/index
+    sq: sq/sq_AL
+    sr: sr-Latn/index
+    es: es/index
+    pt: pt/index
+    
