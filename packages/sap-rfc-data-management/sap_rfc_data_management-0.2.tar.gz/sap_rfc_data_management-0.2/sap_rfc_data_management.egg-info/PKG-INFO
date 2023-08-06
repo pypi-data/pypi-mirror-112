@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: sap-rfc-data-management
+Version: 0.2
+Summary: Automate some SAP transactions
+Home-page: https://github.com/victorouttes/sap-rfc-data-management
+Author: Victor Outtes
+Author-email: victor.outtes@gmail.com
+License: MIT
+Download-URL: https://github.com/victorouttes/sap-rfc-data-management/archive/refs/tags/0.2.tar.gz
+Keywords: sap,data,rfc,automate,ec3,pm
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# sap-rfc-data-management
+SAP RFC data management
+
+
