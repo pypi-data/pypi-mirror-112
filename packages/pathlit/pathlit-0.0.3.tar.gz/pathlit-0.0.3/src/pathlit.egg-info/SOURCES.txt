@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/pathlit/__init__.py
+src/pathlit/client.py
+src/pathlit.egg-info/PKG-INFO
+src/pathlit.egg-info/SOURCES.txt
+src/pathlit.egg-info/dependency_links.txt
+src/pathlit.egg-info/top_level.txt
