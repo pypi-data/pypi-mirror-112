@@ -1,0 +1,13 @@
+README.rst
+pyproject.toml
+setup.py
+sf/__init__.py
+sf/entry.py
+sf/sflib.py
+sf_maxwillx.egg-info/PKG-INFO
+sf_maxwillx.egg-info/SOURCES.txt
+sf_maxwillx.egg-info/dependency_links.txt
+sf_maxwillx.egg-info/entry_points.txt
+sf_maxwillx.egg-info/top_level.txt
+tests/__init__.py
+tests/test_sf.py
