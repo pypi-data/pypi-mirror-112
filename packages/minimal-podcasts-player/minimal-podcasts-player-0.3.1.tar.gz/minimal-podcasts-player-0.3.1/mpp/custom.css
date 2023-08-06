@@ -1,0 +1,7 @@
+#podcastsList::item {{
+    padding: 0;
+}}
+
+QHeaderView::section {{
+   font-size: 8pt;
+}}
