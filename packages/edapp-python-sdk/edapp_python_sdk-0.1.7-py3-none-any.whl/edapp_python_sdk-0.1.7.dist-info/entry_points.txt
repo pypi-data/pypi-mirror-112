@@ -1,0 +1,5 @@
+[console_scripts]
+edapp_create_groups=edapp_python_sdk.main:create_new_groups
+edapp_export=edapp_python_sdk.main:edapp_export
+edapp_survey_report=edapp_python_sdk.main:export_survey_report
+
