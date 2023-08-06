@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+matrix:
+  include:
+    - python: "3.8"
+      env: TOXENV=flake8
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y libusb-1.0-0-dev libudev-dev
+install: pip install tox-travis
+script: tox

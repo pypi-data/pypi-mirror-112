@@ -1,0 +1,13 @@
+django-otp>=0.7.0
+python-u2flib-server>=5.0.0
+
+[kleides-mfa]
+kleides-mfa>=0.1.7
+
+[test]
+python-u2flib-host
+coverage
+factory-boy
+pytest
+pytest-cov
+pytest-django
