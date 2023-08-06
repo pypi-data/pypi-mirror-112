@@ -1,0 +1,52 @@
+scipy>=1.4
+
+[:python_version < "3.7"]
+dataclasses
+numpy<=1.19.1
+
+[:python_version < "3.8"]
+cached_property
+
+[:python_version >= "3.7"]
+numpy
+
+[full]
+GPy
+matplotlib
+tqdm>=4.0
+requests>=2.0
+
+[full:platform_system != "Windows"]
+jax<0.2.18
+jaxlib<0.1.70
+jax<0.2.18
+jaxlib<0.1.70
+
+[jax]
+
+[jax:platform_system != "Windows"]
+jax<0.2.18
+jaxlib<0.1.70
+
+[test]
+pytest>=4.6
+pytest-cov
+pytest-cases>=3.5
+GPy
+matplotlib
+tqdm>=4.0
+requests>=2.0
+
+[test:platform_system != "Windows"]
+jax<0.2.18
+jaxlib<0.1.70
+jax<0.2.18
+jaxlib<0.1.70
+
+[zoo]
+tqdm>=4.0
+requests>=2.0
+
+[zoo:platform_system != "Windows"]
+jax<0.2.18
+jaxlib<0.1.70
