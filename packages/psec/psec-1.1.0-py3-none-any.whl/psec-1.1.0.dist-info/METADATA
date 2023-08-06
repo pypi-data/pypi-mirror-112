@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: psec
+Version: 1.1.0
+Summary: A Python package for cryptography in payment systems
+Home-page: https://github.com/knovichikhin/psec
+Author: Konstantin Novichikhin
+Author-email: konstantin.novichikhin@gmail.com
+License: MIT
+Keywords: payment security cvv cvd cvc mac iso9797 tdes aes tr31
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE.md
+Requires-Dist: cryptography (>=1.0)
+
+|pypi| |coverage|
+
+``psec`` package provides tools for protecting sensitive data and
+cardholder authentication in retail payment transactions.
+
+Installation
+------------
+
+``psec`` is published on `PyPI`__ and can be installed from there:
+
+.. code-block::
+
+    pip install psec
+
+__ https://pypi.org/project/psec/
+
+Modules
+-------
+
+- tr31 - TR-31 key block wrapping and unwrapping
+- cvv - Card Verification Value generation
+- des - Triple DES utilities (a wrapper over cryptography_)
+- aes - AES utilities (a wrapper over cryptography_)
+- mac - Message Authentication Code generation
+- pin - Personal Identification Number generation
+- pinblock - PIN Blocks encoding and decoding
+
+.. _cryptography:  https://pypi.org/project/cryptography/
+
+.. |pypi| image:: https://img.shields.io/pypi/v/psec.svg
+    :alt: PyPI
+    :target:  https://pypi.org/project/psec/
+
+.. |coverage| image:: https://codecov.io/gh/knovichikhin/psec/branch/master/graph/badge.svg
+    :alt: Test coverage
+    :target: https://codecov.io/gh/knovichikhin/psec
+
+
