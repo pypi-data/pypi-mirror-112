@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+django_dynamicsettings.egg-info/PKG-INFO
+django_dynamicsettings.egg-info/SOURCES.txt
+django_dynamicsettings.egg-info/dependency_links.txt
+django_dynamicsettings.egg-info/not-zip-safe
+django_dynamicsettings.egg-info/requires.txt
+django_dynamicsettings.egg-info/top_level.txt
+dynamicsettings/__init__.py
+dynamicsettings/admin.py
+dynamicsettings/apps.py
+dynamicsettings/models.py
+dynamicsettings/migrations/0001_initial.py
+dynamicsettings/migrations/__init__.py
