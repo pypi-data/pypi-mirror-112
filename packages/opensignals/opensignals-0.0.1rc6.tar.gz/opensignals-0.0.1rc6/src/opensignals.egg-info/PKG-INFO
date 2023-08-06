@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: opensignals
+Version: 0.0.1rc6
+Summary: Open Signals
+Home-page: https://github.com/councilofelders/opensignals
+Author: Jordi Villar
+Author-email: jrdi.villar@gmail.com
+License: Apache License
+Project-URL: Bug Tracker, https://github.com/councilofelders/opensignals/issues
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+License-File: LICENSE
+
+# Open Signals
+
+## Install
+
+```
+pip install -U opensignals
+```
+
+## Usage
+
+```python
+from pathlib import Path
+
+from opensignals.data import yahoo
+from opensignals.features import RSI, SMA
+
+db_dir = Path('db')
+
+yahoo.download_data(db_dir)
+
+features_generators = [
+    RSI(num_days=5, interval=14, variable='adj_close'),
+    RSI(num_days=5, interval=21, variable='adj_close'),
+    SMA(num_days=5, interval=14, variable='adj_close'),
+    SMA(num_days=5, interval=21, variable='adj_close'),
+]
+
+train, test, live, feature_names = yahoo.get_data(db_dir, features_generators=features_generators)
+```
+
+
