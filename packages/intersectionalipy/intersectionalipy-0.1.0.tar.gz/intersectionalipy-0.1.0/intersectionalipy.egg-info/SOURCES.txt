@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+intersectionalipy/__init__.py
+intersectionalipy/intersectionalipy.py
+intersectionalipy.egg-info/PKG-INFO
+intersectionalipy.egg-info/SOURCES.txt
+intersectionalipy.egg-info/dependency_links.txt
+intersectionalipy.egg-info/top_level.txt
