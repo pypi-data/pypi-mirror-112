@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "niteru"
+version = "0.2.0"
+description = "A set of similarity metrics to compare html files"
+authors = ["Manabu Niseki <manabu.niseki@gmail.com>"]
+homepage = "https://github.com/ninoseki/niteru"
+repository = "https://github.com/ninoseki/niteru"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+poetry-version = "^0.1.5"
+
+[tool.poetry.dev-dependencies]
+autoflake = "^1.4"
+autopep8 = "^1.5.7"
+black = "^21.6b0"
+coveralls = "^3.1.0"
+flake8 = "^3.9.2"
+isort = "^5.9.2"
+mypy = "^0.910"
+pre-commit = "^2.13.0"
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+pytest-mock = "^3.6.1"
+pytest-randomly = "^3.8.0"
+pytest-sugar = "^0.9.4"
+pyupgrade = "^2.21.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
