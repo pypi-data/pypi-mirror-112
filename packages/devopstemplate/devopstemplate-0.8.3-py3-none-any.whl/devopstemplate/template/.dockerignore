@@ -1,0 +1,15 @@
+Dockerfile
+.dockerignore
+.coverage
+.pytest_cache
+.scannerwork
+.codereports/
+.sonartoken
+.eggs
+*.egg-info/
+.vscode
+.git*
+sonarqube/
+build/
+dist/
+venv*

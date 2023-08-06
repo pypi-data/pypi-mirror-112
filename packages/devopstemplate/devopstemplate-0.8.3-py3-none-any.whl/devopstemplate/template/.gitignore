@@ -1,0 +1,9 @@
+.coverage
+.scannerwork
+.codereports/
+.sonartoken
+.eggs/
+*.egg-info/
+build/
+dist/
+venv*/
