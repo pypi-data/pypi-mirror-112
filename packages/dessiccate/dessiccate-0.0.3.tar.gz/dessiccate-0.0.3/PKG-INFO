@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: dessiccate
+Version: 0.0.3
+Summary: A library to keep code DRY
+Home-page: https://github.com/mgfrantz/dessiccate/tree/master/
+Author: Mike Frantz
+Author-email: michaelgfrantz@gmail.com
+License: Apache Software License 2.0
+Description: # `dessicate`
+        > This project was started to house functions Mike uses a lot so he doesn't have to writ them over and over again. I hope you find some of them useful!
+        
+        
+        This file will become your README and also the index of your documentation.
+        
+        ## Install
+        
+        `pip install dessiccate`
+        
+        ## How to use
+        
+Keywords: DRY utilities
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
