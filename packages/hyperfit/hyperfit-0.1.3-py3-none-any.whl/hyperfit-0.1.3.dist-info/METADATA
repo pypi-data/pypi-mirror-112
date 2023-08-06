@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: hyperfit
+Version: 0.1.3
+Summary: Properly fit data with x and y errors
+Home-page: https://github.com/CullanHowlett/HyperFit
+Author: Cullan Howlett
+Author-email: cullan.howlett@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/CullanHowlett/HyperFit/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy (>=1.20.0)
+Requires-Dist: scipy (>=1.6.0)
+Requires-Dist: zeus-mcmc (>=2.3.0)
+Requires-Dist: pandas (>=1.2.0)
+Requires-Dist: emcee (>=3.0.0)
+
+# HyperFit
+A neat python package for fitting N dimensional data with (possibly covariant) errors with an N-1 dimensional plane. Put simply, if you have data with x and y errors and you want the correct method for fitting a straight line, use this package! But it also works for higher dimensions.
+
+Based on the R HyperFit package by Aaron Robotham and Danail Obreschkow. More details on the method can be found here: https://ui.adsabs.harvard.edu/abs/2015PASA...32...33R/abstract. Please cite this paper if you use this package.
+
+
