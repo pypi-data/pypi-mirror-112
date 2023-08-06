@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "understory"
+version = "0.0.40"
+description = "The tools that power the canopy"
+authors = ["Angelo Gladding <angelo@lahacker.net>"]
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+
+[tool.poetry.urls]
+Homepage = "https://github.com/canopy/understory"
+
+[tool.poetry.scripts]
+loveliness = "understory.loveliness:main"
+# indieauth = "understory.indieweb.indieauth:main"
+# micropub = "understory.indieweb.micropub:main"
+# microsub = "understory.indieweb.microsub:main"
+# followers = "understory.indieweb.followers:main"
+# mentions = "understory.indieweb.webmention:main"
+
+[tool.poetry.plugins."web.apps"]
+content = "understory.indieweb:content"
+# db = "understory.indieweb:db"
+# cache = "understory.indieweb:cache"
+# favicon = "understory.indieweb:favicon"
+# static = "understory.indieweb:static"
+# templates = "understory.indieweb:templates"
+"indieauth-client" = "understory.indieweb.indieauth:client"
+"indieauth-server" = "understory.indieweb.indieauth:server"
+micropub = "understory.indieweb.micropub:server"
+microsub = "understory.indieweb.microsub:server"
+webmention = "understory.indieweb.webmention:receiver"
+websub = "understory.indieweb.websub:hub"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+understory-web = "^0.0.22"
+# understory-web = {path = "../understory-web"}
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.23.1"
+flake8 = "^3.9.2"
+flake8-docstrings = "^1.6.0"
+pep8-naming = "^0.11.1"
+pytest = "^6.2.4"
+pytest-cov = "^2.12.0"
+webdriver-manager = "^3.4.2"
+black = "^21.6b0"
+pynvim = "^0.4.3"
+pytest-gevent = "^1.1.0"
+pyre-check = "^0.9.3"
+isort = "^5.8.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
