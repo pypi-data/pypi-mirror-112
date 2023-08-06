@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: redvox-pandas
+Version: 1.1.5
+Summary: Library to streamline preprocessing of RedVox API 900 and API 1000 data
+Home-page: https://github.com/RedVoxInc/redpandas
+Author: RedVox
+Author-email: dev@redvoxsound.com
+License: Apache
+Platform: UNKNOWN
+Requires-Python: >=3.6, <3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (==1.19.5)
+Requires-Dist: scipy (>=1.5.1)
+Requires-Dist: pandas (>=1.2.4)
+Requires-Dist: redvox (>=3.0.0)
+Requires-Dist: libwwz (>=1.0.1)
+Requires-Dist: obspy
+Requires-Dist: libquantum
+Requires-Dist: matplotlib (>=3.4.2)
+Requires-Dist: librosa
+Requires-Dist: pymap3d
+Requires-Dist: fastkml
+
+# RedPandas
+
+This repository contains routines to streamline preprocessing of [RedVox API 900](https://bitbucket.org/redvoxhi/redvox-protobuf-api/src/master/) 
+and [API 1000](https://github.com/RedVoxInc/redvox-api-1000) (API M) data.
+The RedVox Pandas (also known as RedPandas) pipeline is designed for integrability with other legacy and heterogeneous data sources.
+
+### Installation
+
+Installation instructions can be found in the [RedPandas Installation Documentation](https://github.com/RedVoxInc/redpandas/blob/master/docs/redpandas/installation.md).
+
+### Getting started
+
+- Check the [User Documentation](https://github.com/RedVoxInc/redpandas/blob/master/docs/redpandas/using_redpandas.md) to get started.
+
+- Check the [API Documentation](https://redvoxinc.github.io/redpandas/) for more details on RedPandas functions.
+
+### License and Version History
+
+Visit [Development](https://github.com/RedVoxInc/redpandas/blob/master/docs/redpandas/development.md) for more information on license,
+version history and issues/bug report.
+
