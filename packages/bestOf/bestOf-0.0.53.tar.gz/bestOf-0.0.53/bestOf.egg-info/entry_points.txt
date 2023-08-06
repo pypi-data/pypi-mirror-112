@@ -1,0 +1,3 @@
+[console_scripts]
+bestOf = bestOf.frontend.frontend:main
+
