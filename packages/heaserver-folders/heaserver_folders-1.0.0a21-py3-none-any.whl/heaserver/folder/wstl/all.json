@@ -1,0 +1,301 @@
+{
+  "wstl": {
+    "title": "Folders",
+    "actions": [
+      {
+        "name": "heaserver-folder-folder-open",
+        "description": "Open this folder",
+        "type": "safe",
+        "action": "read",
+        "target": "item read cj",
+        "prompt": "Open"
+      },
+      {
+        "name": "heaserver-folder-folder-properties",
+        "description": "View and edit this folder's properties",
+        "type": "unsafe",
+        "target": "item cj-template",
+        "action": "update",
+        "prompt": "Properties",
+        "inputs": [
+          {
+            "name": "id",
+            "prompt": "Id",
+            "required": true,
+            "readOnly": true
+          },
+          {
+            "name": "source",
+            "prompt": "Source"
+          },
+          {
+            "name": "version",
+            "prompt": "Version"
+          },
+          {
+            "name": "display_name",
+            "prompt": "Name",
+            "required": true
+          },
+          {
+            "name": "description",
+            "prompt": "Description",
+            "type": "textarea"
+          },
+          {
+            "name": "owner",
+            "prompt": "Owner"
+          },
+          {
+            "name": "created",
+            "prompt": "Created",
+            "readOnly": true
+          },
+          {
+            "name": "modified",
+            "prompt": "Modified",
+            "readOnly": true
+          },
+          {
+            "name": "invites",
+            "prompt": "Share invites",
+            "readOnly": true
+          },
+          {
+            "name": "shares",
+            "prompt": "Shared with"
+          },
+          {
+            "name": "derived_by",
+            "prompt": "Derived by",
+            "readOnly": true
+          },
+          {
+            "name": "derived_from",
+            "prompt": "Derived from",
+            "readOnly": true
+          },
+          {
+            "name": "items",
+            "prompt": "Items",
+            "readOnly": true
+          }
+        ]
+      },
+      {
+        "name": "heaserver-folder-item-new",
+        "description": "Create a new item",
+        "type": "unsafe",
+        "action": "append",
+        "target": "cj-template",
+        "prompt": "New...",
+        "inputs": [
+          {
+            "name": "display_name",
+            "prompt": "Name",
+            "required": true
+          },
+          {
+            "name": "type",
+            "prompt": "Type",
+            "required": true,
+            "type": "select",
+            "suggest": {
+              "related": "typeList",
+              "value": "uri",
+              "text": "display_name"
+            }
+          }
+        ]
+      },
+      {
+        "name": "heaserver-folder-item-duplicate",
+        "description": "Duplicate this item",
+        "type": "unsafe",
+        "action": "append",
+        "target": "item read cj",
+        "prompt": "Duplicate"
+      },
+      {
+        "name": "heaserver-folder-folder-duplicate-form",
+        "description": "Duplicate this item",
+        "type": "unsafe",
+        "action": "append",
+        "target": "cj-template",
+        "prompt": "Duplicate",
+        "inputs": [
+          {
+            "name": "id",
+            "prompt": "Id",
+            "required": true,
+            "readOnly": true
+          },
+          {
+            "name": "source",
+            "prompt": "Source",
+            "readOnly": true
+          },
+          {
+            "name": "version",
+            "prompt": "Version",
+            "readOnly": true
+          },
+          {
+            "name": "display_name",
+            "prompt": "Name",
+            "required": true
+          },
+          {
+            "name": "description",
+            "prompt": "Description",
+            "type": "textarea",
+            "readOnly": true
+          },
+          {
+            "name": "owner",
+            "prompt": "Owner",
+            "readOnly": true
+          },
+          {
+            "name": "created",
+            "prompt": "Created",
+            "readOnly": true
+          },
+          {
+            "name": "modified",
+            "prompt": "Modified",
+            "readOnly": true
+          },
+          {
+            "name": "invites",
+            "prompt": "Share invites",
+            "readOnly": true
+          },
+          {
+            "name": "shares",
+            "prompt": "Shared with",
+            "readOnly": true
+          },
+          {
+            "name": "derived_by",
+            "prompt": "Derived by",
+            "readOnly": true
+          },
+          {
+            "name": "derived_from",
+            "prompt": "Derived from",
+            "readOnly": true
+          },
+          {
+            "name": "items",
+            "prompt": "Items",
+            "readOnly": true
+          }
+        ]
+      },
+      {
+        "name": "heaserver-folder-item-move",
+        "description": "Move this item",
+        "type": "unsafe",
+        "action": "update",
+        "target": "item read cj",
+        "prompt": "Move"
+      },
+      {
+        "name": "heaserver-folder-item-move-form",
+        "description": "Move this item",
+        "type": "unsafe",
+        "action": "update",
+        "target": "cj-template",
+        "prompt": "Move",
+        "inputs": [
+          {
+            "name": "id",
+            "prompt": "Id",
+            "required": true,
+            "readOnly": true
+          },
+          {
+            "name": "source",
+            "prompt": "Source",
+            "required": true,
+            "readOnly": true
+          },
+          {
+            "name": "version",
+            "prompt": "Version",
+            "required": true,
+            "readOnly": true
+          },
+          {
+            "name": "display_name",
+            "prompt": "Name",
+            "required": true,
+            "readOnly": true
+          },
+          {
+            "name": "description",
+            "prompt": "Description",
+            "type": "textarea",
+            "readOnly": true
+          },
+          {
+            "name": "owner",
+            "prompt": "Owner",
+            "readOnly": true
+          },
+          {
+            "name": "created",
+            "prompt": "Created",
+            "readOnly": true
+          },
+          {
+            "name": "modified",
+            "prompt": "Modified",
+            "readOnly": true
+          },
+          {
+            "name": "invites",
+            "prompt": "Share invites",
+            "readOnly": true
+          },
+          {
+            "name": "shares",
+            "prompt": "Shared with",
+            "readOnly": true
+          },
+          {
+            "name": "derived_by",
+            "prompt": "Derived by",
+            "readOnly": true
+          },
+          {
+            "name": "derived_from",
+            "prompt": "Derived from",
+            "readOnly": true
+          },
+          {
+            "name": "type_name",
+            "prompt": "Type name",
+            "readOnly": true,
+            "required": true
+          },
+          {
+            "name": "item_id",
+            "prompt": "Item Id",
+            "readOnly": true,
+            "required": true
+          },
+          {
+            "name": "folder_id",
+            "prompt": "Folder Id",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "related": {
+      "typeList": []
+    }
+  }
+}
