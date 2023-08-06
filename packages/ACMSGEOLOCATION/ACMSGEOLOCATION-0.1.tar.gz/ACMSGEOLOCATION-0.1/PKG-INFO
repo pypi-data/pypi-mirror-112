@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: ACMSGEOLOCATION
+Version: 0.1
+Summary: This package will provide the accurate GPS location of your mobile. It is mandatory to connect your system and phone with same network and use IP WebCam App to find the url.
+Home-page: https://github.com/Abhishekmishra-17/ACMSGEOLOCATION
+Author: ABHISHEK MISHRA
+Author-email: mishraabhi8924@gmail.com
+License: MIT
+Download-URL: https://github.com/Abhishekmishra-17/ACMSGEOLOCATION/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: GPS,geolocation,IP WebCam,mobile data,location
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
