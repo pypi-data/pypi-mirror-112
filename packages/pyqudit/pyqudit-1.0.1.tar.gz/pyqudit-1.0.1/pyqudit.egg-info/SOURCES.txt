@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+pyqudit/__init__.py
+pyqudit/__main__.py
+pyqudit/qudit.py
+pyqudit.egg-info/PKG-INFO
+pyqudit.egg-info/SOURCES.txt
+pyqudit.egg-info/dependency_links.txt
+pyqudit.egg-info/entry_points.txt
+pyqudit.egg-info/requires.txt
+pyqudit.egg-info/top_level.txt
