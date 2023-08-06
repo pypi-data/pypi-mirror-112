@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: avocado_price_predictor_model
+Version: 1.0.0
+Summary: Avocado Price Prediction Model
+Home-page: https://github.com/shaySirek/avocado-price-predictor-model
+Author: Shay Sirek
+Author-email: shaysirek@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/shaySirek/avocado-price-predictor-model/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Avocado Price Predictor Model
+Avocado Price Prediction [Machine Learning Model](https://pypi.org/project/avocado-price-predictor-model).
+
+# What is about? 
+- [Kaggle Dataset](https://www.kaggle.com/neuromusic/avocado-prices)
+- [Task](https://www.kaggle.com/neuromusic/avocado-prices/tasks?taskId=3524)
+
+# Client
+[Web Application Client](https://github.com/shaySirek/avocado-price-predictor)
+
+
