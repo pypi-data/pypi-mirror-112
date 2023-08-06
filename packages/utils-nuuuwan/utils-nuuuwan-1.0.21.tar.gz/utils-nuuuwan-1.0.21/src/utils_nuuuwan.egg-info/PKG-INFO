@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: utils-nuuuwan
+Version: 1.0.21
+Summary: Simple extensions to the core python libraries.
+Home-page: https://github.com/nuuuwan/utils
+Author: Nuwan I. Senaratna
+Author-email: nuuuwan@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/nuuuwan/utils/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Utils
+
+General utilities complimenting and expanding on standard python.
+
+# Release History
+See also [Older Releases](OLDER_RELEASES.md) and [Wish-list](WISHLIST.md)
+
+## 1.0.21
+
+* Added dict_set and dict_get to *ds*
+
+# Setup & Install
+
+```
+pip install utils-nuuuwan
+```
+
+
