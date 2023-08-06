@@ -1,0 +1,3 @@
+[console_scripts]
+pythonIoc = softioc.__main__:main
+
