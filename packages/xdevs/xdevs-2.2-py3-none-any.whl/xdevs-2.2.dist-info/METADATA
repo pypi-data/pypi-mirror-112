@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: xdevs
+Version: 2.2
+Summary: xDEVS M&S framework
+Home-page: https://github.com/dacya/xdevs
+Author: Kevin Henares, Román Cárdenas
+Author-email: khenares@ucm.es, r.cardenas@upm.es
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: elasticsearch
+Requires-Dist: elasticsearch (==7.10.1) ; extra == 'elasticsearch'
+Provides-Extra: sql
+Requires-Dist: sqlalchemy (==1.3.22) ; extra == 'sql'
+
+UNKNOWN
+
+

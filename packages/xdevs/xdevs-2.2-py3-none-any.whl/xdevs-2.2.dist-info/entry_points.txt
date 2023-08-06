@@ -1,0 +1,8 @@
+[xdevs.plugins.transducers]
+csv = xdevs.plugins.transducers.csv_transducer:CSVTransducer
+elasticsearch = xdevs.plugins.transducers.elasticsearch_transducer:ElasticsearchTransducer
+sql = xdevs.plugins.transducers.sql_transducer:SQLTransducer
+
+[xdevs.plugins.wrappers]
+pypdevs = xdevs.plugins.wrappers.pypdevs:PyPDEVSWrapper
+
