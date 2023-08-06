@@ -1,0 +1,14 @@
+grpcio
+onetimepass
+orjson
+pandas
+protobuf
+requests
+wheel
+wrapt
+
+[lint]
+flake8
+
+[tests]
+pytest
