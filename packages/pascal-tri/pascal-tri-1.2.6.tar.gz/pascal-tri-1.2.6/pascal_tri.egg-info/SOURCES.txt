@@ -1,0 +1,13 @@
+LICENSE
+README.md
+VERSION
+pyproject.toml
+setup.cfg
+setup.py
+pascal/__init__.py
+pascal/__main__.py
+pascal_tri.egg-info/PKG-INFO
+pascal_tri.egg-info/SOURCES.txt
+pascal_tri.egg-info/dependency_links.txt
+pascal_tri.egg-info/entry_points.txt
+pascal_tri.egg-info/top_level.txt
