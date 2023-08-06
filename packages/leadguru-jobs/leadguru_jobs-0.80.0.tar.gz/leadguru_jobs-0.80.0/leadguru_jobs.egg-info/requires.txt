@@ -1,0 +1,5 @@
+loguru
+leadguru-common>=0.96.0
+leadguru-data>=0.96.0
+pydantic==1.8.1
+cachetools>=3.1.0
