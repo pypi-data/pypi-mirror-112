@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/pystream/__init__.py
+src/pystream/pystream.py
+src/pystream_wushilin.egg-info/PKG-INFO
+src/pystream_wushilin.egg-info/SOURCES.txt
+src/pystream_wushilin.egg-info/dependency_links.txt
+src/pystream_wushilin.egg-info/top_level.txt
