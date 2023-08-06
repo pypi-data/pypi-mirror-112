@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mofid-normalizer
+Version: 0.2.9
+Summary: first version of Mofid Normalizer
+Home-page: UNKNOWN
+Author: ali96ebrahimi@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: nltk
+Requires-Dist: num2fawords
+Requires-Dist: spacy
+Requires-Dist: googledrivedownloader
+
+UNKNOWN
+
