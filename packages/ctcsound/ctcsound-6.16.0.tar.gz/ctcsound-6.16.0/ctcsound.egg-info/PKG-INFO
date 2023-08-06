@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: ctcsound
+Version: 6.16.0
+Summary: Python bindings to the Csound API using ctypes
+Home-page: https://github.com/fggp/ctcsound
+Author: Francois Pinot
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
