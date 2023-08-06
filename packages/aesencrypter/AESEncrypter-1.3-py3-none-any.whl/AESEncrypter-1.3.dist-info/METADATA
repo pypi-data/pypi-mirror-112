@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: AESEncrypter
+Version: 1.3
+Summary: AES-256 CBC Encrypt/Decrypt utility package
+Home-page: http://www.solucionesandinas.com.ar
+Author: Soluciones Andinas
+Author-email: info@sandinas.com.ar
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+
+AESEncrypter is a utility package that allows you to encrypt with AES-256 CBC mode, a character string with an encryption phrase passed as an argument. It also includes the decryption function.
+
