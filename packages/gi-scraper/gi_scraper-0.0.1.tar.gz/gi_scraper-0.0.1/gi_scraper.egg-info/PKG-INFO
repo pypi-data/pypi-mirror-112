@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: gi-scraper
+Version: 0.0.1
+Summary: Google Image Scraper
+Home-page: UNKNOWN
+Author: Roy6801
+Author-email: <mondal6801@gmail.com>
+License: UNKNOWN
+Description: A package that allows to fetch image urls from google images.
+Keywords: python,google images,image scraper
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
