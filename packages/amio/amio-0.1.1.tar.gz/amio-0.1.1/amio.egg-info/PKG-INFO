@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: amio
+Version: 0.1.1
+Summary: Audio Mixing and Input/Output
+Home-page: https://github.com/smiszym/amio
+Author: Michał Szymański
+Author-email: smiszym@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: mypy
