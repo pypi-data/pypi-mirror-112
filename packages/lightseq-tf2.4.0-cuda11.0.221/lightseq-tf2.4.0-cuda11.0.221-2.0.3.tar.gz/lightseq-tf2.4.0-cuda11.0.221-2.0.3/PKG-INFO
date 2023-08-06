@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lightseq-tf2.4.0-cuda11.0.221
+Version: 2.0.3
+Summary: LightSeq is a high performance training library for sequence processing and generation implemented in CUDA
+Home-page: https://github.com/bytedance/lightseq2
+Author: Xiaohui Wang, Ying Xiong, Xian Qian, Yang Wei
+Author-email: wangxiaohui.neo@bytedance.com, xiongying.taka@bytedance.com, qian.xian@bytedance.com, weiyang.god@bytedance.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+
+UNKNOWN
+
