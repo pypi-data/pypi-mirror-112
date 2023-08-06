@@ -1,0 +1,10 @@
+setup.py
+newspy/__init__.py
+newspy/google.py
+newspy/helpers.py
+newspy/news.py
+newspy/utils.py
+newspy.egg-info/PKG-INFO
+newspy.egg-info/SOURCES.txt
+newspy.egg-info/dependency_links.txt
+newspy.egg-info/top_level.txt
