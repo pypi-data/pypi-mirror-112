@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: nd-math
+Version: 0.1.1
+Summary: Math package for Numerical Design company
+Author: NumDes
+Author-email: info@numdes.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
