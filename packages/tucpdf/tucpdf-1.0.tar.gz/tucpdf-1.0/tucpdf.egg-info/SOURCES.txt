@@ -1,0 +1,10 @@
+Licence
+README.md
+setup.py
+tucpdf/__init__.py
+tucpdf/pdf2image.py
+tucpdf/pdf2text.py
+tucpdf.egg-info/PKG-INFO
+tucpdf.egg-info/SOURCES.txt
+tucpdf.egg-info/dependency_links.txt
+tucpdf.egg-info/top_level.txt
