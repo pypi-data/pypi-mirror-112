@@ -1,0 +1,12 @@
+README.md
+setup.py
+mlsetup/__init__.py
+mlsetup/__main__.py
+mlsetup/creator.py
+mlsetup.egg-info/PKG-INFO
+mlsetup.egg-info/SOURCES.txt
+mlsetup.egg-info/dependency_links.txt
+mlsetup.egg-info/entry_points.txt
+mlsetup.egg-info/requires.txt
+mlsetup.egg-info/top_level.txt
+mlsetup/templates/default.zip
