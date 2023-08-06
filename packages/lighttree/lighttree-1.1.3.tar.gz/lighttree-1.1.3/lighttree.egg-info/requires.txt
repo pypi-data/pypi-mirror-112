@@ -1,0 +1,10 @@
+
+[develop]
+pre-commit
+black
+flake8
+mock
+coverage
+pytest
+mypy
+twine
