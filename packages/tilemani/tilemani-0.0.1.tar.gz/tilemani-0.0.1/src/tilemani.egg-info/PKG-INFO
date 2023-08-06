@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: tilemani
+Version: 0.0.1
+Summary: A collection of tools to retreive OSM data, rasterize them into customizable style, compute geospatial features and build models of urban space
+Home-page: https://github.com/cocoaaa/TileMani
+Author: Hayley Song
+Author-email: haejinso@usc.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# TileMani 
+
+TileMani (for Tile Mani(pulation) or Tile Mani(ac)) is a collection of tools to
+- retreive street network and geometric (eg. buildings, POIs) from OSM database
+- rasterize the retrieved data into a `np.array` with customizable style (e.g.
+width, color per road type, building type, green area, etc),
+- compute spatial features (eg. average number of intersections, road bearings,
+between centrality, or density-based metrics like FSI, GSI),
+- build/train a model of urban space from graph-, or grid- structured data 
+
+
+
+

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/tilemani/__init__.py
+src/tilemani.egg-info/PKG-INFO
+src/tilemani.egg-info/SOURCES.txt
+src/tilemani.egg-info/dependency_links.txt
+src/tilemani.egg-info/top_level.txt
+src/tilemani/compute/__init__.py
+src/tilemani/compute/features.py
