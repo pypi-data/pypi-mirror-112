@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: hamlet-cli
+Version: 9.3.0
+Summary: hamlet-cli is now hamlet
+Home-page: https://hamlet.io
+Author: Hamlet
+Author-email: help@hamlet.io
+License: UNKNOWN
+Description: # hamlet-cli is now hamlet
+        
+        This package has been renamed. Use `pip install hamlet` instead.
+        
+        New package: https://pypi.org/project/hamlet/
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/markdown
