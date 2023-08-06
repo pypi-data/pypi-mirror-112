@@ -1,0 +1,11 @@
+license.txt
+setup.py
+PyxDistributions/Binomialdistribution.py
+PyxDistributions/Gaussiandistribution.py
+PyxDistributions/Generaldistribution.py
+PyxDistributions/__init__.py
+PyxDistributions.egg-info/PKG-INFO
+PyxDistributions.egg-info/SOURCES.txt
+PyxDistributions.egg-info/dependency_links.txt
+PyxDistributions.egg-info/not-zip-safe
+PyxDistributions.egg-info/top_level.txt
