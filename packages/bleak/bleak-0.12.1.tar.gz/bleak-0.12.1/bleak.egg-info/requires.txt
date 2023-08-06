@@ -1,0 +1,20 @@
+
+[:platform_system == "Darwin"]
+pyobjc-core
+pyobjc-framework-CoreBluetooth
+pyobjc-framework-libdispatch
+
+[:platform_system == "Linux"]
+dbus-next
+
+[:platform_system == "Windows" and python_version < "3.9.0"]
+pythonnet
+
+[:platform_system == "Windows" and python_version >= "3.9.0"]
+winrt>=1.0.21033.1
+
+[pythonnet]
+pythonnet>=2.5.1
+
+[winrt]
+winrt>=1.0.21033.1
