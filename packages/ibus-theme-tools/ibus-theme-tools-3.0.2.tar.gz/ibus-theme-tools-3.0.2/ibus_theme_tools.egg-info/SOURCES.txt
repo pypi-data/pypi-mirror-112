@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ibus_theme_tools/__init__.py
+ibus_theme_tools/ibus_theme_tools.py
+ibus_theme_tools.egg-info/PKG-INFO
+ibus_theme_tools.egg-info/SOURCES.txt
+ibus_theme_tools.egg-info/dependency_links.txt
+ibus_theme_tools.egg-info/entry_points.txt
+ibus_theme_tools.egg-info/requires.txt
+ibus_theme_tools.egg-info/top_level.txt
+ibus_theme_tools/locale/zh_CN/LC_MESSAGES/IBus-Theme.mo

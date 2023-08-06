@@ -1,0 +1,3 @@
+[console_scripts]
+ibus-theme-tools = ibus_theme_tools.ibus_theme_tools:main
+
