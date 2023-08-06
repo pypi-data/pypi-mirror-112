@@ -1,0 +1,10 @@
+
+api_url: https://api.coingecko.com/api/v3
+log_level: info
+
+bots:
+  - token: TOKEN
+    coin: btc
+
+command_roles:
+  - everyone
