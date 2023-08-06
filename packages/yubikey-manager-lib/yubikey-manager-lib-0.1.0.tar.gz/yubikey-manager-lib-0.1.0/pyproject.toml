@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "yubikey-manager-lib"
+version = "0.1.0"
+description = "Run yubikey-manager commands programmatically"
+authors = ["Dick Marinus"]
+license = "GPL-3"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+yubikey-manager = "^4.0.3"
+pyudev = "^0.22.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+ykman-repl = 'yubikey_manager_repl:main'
