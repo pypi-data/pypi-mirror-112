@@ -1,0 +1,10 @@
+pymysql
+boto3
+Minio
+mlflow==1.18.0
+bravado
+simplejson
+future>=0.17.1
+PyJWT
+requests-oauthlib>=1.0.0
+oauthlib>=2.1.0
