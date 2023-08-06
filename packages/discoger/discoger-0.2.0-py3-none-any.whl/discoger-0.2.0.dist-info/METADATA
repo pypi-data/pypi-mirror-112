@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: discoger
+Version: 0.2.0
+Summary: Get notification from Discogs
+Home-page: https://github.com/beudbeud/discoger
+Author: Beudbeud
+Author-email: beudbeud@gmail.com
+License: GNU General Public License v3 (GPLv3)
+Download-URL: https://github.com/beudbeud/discoger/archive/0.2.0.tar.gz
+Keywords: discogs,telegram,bot
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: python3-discogs-client
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Requires-Dist: schedule
+Requires-Dist: pyTelegramBotAPI
+
+# discoger
+
+Telegram bot for checking if there are new sell in one specific list on Discogs
+
+## How to use it
+
+
