@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: magma-suite
+Version: 0.2.3
+Summary: Collection of tools to manage meta-workflows automation
+Home-page: https://github.com/dbmi-bgm/magma
+Author: Michele Berselli, Soo Lee
+Author-email: berselli.michele@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6, <3.8
+Description-Content-Type: text/markdown
+Requires-Dist: mock
+Requires-Dist: dcicutils (>=1.19.0)
+Requires-Dist: tibanna-ff (>=0.20.0)
+
+# magma
+
+[*Documentation*](https://magma-suite.readthedocs.io/en/latest/ "magma documentation")
+
+
