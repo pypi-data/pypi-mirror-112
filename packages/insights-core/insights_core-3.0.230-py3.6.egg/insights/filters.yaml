@@ -1,0 +1,1424 @@
+insights.specs.Specs.abrt_ccpp_conf:
+- CreateCoreBacktrace
+insights.specs.Specs.audit_log:
+- type=AVC
+- comm="virtlogd" name="console.log"
+insights.specs.Specs.candlepin_log:
+- Candlepin initializing context
+- No Dead Letter Address configured for queue event.org.candlepin.audit.DatabaseListener
+  in AddressSettings
+insights.specs.Specs.ceilometer_compute_log:
+- Cannot inspect data of
+insights.specs.Specs.ceph_conf:
+- '['
+- wait
+insights.specs.Specs.ceph_log:
+- '[WRN] slow request'
+insights.specs.Specs.ceph_osd_log:
+- common/Thread.cc
+insights.specs.Specs.cinder_api_log:
+- Timed out waiting for RPC response
+- DEBUG oslo.messaging._drivers.impl_rabbit
+insights.specs.Specs.cinder_volume_log:
+- Timed out waiting for RPC response
+- DEBUG oslo.messaging._drivers.impl_rabbit
+insights.specs.Specs.cloud_init_log:
+- Network config is likely broken
+- url_helper.py
+- Unable to render networking
+- bad status code
+- Read 59 bytes from /etc/cloud/cloud.cfg.d/99-datasource.cfg
+- No available network renderers found
+- sysconfig
+- '401'
+- failed
+- http://169.254.169.254
+- WARNING
+- Attempting to load yaml from string of length 59 with allowed root types
+- Failed loading yaml blob. Invalid format at line 1 column 1
+insights.specs.Specs.cluster_conf:
+- clusternode name=
+insights.specs.Specs.cron_daily_rhsmd:
+- if [ -n $config ]; then
+insights.specs.Specs.designate_conf:
+- log_dir
+- driver
+- '['
+- www_authenticate_uri
+- state_path
+- project_domain_name
+- project_name
+- debug
+- root_helper
+insights.specs.Specs.dirsrv_errors:
+- We recommend to increase the entry cache size nsslapd-cachememsize
+- 'DSRetroclPlugin - delete_changerecord: could not delete change record'
+insights.specs.Specs.dmesg:
+- resetting
+- CSUM
+- Device is ineligible for IOMMU domain attach due to platform RMRR requirement
+- 'Ignoring BGRT: failed to map image header memory'
+- 'Warning: QLogic ISP3XXX Network Driver - this hardware has not undergone testing
+  by Red Hat and might not be certified'
+- Dropping TSO
+- the DIE domain not a subset of the NUMA domain
+- 'smpboot: CPU '
+- 'CIFS VFS: protocol revalidation - security settings mismatch'
+- QLogic QLE2692 - QLogic 16Gb FC Dual-port HBA
+- CVE-2018-14634
+- l1tf
+- __cpufreq_add_dev
+- 'TECH PREVIEW: NVMe over FC may not be fully supported.'
+- Uhhuh. NMI received for unknown reason
+- L1TF
+- FEATURE SPEC_CTRL
+- L1Tf
+- fw=8.08.
+- 'SPLXMOD: SPLX 3.0: KHM loaded. Version [30118]'
+- Machine Check Exception
+- x86/pti
+- Kernel page table isolation
+- 'SPLXMOD: SPLX 3.0: KHM loaded. Version [30119]'
+- 'NUMA: '
+- BIOS Hyper-V UEFI Release
+- tx hang
+- Amazon EC2
+- CVE-2017-1000364
+- ' is now offline'
+- Machine check events logged
+- AMD Secure Memory Encryption (SME) active
+- 'Node 0 CPUs: '
+- VPD access disabled
+- crashkernel=auto resulted in zero bytes of reserved memory
+- Dazed and confused, but trying to continue
+- vmxnet3
+- 'SMBIOS '
+- 'blocked FC remote port time out: removing target and saving binding'
+- vpd r/w failed
+- 'e1000: E1000 MODULE IS NOT SUPPORTED'
+- 'page allocation failure: order:'
+- Hyper-V Host Build
+- 'mce: '
+- temperature above threshold
+- 'netconsole: network logging started'
+- 'Brought up '
+- 'Ignoring BGRT: failed to map image memory'
+- 'EDAC '
+- Linux version
+- Emulex OneConnect OCe10100, FCoE Initiator
+- Secure boot enabled
+- FEATURE IBPB_SUPPORT
+insights.specs.Specs.dmesg_log:
+- l1tf
+- __cpufreq_add_dev
+- 'PM: hibernation entry'
+- Amazon EC2
+- FEATURE SPEC_CTRL
+- 'PM: Creating hibernation image'
+- L1TF
+- L1Tf
+- Kernel page table isolation
+- 'hv_vmbus: probe failed for device'
+- x86/pti
+- 'PM: hibernation exit'
+- CVE-2017-1000364
+- Secure boot enabled
+- CVE-2018-14634
+- FEATURE IBPB_SUPPORT
+- Linux version
+insights.specs.Specs.dnf_conf:
+- best
+- '['
+insights.specs.Specs.doveconf:
+- '{'
+- ssl_protocols
+- ssl_min_protocol
+- auth_mechanisms
+- '}'
+insights.specs.Specs.engine_log:
+- ERROR
+- INFO
+- Low disk space. Host
+- VDS_LOW_DISK_SPACE_ERROR
+- Data Center
+- org.ovirt.engine.core.dal.dbbroker.auditloghandling.AuditLogDirector
+insights.specs.Specs.etc_udev_40_redhat_rules:
+- SUBSYSTEM!="memory", ACTION!="add", GOTO="memory_hotplug_end"
+insights.specs.Specs.etcd_conf:
+- '['
+- ETCD_DATA_DIR
+insights.specs.Specs.firewalld_conf:
+- AllowZoneDrifting
+insights.specs.Specs.gnocchi_conf:
+- '['
+- storage
+- ceph
+- driver
+- ceph_pool
+insights.specs.Specs.gnocchi_metricd_log:
+- 'ObjectNotFound: error opening pool ''metrics'''
+insights.specs.Specs.greenboot_status:
+- Boot Status is GREEN
+- Boot Status is RED
+insights.specs.Specs.httpd24_httpd_error_log:
+- The mpm module (prefork.c) is not supported by mod_http2
+insights.specs.Specs.httpd_error_log:
+- 'manager_handler ENABLE-APP error: MEM: Can''t update or insert host alias'
+- exit signal Segmentation fault
+- 'manager_handler CONFIG error: MEM: Can''t update or insert node'
+- 'ModSecurity: collections_remove_stale: Failed deleting collection'
+- consider raising the MaxRequestWorkers setting
+- exceeds ServerLimit value of
+- exceeds compile time limit of
+- 'manager_handler ENABLE-APP error: MEM: Can''t update or insert context'
+- Resource temporarily unavailable
+- Require ServerLimit > 0, setting to 1
+- '(28)No space left on device: '
+- exceed ServerLimit of
+- 'AH00485: scoreboard is full, not at MaxRequestWorkers'
+- The mpm module (prefork.c) is not supported by mod_http2
+- consider raising the MaxClients setting
+- not allowed, increasing to 1
+- '[crit] Memory allocation failed, aborting process'
+- 'and would exceed the ServerLimit value of '
+- exceeds compile-time limit of
+insights.specs.Specs.imagemagick_policy:
+- <policy
+- <policymap>
+- </policymap>
+insights.specs.Specs.insights_client_conf:
+- '['
+- auto_update
+- core_collect
+insights.specs.Specs.ip_netns_exec_namespace_lsof:
+- COMMAND
+- neutron-n
+insights.specs.Specs.ipaupgrade_log:
+- 'wait_for_open_ports: localhost'
+insights.specs.Specs.ipsec_conf:
+- include
+insights.specs.Specs.ironic_conf:
+- '['
+insights.specs.Specs.ironic_inspector_log:
+- ERROR requests.packages.urllib3.connection
+- Certificate did not match expected hostname
+insights.specs.Specs.jbcs_httpd24_httpd_error_log:
+- The mpm module (prefork.c) is not supported by mod_http2
+insights.specs.Specs.jboss_domain_server_log:
+- 'JBWEB003008: Maximum number of threads'
+insights.specs.Specs.journal_since_boot:
+- liberasurecode_instance_create
+- 'dynamic linking error libJerasure.so.2: cannot open shared object file: No such
+  file or directory'
+insights.specs.Specs.katello_service_status:
+- Some services failed to status
+- Success
+insights.specs.Specs.kernel_config:
+- CONFIG_BPF_SYSCALL
+- CONFIG_PREEMPT_RT_FULL
+- CONFIG_SMP
+insights.specs.Specs.libssh_client_config:
+- Include
+insights.specs.Specs.libssh_server_config:
+- Include
+insights.specs.Specs.libvirtd_log:
+- 'qemuMigrationSrcNBDStorageCopyBlockdev:'
+- 'virDomainSnapshotCreateXML:'
+- 'virDomainBlockCopy:'
+- 'virDomainBlockPull:'
+- 'virDomainBlockCommit:'
+insights.specs.Specs.ls_tmp:
+- .sap
+- .trex
+insights.specs.Specs.ls_usr_bin:
+- sudo
+- total
+- python
+- /usr/bin
+insights.specs.Specs.ls_usr_lib64:
+- libldap
+- liblber
+- total
+insights.specs.Specs.ls_usr_sbin:
+- total
+insights.specs.Specs.ls_var_tmp:
+- /var/tmp
+insights.specs.Specs.lsof:
+- liblvm2cmd.so
+- libcrypto
+- libssl.so
+- COMMAND
+- ovs-vswit
+- (deleted)
+- lsnrctl
+- libssl
+- /var/log/journal
+- tnslsnr
+insights.specs.Specs.lvm_conf:
+- volume_list
+- use_lvmetad
+- filter
+- locking_type
+insights.specs.Specs.mariadb_log:
+- Too many open files
+insights.specs.Specs.messages:
+- Low buffer cache read hit ratio
+- Cannot assign requested address
+- '/usr/lib/ocf/resource.d/heartbeat/azure-lb: line 91: kill: Binary: arguments must
+  be process or job IDs'
+- 'rhsmd: rhsmd process exceeded runtime and was killed'
+- High per CPU system call rate
+- 'netlink_socket|ERR|fcntl: Too many open file'
+- not responding, timed out
+- 'kernel: lockd: Unknown symbol unregister_inet6addr_notifier'
+- callbacks suppressed
+- 'Result of start operation for clvmd '
+- PPM exceeds tolerance 500 PPM
+- 'Loop callback failed with: Cannot allocate memory'
+- Virtualization daemon
+- firewalld - dynamic firewall daemon
+- 'fiid_obj_get: ''present_countdown_value'': data not available'
+- 'eviction manager: must evict pod(s) to reclaim nodefsInodes'
+- 'kernel: megaraid_sas: FW detected to be in faultstate, restarting it'
+- Cannot allocate memory
+- 'SCSI error: return code ='
+- 'iscsiadm: iscsiadm: Could not log into all portals'
+- is beyond advertised capabilities
+- is down or the link is down
+- NetworkManager state is now CONNECTED_SITE
+- returned a bad sequence-id error
+- '] trap divide error '
+- TCP listen overflows
+- DMA Status error.  Resetting chip
+- Low random number entropy available
+- mode:0x20
+- 'hv_netvsc: probe of vmbus_'
+- The threshold number of context switches per second per CPU
+- 'kernel: nfs: server'
+- TX driver issue detected, PF reset issued
+- Detected Tx Unit Hang
+- invalid key/value pair in file /usr/lib/udev/rules.d/59-fc-wwpn-id.rules
+- MDC/MDIO access timeout
+- 'platform microcode: firmware: requesting'
+- ', type vxfs) has no security xattr handler'
+- Steal time is >
+- start request repeated too quickly for docker.service
+- Severe demand for real memory
+- 'ip_local_port_range: prefer different parity for start/end values'
+- failed with error -110
+- '(enic): transmit queue 0 timed out'
+- skb_copy
+- 'ProcessExecutionError: Exit code: 1; Stdin: ; Stdout: ; Stderr: setting the network
+  namespace'
+- File system is filling up
+- 'kernel: CIFS VFS: Unexpected SMB signature'
+- Broken pipe
+- Some CPU busy executing in system mode
+- initiating reset due to tx timeout
+- Device is still in reset
+- 'kernel: BUG: soft lockup'
+- 'kernel: Memory cgroup out of memory: Kill process'
+- skb_over_panic
+- hw csum failure
+- Error I40E_AQ_RC_EINVAL adding RX filters on PF, promiscuous mode forced on
+- 'kernel: Linux version'
+- enabling it in
+- failed while handling
+- Unit ip6tables.service entered failed state
+- per_source_limit from
+- Corosync main process was not scheduled (@
+- Out of MCCQ wrbs
+- ext4_ext_search_left
+- 'udev: renamed network interface'
+- in libnl.so.1
+- clearing Tx timestamp hang
+- High directory name cache miss rate
+- page allocation failure
+- irq handler for vector (irq -1)
+- Not scheduled for
+- This system does not support "SSSE3"
+- khash_super_prune_nolock
+- 'swapper: page allocation failure'
+- Error running DeviceResume dm_task_run failed
+- timing out command, waited
+- rhsm
+- nfs_reap_expired_delegations
+- '17763'
+- 'error Error on attach: Node not found'
+- Hyper-V Host
+- 'kernel: INFO: task xfsaild/md'
+- Neighbour table overflow
+- canceled DHCP transaction, DHCP client pid
+- 'kernel: TCP: out of memory -- consider tuning tcp_mem'
+- multipathd.service operation timed out. Terminating
+- _NET_ACTIVE_WINDOW
+- reservation conflict
+- TCP request queue full SYN cookie replies
+- 'ut of memory: '
+- does not seem to be present, delaying initialization
+- Disable lvmetad in lvm.conf. lvmetad should never be enabled in a clustered environment.
+  Set use_lvmetad=0 and kill the lvmetad process
+- tg3_start_xmit
+- TCP request queue full drops
+- Abort command issued
+- 'Out of memory: Kill process'
+- socket error sending to node
+- 'kernel: bnx2fc: byte_count'
+- link status up for interface
+- unknown filesystem type 'binfmt_misc'
+- 'Cannot assign requested address: AH00072'
+- Could not set
+- shm_open failed, Permission denied
+- as active slave; either
+- DHCPv4 lease renewal requested
+- 'kernel: megasas: Found FW in FAULT state, will reset adapter.'
+- drivers/input/input-leds.c:115 input_leds_connect
+- is greater than comparison timestamp
+- Buffer I/O error on device
+- 'ill process '
+- timed out
+- High per CPU processor utilization
+- 'from image service failed: rpc error: code = Canceled desc = context canceled'
+- 'failed: Invalid argument'
+- timeout before we got a set response
+- 'watch chan error: etcdserver: mvcc: required revision has been compacted'
+- Medium access timeout failure. Offlining disk!
+- NETDEV WATCHDOG
+- transmit queue
+- Exception happened during processing of request from
+- Unit iptables.service entered failed state
+- host not found in upstream
+- 'device-mapper: multipath: Failing path'
+- ': segfault at '
+- Low free swap space
+- 'kernel: lockd: Unknown symbol register_inet6addr_notifier'
+- hv_netvsc vmbus_
+- ' invoked oom-killer: '
+- state changed timeout -> done
+- /input/input
+- 'end_request: I/O error, dev'
+- High number of saturated processors
+- List /apis/image.openshift.io/v1/images
+insights.specs.Specs.mongod_conf:
+- dbpath
+insights.specs.Specs.mysql_log:
+- Too many open files
+- SSL error
+- handshake with remote endpoint ssl
+- '[ERROR]'
+insights.specs.Specs.named_checkconf_p:
+- RSAMD5
+- Ecdsap384Sha384
+- Sha256
+- rsasha512
+- GOST
+- nsec3dsa
+- ECDSAP384SHA384
+- Rsasha256
+- gost
+- SHA-384
+- DSA
+- RSASHA512
+- Dsa
+- Nsec3Rsasha1
+- RSASHA256
+- ecdsap384sha384
+- sha384
+- DISABLE-DS-DIGESTS
+- SHA-256
+- Rsasha512
+- SHA-1
+- nsec3rsasha1
+- Gost
+- rsasha256
+- Dnssec-Enable
+- Ecdsap256Sha256
+- Sha384
+- rsasha1
+- dnssec-enable
+- Sha-256
+- Disable-Algorithms
+- disable-algorithms
+- sha256
+- ECCGOST
+- Eccgost
+- Sha-384
+- Sha1
+- ecdsap256sha256
+- Rsamd5
+- sha-1
+- sha-384
+- Nsec3Dsa
+- Sha-1
+- RSASHA1
+- SHA384
+- SHA256
+- NSEC3RSASHA1
+- DISABLE-ALGORITHMS
+- DNSSEC-ENABLE
+- sha1
+- ECDSAP256SHA256
+- NSEC3DSA
+- eccgost
+- Disable-Ds-Digests
+- Rsasha1
+- dsa
+- sha-256
+- SHA1
+- disable-ds-digests
+- rsamd5
+- '}'
+insights.specs.Specs.named_conf:
+- include
+- '{'
+- '}'
+insights.specs.Specs.neutron_conf:
+- agent_report_interval
+- api_workers
+- service_plugins
+- ipam_driver
+- '['
+- allow_automatic_dhcp_failover
+- debug
+- agent_down_time
+- router_distributed
+- rpc_workers
+insights.specs.Specs.neutron_dhcp_agent_ini:
+- force_metadata
+- '['
+insights.specs.Specs.neutron_l3_agent_ini:
+- '['
+- agent_mode
+insights.specs.Specs.neutron_l3_agent_log:
+- DEBUG oslo.messaging._drivers.impl_rabbit
+- Timed out waiting for RPC response
+- 'Stderr: Another app is currently holding the xtables lock'
+- Error while deleting router
+insights.specs.Specs.neutron_metadata_agent_ini:
+- '['
+insights.specs.Specs.neutron_ml2_conf:
+- '['
+insights.specs.Specs.neutron_ovs_agent_log:
+- Agent main thread died of an exception
+- neutron.plugins.ml2.drivers.openvswitch.agent.openflow.native.ovs_ryuapp
+- 'u''device_owner'': u''network:router_interface_distributed'''
+- Timed out waiting for RPC response
+- DEBUG oslo.messaging._drivers.impl_rabbit
+insights.specs.Specs.neutron_sriov_agent:
+- extensions
+- '['
+- physical_device_mappings
+- exclude_devices
+- debug
+insights.specs.Specs.nova_api_log:
+- Timed out waiting for RPC response
+- DEBUG oslo.messaging._drivers.impl_rabbit
+insights.specs.Specs.nova_compute_log:
+- 'Could not open '
+- 'FlavorDiskSmallerThanImage: Flavor''s disk is too small for requested image.'
+- libvirt-guests.sh
+- 'cmt=off: Property ''.cmt'' not found'
+- Attempting claim on node
+- is not on shared storage
+- 'Migration pre-check error: Unable to migrate'
+- No such device or address
+- INFO nova.compute.manager
+- from mountpoint /dev
+- During sync_power_state the instance has a pending task
+- '/console.log: Permission denied'
+- 'ERROR oslo_messaging.rpc.server Command: scp -r'
+- 'ERROR oslo_messaging.rpc.server Stderr: u''Device crypt-dm-uuid-mpath'
+- is not active
+- 'Live Migration failure: internal error: process exited while connecting to monitor'
+- INFO os_brick.initiator.linuxscsi
+- Find Multipath device file for volume WWN
+- 'error: Failed to start domain'
+- 'libvirtError: Requested operation is not valid: domain has assigned non-USB host
+  devices'
+- ': No such device or address'
+- ERROR oslo_messaging.rpc.server InvalidSharedStorage
+- Detach volume
+- Resuming guest
+- Claim successful on node
+- 'libvirtError: Unable to delete file /var/lib/nova/instances/'
+- ERROR nova.virt.libvirt.driver
+- Successfully plugged vif VIFBridge
+- Timed out waiting for RPC response
+- Instance shutdown by itself. Calling the stop API.
+- DEBUG oslo.messaging._drivers.impl_rabbit
+- Disk of instance is too large
+- 'Stderr: u''blockdev: cannot open'
+insights.specs.Specs.nscd_conf:
+- enable-cache
+insights.specs.Specs.nsswitch_conf:
+- 'hosts:'
+- shadow
+- group
+- passwd
+- 'Hosts:'
+- 'HOSTS:'
+insights.specs.Specs.octavia_conf:
+- client_ca
+- api_base_uri
+- region_name
+- amp_boot_network_list
+- amp_image_tag
+- enable_proxy_headers_parsing
+- amphora_udp_driver
+- haproxy_cmd
+- memcached_servers
+- tenant_log_targets
+- heartbeat_timeout
+- network_driver
+- allow_vip_port_id
+- agent_server_cert
+- amphora_expiry_age
+- auth_strategy
+- agent_tls_protocol
+- administrative_log_facility
+- amp_image_owner_id
+- amp_flavor_id
+- spare_amphora_pool_size
+- octavia_plugins
+- volume_create_timeout
+- respawn_interval
+- amp_secgroup_list
+- stats_socket_path
+- disable_revert
+- status_max_processes
+- cert_validity_time
+- user_log_facility
+- vrrp_success_count
+- disable_local_log_storage
+- amp_active_wait_sec
+- base_path
+- stats_update_threads
+- anti_affinity_policy
+- policy_file
+- volume_create_max_retries
+- status_update_threads
+- heartbeat_interval
+- enabled_provider_agents
+- max_process_warning_percent
+- user_log_format
+- audit_map_file
+- enabled
+- base_cert_dir
+- default_pool_quota
+- agent_server_network_file
+- connection_logging
+- use_oslo_messaging
+- status_socket_path
+- build_rate_limit
+- topic
+- default_listener_quota
+- rest_request_read_timeout
+- build_retry_interval
+- compute_driver
+- port_detach_timeout
+- build_active_retries
+- use_upstart
+- vrrp_check_interval
+- workers
+- bind_port
+- vrrp_advert_int
+- driver
+- allow_ping_health_monitors
+- max_workers
+- user_data_config_drive
+- stats_request_timeout
+- spare_check_interval
+- vrrp_garp_refresh_interval
+- agent_request_read_timeout
+- bind_host
+- default_member_quota
+- log_protocol
+- log_retry_interval
+- server_ca
+- log_queue_size
+- agent_server_network_dir
+- connection_max_retries
+- connection_retry_interval
+- bind_ip
+- distributor_driver
+- service_name
+- amp_active_retries
+- default_health_monitor_quota
+- engine
+- forward_all_logs
+- max_retries
+- allow_vip_subnet_id
+- logging_template_override
+- client_cert
+- default_provider_driver
+- vrrp_fail_count
+- load_balancer_expiry_age
+- '['
+- failover_threads
+- log_file
+- lb_network_interface
+- default_load_balancer_quota
+- random_amphora_name_length
+- graceful_shutdown_timeout
+- rest_request_conn_timeout
+- topics
+- amp_image_id
+- haproxy_template
+- debug
+- stats_max_processes
+- signing_digest
+- cert_generator
+- health_check_interval
+- allow_vip_network_id
+- log_retry_count
+- health_update_driver
+- cleanup_interval
+- allow_sorting
+- loadbalancer_topology
+- allow_pagination
+- pagination_max_limit
+- availability_zone
+- cafile
+- active_connection_rety_interval
+- ignore_req_list
+- cert_manager
+- vrrp_garp_refresh_count
+- enable_anti_affinity
+- volume_create_retry_interval
+- auth_type
+- controller_ip_port_list
+- enabled_provider_drivers
+- volume_size
+- status_request_timeout
+- amp_ssh_access_allowed
+- get_socket_path
+- udp_connect_min_interval_health_monitor
+- amphora_driver
+- provider_agent_shutdown_timeout
+- sock_rlimit
+- active_connection_max_retries
+- endpoint_type
+- respawn_count
+- log_dir
+- retry_interval
+- volume_type
+- insecure
+- admin_log_targets
+- allow_tls_terminated_listeners
+- haproxy_stick_size
+- storage_path
+- stats_update_driver
+- volume_driver
+- health_update_threads
+- rpc_thread_pool_size
+- ca_certificates_file
+- agent_server_ca
+insights.specs.Specs.odbc_ini:
+- SERVER
+- no_ssps
+- No_ssps
+- driver
+- Driver
+- server
+- '['
+- Server
+- NO_SSPS
+- DRIVER
+insights.specs.Specs.openshift_hosts:
+- '['
+insights.specs.Specs.ovirt_engine_server_log:
+- 'Registered web context: ''/ovirt-engine/api'' for server'
+- INFO  [org.wildfly.extension.undertow
+insights.specs.Specs.ovirt_engine_ui_log:
+- 'Uncaught exception: com.google.gwt.event.shared.UmbrellaException'
+insights.specs.Specs.php_ini:
+- '['
+- post_max_size
+insights.specs.Specs.postconf:
+- smtpd_tls_mandatory_protocols
+- smtp_tls_protocols
+- smtpd_tls_protocols
+- smtp_tls_mandatory_protocols
+insights.specs.Specs.postconf_builtin:
+- smtpd_tls_mandatory_protocols
+- smtp_tls_protocols
+- smtpd_tls_protocols
+- smtp_tls_mandatory_protocols
+insights.specs.Specs.postgresql_log:
+- checkpoints are occurring too frequently
+- remaining connection slots are reserved for non-replication superuser connections
+- FATAL
+- connection limit exceeded for non-superusers
+insights.specs.Specs.ps_alxwww:
+- swift-proxy-ser
+- /usr/bin/openshift start master
+- bash
+- pacemakerd
+- ora
+- pacemaker-controld
+- smbd
+- openshift start master api
+- neutron-server
+- neutron-l3-agen
+- openshift start master controllers
+- redis-server
+- pacemaker_remote
+- libvirtd
+- /usr/bin/openshift start node
+- elasticsearch
+- pkla-check-auth
+- dnsmasq
+- multipathd
+- auditd
+- mongdb
+- ceilometer-poll
+- sap
+- nfsd
+- nova-conductor
+- corosync
+- rngd
+- httpd
+- memcached
+- heat-engine
+- gnome-shell
+- snmpd
+- radosgw
+- nova-scheduler
+- openshift start node
+- dlm_controld
+- gnocchi-metricd
+- ovs-vswitchd
+- ntpd
+- nova-compute
+- clvmd
+- octavia-worker
+- cinder-volume
+- tuned
+- nginx
+- docker
+- COMMAND
+- multipath
+- neutron-dhcp-ag
+- pmcd
+- pmie
+- cmirrord
+- avahi
+- spausedd
+- chronyd
+- haproxy
+- crmd
+insights.specs.Specs.ps_aux:
+- /usr/bin/openshift start master
+- swift-proxy-ser
+- bash
+- phc2sys
+- pacemakerd
+- /usr/bin/docker
+- ora
+- pacemaker-controld
+- smbd
+- openshift start master api
+- neutron-server
+- neutron-l3-agen
+- openshift start master controllers
+- redis-server
+- pacemaker_remote
+- /usr/bin/openshift start node
+- libvirtd
+- elasticsearch
+- /usr/bin/docker-current
+- pkla-check-auth
+- /usr/bin/dockerd-current
+- multipathd
+- auditd
+- ceph-osd
+- mongdb
+- ceilometer-poll
+- oc observe csr
+- sap
+- nfsd
+- nova-conductor
+- corosync
+- rngd
+- httpd
+- memcached
+- haproxy
+- ptp4l
+- heat-engine
+- gnome-shell
+- snmpd
+- radosgw
+- openshift start node
+- nova-scheduler
+- dlm_controld
+- gnocchi-metricd
+- ovs-vswitchd
+- ntpd
+- nova-compute
+- clvmd
+- octavia-worker
+- cinder-volume
+- tuned
+- nginx
+- docker
+- COMMAND
+- multipath
+- neutron-dhcp-ag
+- pmcd
+- pmie
+- cmirrord
+- STAP/8.2
+- spausedd
+- chronyd
+- mysqld
+- crmd
+insights.specs.Specs.ps_auxww:
+- swift-proxy-ser
+- /usr/bin/openshift start master
+- bash
+- pacemakerd
+- ora
+- pacemaker-controld
+- smbd
+- openshift start master api
+- neutron-server
+- greenplum
+- neutron-l3-agen
+- redis-server
+- pacemaker_remote
+- libvirtd
+- openshift start master controllers
+- /usr/bin/openshift start node
+- pkla-check-auth
+- elasticsearch
+- /sbin/rngd
+- /usr/sbin/fcoemon --syslog
+- multipathd
+- auditd
+- mongdb
+- ceilometer-poll
+- /opt/perf/bin/midaemon
+- sap
+- nfsd
+- nova-conductor
+- tgtd
+- corosync
+- rngd
+- httpd
+- memcached
+- iscsid
+- nfs-server
+- heat-engine
+- gnome-shell
+- snmpd
+- radosgw
+- nova-scheduler
+- openshift start node
+- dlm_controld
+- postgres
+- gnocchi-metricd
+- ovs-vswitchd
+- catalina.base
+- /usr/bin/teamd
+- ntpd
+- nova-compute
+- clvmd
+- octavia-worker
+- cinder-volume
+- /sbin/multipathd
+- tuned
+- nginx
+- docker
+- COMMAND
+- multipath
+- neutron-dhcp-ag
+- pmcd
+- pmie
+- cmirrord
+- target_completi
+- goferd
+- spausedd
+- chronyd
+- haproxy
+- crmd
+insights.specs.Specs.ps_ef:
+- swift-proxy-ser
+- /usr/bin/openshift start master
+- bash
+- pacemakerd
+- ora
+- pacemaker-controld
+- smbd
+- openshift start master api
+- neutron-server
+- neutron-l3-agen
+- openshift start master controllers
+- redis-server
+- pacemaker_remote
+- libvirtd
+- /usr/bin/openshift start node
+- elasticsearch
+- pkla-check-auth
+- 'nginx: master process'
+- multipathd
+- crmd
+- auditd
+- mongdb
+- ceilometer-poll
+- sap
+- nfsd
+- nova-conductor
+- corosync
+- rngd
+- httpd
+- memcached
+- heat-engine
+- CMD
+- gnome-shell
+- neutron-ns-metadata-proxy
+- snmpd
+- radosgw
+- nova-scheduler
+- openshift start node
+- dlm_controld
+- gnocchi-metricd
+- ovs-vswitchd
+- 'nginx: worker process'
+- ntpd
+- nova-compute
+- clvmd
+- octavia-worker
+- cinder-volume
+- tuned
+- nginx
+- docker
+- multipath
+- pmcd
+- pmie
+- cmirrord
+- spausedd
+- chronyd
+- haproxy
+- neutron-dhcp-ag
+insights.specs.Specs.rsyslog_conf:
+- '{'
+- (
+- imjournal
+- regex
+- $ActionQueueFileName
+- imtcp
+- )
+- '}'
+insights.specs.Specs.samba:
+- path
+- KERBEROS METHOD
+- Realm
+- writable
+- GLOBAL
+- SECURITY
+- realm
+- socket options
+- Max Smbd Processes
+- global
+- server max protocol
+- Nt Pipe Support
+- MAX SMBD PROCESSES
+- passdb backend
+- Security
+- comment
+- NT PIPE SUPPORT
+- PASSDB BACKEND
+- max smbd processes
+- kerberos method
+- security
+- Kerberos Method
+- nt pipe support
+- REALM
+- Passdb Backend
+- ']'
+- '['
+- Global
+- read only
+insights.specs.Specs.sap_host_profile:
+- DIR_
+- SAPSYSTEM
+insights.specs.Specs.saphostctl_getcimobject_sapinstance:
+- SID
+- CreationClassName
+- '******'
+- SystemNumber
+- InstanceName
+- SapVersionInfo
+- FullQualifiedHostname
+- Hostname
+insights.specs.Specs.secure:
+- 'Could not set limit for ''nofile'': Operation not permitted'
+insights.specs.Specs.setup_named_chroot:
+- /
+- ROOTDIR_MOUNT
+insights.specs.Specs.ssh_config:
+- Include
+insights.specs.Specs.ssh_config_d:
+- SendEnv
+- Include
+insights.specs.Specs.sshd_config:
+- denyusers
+- clientalivecountmax
+- PERMITEMPTYPASSWORDS
+- CLIENTALIVECOUNTMAX
+- ChallengeResponseAuthentication
+- KBDINTERACTIVEAUTHENTICATION
+- Clientaliveinterval
+- Usepam
+- CIPHERS
+- MACS
+- permitrootlogin
+- MAXSTARTUPS
+- MAXAUTHTRIES
+- challengeresponseauthentication
+- ciphers
+- UsePAM
+- AllowUsers
+- LoginGraceTime
+- MACs
+- kbdinteractiveauthentication
+- macs
+- Clientalivecountmax
+- KbdInteractiveAuthentication
+- DenyUsers
+- clientaliveinterval
+- MaxAuthTries
+- PermitEmptyPasswords
+- logingracetime
+- CHALLENGERESPONSEAUTHENTICATION
+- Protocol
+- Maxstartups
+- ClientAliveInterval
+- permitemptypasswords
+- LOGINGRACETIME
+- Ciphers
+- PERMITROOTLOGIN
+- allowusers
+- CLIENTALIVEINTERVAL
+- protocol
+- maxstartups
+- Logingracetime
+- ClientAliveCountMax
+- usepam
+- DENYUSERS
+- ALLOWUSERS
+- maxauthtries
+- Allowusers
+- AuthorizedKeysFile
+- Permitemptypasswords
+- USEPAM
+- MaxStartups
+- Permitrootlogin
+- Maxauthtries
+- PROTOCOL
+- Macs
+- PermitRootLogin
+- Kbdinteractiveauthentication
+- UsePam
+- Challengeresponseauthentication
+- Denyusers
+insights.specs.Specs.subscription_manager_installed_product_ids:
+- 'ID:'
+insights.specs.Specs.testparm_s:
+- '['
+- 'Server role:'
+insights.specs.Specs.testparm_v_s:
+- '['
+- server schannel
+- 'Server role:'
+insights.specs.Specs.udev_fc_wwpn_id_rules:
+- ENV{FC_INITIATOR_WWPN}
+- ENV{FC_TARGET_WWPN}
+- ENV{FC_TARGET_LUN}
+insights.specs.Specs.up2date_log:
+- The certificate /usr/share/rhn/RHNS-CA-CERT is expired
+insights.specs.Specs.vdsm_log:
+- (mailbox-spm) [storage.Misc.excCmd] /usr/bin/taskset --cpu-list
+- 'Changed state to Down: ''NoneType'' object has no attribute ''attrib'''
+- RPC call Host.setupNetworks failed
+- Stopping connection
+- The vm start process failed
+- ERROR (mailbox-spm) [storage.MailBox.SpmMailMonitor]
+- 'Changed state to Down: internal error: Attempted double use of PCI slot'
+- The name org.fedoraproject.FirewallD1 was not provided by any .service files
+insights.specs.Specs.virt_who_conf:
+- type
+- configs
+- interval
+- log_
+- server
+- debug
+- oneshot
+- '['
+- env
+- owner
+insights.specs.Specs.virtlogd_conf:
+- max_size
+insights.specs.Specs.vsftpd_conf:
+- ssl_enable
+- SSL_ENABLE
+- ssl_tlsv1_1
+- Ssl_Sslv2
+- ssl_tlsv1
+- Local_Enable
+- local_enable
+- LOCAL_ENABLE
+- ssl_sslv3
+- ssl_sslv2
+- Ssl_Enable
+- SSL_TLSV1_1
+- Ssl_Tlsv1_1
+- ssl_tlsv1_2
+- SSL_SSLV3
+- SSL_SSLV2
+- SSL_TLSV1_2
+- SSL_TLSV1
+- Ssl_Sslv3
+- Ssl_Tlsv1_2
+- Ssl_Tlsv1
+insights.specs.default.DefaultSpecs.insights_client_conf:
+- auto_update
+- core_collect
+insights.specs.default.DefaultSpecs.ls_tmp:
+- .sap
+- .trex
+insights.specs.default.DefaultSpecs.ls_usr_lib64:
+- liblber
+- libldap
+insights.specs.default.DefaultSpecs.lvm_conf:
+- use_lvmetad
+insights.specs.default.DefaultSpecs.mysql_log:
+- handshake with remote endpoint ssl
+- SSL error
+insights.specs.default.DefaultSpecs.postgresql_log:
+- checkpoints are occurring too frequently
+insights.specs.default.DefaultSpecs.ps_alxwww:
+- swift-proxy-ser
+- /usr/bin/openshift start master
+- bash
+- pacemakerd
+- ora
+- pacemaker-controld
+- smbd
+- openshift start master api
+- neutron-server
+- neutron-l3-agen
+- openshift start master controllers
+- redis-server
+- pacemaker_remote
+- libvirtd
+- /usr/bin/openshift start node
+- elasticsearch
+- pkla-check-auth
+- multipathd
+- crmd
+- auditd
+- mongdb
+- ceilometer-poll
+- sap
+- nfsd
+- nova-conductor
+- corosync
+- rngd
+- httpd
+- memcached
+- heat-engine
+- gnome-shell
+- snmpd
+- radosgw
+- nova-scheduler
+- openshift start node
+- dlm_controld
+- gnocchi-metricd
+- ovs-vswitchd
+- ntpd
+- nova-compute
+- clvmd
+- octavia-worker
+- cinder-volume
+- tuned
+- nginx
+- docker
+- multipath
+- pmcd
+- pmie
+- cmirrord
+- spausedd
+- chronyd
+- haproxy
+- neutron-dhcp-ag
+insights.specs.default.DefaultSpecs.ps_aux:
+- swift-proxy-ser
+- /usr/bin/openshift start master
+- bash
+- pacemakerd
+- ora
+- pacemaker-controld
+- smbd
+- openshift start master api
+- neutron-server
+- neutron-l3-agen
+- openshift start master controllers
+- redis-server
+- pacemaker_remote
+- libvirtd
+- /usr/bin/openshift start node
+- elasticsearch
+- pkla-check-auth
+- multipathd
+- crmd
+- auditd
+- mongdb
+- ceilometer-poll
+- sap
+- nfsd
+- nova-conductor
+- corosync
+- rngd
+- httpd
+- memcached
+- heat-engine
+- gnome-shell
+- snmpd
+- radosgw
+- nova-scheduler
+- openshift start node
+- dlm_controld
+- gnocchi-metricd
+- ovs-vswitchd
+- ntpd
+- nova-compute
+- clvmd
+- octavia-worker
+- cinder-volume
+- tuned
+- nginx
+- docker
+- multipath
+- pmcd
+- pmie
+- cmirrord
+- spausedd
+- chronyd
+- haproxy
+- neutron-dhcp-ag
+insights.specs.default.DefaultSpecs.ps_auxww:
+- swift-proxy-ser
+- /usr/bin/openshift start master
+- bash
+- pacemakerd
+- ora
+- pacemaker-controld
+- smbd
+- openshift start master api
+- neutron-server
+- neutron-l3-agen
+- openshift start master controllers
+- redis-server
+- pacemaker_remote
+- libvirtd
+- /usr/bin/openshift start node
+- elasticsearch
+- pkla-check-auth
+- multipathd
+- crmd
+- auditd
+- mongdb
+- ceilometer-poll
+- sap
+- nfsd
+- nova-conductor
+- corosync
+- rngd
+- httpd
+- memcached
+- heat-engine
+- gnome-shell
+- snmpd
+- radosgw
+- nova-scheduler
+- openshift start node
+- dlm_controld
+- gnocchi-metricd
+- ovs-vswitchd
+- ntpd
+- nova-compute
+- clvmd
+- octavia-worker
+- cinder-volume
+- tuned
+- nginx
+- docker
+- multipath
+- pmcd
+- pmie
+- cmirrord
+- spausedd
+- chronyd
+- haproxy
+- neutron-dhcp-ag
+insights.specs.default.DefaultSpecs.ps_ef:
+- swift-proxy-ser
+- /usr/bin/openshift start master
+- bash
+- pacemakerd
+- ora
+- pacemaker-controld
+- smbd
+- openshift start master api
+- neutron-server
+- neutron-l3-agen
+- openshift start master controllers
+- redis-server
+- pacemaker_remote
+- libvirtd
+- /usr/bin/openshift start node
+- elasticsearch
+- pkla-check-auth
+- multipathd
+- crmd
+- auditd
+- mongdb
+- ceilometer-poll
+- sap
+- nfsd
+- nova-conductor
+- corosync
+- rngd
+- httpd
+- memcached
+- heat-engine
+- gnome-shell
+- snmpd
+- radosgw
+- nova-scheduler
+- openshift start node
+- dlm_controld
+- gnocchi-metricd
+- ovs-vswitchd
+- ntpd
+- nova-compute
+- clvmd
+- octavia-worker
+- cinder-volume
+- tuned
+- nginx
+- docker
+- multipath
+- pmcd
+- pmie
+- cmirrord
+- spausedd
+- chronyd
+- haproxy
+- neutron-dhcp-ag
+insights.specs.default.DefaultSpecs.samba:
+- path
+- comment
+- writable
+- read only
