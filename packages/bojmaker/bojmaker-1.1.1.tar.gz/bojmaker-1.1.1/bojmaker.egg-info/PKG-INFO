@@ -1,0 +1,59 @@
+Metadata-Version: 1.1
+Name: bojmaker
+Version: 1.1.1
+Summary: Setting up bothering BOJ problems all at once.
+Home-page: https://github.com/6Soo/BOJ_maker
+Author: 6Soo
+Author-email: kkokko-hero@hanmail.net
+License: MIT
+Description: <h1> BOJ_maker </h1>
+        
+        
+        
+        <h2>Project description</h2>
+        
+        Setting up bothering BOJ problems all at once.
+        
+        번거로운 백준 문제 셋팅을 한번에 해줍니다.
+        
+        
+        
+        <h2>Installation</h2>
+        
+        ```$ pip install bojmaker``` 
+        
+        
+        
+        <h3> How to use </h3>
+        
+        ```$ bojmaker 1111```
+        
+        
+        
+        
+        - 어디서든 bojmaker <문항 번호> 만 입력하면
+          - 문제 번호_문제 이름 으로 폴더 생성
+          - sol1.py/cpp/java 파일 생성
+          - input.txt 파일 생성 및 예제 입력
+          - 해당 문제 백준 링크 출력
+        
+        
+        
+        <h3> New Feature </h3>
+        
+        version 1.1
+        
+        - cpp, java 파일 생성 추가
+        
+        
+        
+        
+        
+        
+        
+        <h3> SSAFY 5기 화이팅~!! </h3>
+        <h3> feedback : kkokko-hero@hanmail.net </h3>
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
