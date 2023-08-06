@@ -1,0 +1,4 @@
+[console_scripts]
+eventcount = ormigrate.eventFixer:mainEventCount
+eventfix = ormigrate.eventFixer:mainEventFix
+
