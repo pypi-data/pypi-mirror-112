@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+iarray_community/__init__.py
+iarray_community/config_params.py
+iarray_community/constructors.py
+iarray_community/iarray.py
+iarray_community/info.py
+iarray_community/utils.py
+iarray_community.egg-info/PKG-INFO
+iarray_community.egg-info/SOURCES.txt
+iarray_community.egg-info/dependency_links.txt
+iarray_community.egg-info/requires.txt
+iarray_community.egg-info/top_level.txt
