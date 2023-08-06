@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: macrosynergy
+Version: 0.0.2
+Summary: Macrosynergy Quant Research Package
+Home-page: https://www.macrosynergy.com
+Author: Macrosynergy Ltd
+Author-email: info@macrosynergy.com
+Maintainer: Macrosynergy
+Maintainer-email: info@macrosynergy.com
+License: MIT License
+Download-URL: https://github.com/macrosynergy/macrosynergy
+Project-URL: Bug Tracker, https://github.com/macrosynergy/macrosynergy/issues
+Project-URL: Source Code, https://github.com/macrosynergy/macrosynergy
+Platform: Windows
+Platform: Linux
+Platform: Mac OS-X
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Typing :: Typed
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: seaborn
+Requires-Dist: statsmodels
+
+UNKNOWN
+
+
