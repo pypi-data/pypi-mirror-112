@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyme-pillow
+Version: 0.1.1
+Summary: A Pillow based image editing package optimized for the creation of memes
+License: MIT
+Author: Spookdot
+Author-email: 55836077+Spookdot@users.noreply.github.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Pillow (>=8.2.0,<9.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Pyme
+A Pillow based image editing package optimized for the creation of memes
