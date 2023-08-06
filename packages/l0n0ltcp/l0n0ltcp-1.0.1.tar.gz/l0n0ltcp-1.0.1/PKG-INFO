@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: l0n0ltcp
+Version: 1.0.1
+Summary: 对asyncio tcp的一些易用性封装
+Home-page: https://gitee.com/l00n00l/l0n0ltcp
+Author: l0n0l
+Author-email: 1038352856@qq.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
