@@ -1,0 +1,16 @@
+phygitalism_config/__init__.py,sha256=k1WZ0hFa9IdjR4tb_NUmPsckS9CCBfPXlTgT7NJzKyQ,312
+phygitalism_config/__main__.py,sha256=-4xDOYjPerPvvvT79oe02m1-ViDqt3W9ih4ccOBswFg,1472
+phygitalism_config/config.py,sha256=O4sos3-6Y7wvSDYMqIulEBLU7MvpYH3EaOSU03mNhI8,7302
+phygitalism_config/exceptions.py,sha256=J5kV5Z0w8jdfxbLsQ96MgiDj7PpzeP4yrvRIG1TUQHg,166
+phygitalism_config/generator.py,sha256=jAWvBTcf21u31rjYbL_9HR6R2RnKFOKCO4mVUWSqZg8,1065
+phygitalism_config/import_finder.py,sha256=oNyFUp0cbNbzN3oaNQZ4TWitEJiC79K-gF8Y1WH0j0g,491
+phygitalism_config/import_loader.py,sha256=OEOfIBMnWWwDs-SA3QIopn924pP4KB0v2rrz4YA1Yeo,1117
+phygitalism_config/loaders_constants.py,sha256=PUkZK-qIuMd93xTrPwicbQNEBnD1vzx8Up2bSrTE__Q,108
+phygitalism_config/special_types/__init__.py,sha256=roktQSO6e8s9kfNtCQZ3iLHpZfXtESYbk277ZhcUKZY,62
+phygitalism_config/special_types/realtime.py,sha256=jrPhUaTAhtoIsFHDQU4t2wtkAi6yLBUOSlCFe0c7Wzk,291
+phygitalism_config/special_types/required.py,sha256=ZXRMdrPMkOLqimDrp6-1xCoVE5ui9TaGCwctffky0E8,291
+phygitalism_config/type_caster.py,sha256=VP0WYmdQcdoi62hI4u9Xb6DxdTmSsU3uM7KOr8Nlm2I,2650
+phygitalism_config-0.1.15.dist-info/entry_points.txt,sha256=OZpuu3DASOxeOihTAx3ApEkfHIL8SFO-2arG_109Nvk,68
+phygitalism_config-0.1.15.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+phygitalism_config-0.1.15.dist-info/METADATA,sha256=5Mei7GKC7LdfHTyJwNAr1O5GRjw06vYKDksSu2PM_ns,446
+phygitalism_config-0.1.15.dist-info/RECORD,,

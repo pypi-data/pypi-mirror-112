@@ -1,0 +1,3 @@
+[console_scripts]
+generate-config=phygitalism_config.__main__:main
+
