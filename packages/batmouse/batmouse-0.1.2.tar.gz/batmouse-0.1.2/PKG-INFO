@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: batmouse
+Version: 0.1.2
+Summary: Python library for querying mouse battery levels.
+Author: Tarcísio Eduardo Moreira Crocomo
+Author-email: tarcisioe@pm.me
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
