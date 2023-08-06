@@ -1,0 +1,3 @@
+[console_scripts]
+tailer = tailer_sdk.tailersdk:main
+

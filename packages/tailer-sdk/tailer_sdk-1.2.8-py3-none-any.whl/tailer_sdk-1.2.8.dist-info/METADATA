@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: tailer-sdk
+Version: 1.2.8
+Summary: Tailer SDK Python Package
+Home-page: https://www.fashiondata.io/
+Author: Fashiondata Team
+Author-email: contact@fashiondata.io
+License: GPLv3
+Keywords: pip,fashiondata
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: firebase (>=3.0.1)
+Requires-Dist: pycryptodome (>=1.6.0)
+Requires-Dist: python-jwt
+Requires-Dist: gcloud
+Requires-Dist: sseclient
+Requires-Dist: networkx
+Requires-Dist: requests-toolbelt
+Requires-Dist: google.auth
+Requires-Dist: semver (>=2.10.2)
+Requires-Dist: Jinja2 (>=2.11.2)
+Requires-Dist: google-cloud-bigquery (>=1.25.0)
+Requires-Dist: google-cloud-firestore (>=1.8.1)
+Requires-Dist: pkg-info (>=0.1.2)
+Requires-Dist: chardet (>=3.0.4)
+
+# Tailer SDK
+
+## Changelog
+
+### Release 1.2.8 : 2021-07-12
+
+* TTT : fixed a bug when processing a single task DAG.
+### Release 1.2.7 : 2021-07-01
+
+* Added a new command for user reset password : tailer auth reset-password
+
+### Release 1.2.6 : 2021-06-10
+
+* Bugfix : fixed issue in TTT for dynamic SQL 
+
+### Release 1.2.5 : 2021-06-03
+
+* Added Context tagging in all configuration type
+* TTT : --no-launch flag will work on TTT deploy as well.
+
+### Release 1.2.4 : 2021-05-17
+
+* Bugfix : fixed issue in TTT generation regarding Lock manager.
+
+### Release 1.2.3 : 2021-05-10
+
+* Bugfix : fixed issue leading to re-parsing the configuration onc modified.
+* TTT : added Redis support for Lock Manager. Redis will be default.
+
+### Release 1.2.2 : 2021-03-30
+
+* Bugfix : TTT => fixed a random issue when contacting ETCD instance.
+* Added command : tailer auth get-token. Use sed to extract token : tailer auth get-token | sed -n 's/.*user_token\=//p'
+* Table To Storage : user can launch the DAG upon deployment.
+
+### Release 1.2.1 : 2021-02-22
+ 
+* Added support for configuration type : xml-conversion
+
+### Release 1.2.0 : 2021-02-22
+
+* First release : moved code from Jarvis SDK
+ 
+
