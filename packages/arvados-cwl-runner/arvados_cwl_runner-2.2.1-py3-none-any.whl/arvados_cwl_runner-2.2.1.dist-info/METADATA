@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: arvados-cwl-runner
+Version: 2.2.1
+Summary: Arvados Common Workflow Language runner
+Home-page: https://arvados.org
+Author: Arvados
+Author-email: info@arvados.org
+License: Apache 2.0
+Download-URL: https://github.com/arvados/arvados.git
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5, <4
+Requires-Dist: arvados-python-client (==2.2.1)
+Requires-Dist: ciso8601 (>=2.0.0)
+Requires-Dist: cwltool (==3.0.20210319143721)
+Requires-Dist: networkx (<2.6)
+Requires-Dist: schema-salad (==7.1.20210611090601)
+Requires-Dist: setuptools
+Requires-Dist: subprocess32 (>=3.5.1); os.name=="posix" and python_version<"3"
+Requires-Dist: pytz; python_version<"3"
+
+.. Copyright (C) The Arvados Authors. All rights reserved.
+..
+.. SPDX-License-Identifier: Apache-2.0
+
+Arvados Common Workflow Language (CWL) runner.
+
+
