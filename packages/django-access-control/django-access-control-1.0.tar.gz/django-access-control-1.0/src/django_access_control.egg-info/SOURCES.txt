@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/django_access_control/__init__.py
+src/django_access_control/admin.py
+src/django_access_control/models.py
+src/django_access_control/permissions.py
+src/django_access_control/querysets.py
+src/django_access_control/utils.py
+src/django_access_control.egg-info/PKG-INFO
+src/django_access_control.egg-info/SOURCES.txt
+src/django_access_control.egg-info/dependency_links.txt
+src/django_access_control.egg-info/requires.txt
+src/django_access_control.egg-info/top_level.txt
