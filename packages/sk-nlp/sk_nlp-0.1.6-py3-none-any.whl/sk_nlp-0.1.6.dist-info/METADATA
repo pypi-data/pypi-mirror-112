@@ -1,0 +1,629 @@
+Metadata-Version: 2.1
+Name: sk-nlp
+Version: 0.1.6
+Summary: nlp kit.
+Home-page: https://github.com/me/myproject
+Author: wengsongxiu
+Author-email: wengsongxiu@mastercom.cn
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: tensorflow-gpu
+Requires-Dist: bert4keras
+Requires-Dist: sk-common
+
+
+# sk-nlp
+
+[![Travis](https://travis-ci.org/CyberZHG/keras-transformer.svg)](https://travis-ci.org/CyberZHG/keras-transformer)
+[![Coverage](https://coveralls.io/repos/github/CyberZHG/keras-transformer/badge.svg?branch=master)](https://coveralls.io/github/CyberZHG/keras-transformer)
+
+![](https://img.shields.io/badge/keras-tensorflow-blue.svg)
+![](https://img.shields.io/badge/keras-tf.keras-blue.svg)
+![](https://img.shields.io/badge/keras-tf.keras/eager-blue.svg)
+![](https://img.shields.io/badge/keras-tf.keras/2.0_beta-blue.svg)
+
+
+
+📦 项目介绍 (for humans)
+=======================
+
+这个第三方仓库是由深圳市名通科技股份有限公司AI团队提供的。团队致力于为NLP领域，提供一个稳定可靠， 功能完善的NLP常见操作。
+
+
+Installation
+-----
+
+```bash
+cd your_project
+pip install sk-nlp
+```
+
+## Usage
+<div class="section" id="sk-nlp">
+<h1>sk_nlp<a class="headerlink" href="#sk-nlp" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sk_nlp.html">sk_nlp package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sk_nlp.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sk-nlp-nlp-feature-embedding-package">sk_nlp.nlp_feature_embedding package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-sk_nlp.nlp_feature_embedding.bert">sk_nlp.nlp_feature_embedding.bert module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-sk_nlp.nlp_feature_embedding.similarity">sk_nlp.nlp_feature_embedding.similarity module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-sk_nlp.nlp_feature_embedding.w2v">sk_nlp.nlp_feature_embedding.w2v module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sk_nlp.nlp_feature_extract.html">sk_nlp.nlp_feature_extract package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-sk_nlp.nlp_feature_extract.feature">sk_nlp.nlp_feature_extract.feature module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-sk_nlp.nlp_feature_extract.text_filter">sk_nlp.nlp_feature_extract.text_filter module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-sk_nlp.nlp_feature_extract.tokenizer">sk_nlp.nlp_feature_extract.tokenizer module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="sk-nlp-nlp-feature-extract-package">
+
+<div class="section" id="module-sk_nlp.nlp_feature_extract.feature">
+<span id="sk-nlp-nlp-feature-extract-feature-module"></span><h2>sk_nlp.nlp_feature_extract.feature module</h2>
+<p>0 使用ac自动机统计给定的词语的词频
+1 获取tf-idf特征</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.feature.CountByAC">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_extract.feature.</span></span><span class="sig-name descname"><span class="pre">CountByAC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>基于ac自动机来统计模式串</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pattern_list</strong> – 匹配的模式串列表</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.feature.CountByAC.build_tree">
+<span class="sig-name descname"><span class="pre">build_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern_list</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>构建模式串前缀树</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pattern_list</strong> – 模式串列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.feature.CountByAC.count">
+<span class="sig-name descname"><span class="pre">count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sentence</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>统计sentence中关于给定的模式串的频率</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – 句子</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>word_count 每个关键词对应的频率</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ac</span> <span class="o">=</span> <span class="n">CountByAC</span><span class="p">([</span><span class="s1">&#39;杰伦的七&#39;</span><span class="p">,</span> <span class="s1">&#39;周杰伦的&#39;</span><span class="p">,</span> <span class="s1">&#39;七里香&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">ac</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;周杰伦的七里香七里香&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">{&#39;周杰伦的&#39;: 1, &#39;杰伦的七&#39;: 1, &#39;七里香&#39;: 2}</span>
+</pre></div>
+</div>
+</dd></dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.feature.KeyWordExtract">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_extract.feature.</span></span><span class="sig-name descname"><span class="pre">KeyWordExtract</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>关键词抽取算法，基于tf-idf</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.feature.KeyWordExtract.get_tf_idf">
+<span class="sig-name descname"><span class="pre">get_tf_idf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sentence_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>加载tf-idf模型，返回sentence_list对应的特征和模型</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentence_list</strong> – 句子列表（分词后）</p></li>
+<li><p><strong>model_file</strong> – tf-idf模型文件</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>tf_idf_model(模型实例), tfidf_feature(sentence_list对应的tf-idf特征)</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tf_idf_model</span><span class="p">,</span> <span class="n">tfidf_feature</span> <span class="o">=</span> <span class="n">kwe</span><span class="o">.</span><span class="n">get_tf_idf</span><span class="p">([</span><span class="s1">&#39;杰伦 是 台湾 歌手&#39;</span><span class="p">,</span> <span class="s1">&#39;七里香 是 杰伦 创作&#39;</span><span class="p">],</span> <span class="n">file_conf</span><span class="o">.</span><span class="n">tf_idf_file_path</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">tfidf_feature</span><span class="p">)</span>
+<span class="go">  (0, 4)        0.6316672017376245</span>
+<span class="go">  (0, 3)        0.4494364165239821</span>
+<span class="go">  (0, 2)        0.6316672017376245</span>
+<span class="go">  (1, 3)        0.4494364165239821</span>
+<span class="go">  (1, 1)        0.6316672017376245</span>
+<span class="go">  (1, 0)        0.6316672017376245</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.feature.KeyWordExtract.get_topk_keywords">
+<span class="sig-name descname"><span class="pre">get_topk_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>得到topk个关键词</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_list</strong> – 句子列表（分词后）</p></li>
+<li><p><strong>topk</strong> – tf-idf重要度排序后前topk</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>keywords</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">keywords</span> <span class="o">=</span> <span class="n">kwe</span><span class="o">.</span><span class="n">get_topk_keywords</span><span class="p">([</span><span class="s1">&#39;杰伦 是 台湾 歌手&#39;</span><span class="p">,</span> <span class="s1">&#39;七里香 是 杰伦 创作&#39;</span><span class="p">],</span> <span class="n">topk</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">keywords</span><span class="p">)</span>
+<span class="go">[[&#39;歌手&#39;][&#39;创作&#39;]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.feature.KeyWordExtract.train_tf_idf">
+<span class="sig-name descname"><span class="pre">train_tf_idf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sentence_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ngram_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1,</span> <span class="pre">1)</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>训练tf-idf模型，保存模型，返回模型和特征</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentence_list</strong> – 句子列表（分词后）</p></li>
+<li><p><strong>model_file</strong> – tf-idf模型保存文件</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>tf_idf_model, tfidf_feature</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl></div>
+
+
+
+<div class="section" id="module-sk_nlp.nlp_feature_extract.text_filter">
+<span id="sk-nlp-nlp-feature-extract-text-filter-module"></span><h2>sk_nlp.nlp_feature_extract.text_filter module</h2>
+<p>敏感词汇过滤模块，共实现了3个类：NaiveFilter，BSFilter，DFAFilter</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.text_filter.BSFilter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_extract.text_filter.</span></span><span class="sig-name descname"><span class="pre">BSFilter</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>宽度优先遍历的方式过滤</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.text_filter.BSFilter.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>新增一个敏感词</p>
+<p>:param keyword:敏感词
+:return:无</p>
+</dd></dl>
+
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.text_filter.BSFilter.filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'*'</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>过滤掉敏感词</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – 原始的输入句子</p></li>
+<li><p><strong>repl</strong> – 敏感词汇被替换成的字符</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message 屏蔽掉敏感词汇的句子</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">BSFilter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;台湾是中国的吗&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filter_question</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">filter_question</span><span class="p">)</span>
+<span class="go">台湾是中国的吗 *是中国的吗</span>
+</pre></div>
+</div>
+</dd></dl>
+</dd></dl>
+
+
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.text_filter.DFAFilter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_extract.text_filter.</span></span><span class="sig-name descname"><span class="pre">DFAFilter</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>DFA即Deterministic Finite Automaton，也就是确定有穷自动机。
+算法核心是建立了以敏感词为基础的许多敏感词树</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.text_filter.DFAFilter.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>新增一个敏感词</p>
+<p>:param keyword:敏感词
+:return:无</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.text_filter.DFAFilter.detect">
+<span class="sig-name descname"><span class="pre">detect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>判断message是否包含敏感词汇</p>
+<p>:param message:用户输入的句子
+:return: True/False</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.text_filter.DFAFilter.filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'*'</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>过滤掉敏感词</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – 原始的输入句子</p></li>
+<li><p><strong>repl</strong> – 敏感词汇被替换成的字符</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message 屏蔽掉敏感词汇的句子</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">DFAFilter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;台湾是中国的吗&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filter_question</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">filter_question</span><span class="p">)</span>
+<span class="go">台湾是中国的吗 *是中国的吗</span>
+</pre></div>
+</div>
+</dd></dl>
+</dd></dl>
+
+
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.text_filter.NaiveFilter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_extract.text_filter.</span></span><span class="sig-name descname"><span class="pre">NaiveFilter</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>普通的过滤方式：使用集合的方式过滤，时间复杂度跟集合的大小有关</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.text_filter.NaiveFilter.filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'*'</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>过滤掉敏感词</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – 原始的输入句子</p></li>
+<li><p><strong>repl</strong> – 敏感词汇被替换成的字符</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message：屏蔽掉敏感词汇的句子</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">NaiveFilter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;台湾是中国的吗&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filter_question</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">filter_question</span><span class="p">)</span>
+<span class="go">台湾是中国的吗 *是中国的吗</span>
+</pre></div>
+</div>
+</dd></dl>
+</dd></dl>
+</div>
+
+<div class="section" id="module-sk_nlp.nlp_feature_extract.tokenizer">
+<span id="sk-nlp-nlp-feature-extract-tokenizer-module"></span><h2>sk_nlp.nlp_feature_extract.tokenizer module</h2>
+<p>词语粒度的操作模块：分词，去停用词，同义词林转换</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.tokenizer.SentenceCut">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_extract.tokenizer.</span></span><span class="sig-name descname"><span class="pre">SentenceCut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_lower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stopword_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_chinese_synonyms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>句子分词操作类
+目前集成了jieba分词</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.tokenizer.SentenceCut.cut_word">
+<span class="sig-name descname"><span class="pre">cut_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sentence_list</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>对传进来的句子进行分词</p>
+<p>:param sentence_list:[‘我爱中国’, ‘我是中国人’]
+:return:seg_lists [[‘我’, ‘爱’, ‘中国’], [‘我’, ‘是’, ‘中国’, ‘人’]]  token_count {‘我’: 2, ‘爱’: 1, ‘中国’: 2, ‘是’: 1, ‘人’: 1}</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sen_cut</span> <span class="o">=</span> <span class="n">SentenceCut</span><span class="p">(</span><span class="n">use_chinese_synonyms</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">seg_lists</span><span class="p">,</span> <span class="n">token_count</span> <span class="o">=</span> <span class="n">sen_cut</span><span class="o">.</span><span class="n">cut_word</span><span class="p">([</span><span class="s1">&#39;我爱baidu&#39;</span><span class="p">,</span> <span class="s1">&#39;我是中国人&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">seg_lists</span><span class="p">,</span> <span class="n">token_count</span><span class="p">)</span>
+<span class="go">[[&#39;我&#39;, &#39;爱&#39;, &#39;百度&#39;], [&#39;我&#39;, &#39;是&#39;, &#39;中国&#39;, &#39;人&#39;]]</span>
+<span class="go">{&#39;我&#39;: 2, &#39;爱&#39;: 1, &#39;百度&#39;: 1, &#39;是&#39;: 1, &#39;中国&#39;: 1, &#39;人&#39;: 1}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.tokenizer.SentenceCut.load_chinese_synonyms">
+<span class="sig-name descname"><span class="pre">load_chinese_synonyms</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>加载同义词林</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>union_find （并查集实例），word_list（同义词林所有的单词集合）</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.tokenizer.StopWord">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_extract.tokenizer.</span></span><span class="sig-name descname"><span class="pre">StopWord</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">define_stop_word</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>停用词操作类：
+停用词汇表路径存放在 sk-nlp/data/stopword</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.tokenizer.StopWord.load_stop_word">
+<span class="sig-name descname"><span class="pre">load_stop_word</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>根据不同的self.source加载不同的停用词表</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>stop_word_list 停用词列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_extract.tokenizer.StopWord.merge_stop_word">
+<span class="sig-name descname"><span class="pre">merge_stop_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">define_stop_word</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>将用户自定义的停用词和用户指定的通用词库合并成一个list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>define_stop_word</strong> – 用户给的自定义停用词列表 list</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>stop_word_list 停用词列表</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl></div>
+
+
+
+<div class="section" id="sk-nlp-nlp-feature-embedding-package">
+<h1>sk_nlp.nlp_feature_embedding package</h1>
+</div>
+
+<div class="section" id="module-sk_nlp.nlp_feature_embedding.bert">
+<span id="sk-nlp-nlp-feature-embedding-bert-module"></span><h2>sk_nlp.nlp_feature_embedding.bert module</h2>
+<p>bert基本模型加载</p>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_embedding.bert.encoder">
+<span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_embedding.bert.</span></span><span class="sig-name descname"><span class="pre">encoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/machinelearn/wzh/sk_nlp/sk_nlp/model/bert/chinese_L-12_H-768_A-12/vocab.txt'</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>使用句向量模型，将句子转码成句向量</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – 模型</p></li>
+<li><p><strong>data_list</strong> – 句子列表（没有分词）</p></li>
+<li><p><strong>dict_path</strong> – bert模型词汇表</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>data_list中的每个句子对应的句向量列表</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">origin_model</span> <span class="o">=</span> <span class="n">load_bert_model</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new_model</span> <span class="o">=</span> <span class="n">build_model_feature</span><span class="p">(</span><span class="n">origin_model</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">question_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;我爱这个伟大的世界&quot;</span><span class="p">,</span> <span class="s2">&quot;欣赏世界的风景&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sen_vector_lists</span> <span class="o">=</span> <span class="n">encoder</span><span class="p">(</span><span class="n">new_model</span><span class="p">,</span> <span class="n">question_list</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sen_vector_lists</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_embedding.bert.load_bert_model">
+<span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_embedding.bert.</span></span><span class="sig-name descname"><span class="pre">load_bert_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_mlm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_pool</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_keras_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/machinelearn/wzh/sk_nlp/sk_nlp/model/bert/chinese_L-12_H-768_A-12/bert_config.json'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkpoint_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/machinelearn/wzh/sk_nlp/sk_nlp/model/bert/chinese_L-12_H-768_A-12/bert_model.ckpt'</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>加载bert 模型</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>with_mlm</strong> – 是否正则化</p></li>
+<li><p><strong>with_pool</strong> – 是否池化</p></li>
+<li><p><strong>return_keras_model</strong> – 返回的是keras model 还是 tensorflow 模型</p></li>
+<li><p><strong>config_path</strong> – bert 模型配置文件路径</p></li>
+<li><p><strong>checkpoint_path</strong> – bert 模型路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+</div>
+
+
+
+<div class="section" id="module-sk_nlp.nlp_feature_embedding.similarity">
+<span id="sk-nlp-nlp-feature-embedding-similarity-module"></span><h2>sk_nlp.nlp_feature_embedding.similarity module</h2>
+<p>计算各种距离</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_embedding.similarity.get_distance_sim_matrix">
+<span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_embedding.similarity.</span></span><span class="sig-name descname"><span class="pre">get_distance_sim_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cosine'</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>返回2个矩阵的各种距离和相似度</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>matrix1</strong> – 句子向量1</p></li>
+<li><p><strong>matrix2</strong> – 句子向量2</p></li>
+<li><p><strong>metric</strong> – ‘braycurtis’, ‘canberra’, ‘chebyshev’, ‘cityblock’, ‘correlation’,</p></li>
+</ul>
+</dd>
+</dl>
+<p>‘cosine’, ‘dice’, ‘euclidean’, ‘hamming’, ‘jaccard’, ‘jensenshannon’,
+‘kulsinski’, ‘mahalanobis’, ‘matching’, ‘minkowski’, ‘rogerstanimoto’,
+‘russellrao’, ‘seuclidean’, ‘sokalmichener’, ‘sokalsneath’, ‘sqeuclidean’,
+‘wminkowski’, ‘yule’
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_embedding.similarity.get_edit_distance">
+<span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_embedding.similarity.</span></span><span class="sig-name descname"><span class="pre">get_edit_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_sen_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">candidate_sen_list</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>计算编辑距离</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query_sen_list</strong> – 如[‘我爱中国’, ‘美国总统特朗普’]</p></li>
+<li><p><strong>candidate_sen_list</strong> – 如[‘我爱地球’, ‘美国总统拜登’]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_embedding.similarity.get_edit_similarity">
+<span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_embedding.similarity.</span></span><span class="sig-name descname"><span class="pre">get_edit_similarity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distance_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>先反转编辑距离矩阵，得到编辑相似度矩阵，然后可以选择归一化</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>distance_matrix</strong> – 距离矩阵</p></li>
+<li><p><strong>norm</strong> – True/False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_embedding.similarity.get_jaccard_sim">
+<span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_embedding.similarity.</span></span><span class="sig-name descname"><span class="pre">get_jaccard_sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sen_list1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sen_list2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>获得杰卡德相似度</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sen_list1</strong> – [[‘我’, ‘爱’,’中国’], [‘美国’, ‘总统’, ‘特朗普’]]</p></li>
+<li><p><strong>sen_list2</strong> – [[‘我’, ‘爱’,’地球’], [‘美国’, ‘总统’, ‘拜登’]]</p></li>
+</ul>
+</dd>
+</dl>
+<p>:param norm:是否对结果进行归一化
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_embedding.similarity.match_topk">
+<span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_embedding.similarity.</span></span><span class="sig-name descname"><span class="pre">match_topk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sim_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>返回相似度矩阵前topk/或者后topk</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sim_matrix</strong> – </p></li>
+<li><p><strong>topk</strong> – </p></li>
+<li><p><strong>order</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_embedding.similarity.normalization">
+<span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_embedding.similarity.</span></span><span class="sig-name descname"><span class="pre">normalization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reversed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>归一化矩阵，按照最后一个维度</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>matrix</strong> – </p></li>
+<li><p><strong>reversed</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+<div class="section" id="module-sk_nlp.nlp_feature_embedding.w2v">
+<span id="sk-nlp-nlp-feature-embedding-w2v-module"></span><h2>sk_nlp.nlp_feature_embedding.w2v module</h2>
+<p>传统的w2v模型:包含skip-gram和cbow
+目前有一个从wiki语料训练出来的100维度的skip-gram模型</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_embedding.w2v.WordEmbedding">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sk_nlp.nlp_feature_embedding.w2v.</span></span><span class="sig-name descname"><span class="pre">WordEmbedding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/machinelearn/wzh/sk_nlp/sk_nlp/model/w2v/skip_gram_wiki2Vec.h5'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_embedding.w2v.WordEmbedding.fine_tune">
+<span class="sig-name descname"><span class="pre">fine_tune</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_seg_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_file_path</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>基于已有的w2v模型，使用其他语料进行微调。然后保存模型路径。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>new_seg_list</strong> – 新句子（分词后）</p></li>
+<li><p><strong>model_file_path</strong> – 模型的保存路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">WordEmbedding</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span><span class="o">.</span><span class="n">get_embedding</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new_seg_list</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;我&#39;</span><span class="p">,</span> <span class="s1">&#39;爱&#39;</span><span class="p">,</span><span class="s1">&#39;中国&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;美国&#39;</span><span class="p">,</span> <span class="s1">&#39;总统&#39;</span><span class="p">,</span> <span class="s1">&#39;特朗普&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="n">new_seg_list</span><span class="p">,</span> <span class="n">file_conf</span><span class="o">.</span><span class="n">ft_wiki_sg_file_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sk_nlp.nlp_feature_embedding.w2v.WordEmbedding.train_vec">
+<span class="sig-name descname"><span class="pre">train_vec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sentence_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>使用w2v训练词向量</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentence_list</strong> – 句子列表，[[‘我’, ‘爱’,’中国’], [‘美国’, ‘总统’, ‘特朗普’]]</p></li>
+<li><p><strong>model_file_path</strong> – 模型保存路径</p></li>
+<li><p><strong>window</strong> – 滑动窗口</p></li>
+<li><p><strong>min_count</strong> – 最小词频</p></li>
+<li><p><strong>sg</strong> – 0是使用cbow, 1是使用跳字模型</p></li>
+</ul>
+</dd>
+</dl>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl></div></div>
+
+More Resources
+--------------
+
+-   [where is bert pre-train model]  https://github.com/google-research/bert
+-   [where is stopwords corpus]  https://github.com/goto456/stopwords
+-   [Official Python Packaging User Guide](https://packaging.python.org)
+-   [The Hitchhiker's Guide to Packaging]
+
+License
+-------
+
+This is free and unencumbered software released into the public domain.
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any means.
+
+
+
