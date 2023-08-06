@@ -1,0 +1,10 @@
+neo4j-driver
+textgrid
+conch_sounds
+librosa
+influxdb
+tqdm
+requests
+
+[testing]
+pytest
