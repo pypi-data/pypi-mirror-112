@@ -1,0 +1,4 @@
+baseobjects>=1.4.2
+
+[dev]
+pytest
