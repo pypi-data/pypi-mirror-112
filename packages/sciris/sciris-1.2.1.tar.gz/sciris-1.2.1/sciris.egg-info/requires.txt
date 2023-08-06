@@ -1,0 +1,20 @@
+matplotlib>=2.2.2
+numpy>=1.10.1
+pandas
+openpyxl
+openpyexcel>=2.5
+xlrd==1.2.0
+xlsxwriter
+psutil
+dill
+multiprocess
+jsonpickle
+gitpython
+jellyfish
+
+[:platform_system == "Linux"]
+line_profiler
+memory_profiler
+
+[:platform_system == "Windows"]
+colorama
