@@ -1,0 +1,14 @@
+LICENSE.md
+MANIFEST.in
+README.rst
+setup.py
+sa11y/__init__.py
+sa11y/analyze.py
+sa11y.egg-info/PKG-INFO
+sa11y.egg-info/SOURCES.txt
+sa11y.egg-info/dependency_links.txt
+sa11y.egg-info/requires.txt
+sa11y.egg-info/top_level.txt
+sa11y/__pycache__/__init__.cpython-39.pyc
+sa11y/__pycache__/analyze.cpython-39.pyc
+sa11y/scripts/axe.min.js
