@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: euklid
+Version: 0.1.7
+Summary: common vector operations [2D/3D]
+Home-page: http://github.com/airgproducts/euklid
+Author: airgproducts
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+
+# Euklid [2D and 3D vector operations]
+
+[![PyPI version](https://badge.fury.io/py/euklid.svg)](https://badge.fury.io/py/euklid)
+
+A c++ library with bindings for python to help dealing with common CAD-like operations:
+
+ * [Vectors](./src/vector/README.md)
+ * [PolyLines](./src/polyline/README.md)
+ * [Spline Curves](./src/spline/README.md)
+
+
+## Installation
+
+
+install via pip:
+
+`pip install euklid`
+
+
+
