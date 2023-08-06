@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: MovieHelper
+Version: 0.0.1
+Summary: Help Get Movie Link
+Home-page: https://github.com/pypa/sampleproject
+Author: Naruto
+Author-email: findjobs2019@126.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+这是一个获取电影链接的工具
+================
+获取美剧天堂（https://www.meijutt.tv/）中的指定页面中的链接
+-----------
+MovieLink.MovieLink.GetMovieLink 方法
+参数 url 是一个链接 例如https://www.meijutt.tv/content/meiju26573.html
+  
+
