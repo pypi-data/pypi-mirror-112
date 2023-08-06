@@ -1,0 +1,197 @@
+import kfp
+{% if engine == "Tekton" %}
+import kfp_tekton
+{% endif %}
+{% if kf_secured %}
+import requests
+import sys
+{% endif %}
+{% if cos_secret %}
+from kfp.aws import use_aws_secret
+{% endif %}
+from datetime import datetime
+from kfp_notebook.pipeline import NotebookOp
+
+
+@kfp.dsl.pipeline(
+   name='{{ pipeline_name }}',
+   description='{{ pipeline_description }}'
+)
+
+def create_pipeline():
+    {% set metrics_file = writable_container_dir ~ '/mlpipeline-metrics.json' %}
+    {% set metadata_file = writable_container_dir ~ '/mlpipeline-ui-metadata.json' %}
+    {% for key, operation in operations_list.items() %}
+        {% set op_name = operation.notebook_name.split('.') %}
+        {% set operation_id = op_name[0] | to_basename %}
+            # Operator for "{{ operation.notebook_name | to_basename }}"
+            notebook_op_{{ loop.index }} = NotebookOp(name='{{ operation_id }}',
+                                                      pipeline_name='{{ pipeline_name }}',
+                                                      experiment_name='{{ experiment_name }}',
+                                                      notebook='{{ operation.notebook_name | to_basename }}',
+                                                      cos_endpoint='{{ operation.cos_endpoint }}',
+                                                      cos_bucket='{{ operation.cos_bucket }}',
+                                                      cos_directory='{{ operation.cos_directory }}',
+                                                      cos_dependencies_archive='{{ operation.cos_dependencies_archive }}',
+                                                      pipeline_version='',
+                                                      pipeline_source='{{ operation.pipeline_source }}',
+                                                      pipeline_inputs={{ operation.pipeline_inputs }},
+                                                      pipeline_outputs={{ operation.pipeline_outputs }},
+        {% if operation.cpu_request %}
+                                                      cpu_request='{{ operation.cpu_request }}',
+        {% endif %}
+        {% if operation.mem_request %}
+                                                      mem_request='{{ operation.mem_request }}',
+        {% endif %}
+        {% if operation.gpu_limit %}
+                                                      gpu_limit='{{ operation.gpu_limit }}',
+        {% endif %}
+                                                      image='{{ operation.image }}',
+                                                      file_outputs={
+                                                        'mlpipeline-metrics': '{{ metrics_file }}',
+                                                        'mlpipeline-ui-metadata': '{{ metadata_file }}'})
+
+            notebook_op_{{ loop.index }}.name = '{{ operation.name }}'
+            notebook_op_{{ loop.index }}.env_variables = {{ operation.env_variables }}
+            notebook_op_{{ loop.index }}.dependent_names = {{ operation.dependent_names }}
+        {% if operation.container.image_pull_policy %}
+            notebook_op_{{ loop.index }}.container.image_pull_policy = '{{ operation.container.image_pull_policy }}'
+        {% endif %}
+        {% if cos_secret %}
+            ## Ensure that the secret named '{{ cos_secret }}' below is defined in the Kubernetes namespace '{{ namespace }}' where this pipeline will be run
+            notebook_op_{{ loop.index }}.apply(use_aws_secret('{{ cos_secret }}'))
+        {% endif %}
+
+    {% endfor %}
+
+{% if kf_secured %}
+def get_user_auth_session_cookie(url, username=None, password=None) -> dict:
+
+    # Return data structure
+    auth_info = {
+        'endpoint': url,                    # KF endpoint URL
+        'endpoint_response_url': None,      # KF redirect URL, if applicable
+        'endpoint_secured': False,          # True if KF is secured [by dex]
+        'authservice_session_cookie': None  # Set if KF secured & user auth'd
+    }
+
+    # Obtain redirect URL
+    get_response = requests.get(url)
+
+    auth_info['endpoint_response_url'] = get_response.url
+
+    # If KF redirected to '/dex/auth/local?req=REQ_VALUE'
+    # try to authenticate using the provided credentials
+    if 'dex/auth' in get_response.url:
+        auth_info['endpoint_secured'] = True  # KF is secured
+
+        # Try to authenticate user by sending a request to the
+        # Dex redirect URL
+        session = requests.Session()
+        session.post(get_response.url,
+                     data={'login': username,
+                           'password': password})
+        # Capture authservice_session cookie, if one was returned
+        # in the response
+        cookie_auth_key = 'authservice_session'
+        cookie_auth_value = session.cookies.get(cookie_auth_key)
+
+        if cookie_auth_value:
+            auth_info['authservice_session_cookie'] = \
+                f"{cookie_auth_key}={cookie_auth_value}"
+
+    return auth_info
+
+{% endif %}
+
+
+if __name__ == "__main__":
+
+{% if kf_secured %}
+    # user id and password are required parameters
+    if(len(sys.argv) < 3):
+        print(f'Invocation: python {sys.argv[0]} '
+               '<kf-user-id> <kf-password>')
+        sys.exit(1)
+
+    print('Trying to authenticate with Kubeflow server ...')
+
+    auth_endpoint = '{{ api_endpoint }}'.rstrip('/').replace('/pipeline','')
+
+    # authenticate
+    auth_info = get_user_auth_session_cookie(auth_endpoint,
+                                             sys.argv[1],
+                                             sys.argv[2])
+
+    if auth_info['endpoint_secured'] and \
+        auth_info['authservice_session_cookie'] is None:
+        print('Authentication failed. Check your credentials.')
+        sys.exit(1)
+
+    auth_cookie = auth_info['authservice_session_cookie']
+{% else %}
+    auth_cookie = None
+{% endif %}
+
+    pipeline_func = create_pipeline
+    pipeline_name = '{{ pipeline_name }}'
+    pipeline_archive = pipeline_name + '.pipeline.tgz'
+    experiment_name = '{{ experiment_name }}'
+
+    timestamp = datetime.now().strftime("%m%d%H%M%S")
+
+    print('Compiling pipeline using {{ engine }} compiler ...')
+{% if engine == "Tekton" %}
+    kfp_tekton.compiler.TektonCompiler().compile(pipeline_func, pipeline_archive)
+
+    client = kfp_tekton.TektonClient(host='{{ api_endpoint }}',
+                                     cookies=auth_cookie)
+{% else %}
+    kfp.compiler.Compiler().compile(pipeline_func, pipeline_archive)
+
+    client = kfp.Client(host='{{ api_endpoint }}',
+                        cookies=auth_cookie)
+{% endif %}
+
+    pipeline_id = client.get_pipeline_id(pipeline_name)
+    if pipeline_id is None:
+        # Upload new pipeline. The call returns a unique pipeline id.
+        print(f'Uploading pipeline {pipeline_name} ...')
+        kfp_pipeline = \
+            client.upload_pipeline(pipeline_archive,
+                                   pipeline_name,
+                                   '{{ pipeline_description }}')
+        pipeline_id = kfp_pipeline.id
+        version_id = None     
+    else:
+        # Append timestamp to generate unique version name
+        pipeline_version_name = f'{pipeline_name}-{timestamp}'
+        # Upload a pipeline version. The call returns a unique version id.
+        print(f'Uploading pipeline version {pipeline_version_name} ...')
+        kfp_pipeline = \
+            client.upload_pipeline_version(pipeline_archive,
+                                           pipeline_version_name,
+                                           pipeline_id=pipeline_id)
+        version_id = kfp_pipeline.id
+
+    # Create an experiment
+    print(f'Creating experiment {experiment_name} ...')
+    experiment = client.create_experiment(experiment_name,
+    {% if namespace is none  %}
+                                          namespace=None)
+    {% else %}
+                                          namespace='{{ namespace }}')
+    {% endif %}
+
+    # Generate unique identifier for the pipeline run
+    run_name = f'{pipeline_name}-{timestamp}'
+
+    # Run the pipeline (or specified pipeline version)
+    print(f'Starting pipeline run {run_name} ...')
+    run = client.run_pipeline(experiment_id=experiment.id,
+                              job_name=run_name,
+                              pipeline_id=pipeline_id,
+                              version_id=version_id)
+
+    print('Pipeline run monitoring URL: '
+          f'{{ api_endpoint }}/#/runs/details/{run.id}')
