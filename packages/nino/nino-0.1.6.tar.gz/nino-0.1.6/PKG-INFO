@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: nino
+Version: 0.1.6
+Summary: A small unofficial AniList API wrapper made for python
+Home-page: https://github.com/an-dyy/nino
+License: MIT
+Keywords: AniList
+Author: Andy
+Author-email: yrisxl@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0)
+Requires-Dist: ratelimit (>=2.2.1,<3.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Project-URL: Repository, https://github.com/an-dyy/nino
+Description-Content-Type: text/markdown
+
+# Basic usage
+
+Character
+```py
+from nino import AniClient
+
+with AniClient() as client:
+    character = client.character("Momonga")
+    print(character.name)
+
+```
+
+Anime
+```py
+from nino import AniClient
+
+with AniClient() as client:
+    anime = client.anime("Overlord")
+    print(anime.title)
+
+```
