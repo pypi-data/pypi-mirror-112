@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: colorful-print
+Version: 0.0.4
+Summary: Can use it to color print.
+Home-page: https://github.com/sanggi-wjg/color_print.git
+Author: SangGi
+Author-email: girr311@naver.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# color_print
+
+[![PyPI version](https://badge.fury.io/py/colorful_print.svg)](https://badge.fury.io/py/colorful_print)
+[![PyPI](https://img.shields.io/pypi/pyversions/colorful_print.svg)](https://pypi.python.org/pypi/colorful_print)
+
+Example
+
+![colorful example](tests/example.png)
+
+```python
+from colorful_print import color
+
+color.black('Print Black')
+color.red('Print Red')
+color.green('Print Green')
+color.yellow('Print Yellow')
+color.blue('Print Blue')
+color.magenta('Print Magenta')
+color.cyan('Print Cyan')
+color.white('Print White')
+
+print()
+color.red('Print Red')
+color.green('Print Bold Green', bold = True)
+color.yellow('Print Bold Italic Yellow', bold = True, italic = True)
+color.blue('Print Bold Italic Underline Blue', bold = True, italic = True, underline = True)
+color.magenta('Print Bold Italic Underline StrikeOut Magenta', bold = True, italic = True, underline = True, strike_out = True)
+color.cyan('Print Bold Italic Underline Reverse Cyan', bold = True, italic = True, underline = True, reverse = True)
+color.white('Print Bold Italic Underline StrikeOut Reverse White', bold = True, italic = True, underline = True, strike_out = True, reverse = True)
+```
+
+Usage
+```shell script
+pip install colorful_print
+```
+
