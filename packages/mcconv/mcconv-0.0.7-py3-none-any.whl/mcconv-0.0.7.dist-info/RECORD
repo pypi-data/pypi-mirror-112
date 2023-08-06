@@ -1,0 +1,17 @@
+mcconv/__init__.py,sha256=SyYkaWmVHrSbUGcwFl7yZMu_K-sU0GNiuaxzSWke1Nw,2746
+mcconv/detect.py,sha256=dl21Yj6vxHYDbAJf4R5HTp3TUMlIgIuLZ6hETDFNgso,1183
+mcconv/eic_smear_reader.py,sha256=Kek4d-EVvFLII11t8WzlXNgr2vySetx4lqIR1gQWz8A,3889
+mcconv/file_types.py,sha256=1JTMK9hdJRw9TXdsAx1c-ldfszuoLY44wkfXi0zp1QA,1318
+mcconv/generic_reader.py,sha256=3SpS4QrEtgLJ6wufnquTrDRsaECtUB297MCoqDCOmcI,7669
+mcconv/hepmc_convert.py,sha256=4y013MKbM6xWeywuXgCQtae7-Ijyq9lZzLifPrL5UXk,6151
+mcconv/readers.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcconv/version.py,sha256=yVWm0RHqa0W_i1pIaG83MUq8GthluA-06snzbpPBzks,187
+mcconv/formats/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcconv/formats/beagle.py,sha256=xS3ymrVofF2BTasrRCBvizWspAyCc_Gj2SC3HvD-36k,16690
+mcconv/formats/lund.py,sha256=y_UrLzgTw8h_-lEoZT0nfx19diLEVff803lz0OSGgsk,7953
+mcconv-0.0.7.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+mcconv-0.0.7.dist-info/METADATA,sha256=StMDXJFBVg3aUhd2Rt2ZAUrLVnyvdR3VpHlcQIp3YXA,1251
+mcconv-0.0.7.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mcconv-0.0.7.dist-info/entry_points.txt,sha256=-izJu_ePqLEXOfP6Vja53MPTD63M34alEDiQOEl7rKs,90
+mcconv-0.0.7.dist-info/top_level.txt,sha256=vn7_uBBZhVTIWt4s9LB0ShSun943hawaDu-OTEvBu4k,7
+mcconv-0.0.7.dist-info/RECORD,,

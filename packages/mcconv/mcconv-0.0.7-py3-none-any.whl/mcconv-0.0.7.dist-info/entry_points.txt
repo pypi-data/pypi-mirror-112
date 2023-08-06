@@ -1,0 +1,4 @@
+[console_scripts]
+eic2hepmc = mcconv:hepmc_convert_cli
+mcconv = mcconv:hepmc_convert_cli
+
