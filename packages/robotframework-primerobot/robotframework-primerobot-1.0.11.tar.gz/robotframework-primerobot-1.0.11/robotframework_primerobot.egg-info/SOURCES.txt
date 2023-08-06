@@ -1,0 +1,10 @@
+setup.py
+robotframework_primerobot/ElasticLibrary.py
+robotframework_primerobot/LoggerListener.py
+robotframework_primerobot/PrimeRobot.py
+robotframework_primerobot/__init__.py
+robotframework_primerobot.egg-info/PKG-INFO
+robotframework_primerobot.egg-info/SOURCES.txt
+robotframework_primerobot.egg-info/dependency_links.txt
+robotframework_primerobot.egg-info/requires.txt
+robotframework_primerobot.egg-info/top_level.txt
