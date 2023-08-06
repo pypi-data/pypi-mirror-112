@@ -1,0 +1,11 @@
+README.md
+setup.py
+quick_xinput/__init__.py
+quick_xinput/__main__.py
+quick_xinput/console.py
+quick_xinput/xfuncs.py
+quick_xinput.egg-info/PKG-INFO
+quick_xinput.egg-info/SOURCES.txt
+quick_xinput.egg-info/dependency_links.txt
+quick_xinput.egg-info/top_level.txt
+test/test_xfuncs.py
