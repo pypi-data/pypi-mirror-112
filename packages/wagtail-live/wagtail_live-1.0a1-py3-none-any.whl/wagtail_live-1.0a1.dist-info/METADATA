@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: wagtail-live
+Version: 1.0a1
+Summary: An app for high speed content publishing from a messaging app to a Wagtail site.
+Home-page: https://github.com/wagtail/wagtail-live/
+Author: Tidiane Dia and Wagtail Core Team
+Author-email: hello@wagtail.io
+License: BSD-3-Clause
+Project-URL: Documentation, https://wagtail.github.io/wagtail-live/
+Project-URL: Source, https://github.com/wagtail/wagtail-live/
+Project-URL: Issue tracker, https://github.com/wagtail/wagtail-live/issues/
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Framework :: Django
+Classifier: Framework :: Wagtail
+Classifier: Framework :: Wagtail :: 2
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: wagtail (>=2.12)
+Provides-Extra: build
+Requires-Dist: twine ; extra == 'build'
+Requires-Dist: check-wheel-contents ; extra == 'build'
+Provides-Extra: docs
+Requires-Dist: mkdocs (<1.2,>=1.1) ; extra == 'docs'
+Requires-Dist: mkdocs-material (<7.2,>=7.1) ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: black (==21.5b2) ; extra == 'test'
+Requires-Dist: isort (==5.8.0) ; extra == 'test'
+Requires-Dist: flake8 (==3.9.2) ; extra == 'test'
+Requires-Dist: pytest (<6.3,>=6.2) ; extra == 'test'
+Requires-Dist: pytest-cov (<3,>=2.12) ; extra == 'test'
+Requires-Dist: pytest-django (<5,>=4.3.0) ; extra == 'test'
+Requires-Dist: pytest-factoryboy (<3,>=2.1.0) ; extra == 'test'
+Requires-Dist: wagtail-factories (<3,>=2.0.1) ; extra == 'test'
+
+# Wagtail Live
+
+High speed publishing from messaging app to a Wagtail live blog.
+
+## Documentation
+
+[https://wagtail.github.io/wagtail-live/](https://wagtail.github.io/wagtail-live/)
+
