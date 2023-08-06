@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+kedro_alpiq/__init__.py
+kedro_alpiq.egg-info/PKG-INFO
+kedro_alpiq.egg-info/SOURCES.txt
+kedro_alpiq.egg-info/dependency_links.txt
+kedro_alpiq.egg-info/top_level.txt
