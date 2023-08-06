@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: todus3
+Version: 0.3.0
+Summary: ToDus client
+Home-page: https://github.com/oleksis/todus/tree/todus3
+Author: adbenitez
+Author-email: adbenitez@nauta.cu
+Maintainer: Oleksis Fraga
+Maintainer-email: oleksis.fraga@gmail.com
+License: MPL
+Keywords: todus,s3,client
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: py7zr (>=0.16.1)
+Requires-Dist: multivolumefile (>=0.2.3)
+Provides-Extra: dev
+Requires-Dist: black (>=21.6b0) ; extra == 'dev'
+Requires-Dist: flake8 (>=3.9.2) ; extra == 'dev'
+Requires-Dist: mypy (>=0.910) ; extra == 'dev'
+Requires-Dist: types-requests (>=2.25.0) ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest (>=6.2.4) ; extra == 'test'
+
+# ToDus client for S3
+
+[![](https://img.shields.io/pypi/v/todus3.svg)](https://pypi.org/project/todus3)
+[![](https://img.shields.io/pypi/pyversions/todus3.svg)](
+https://pypi.org/project/todus3)
+[![](https://img.shields.io/pypi/l/todus3.svg)](https://pypi.org/project/todus3)
+[![CI](https://github.com/oleksis/todus/actions/workflows/python-ci.yml/badge.svg)](https://github.com/oleksis/todus/actions/workflows/python-ci.yml)
+[![](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+Use the ToDus API in your Python projects.
+
+## Install
+
+To install run::
+```bash
+  pip install todus3
+```
+
+## Usage
+```bash
+todus3 -- help
+
+todus3 -n 53123456 login
+
+todus3 -n 53123456 download file.txt
+
+todus3 -n 53123456 upload binary.zip -p 10485760
+```
+
+
