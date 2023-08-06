@@ -1,0 +1,7 @@
+lyrebird
+jsonschema
+
+[dev]
+autopep8
+pylint
+pytest
