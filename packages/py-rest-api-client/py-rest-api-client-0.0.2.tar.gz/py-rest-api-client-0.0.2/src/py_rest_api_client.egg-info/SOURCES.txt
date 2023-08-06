@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/py_rest_api_client.egg-info/PKG-INFO
+src/py_rest_api_client.egg-info/SOURCES.txt
+src/py_rest_api_client.egg-info/dependency_links.txt
+src/py_rest_api_client.egg-info/requires.txt
+src/py_rest_api_client.egg-info/top_level.txt
+src/rest_api_client/__init__.py
+src/rest_api_client/lib.py
+test/test_lib.py
