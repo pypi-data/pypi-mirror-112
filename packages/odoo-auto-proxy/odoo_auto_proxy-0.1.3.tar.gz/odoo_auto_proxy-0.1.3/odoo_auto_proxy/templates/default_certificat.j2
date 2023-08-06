@@ -1,0 +1,10 @@
+server {
+  listen 80 default_server;
+  # Let's Encrypt challenges
+  location /.well-known {
+    root /var/www/letsencrypt;
+  }
+  location / {
+    return 404;
+  }
+}

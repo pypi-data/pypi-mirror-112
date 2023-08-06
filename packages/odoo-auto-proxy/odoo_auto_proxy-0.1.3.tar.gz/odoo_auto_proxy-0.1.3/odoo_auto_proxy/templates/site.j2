@@ -1,0 +1,184 @@
+###################
+# ** DO NOT EDIT ** 
+###################
+
+{% if not config.httpaccess %}
+server {
+  server_name {{ config.server_name }};
+  listen 80;
+
+{% if config.httpsaccess %}
+  location / {
+    rewrite ^/.*$ https://$host$request_uri? permanent;
+  }
+
+{% if config.posbox %}
+  location /pos/web {
+    proxy_pass http://{{ config.web_upstream }};
+  }
+{% endif %}
+{% endif %}
+
+  # Let's Encrypt challenges
+  location /.well-known {
+    root /var/www/letsencrypt;
+  }
+}
+{% endif %}
+server {
+  server_name {{ config.server_name }};
+{% if config.httpaccess %}
+  listen 80;
+{% endif %}
+{% if config.httpsaccess %}
+  listen 443 ssl;
+
+  # TLS stuffs
+  {% if config.ssl_certificate %}
+  ssl_certificate    {{ config.ssl_certificate }};
+  {% else %}
+  ssl_certificate     /etc/letsencrypt/live/{{ config.certificate_folder }}/fullchain.pem;
+  {% endif %}
+
+  {% if config.ssl_certificate_key %}
+  ssl_certificate_key {{ config.ssl_certificate_key }};
+  {% else %}
+  ssl_certificate_key /etc/letsencrypt/live/{{ config.certificate_folder }}/privkey.pem;
+  {% endif %}
+  keepalive_timeout   60;
+  ssl_ciphers             HIGH+EECDH:!DSS@STRENGTH;
+  ssl_protocols
+    {% if config.allow_tls_v1 %}
+      TLSv1
+      TLSv1.1
+    {% endif %}
+    TLSv1.2;
+  ssl_prefer_server_ciphers on;
+  ssl_session_timeout 30m;
+{% if config.enable_hsts %}
+  add_header Strict-Transport-Security max-age=31556926;
+{% endif %}
+
+{% if config.ssl_trusted_certificate %}
+ssl_trusted_certificate {{ config.ssl_trusted_certificate }};
+{% else %}
+ssl_trusted_certificate /etc/letsencrypt/live/{{ config.certificate_folder }}/chain.pem;
+{% endif %}
+
+{% if not config.disable_stapling %}
+
+  ssl_stapling on;
+  ssl_stapling_verify on;
+{% endif %}
+{% endif %}
+
+{% if config.redirect %}
+  location / {
+    rewrite ^/.*$ {{ config.redirect }}$request_uri? permanent;
+    {% if config.ip_allow %}
+      {% for allow_ip in config.ip_allow %}
+        allow {{ allow_ip }};
+      {% endfor %}
+    {% endif %}
+    {% if config.ip_deny %}
+      {% for deny_ip in config.ip_deny %}
+        deny {{ deny_ip }};
+      {% endfor %}
+    {% endif %}
+  }
+
+{% else %}
+  # proxy-mode special headers
+  proxy_set_header X-Forwarded-Host
+    {% if config.masquerade %}
+      {{ config.masquerade }}
+    {% else %}
+      $host
+    {% endif %};
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_set_header X-Real-IP $remote_addr;
+
+  location / {
+    {% if config.proxy_pass %}
+    proxy_pass http://{{ config.proxy_pass }};
+    {% endif %}
+    {% if config.masquerade %}
+    proxy_redirect $scheme://{{ config.masquerade }}/ $scheme://$host/;
+    {% endif %}
+    {% if config.proxy_http_11 %}
+    proxy_http_version 1.1;
+    {% endif %}
+    {% if config.header_upgrade %}
+    proxy_set_header Upgrade $http_upgrade;
+    {% endif %}
+    {% if config.header_connection %}
+    proxy_set_header Connection "upgrade";
+    {% endif %}
+    {% if config.header_host %}
+    proxy_set_header Host $host;
+    {% endif %}
+    {% if config.ip_allow %}
+      {% for allow_ip in config.ip_allow %}
+        allow {{ allow_ip }};
+      {% endfor %}
+    {% endif %}
+    {% if config.ip_deny %}
+      {% for deny_ip in config.ip_deny %}
+        deny {{ deny_ip }};
+      {% endfor %}
+    {% endif %}
+  }
+
+{% if not config.disable_longpolling %}
+  # So 'Discuss' works properly
+  location /longpolling {
+    proxy_pass http://{{ config.poll_upstream }};
+  }
+{% endif %}
+
+{% if config.posbox %}
+  location /web/login {
+    if ($scheme = http) {
+      rewrite ^/.*$ https://$host$request_uri? permanent;
+    }
+    proxy_pass http://{{ config.web_upstream }};
+  }
+
+  location /pos/web {
+    if ($scheme = https) {
+      rewrite ^/.*$ http://$host$request_uri? permanent;
+    }
+    proxy_pass http://{{ config.web_upstream }};
+  }
+{% endif %}
+
+  # optimizing dynamic content
+  proxy_buffering off;
+
+{% if not config.cache_statics %}
+  # optimizing static content
+  location ~ ^/[a-zA-Z0-9_-]+/static {
+    proxy_buffering on;  # required for caching
+    {% if not config.disable_cache_zone %}
+    # proxy_cache cache_zone;
+    {% endif %}
+    proxy_cache_lock on;
+    proxy_cache_valid 1m;
+    proxy_pass http://{{ config.web_upstream }};
+    expires 24h;
+  }
+{% endif %}
+{% endif %}
+
+{% if config.httpaccess %}
+  # Let's Encrypt challenges
+  location /.well-known {
+    root /var/www/letsencrypt;
+  }
+{% endif %}
+
+  proxy_read_timeout 720s;
+  proxy_connect_timeout 720s;
+  proxy_send_timeout 720s;
+}
