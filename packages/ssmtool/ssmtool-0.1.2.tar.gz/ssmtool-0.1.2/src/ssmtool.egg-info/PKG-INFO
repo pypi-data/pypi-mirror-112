@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ssmtool
+Version: 0.1.2
+Summary: A simple, effective sentence mining tool.
+Home-page: https://github.com/FreeLanguageTools/ssmtool
+Author: FreeLanguageTools
+Author-email: shaoyu0209@tuta.io
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: X11 Applications :: Qt
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# SimpleSentenceMining
+
+
