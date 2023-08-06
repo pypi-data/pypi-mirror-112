@@ -1,0 +1,2 @@
+(self.webpackChunkstatic=self.webpackChunkstatic||[]).push([[6289],{86289:function(e,t,c){"use strict";c.r(t);var a=c(67294),s=c(86321);t.default=({text:e,children:t})=>a.createElement("div",{className:"code-block-container"},t,a.createElement(s.Z1,{text:e,language:"sql",theme:s.lf,showLineNumbers:!1,wrapLines:!0,codeBlock:!0}))}}]);
+//# sourceMappingURL=6289.59d893621f5a474e20be.js.map
