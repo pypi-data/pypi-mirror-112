@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+src/pySatellite.egg-info/PKG-INFO
+src/pySatellite.egg-info/SOURCES.txt
+src/pySatellite.egg-info/dependency_links.txt
+src/pySatellite.egg-info/top_level.txt
+src/pysatellite/__init__.py
+src/pysatellite/rocket.py
+src/pysatellite/satellite.py
