@@ -1,0 +1,12 @@
+README.md
+setup.py
+SeqIO/CeleritasSeqReader.py
+SeqIO/SeqReader.py
+SeqIO/__init__.py
+SeqIO/process.py
+SeqIO/version.py
+seq_io.egg-info/PKG-INFO
+seq_io.egg-info/SOURCES.txt
+seq_io.egg-info/dependency_links.txt
+seq_io.egg-info/requires.txt
+seq_io.egg-info/top_level.txt
