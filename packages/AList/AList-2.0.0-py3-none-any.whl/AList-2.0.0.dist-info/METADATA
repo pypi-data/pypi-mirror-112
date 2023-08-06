@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: AList
+Version: 2.0.0
+Summary: Anime/manga manager with other features
+Home-page: http://github.com/AlexisHuvier/AList
+Author: LavaPower
+Author-email: lavapower84@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: French
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: jikanpy
+Requires-Dist: Pillow
+Requires-Dist: googletrans (~=3.1.0a0)
+
+UNKNOWN
+
+

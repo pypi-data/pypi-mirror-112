@@ -1,0 +1,3 @@
+[console_scripts]
+alist = alist.AList:launch
+
