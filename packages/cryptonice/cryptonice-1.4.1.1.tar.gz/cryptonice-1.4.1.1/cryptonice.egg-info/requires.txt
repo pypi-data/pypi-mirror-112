@@ -1,0 +1,5 @@
+beautifulsoup4>=4.9.0
+dnspython>=2.0.0
+regex>=2020.5.14
+sslyze>=4.0.0
+urllib3>=1.22
