@@ -1,0 +1,23 @@
+-r requirements.txt
+
+Sphinx==4.0.3
+bandit==1.7.0
+black==21.6b0
+bump2version==1.0.1
+codecov==2.1.11
+coverage==5.5
+darglint==1.8.0
+flake8==3.9.2
+grip==4.5.2
+isort==5.9.2
+mypy==0.910
+pep8-naming==0.12.0
+pytest-aiohttp==0.3.0
+pytest-cov==2.12.1
+pytest-xprocess==0.17.1
+pytest==6.2.4
+sphinx-autodoc-typehints==1.12.0
+
+setuptools
+twine==3.4.1
+wheel
