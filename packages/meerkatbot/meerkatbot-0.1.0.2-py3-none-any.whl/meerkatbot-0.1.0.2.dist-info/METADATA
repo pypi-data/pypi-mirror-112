@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: meerkatbot
+Version: 0.1.0.2
+Summary: MeerkatBot is an extra layout to discord py
+Home-page: https://github.com/lautaumpierrez/meerkatbot.git
+Author: Lautaro Umpiérrez
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: discord
+Requires-Dist: asyncio
+
+# MEERCAT LIBRARY
+> It is an extra layout to discord.py library, writen to improve the discord bots architecture.
+
