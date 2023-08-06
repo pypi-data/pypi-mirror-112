@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: faster_parser
+Version: 0.1.0
+Summary: Util function to process data concurrently
+Home-page: https://github.com/paul-armstrong-dev/faster_parser
+Author: Paul Armstrong
+Author-email: paul.armstrong211@gmail.com
+License: MIT license
+Keywords: faster_parser
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+=============
+Faster Parser
+=============
+
+
+.. image:: https://img.shields.io/pypi/v/faster_parser.svg
+        :target: https://pypi.python.org/pypi/faster_parser
+
+.. image:: https://img.shields.io/travis/paul-armstrong-dev/faster_parser.svg
+        :target: https://travis-ci.com/paul-armstrong-dev/faster_parser
+
+.. image:: https://readthedocs.org/projects/faster-parser/badge/?version=latest
+        :target: https://faster-parser.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+Util function to process data concurrently
+
+
+* Free software: MIT license
+* Documentation: https://faster-parser.readthedocs.io.
+
+
+Features
+--------
+
+* See readme.md
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2021-07-10)
+------------------
+
+* First release on PyPI.
+
+
