@@ -1,0 +1,12 @@
+README.md
+setup.py
+dg_ai_platform/__init__.py
+dg_ai_platform/dg_platform.py
+dg_ai_platform/example.py
+dg_ai_platform/test.py
+dg_ai_platform/utils.py
+dg_ai_platform.egg-info/PKG-INFO
+dg_ai_platform.egg-info/SOURCES.txt
+dg_ai_platform.egg-info/dependency_links.txt
+dg_ai_platform.egg-info/requires.txt
+dg_ai_platform.egg-info/top_level.txt
