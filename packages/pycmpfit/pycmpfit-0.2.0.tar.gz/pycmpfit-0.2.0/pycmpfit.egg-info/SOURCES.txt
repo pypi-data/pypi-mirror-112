@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pycmpfit.pyx
+setup.py
+cmpfit-1.4/mpfit.c
+cmpfit-1.4/mpfit.h
+pycmpfit.egg-info/PKG-INFO
+pycmpfit.egg-info/SOURCES.txt
+pycmpfit.egg-info/dependency_links.txt
+pycmpfit.egg-info/top_level.txt
