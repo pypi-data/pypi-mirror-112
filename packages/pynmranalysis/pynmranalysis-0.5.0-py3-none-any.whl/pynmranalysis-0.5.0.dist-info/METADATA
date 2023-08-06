@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pynmranalysis
+Version: 0.5.0
+Summary: python library for nmr quantification and analysis
+Home-page: UNKNOWN
+Author: Feres
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: pyod (==0.9.0)
+
+UNKNOWN
+
+
