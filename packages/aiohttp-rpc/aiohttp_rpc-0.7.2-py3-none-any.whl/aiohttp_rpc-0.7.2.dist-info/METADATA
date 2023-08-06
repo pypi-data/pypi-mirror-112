@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: aiohttp-rpc
+Version: 0.7.2
+Summary: 
+Author: expert-m
+Author-email: michael@sulyak.info
+Requires-Python: >=3.6.5,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiohttp (>=3.7.3,<4.0.0)
