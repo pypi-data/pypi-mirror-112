@@ -1,0 +1,3 @@
+[console_scripts]
+cellxgene = backend.server.cli.cli:cli
+
