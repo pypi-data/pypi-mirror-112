@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: odoo14-addons-oca-purchase-reporting
+Version: 14.0.20210712.0
+Summary: Meta package for oca-purchase-reporting Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo14-addon-purchase-backorder
+
+UNKNOWN
+
