@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+README.md.html
+setup.py
+atto/__init__.py
+atto/atto.py
+atto.egg-info/PKG-INFO
+atto.egg-info/SOURCES.txt
+atto.egg-info/dependency_links.txt
+atto.egg-info/entry_points.txt
+atto.egg-info/requires.txt
+atto.egg-info/top_level.txt
