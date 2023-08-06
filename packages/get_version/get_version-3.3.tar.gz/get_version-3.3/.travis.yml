@@ -1,0 +1,16 @@
+dist: xenial
+language: python
+cache: pip
+python:
+  - '3.7'
+  - '3.9'
+branches:
+  only:
+  - master  # All other branches should become (draft) PRs and be build that way
+
+install:
+  - pip install -U pip coveralls
+  - pip install .[test]
+script:
+  - PYTHONPATH=. pytest --cov=get_version --black
+after_success: coveralls
