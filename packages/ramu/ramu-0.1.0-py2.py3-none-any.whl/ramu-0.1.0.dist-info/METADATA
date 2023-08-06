@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: ramu
+Version: 0.1.0
+Summary: Indian Jarvis
+Home-page: https://github.com/rameshoswal/ramu
+Author: Ramesh Oswal
+Author-email: rameshoswal@gmail.com
+License: UNKNOWN
+Keywords: ramu
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Requires-Dist: Click (>=7.0)
+
+====
+ramu
+====
+
+
+
+
+
+
+Indian Jarvis
+
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2021-07-09)
+------------------
+
+* First release on PyPI.
+
+
