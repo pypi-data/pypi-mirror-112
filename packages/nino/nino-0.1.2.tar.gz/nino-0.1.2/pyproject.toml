@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "nino"
+version = "0.1.2"
+description = "A small unofficial AniList API wrapper made for python"
+authors = ["Andy <yrisxl@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/an-dyy/anilist-wrapper"
+repository = "https://github.com/an-dyy/anilist-wrapper"
+keywords = ["AniList"]
+packages = [{include = "nino"}]
+include = ["LICENSE"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+aiohttp = "^3.7.4"
+requests = "^2.25.1"
+flake8 = "^3.9.2"
+ratelimit = "^2.2.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
