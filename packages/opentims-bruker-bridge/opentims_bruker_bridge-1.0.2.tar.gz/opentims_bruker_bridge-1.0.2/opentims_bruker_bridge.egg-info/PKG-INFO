@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: opentims-bruker-bridge
+Version: 1.0.2
+Summary: Bruker dll and so files.
+Home-page: https://github.com/MatteoLacki/opentims_bruker_bridge.git
+Author: MatteoLacki
+Author-email: matteo.lacki@gmail.com
+License: UNKNOWN
+Description: Files needed to run conversion: time of flight to mass over charge and scan number to drift time.
+Keywords: OpenTIMS,TimsTOF
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
