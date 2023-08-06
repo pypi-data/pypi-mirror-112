@@ -1,0 +1,3 @@
+[console_scripts]
+textflint = textflint.textflint_cli:main
+
