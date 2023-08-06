@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "flyyer"
+version = "2.0.0"
+description = "FLYYER.com helper classes and methods"
+authors = ["Patricio López Juri <patricio@flyyer.io>", "Franco Méndez Z <franco@flyyer.io>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://flyyer.io/"
+repository = "https://github.com/useflyyer/flyyer-python"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+typing-extensions = "^3.7.4"
+PyJWT = "^2.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = {version = "*", allow-prereleases = true}
+pylint = "^2.5.3"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
