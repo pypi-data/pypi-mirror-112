@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: flask-oas-validation
+Version: 0.1
+Summary: Test description
+Home-page: https://github.com/petergoedeke/flask-oas-validation
+Author: Peter Goedeke
+Author-email: peterbgoedeke@gmail.com
+License: GNU GENERAL PUBLIC LICENSE
+Download-URL: https://github.com/petergoedeke/flask-oas-validation/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: flask,openapi,oas,validation,automatic
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
