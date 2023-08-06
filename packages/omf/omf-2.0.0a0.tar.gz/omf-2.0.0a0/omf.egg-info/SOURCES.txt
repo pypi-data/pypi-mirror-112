@@ -1,0 +1,17 @@
+README.rst
+setup.py
+omf/__init__.py
+omf/attribute.py
+omf/base.py
+omf/blockmodel.py
+omf/composite.py
+omf/fileio.py
+omf/lineset.py
+omf/pointset.py
+omf/surface.py
+omf/texture.py
+omf.egg-info/PKG-INFO
+omf.egg-info/SOURCES.txt
+omf.egg-info/dependency_links.txt
+omf.egg-info/requires.txt
+omf.egg-info/top_level.txt
