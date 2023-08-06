@@ -1,0 +1,3 @@
+[console_scripts]
+hoopa = hoopa.commands.cmdline:execute
+
