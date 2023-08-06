@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: useful_layers
+Version: 0.0a0.dev1
+Summary:  Useful Layers is a torch based library containing some experimental, but useful layers 
+Home-page: https://jernsting.github.io/useful_layers/
+Author: Jan Ernsting
+Author-email: j.ernsting@uni-muenster.de
+License: UNKNOWN
+Download-URL: https://github.com/jernsting/useful_layers/archive/0.0a0.dev1.tar.gz
+Project-URL: Source Code, https://github.com/jernsting/useful_layers
+Project-URL: Documentation, https://jernsting.github.io/useful_layers/
+Project-URL: Bug Tracker, https://github.com/jernsting/useful_layers/issues
+Keywords: machine learning,deep learning,experimental,science
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Useful Layers
+
+![build_and_test workflow](https://github.com/jernsting/useful_layers/actions/workflows/build_and_test.yml/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jernsting_useful_layers&metric=alert_status)](https://sonarcloud.io/dashboard?id=jernsting_useful_layers)
+![GitHub license](https://img.shields.io/github/license/jernsting/useful_layers)
+[![Coverage Status](https://coveralls.io/repos/github/jernsting/useful_layers/badge.svg?branch=master)](https://coveralls.io/github/jernsting/useful_layers?branch=master)
+
+
+![](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+
+
+
+## Install
+
+```bash
+pip install git+https://github.com/jernsting/useful_layers
+```
+
+## Documentation
+
+See [documentation](https://jernsting.github.io/useful_layers/)
+
+
