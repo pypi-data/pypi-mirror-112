@@ -1,0 +1,14 @@
+stempy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stempy/_image.cp39-win_amd64.pyd,sha256=GdMuPdarXl8cD-Ih4NnWuaJkfI8kJ13rXsTzrNZXKdE,327168
+stempy/_io.cp39-win_amd64.pyd,sha256=AIX62dMvB6fVX0c95uGMOUCNqCgr7kxXICYT0U6MJ1Q,201728
+stempy/stem.dll,sha256=rqnTjmApaeRHhXfgLyLd_qXxPs2QRJdwjr3c04sGMxI,4223488
+stempy/stem.lib,sha256=h02PchmslARua2MU3GZZOALxLT96IFYBxC2hpvLWw8E,17497002
+stempy/image/__init__.py,sha256=0Q1NIC0GqoqjpipRIvLFb1fmeXOiQYYVGta7u44t6Ms,29313
+stempy/io/__init__.py,sha256=zZGGGVVHso7uiOPhu7rAjzQ4paSMD-JJmGrsZTtYaew,8648
+stempy/io/sparse_array.py,sha256=ETtINa6VYDvQYLSsC_KW845yY6CRrB4Ij_mjsbLPsZQ,26202
+stempy/pipeline/__init__.py,sha256=w2GQTRx3uaHvI71Njq4LEej0O6NGERBAtpzxpovBLLU,1496
+stempy-1.1.0.dist-info/LICENSE,sha256=BcHyi7a5Tl01bzZ40boX0eUcrCSvk0ATYAs9P1C099E,1531
+stempy-1.1.0.dist-info/METADATA,sha256=BwFyouES5zr06nazNY4V-YJ2fuct25XEA2O_jNH6zHU,495
+stempy-1.1.0.dist-info/WHEEL,sha256=5aG_HE5BgvfaHxX2klMJwmkURH-f3a4GIt9aTEktq5o,94
+stempy-1.1.0.dist-info/top_level.txt,sha256=y781UigXVGwQbPQglCuxXrzVV_KW3zCDzfYZg-Fk_wE,7
+stempy-1.1.0.dist-info/RECORD,,
