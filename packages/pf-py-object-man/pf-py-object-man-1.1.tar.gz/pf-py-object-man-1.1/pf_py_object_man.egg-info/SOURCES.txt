@@ -1,0 +1,12 @@
+LICENSE
+setup.py
+common/__init__.py
+common/pfpy_common_exception.py
+objman/__init__.py
+objman/copy_object.py
+objman/object_instanceof.py
+pf_py_object_man.egg-info/PKG-INFO
+pf_py_object_man.egg-info/SOURCES.txt
+pf_py_object_man.egg-info/dependency_links.txt
+pf_py_object_man.egg-info/not-zip-safe
+pf_py_object_man.egg-info/top_level.txt
