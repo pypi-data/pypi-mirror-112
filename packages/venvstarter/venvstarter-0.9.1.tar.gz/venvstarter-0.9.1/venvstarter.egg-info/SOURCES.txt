@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+venvstarter.py
+venvstarter.egg-info/PKG-INFO
+venvstarter.egg-info/SOURCES.txt
+venvstarter.egg-info/dependency_links.txt
+venvstarter.egg-info/requires.txt
+venvstarter.egg-info/top_level.txt
