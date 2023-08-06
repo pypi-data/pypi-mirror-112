@@ -1,0 +1,7 @@
+**/*.pyc
+**/__pycache__
+
+/.idea
+/.github
+/.eggs
+**/.mypy_cache
