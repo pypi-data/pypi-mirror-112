@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/integer_partition_boltzmann/__init__.py
+src/integer_partition_boltzmann/calculator.py
+src/integer_partition_boltzmann.egg-info/PKG-INFO
+src/integer_partition_boltzmann.egg-info/SOURCES.txt
+src/integer_partition_boltzmann.egg-info/dependency_links.txt
+src/integer_partition_boltzmann.egg-info/requires.txt
+src/integer_partition_boltzmann.egg-info/top_level.txt
