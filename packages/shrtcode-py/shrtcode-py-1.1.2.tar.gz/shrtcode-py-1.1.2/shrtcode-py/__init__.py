@@ -1,0 +1,1 @@
+from shrtcode import short, info, custom, emoji, password
