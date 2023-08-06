@@ -1,0 +1,6 @@
+include *.in
+include *.rst
+include *.txt
+recursive-include marv/app/docs *
+recursive-include marv/app/static *
+global-exclude *~

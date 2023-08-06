@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Access Control &#8212; MARV Robotics 21.07.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Maintenance" href="maintenance.html" />
+    <link rel="prev" title="Deployment" href="deploy.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="access-control">
+<span id="authentication"></span><h1>Access Control<a class="headerlink" href="#access-control" title="Permalink to this headline">¶</a></h1>
+<p>MARV includes a full authentication, authorization and access control system. Users and groups can either be created locally inside of MARV or be provided by an external sign-on provider (EE).</p>
+<p>Local accounts are managed via CLI (<code class="docutils literal notranslate"><span class="pre">marv</span> <span class="pre">user</span></code> and <code class="docutils literal notranslate"><span class="pre">marv</span> <span class="pre">group</span></code>) or the web admin interface (EE). Accounts are securely stored inside the MARV database. A user account will be granted different permissions in MARV depending on its group memberships.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Add new user
+(server)$ marv user add john
+# Add user to admin group granting privileges like &quot;delete&quot;
+(server)$ marv group adduser john admin
+</pre></div>
+</div>
+<p>In addition to authentication against its local database MARV EE supports single sign-on (SSO) via external services. When a new user signs in for the first time via an external provider, MARV asks for a new username and links the remote account to a new local user entry.</p>
+<div class="section" id="oauth2-ee">
+<h2>OAuth2 (EE)<a class="headerlink" href="#oauth2-ee" title="Permalink to this headline">¶</a></h2>
+<p>This plugin allows logging in with accounts from any service implementing OAuth2 webflow authorization.</p>
+<div class="section" id="configuring-external-provider">
+<h3>Configuring external provider<a class="headerlink" href="#configuring-external-provider" title="Permalink to this headline">¶</a></h3>
+<p>An external provider needs to be configured to allow a MARV instance to access webflow authorization. This usually requires to configure an “Application” at the external provider. Check your provider for instructions, here are some examples:</p>
+<ul class="simple">
+<li><p>Google: <a class="reference external" href="https://developers.google.com/identity/protocols/oauth2">https://developers.google.com/identity/protocols/oauth2</a></p></li>
+<li><p>GitHub: <a class="reference external" href="https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/">https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/</a></p></li>
+<li><p>GitLab: <a class="reference external" href="https://docs.gitlab.com/ee/integration/oauth_provider.html">https://docs.gitlab.com/ee/integration/oauth_provider.html</a></p></li>
+</ul>
+<p>Webflow authorization will require two URLs to be filled in. One is the <em>application url</em> where signin requests will be coming from and the other is the <em>callback url</em> which is the address a successful request will be redirected back to. For MARV both URLs should simply be the base URL of your MARV instance.</p>
+<p>The MARV application should be granted as few permissions as possible (see <code class="docutils literal notranslate"><span class="pre">scope</span></code> parameter below).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Double-check your nginx config (<a class="reference internal" href="deploy.html#deploy-nginx"><span class="std std-ref">Gunicorn behind NGINX</span></a>), it’s essential that MARV knows how it’s served in order to generate the correct redirect URI. In case an oauth service complains about an invalid redirect URI, check the URL displayed in the browser for debugging, it contains the redirect URI as query parameter.</p>
+</div>
+</div>
+<div class="section" id="configuring-marv">
+<h3>Configuring MARV<a class="headerlink" href="#configuring-marv" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">marv.conf</span></code> file supports the <code class="docutils literal notranslate"><span class="pre">oauth</span></code> key inside the <code class="docutils literal notranslate"><span class="pre">[marv]</span></code> section:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[marv]</span>
+<span class="na">oauth</span> <span class="o">=</span>
+    <span class="na">name | auth | token | info | id | secret | scope | firstname | secondname</span>
+</pre></div>
+</div>
+<p>The value consists of one line per external provider. Each line consists of multiple fields separated by <code class="docutils literal notranslate"><span class="pre">|</span></code>:</p>
+<dl class="simple">
+<dt>name</dt><dd><p>The name of this provider, this can be freely chosen.</p>
+</dd>
+<dt>auth</dt><dd><p>The authorization URL for webflow as given by the provider.</p>
+</dd>
+<dt>token</dt><dd><p>The token URL for webflow as given by the provider.</p>
+</dd>
+<dt>info</dt><dd><p>The URL for accessing a user’s information as given by the provider.</p>
+</dd>
+<dt>id</dt><dd><p>The user part of the credentials generated for the MARV application.</p>
+</dd>
+<dt>secret</dt><dd><p>The secret part of the credentials generated for the MARV application.</p>
+</dd>
+<dt>scope</dt><dd><p>The scope MARV should request from the user. The selected scope should allow to read a user’s name and email address.</p>
+</dd>
+<dt>firstname, <em>optional</em></dt><dd><p>Leave empty if user info contains <code class="docutils literal notranslate"><span class="pre">name</span></code> or <code class="docutils literal notranslate"><span class="pre">given_name</span> <span class="pre">&amp;</span> <span class="pre">family_name</span></code>, otherwise specify key containing the user’s first name in user info.</p>
+</dd>
+<dt>secondname, <em>optional</em></dt><dd><p>Leave empty if user info contains <code class="docutils literal notranslate"><span class="pre">name</span></code> or <code class="docutils literal notranslate"><span class="pre">given_name</span> <span class="pre">&amp;</span> <span class="pre">family_name</span></code>, otherwise specify key containing the user’s second name in user info.</p>
+</dd>
+</dl>
+<p>The following snippet configures Google, GitHub, and GitLab as external providers:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[marv]</span>
+<span class="na">oauth</span> <span class="o">=</span>
+    <span class="na">Google | https://accounts.google.com/o/oauth2/v2/auth | https://accounts.google.com/o/oauth2/token | https://www.googleapis.com/oauth2/v1/userinfo | google_id | google_secret | openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile ||</span>
+    <span class="na">GitHub | https://github.com/login/oauth/authorize | https://github.com/login/oauth/access_token | https://api.github.com/user | github_id | github_secret | read:user,user:email ||</span>
+    <span class="na">GitLab | https://gitlab.example.com/oauth/authorize | https://gitlab.example.com/oauth/token | https://gitlab.example.com/oauth/userinfo | gitlab_id | gitlab_secret | openid email ||</span>
+</pre></div>
+</div>
+<p>Beware, that GitHub separates scopes by comma, in contrast to space.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scan.html">Scanner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="widgets.html">Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="httpapi.html">HTTP API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload.html">Upload (EE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deployment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Access Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#oauth2-ee">OAuth2 (EE)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/marv.html">marv</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="deploy.html" title="previous chapter">Deployment</a></li>
+      <li>Next: <a href="maintenance.html" title="next chapter">Maintenance</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/accesscontrol.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
