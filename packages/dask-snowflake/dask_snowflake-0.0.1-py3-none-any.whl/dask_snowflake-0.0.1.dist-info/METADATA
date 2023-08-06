@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: dask-snowflake
+Version: 0.0.1
+Summary: Dask + Snowflake intergration
+Home-page: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Requires-Dist: dask
+Requires-Dist: distributed
+Requires-Dist: snowflake-connector-python[pandas]
+Requires-Dist: snowflake-sqlalchemy
+
+# Dask-Snowflake
+
+This connector is in an early experimental/testing phase.
+
+[Reach out to us](https://coiled.io/contact-us/) if you are interested in trying
+it out!
+
+
