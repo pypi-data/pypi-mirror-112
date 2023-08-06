@@ -1,0 +1,16 @@
+api_project_generator/__init__.py,sha256=bwvWpUk0EyEUuvD53CeliZB1Kg0oNPGd4LQm5A7KRo0,23
+api_project_generator/application.py,sha256=5IE6iHf8nft5SPWrCiKWUeQYAA7GqCju-nSV87sLOPw,68
+api_project_generator/domain/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+api_project_generator/domain/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+api_project_generator/domain/models/pyproject_toml.py,sha256=Wb7ZKvXoGKscHn6FiD6OgshVswCC3fVe2yopCCiNVTE,1330
+api_project_generator/domain/structure.py,sha256=K1Baz8zTgohyyhVJve10GEbYDmmqZPLOdnxaJQI8--o,19777
+api_project_generator/files.py,sha256=BGtEqsPajfSHZpPSN1VQJk9qmYWiFfBGXWzVKYckS24,2113
+api_project_generator/functions.py,sha256=DCzq88Fz1r_gC7Qlm7V3b17KswfLOJWtL8j_eMHHkrU,1626
+api_project_generator/main.py,sha256=JpG_br9ZkZd8ms2TgEiA9kJBbk0-TOtAi9bR_3i2W58,1548
+api_project_generator/services/repository.py,sha256=ZOeklBqvD-THmrhNKmgPUEuCdsymeUaRDDm60t_SjdM,102
+api_project_generator/services/strings.py,sha256=23FJm5ytHEQe8wr5FHoKKELxlS7Yr-YnSizpxYrRzX4,47157
+api_project_generator-0.1.5.dist-info/entry_points.txt,sha256=es7VcWpIijKfxKWFA5RfZaDgONL_5ewR_aA7Dqvwurs,62
+api_project_generator-0.1.5.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+api_project_generator-0.1.5.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+api_project_generator-0.1.5.dist-info/METADATA,sha256=hJOjAUNWyANgaIREoLbYvATRrUqe58Q3LBJcSyvxCOA,554
+api_project_generator-0.1.5.dist-info/RECORD,,
