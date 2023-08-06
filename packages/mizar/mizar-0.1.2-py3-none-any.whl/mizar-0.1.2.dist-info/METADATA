@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: mizar
+Version: 0.1.2
+Summary: Official API for the MizarAI platform
+Home-page: https://github.com/MizarAI/mizar
+Author: MizarAI
+Author-email: info@mizar.ai
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/MizarAI/mizar/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Topic :: Office/Business
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: Communications :: Chat
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests (>=2.23.0)
+Requires-Dist: pandas (==1.2.2)
+Requires-Dist: dill (>=0.3.3)
+
+[![GitHub](https://img.shields.io/github/license/mizarai/mizar)](https://img.shields.io/github/license/mizarai/mizar)
+[![PyPi](https://img.shields.io/pypi/v/mizar)](https://img.shields.io/pypi/v/mizar)
+
+# The MizarAI Platform API
+
+Welcome to the MizarAI platform API! This package enables the user to interact
+with the [MizarAI](https://mizar.ai) platform.
+
+## Installation
+
+To install the package please run:
+
+```bash
+pip install mizar
+```
+
+## Mizar
+
+Mizar is building a marketplace for algo-traders to deploy and share their trading strategies with investors. Please visit the website [mizar.ai](https://mizar.ai/) to learn more.
+
+## Links
+
+- Website: [https://mizar.ai/](https://mizar.ai/)
+- PyPi Releases: [https://pypi.org/project/mizar/](https://pypi.org/project/mizar/)
+- Source Code: [https://github.com/MizarAI/mizar/](https://github.com/MizarAI/mizar/)
+
+
