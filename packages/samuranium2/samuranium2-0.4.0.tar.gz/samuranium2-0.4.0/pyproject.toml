@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "samuranium2"
+version = "0.4.0"
+description = "Samuranium Automation Framework"
+authors = ["Alexis Giovoglanian (malazay) <alexisgiovoglanian@southerncode.us>"]
+packages = [
+    { include = "Samuranium" },
+    { include = "Samuranium/**/*.py" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+selenium = "^3.141.0"
+webdriver-manager = "^3.4.2"
+configparser = "^5.0.2"
+
+
+[tool.poetry.dev-dependencies]
+build = "^0.5.1"
+twine = "^3.4.1"
+pylint = "^2.9.3"
+coverage = "^5.5"
+ddt = "^1.4.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
