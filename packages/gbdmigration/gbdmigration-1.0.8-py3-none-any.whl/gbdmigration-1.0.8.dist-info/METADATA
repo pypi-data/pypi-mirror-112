@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gbdmigration
+Version: 1.0.8
+Summary: Migration from GBD to AWS package
+Home-page: https://github.com/GBD-Wipo/gbd2awsDataMigration
+Author: WIPO GDB team
+Author-email: gbd@wipo.int
+License: UNKNOWN
+Keywords: gbdxmlETL
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: jinja2
+Requires-Dist: xmltodict
+Requires-Dist: dicttoxml
+Requires-Dist: PyYAML
+Requires-Dist: munch
+Requires-Dist: sqlalchemy
+Requires-Dist: active-alchemy
+Requires-Dist: pygraphviz
+
+Migration from GBD to AWSackage
+
+

@@ -1,0 +1,17 @@
+gbdmigration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gbdmigration/applier.py,sha256=8zWu56bWN8fAiVTcW8FCsSRVm4_ZtQt_ORoIpKYGaIk,9644
+gbdmigration/applyer.py,sha256=5wCQnlTj3weNjMcgujELLSgEWaaoA0D1xfjVbKugl40,9271
+gbdmigration/download.py,sha256=1QsQPqYtMZjBmmpppjCUD1-sN6e7D-Pec0FVTfXTaUU,2515
+gbdmigration/execs.py,sha256=n8QCYoDvdLymCm6bSFPie-JseZZM_E7OaYFq9943w1E,8418
+gbdmigration/filescanner.py,sha256=5r5RfcRmfT6h-SJKUCSLvuPwcA7yjtxRUV_-stIFeKM,5466
+gbdmigration/localdb.py,sha256=81cSnZORmgUA2QVM8xhGR8HLJt0yWslwxZzkVn6r3j8,1179
+gbdmigration/organiser.py,sha256=XbqfiKV4I4S76NNgR8hupHw0ve-QscRP4MkSv_Et4ac,5670
+gbdmigration/upload.py,sha256=3QD1htwcQuIXWOBlLZZJoXQ-1tILYhmI4NC1Ao7wikE,3191
+gbdmigration/utilities.py,sha256=7QqtxjB54iy5Iq5SPilk3Me3ihAWhpEd1yxG_0qSxjQ,4711
+gbdmigration/wrappers.py,sha256=KHumwT_9E4pmfd71-AhKVSBMGpsFuiocnDBcpHTTA-M,3379
+gbdmigration-1.0.8.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gbdmigration-1.0.8.dist-info/METADATA,sha256=jbygUF2OpjgWrD5yLH4YrpsBwVuNkgn9dg2aYC7-Z-E,545
+gbdmigration-1.0.8.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+gbdmigration-1.0.8.dist-info/entry_points.txt,sha256=43CWTNyQWezMDVEuYUDu6jcP-vCbBR3YmEr31OSNDKk,535
+gbdmigration-1.0.8.dist-info/top_level.txt,sha256=H2tBkBIdMcEgGFYqNuMIopdvOHQ9FZK9VcLVv1mxWP4,13
+gbdmigration-1.0.8.dist-info/RECORD,,
