@@ -1,0 +1,3 @@
+[console_scripts]
+copernic360=copernic360_cli.__main__:cli
+
