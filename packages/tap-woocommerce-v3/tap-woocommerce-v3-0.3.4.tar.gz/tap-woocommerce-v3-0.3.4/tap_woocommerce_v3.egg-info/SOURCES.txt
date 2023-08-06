@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+tap_woocommerce/__init__.py
+tap_woocommerce/schemas/orders.json
+tap_woocommerce/schemas/reports.json
+tap_woocommerce_v3.egg-info/PKG-INFO
+tap_woocommerce_v3.egg-info/SOURCES.txt
+tap_woocommerce_v3.egg-info/dependency_links.txt
+tap_woocommerce_v3.egg-info/entry_points.txt
+tap_woocommerce_v3.egg-info/requires.txt
+tap_woocommerce_v3.egg-info/top_level.txt
