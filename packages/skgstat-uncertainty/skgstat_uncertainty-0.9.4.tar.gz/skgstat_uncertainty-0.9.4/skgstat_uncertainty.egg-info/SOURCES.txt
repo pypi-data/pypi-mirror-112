@@ -1,0 +1,52 @@
+.gitignore
+LICENSE
+README.md
+VERSION
+paper.mplstyle
+requirements.txt
+setup.py
+streamlit_app.py
+skgstat_uncertainty/__init__.py
+skgstat_uncertainty/__main__.py
+skgstat_uncertainty/core.py
+skgstat_uncertainty/templates.py
+skgstat_uncertainty.egg-info/PKG-INFO
+skgstat_uncertainty.egg-info/SOURCES.txt
+skgstat_uncertainty.egg-info/dependency_links.txt
+skgstat_uncertainty.egg-info/not-zip-safe
+skgstat_uncertainty.egg-info/requires.txt
+skgstat_uncertainty.egg-info/top_level.txt
+skgstat_uncertainty/apps/__init__.py
+skgstat_uncertainty/apps/home.py
+skgstat_uncertainty/apps/index.py
+skgstat_uncertainty/apps/model_compare.py
+skgstat_uncertainty/apps/model_fit.py
+skgstat_uncertainty/apps/project_management.py
+skgstat_uncertainty/apps/variogram_uncertainty.py
+skgstat_uncertainty/components/__init__.py
+skgstat_uncertainty/components/project.py
+skgstat_uncertainty/components/table.py
+skgstat_uncertainty/legacy/benchmark_montecarlo.ipynb
+skgstat_uncertainty/legacy/dash_model_fit.py
+skgstat_uncertainty/legacy/figures_tables.ipynb
+skgstat_uncertainty/legacy/gauss_uncertainty.npy
+skgstat_uncertainty/legacy/model_compare_legacy.py
+skgstat_uncertainty/legacy/observation_uncertainty.npy
+skgstat_uncertainty/legacy/propagation_experimental.ipynb
+skgstat_uncertainty/legacy/propagation_model.ipynb
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/LICENSE
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/README.md
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/bibliography.bib
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/data/config.json
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/data/dc2d24c0a4603c57cf729f156ffa97c6_50000_error_bounds.npz
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/data/dc2d24c0a4603c57cf729f156ffa97c6_kriging_fields.npz
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/data/model_fits.json
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/data/variograms.json
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/results/.gitkeep
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/results/dc2d24c0a4603c57cf729f156ffa97c6_50000_5__kriging_0_100_historgrams.pdf
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/results/dc2d24c0a4603c57cf729f156ffa97c6_50000_5__kriging_surfaces.pdf
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/results/dc2d24c0a4603c57cf729f156ffa97c6_50000_5_all_models.tex
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/results/dc2d24c0a4603c57cf729f156ffa97c6_50000_5_kriging_0_100_conf_interval.pdf
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/results/dc2d24c0a4603c57cf729f156ffa97c6_50000_5_kriging_0_100_interpolation.pdf
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/results/dc2d24c0a4603c57cf729f156ffa97c6_50000_5_model_compare.pdf
+skgstat_uncertainty/projects/Collection of Uncertain Pancakes/results/dc2d24c0a4603c57cf729f156ffa97c6_50000_simulation_overview.tex
