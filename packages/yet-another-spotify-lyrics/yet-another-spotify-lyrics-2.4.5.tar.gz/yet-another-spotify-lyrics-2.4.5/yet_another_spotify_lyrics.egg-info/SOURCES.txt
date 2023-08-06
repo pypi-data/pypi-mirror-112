@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+screenshot.jpg
+setup.cfg
+setup.py
+usage.gif
+spotify_lyrics/__init__.py
+spotify_lyrics/spotify_lyrics.py
+spotify_lyrics/spotify_lyrics_once.py
+spotify_lyrics/utils.py
+yet_another_spotify_lyrics.egg-info/PKG-INFO
+yet_another_spotify_lyrics.egg-info/SOURCES.txt
+yet_another_spotify_lyrics.egg-info/dependency_links.txt
+yet_another_spotify_lyrics.egg-info/entry_points.txt
+yet_another_spotify_lyrics.egg-info/requires.txt
+yet_another_spotify_lyrics.egg-info/top_level.txt
