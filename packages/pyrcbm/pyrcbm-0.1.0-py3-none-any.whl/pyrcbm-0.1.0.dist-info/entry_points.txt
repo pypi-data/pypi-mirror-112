@@ -1,0 +1,4 @@
+[console_scripts]
+sin_rcbm = pyrcbm.sin_rcbm:main
+ulog2rcbm = pyrcbm.ulog2rcbm:main
+
