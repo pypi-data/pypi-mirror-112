@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: medgpt
+Version: 0.1.5
+Summary: Temporal modeling of patients and diseases
+Home-page: https://github.com/w-is-h/medgpt
+Author: w-is-h
+Author-email: w.kraljevic@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: datasets (~=1.6.0)
+Requires-Dist: ray (==1.3.0)
+Requires-Dist: wandb (~=0.10)
+Requires-Dist: x-transformers (~=0.12)
+Requires-Dist: medcat (~=1.0)
+Requires-Dist: ecco (==0.0.14)
+Requires-Dist: transformers (==4.5.1)
+
+# MedGPT: Medical Concept Forecasting from Clinical Narratives
+
+<img src="https://github.com/w-is-h/MedGPT/blob/master/media/Patient%20timeline.png"/>
+
+## Installation
+`pip install --upgrade medgpt`
+
+## !!! WORK IN PROGRESS !!!
+
+
