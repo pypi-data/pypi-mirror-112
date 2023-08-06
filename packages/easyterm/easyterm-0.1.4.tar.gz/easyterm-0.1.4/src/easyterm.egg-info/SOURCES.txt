@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/easyterm/__init__.py
+src/easyterm/colorprint.py
+src/easyterm/commandlineopt.py
+src/easyterm/commandutils.py
+src/easyterm.egg-info/PKG-INFO
+src/easyterm.egg-info/SOURCES.txt
+src/easyterm.egg-info/dependency_links.txt
+src/easyterm.egg-info/top_level.txt
