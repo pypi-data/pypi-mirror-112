@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: hns-logicmonitor-api
+Version: 21.7.2
+Summary: Logicmonitor API
+Home-page: https://gitlab.com/horsebridge/hns_logicmonitor_api.git
+Author: Nitin Sidhu
+Author-email: nitin.sidhu23@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests (<3,>=2)
+Requires-Dist: more-itertools (>=8.6)
+
+# hns_logicmonitor_api
+Logicmonitor API.
+
+This is mainly built to get data from logicmonitor, especially the optical stats about ONTs. Any other method apart from `get` would need 
+to be implemented in the `LMBase` class
+
+## Installation
+`pip install hns-logicmonitor-api`
+
+## Usage
+```python
+from hns_logicmonitor_api import LogicMonitor
+
+with LogicMonitor(
+    account_name='account', 
+    access_id='test_id', 
+    api_key='test_api_key',
+    global_timeout=5
+) as logic_monitor:
+    # Call API here
+```
+
+
