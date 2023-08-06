@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/construction_requirements_integrator/__init__.py
+src/construction_requirements_integrator/construction_requirements_integrator.py
+src/construction_requirements_integrator.egg-info/PKG-INFO
+src/construction_requirements_integrator.egg-info/SOURCES.txt
+src/construction_requirements_integrator.egg-info/dependency_links.txt
+src/construction_requirements_integrator.egg-info/top_level.txt
