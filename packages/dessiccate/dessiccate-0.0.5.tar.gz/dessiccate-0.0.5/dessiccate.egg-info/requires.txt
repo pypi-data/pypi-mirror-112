@@ -1,0 +1,7 @@
+pip
+packaging
+attrdict==2.0.1
+fastcore==1.3.20
+matplotlib>=3.3
+
+[dev]
