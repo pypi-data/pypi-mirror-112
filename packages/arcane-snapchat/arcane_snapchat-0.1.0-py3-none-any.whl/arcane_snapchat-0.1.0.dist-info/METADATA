@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: arcane-snapchat
+Version: 0.1.0
+Summary: Helpers to request Snapchat API 
+Author: Arcane
+Author-email: product@arcane.run
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: arcane-core (>=1.3.0,<2.0.0)
+Requires-Dist: backoff (>=1.10.0,<2.0.0)
+Requires-Dist: requests (>=2.0.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Arcane snapchat README
+
+## Credentials
+
+The access token for production environnement has been generated with: snapchat@arcane.run
+The access token for staging environnement has been generated with: billel@arcane.run
+
+The access token can be be expired, we receive a 401 if it is the case. We need to use the refresh token located in the credentials, this token is generated through a one time life 'code'. For more information :
+https://marketingapi.snapchat.com/docs/#receive-the-redirected-user 
+
+## Release history
+To see changes, please see CHANGELOG.md
+
