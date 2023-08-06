@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: easy-kclpy
+Version: 2021.7.2
+Summary: A simpler class interface and launch utils for processing kinesis streams with the Amazon Kinesis Client Library MultiLangDaemon
+Home-page: https://github.com/empiricalresults/easy-kclpy
+Author: david-matheson
+Author-email: david@empiricalresults.com
+License: Amazon Software License
+Keywords: amazon,kinesis,kinesis-client-library,client-library,library
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: amazon-kclpy (==2.0.2)
+
+UNKNOWN
+
+
