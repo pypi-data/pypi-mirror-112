@@ -1,0 +1,6 @@
+include superwise/resources/*.json
+include superwise/resources/supwewise_enums.py
+include requirements.txt
+superwise/config.py
+include superwise/requirements.txt
+include superwise/models/*.py

@@ -1,0 +1,14 @@
+enum34==1.1.10
+flake8==3.9.2
+pandas==1.2.4
+pyarrow==4.0.1
+pyflakes==2.3.1
+pylint==2.8.2
+pytest==6.2.4
+pytest-vcr==1.0.2
+requests==2.25.1
+scipy==1.6.3
+shap==0.39.0
+sklearn==0.0
+twine==3.4.1
+vcrpy==4.1.1

@@ -1,0 +1,5 @@
+{
+  "LOGIN_URL": "https://superwise-dev.frontegg.com/identity/resources/auth/v1/user",
+  "SUPERWISE_HOST": "dev.superwise.ai",
+  "TOKEN_URL": "https://superwise-dev.frontegg.com/identity/resources/auth/v1/api-token"
+}
