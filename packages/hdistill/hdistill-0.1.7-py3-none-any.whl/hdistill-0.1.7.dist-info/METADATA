@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: hdistill
+Version: 0.1.7
+Summary: CLI tool for parsing HTML
+Home-page: https://github.com/SethTales/hdistill
+Author: Seth Taylor
+Author-email: seth.tales@gmail.com
+License: MIT
+Keywords: HTML parsing web-scraping
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: lxml
+
+Simple CLI tool used for exploring and parsing HTML documents
+
+
