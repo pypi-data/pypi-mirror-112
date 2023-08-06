@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+muffin_peewee/__init__.py
+muffin_peewee/fields.py
+muffin_peewee/py.typed
+muffin_peewee.egg-info/PKG-INFO
+muffin_peewee.egg-info/SOURCES.txt
+muffin_peewee.egg-info/dependency_links.txt
+muffin_peewee.egg-info/requires.txt
+muffin_peewee.egg-info/top_level.txt
