@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+long_short_transformer/__init__.py
+long_short_transformer/autoregressive_wrapper.py
+long_short_transformer/long_short_transformer.py
+long_short_transformer.egg-info/PKG-INFO
+long_short_transformer.egg-info/SOURCES.txt
+long_short_transformer.egg-info/dependency_links.txt
+long_short_transformer.egg-info/requires.txt
+long_short_transformer.egg-info/top_level.txt
