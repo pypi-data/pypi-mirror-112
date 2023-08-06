@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tqdist
+Version: 1.1
+Summary: Python interface for the tqdist C library
+Home-page: https://github.com/uym2/tripVote/tree/master/tqDist
+Author: uym2
+Author-email: ceciliamaitouyen@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+
+Python interface for the tqdist C library, extended from https://users-cs.au.dk/cstorm/software/tqdist/
+
