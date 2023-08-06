@@ -1,0 +1,7 @@
+satella>=2.17.7
+
+[fasterjson]
+ujson
+
+[fastermetadata]
+minijson
