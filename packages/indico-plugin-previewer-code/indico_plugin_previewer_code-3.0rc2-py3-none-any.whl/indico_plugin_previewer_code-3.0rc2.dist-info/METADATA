@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: indico-plugin-previewer-code
+Version: 3.0rc2
+Summary: Syntax highlighter for code attachments in Indico
+Home-page: https://github.com/indico/indico-plugins
+Author: Indico Team
+Author-email: indico-team@cern.ch
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: ~=3.9.0
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Requires-Dist: indico (>=3.0rc2)
+Requires-Dist: Pygments (<3,>=2.7.2)
+
+# Code Preview Plugin
+
+This plugin adds syntax highlighting (using the Pygments syntax highlighter)
+to event materials that look like source code files.
+
+The following languages are supported:
+
+- C / C++
+- C#
+- CSS
+- Fortran
+- Java
+- JavaScript
+- PHP
+- Python
+- Ruby
+
+## Changelog
+
+### 3.0
+
+- Initial release for Indico 3.0
+
+
