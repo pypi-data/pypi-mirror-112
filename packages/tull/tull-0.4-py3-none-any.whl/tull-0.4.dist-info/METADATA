@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: tull
+Version: 0.4
+Summary: tull helps you tull
+Home-page: https://github.com/l0k3ndr/tull
+Author: Lokendra Sharma
+Author-email: lokendra.sharma.one@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click (==8.0.1)
+Requires-Dist: itsdangerous (==2.0.1)
+Requires-Dist: Jinja2 (==3.0.1)
+Requires-Dist: MarkupSafe (==2.0.1)
+Requires-Dist: requests (==2.26.0)
+Requires-Dist: Werkzeug (==2.0.1)
+Requires-Dist: Flask (==2.0.1)
+Requires-Dist: bleach (==3.3.0)
+Requires-Dist: certifi (==2021.5.30)
+Requires-Dist: charset-normalizer (==2.0.1)
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: docutils (==0.17.1)
+Requires-Dist: idna (==3.2)
+Requires-Dist: importlib-metadata (==4.6.1)
+Requires-Dist: keyring (==23.0.1)
+Requires-Dist: packaging (==21.0)
+Requires-Dist: pkginfo (==1.7.1)
+Requires-Dist: Pygments (==2.9.0)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: readme-renderer (==29.0)
+Requires-Dist: requests-toolbelt (==0.9.1)
+Requires-Dist: rfc3986 (==1.5.0)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: tqdm (==4.61.2)
+Requires-Dist: twine (==3.4.1)
+Requires-Dist: urllib3 (==1.26.6)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: zipp (==3.5.0)
+
+Tull - Teleport Ur Logs with Love
+
