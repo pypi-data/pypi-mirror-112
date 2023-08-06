@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: kadi-apy
+Version: 0.16.0
+Summary: Kadi4Mat API library.
+Home-page: https://gitlab.com/iam-cms/kadi-apy
+Author: Karlsruhe Institute of Technology
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Click (<8.0.0,>=7.1.1)
+Requires-Dist: click-completion (>=0.5.2)
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: xmlhelpy (>=0.6.1)
+Provides-Extra: dev
+Requires-Dist: black (==21.6b0) ; extra == 'dev'
+Requires-Dist: pre-commit (<3.0.0,>=2.13.0) ; extra == 'dev'
+Requires-Dist: pylint (<2.9.0,>=2.8.0) ; extra == 'dev'
+Requires-Dist: tox (<4.0.0,>=3.23.0) ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: recommonmark (<1.0.0,>=0.7.1) ; extra == 'docs'
+Requires-Dist: Sphinx (<3.6.0,>=3.5.2) ; extra == 'docs'
+Requires-Dist: sphinx-click (==2.7.1) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (<1.0.0,>=0.5.2) ; extra == 'docs'
+
+# Kadi-APY
+
+[![pypi](https://img.shields.io/pypi/v/kadi-apy)](https://pypi.org/project/kadi-apy/)
+[![license](https://img.shields.io/pypi/l/kadi-apy)](https://opensource.org/licenses/Apache-2.0)
+[![zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.4088275.svg)](https://doi.org/10.5281/zenodo.4088275)
+[![docs](https://readthedocs.org/projects/kadi-apy/badge/?version=stable)](https://kadi-apy.readthedocs.io/en/stable/)
+
+**Kadi-APY** is a library for use in tandem with
+[Kadi4Mat](https://kadi.iam-cms.kit.edu/ "Kadi4Mat"). The REST-like API of
+Kadi4Mat makes it possible to programmatically interact with most of the
+resources that can be used through the web interface by sending suitable HTTP
+requests to the different endpoints the API provides. Detailed information
+about the API itself can be found in the developer
+[documentation](https://kadi4mat.readthedocs.io/en/stable/) of Kadi4Mat.
+
+The goal of this library is to make the use of this API as easy as possible. It
+offers both an object oriented approach to work with the API in Python as well
+as a command line interface (CLI). The library is written in Python 3 and works
+under both Linux and Windows.
+
+## Quickstart
+
+### Installation
+
+Install and update using [pip](https://pip.pypa.io/en/stable/quickstart/):
+
+`pip3 install kadi-apy -U`
+
+### Configuration
+
+To connect to a Kadi4Mat instance you need the host and a personal access token
+which can be stored in a config file. Run
+
+`kadi-apy config create`
+
+to create a sample config file. See the
+[documentation](https://kadi-apy.readthedocs.io/en/stable/setup/configuration.html)
+for more details.
+
+### Simple Python example
+
+Upload a file to a record:
+
+```python
+from kadi_apy import KadiManager
+
+manager = KadiManager()
+record = manager.record(identifier="my_identifier", create=True)
+record.upload_file("path_to_file")
+```
+
+### Simple CLI example
+
+Upload a file to a record:
+
+`kadi-apy records add-file -R my_identifier -n path_to_file`
+
+## Links
+
+* Source code: https://gitlab.com/iam-cms/kadi-apy
+* Releases: https://pypi.org/project/kadi-apy/
+* Documentation:
+  * Stable (reflecting the latest release): https://kadi-apy.readthedocs.io/en/stable/
+  * Latest (reflecting the *develop* branch): https://kadi-apy.readthedocs.io/en/latest/
+
+## Contributions
+
+Contributions to the code are always welcome!
+In order to merge any contributions back into the main repository,
+please open a corresponding [merge
+request](https://gitlab.com/iam-cms/kadi-apy/-/merge_requests).
+Please notice that all merge requests should go to the **develop** branch.
+
+## Issues
+
+For any issues regarding the kadi-apy (bugs, suggestions, discussions, etc.) please
+use the [issue tracker](https://gitlab.com/iam-cms/kadi-apy/-/issues) of this
+project. Before creating an issue, please make sure that no similar issue is
+already open and that you are using the latest
+[release](https://pypi.org/project/kadi-apy/) or the current version of the
+**develop** branch. Note that creating a new issue requires a GitLab account.
+
+For **bugs** in particular, please use the provided `Bug` template when
+creating an issue, which also adds the `Bug` label to the issue automatically.
+For **security-related** issues or concerns, please prefer
+[contacting](https://kadi.iam-cms.kit.edu/#contact) one of the core developers
+directly rather than creating a public issue.
+
+
