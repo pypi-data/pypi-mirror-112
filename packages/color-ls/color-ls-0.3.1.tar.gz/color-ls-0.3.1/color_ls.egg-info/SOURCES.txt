@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+./colorls/__init__.py
+./colorls/_version.py
+./colorls/colorls.py
+color_ls.egg-info/PKG-INFO
+color_ls.egg-info/SOURCES.txt
+color_ls.egg-info/dependency_links.txt
+color_ls.egg-info/entry_points.txt
+color_ls.egg-info/top_level.txt
+config/colorls.ini
