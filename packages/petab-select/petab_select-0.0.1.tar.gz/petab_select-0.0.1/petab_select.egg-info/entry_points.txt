@@ -1,0 +1,3 @@
+[console_scripts]
+petab_select = petab_select.cli:cli
+
