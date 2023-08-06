@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gdal-mrr
+Version: 3.3.0
+Summary: UNKNOWN
+Home-page: https://github.com/talos-gis/gdal-mrr
+Maintainer: Idan Miara
+Maintainer-email: idan@miara.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: gdal (<3.4,>=3.3)
+
+# GDAL-MRR
+GDAL MRR plugin as a python wheel for easy installation.
+* DLL and LICENSE files were copied from [precisely](https://support.precisely.com/product-downloads/item/mapinfo-mrr-sdk-download/) 
+
+
