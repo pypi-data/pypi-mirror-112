@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: boyer
+Version: 0.1.6
+Summary: Andrew Boyer's personal python library
+Home-page: https://github.com/asboyer/boyer
+Author: Andrew Boyer
+Author-email: asboyer@gmail.com
+License: MIT
+Keywords: boyer
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+
+**boyer** is a python library that contains useful 
+functions for Andrew Boyer
+
+Available functions:
+* Hello
+* Delay Print
+* Clear
+* Memify
+* Clean
+* Encrypt
+* Decrypt
+* Capitalize
+* Get Num
+
+Report any bugs or email us with questions: asboyer@gmail.com
+
+
