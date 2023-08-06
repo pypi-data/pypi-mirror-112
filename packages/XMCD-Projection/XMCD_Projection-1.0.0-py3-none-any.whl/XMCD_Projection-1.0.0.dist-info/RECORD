@@ -1,0 +1,15 @@
+xmcd_projection/__init__.py,sha256=7sPLjLq1B84DXRVtJ1ZYtATNVQakgVoTwcXv0obBOp0,893
+xmcd_projection/color.py,sha256=uws_fKaYlfeEApYNWJ6KZedpF9o4tEq_YP3fRvMUG1o,2822
+xmcd_projection/data_loading.py,sha256=dBxtvA-xTV-z5sorzsy77R_K7pHPxn3Zu8eIiAm86vo,1244
+xmcd_projection/image.py,sha256=O4x3j2vvg5WgkoUuWO5LdB-KXoXOCsaTyTC-Ucr6POk,768
+xmcd_projection/mesh.py,sha256=QjKoXQyEFoGN8yl9DD0LiXGkBRGlM2HzBN-C3b3ztN0,5228
+xmcd_projection/mesh_visualisation.py,sha256=idGx3f0spHONJB7mE3OFBCyMqlCPgz4XevmB4fhlrZk,11104
+xmcd_projection/projection.py,sha256=6uSRzCXgwpjLDj75w87dPmoYVKCJsJxBUADsi89c4-k,2180
+xmcd_projection/raytracing.py,sha256=bXgPqvVi5IaUTYBO_GRcUOK8u_PYiaVPbPLKwEjPWZE,11505
+xmcd_projection/stl_visualisation.py,sha256=AniNoK5JE2sDfO_C3bHWe8w9otMGIc59aDclDNufeYQ,7012
+xmcd_projection/version.py,sha256=RsZjRjMprNcDm97wqRRSk6rTLgTX8N0GyicZyZ8OsBQ,22
+XMCD_Projection-1.0.0.dist-info/LICENSE,sha256=nr2NVDXVAQIKCugtHTRtPenA9-WxvbwY9ALc88URtH4,1082
+XMCD_Projection-1.0.0.dist-info/METADATA,sha256=xD_aVLbK7mKrk3bqjL62dfG87lIAcRcbzLCLI4Il5no,5293
+XMCD_Projection-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+XMCD_Projection-1.0.0.dist-info/top_level.txt,sha256=22YQ53VnBFv0EnPGzbm7vdT9Nx9Fc740Qn97zVf8B_I,16
+XMCD_Projection-1.0.0.dist-info/RECORD,,
