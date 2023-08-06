@@ -1,0 +1,12 @@
+README.md
+setup.py
+poeditor_sync/__init__.py
+poeditor_sync/cmd.py
+poeditor_sync/models.py
+poeditor_sync/sync.py
+poeditor_sync.egg-info/PKG-INFO
+poeditor_sync.egg-info/SOURCES.txt
+poeditor_sync.egg-info/dependency_links.txt
+poeditor_sync.egg-info/entry_points.txt
+poeditor_sync.egg-info/requires.txt
+poeditor_sync.egg-info/top_level.txt
