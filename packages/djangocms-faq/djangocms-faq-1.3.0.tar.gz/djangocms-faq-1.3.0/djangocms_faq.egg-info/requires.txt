@@ -1,0 +1,5 @@
+django-cms
+uuid
+
+[fuzzy_search]
+fuzzywuzzy
