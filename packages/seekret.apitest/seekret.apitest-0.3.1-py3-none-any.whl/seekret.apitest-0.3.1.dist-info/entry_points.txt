@@ -1,0 +1,3 @@
+[pytest11]
+seekret = seekret.apitest.pytest_plugin
+
