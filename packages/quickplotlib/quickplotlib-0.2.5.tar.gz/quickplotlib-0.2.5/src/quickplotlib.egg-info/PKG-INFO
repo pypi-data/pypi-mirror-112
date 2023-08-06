@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: quickplotlib
+Version: 0.2.5
+Summary: A wrapper around pandas, matplotlib, and seaborn used to quickly create beautiful viz for analytics.
+Home-page: https://github.com/niccoloalexander/quickplotlib
+Author: Niccolo Alexander Hamlin
+Author-email: nahamlin@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/niccoloalexander/quickplotlib/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Quickplot 
+
+This is a beta release of the quickplot module, a wrapper around pandas, matplotlib, and seaborn used to quickly create beautiful viz for analytics. 
+
+To install, run:
+```
+pip install quickplotlib
+```
+

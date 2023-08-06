@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/quickplotlib/__init__.py
+src/quickplotlib/viz.py
+src/quickplotlib.egg-info/PKG-INFO
+src/quickplotlib.egg-info/SOURCES.txt
+src/quickplotlib.egg-info/dependency_links.txt
+src/quickplotlib.egg-info/requires.txt
+src/quickplotlib.egg-info/top_level.txt
