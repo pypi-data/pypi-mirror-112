@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ssci
+Version: 0.2.2
+Summary: Shit&Sticks CI
+Home-page: https://github.com/mike0sv/ssci
+Author: mike0sv
+Author-email: mike0sv@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: gitpython (<4)
+Requires-Dist: requests (<3)
+Requires-Dist: decleverett (==0.0.0)
+Requires-Dist: pyjackson (<0.1.0)
+Requires-Dist: click (<9.0.0)
+Requires-Dist: pyyaml (<6.0.0)
+Requires-Dist: Jinja2 (<4)
+Requires-Dist: docker (<6)
+Requires-Dist: python-gitlab (<3)
+Requires-Dist: cached-property ; python_version < "3.8"
+
+UNKNOWN
+
+

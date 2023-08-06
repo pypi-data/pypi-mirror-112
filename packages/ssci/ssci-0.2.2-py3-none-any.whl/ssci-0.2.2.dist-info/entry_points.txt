@@ -1,0 +1,3 @@
+[console_scripts]
+ssci = ssci.cli.main:cli
+
