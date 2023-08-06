@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/archive_md_urls/__init__.py
+src/archive_md_urls/cli.py
+src/archive_md_urls/gather_snapshots.py
+src/archive_md_urls/scan_md.py
+src/archive_md_urls/update_files.py
+src/archive_md_urls.egg-info/PKG-INFO
+src/archive_md_urls.egg-info/SOURCES.txt
+src/archive_md_urls.egg-info/dependency_links.txt
+src/archive_md_urls.egg-info/entry_points.txt
+src/archive_md_urls.egg-info/requires.txt
+src/archive_md_urls.egg-info/top_level.txt
