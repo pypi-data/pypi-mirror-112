@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+beatnik/__init__.py
+beatnik/beatnik_functions.py
+beatnik/preprocess_text.py
+beatnik/scrabble_text.py
+beatnik.egg-info/PKG-INFO
+beatnik.egg-info/SOURCES.txt
+beatnik.egg-info/dependency_links.txt
+beatnik.egg-info/requires.txt
+beatnik.egg-info/top_level.txt
