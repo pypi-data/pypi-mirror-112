@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+setup.py
+bin/datafluent
+datafluent/__init__.py
+datafluent.egg-info/PKG-INFO
+datafluent.egg-info/SOURCES.txt
+datafluent.egg-info/dependency_links.txt
+datafluent.egg-info/not-zip-safe
+datafluent.egg-info/requires.txt
+datafluent.egg-info/top_level.txt
+docs/index.rst
