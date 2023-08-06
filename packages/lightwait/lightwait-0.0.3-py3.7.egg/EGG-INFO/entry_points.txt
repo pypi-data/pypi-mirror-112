@@ -1,0 +1,3 @@
+[console_scripts]
+lightwait = lightwait.__main__:main
+
