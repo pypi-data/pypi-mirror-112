@@ -1,0 +1,12 @@
+sklearn_ts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sklearn_ts/splitter.py,sha256=UgdTIcqm0uet2fUc4BDqdu-bENllFsOUkEklx5oJX9Y,1214
+sklearn_ts/validator.py,sha256=fSec21OIVQPyFxFwdWQXnlP-8tDRPyriRgOHkpCCqmI,6437
+sklearn_ts/datasets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sklearn_ts/datasets/covid.py,sha256=viwqyZcWVFx0AEOBHuHT4RkKk86SjKJkx9l5kQrRqE8,452
+sklearn_ts/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sklearn_ts/models/neural_networks.py,sha256=hW8nd_KDrJw43LnI0QcphQ0IIoWle_tb1bNUpx8VujY,4857
+sklearn_ts-0.0.1.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+sklearn_ts-0.0.1.dist-info/METADATA,sha256=irnCATG3c6ZcJuc-JBM7KB4l26RHuViz-ix1rGreYQI,2078
+sklearn_ts-0.0.1.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+sklearn_ts-0.0.1.dist-info/top_level.txt,sha256=WKrWaiW8wbzRna0oG1JmpHDXe9anwMBwHbmxGB07Nzc,11
+sklearn_ts-0.0.1.dist-info/RECORD,,
