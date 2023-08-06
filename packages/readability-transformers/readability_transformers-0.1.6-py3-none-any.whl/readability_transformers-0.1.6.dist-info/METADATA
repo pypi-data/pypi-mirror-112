@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: readability-transformers
+Version: 0.1.6
+Summary: Package for integrating transformer modules for readability-related NLP tasks.
+Home-page: https://github.com/OneTheta/readability-transformers
+Author: Chan Woo Kim
+Author-email: chanwkim01@gmail.com
+License: Apache License 2.0
+Download-URL: https://github.com/OneTheta/readability-transformers/archive/refs/tags/0.1.6.zip
+Keywords: transformers
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: loguru
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: easydict
+Requires-Dist: spacy
+Requires-Dist: torch
+Requires-Dist: tqdm
+Requires-Dist: sentence-transformers
+Requires-Dist: nltk
+Requires-Dist: TRUNAJOD
+Requires-Dist: requests
+Requires-Dist: gensim
+Requires-Dist: supar
+
+# Reability Transformers
+
