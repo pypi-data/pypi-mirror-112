@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "sec_html_parser"
+version = "0.3.0"
+description = "Simple library for parsing SEC forms"
+authors = ["Tom Selfin <selfint@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+beautifulsoup4 = "^4.9.3"
+click = "^8.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+rope = "^0.19.0"
+black = "^21.6b0"
+isort = "^5.9.1"
+flake8-black = "^0.2.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
