@@ -1,0 +1,12 @@
+sweetpie/__init__.py,sha256=fyd92r98s4RZinDIBAz1v17amqDJD0oC6XY_KN2sKEg,102
+sweetpie/readers.py,sha256=BXoVZnpK-7xn5W6saH9m4sljiauxbUMcrGlUm7cc0ys,1629
+sweetpie/sequence_processor.py,sha256=OfFc0Llv33faqqSr5j30Wd5_PKqrfqg2JzF50vbqZjQ,3551
+sweetpie/tokenizers.py,sha256=MHyNT8fhqN9Y1acpq-VyNRq4n_fgEa_NUOdQ-ni5GLU,2669
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/readers_test.py,sha256=1rYJ2e-1ZiZRAiE7YkkS2FVen3Esm6GwIrS-jjA9dQk,430
+tests/sequence_processor_test.py,sha256=6OWb8_snzZ8DQ39D3LNOaAa6Frc5-0RpYgFsKdT_nzE,3275
+sweetpie-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+sweetpie-0.1.1.dist-info/METADATA,sha256=8NJKQGFPf4ZsJU2Xmyu2Jvv0WiHmkmxD1SUEZnpJrBM,762
+sweetpie-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sweetpie-0.1.1.dist-info/top_level.txt,sha256=20thERTiNFjHpeupecwzaqL1a_A8001SqZWHFHmP5uA,15
+sweetpie-0.1.1.dist-info/RECORD,,
