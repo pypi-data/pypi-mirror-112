@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        awssp=switch_profile.app:main
+    

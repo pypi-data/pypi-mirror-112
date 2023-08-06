@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: switch-aws-profile
+Version: 0.0.3
+Summary: Switch AWS profile on local
+Home-page: https://github.com/kimisme9386/cli-switch-aws-profile
+Author: Chris Yang
+Author-email: kimisme9386@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyinquirer (==1.0.3)
+
+# Switch AWS Profile on local
+
+[![Tests](https://github.com/kimisme9386/cli-switch-aws-profile/actions/workflows/tests.yml/badge.svg)](https://github.com/kimisme9386/cli-switch-aws-profile/actions/workflows/tests.yml)
+
+Choose one AWS profile to set default when you have multiple AWS profile.
+
+Typically, the location of credential file is ` ~/.aws/credentials`
+
+## Feature
+
+- Switch AWS profile for setting default
+- Assume role for getting credential base on choosing AWS profile
+
+## prerequisites
+
+- Python3
+- jq 
+
