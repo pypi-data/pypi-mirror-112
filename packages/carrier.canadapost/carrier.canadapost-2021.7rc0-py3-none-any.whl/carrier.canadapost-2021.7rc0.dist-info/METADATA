@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: carrier.canadapost
+Version: 2021.7rc0
+Summary: Canada Post API Schemas Python Data Types library
+Home-page: https://github.com/PurplShip/purplship-carriers/tree/master/carrier.canadapost
+License: MIT
+Author: Dan Kobina
+Author-email: danielkobina@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: lxml (>=4.6.2,<5.0.0)
+Requires-Dist: six (>=1.15.0,<2.0.0)
+Project-URL: Repository, https://github.com/PurplShip/purplship-carriers
+Description-Content-Type: text/markdown
+
+# carrier.canadapost
+
+Canada Post Web API schemas Python Data Types generated with [generateDS](http://www.davekuhlman.org/generateDS.html)
+
+## Installation
+
+```bash
+pip install carrier.canadapost
+```
+
+## Usage
+
+```python
+import canadapost_lib
+
+help(canadapost_lib)
+```
+
+*This package is used by the [Purplship Multi-carrier Shipping Interface](https://github.com/PurplShip/purplship)*
+
