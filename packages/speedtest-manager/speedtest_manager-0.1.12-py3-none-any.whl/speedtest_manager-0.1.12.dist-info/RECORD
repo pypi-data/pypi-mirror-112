@@ -1,0 +1,13 @@
+speedtest_manager/__init__.py,sha256=JxG5J8IcN7WKIePA7QEsHZL100Y0w8YOR7ZFWYYQx7A,99
+speedtest_manager/client.py,sha256=d9FfpCCKr_T96UpUSzAPmuaKNakr9WkQaBZ23r7qNT0,8911
+speedtest_manager/connection.py,sha256=GG8YW3F0MkKJeZLF8i6kE8NhFCMFw7gSFFhAWN3e_XU,9828
+speedtest_manager/control.py,sha256=SFwFrV2E9tTMKFf_97jbDGHOh4zxuOnRgXlNOfYTKGM,4822
+speedtest_manager/jobs.py,sha256=IJZD0Ru7FfOJI6DSR7YRipTbfauvBCfWYzFqPFGOK2M,18095
+speedtest_manager/logging.py,sha256=gfgJf1vixhhIoQdYa-aPDJU5V3cyzx2NzoD5a5fzPE8,1320
+speedtest_manager/manager.py,sha256=PPTkK5tAlSQTSE9jbAXkgf3R4Q7vCHtmhrMl2QZVEAU,5222
+speedtest_manager/speedtest.py,sha256=II29Dhh0-SRhTl4HhxFuF4ew5_ICAvi1KUYrL0bjSdI,3820
+speedtest_manager-0.1.12.dist-info/entry_points.txt,sha256=ql9GqToxk2SdvmrbNKWUPv1MzPpeep9hlol2qC2s2Hw,115
+speedtest_manager-0.1.12.dist-info/LICENSE,sha256=JpLeP27JgDnL7PENmbltnkoXdneRTvVH5rYGCd9RBnQ,1071
+speedtest_manager-0.1.12.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+speedtest_manager-0.1.12.dist-info/METADATA,sha256=a0pzjJHuRUy1NQvNuMu3ZQip6POb9wAwNA1bIEqicR8,727
+speedtest_manager-0.1.12.dist-info/RECORD,,
