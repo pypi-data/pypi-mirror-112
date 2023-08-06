@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: slipbox
+Version: 0.17.0
+Summary: Static site generator for Zettelkasten notes
+Home-page: https://github.com/lggruspe/slipbox
+Author: Levi Gruspe
+Author-email: mail.levig@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Requires-Dist: genbu (==0.2.1)
+Requires-Dist: networkx (>=2.5.1)
+Requires-Dist: pydot (>=1.4.2)
+
+UNKNOWN
+
+
