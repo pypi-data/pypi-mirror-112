@@ -1,0 +1,9 @@
+consoleiotools
+
+[dev]
+build
+twine
+pycodestyle
+
+[opt]
+pillow
