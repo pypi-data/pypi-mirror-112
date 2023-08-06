@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+pymchat/__init__.py
+pymchat/chat.py
+pymchat/exceptions.py
+pymchat/message.py
+pymchat.egg-info/PKG-INFO
+pymchat.egg-info/SOURCES.txt
+pymchat.egg-info/dependency_links.txt
+pymchat.egg-info/requires.txt
+pymchat.egg-info/top_level.txt
