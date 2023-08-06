@@ -1,0 +1,16 @@
+*.swp
+*.swo
+.tox
+.coverage
+.coverage.*
+build
+dist
+*.pyc
+*.egg-info
+version.py
+.eggs
+.cache
+.pytest_cache/
+**/assets/*.json
+*.db-journal
+**/assets/package_catalogue.db
