@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+melee_env/__init__.py
+melee_env/dconfig.py
+melee_env/env.py
+melee_env.egg-info/PKG-INFO
+melee_env.egg-info/SOURCES.txt
+melee_env.egg-info/dependency_links.txt
+melee_env.egg-info/requires.txt
+melee_env.egg-info/top_level.txt
+melee_env/agents/basic.py
+melee_env/agents/util.py
+melee_env/install_data/GCPadNew.ini
+melee_env/install_data/fast_forward
