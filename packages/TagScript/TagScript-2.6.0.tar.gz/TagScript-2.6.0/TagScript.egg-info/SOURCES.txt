@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+TagScript.egg-info/PKG-INFO
+TagScript.egg-info/SOURCES.txt
+TagScript.egg-info/dependency_links.txt
+TagScript.egg-info/requires.txt
+TagScript.egg-info/top_level.txt
+TagScriptEngine/__init__.py
+TagScriptEngine/exceptions.py
+TagScriptEngine/interpreter.py
+TagScriptEngine/utils.py
+TagScriptEngine/verb.py
