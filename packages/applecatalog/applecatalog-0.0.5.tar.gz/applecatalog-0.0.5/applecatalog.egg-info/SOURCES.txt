@@ -1,0 +1,12 @@
+README.md
+requirements.txt
+setup.py
+applecatalog/__init__.py
+applecatalog/__main__.py
+applecatalog/catalog.py
+applecatalog.egg-info/PKG-INFO
+applecatalog.egg-info/SOURCES.txt
+applecatalog.egg-info/dependency_links.txt
+applecatalog.egg-info/entry_points.txt
+applecatalog.egg-info/requires.txt
+applecatalog.egg-info/top_level.txt

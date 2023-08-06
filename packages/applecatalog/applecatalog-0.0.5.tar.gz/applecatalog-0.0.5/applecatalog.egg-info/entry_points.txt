@@ -1,0 +1,3 @@
+[console_scripts]
+applecatalog = applecatalog.__main__:cli
+
