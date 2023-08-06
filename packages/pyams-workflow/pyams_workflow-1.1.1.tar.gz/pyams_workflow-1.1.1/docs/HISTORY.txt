@@ -1,0 +1,23 @@
+Changelog
+=========
+
+1.1.1
+-----
+ - import Invalid from zope.interface instead of zope.interface.interfaces
+
+1.1.0
+-----
+ - removed support for Python < 3.7
+ - updated workflow content transition form
+ - added check against previous state before applying any transition
+ - added workflow adapter for any IWorkflowVersion content
+ - added timezone to all generated datetimes
+
+1.0.1
+-----
+ - updated Gitlab-CI configuration
+ - removed Travis-CI configuration
+
+1.0.0
+-----
+ - initial release
