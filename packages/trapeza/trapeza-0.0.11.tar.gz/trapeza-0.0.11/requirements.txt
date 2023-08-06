@@ -1,0 +1,11 @@
+numpy
+pandas
+scipy
+joblib
+scikit-learn
+dash
+plotly
+matplotlib
+flask
+setuptools
+pathlib; python_version < "3.4"
