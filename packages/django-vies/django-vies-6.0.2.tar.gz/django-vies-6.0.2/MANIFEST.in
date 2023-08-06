@@ -1,0 +1,5 @@
+include README.rst
+include vies/locale/*/LC_MESSAGES/django.mo
+exclude .*
+exclude CONTRIBUTING.md
+prune .github
