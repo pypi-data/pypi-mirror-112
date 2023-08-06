@@ -1,0 +1,19 @@
+
+.thumbnail {
+  min-width: 128px;
+}
+
+.fa-shake {
+  animation: shake 0.5s;
+  animation-iteration-count: 5;
+}
+
+.toast-wrapper {
+    .toast {
+        .toast-header {
+            .close {
+                color: rgba(255, 255, 255, 0.5) !important;
+            }
+        }
+    }
+}
