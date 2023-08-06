@@ -1,0 +1,6 @@
+- name: install kernel headers devel
+  include_tasks: task_kernel.yml
+
+# currently dnf also use rpm to install
+- name: dnf install system packages
+  shell: rpm -ivh --force --nodeps --replacepkgs {{ resources_dir }}/{{ os_and_arch }}/*.rpm
