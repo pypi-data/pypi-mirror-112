@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: bitfuncs
+Version: 0.1.0
+Summary: Some async funcs for trading.
+Home-page: https://gitlab.com/toopy/bitfuncs
+Author: Florent Pigout
+Author-email: florent@toopy.org
+License: MIT
+Keywords: async,functions,trading
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiobittrex
+Requires-Dist: aiocache[redis]
+Requires-Dist: asyncsql
+Requires-Dist: chamallow
+Requires-Dist: degiro-connector
+Requires-Dist: dynaconf
+Provides-Extra: backtest
+Requires-Dist: backtesting ; extra == 'backtest'
+Requires-Dist: numpy ; extra == 'backtest'
+Requires-Dist: pandas ; extra == 'backtest'
+Requires-Dist: TA-Lib ; extra == 'backtest'
+Provides-Extra: lint
+Requires-Dist: black ; extra == 'lint'
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: isort ; extra == 'lint'
+Requires-Dist: pre-commit ; extra == 'lint'
+Provides-Extra: plot
+Requires-Dist: matplotlib (==3.2.2) ; extra == 'plot'
+Provides-Extra: release
+Requires-Dist: wheel[signatures] ; extra == 'release'
+Requires-Dist: zest.releaser ; extra == 'release'
+Provides-Extra: test
+Requires-Dist: async-generator ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-asyncio ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-lazy-fixture ; extra == 'test'
+Requires-Dist: pytest-mock ; extra == 'test'
+Provides-Extra: zipline
+Requires-Dist: zipline-reloaded ; extra == 'zipline'
+
+# BitFuncs
+
+Some async funcs for trading.
+
+## Install
+
+```bash
+(pyenv)$ pip install bitfuncs
+```
+
+## Migrate
+
+```bash
+(pyenv)$ ASYNCSQL_SQL_DIR=bitfuncs/sql python -m asyncsql.migrate schema_0.1.0
+```
+
+## Run Backtest
+
+```bash
+(pyenv)$ chamallow examples/crypto_backtest.yml
+```
+
+## Get Some Results
+
+Best found params and position status as json:
+
+```bash
+$ cat var/BTC.json
+{
+  "macd_fastperiod": 16.0,
+  "macd_slowperiod": 30.0,
+  "macd_signalperiod": 11.0,
+  "position": "none"
+}
+```
+
+## Backtesting html page
+
+```bash
+$ xdg-open var/BTC.html
+.
+```
+
+## License
+
+MIT
+
+
