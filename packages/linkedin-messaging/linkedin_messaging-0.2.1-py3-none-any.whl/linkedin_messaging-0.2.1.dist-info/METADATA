@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: linkedin-messaging
+Version: 0.2.1
+Summary: An unofficial API for interacting with LinkedIn Messaging
+Home-page: https://github.com/sumnerevans/linkedin-messaging-api
+License: Apache-2.0
+Keywords: LinkedIn,messaging
+Author: Sumner Evans
+Author-email: inquiries@sumnerevans.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0)
+Requires-Dist: beautifulsoup4 (>=4.9.3,<5.0.0)
+Requires-Dist: dataclasses-json (>=0.5.4,<0.6.0)
+Project-URL: Bug Tracker, https://github.com/sumnerevans/linkedin-messaging-api/issues
+Project-URL: Repository, https://github.com/sumnerevans/linkedin-messaging-api
+Description-Content-Type: text/markdown
+
+# LinkedIn Messaging API
+
+[![Python](https://github.com/sumnerevans/linkedin-messaging-api/actions/workflows/python.yaml/badge.svg)](https://github.com/sumnerevans/linkedin-messaging-api/actions/workflows/python.yaml)
+[![Matrix Chat](https://img.shields.io/matrix/linkedin-matrix:nevarro.space?server_fqdn=matrix.nevarro.space)](https://matrix.to/#/#linkedin-matrix:nevarro.space?via=nevarro.space&via=sumnerevans.com)
+
+An unofficial API for interacting with LinkedIn Messaging.
+
+Built using [aiohttp](https://docs.aiohttp.org/en/stable/).
+
+## Documentation
+
+See [`examples` directory](./examples).
+
+## Credits
+
+Authentication technique from [@everping](https://github.com/everping) in the
+[Linkedin-Authentication-Challenge](https://github.com/everping/Linkedin-Authentication-Challenge). Used with permission.
+
