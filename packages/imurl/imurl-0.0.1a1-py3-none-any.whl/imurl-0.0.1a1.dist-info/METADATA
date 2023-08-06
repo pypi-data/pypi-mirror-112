@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: imurl
+Version: 0.0.1a1
+Summary: `imurl` is an immutable URL library, written in modern Python.
+Home-page: https://github.com/thesketh/imurl
+Author: Travis Hesketh
+Author-email: travis@hesketh.scot
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/thesketh/imurl/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: moto ; extra == 'dev'
+Requires-Dist: pdoc ; extra == 'dev'
+
+`imurl` is (...will be?) an immutable URL library, written in modern Python.
+
+`imurl` is heavily inspired by both [`purl`](https://github.com/codeinthehole/purl) and [`pathlib`](https://docs.python.org/3/library/pathlib.html),
+and aims to be an easy library for simple URL manipulation in Python. Like `pathlib` paths, imurl URLs are immutable and operations can only create
+new URLs.
+
