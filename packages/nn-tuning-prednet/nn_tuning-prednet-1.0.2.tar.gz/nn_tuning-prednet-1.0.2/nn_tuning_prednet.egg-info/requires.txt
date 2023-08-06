@@ -1,0 +1,4 @@
+numpy
+tqdm
+Pillow
+tensorflow-gpu==1.14.0
