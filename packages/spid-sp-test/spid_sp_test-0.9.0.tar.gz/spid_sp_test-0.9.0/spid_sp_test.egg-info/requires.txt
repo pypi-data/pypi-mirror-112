@@ -1,0 +1,6 @@
+Jinja2>=2.11.3
+lxml>=4.6.2
+pyXMLSecurity>=0.21
+pysaml2>=6.5.1
+requests>=2.25.1
+xmlschema>=1.5.1
