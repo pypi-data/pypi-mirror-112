@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/ExtractKit/__init__.py
+src/ExtractKit/bikeExtractor.py
+src/ExtractKit/carExtractor.py
+src/ExtractKit/flipkartExtractor.py
+src/ExtractKit/gadgetsExtractor.py
+src/ExtractKit/newsExtractor.py
+src/ExtractKit/pcBuildExtractor.py
+src/extractkit.egg-info/PKG-INFO
+src/extractkit.egg-info/SOURCES.txt
+src/extractkit.egg-info/dependency_links.txt
+src/extractkit.egg-info/requires.txt
+src/extractkit.egg-info/top_level.txt
