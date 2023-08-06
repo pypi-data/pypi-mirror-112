@@ -1,0 +1,41 @@
+-
+  name: simulate_SPE1
+  input:
+    -
+      record: field_properties
+      location: field_properties.json
+    -
+      record: wells
+      location: wells.json
+
+  output:
+    -
+      record: wopt_prod
+      location: WOPT:PROD.json
+    -
+      record: wwpt_prod
+      location: WWPT:PROD.json
+    -
+      record: wgpt_prod
+      location: WGPT:PROD.json
+    -
+      record: wwit_inj
+      location: WWIT:INJ.json
+
+
+
+  transportable_commands:
+    -
+      name: summary2json
+      location: summary2json.py
+    -
+      name: render
+      location: render.py
+
+  script:
+    # TODO: The following cp should not be present, instead files should be
+    # transferred as blob records.
+    - cp ${SPE1_WORKSPACE_ROOT}/resources/SPE1CASE2.DATA.jinja2 SPE1CASE2.DATA.jinja2
+    - render -t SPE1CASE2.DATA.jinja2 -i field_properties.json wells.json -o SPE1CASE2.DATA
+    - flow SPE1CASE2
+    - summary2json --datafile SPE1CASE2.DATA --keywords WOPT:PROD WWPT:PROD WGPT:PROD WWIT:INJ
