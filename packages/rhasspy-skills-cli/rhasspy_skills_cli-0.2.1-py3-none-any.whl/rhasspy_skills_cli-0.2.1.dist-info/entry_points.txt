@@ -1,0 +1,3 @@
+[console_scripts]
+rhskill=rhasspy_skills_cli.main:app
+
