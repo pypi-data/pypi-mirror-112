@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: OpenEnsembles
+Version: 2.0.0
+Summary: UNKNOWN
+Home-page: https://github.com/NaegleLab/OpenEnsembles
+Author: Naegle Lab
+License: GNU General Public License v3
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pandas (==1.2.*)
+Requires-Dist: numpy (==1.19.*)
+Requires-Dist: scikit-learn (==0.24.*)
+Requires-Dist: scipy (==1.6.*)
+Requires-Dist: networkx (==2.5)
+Requires-Dist: matplotlib (==3.3.*)
+Requires-Dist: hdbscan (==0.8.*)
+
+An open source Python package for performing, finishing, and analyzing ensemble clustering.
+
