@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pytorch_lightning_template/__init__.py
+pytorch_lightning_template/example.py
+pytorch_lightning_template.egg-info/PKG-INFO
+pytorch_lightning_template.egg-info/SOURCES.txt
+pytorch_lightning_template.egg-info/dependency_links.txt
+pytorch_lightning_template.egg-info/requires.txt
+pytorch_lightning_template.egg-info/top_level.txt
