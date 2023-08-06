@@ -1,0 +1,4 @@
+include *.txt
+include paretos/app/templates/*.html
+include LICENSE
+include paretos
