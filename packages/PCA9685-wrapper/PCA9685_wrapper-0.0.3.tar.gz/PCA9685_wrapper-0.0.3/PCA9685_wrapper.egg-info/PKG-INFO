@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: PCA9685-wrapper
+Version: 0.0.3
+Summary: adafruit-pca9685 wrapper for Raspberry pi
+Home-page: https://github.com/being24/PCA9685_Wrapper
+Author: being24
+Author-email: being24@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PCA9685_wrapper
+
+A simple wrapper for adafruit-pca9685
+
+
