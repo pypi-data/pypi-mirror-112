@@ -1,0 +1,12 @@
+jmespath
+psutil
+
+[develop]
+ipython
+myst-parser
+pytest
+scapy
+sphinx
+sphinx-rtd-theme
+twine
+watchdog
