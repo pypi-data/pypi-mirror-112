@@ -1,0 +1,14 @@
+napari_properties_plotter/__init__.py,sha256=5Nzl3QudnOIQioqQac98Woi1wDVFLpTLKoSkFo57sQ4,217
+napari_properties_plotter/_dock_widget.py,sha256=p8cniD6_RUp2GdJROscUIRkCOxnNtC91t-iSmcnXKyI,261
+napari_properties_plotter/_version.py,sha256=g0RU_Fiae76hPEUjU6lGnapa9IZoqGcB4oFcTnsoMbM,142
+napari_properties_plotter/components.py,sha256=Z5D-emquO-wEUtrzJVwFRMfwS-Xddw8HY-ofyOfRS4w,3899
+napari_properties_plotter/property_plotter.py,sha256=6T2iOkocGPhh936SsPSZbo62YrB3S4-RdTUcAM_Ghpk,13470
+napari_properties_plotter/utils.py,sha256=gcLQ3bfgY4oGvkPvGHK8S8gKIRL3-KaeMFBi5zVnIk8,1249
+napari_properties_plotter/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_properties_plotter/_tests/test_dock_widget.py,sha256=6Mv4HghUDkF8AdI76uWgGE-tW4SyI15uA0jDOdka93Q,562
+napari_properties_plotter-0.2.0.dist-info/LICENSE,sha256=aYweZAJ9Gsal0S8BHA2U8FNH1qIRkI8JU1b9o6xJLVM,1498
+napari_properties_plotter-0.2.0.dist-info/METADATA,sha256=R9eh86AbbNXHp75BDuLRexLw10Yc5NhhtM2EdfvjPLo,3967
+napari_properties_plotter-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+napari_properties_plotter-0.2.0.dist-info/entry_points.txt,sha256=NH71ry-RwrxAZGBKp9MPBBUeWOTBtMljT_ryehWHqIc,71
+napari_properties_plotter-0.2.0.dist-info/top_level.txt,sha256=c46cwVIX2mzo9VqzlO0Vz9Us7DWT_Lo3H6Gs3VHuOwA,26
+napari_properties_plotter-0.2.0.dist-info/RECORD,,
