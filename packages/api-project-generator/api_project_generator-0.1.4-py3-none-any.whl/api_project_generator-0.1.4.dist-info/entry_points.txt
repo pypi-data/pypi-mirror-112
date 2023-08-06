@@ -1,0 +1,3 @@
+[console_scripts]
+api-project=api_project_generator.main:app
+
