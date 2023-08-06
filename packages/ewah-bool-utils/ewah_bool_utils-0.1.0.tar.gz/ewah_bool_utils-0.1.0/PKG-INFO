@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ewah-bool-utils
+Version: 0.1.0
+Summary: EWAH Bool Array utils for yt
+License: BSD License
+Author: Matthew Turk
+Requires-Python: >=3.6,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Cython (>=0.29.21,<3.0)
+Requires-Dist: flake8 (>=3.9.2,<4.0.0)
+Requires-Dist: numpy
