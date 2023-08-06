@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: DayOfWeek
+Version: 0.0.2
+Summary: My First Python Package
+Home-page: UNKNOWN
+Author: PythonIsALongTimeFriend
+Author-email: kantonato12@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# DayOfWeek
+This is a Python package that helps determine the Day of the week when a date is provided.
+
+## Usage:
+Refer [These docs](https://github.com/ScarletKing-001/DayFind#readme) for instructions on how to use the package.
+
+

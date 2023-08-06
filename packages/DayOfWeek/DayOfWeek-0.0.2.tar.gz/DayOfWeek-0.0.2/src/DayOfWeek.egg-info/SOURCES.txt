@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/DayOfWeek/WeekDay.py
+src/DayOfWeek/__init__.py
+src/DayOfWeek.egg-info/PKG-INFO
+src/DayOfWeek.egg-info/SOURCES.txt
+src/DayOfWeek.egg-info/dependency_links.txt
+src/DayOfWeek.egg-info/top_level.txt
