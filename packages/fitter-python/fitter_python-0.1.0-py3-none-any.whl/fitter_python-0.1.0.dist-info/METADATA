@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: fitter-python
+Version: 0.1.0
+Summary: A fitter Python project
+Home-page: https://github.com/anthonyjatoba/fitter-python
+License: MIT
+Keywords: fitter python
+Author: Anthony Jatobá
+Author-email: anthonyjatoba@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=8.0.1,<9.0.0)
+Requires-Dist: desert (>=2020.11.18,<2021.0.0)
+Requires-Dist: marshmallow (>=3.12.1,<4.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Project-URL: Repository, https://github.com/anthonyjatoba/fitter-python
+Description-Content-Type: text/markdown
+
+# Fitter, happier python
+
+Based on the [hypermodern-python](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/) series.
+
+[![Tests](https://github.com/anthonyjatoba/fitter-python/workflows/Tests/badge.svg)](https://github.com/anthonyjatoba/fitter-python/actions?workflow=Tests)
+[![codecov](https://codecov.io/gh/anthonyjatoba/fitter-python/branch/main/graph/badge.svg?token=U39TD5TDDI)](https://codecov.io/gh/anthonyjatoba/fitter-python)
+

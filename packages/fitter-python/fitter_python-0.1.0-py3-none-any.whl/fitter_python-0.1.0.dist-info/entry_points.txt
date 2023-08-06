@@ -1,0 +1,3 @@
+[console_scripts]
+fitter-python=fitter_python.console:main
+
