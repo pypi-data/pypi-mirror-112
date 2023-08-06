@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: hacktcha
+Version: 0.2.0
+Summary: 
+Author: zillionare
+Author-email: code@jieyu.ai
+Requires-Python: >=3.7.9,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiofiles (>=0.7.0,<0.8.0)
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0)
+Requires-Dist: captcha (>=0.3,<0.4)
+Requires-Dist: fastai (>=2.3,<3.0)
+Requires-Dist: fire (>=0.4.0,<0.5.0)
+Requires-Dist: numpy (>=1.21.0,<2.0.0)
+Requires-Dist: pillow (>=8.2,<9.0)
+Requires-Dist: sanic (>=21.6.0,<22.0.0)
+Requires-Dist: torch (>=1.7.1,<2.0.0)
+Requires-Dist: uuid (>=1.30,<2.0)
