@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/polyroi/Point.py
+src/polyroi/Shape.py
+src/polyroi/__init__.py
+src/polyroi.egg-info/PKG-INFO
+src/polyroi.egg-info/SOURCES.txt
+src/polyroi.egg-info/dependency_links.txt
+src/polyroi.egg-info/requires.txt
+src/polyroi.egg-info/top_level.txt
