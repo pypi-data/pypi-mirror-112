@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+./scripts/IOGraph
+IOGraph/__init__.py
+IOGraph/__main__.py
+IOGraph.egg-info/PKG-INFO
+IOGraph.egg-info/SOURCES.txt
+IOGraph.egg-info/dependency_links.txt
+IOGraph.egg-info/requires.txt
+IOGraph.egg-info/top_level.txt
