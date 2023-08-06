@@ -1,0 +1,3 @@
+[console_scripts]
+JiraC = jira_tool.__main__:main
+
