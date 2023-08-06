@@ -1,0 +1,3 @@
+[console_scripts]
+gua = gua.gua:main
+
