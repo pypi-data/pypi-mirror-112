@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+eel/__init__.py
+eel/__main__.py
+eel/browsers.py
+eel/chrome.py
+eel/edge.py
+eel/eel.js
+eel/electron.py
+eelJINJAenv.egg-info/PKG-INFO
+eelJINJAenv.egg-info/SOURCES.txt
+eelJINJAenv.egg-info/dependency_links.txt
+eelJINJAenv.egg-info/requires.txt
+eelJINJAenv.egg-info/top_level.txt
