@@ -1,0 +1,4 @@
+django
+enmerkar==0.7.1
+markey<0.9,>=0.8
+babel>=1.3
