@@ -1,0 +1,29 @@
+import Reflux from 'reflux';
+import ModalActions from 'app/actions/modalActions';
+var storeConfig = {
+    init: function () {
+        this.reset();
+        this.listenTo(ModalActions.closeModal, this.onCloseModal);
+        this.listenTo(ModalActions.openModal, this.onOpenModal);
+    },
+    get: function () {
+        return this.state;
+    },
+    reset: function () {
+        this.state = {
+            renderer: null,
+            options: {},
+        };
+    },
+    onCloseModal: function () {
+        this.reset();
+        this.trigger(this.state);
+    },
+    onOpenModal: function (renderer, options) {
+        this.state = { renderer: renderer, options: options };
+        this.trigger(this.state);
+    },
+};
+var ModalStore = Reflux.createStore(storeConfig);
+export default ModalStore;
+//# sourceMappingURL=modalStore.jsx.map

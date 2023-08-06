@@ -1,0 +1,57 @@
+import { __extends, __makeTemplateObject } from "tslib";
+import { Component, Fragment } from 'react';
+import styled from '@emotion/styled';
+import * as Layout from 'app/components/layouts/thirds';
+import { Panel } from 'app/components/panels';
+import { t } from 'app/locale';
+import Breadcrumb from 'app/views/performance/breadcrumb';
+import TraceView from './traceView';
+import TransactionSummary from './transactionSummary';
+import { isTransactionEvent } from './utils';
+var TransactionComparisonContent = /** @class */ (function (_super) {
+    __extends(TransactionComparisonContent, _super);
+    function TransactionComparisonContent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    TransactionComparisonContent.prototype.getTransactionName = function () {
+        var _a = this.props, baselineEvent = _a.baselineEvent, regressionEvent = _a.regressionEvent;
+        if (isTransactionEvent(baselineEvent) && isTransactionEvent(regressionEvent)) {
+            if (baselineEvent.title === regressionEvent.title) {
+                return baselineEvent.title;
+            }
+            return t('mixed transaction names');
+        }
+        if (isTransactionEvent(baselineEvent)) {
+            return baselineEvent.title;
+        }
+        if (isTransactionEvent(regressionEvent)) {
+            return regressionEvent.title;
+        }
+        return t('no transaction title found');
+    };
+    TransactionComparisonContent.prototype.render = function () {
+        var _a = this.props, baselineEvent = _a.baselineEvent, regressionEvent = _a.regressionEvent, organization = _a.organization, location = _a.location, params = _a.params;
+        var transactionName = baselineEvent.title === regressionEvent.title ? baselineEvent.title : undefined;
+        return (<Fragment>
+        <Layout.Header>
+          <Layout.HeaderContent>
+            <Breadcrumb organization={organization} location={location} transactionName={transactionName} transactionComparison/>
+            <Layout.Title>{this.getTransactionName()}</Layout.Title>
+          </Layout.HeaderContent>
+          <Layout.HeaderActions>
+            <TransactionSummary organization={organization} location={location} params={params} baselineEvent={baselineEvent} regressionEvent={regressionEvent}/>
+          </Layout.HeaderActions>
+        </Layout.Header>
+        <Layout.Body>
+          <StyledPanel>
+            <TraceView baselineEvent={baselineEvent} regressionEvent={regressionEvent}/>
+          </StyledPanel>
+        </Layout.Body>
+      </Fragment>);
+    };
+    return TransactionComparisonContent;
+}(Component));
+var StyledPanel = styled(Panel)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  grid-column: 1 / span 2;\n  overflow: hidden;\n"], ["\n  grid-column: 1 / span 2;\n  overflow: hidden;\n"])));
+export default TransactionComparisonContent;
+var templateObject_1;
+//# sourceMappingURL=content.jsx.map

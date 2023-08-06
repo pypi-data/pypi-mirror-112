@@ -1,0 +1,2 @@
+(self.webpackChunk=self.webpackChunk||[]).push([["app_views_settings_projectSourceMaps_index_tsx"],{"./app/views/settings/projectSourceMaps/index.tsx":(e,t,n)=>{"use strict";n.r(t),n.d(t,{default:()=>i});var s=n("../node_modules/react/index.js");const i=(0,n("./app/utils/withOrganization.tsx").Z)((function(e){var t=e.children,n=e.organization,i=e.project;return s.isValidElement(t)?s.cloneElement(t,{organization:n,project:i}):null}))}}]);
+//# sourceMappingURL=../sourcemaps/app_views_settings_projectSourceMaps_index_tsx.40675535b4fdec25539f5ad6d39b2bc7.js.map

@@ -1,0 +1,187 @@
+import { __extends, __makeTemplateObject, __read, __spreadArray } from "tslib";
+import { Fragment } from 'react';
+import styled from '@emotion/styled';
+import Alert from 'app/components/alert';
+import Button from 'app/components/button';
+import List from 'app/components/list';
+import ListItem from 'app/components/list/listItem';
+import NavTabs from 'app/components/navTabs';
+import { IconAdd, IconArrow } from 'app/icons';
+import { t } from 'app/locale';
+import { trackIntegrationEvent } from 'app/utils/integrationUtil';
+import { singleLineRenderer } from 'app/utils/marked';
+import withOrganization from 'app/utils/withOrganization';
+import AsyncView from 'app/views/asyncView';
+import AddIntegration from 'app/views/organizationIntegrations/addIntegration';
+import IntegrationAlertRules from 'app/views/organizationIntegrations/integrationAlertRules';
+import IntegrationCodeMappings from 'app/views/organizationIntegrations/integrationCodeMappings';
+import IntegrationExternalTeamMappings from 'app/views/organizationIntegrations/integrationExternalTeamMappings';
+import IntegrationExternalUserMappings from 'app/views/organizationIntegrations/integrationExternalUserMappings';
+import IntegrationItem from 'app/views/organizationIntegrations/integrationItem';
+import IntegrationMainSettings from 'app/views/organizationIntegrations/integrationMainSettings';
+import IntegrationRepos from 'app/views/organizationIntegrations/integrationRepos';
+import IntegrationServerlessFunctions from 'app/views/organizationIntegrations/integrationServerlessFunctions';
+import Form from 'app/views/settings/components/forms/form';
+import JsonForm from 'app/views/settings/components/forms/jsonForm';
+import BreadcrumbTitle from 'app/views/settings/components/settingsBreadcrumb/breadcrumbTitle';
+import SettingsPageHeader from 'app/views/settings/components/settingsPageHeader';
+var ConfigureIntegration = /** @class */ (function (_super) {
+    __extends(ConfigureIntegration, _super);
+    function ConfigureIntegration() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.onTabChange = function (value) {
+            _this.setState({ tab: value });
+        };
+        _this.onUpdateIntegration = function () {
+            _this.setState(_this.getDefaultState(), _this.fetchData);
+        };
+        _this.getAction = function (provider) {
+            var integration = _this.state.integration;
+            var action = provider && provider.key === 'pagerduty' ? (<AddIntegration provider={provider} onInstall={_this.onUpdateIntegration} account={integration.domainName} organization={_this.props.organization}>
+          {function (onClick) { return (<Button priority="primary" size="small" icon={<IconAdd size="xs" isCircled/>} onClick={function () { return onClick(); }}>
+              {t('Add Services')}
+            </Button>); }}
+        </AddIntegration>) : null;
+            return action;
+        };
+        return _this;
+    }
+    ConfigureIntegration.prototype.getEndpoints = function () {
+        var _a = this.props.params, orgId = _a.orgId, integrationId = _a.integrationId;
+        return [
+            ['config', "/organizations/" + orgId + "/config/integrations/"],
+            ['integration', "/organizations/" + orgId + "/integrations/" + integrationId + "/"],
+        ];
+    };
+    ConfigureIntegration.prototype.componentDidMount = function () {
+        var location = this.props.location;
+        var value = ['codeMappings', 'userMappings', 'teamMappings'].find(function (tab) { return tab === location.query.tab; }) || 'repos';
+        // eslint-disable-next-line react/no-did-mount-set-state
+        this.setState({ tab: value });
+    };
+    ConfigureIntegration.prototype.onRequestSuccess = function (_a) {
+        var stateKey = _a.stateKey, data = _a.data;
+        if (stateKey !== 'integration') {
+            return;
+        }
+        trackIntegrationEvent('integrations.details_viewed', {
+            integration: data.provider.key,
+            integration_type: 'first_party',
+        }, this.props.organization);
+    };
+    ConfigureIntegration.prototype.getTitle = function () {
+        return this.state.integration
+            ? this.state.integration.provider.name
+            : 'Configure Integration';
+    };
+    ConfigureIntegration.prototype.hasStacktraceLinking = function (provider) {
+        // CodeOwners will only work if the provider has StackTrace Linking
+        return (provider.features.includes('stacktrace-link') &&
+            this.props.organization.features.includes('integrations-stacktrace-link'));
+    };
+    ConfigureIntegration.prototype.hasCodeOwners = function () {
+        return this.props.organization.features.includes('integrations-codeowners');
+    };
+    ConfigureIntegration.prototype.isCustomIntegration = function () {
+        var integration = this.state.integration;
+        var organization = this.props.organization;
+        return (organization.features.includes('integrations-custom-scm') &&
+            integration.provider.key === 'custom_scm');
+    };
+    Object.defineProperty(ConfigureIntegration.prototype, "tab", {
+        get: function () {
+            return this.state.tab || 'repos';
+        },
+        enumerable: false,
+        configurable: true
+    });
+    // TODO(Steve): Refactor components into separate tabs and use more generic tab logic
+    ConfigureIntegration.prototype.renderMainTab = function (provider) {
+        var _a, _b, _c, _d;
+        var orgId = this.props.params.orgId;
+        var integration = this.state.integration;
+        var instructions = (_b = (_a = integration.dynamicDisplayInformation) === null || _a === void 0 ? void 0 : _a.configure_integration) === null || _b === void 0 ? void 0 : _b.instructions;
+        return (<Fragment>
+        <BreadcrumbTitle routes={this.props.routes} title={integration.provider.name}/>
+
+        {integration.configOrganization.length > 0 && (<Form hideFooter saveOnBlur allowUndo apiMethod="POST" initialData={integration.configData || {}} apiEndpoint={"/organizations/" + orgId + "/integrations/" + integration.id + "/"}>
+            <JsonForm fields={integration.configOrganization} title={((_c = integration.provider.aspects.configure_integration) === null || _c === void 0 ? void 0 : _c.title) ||
+                    t('Organization Integration Settings')}/>
+          </Form>)}
+
+        {instructions && instructions.length > 0 && (<Alert type="info">
+            {(instructions === null || instructions === void 0 ? void 0 : instructions.length) === 1 ? (<span dangerouslySetInnerHTML={{ __html: singleLineRenderer(instructions[0]) }}/>) : (<List symbol={<IconArrow size="xs" direction="right"/>}>
+                {(_d = instructions === null || instructions === void 0 ? void 0 : instructions.map(function (instruction, i) { return (<ListItem key={i}>
+                    <span dangerouslySetInnerHTML={{ __html: singleLineRenderer(instruction) }}/>
+                  </ListItem>); })) !== null && _d !== void 0 ? _d : []}
+              </List>)}
+          </Alert>)}
+
+        {provider.features.includes('alert-rule') && <IntegrationAlertRules />}
+
+        {provider.features.includes('commits') && (<IntegrationRepos {...this.props} integration={integration}/>)}
+
+        {provider.features.includes('serverless') && (<IntegrationServerlessFunctions integration={integration}/>)}
+      </Fragment>);
+    };
+    ConfigureIntegration.prototype.renderBody = function () {
+        var integration = this.state.integration;
+        var provider = this.state.config.providers.find(function (p) { return p.key === integration.provider.key; });
+        if (!provider) {
+            return null;
+        }
+        var title = <IntegrationItem integration={integration}/>;
+        var header = (<SettingsPageHeader noTitleStyles title={title} action={this.getAction(provider)}/>);
+        return (<Fragment>
+        {header}
+        {this.renderMainContent(provider)}
+      </Fragment>);
+    };
+    // renders everything below header
+    ConfigureIntegration.prototype.renderMainContent = function (provider) {
+        var _this = this;
+        // if no code mappings, render the single tab
+        if (!this.hasStacktraceLinking(provider)) {
+            return this.renderMainTab(provider);
+        }
+        // otherwise render the tab view
+        var tabs = __spreadArray(__spreadArray([
+            ['repos', t('Repositories')],
+            ['codeMappings', t('Code Mappings')]
+        ], __read((this.hasCodeOwners() ? [['userMappings', t('User Mappings')]] : []))), __read((this.hasCodeOwners() ? [['teamMappings', t('Team Mappings')]] : [])));
+        if (this.isCustomIntegration()) {
+            tabs.unshift(['settings', t('Settings')]);
+        }
+        return (<Fragment>
+        <NavTabs underlined>
+          {tabs.map(function (tabTuple) { return (<li key={tabTuple[0]} className={_this.tab === tabTuple[0] ? 'active' : ''} onClick={function () { return _this.onTabChange(tabTuple[0]); }}>
+              <CapitalizedLink>{tabTuple[1]}</CapitalizedLink>
+            </li>); })}
+        </NavTabs>
+        {this.renderTabContent(this.tab, provider)}
+      </Fragment>);
+    };
+    ConfigureIntegration.prototype.renderTabContent = function (tab, provider) {
+        var integration = this.state.integration;
+        var organization = this.props.organization;
+        switch (tab) {
+            case 'codeMappings':
+                return <IntegrationCodeMappings integration={integration}/>;
+            case 'repos':
+                return this.renderMainTab(provider);
+            case 'userMappings':
+                return <IntegrationExternalUserMappings integration={integration}/>;
+            case 'teamMappings':
+                return <IntegrationExternalTeamMappings integration={integration}/>;
+            case 'settings':
+                return (<IntegrationMainSettings onUpdate={this.onUpdateIntegration} organization={organization} integration={integration}/>);
+            default:
+                return this.renderMainTab(provider);
+        }
+    };
+    return ConfigureIntegration;
+}(AsyncView));
+export default withOrganization(ConfigureIntegration);
+var CapitalizedLink = styled('a')(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  text-transform: capitalize;\n"], ["\n  text-transform: capitalize;\n"])));
+var templateObject_1;
+//# sourceMappingURL=configureIntegration.jsx.map
