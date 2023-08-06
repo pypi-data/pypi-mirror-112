@@ -1,0 +1,4 @@
+[console_scripts]
+mmo = minimo:main
+minimo = minimo:main
+

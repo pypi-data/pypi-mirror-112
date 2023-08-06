@@ -1,0 +1,88 @@
+# global config for project "${project_name}"
+#
+# customized settings will be loaded to Application as attributes, and be
+# deepcopied to Performer's config.
+#
+# for example, here we defined:
+#
+#   foo: bar
+#
+# it can be used as:
+#   app.foo #== bar
+#   performer.config.foo #== bar
+#
+# attributes defined in global config file will be overrided by those defined
+# in case/config file.
+#
+
+# report format type, supported "text", "html" and "xml",
+# default is "text"
+#   text: plain text
+#   html: html web page
+#   xml: xml file
+output: text
+
+# case running type, could be "serial" or "concorrence",
+# default is "serial"
+#   serial: run cases one by one
+#   concorrence: run cases concorrently by threads.
+running_type: serial
+
+# set maxinum thread count to run the tasks while `running_type`
+# is `concorrence`. if it is set to 0 or greater than 1000, it will be
+# reset to 1000.
+max_thread_count: 10
+
+# redirect stdout message to log file or not.
+# if running in background, there maybe raises exception due to no stdout
+# handler, so set this flag to True, print stdout message to log file.
+# it is forced to redirection under api mode.
+redirect_stdout_to_file: false
+
+# project modules path, which will be inserted into sys.path at application
+# started. by default, "lib", "cases", "vendor" will be added mandatory.
+# modules_path:
+#     - sample_dir1
+#     - sample_dir2
+
+# scheduler configuration for scheduled jobs in your project.
+#
+# executor:
+#   - max_workers: max workers for processpool type executor, default is 1.
+#   minimo only supports ProcessPoolExecutor to run jobs.
+#
+# jobstore:
+#   - type: store type, can be `redis`, `mongodb`, `sqlalchemy` and etc.
+#   - **jobstore_option: refer to APScheduler Doc.
+#   remove this key to use memory by default.
+#
+# jobs:
+#   - id: customized job id, optional, it's necessary to set id for jobs
+#         running the same case.
+#   - case: your task suite/case name which can be listed by `mmo ls`.
+#   - enable: enable this job or not.
+#   - config: job configuration, the trigger can be `cron`, `interval` and
+#             `date`, more detail information please refer to APScheduler Doc.
+#
+# scheduler:
+#     executor:
+#         max_workers: 1
+#     jobstore:
+#         type: redis
+#         jobs_key: jobs_key_name
+#         options: ...
+#     jobs:
+#         -
+#             id: job_id
+#             case: case_name
+#             enable: true
+#             config:
+#                 trigger: cron
+#                 hour: 3
+#                 minute: 30
+#         -
+#             case: case_name
+#             enable: false
+#             config:
+#                 trigger: interval
+#                 seconds: 10

@@ -1,0 +1,10 @@
+mako>=1.0.7
+click
+unittest-xml-reporting
+PyYAML
+APScheduler
+
+[dev]
+tox
+check-manifest
+flake8
