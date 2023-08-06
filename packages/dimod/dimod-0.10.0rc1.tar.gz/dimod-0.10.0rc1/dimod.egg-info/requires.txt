@@ -1,0 +1,4 @@
+numpy<2.0.0,>=1.17.3
+
+[preprocessing]
+dwave-preprocessing<0.4,>=0.3
