@@ -1,0 +1,314 @@
+Metadata-Version: 2.1
+Name: tekigo
+Version: 0.9.8
+Summary: Cerfacs mesh adaption toolkit
+Home-page: https://gitlab.com/cerfacs/tekigo
+Author: CoopTeam-CERFACS
+Author-email: coop@cerfacs.fr
+License: MIT License
+Description: # Tékigô
+        
+        ## About
+        Tékigô is a python interface for static mesh adaptation with the  [MMG library](https://www.mmgtools.org/) through  the   [HIP](http://www.cerfacs.fr/avbp7x/hip.php) mesh handler  developed at CERFACS. It is suited for unstructured grids and particularly useful for CFD. The mesh refinement is performed as part of the package and does not require additional dependencies.
+        
+        In its essence, given a set of user defined criteria in a numpy format Tekigo can **mix** them to provide a single input for HIP (and MMG). In addition, **global constraints** for the refinement can be specified such as maximum mesh size or minimal cell volume.  Through Tekigo, the user can rely on the full flexibility offered by Python in defining criteria.
+        
+        
+        ---
+        
+        ## Installation
+        Either passing through PyPI
+        
+        ``` 
+        pip install tekigo
+        ```
+        
+        or through the repository
+        
+        ```
+        git clone git@gitlab.com:cerfacs/tekigo.git
+        ```
+        
+        followed by 
+        
+        ```
+         python setup.py install
+        ```
+        
+        in the  `tekigo/` parent directory.
+        
+        ---
+        
+        ## Useful terminology
+        **The metric**
+        
+        As the meshing is ultimately performed by MMG, the inputs need to be tailored to its needs. A "future edge size"  field is what MMG bases its refinement on. HIP relies instead on a parameter called the **metric** which is more intuitive than the latter field and internally generates the "correct" input for MMG.  Similar to any other field variable, the **metric** (and also the future edge size ) has a value assigned to each mesh node. Requirements are that
+        * the **metric** values have to be ∈  [0.5, 4] with 
+            * &lt; 1:   refine
+            * = 1:      do nothing
+            * &gt;  1:  coarsen
+        * and where 
+            * 0.5:  implies that the target edge length will be half of the current one
+            * 4:    implies that the target edge length will be 4 times larger that the current one
+        
+        MMG <ins>cannot guarantee </ins> that nodes with a metric value of 1 assigned to them will not be affected by the refinement, as multiple parameters come into play. The same comment is valid for other values. <ins>The refinement procedure tries to comply as much as possible with the metric field values.  </ins>
+        
+        **The criterion**
+        
+        Tekigo also works with the concept of a **criterion** (or criteria), and is relevant to the `refine` functionality introduced further below. Similarly to the metric, it is a field variable with a value assigned to each node. 
+        * A **criterion** has to be ∈  [-1, - 1] with 
+            * 1:    maximum refinement 
+            * 0:    do nothing
+            * -1:  maximum coarsening
+        
+        Through the intermediary of the `refine` functionality, <ins>a **criterion** is converted into a metric</ins>, complying with the previously mentioned requirements, as to enable the use of MMG.
+        
+        **A criterion can best be  understood as being a mask, where one specifies whether one wishes to refine, coarsen or do nothing. The amount of refinement is then controlled by the mixing of the criteria.**
+        
+        ---
+        
+        ## Usage guidelines
+        
+        *Disclaimer:  This is NOT an automatic documentation webpage ; Check on the full documentation for the latest precisions on the package*
+        
+         There are 2 main "operation modes" available to the user: `raw adapt` and `refine`. 
+         Each of these modes can be combined with the `dry run` functionality. Periodicity and boundaries can be controlled in the refinement procedure.
+        
+        ### The `raw adapt` function
+        
+        The simplest use of Tekigo is by directly defining a metric field.   
+        The tekigo function to use is:
+        ```python 
+        raw_adapt(
+            tekigo_sol,             # the initial solution, as a TekigoSolution object
+            metric_field,           # the metric field, a numpy array with values
+            dry_run=False)          # id True, return only metric, withoud performing mesh adaptation
+        ```
+        This is all that's required to get a new mesh. The `TekigoSolution` object is described further below. 
+        Additionally, optional arguments include:
+        * hausdorff_distance: default = None, parameter relating to the boundary approximation, see [MMG website](https://www.mmgtools.org/mmg-remesher-try-mmg/mmg-remesher-options/mmg-remesher-option-hausd) for more information.
+        * max_spacing_gradient: default = 1.4, another [MMG parameter](https://www.mmgtools.org/mmg-remesher-try-mmg/mmg-remesher-options/mmg-remesher-option-hgrad) which controls the ratio between adjacent edges.  
+        * frozen_patch_list: default = None, see specific section further below
+        * periodic_adaptation: default = True, see specific section further below
+        * dry_run: default = False, see specific section further below
+        
+        ### The `refine` function
+        
+        A typical Tekigo script, in this mode of operation, is **a set of python functions** defining refinement criteria using numpy arrays. These criteria are, in the end, passed to the `refine` function.
+        The criteria are iteratively evaluated on intermediate meshes/solutions using the `TekigoSolution` object.
+        
+        The tekigo function to use is:
+        
+        ```python
+        refine(
+        	tekigo_sol,               # the initial solution, as a TekigoSolution object	
+            custom_criteria,          # a dictionnary of functions returning numpy arrays of shape (size_mesh)
+        	dry_run=False,            # id True, return only metric, withoud performing mesh adaptation
+            # OPTIONAL ARGUMENTS
+        	iteration_max=10,         # number of intermediate adaptations
+        	ncell_max=100000,         # target mesh size (approx ~20%)
+        	min_edge=7.e-4,           # target min edge (approx ~20%)
+        	l2_crit=0.005,            # thressold to stop adaptation 
+        	met_mix='abs_max',        # mixing metrix method: 'average' or 'abs_max'(default)
+        	max_refinement_ratio=0.6, # MMG authorized refinement ratio
+        	max_spacing_gradient=1.4) # MMG authorized spacing gradient
+        ```
+        
+        This function dumps the intermediate and final meshes, each time with solutions and metric interpolated.
+        Additionally to the optional arguments listed in the above example the user can specify:
+        
+        * ncell_max: default = None, an alternative to the optional use of nnode_max
+        * min_vol: default = None, an alternative to the optional use of min_dege
+        * **coarsen**: default = False, allows the coarsening to happen or not
+        * hausdorff_distance: default = None, parameter relating to the boundary approximation, see [MMG website](https://www.mmgtools.org/mmg-remesher-try-mmg/mmg-remesher-options/mmg-remesher-option-hausd) for more information.
+        * frozen_patch_list: default = None, see specific section further below
+        * periodic_adaptation: default = True, see specific section further below
+        * dry_run: default = False, see specific section further below
+                
+        
+        ### The `dry_run` functionality
+        
+        In both `raw adapt` and `refine` functions, it is possible to activate the  `dry_run` option. 
+        If activated, no adaptation is performed. Tekigo rewrites a solution with the metric, criteria (if applicable) and future_edge_size fields AND estimates te future number of nodes. These outputs are the best metrics to get a better grasp on the resulting refinement.
+        
+        ### Periodicity and Freezing boundaries in the refinement strategy
+        * MMG can handle axi-periodic patches and is de-activated by default. If for some reason, the user wishes to activate this feature it is possible by adding the argument `periodic_adaptation = True` in either the `raw adapt` or `refine` function calls.
+        
+        * Possibly, the user desires to avoid refinement near certain boundaries. A way to control this is by specifying these boundaries in a list containing their number, and passing this list to the argument `frozen_patch_list= [1,3]` to either the `raw adapt` or `refine` function calls.
+        
+        
+        ### The `TekigoSolution` object
+        
+        This object defines the mesh, solution and fields to take into account during the adaptation:
+        A typical call is :
+        
+        ```python
+        tekigo_sol = TekigoSolution(
+        	mesh='solut_0003.mesh.h5',          # The mesh to be adapted
+        	solution='solut_0003.sol.h5',       # The solution to be output with the mesh
+            average_sol="ave_003.sol.h5",       # An average solution with fields to be read in it
+        	only_sol_vars=['temperature'],      # A field to be read in the instantaneous solution
+        	only_msh_vars=['/Coordinates/x'],   # A field of the mesh to be used in criteria
+            only_ave_vars=['LIKE'],             # A field to be read in the ave file
+        	out_dir='./Results')
+        ``` 
+        In this example, `'temperature', /Coordinates/x and LIKE` are fields usable in the criterion / criteria definition.
+        
+        ### A typical adaptation criteria function
+        
+        A typical adaptation function will only take a `TekigoSolution` object as argument.
+        
+        ```python
+         def temperature_criterion(ts_):
+            # Loading the adequate solution
+            solution = ts_.load_current_solution()
+            t_mean = np.mean(solution['temperature'])
+            # Defining temperatures range
+            t_hot = np.max(solution['temperature'])
+            t_cold = np.min(solution['temperature'])
+        
+            # Computing non dimensional temperature criterion (refines as much as possible)
+            array_t = np.array((solution['temperature'] - t_cold) / (t_hot - t_cold))
+        
+            criterion = dict() # Defining criterion dictionary
+            # Clipping criterion to adequate range.
+            criterion = np.clip(array_t, -1.0, 1.0)
+        
+            return criterion
+        ```
+         The output is a numpy array of floats between -1 and 1 where
+         
+         -  negative values flag a coarsening zone. (Max coarsening at -1).
+         -  zero values flag untouched zones
+         -  positive values flag a refinement zone
+         
+         **Any function with this signature will work: `TekigoSolution` object for single input, numpy array of floats between -1 and 1 for output.**
+        
+         ---
+         
+         ## The full script
+         
+         The following script mixes :
+         
+         - a temperature criterion ; limited to x < 0.1
+         - a pressure criterion
+         
+        
+        
+        ```python
+        import numpy as np
+        from tekigo import (TekigoSolution,
+                            refine,
+                        )
+        
+        def pressure_criterion(ts_):
+            """Function to create a pressure refinement criterion"""
+            # Loading the adequate solution
+            solution = ts_.load_current_solution()
+        
+            # Defining temperatures range
+            pressure_max = np.max(solution['pressure'])
+            pressure_min = np.min(solution['pressure'])
+        
+            # Computing non dimensional pressure criterion (refines as much as possible)
+            array_p = np.array((solution['pressure'] - pressure_min) / (pressure_max - pressure_min))
+        
+            # Clipping criterion to adequate range.
+            criterion = np.clip(array_p, -1.0, 1.0)
+        
+            return criterion
+        
+        def temperature_criterion(ts_):
+            """Function to create a temperature refinement criterion"""
+            # Loading the adequate solution
+            solution = ts_.load_current_solution()
+            xcoords = ts_.load_current_mesh()['/Coordinates/x']
+        
+            # Defining temperatures range
+            t_hot = 1200.
+            t_cold = 500.
+        
+            ind_refine, = np.where(xcoords < 0.1)
+        
+            # Computing non dimensional temperature criterion (refines as much as possible)
+            array_t = np.array((solution['temperature'] - t_cold) / (t_hot - t_cold))
+        
+            # Define criterion and limit to indices of interest
+            criterion = np.zeros_like(solution['temperature'])
+            criterion[ind_refine] = array_t[ind_refine]
+        
+            # Clipping criterion to adequate range.
+            criterion = np.clip(criterion, -1.0, 1.0)
+        
+            return criterion
+        
+        def custom_criteria(ts_):
+            """Funtion to wrap the criterions"""
+            criteria = dict()
+            criteria['temperature_crit'] = temperature_criterion(ts_)
+            criteria['pressure_crit'] = pressure_criterion(ts_)
+            return criteria
+        
+        def main():
+            """Example of usage """
+            tekigo_sol = TekigoSolution(mesh='solut_0003.mesh.h5',
+                                        solution='solut_0003.sol.h5',
+                                        only_sol_vars=['temperature', 'pressure'],
+                                        only_msh_vars=['/Coordinates/x'],
+                                        out_dir='./Results')
+        
+            refine(tekigo_sol, custom_criteria, dry_run=False, iteration_max=8,
+                   nnode_max=120000, min_edge=0.7e-3, l2_crit=0.005)
+        
+        if __name__ == "__main__":
+            main()
+        
+        ```
+        --- 
+        ## Execution
+        
+        No magic for the moment, make sure that your Python virtual environment is adequate. Create your python script where the tekigo part is defined and run it with 
+        ```python
+        python my_tekigo_script.py
+        ```
+        ---
+        
+        ## Examples
+        
+        A set of example python scripts can be found in the `examples/` folder on the [tekigo gitlab](https://gitlab.com/cerfacs/tekigo). Additional information can also be found on the [COOP blog](https://cerfacs.fr/coop/): type Tekigo in the search window and you will find several relevant post that could be of use.
+        
+        ---
+        
+        ## Performances
+        
+        Tekigo is for the moment working through HIP/MMG, sequential but axi-periodic friendly.
+        
+        Its target is not the frontier runs with billions of ellements, but production runs.
+        The expected usage is to start with a low-res mesh, and use Tekigo to reach the target.
+        <ins>This approach is faster than starting from a high-res mesh right away.</ins>
+        
+        Try your adaptations on simple meshes, like the `trappedvtx` case (see `examples/` folder).
+        
+        ---
+        
+        ## Final comments 
+        
+        Tekigo remains above all a set of utilities from which the user can define its own recipes. 
+        What strategy to devise is up to the end user and will be most likely case dependent.
+        Now let's get cooking!
+        
+        
+        ## Acknowledgement
+        Tekigo is the result of many discussions and developments of different contributors within the COOP team of CERFACS.
+        
+        Tekigo is a service created in the [COEC Center Of Excellence](https://coec-project.eu/), funded by the European community. 
+        
+        ![logo](https://www.hpccoe.eu/wp-content/uploads/2020/10/cnmlcLiO_400x400-e1604915314500-300x187.jpg)
+        
+Keywords: tekigo API
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
