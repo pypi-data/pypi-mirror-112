@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+src/yamlwrap/__init__.py
+src/yamlwrap/__main__.py
+src/yamlwrap.egg-info/PKG-INFO
+src/yamlwrap.egg-info/SOURCES.txt
+src/yamlwrap.egg-info/dependency_links.txt
+src/yamlwrap.egg-info/requires.txt
+src/yamlwrap.egg-info/top_level.txt
