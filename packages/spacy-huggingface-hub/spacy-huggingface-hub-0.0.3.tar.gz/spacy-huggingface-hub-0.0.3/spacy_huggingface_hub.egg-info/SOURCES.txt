@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+spacy_huggingface_hub/__init__.py
+spacy_huggingface_hub/__main__.py
+spacy_huggingface_hub/push.py
+spacy_huggingface_hub.egg-info/PKG-INFO
+spacy_huggingface_hub.egg-info/SOURCES.txt
+spacy_huggingface_hub.egg-info/dependency_links.txt
+spacy_huggingface_hub.egg-info/entry_points.txt
+spacy_huggingface_hub.egg-info/requires.txt
+spacy_huggingface_hub.egg-info/top_level.txt
