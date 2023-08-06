@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+diffsort/__init__.py
+diffsort/diffsort.py
+diffsort/functional.py
+diffsort/networks.py
+diffsort.egg-info/PKG-INFO
+diffsort.egg-info/SOURCES.txt
+diffsort.egg-info/dependency_links.txt
+diffsort.egg-info/requires.txt
+diffsort.egg-info/top_level.txt

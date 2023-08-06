@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: diffsort
+Version: 0.1.0
+Summary: Differentiable Sorting Networks.
+Home-page: https://github.com/Felix-Petersen/diffsort
+Author: Felix Petersen
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# diffsort - Differentiable Sorting Networks
+
+![diffsort_logo](diffsort_logo.png)
+
+
+## Installation
+
+`diffsort` can be installed via pip from PyPI with
+```bash
+pip install diffsort
+```
+
+Or from source, e.g., in a virtual environment like
+```bash
+virtualenv -p python3 .env1
+. .env1/bin/activate
+pip install .
+```
+
+## Usage
+
+```python
+import torch
+from diffsort import DiffSortNet
+
+vector_length = 2**4
+vectors = torch.randperm(vector_length, dtype=torch.float32, device='cpu', requires_grad=True).view(1, -1)
+vectors = vectors - 5.
+
+# sort using a bitonic-sorting-network
+sorter = DiffSortNet('bitonic', vector_length, steepness=5)
+sorted_vectors, permutation_matrices = sorter(vectors)
+print(sorted_vectors)
+```
+
+## Experiments
+
+Will be published soon.
+
+## Citing
+
+```bibtex
+@inproceedings{Petersen2021-diffsort,
+  title={Differentiable Sorting Networks for Scalable Sorting and Ranking Supervision},
+  author={Petersen, Felix and Borgelt, Christian and Kuehne, Hilde and Deussen, Oliver},
+  journal={Neural Information Processing Systems (NeurIPS)},
+  year={2021}
+}
+```
+
+## License
+
+`diffsort` is released under the MIT license. See [LICENSE](LICENSE) for additional details about it.
+
+
+
