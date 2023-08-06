@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: Enchanted
+Version: 3.8
+Summary: simple minecraft name sniper made by overnice.exe
+Home-page: https://enchantedsniper.ga/
+Author: Overnice.exe
+Author-email: silkepilon2009@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: colorama
+Requires-Dist: asyncio
+Requires-Dist: datetime
+Requires-Dist: aiohttp
+Requires-Dist: importlib
+Requires-Dist: bs4
+Requires-Dist: lxml
+Requires-Dist: beautifulsoup4
+Requires-Dist: sourcedefender
+
+# Enchanted Sniper
+
+Enchanted Sniper
+
+## Description
+
+a simple Minecraft name sniper!
+
+## Getting Started
+
+### Dependencies
+
+* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
+* ex. Windows 10
+* ex. Python 3.8+
+
+### installing
+
+* How to install the program:
+```
+pip install Enchanted
+```
+
+## Executing program
+
+to run the sniper just type:
+```
+Enchanted.py
+```
+
+## Authors
+
+Contributors names and contact info
+
+owner. Overnice.exe  
+co-owner. Moop
+
+## Version History
+
+* 0.2
+    * Various bug fixes and optimizations
+    * See [commit change]() or See [release history]()
+* 0.1
+    * Initial Release
+
+## License
+
+This project is licensed!
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [Website](https://enchantedsniper.ga/)
+* [PurpleBooth](https://discord.com/invite/svNudNSFbU)
+
