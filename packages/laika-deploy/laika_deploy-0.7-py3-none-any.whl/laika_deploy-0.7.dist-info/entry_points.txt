@@ -1,0 +1,3 @@
+[console_scripts]
+laika=laika.cli:main
+
