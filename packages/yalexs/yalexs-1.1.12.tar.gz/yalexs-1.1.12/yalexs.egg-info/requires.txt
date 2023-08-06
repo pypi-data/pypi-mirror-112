@@ -1,0 +1,6 @@
+requests
+vol
+python-dateutil
+aiohttp
+aiofiles
+pubnub>=5.1.4
