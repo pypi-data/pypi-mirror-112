@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "discourse-basic-bridge"
+version = "0.1.1"
+description = ""
+authors = ["Krish Yadav Team leader","Suraj Kumar", "Surya Vardhan", "Neha Reddy", "Krishna Nagpal", "Avanindra Chakraborty", "Chinmay Raheja", "Arghya Sarkar","Pragyan Srivastav","Vanya Sahi","Yash Pawar","Yash Yadav"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
