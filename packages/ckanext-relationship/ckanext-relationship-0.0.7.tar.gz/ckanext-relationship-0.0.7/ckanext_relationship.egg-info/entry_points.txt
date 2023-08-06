@@ -1,0 +1,7 @@
+
+        [ckan.plugins]
+        relationship=ckanext.relationship.plugin:RelationshipPlugin
+
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
+    
