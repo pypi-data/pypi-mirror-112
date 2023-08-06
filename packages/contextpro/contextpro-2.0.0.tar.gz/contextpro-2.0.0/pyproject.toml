@@ -1,0 +1,73 @@
+[tool.poetry]
+name = "contextpro"
+version = "2.0.0"
+license = "MIT"
+description = "Python library for concurrent text preprocessing"
+authors = ["Łukasz Zawieska <zawieskal@yahoo.com>"]
+readme = "README.md"
+documentation = ""
+repository = "https://gitlab.com/elzawie/contextpro"
+
+keywords = ["concurrent-preprocessing", "nlp"]
+
+packages = [
+    { include = "contextpro" }
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+nltk = "^3.5"
+wheel = "^0.36.2"
+contractions = "^0.0.48"
+textblob = "^0.15.3"
+spacy = "^3.0.5"
+word2number = "^1.1"
+scipy = "^1.5.4"
+pandas = "^1.1.5"
+toml = "^0.10.2"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.812"
+flake8 = "^3.8.4"
+black = "^20.8b1"
+isort = "^5.7.0"
+coverage = "^5.5"
+nox = "^2020.12.31"
+nox-poetry = "^0.8.4"
+Sphinx = "^3.5.4"
+sphinx-rtd-theme = "^0.5.2"
+recommonmark = "^0.7.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+
+[tool.isort]
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+
+[tool.coverage.run]
+source = ['contextpro', 'tests']
+
+[tool.coverage.report]
+exclude_lines = [
+    "def _*",
+    "# pragma: no cover"
+]
