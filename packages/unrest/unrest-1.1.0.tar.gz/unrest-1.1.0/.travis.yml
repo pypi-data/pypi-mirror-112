@@ -1,0 +1,19 @@
+dist: focal
+
+language: python
+
+python:
+  - 3.6
+  - 3.7
+  - 3.8
+  - 3.9
+
+install:
+  - pip install --upgrade pip flit
+  - flit install
+
+script: pytest --isort --flake8 --cov-report= --cov=unrest
+
+after_success: coveralls
+
+sudo: true
