@@ -1,0 +1,25 @@
+[bngl]
+bionetgen >= 0.3.1
+
+[cellml]
+libcellml
+
+[lems]
+pylems
+pyneuroml
+pint
+
+[neuroml]
+libneuroml
+
+[sbml]
+python_libsbml
+
+[smoldyn]
+smoldyn >= 2.66
+
+[containers]
+docker >= 4.4
+
+[logging]
+capturer
