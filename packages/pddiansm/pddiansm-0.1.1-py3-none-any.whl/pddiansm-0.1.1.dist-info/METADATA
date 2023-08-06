@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pddiansm
+Version: 0.1.1
+Summary: A package to detect potential drug drug interactions (PDDIs) according to the French National Agency for the Medicines and Health Products Safety (ANSM) guidelines
+Home-page: https://github.com/scossin/pddiansm
+Author: Sebastien Cossin
+Author-email: cossin.sebastien@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic (~=1.7.3)
+Requires-Dist: unidecode (~=1.1.1)
+Requires-Dist: setuptools (~=46.1.3)
+
+# PDDIansm
+A package to detect Potential Drug Drug Interactions (PDDI) according to the French Agency for the Safety of Health Products (ANSM) guidelines. 
+
+## Get started
+```bash
+pip install pddiansm
+```
+
+## Code examples
+See [the tutorial](https://github.com/scossin/pddiansm/blob/master/docs/source/index.rst)
+
+## Tests
+Run all the tests with this command: 
+```bash
+python -m unittest discover ./
+```
+
