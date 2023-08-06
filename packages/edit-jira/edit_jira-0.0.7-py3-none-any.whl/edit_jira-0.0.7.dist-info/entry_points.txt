@@ -1,0 +1,3 @@
+[console_scripts]
+JiraE = jira_tool_edit.__main__:main
+
