@@ -1,0 +1,3 @@
+[console_scripts]
+sequencegenerator=sequencegenerator.__main__:app
+
