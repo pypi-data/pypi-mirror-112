@@ -1,0 +1,10 @@
+id: nodejs
+name: nodejs
+description: As an asynchronous event driven JavaScript runtime, Node is designed
+  to build scalable network applications
+labels:
+  - cli
+  - dev-tools
+formulas:
+  scoop: nodejs
+  nvm: node

@@ -1,0 +1,7 @@
+id: signal
+name: Signal
+labels:
+  - gui
+  - communication
+formulas:
+  winget: Signal.Signal

@@ -1,0 +1,8 @@
+id: gitbatch
+name: gitbatch
+description: manage your git repositories in one place
+homepage: https://github.com/isacikgoz/gitbatch
+labels:
+  - cli
+formulas:
+  go: github.com/isacikgoz/gitbatch/cmd/gitbatch
