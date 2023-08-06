@@ -1,0 +1,5 @@
+importlib-resources<5.2,>=5.1
+numpy<1.20,>=1.19
+pillow<8.3,>=8.2
+tensorflow<2.5,>=2.4
+tensorflowjs<3.5,>=3.4
