@@ -1,0 +1,3 @@
+[flask.commands]
+fmd = lemonadefashion_flask_monitoringdashboard.cli:fmd
+
