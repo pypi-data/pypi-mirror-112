@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: auto-mock-server
+Version: 1.0.2
+Summary: In order to solve the interface dependence of interface test
+Home-page: https://github.com/zhujiahuan/mock-server
+Author: zhujiahuan
+Author-email: zhujiahuan@yfcloud.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: paramiko (==2.7.2)
+Requires-Dist: Flask (==1.1.2)
+
+UNKNOWN
+
+
