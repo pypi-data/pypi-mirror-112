@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        mltrace=mltrace.cli.cli:mltrace
+    
