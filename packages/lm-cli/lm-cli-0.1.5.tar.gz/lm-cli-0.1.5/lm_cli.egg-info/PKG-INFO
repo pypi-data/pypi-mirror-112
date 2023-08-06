@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: lm-cli
+Version: 0.1.5
+Summary: cli for dkube license manager
+Home-page: https://github.com/oneconvergence/license-manager
+Author: Authors @ One Convergence
+Author-email: manju.vikash145@gmail.com
+License: UNKNOWN
+Description: # **lm** (CLI for license manager)
+        
+        ## Installation
+        
+        `pip install lm-cli`
+        
+        ### Login to use the cli
+        
+            lm login
+        
+        Verify installation:
+            
+            lm --help
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
