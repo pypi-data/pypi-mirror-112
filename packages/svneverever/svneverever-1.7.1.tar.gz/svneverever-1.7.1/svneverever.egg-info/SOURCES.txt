@@ -1,0 +1,13 @@
+.gitignore
+.pre-commit-config.yaml
+Makefile
+README.md
+setup.py
+svneverever/__init__.py
+svneverever/__main__.py
+svneverever/version.py
+svneverever.egg-info/PKG-INFO
+svneverever.egg-info/SOURCES.txt
+svneverever.egg-info/dependency_links.txt
+svneverever.egg-info/entry_points.txt
+svneverever.egg-info/top_level.txt
