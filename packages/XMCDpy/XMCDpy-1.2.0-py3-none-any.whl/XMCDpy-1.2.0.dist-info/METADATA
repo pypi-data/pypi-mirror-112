@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: XMCDpy
+Version: 1.2.0
+Summary: Library for processing XMCD images
+Home-page: UNKNOWN
+Author: Luka Skoric
+License: GNU GENERAL PUBLIC LICENSE
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: numpy (>=1.20.2)
+Requires-Dist: matplotlib (>=3.4.1)
+Requires-Dist: scikit-image (>=0.18.1)
+Requires-Dist: scipy (>=1.6.2)
+Requires-Dist: opencv-python (>=4.4.0.44)
+Requires-Dist: PyQt5 (>=5.15.4)
+
+# XMCDpy
+
+[![Documentation Status](https://readthedocs.org/projects/xmcdpy/badge/?version=latest)](https://xmcdpy.readthedocs.io/en/latest/?badge=latest)
+[![DOI](https://zenodo.org/badge/375770713.svg)](https://zenodo.org/badge/latestdoi/375770713)
+
+Project for importing XMCD or PEEM data, aligning and acquiring XMCD images.
+
+## Documentation
+See [readthedocs](https://xmcdpy.readthedocs.io) for detailed documentation and examples.
+
+## Usage
+See example notebook in examples/xmcd_processing.ipynb
+
+Note: if running in Jupyter, make sure you use qt gui for the visualizer to work:
+```python
+%matplotlib qt
+```
+
+
+
+
