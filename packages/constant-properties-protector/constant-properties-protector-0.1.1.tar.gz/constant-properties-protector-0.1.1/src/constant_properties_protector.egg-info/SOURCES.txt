@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/constant_properties_protector/__init__.py
+src/constant_properties_protector/constant_properties_protector.py
+src/constant_properties_protector.egg-info/PKG-INFO
+src/constant_properties_protector.egg-info/SOURCES.txt
+src/constant_properties_protector.egg-info/dependency_links.txt
+src/constant_properties_protector.egg-info/top_level.txt
