@@ -1,0 +1,9 @@
+README.md
+setup.py
+Reprypt.egg-info/PKG-INFO
+Reprypt.egg-info/SOURCES.txt
+Reprypt.egg-info/dependency_links.txt
+Reprypt.egg-info/entry_points.txt
+Reprypt.egg-info/top_level.txt
+reprypt/__init__.py
+reprypt/__main__.py
