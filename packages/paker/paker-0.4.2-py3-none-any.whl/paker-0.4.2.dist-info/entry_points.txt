@@ -1,0 +1,3 @@
+[console_scripts]
+paker = paker.__main__:main_entry
+
