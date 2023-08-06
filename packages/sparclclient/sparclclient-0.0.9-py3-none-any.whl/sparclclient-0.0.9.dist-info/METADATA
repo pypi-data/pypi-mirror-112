@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: sparclclient
+Version: 0.0.9
+Summary: A client for getting spectra data from NOIRLab.
+Home-page: https://github.com/noaodatalab/sparclclient
+Author: NOIRLab DataLab
+Author-email: datalab@noirlab.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: psutil
+Requires-Dist: sphinx
+Requires-Dist: sphinx-rtd-theme
+
+# sparcclient
+Python Client for SPARC (SPectra Analysis and Retrievable Catalog)
+
+
