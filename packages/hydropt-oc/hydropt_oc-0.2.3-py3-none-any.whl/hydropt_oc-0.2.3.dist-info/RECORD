@@ -1,0 +1,16 @@
+hydropt/__init__.py,sha256=JOl41NviMN-qDV0Z8ZPmhNIxvgyauGGJHdB4A-8MhqM,93
+hydropt/_version.py,sha256=VMZe8wll2L1ZuR29xoAFiBTFdtWUpwEcgzYUw1KCOcM,498
+hydropt/band_models.py,sha256=J4ENgoPBxg9K_oMTT_LVwp39M3g2Ui6lTPi1C966RZ4,1060
+hydropt/bio_optics.py,sha256=q9w-uY6sg2_DFbvOEq6GKn6WKrJ0eVzg2R_EXEfQQr0,5670
+hydropt/hydropt.py,sha256=amBO_pDrNGSa9coF8EiwF_yLZIU4tr4SVHEmESHQKp4,10897
+hydropt/utils.py,sha256=DTHq1-pkS351u-UimylGzBcsNxFqzwKPKqISmaglQS8,2208
+hydropt/data/PACE_polynom_04_h2o.csv,sha256=bmLq0wscgfRLUGoI2d8z7mTXdr6_sWUerOauhsb20mg,20090
+hydropt/data/PACE_polynom_05.csv,sha256=NSmlWp8WobBA1jnkrEqsdwY3gZnQRiTl3z74sApBcjk,28710
+hydropt/data/phyto_siop.csv,sha256=8FIDqNPhSF2rJtn4Gy_qJe8zuYN70vfIPGryCKDBlok,3820
+hydropt/data/psc_absorption_se_uitz_2008.csv,sha256=b9qq69oC10RUsVxtOA0MwhzQm4QsTwJdakUPXSMokoY,6982
+hydropt/data/water_mason016.csv,sha256=IBDKlPS0fWX5hzmzUtT3aiKCjrmHV2oXlIhcG3-EaOw,1571
+hydropt_oc-0.2.3.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+hydropt_oc-0.2.3.dist-info/METADATA,sha256=GPU9KmXnqHUg_eMdCZBKg7uxyEBQRTlZBEY3LhZlG54,2245
+hydropt_oc-0.2.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hydropt_oc-0.2.3.dist-info/top_level.txt,sha256=r49IRrF0qVLzrpybme4mSt2MSOnVhaAReA9oMaxwpVs,8
+hydropt_oc-0.2.3.dist-info/RECORD,,
