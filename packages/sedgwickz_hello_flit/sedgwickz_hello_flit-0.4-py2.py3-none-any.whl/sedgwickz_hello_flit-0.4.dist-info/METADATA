@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: sedgwickz_hello_flit
+Version: 0.4
+Summary: My first flit package 
+Author: sedgwickz
+Author-email: kunnsh@gmail.com
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+
+Hello, This is my first flit package test.
