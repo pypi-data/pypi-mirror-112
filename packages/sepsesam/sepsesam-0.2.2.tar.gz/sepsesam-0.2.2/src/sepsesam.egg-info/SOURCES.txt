@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/sepsesam/__init__.py
+src/sepsesam/api.py
+src/sepsesam.egg-info/PKG-INFO
+src/sepsesam.egg-info/SOURCES.txt
+src/sepsesam.egg-info/dependency_links.txt
+src/sepsesam.egg-info/top_level.txt
