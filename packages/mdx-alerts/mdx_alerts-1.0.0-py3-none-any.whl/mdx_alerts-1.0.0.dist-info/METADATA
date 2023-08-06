@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: mdx-alerts
+Version: 1.0.0
+Summary: Python-Markdown extension to support bootstrap alerts
+Home-page: https://github.com/DahlitzFlorian/python-markdown-bootstrap-alerts
+License: MIT
+Keywords: python-markdown,extension,python-markdown extension,bootstrap alerts,bootstrap alerts extension
+Author: Florian Dahlitz
+Author-email: f2dahlitz@freenet.de
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Markdown (>=3.3.4,<4.0.0)
+Project-URL: Repository, https://github.com/DahlitzFlorian/python-markdown-bootstrap-alerts
+Description-Content-Type: text/markdown
+
+# Boostrap alerts extension for Python-Markdown
+
+This extension adds bootstrap alerts support to [Python-Markdown].
+
+[Python-Markdown]: https://github.com/Python-Markdown/markdown
+
+
+## Installation
+
+### Install from PyPI
+
+```
+$ python -m pip install python-markdown-bootstrap-alerts
+```
+
+### Install locally
+
+Use `setup.py build` and `setup.py install` to build and install this
+extension, respectively.
+
+The extension name is `mdx_alerts`, so you need to add that name to your
+list of Python-Markdown extensions.
+Check [Python-Markdown documentation] for details on how to load
+extensions.
+
+[Python-Markdown documentation]: https://python-markdown.github.io/reference/#extensions
+
+
+## Usage
+
+
