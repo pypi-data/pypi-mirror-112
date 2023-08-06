@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: csanim
+Version: 0.0.1
+Summary: A tool for creating computer science explanatory videos.
+Home-page: https://github.com/phuang1024/csanim
+Author: Patrick Huang
+Author-email: huangpatrick16777216@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+
+# CS Animation
+
+A tool for creating computer science explanatory videos.
+
+Inspired by 3Blue1Brown.
+
+
