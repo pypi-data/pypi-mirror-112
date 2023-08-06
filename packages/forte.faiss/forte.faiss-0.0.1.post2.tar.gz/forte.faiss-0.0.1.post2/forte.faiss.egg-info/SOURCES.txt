@@ -1,0 +1,9 @@
+README.md
+setup.py
+forte.faiss.egg-info/PKG-INFO
+forte.faiss.egg-info/SOURCES.txt
+forte.faiss.egg-info/dependency_links.txt
+forte.faiss.egg-info/requires.txt
+forte.faiss.egg-info/top_level.txt
+forte/faiss/__init__.py
+forte/faiss/embedding_based_indexer.py
