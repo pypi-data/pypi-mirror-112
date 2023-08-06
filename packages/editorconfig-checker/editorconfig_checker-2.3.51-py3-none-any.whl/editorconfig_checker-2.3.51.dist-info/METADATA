@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: editorconfig-checker
+Version: 2.3.51
+Summary: A tool to verify that your files are in harmony with your .editorconfig
+Home-page: https://editorconfig-checker.github.io
+Author: Marco M.
+Author-email: mmicu.github00@gmail.com
+Maintainer: Marco M., Max Strübing
+Maintainer-email: mmicu.github00@gmail.com, mxstrbng@gmail.com
+License: MIT
+Project-URL: Documentation, https://editorconfig-checker.github.io
+Project-URL: Code, https://github.com/editorconfig-checker/editorconfig-checker.python
+Project-URL: Issue tracker, https://github.com/editorconfig-checker/editorconfig-checker/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: flake8 ; extra == 'dev'
+
+# editorconfig-checker.python
+This Python implementation is simple a wrapper of the [editorconfig-checker][editorconfig-checker-repo] Go version.
+Please, refer to the [original implementation][editorconfig-checker-readme] for usage.
+
+
+## Installation
+```
+$ pip install .                     # from cloned repo
+$ pip install editorconfig-checker  # from PyPI
+```
+
+
+## Run tests
+The test script uses `docker`. After installing it, you can run the test with:
+```
+$ ./test.sh
+```
+
+
+[editorconfig-checker-repo]:   https://github.com/editorconfig-checker/editorconfig-checker
+[editorconfig-checker-readme]: https://github.com/editorconfig-checker/editorconfig-checker/blob/master/README.md
+
+
