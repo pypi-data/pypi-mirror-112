@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "tee-tee"
+version = "0.1.2"
+description = "Truth table utility"
+authors = ["Nick Rushton <rushton.nicholas@gmail.com>"]
+license = "Apache 2.0"
+packages=[
+    {include = "tee_tee"}
+]
+[tool.poetry.scripts]
+tt='tee_tee.main:run'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "^1.8.2"
+quine-mccluskey = "^0.3"
+typer = "^0.3.2"
+
+[tool.poetry.dev-dependencies]
+black = "^21.6b0"
+mypy = "^0.910"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
