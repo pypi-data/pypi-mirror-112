@@ -1,0 +1,76 @@
+.module-content .notes,
+.module-content .text-muted { 
+  margin-bottom: 10px;
+}
+
+.module-resource .actions {
+  position: static;
+  float: none;
+  top: 0px;
+  right: 0px;
+  margin-bottom: 20px;
+}
+
+.module-resource .actions ul {
+  padding-left: 0px;
+}
+
+.resource-view .actions {
+  display: none;
+}
+
+.dataTables_wrapper {
+  position: relative;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  max-width: 150px !important;
+}
+
+.dataTables_wrapper .dataTables_length {
+  float: right;
+}
+
+.dataTables_wrapper .dt-buttons {
+  margin-left: 220px;
+}
+
+.filters li.nav-item {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.filters li.nav-item.active a {
+  padding-right: 25px;
+}
+
+.filters li.nav-item.active .item-label {
+  white-space: normal;
+}
+
+.filters li.nav-item a {
+  padding-top: 3px;
+  padding-bottom: 4px;
+  font-size: 15px;
+}
+
+.dataset-list li.dataset-item {
+  margin-bottom: 15px;
+}
+
+.dataset-list li.dataset-item p {
+  margin-bottom: 3px;
+}
+
+.dataset-list .dataset-heading a {
+  font-size: 20px;
+}
+.ddkids-dictionary {
+    padding-top: 20px;
+}

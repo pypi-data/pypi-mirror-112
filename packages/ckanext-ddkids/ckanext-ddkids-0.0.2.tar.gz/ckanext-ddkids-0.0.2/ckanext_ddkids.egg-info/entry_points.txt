@@ -1,0 +1,8 @@
+
+        [ckan.plugins]
+        ddkids=ckanext.ddkids.plugin:DdkidsPlugin
+        ddkids_harvester=ckanext.ddkids.harvesters:DdkidsHarvester
+
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
+    

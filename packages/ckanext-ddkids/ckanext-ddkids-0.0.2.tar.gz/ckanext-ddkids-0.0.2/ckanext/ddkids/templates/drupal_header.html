@@ -1,0 +1,304 @@
+<header
+	class="ddk__global-header js-global-header"
+	aria-label="Site header"
+	role="banner"
+>
+	<div class="ddk__global-header__explore-menu">
+		<div
+			class="ddk__explore-menu"
+			aria-label="product navigation"
+			role="navigation"
+		>
+			<div class="ddk__explore-menu__container ddk__container">
+				<nav class="ddk__explore-menu__items">
+					<a
+						href="/dataset"
+						class="ddk__explore-menu__link js-global-nav-link is-active"
+						><span>Datasets</span></a
+					>
+					<a
+						href="{{ h.ddkids_drupal_url }}/child-opportunity-index"
+						class="ddk__explore-menu__link js-global-nav-link"
+						><span>Child Opportunity Index</span></a
+					>
+					<a
+						href="{{ h.ddkids_drupal_url }}/policy-equity-assessments"
+						class="ddk__explore-menu__link js-global-nav-link"
+						><span>Policy Equity Assessments</span></a
+					>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="ddk__container">
+		<div class="ddk__global-header__top">
+			<div class="ddk__global-header__top-left">
+				<div class="ddk__site-logo">
+					<a href="{{ h.ddkids_drupal_url }}" class="ddk__site-logo__link"
+						><img
+							src="{{ h.ddkids_drupal_url }}/themes/custom/ddk/images/logo.svg"
+							alt="Diversity Data Kids"
+					/></a>
+				</div>
+			</div>
+			<div class="ddk__global-header__top-right">
+				<nav class="ddk__utility-nav">
+					<a
+						class="ddk__utility-nav__item js-global-nav-link"
+						href="{{ h.ddkids_drupal_url }}/about"
+						>About Us</a
+					>
+					<a
+						class="ddk__utility-nav__item js-global-nav-link"
+						href="{{ h.ddkids_drupal_url }}/news"
+						>News</a
+					>
+					<a
+						class="ddk__utility-nav__item js-global-nav-link"
+						href="{{ h.ddkids_drupal_url }}/impact-stories"
+						>Impact Stories</a
+					>
+					<a
+						class="ddk__utility-nav__item js-global-nav-link"
+						href="{{ h.ddkids_drupal_url }}/contact-us"
+						>Contact Us</a
+					>
+				</nav>
+				<button
+					type="button"
+					class="ddk__global-header__search-button js-search-button"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						width="17"
+						height="17"
+						viewBox="0 0 17 17"
+						role="img"
+						class="icon ddk__search-box__icon"
+						aria-label="maginfying glass icon"
+					>
+						<title>Search the Library</title>
+						<g>
+							<g transform="translate(-158 -656)">
+								<path
+									d="M170.15 666.7l4.85 4.85-1.45 1.45-4.86-4.85v-.77l-.26-.27a6.32 6.32 0 1 1 .68-.68l.27.26zm-5.83 0a4.37 4.37 0 1 0 .01-8.74 4.37 4.37 0 0 0-.01 8.73z"
+								></path>
+							</g>
+						</g>
+					</svg>
+				</button>
+				<form
+					class="ddk__search-box"
+					novalidate=""
+					method="get"
+					action="{{ h.ddkids_drupal_url }}/research-library"
+					aria-modal="true"
+				>
+					<div class="ddk__search-box__input">
+						<label for="site-search1810011639" class="ddk__search-box__label"
+							>Search the Library</label
+						>
+						<input
+							name="search"
+							id="site-search1810011639"
+							type="text"
+							placeholder="Keyword"
+						/>
+						<button type="submit" class="ddk__search-box__button">
+							<span class="ddk__visually-hidden">Submit Search</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								width="17"
+								height="17"
+								viewBox="0 0 17 17"
+								role="img"
+								class="icon ddk__search-box__icon"
+								aria-label="maginfying glass icon"
+							>
+								<title>Search icon</title>
+								<g>
+									<g transform="translate(-158 -656)">
+										<path
+											d="M170.15 666.7l4.85 4.85-1.45 1.45-4.86-4.85v-.77l-.26-.27a6.32 6.32 0 1 1 .68-.68l.27.26zm-5.83 0a4.37 4.37 0 1 0 .01-8.74 4.37 4.37 0 0 0-.01 8.73z"
+										></path>
+									</g>
+								</g>
+							</svg>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="ddk__global-header__bottom">
+		<div class="ddk__global-header__bottom-left">
+			<div class="ddk__global-header__mobile">
+				<button
+					type="button"
+					class="ddk__global-header__search-button js-search-button"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						width="17"
+						height="17"
+						viewBox="0 0 17 17"
+						role="img"
+						class="icon ddk__search-box__icon"
+						aria-label="maginfying glass icon"
+					>
+						<title>Search the Library</title>
+						<g>
+							<g transform="translate(-158 -656)">
+								<path
+									d="M170.15 666.7l4.85 4.85-1.45 1.45-4.86-4.85v-.77l-.26-.27a6.32 6.32 0 1 1 .68-.68l.27.26zm-5.83 0a4.37 4.37 0 1 0 .01-8.74 4.37 4.37 0 0 0-.01 8.73z"
+								></path>
+							</g>
+						</g>
+					</svg>
+				</button>
+			</div>
+			<nav
+				class="ddk__primary-nav js-global-nav"
+				aria-label="primary navigation"
+				role="navigation"
+			>
+				<div class="ddk__container ddk__primary-nav__container">
+					<button
+						class="ddk__primary-nav__toggle js-global-nav-button"
+						aria-expanded="false"
+						id="global-nav-link-0"
+						aria-controls="global-nav-content-0"
+					>
+						<span class="ddk__primary-nav__label-mobile">Menu</span>
+						<span class="ddk__primary-nav__toggle-icon"><span></span></span>
+					</button>
+					<div
+						class="ddk__primary-nav__menu-wrap js-global-nav-content"
+						id="global-nav-content-0"
+						aria-labelledby="global-nav-link-0"
+					>
+						<div class="ddk__primary-nav__menu" role="group">
+							<a
+								href="{{ h.ddkids_drupal_url }}/early-childhoood"
+								class="ddk__primary-nav__item js-global-nav-link"
+								>Early Childhood</a
+							>
+							<a
+								href="{{ h.ddkids_drupal_url }}/income-work-and-family"
+								class="ddk__primary-nav__item js-global-nav-link"
+								>Income, Work &amp; Family</a
+							>
+							<a
+								href="{{ h.ddkids_drupal_url }}/neighborhoods"
+								class="ddk__primary-nav__item js-global-nav-link"
+								>Neighborhoods</a
+							>
+						</div>
+						<div
+							class="ddk__explore-menu"
+							aria-label="product navigation"
+							role="navigation"
+						>
+							<div class="ddk__explore-menu__container ddk__container">
+								<nav class="ddk__explore-menu__items">
+									<a
+										href="http://ckan.ddkids.velir.com/dataset"
+										class="ddk__explore-menu__link js-global-nav-link is-active"
+										><span>Datasets</span></a
+									>
+									<a
+										href="{{ h.ddkids_drupal_url }}/child-opportunity-index"
+										class="ddk__explore-menu__link js-global-nav-link"
+										><span>Child Opportunity Index</span></a
+									>
+									<a
+										href="{{ h.ddkids_drupal_url }}/policy-equity-assessments"
+										class="ddk__explore-menu__link js-global-nav-link"
+										><span>Policy Equity Assessments</span></a
+									>
+								</nav>
+							</div>
+						</div>
+						<nav class="ddk__utility-nav">
+							<a
+								class="ddk__utility-nav__item js-global-nav-link"
+								href="{{ h.ddkids_drupal_url }}/about"
+								>About Us</a
+							>
+							<a
+								class="ddk__utility-nav__item js-global-nav-link"
+								href="{{ h.ddkids_drupal_url }}/news"
+								>News</a
+							>
+							<a
+								class="ddk__utility-nav__item js-global-nav-link"
+								href="{{ h.ddkids_drupal_url }}/impact-stories"
+								>Impact Stories</a
+							>
+							<a
+								class="ddk__utility-nav__item js-global-nav-link"
+								href="{{ h.ddkids_drupal_url }}/contact-us"
+								>Contact Us</a
+							>
+						</nav>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<form
+			class="ddk__search-box"
+			novalidate=""
+			method="get"
+			action="{{ h.ddkids_drupal_url }}/research-library"
+			aria-modal="true"
+		>
+			<div class="ddk__search-box__input">
+				<label for="site-search1810011639" class="ddk__search-box__label"
+					>Search the Library</label
+				>
+				<input
+					name="search"
+					id="site-search1810011639"
+					type="text"
+					placeholder="Keyword"
+				/>
+				<button type="submit" class="ddk__search-box__button">
+					<span class="ddk__visually-hidden">Submit Search</span>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						width="17"
+						height="17"
+						viewBox="0 0 17 17"
+						role="img"
+						class="icon ddk__search-box__icon"
+						aria-label="maginfying glass icon"
+					>
+						<title>Search icon</title>
+						<g>
+							<g transform="translate(-158 -656)">
+								<path
+									d="M170.15 666.7l4.85 4.85-1.45 1.45-4.86-4.85v-.77l-.26-.27a6.32 6.32 0 1 1 .68-.68l.27.26zm-5.83 0a4.37 4.37 0 1 0 .01-8.74 4.37 4.37 0 0 0-.01 8.73z"
+								></path>
+							</g>
+						</g>
+					</svg>
+				</button>
+			</div>
+		</form>
+	</div>
+	<div class="ddk__global-header__mobile">
+		<div class="ddk__site-logo">
+			<a href="{{ h.ddkids_drupal_url }}" class="ddk__site-logo__link"
+			><img
+					src="{{ h.ddkids_drupal_url }}/themes/custom/ddk/images/logo.svg"
+					alt="Diversity Data Kids"
+			/></a>
+		</div>
+	</div>
+
+</header>

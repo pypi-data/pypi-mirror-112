@@ -1,0 +1,21 @@
+{#
+Displays a datetime that can be converted to a users timezone using JavaScript.
+In the data-datetime attribute, the date is rendered in ISO 8601 format.
+
+datetime_obj   - the datetime object to display
+format   - the format to use
+
+Example:
+
+    {% snippet 'snippets/local_friendly_datetime, datetime=pkg_dict.metadata_created %}
+
+#}
+{% if format is none %}
+{% set format = '%Y-%m-%dT%H:%M:%S%z' %}
+{% endif %}
+{% if include_hours is none %}
+{% set include_hours = True %}
+{% endif %}
+<span class="automatic-local-datetime" data-datetime="{{ h.render_datetime(datetime_obj, date_format='{{ format }}') }}">
+  {{ h.render_datetime(datetime_obj, with_hours=include_hours) }}
+</span>

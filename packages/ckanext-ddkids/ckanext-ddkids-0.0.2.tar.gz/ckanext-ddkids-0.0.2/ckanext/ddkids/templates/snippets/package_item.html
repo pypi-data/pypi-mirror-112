@@ -1,0 +1,24 @@
+{% ckan_extends %}
+
+{% block notes %}
+
+  {% if notes %}
+  <p>{{ notes|urlize }}</p>
+  {% else %}
+  <p class="empty">{{ _("This dataset has no description") }}</p>
+  {% endif %}
+  {% if package.year %}
+  <div>
+    <em>Year(s):</em> {{package.year}}
+  </div>
+  {% endif %}
+  {% if package.Breakdown %}
+  <div>
+    <em>Breakdowns:</em> {{package.Breakdown|join(', ')}}
+  </div>
+  {% endif %}
+
+{% endblock %}
+
+{% block resources_outer %}
+{% endblock %}

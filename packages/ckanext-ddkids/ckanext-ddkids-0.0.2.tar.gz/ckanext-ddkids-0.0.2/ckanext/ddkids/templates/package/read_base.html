@@ -1,0 +1,33 @@
+{% ckan_extends %}
+
+{% block package_organization %}
+{% endblock %}
+
+{% block package_license %}
+{% endblock %}
+
+{% block content_primary_nav %}
+{% endblock %}
+
+{% block secondary %}
+{% endblock %}
+
+{% block primary %}
+  <div class="primary col-xs-12">
+    {% block primary_content %}
+      {{ super() }}
+    {% endblock %}
+  </div>
+{% endblock %}
+
+{% block page_header %}
+<header>
+  <div class="content_action">
+  {% if h.check_access('package_update', {'id':pkg.id }) %}
+    {% link_for _('Manage'), controller='package', action='edit', id=pkg.name, class_='btn btn-default', icon='wrench' %}
+  {% endif %}
+  </div>
+</header>
+{% endblock %}
+
+

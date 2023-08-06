@@ -1,0 +1,29 @@
+{% if g.debug %}
+<footer class="site-footer">
+	{% include 'snippets/debug.html' %}
+</footer>
+{% endif %}
+
+<!-- GLOBAL FOOTER -->
+{% include 'drupal_footer.html' %}
+
+<script src="{{
+		h.ddkids_drupal_url
+	}}/themes/custom/ddk//js/libraries-generated.js"></script>
+<script src="{{
+		h.ddkids_drupal_url
+	}}/themes/custom/ddk//js/polyfill-generated.js"></script>
+<script src="{{
+		h.ddkids_drupal_url
+	}}/themes/custom/ddk/js/index-generated.js"></script>
+<script src="{{
+		h.ddkids_drupal_url
+	}}/themes/custom/ddk/js/theme_ckan.js"></script>
+
+  <script src="{{
+		h.ddkids_drupal_url
+}}/libraries/rest-integration/dist/restRegister.common.js?v=1.1.0"></script>
+
+<script src="{{
+		h.ddkids_drupal_url
+}}/libraries/rest-integration/dist/restRegister.umd.min.js?v=1.1.0"></script>

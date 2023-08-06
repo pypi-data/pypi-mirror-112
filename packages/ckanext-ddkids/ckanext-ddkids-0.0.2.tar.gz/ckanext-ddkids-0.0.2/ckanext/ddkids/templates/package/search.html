@@ -1,0 +1,47 @@
+{% ckan_extends %}
+
+{% block breadcrumb %}
+  {{ super() }}
+  {% if g.site_intro_text %}
+    <p>
+      {{ h.render_markdown(g.site_intro_text) }}
+    </p>
+  {% endif %}
+{% endblock %}
+
+{% block breadcrumb_content %}
+  <li><a href="{{ h.ddkids_drupal_url }}">Home</a></li> 
+  <li class="active">{{ h.nav_link(_(dataset_type.title() + 's'), controller='package', action='search', named_route='search') }}</li>
+{% endblock %}
+
+{% block form %}
+  {% set facets = {
+    'fields': fields_grouped,
+    'search': search_facets,
+    'titles': facet_titles,
+    'translated_fields': translated_fields,
+    'remove_field': remove_field }
+  %}
+  {% set sorting = [
+    (_('Relevance'), 'score desc, metadata_modified desc'),
+    (_('Name Ascending'), 'title_string asc'),
+    (_('Name Descending'), 'title_string desc'),
+    (_('Last Modified'), 'metadata_modified desc'),
+    (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
+  %}
+  {% snippet 'snippets/search_form.html', type='dataset', query=c.q, sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, facets=facets, show_empty=request.params, error=c.query_error %}
+{% endblock %}
+{% block package_search_results_list %}
+  {{ h.snippet('snippets/package_list.html', packages=c.page.items, truncate_title=240) }}
+{% endblock %}
+
+{% block secondary_content %}
+<div class="filters">
+  <div>
+    {% for facet in c.facet_titles %}
+      {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet, hide_empty=True) }}
+    {% endfor %}
+  </div>
+  <a class="close no-text hide-filters"><i class="fa fa-times-circle"></i><span class="text">close</span></a>
+</div>
+{% endblock %}

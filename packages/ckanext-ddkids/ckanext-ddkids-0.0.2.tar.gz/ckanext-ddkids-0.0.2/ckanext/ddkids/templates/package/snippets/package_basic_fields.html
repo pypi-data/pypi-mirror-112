@@ -1,0 +1,68 @@
+{% ckan_extends %}
+
+{% block package_basic_fields_custom %}
+
+  {{ form.input('update_frequency', 
+    label=_('Update Frequency'), 
+    id='field-update_frequency', 
+    placeholder=_('Update Frequency'), 
+    value=data.update_frequency, 
+    error=errors.update_frequency, 
+    classes=['control-medium']) }}
+
+  {{ form.input('year', 
+    label=_('Year(s)'), 
+    id='field-year', 
+    placeholder=_('Year(s)'), 
+    value=data.year, 
+    error=errors.year, 
+    classes=['control-medium']) }}
+
+  {{ form.markdown('use_cases', 
+    label=_('Use Cases'), 
+    id='field-use_cases', 
+    placeholder=_('Use Cases'), 
+    value=data.use_cases, 
+    error=errors.use_cases, 
+    classes=['control-medium']) }}
+
+  {{ form.markdown('visualizations', 
+    label=_('Visualizations'), 
+    id='field-visualizations', 
+    placeholder=_('Visualizations'), 
+    value=data.visualizations, 
+    error=errors.visualizations, 
+    classes=['control-medium']) }}
+
+  {{ form.markdown('additional_notes', 
+    label=_('Notes'), 
+    id='field-additional_notes', 
+    placeholder=_('Notes'), 
+    value=data.additional_notes, 
+    error=errors.additional_notes) }}
+
+  {{ form.markdown('source_notes', 
+    label=_('Source Notes'), 
+    id='field-source_notes', 
+    placeholder=_('Source'), 
+    value=data.source_notes, 
+    error=errors.source_notes) }}
+
+  {{ form.input('indicator_id', 
+    label=_('Indicator ID'), 
+    id='field-indicator_id', 
+    placeholder=_('Indicator ID'), 
+    value=data.indicator_id, 
+    error=errors.indicator_id, 
+    classes=['control-medium']) }}
+
+  {{ form.input('contact_link', 
+    label=_('Contact Link'), 
+    id='field-contact_link', 
+    placeholder=_('Contact Link'), 
+    value=data.contact_link, 
+    error=errors.contact_link, 
+    classes=['control-medium']) }}
+
+{% endblock %}
+

@@ -1,0 +1,29 @@
+{% ckan_extends %}
+
+{% block custom_fields %}
+{% endblock %}
+
+{% block package_metadata_fields_version %}
+  {{ form.input('version', label=_('Version'), id='field-version', placeholder=_('1.0'), value=data.version, error=errors.version, classes=['control-medium']) }}
+  {{ form.markdown('version_notes', label=_('Version Notes'), id='field-version-notes', placeholder=_(''), value=data.version_notes, error=errors.version_notes, classes=['control-medium']) }}
+{% endblock %}
+
+{% block package_metadata_fields %}
+
+  {% for vocab in h.all_vocab()|sort(attribute='name')  %}
+    <div class="control-group">
+      <label class="control-label" for="field-{{vocab['id']}}">{{ _(vocab['name']) }}</label>
+      <div class="controls">
+        <select multiple=multiple id="field-{{vocab['id']}}" name="{{vocab['name']}}" data-module="autocomplete">
+          {% for tag in vocab['tags']|sort  %}
+            <option value="{{ tag['name'] }}" {% if tag['name'] in data.get(vocab['name'], []) %}selected="selected"{% endif %}>{{ tag['name'] }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  {% endfor %}
+
+  {{ super() }}
+
+{% endblock %}
+
