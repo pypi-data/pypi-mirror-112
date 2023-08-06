@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: stock-core
+Version: 0.3.3
+Summary: The cores of my stock program
+Home-page: https://pypi.org/project/stock_core/
+Author: hyungjin kim
+Author-email: hj3415@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://pypi.org/project/stock_core/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+stock-core
+===========
+
+stock-core is made up of nfscrapy, miscrapy, dart.
+
+
+Quick start
+------------
+
+
+
