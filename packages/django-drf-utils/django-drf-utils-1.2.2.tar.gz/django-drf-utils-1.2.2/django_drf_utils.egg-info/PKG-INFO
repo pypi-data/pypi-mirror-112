@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: django-drf-utils
+Version: 1.2.2
+Summary: Utilities for commonly used functionality in django and django-rest-framework among BIWG projects.
+Home-page: https://git.dcc.sib.swiss/biwg/libweb/django-drf-utils
+Author: Jaroslaw Surkont, Gerhard Bräunlich, Robin Engler, Christian Ribeaud, François Martin
+Author-email: jaroslaw.surkont@unibas.ch, gerhard.braeunlich@id.ethz.ch, robin.engler@sib.swiss, christian.ribeaud@karakun.com, francois.martin@karakun.com
+License: LGPL3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+License-File: LICENSE
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+# django-drf-utils
+
+## Releases
+
+This project follows the [semantic versioning specification](https://semver.org/) for its releases.
+
+## Development
+
+### Requirements
+
+- Python >=3.7
+- Django >=3.2
+- django-rest-framework >=3.12
+
+### Setup
+
+- Create and activate a python3 venv.
+- Install the library in the editable mode `pip install -e .[test]`
+- Install dev requirements `pip install -r requirements-dev.txt`.
+- Install git hooks to automatically format code using black with `pre-commit install`
+
+## Installation
+
+### From git in `requirements.txt`
+
+To install this package from this git repository, add the `django-drf-utils` package to the `requirements.txt` file.
+
+
