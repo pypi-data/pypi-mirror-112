@@ -1,0 +1,37 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+khbr/__init__.py
+khbr/bossrush.py
+khbr/enemies.yaml
+khbr/full_enemy_records.json
+khbr/location-ard-map.json
+khbr/locations.yaml
+khbr/longtests.py
+khbr/msns.json
+khbr/randomizer.py
+khbr/tests.py
+khbr/testutils.py
+khbr.egg-info/PKG-INFO
+khbr.egg-info/SOURCES.txt
+khbr.egg-info/dependency_links.txt
+khbr.egg-info/requires.txt
+khbr.egg-info/top_level.txt
+khbr/data/enmpVanilla.yml
+khbr/data/objVanilla.yml
+khbr/data/ai_mods/Barbossa
+khbr/data/ai_mods/Demyx
+khbr/data/ai_mods/Demyx (Data)
+khbr/data/ai_mods/Grim Reaper II
+khbr/data/ai_mods/Hayner
+khbr/data/ai_mods/Riku
+khbr/data/ai_mods/Setzer
+khbr/data/ai_mods/The Beast
+khbr/data/ai_mods/Twilight Thorn
+khbr/data/ai_mods/Vivi
+khbr/data/ai_mods/Xemnas
+khbr/data/ai_mods/Xemnas (Data)
+khbr/data/ai_mods/Zexion
+khbr/data/ai_mods/Zexion (Data)
