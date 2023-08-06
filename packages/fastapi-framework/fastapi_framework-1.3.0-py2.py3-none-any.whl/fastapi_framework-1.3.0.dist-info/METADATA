@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: fastapi-framework
+Version: 1.3.0
+Summary: A FastAPI Framework for things like Database, Redis, Logging, JWT Authentication and Rate Limits
+Home-page: https://github.com/Tert0/fastapi-framework
+Author: Tert0
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: fastapi==0.65.2
+Requires-Dist: aioredis==1.3.1
+Requires-Dist: passlib==1.7.4
+Requires-Dist: PyJWT==2.1.0
+Requires-Dist: python-dotenv==0.18.0
+Requires-Dist: SQLAlchemy==1.4.20
+Requires-Dist: uvicorn==0.14.0
+Requires-Dist: mkdocs-material ; extra == "doc"
+Requires-Dist: black ; extra == "lint"
+Requires-Dist: flake8 ; extra == "lint"
+Requires-Dist: mypy ; extra == "lint"
+Requires-Dist: httpx ; extra == "test"
+Requires-Dist: coverage ; extra == "test"
+Project-URL: Documentation, https://tert0.github.io/fastapi-framework/
+Provides-Extra: doc
+Provides-Extra: lint
+Provides-Extra: test
+
+[![Codestyle](https://github.com/Tert0/fastapi-framework/actions/workflows/codestyle.yaml/badge.svg)](https://github.com/Tert0/fastapi-framework/actions/workflows/codestyle.yaml)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Maintainability](https://api.codeclimate.com/v1/badges/27632fc7d85112fbdeaa/maintainability)](https://codeclimate.com/github/Tert0/fastapi-framework/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/27632fc7d85112fbdeaa/test_coverage)](https://codeclimate.com/github/Tert0/fastapi-framework/test_coverage)
+[![PyPI version](https://badge.fury.io/py/fastapi-framework.svg)](https://badge.fury.io/py/fastapi-framework)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/fastapi-framework.svg)](https://pypi.org/project/fastapi-framework)
+
+
+A FastAPI Framework for things like `Database`,
+`Redis`, `Logging`, `JWT Authentication` and `Rate Limits` 
+
+# Install
+
+You can install this Library with:
+
+```shell
+pip install fastapi-framework
+```
+
+# Documentation
+
+For the Documentation click [here](https://tert0.github.io/fastapi-framework)
+
+# Features
+- ✅ Database
+- ✅ Redis
+- ✅ Redis Publish/Subscribe
+- ✅ FastAPI JWT
+- ❌ FastAPI Permission System (for routes)
+- ✅ Rate Limits
+
+
+# License
+
+This Project is Licensed under the [MIT License](https://mit-license.org/)
+
