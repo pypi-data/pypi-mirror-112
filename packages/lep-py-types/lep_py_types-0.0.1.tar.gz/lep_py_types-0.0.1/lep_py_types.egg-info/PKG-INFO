@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: lep-py-types
+Version: 0.0.1
+Summary: Lepsta events protobuf types
+Home-page: https://github.com/lepsta/types
+Author: Lepsta Inc
+Author-email: damilola@lepsta.com
+License: MIT
+Download-URL: https://github.com/lepsta/types/archive/refs/tags/v0.0.1.tar.gz
+Description: UNKNOWN
+Keywords: Types,Protobuf
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.9
