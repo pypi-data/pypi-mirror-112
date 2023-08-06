@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+auth_rename/__init__.py
+auth_rename/admin.py
+auth_rename/apps.py
+auth_rename/models.py
+auth_rename/tests.py
+auth_rename/views.py
+auth_rename.egg-info/PKG-INFO
+auth_rename.egg-info/SOURCES.txt
+auth_rename.egg-info/dependency_links.txt
+auth_rename.egg-info/not-zip-safe
+auth_rename.egg-info/top_level.txt

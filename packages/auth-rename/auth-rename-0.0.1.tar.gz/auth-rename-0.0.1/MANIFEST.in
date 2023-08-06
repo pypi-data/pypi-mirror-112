@@ -1,0 +1,5 @@
+include LICENSE.txt
+include README.rst
+recursive-include auth_rename/templates *
+recursive-include auth_rename/static *
+recursive-exclude * *.py[co]

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: auth-rename
+Version: 0.0.1
+Summary: to rename authentication and authorization to user management
+Home-page: https://github.com/malinkaphann/auth-rename/tree/0.0.1
+Author: malinka
+Author-email: malinkaphann@gmail.com
+License: UNKNOWN
+Description: to rename authentication and authorization
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Description-Content-Type: text/x-rst
