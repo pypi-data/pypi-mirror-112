@@ -1,0 +1,3 @@
+[console_scripts]
+pyvitemadose = pyvitemadose.__init__:pyvitemadose
+

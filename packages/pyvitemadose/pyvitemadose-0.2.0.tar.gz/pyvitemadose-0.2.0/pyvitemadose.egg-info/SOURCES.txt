@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+pyvitemadose/__init__.py
+pyvitemadose/args.py
+pyvitemadose/pyvitemadose.py
+pyvitemadose/update.py
+pyvitemadose.egg-info/PKG-INFO
+pyvitemadose.egg-info/SOURCES.txt
+pyvitemadose.egg-info/dependency_links.txt
+pyvitemadose.egg-info/entry_points.txt
+pyvitemadose.egg-info/not-zip-safe
+pyvitemadose.egg-info/top_level.txt

@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyvitemadose
+Version: 0.2.0
+Summary: pyvitemadose displays available chronodoses of covid vaccine for your departement in France
+Home-page: https://github.com/thib1984/pyvitemadose
+Author: thib1984
+Author-email: thibault.garcon@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+
+The complete description/installation/use/FAQ is available at : https://github.com/thib1984/pyvitemadose#readme
+
