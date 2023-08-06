@@ -1,0 +1,6 @@
+[tool.towncrier]
+    package = "neuro_flow"
+    package_dir = "."
+    directory = "CHANGELOG.D"
+    filename = "CHANGELOG.md"
+    start_string = "[comment]: # (towncrier release notes start)\n"
