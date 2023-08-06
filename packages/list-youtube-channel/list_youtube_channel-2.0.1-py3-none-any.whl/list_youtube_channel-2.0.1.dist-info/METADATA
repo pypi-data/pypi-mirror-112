@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: list-youtube-channel
+Version: 2.0.1
+Summary: Get all videos for a Youtube channel
+Home-page: https://github.com/dermasmid/list_youtube_channel
+Author: Cheskel Twersky
+Author-email: twerskycheskel@gmail.com
+License: MIT
+Keywords: youtube python channel videos list get
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# Project was renamed
+You can see the new project [here](https://pypi.org/project/scrapetube/)
+
+
