@@ -1,0 +1,10 @@
+celery
+Django>=1.7
+infi.clickhouse-orm
+statsd
+
+[:python_version < "3.3"]
+pytz
+
+[:python_version < "3.5"]
+typing
