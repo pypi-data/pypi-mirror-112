@@ -1,0 +1,11 @@
+strax
+utilix>=0.5.3
+straxen>=0.19.1
+uproot>=4.0.0
+
+[docs]
+sphinx
+sphinx_rtd_theme
+nbsphinx
+recommonmark
+graphviz
