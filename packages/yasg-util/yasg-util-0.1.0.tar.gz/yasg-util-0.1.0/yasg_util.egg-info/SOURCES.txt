@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+yasg_util/__init__.py
+yasg_util.egg-info/PKG-INFO
+yasg_util.egg-info/SOURCES.txt
+yasg_util.egg-info/dependency_links.txt
+yasg_util.egg-info/requires.txt
+yasg_util.egg-info/top_level.txt
