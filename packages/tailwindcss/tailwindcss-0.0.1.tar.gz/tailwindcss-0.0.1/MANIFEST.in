@@ -1,0 +1,5 @@
+include LICENSE.txt
+include README.rst
+recursive-include tailwindcss/templates *
+recursive-include tailwindcss/static *
+recursive-exclude * *.py[co]
