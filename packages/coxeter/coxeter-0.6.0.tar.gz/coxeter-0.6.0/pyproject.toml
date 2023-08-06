@@ -1,0 +1,10 @@
+[tool.black]
+target-version = ['py36']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+    | coxeter/extern/*
+  )/
+)
+'''

@@ -1,0 +1,13 @@
+numpy
+rowan>=1.2
+scipy
+
+[bounding_sphere]
+miniball
+
+[test]
+hypothesis[numpy]
+matplotlib
+plato-draw
+pytest
+miniball
