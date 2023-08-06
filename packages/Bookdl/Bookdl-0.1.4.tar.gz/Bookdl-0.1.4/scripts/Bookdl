@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+
+import argparse
+import sys
+from Bookdl.books import books
+from Bookdl.logger import logger
+from Bookdl.pdfdrive import search, download
+
+logger = logger()
+description = "A Program to download books from pdf-drive."
+parser = argparse.ArgumentParser(description=description)
+
+parser.add_argument("book_name", type=str,
+                    help="Book name to search for")
+parser.add_argument("-e", "--extension", type=str, default='pdf', dest="extension",
+                    nargs='*', choices=['epub', 'pdf', 'mobi'], help="File type")
+args = parser.parse_args()
+
+
+def main():
+    obj = books()
+    search(args.book_name, obj)
+    response = 0
+
+    while(True):
+        obj.show_results()
+        response = input("Enter choice:")
+        logger.debug(response)
+        if(response != '0'):
+            break
+
+    url = obj.get_url(int(response))
+    title = obj.get_title(int(response))
+    download(title, url, args.extension[0])
+
+
+if __name__ == '__main__':
+
+    try:
+        main()
+    except KeyboardInterrupt:
+        logger.warning("\nExiting...")
+        sys.exit()
