@@ -1,0 +1,31 @@
+{
+    "confusion_matrix": {
+        "Encoder": [
+
+        ],
+        "Decoder": [
+
+        ],
+        "Input": [
+            "numerical", "image", "categorical"
+        ],
+        "Target": [
+             "categorical"
+        ]
+    },
+
+    "metrics_table": {
+        "Encoder": [
+
+        ],
+        "Decoder": [
+
+        ],
+        "Input": [
+            "numerical", "image", "categorical"
+        ],
+        "Target": [
+             "categorical"
+        ]
+    }
+}
