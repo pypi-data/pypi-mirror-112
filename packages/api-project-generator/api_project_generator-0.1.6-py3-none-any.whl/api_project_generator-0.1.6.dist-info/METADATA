@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: api-project-generator
+Version: 0.1.6
+Summary: 
+Author: Gustavo Correa
+Author-email: self.gustavocorrea@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: GitPython (>=3.1.18,<4.0.0)
+Requires-Dist: poetry (>=1.1.7,<2.0.0)
+Requires-Dist: typer[all] (>=0.3.2,<0.4.0)
+Description-Content-Type: text/markdown
+
+# API Project Generator
+
+Simple API Structure Generator using tecnologies:
+
+- FastAPI
+- SQLAlchemy
+- aiohttp
+- aiomysql
+
