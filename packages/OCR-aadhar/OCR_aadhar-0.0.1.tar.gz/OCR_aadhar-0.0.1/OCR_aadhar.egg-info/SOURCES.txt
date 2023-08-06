@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+OCR_aadhar/SQLite_Python.db
+OCR_aadhar/__init__.py
+OCR_aadhar.egg-info/PKG-INFO
+OCR_aadhar.egg-info/SOURCES.txt
+OCR_aadhar.egg-info/dependency_links.txt
+OCR_aadhar.egg-info/top_level.txt
