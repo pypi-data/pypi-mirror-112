@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: genreg
+Version: 1.0.0
+Summary: Genomic region package for learning purposes
+Home-page: https://training.vbcf.ac.at/training/pylang.php
+Author: András Aszódi
+Author-email: andras.aszodi@vbcf.ac.at
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# The `genreg` Package
+
+This little package provides a class `Region`
+that represents chromosomal genomic regions. Instances 
+of the class can read and write themselves to and from
+BED- and GFF-formatted files.
+
+The `Region` class serves educational purposes only
+and shall not be used in production code.
+
