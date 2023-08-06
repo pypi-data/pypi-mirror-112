@@ -1,0 +1,4 @@
+django<4,>=3
+celery
+pymongo
+requests
