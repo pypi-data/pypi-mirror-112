@@ -1,0 +1,7 @@
+flake8
+pytest
+tenvs
+torch
+tensorflow
+tensorboard
+trunner
