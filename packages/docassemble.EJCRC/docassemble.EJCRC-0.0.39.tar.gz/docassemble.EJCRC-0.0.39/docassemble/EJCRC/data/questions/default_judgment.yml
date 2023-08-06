@@ -1,0 +1,42 @@
+metadata:
+  title: Praeipe to Enter Default Judgment for Possession
+  temporary session: true
+---
+mandatory: true
+question: |
+ The Praecipe to Enter Default Judgment for Possession can be filed with the court if the defendant(s) has/have not filed a timely response to the court since being served with a  Notice of Praecipe to Enter Judgment by Default.  Please review the following Rules of Pennsylvania Civil Procedure before filing this motion.
+subquestion: |
+
+  ### Rule 237.1. Notice of Praecipe for Entry of Judgment of Non Pros for Failure to File Complaint or by Default for Failure to Plead.
+   
+   (a) (1) As used in this rule,
+   
+   ‘‘judgment of non pros’’ means a judgment entered by praecipe pursuant to Rules 1037(a) and 1659;
+   
+   Official Note
+   
+   When a defendant appeals from a judgment entered in a magisterial district court, Pa.R.C.P.M.D.J. 1004(b) authorizes the appellant to file a praecipe for a rule as of course upon the appellee to file a complaint or suffer entry of a judgment of non pros. The entry of the judgment of non pros is governed by Pa.R.C.P. No. 1037(a) and is subject to this rule.
+   
+   ‘‘judgment by default’’ means a judgment entered by praecipe pursuant to Rules 1037(b), 1511(a), 3031(a) and 3146(a).
+   
+   (2)  No judgment of non pros for failure to file a complaint or by default for failure to plead shall be entered by the prothonotary unless the praecipe for entry includes a certification that a written notice of intention to file the praecipe was mailed or delivered
+   
+     (i)   in the case of a judgment of non pros, after the failure to file a complaint and at least ten days prior to the date of the filing of the praecipe to the party’s attorney of record or to the party if unrepresented, or
+     
+     (ii)   in the case of a judgment by default, after the failure to plead to a complaint and at least ten days prior to the date of the filing of the praecipe to the party against whom judgment is to be entered and to the party’s attorney of record, if any.
+     
+   The ten-day notice period in subdivision (a)(2)(i) and (ii) shall be calculated forward from the date of the mailing or delivery, in accordance with Rule 106.
+   
+   Official Note
+   
+   The final sentence of Rule 237.1(a)(2) alters the practice described in the decision of Williams v. Wade, 704 A.2d 132 (Pa. Super. 1997).
+   
+   (3)  A copy of the notice shall be attached to the praecipe.
+   
+   (4)  The notice and certification required by this rule may not be waived.
+fields:
+  - I have reviewed the above Pennsylvania Rules of Civil procedure regarding service: agrees_to_tos
+    datatype: yesnowide
+validation code: |
+  if not agrees_to_tos:
+    validation_error("You cannot continue until you have read the rules of Default Judgment.")
