@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: iguanaresult2csv
+Version: 3.2.0
+Summary: Convert IGUANA <https://github.com/dice-group/IGUANA> RDF result files to CSV.
+Home-page: https://github.com/dice-group/IguanaResult2CSV
+Author: Alexander Bigerl
+Author-email: info@dice-research.org
+License: AGPL v3
+Platform: UNKNOWN
+Requires-Dist: rdflib (>=5.0.0)
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: click (>=7.1.2)
+
+# IGUANA Result 2 CSV
+
+small script to convert IGUANA result files from RDF to CSV (and JSON).
+
+Installing with 
+```shell
+pip install .
+``` 
+
+makes the command `iguanaresult2csv` available. Check the help page with 
+```shell
+iguanaresult2csv --help
+```
+
+Using pypy3 is considerably faster than default CPython.
+
+Additionally, the bash script [`preprocess.sh`](preprocess.sh) can convert IGUANA result files from NTriple to Turtle. 
+This makes them smaller and more human-readable. (For details on how to run it, please read the script. It is very short. It is not installed by pip.) 
+

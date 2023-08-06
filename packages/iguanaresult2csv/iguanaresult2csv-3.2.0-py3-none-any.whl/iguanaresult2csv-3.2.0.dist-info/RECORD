@@ -1,0 +1,14 @@
+iguanaresult2csv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iguanaresult2csv/processing.py,sha256=HqH_3208RK-3igD8AbXEPNyBkUQ38lMu0D3xldyVuuc,6567
+iguanaresult2csv/exec/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iguanaresult2csv/exec/run.py,sha256=Cl-5xjmZXP3V1ZXOzujvdZBg8bzjjF7MLfpNRpUwBzA,3194
+iguanaresult2csv/sparql/get_tasks.sparql,sha256=uXlh5kvxy2mZAQso6IIHbOgBwd77cu7xLY6_ztj8uIA,515
+iguanaresult2csv/sparql/task_data.sparql,sha256=ILuUlTFyteYRKWpkUT2Uv2-3oK6v2__xHmwGzV9qRGw,2034
+iguanaresult2csv/sparql/task_data_each_query.sparql,sha256=Vr8SVFG1CHuJv2iwhEDPW5gh65vTGUomal3GWje044s,2279
+iguanaresult2csv/sparql/task_meta_data.sparql,sha256=PS79fFLgZNCjwITCXSgV5Oj1qoXc0C3Cp-Ce7c1tpyw,1672
+iguanaresult2csv-3.2.0.dist-info/LICENSE,sha256=FbTeyvmiYZQOk4Y-9oZJeCvLTiDp-djZySrn-8nIKv8,34501
+iguanaresult2csv-3.2.0.dist-info/METADATA,sha256=M3FpenoQZ4iDwRAXrnhPBUknyw8GCPicsZ8h9pHGzzM,987
+iguanaresult2csv-3.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+iguanaresult2csv-3.2.0.dist-info/entry_points.txt,sha256=uY36gDG-DhmVG-p9tfirXCh2rFWcH1pvVvCwoWOQktg,86
+iguanaresult2csv-3.2.0.dist-info/top_level.txt,sha256=3IL9rQKysge5CYXmzvGOz40kYdBee4omCfBsyMjeT6Q,17
+iguanaresult2csv-3.2.0.dist-info/RECORD,,
