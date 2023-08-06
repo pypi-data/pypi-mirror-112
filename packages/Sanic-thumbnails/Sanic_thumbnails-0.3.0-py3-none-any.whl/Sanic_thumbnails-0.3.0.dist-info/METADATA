@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: Sanic-thumbnails
+Version: 0.3.0
+Summary: A simple extension to create a thumbs for the Sanic
+Home-page: https://github.com/q8977452/sanic-thumbnails
+Author: Ray Sin
+Author-email: ray0101.sin@gmail.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+License-File: LICENSE
+
+UNKNOWN
+
