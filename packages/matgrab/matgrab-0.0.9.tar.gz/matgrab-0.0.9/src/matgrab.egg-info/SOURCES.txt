@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/matgrab/__init__.py
+src/matgrab/matgrab.py
+src/matgrab.egg-info/PKG-INFO
+src/matgrab.egg-info/SOURCES.txt
+src/matgrab.egg-info/dependency_links.txt
+src/matgrab.egg-info/top_level.txt
