@@ -1,0 +1,16 @@
+README.md
+setup.py
+scopus_of_science/__init__.py
+scopus_of_science/constants.py
+scopus_of_science/file_handler.py
+scopus_of_science/sos.py
+scopus_of_science.egg-info/PKG-INFO
+scopus_of_science.egg-info/SOURCES.txt
+scopus_of_science.egg-info/dependency_links.txt
+scopus_of_science.egg-info/not-zip-safe
+scopus_of_science.egg-info/requires.txt
+scopus_of_science.egg-info/top_level.txt
+tests/__init__.py
+tests/test_constants.py
+tests/test_file_handler.py
+tests/tets_1.py
