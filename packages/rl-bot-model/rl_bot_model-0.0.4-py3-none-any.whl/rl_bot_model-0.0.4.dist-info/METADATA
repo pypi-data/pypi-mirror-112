@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: rl-bot-model
+Version: 0.0.4
+Summary: Package for various reinforcement models
+Home-page: https://github.com/micronoz/rl-bot-common
+Author: Nabi Ozberkman
+Author-email: n.ozberkman@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: torch
+
+UNKNOWN
+
