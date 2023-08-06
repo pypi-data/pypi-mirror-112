@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: social-networks-bot-finder
+Version: 1.2.0
+Summary: CLI tool to help detecting if a twitter account is a bot
+Home-page: https://github.com/ambanum/social-networks-bot-finder
+Author: Ambanum
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: ~=3.8
+Provides-Extra: test
+
+UNKNOWN
+
