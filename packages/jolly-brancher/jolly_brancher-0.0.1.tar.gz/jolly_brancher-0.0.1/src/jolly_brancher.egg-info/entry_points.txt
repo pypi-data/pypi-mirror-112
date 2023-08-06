@@ -1,0 +1,3 @@
+[console_scripts]
+jolly-brancher = jolly_brancher.main:run
+
