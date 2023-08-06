@@ -1,0 +1,30 @@
+name: 'gene-information'
+
+files:
+  - './examples/data/xenbase.gpi.gz'
+
+standard_format: 'gpi'
+
+compression: 'gzip'
+
+skip_lines: 22
+
+node_properties:
+  - 'id'
+  - 'category'
+  - 'provided_by'
+  - 'name'
+  - 'symbol'
+  - 'in_taxon'
+  - 'xref'
+  - 'synonyms'
+  - 'source'
+
+edge_properties:
+  - 'id'
+  - 'subject'
+  - 'predicate'
+  - 'object'
+  - 'category'
+  - 'relation'
+  - 'provided_by'
