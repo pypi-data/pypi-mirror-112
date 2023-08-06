@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: vision_mlp_oneflow
+Version: 0.0.1
+Summary: vision mlp model based on oneflow
+Home-page: https://github.com/rentainhe/vision-mlp-oneflow.git
+Author: Ren Tianhe
+Author-email: 596106517@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# vision-mlp-oneflow
+Vision MLP Models Based on OneFlow
+
+## TODO
+- [x] [Mlp-Mixer]()
+- [x] [ResMLP]()
+- [x] [gMLP]()
+- [ ] [S2-MLP]()
+- [ ] [Vision-Permutator]()
+
+## 复现过程中遇到的问题
+- `tensor.chunk()`方法没有和`torch.tensor.chunk()`对齐
+

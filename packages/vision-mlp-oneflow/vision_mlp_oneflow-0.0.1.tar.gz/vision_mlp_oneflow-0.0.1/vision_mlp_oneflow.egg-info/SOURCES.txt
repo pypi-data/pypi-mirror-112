@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+vision_mlp_oneflow/__init__.py
+vision_mlp_oneflow/gmlp.py
+vision_mlp_oneflow/mlp_mixer.py
+vision_mlp_oneflow/resmlp.py
+vision_mlp_oneflow.egg-info/PKG-INFO
+vision_mlp_oneflow.egg-info/SOURCES.txt
+vision_mlp_oneflow.egg-info/dependency_links.txt
+vision_mlp_oneflow.egg-info/top_level.txt
