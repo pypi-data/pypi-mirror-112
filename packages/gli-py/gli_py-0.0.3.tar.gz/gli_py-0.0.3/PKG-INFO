@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: gli_py
+Version: 0.0.3
+Summary: A python 3 API wrapper for GL-inet routers for consumption by Home Assistant
+Home-page: https://github.com/HarvsG/gli_py
+Author: HarvsG
+Author-email: doctor@codingdoctor.co.uk
+License: 	gpl-3.0
+Download-URL: https://github.com/HarvsG/gli_py/archive/refs/tags/0.0.3.tar.gz
+Description: UNKNOWN
+Keywords: API,Router,Home Assistant
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.8
