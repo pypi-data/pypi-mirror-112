@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: opensignals
+Version: 0.0.1rc6
+Summary: Open Signals
+Home-page: https://github.com/councilofelders/opensignals
+Author: Jordi Villar
+Author-email: jrdi.villar@gmail.com
+License: Apache License
+Project-URL: Bug Tracker, https://github.com/councilofelders/opensignals/issues
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: docopt
+Requires-Dist: pandas (==1.2.2)
+Requires-Dist: numpy (==1.20.1)
+Requires-Dist: pyarrow (==3.0.0)
+Requires-Dist: requests
+Requires-Dist: tqdm
+Provides-Extra: test
+Requires-Dist: pytest (==5.1.2) ; extra == 'test'
+Requires-Dist: pytest-cov (==2.7.1) ; extra == 'test'
+Requires-Dist: pytest-flake8 (==1.0.6) ; extra == 'test'
+Requires-Dist: pytest-mypy (==0.4.0) ; extra == 'test'
+Requires-Dist: pydocstyle (==4.0.1) ; extra == 'test'
+Requires-Dist: pep8-naming (==0.8.1) ; extra == 'test'
+Requires-Dist: pytest-docstyle (==2.0.0) ; extra == 'test'
+Requires-Dist: flake8 (==3.8.1) ; extra == 'test'
+
+# Open Signals
+
+## Install
+
+```
+pip install -U opensignals
+```
+
+## Usage
+
+```python
+from pathlib import Path
+
+from opensignals.data import yahoo
+from opensignals.features import RSI, SMA
+
+db_dir = Path('db')
+
+yahoo.download_data(db_dir)
+
+features_generators = [
+    RSI(num_days=5, interval=14, variable='adj_close'),
+    RSI(num_days=5, interval=21, variable='adj_close'),
+    SMA(num_days=5, interval=14, variable='adj_close'),
+    SMA(num_days=5, interval=21, variable='adj_close'),
+]
+
+train, test, live, feature_names = yahoo.get_data(db_dir, features_generators=features_generators)
+```
+
+
