@@ -1,0 +1,32 @@
+Metadata-Version: 1.0
+Name: bytexpy
+Version: 0.2
+Summary: Easy Graphics
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: spgerghelp@gmail.com
+License: UNKNOWN
+Description: bytexpy.window.Createwindow("BytexPy Work!", 640, 480) #Create Window
+        
+        bytexpy.window.waitWindow() #Wait Window
+        
+        
+        bytexpy.window.close() #Close Window
+        
+        bytexpy.window.setIcon("icon.ico") #assets/images/window/icon.ico #standart folders
+        
+        #Canvas
+        
+        bytexpy.CanvasDraw.CreateText(10, 10, "Hello World!", 72, 72) #xPos, yPos, text, widthFont, heightFont
+        
+        bytexpy.CanvasDraw.CreateCube(0, 0, 100, 100, 2) #xPos1, yPos1, xPos2, yPos2, widthCube
+        
+        bytexpy.CanvasDraw.CreateLine(0, 0, 100, 100, 2) #xPos1, yPos1, xPos2, yPos2, widthLine
+        
+        bytexpy.CanvasDraw.CreateCircle(0, 0, 100, 100, 2) #xPos1, yPos1, xPos2, yPos2, widthCircle
+        
+        bytexpy.CanvasDraw.ImageLoad("BytexPy.png")  #assets/images/BytexPy.png #standart folders
+        
+        
+        
+Platform: UNKNOWN
