@@ -1,0 +1,21 @@
+/*
+Define base styles here
+
+*/
+
+.container {
+	max-width: 600px;
+	width: 100%;
+	height: 100vh;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.container img {
+	width: 200px;
+}
+
+
