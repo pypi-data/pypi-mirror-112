@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/entropymethod/__init__.py
+src/entropymethod/core.py
+src/entropymethod/visual_test.py
+src/entropymethod.egg-info/PKG-INFO
+src/entropymethod.egg-info/SOURCES.txt
+src/entropymethod.egg-info/dependency_links.txt
+src/entropymethod.egg-info/top_level.txt
