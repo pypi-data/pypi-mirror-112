@@ -1,0 +1,15 @@
+README.md
+setup.py
+IRIXS/__init__.py
+IRIXS/instrument_rowland.py
+IRIXS/instrument_spectrograph.py
+IRIXS/irixs_oneshot
+IRIXS/p01plot
+IRIXS/tools.py
+IRIXS/ub.py
+IRIXS.egg-info/PKG-INFO
+IRIXS.egg-info/SOURCES.txt
+IRIXS.egg-info/dependency_links.txt
+IRIXS.egg-info/not-zip-safe
+IRIXS.egg-info/requires.txt
+IRIXS.egg-info/top_level.txt
