@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: SmsServiceOnline
+Version: 1.0.2
+Summary: Package for https://sms-service-online.com
+Home-page: https://github.com/fxcvd/SmsServiceOnline
+Author-email: rzet595@gmail.com
+License: UNKNOWN
+Description: 
+        # SmsServiceOnline 
+        `pip3 install SmsServiceOnline==1.0.1`
+        
+        ## Example #1
+        ```python
+        import SmsServiceOnline
+        
+        KEY = "<api key here>"
+        LANG = "ru"
+        MESSAGE = False
+        
+        
+        api = SmsServiceOnline.Api(
+            api_key=KEY,
+            lang=LANG,
+            welcome_message=MESSAGE,
+        )
+        
+        api.get_balance()
+        ```
+        ```python
+        >>> 10.2
+        ```
+        
+        ### all methods -> [here](https://sms-service-online.com/ru/api-sms-activate/)  
+        
+        ---
+        ```by @fxcvd with ❤```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
