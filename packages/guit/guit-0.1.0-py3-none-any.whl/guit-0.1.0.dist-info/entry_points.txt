@@ -1,0 +1,3 @@
+[console_scripts]
+guit=guit.cli:main
+
