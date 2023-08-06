@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+practipy/__init__.py
+practipy/classes.py
+practipy/gcloud.py
+practipy/import.py
+practipy/text.py
+practipy/typing.py
+practipy.egg-info/PKG-INFO
+practipy.egg-info/SOURCES.txt
+practipy.egg-info/dependency_links.txt
+practipy.egg-info/requires.txt
+practipy.egg-info/top_level.txt
