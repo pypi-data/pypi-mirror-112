@@ -1,0 +1,1 @@
+from blackdogosint.osintlib.Search.google import dorks
