@@ -1,0 +1,7 @@
+fastai>=2.4
+transformers>=4.6
+ipykernel
+datasets
+sentencepiece
+seqeval
+rouge-score
