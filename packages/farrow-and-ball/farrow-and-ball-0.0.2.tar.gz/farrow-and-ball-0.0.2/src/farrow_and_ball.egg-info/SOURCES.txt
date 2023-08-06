@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/farrow_and_ball/__init__.py
+src/farrow_and_ball/palettes.py
+src/farrow_and_ball.egg-info/PKG-INFO
+src/farrow_and_ball.egg-info/SOURCES.txt
+src/farrow_and_ball.egg-info/dependency_links.txt
+src/farrow_and_ball.egg-info/requires.txt
+src/farrow_and_ball.egg-info/top_level.txt
