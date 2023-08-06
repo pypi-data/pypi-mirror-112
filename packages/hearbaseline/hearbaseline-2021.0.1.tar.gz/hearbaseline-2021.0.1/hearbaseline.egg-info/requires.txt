@@ -1,0 +1,14 @@
+librosa
+torch
+
+[dev]
+pre-commit
+black
+pytest
+pytest-cov
+pytest-env
+
+[test]
+pytest
+pytest-cov
+pytest-env
