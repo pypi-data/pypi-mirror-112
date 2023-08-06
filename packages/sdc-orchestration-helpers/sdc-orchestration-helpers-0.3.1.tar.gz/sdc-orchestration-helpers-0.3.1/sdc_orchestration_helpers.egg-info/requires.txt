@@ -1,0 +1,8 @@
+
+[airflow]
+PyYaml
+dag-factory
+PyYaml
+boto3>=1.16.63
+sagemaker
+sdc_helpers
