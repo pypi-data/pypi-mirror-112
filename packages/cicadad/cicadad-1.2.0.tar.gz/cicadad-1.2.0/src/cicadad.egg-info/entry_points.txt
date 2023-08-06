@@ -1,0 +1,3 @@
+[console_scripts]
+cicada-distributed = cicadad.core.cli:cli
+
