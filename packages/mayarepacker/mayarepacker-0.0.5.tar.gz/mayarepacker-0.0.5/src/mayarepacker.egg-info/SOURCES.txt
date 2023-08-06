@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/mayarepacker/__init__.py
+src/mayarepacker/app.py
+src/mayarepacker/controller.py
+src/mayarepacker/server.py
+src/mayarepacker/view.py
+src/mayarepacker.egg-info/PKG-INFO
+src/mayarepacker.egg-info/SOURCES.txt
+src/mayarepacker.egg-info/dependency_links.txt
+src/mayarepacker.egg-info/not-zip-safe
+src/mayarepacker.egg-info/requires.txt
+src/mayarepacker.egg-info/top_level.txt
+src/mayarepacker/ui/MayaAutoPackageReloader.ui
