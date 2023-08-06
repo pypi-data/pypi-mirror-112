@@ -1,0 +1,4 @@
+cirq
+numpy
+tensorflow==2.3.1
+tensorflow_quantum==0.4.0
