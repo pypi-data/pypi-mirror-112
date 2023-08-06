@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: types-polib
+Version: 1.1.0
+Summary: Typing stubs for polib
+Home-page: https://github.com/python/typeshed
+License: Apache-2.0 license
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+
+## Typing stubs for polib
+
+This is a PEP 561 type stub package for the `polib` package.
+It can be used by type-checking tools like mypy, PyCharm, pytype etc. to check code
+that uses `polib`. The source for this package can be found at
+https://github.com/python/typeshed/tree/master/stubs/polib. All fixes for
+types and metadata should be contributed there.
+
+See https://github.com/python/typeshed/blob/master/README.md for more details.
+This package was generated from typeshed commit `9d5046ee7f4fad0f60bbdd807e46da9c22a2f9e0`.
+
+
