@@ -1,0 +1,9 @@
+requests
+html2text
+
+[test]
+mock
+nose
+vcrpy
+html2text
+python-dotenv
