@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/xldt.c
+src/xldt_doc.h
+src/xldt_msg.h
+xldt.egg-info/PKG-INFO
+xldt.egg-info/SOURCES.txt
+xldt.egg-info/dependency_links.txt
+xldt.egg-info/top_level.txt
