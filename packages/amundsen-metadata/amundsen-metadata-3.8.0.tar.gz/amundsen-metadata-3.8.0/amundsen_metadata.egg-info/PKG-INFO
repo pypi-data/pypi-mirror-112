@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: amundsen-metadata
+Version: 3.8.0
+Summary: Metadata service for Amundsen
+Home-page: https://www.github.com/amundsen-io/amundsen/tree/main/metadata
+Maintainer: Amundsen TSC
+Maintainer-email: amundsen-tsc@lists.lfai.foundation
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Provides-Extra: atlas
+Provides-Extra: all
+Provides-Extra: dev
+Provides-Extra: rds
+Provides-Extra: oidc
