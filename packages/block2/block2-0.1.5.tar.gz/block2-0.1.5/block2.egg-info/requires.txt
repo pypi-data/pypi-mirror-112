@@ -1,0 +1,7 @@
+mkl
+mkl-include
+intel-openmp
+numpy
+scipy
+psutil
+pybind11
