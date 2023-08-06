@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+abbr/__init__.py
+abbr/__main__.py
+abbr/clients.py
+abbr/core.py
+abbr/exitstatus.py
+abbr/scrapers.py
+abbr_cli.egg-info/PKG-INFO
+abbr_cli.egg-info/SOURCES.txt
+abbr_cli.egg-info/dependency_links.txt
+abbr_cli.egg-info/entry_points.txt
+abbr_cli.egg-info/requires.txt
+abbr_cli.egg-info/top_level.txt

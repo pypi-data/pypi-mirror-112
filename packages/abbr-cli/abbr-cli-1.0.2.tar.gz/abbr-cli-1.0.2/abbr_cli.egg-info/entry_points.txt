@@ -1,0 +1,3 @@
+[console_scripts]
+abbr = abbr.__main__:main
+
