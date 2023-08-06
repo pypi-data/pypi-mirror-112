@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: bluedo
+Version: 0.55
+Summary: Bluetooth proximity automation
+Home-page: https://github.com/ways/BlueDo/
+Author: Lars Falk-Petersen
+Author-email: dev@falkp.no
+License: GPLv3+
+Description: # Overview
+        
+        BlueDo - Bluetooth proximity automation
+        
+        ![Logo](https://raw.githubusercontent.com/ways/BlueDo/master/images/bluedo.png)
+        
+        Lock your desktop, mute music or run any other command when leaving your PC. There are dozens of apps like this. This one just aims to make it beautiful, modern and easy.
+        
+        # Maturity
+        
+        Beta
+        
+        # Installation
+        
+        ## From pip
+        
+            sudo apt install python3-pip libbluetooth-dev libappindicator3-dev playerctl
+            pip3 install --upgrade bluedo
+        
+        ## From snap store
+        
+            snap install bluedo
+            give permissions:
+            * "Use bluetooth device": "bluedo:service"
+            * "Login session control"
+            * "gsettings: allows access to any gsettings item of current user"
+        
+        # Requirements
+        
+        Needs bluetoothctl ~5.50 or newer. Version above .55 needs Python 3.9.
+        
+        Use these system commands:
+        
+        * bluetoothctl
+        * loginctl
+        * gsettings
+        * amixer
+        * playerctl
+        
+        Only tested on Ubuntu 20.04-21.04 with GNOME.
+        
+        # Command line options
+        
+        * -e / --enable to start service on app start.
+        * -m / --minimize to start minimized
+        
+        # Configuration
+        
+        There are lots more options in the config file. Feel free to tune.
+        
+        # Screenshots
+        
+        ![v53](https://raw.githubusercontent.com/ways/BlueDo/master/images/v53.png)
+        ![v49](https://raw.githubusercontent.com/ways/BlueDo/master/images/v49.png)
+        ![v49_advanced](https://raw.githubusercontent.com/ways/BlueDo/master/images/v49_advanced.png)
+        ![v3_2](https://raw.githubusercontent.com/ways/BlueDo/master/images/v3_2.png)
+        ![v3](https://raw.githubusercontent.com/ways/BlueDo/master/images/v3.png)
+        
+        # System changes
+        
+        Note that this app will make these changes to your power management:
+        
+        * Enable screen lock: ```org.gnome.desktop.screensaver lock-enabled true```
+        * Set delay from screen blacking to locking to zero: ```org.gnome.desktop.screensaver lock-delay 0```
+        * Set screen saver timeout to 10 seconds when device is away, 5 minutes when device is present: ```org.gnome.desktop.session idle-delay 600```
+        
+        # TODO
+        
+        * Default lock / unlock ON.
+        * Keep two instances from running at the same time.
+        * Minimize to tray, instead of having both minimize and minimize to tray.
+        * Stop device scanning when minimized
+        * Change to dynamic widget layout instead of fixed.
+        * Change preferences button to proper burger menu.
+        * Figure out what freezes app sometimes. Only happends when run from codium.
+        * Move media files to some other dir?
+        * Unit tests
+        
+        ## For snap
+        
+        * /bin/sh: 1: loginctl: Permission denied
+        * See if build config can be cut down
+        * See if permissions can be cut down
+        * Warn when permissions are missing (some need to be given manually), bluetooth, session control
+        * Autostart when snap?
+        
+        # Development docs
+        
+        * scan for devices: bluetoothctl devices
+        * rssi for device: hcitool rssi ff:ff:ff:ff:ff:ff (unstable)
+        
+        * hard locking: lock when no signal
+        * soft locking: set screensaver timeout to 10 seconds when no signal
+        
+        # Inspiration
+        
+        * https://github.com/LukeSkywalker92/btproxipy
+          * bt_rssi.py is from this project and is MIT licensed.
+        * https://discourse.gnome.org/t/useful-documentation-for-gtk/29
+        * Black/white icons in app from https://material.io
+        
+Keywords: bluetooth
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Desktop Environment :: Gnome
+Classifier: Topic :: Security
+Classifier: Environment :: X11 Applications :: Gnome
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Natural Language :: English
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
