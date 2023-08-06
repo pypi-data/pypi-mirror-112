@@ -1,0 +1,11 @@
+dynesty
+emcee
+corner
+numpy
+matplotlib>=2.1
+scipy>=0.16
+pandas
+mock
+dill
+tqdm
+h5py
