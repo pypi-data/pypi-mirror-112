@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+django_selenium_pdfmaker/__init__.py
+django_selenium_pdfmaker/admin.py
+django_selenium_pdfmaker/models.py
+django_selenium_pdfmaker/modules.py
+django_selenium_pdfmaker/tests.py
+django_selenium_pdfmaker.egg-info/PKG-INFO
+django_selenium_pdfmaker.egg-info/SOURCES.txt
+django_selenium_pdfmaker.egg-info/dependency_links.txt
+django_selenium_pdfmaker.egg-info/requires.txt
+django_selenium_pdfmaker.egg-info/top_level.txt
