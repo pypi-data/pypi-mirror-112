@@ -1,0 +1,71 @@
+# Git Ignore File; -*-Shell-script-*-
+# dest = ~/.gitignore    # Keep this as the 2nd line for mmf_init_setup
+
+# This file contains many things that I commonly need to ignore.  For a more complete list, try
+# https://www.toptal.com/developers/gitignore/api/latex,python,c++
+
+# Personal stuff
+.dropbox
+.DS_Store
+
+.coverage                       # Code coverage reports
+.eggs                           # Python packages
+.tox                            # Testing files
+.nox
+
+### Python ###
+__pycache__/
+*.pyc                           # Compiled python files
+*.pyo                           # Optimized python files
+*.pyd                           # Compiled python files
+
+# Generic CoCalc Stuff - taken from ~/.gitignore
+# LaTeX stuff
+_build                          # I put LaTeX build products here.
+*-blx.aux
+*-blx.bib
+*.acn
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.glo
+*.log
+*.out
+*.pdfsync
+*.run.xml
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.upb
+
+# VIM
+*.swp
+
+### CoCalc Platform ###
+/.snapshots/
+.*.sage-chat
+.*.sage-history
+.*.sage-jupyter
+.*.sage-jupyter2
+.*.syncdb
+.*.syncdoc
+.*.syncdoc[34]
+
+### Linux hidden files ###
+/.*
+*~
+
+# SageMath parsed files
+*.sage.py
+
+# mypy typechecker
+.mypy_cache/
+
+### JupyterNotebooks ###
+.ipynb_checkpoints/
+
