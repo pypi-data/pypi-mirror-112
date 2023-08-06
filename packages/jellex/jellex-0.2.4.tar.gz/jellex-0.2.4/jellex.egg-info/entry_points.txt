@@ -1,0 +1,3 @@
+[console_scripts]
+jellex = jellex.cli:main
+
