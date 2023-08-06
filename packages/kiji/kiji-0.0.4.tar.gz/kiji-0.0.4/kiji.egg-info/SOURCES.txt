@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+kiji/__init__.py
+kiji/article.py
+kiji/extraction.py
+kiji/inspection.py
+kiji.egg-info/PKG-INFO
+kiji.egg-info/SOURCES.txt
+kiji.egg-info/dependency_links.txt
+kiji.egg-info/requires.txt
+kiji.egg-info/top_level.txt
