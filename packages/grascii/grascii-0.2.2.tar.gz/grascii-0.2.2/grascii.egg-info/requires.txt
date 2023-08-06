@@ -1,0 +1,4 @@
+lark-parser>=0.11.2
+
+[interactive]
+questionary>=1.5.1
