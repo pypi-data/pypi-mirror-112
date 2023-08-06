@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: blib
+Version: 0.0.1
+Summary: Package for drawing M@B Bannerlord banners from banner codes
+Home-page: https://github.com/Niklas-Seppala/blib
+Author: Niklas Seppälä
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Requires-Dist: numpy
+Requires-Dist: pillow
+
+UNKNOWN
+
+
