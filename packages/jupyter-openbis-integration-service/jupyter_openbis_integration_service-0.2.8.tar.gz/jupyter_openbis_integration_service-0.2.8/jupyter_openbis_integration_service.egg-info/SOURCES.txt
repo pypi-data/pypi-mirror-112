@@ -1,0 +1,11 @@
+README.md
+setup.py
+jupyter_openbis_integration_service/__init__.py
+jupyter_openbis_integration_service/server.py
+jupyter_openbis_integration_service.egg-info/PKG-INFO
+jupyter_openbis_integration_service.egg-info/SOURCES.txt
+jupyter_openbis_integration_service.egg-info/dependency_links.txt
+jupyter_openbis_integration_service.egg-info/entry_points.txt
+jupyter_openbis_integration_service.egg-info/not-zip-safe
+jupyter_openbis_integration_service.egg-info/requires.txt
+jupyter_openbis_integration_service.egg-info/top_level.txt
