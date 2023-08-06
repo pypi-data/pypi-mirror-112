@@ -1,0 +1,12 @@
+aiomodbus/__init__.py,sha256=Vx47i8QNeXJNuUzstqWuU6eCWE5xtaY0kgN-Gm_d_gE,23
+aiomodbus/crc.py,sha256=G7EeXv8GjLGT3F3p1rFNQYk4H1pBnV2BcG8hPrgfs_M,4069
+aiomodbus/decoders.py,sha256=wDvbnM_EXaTVCAG5FBEMH8zKEToha0LCmdV97vMkiRg,1200
+aiomodbus/encoders.py,sha256=4_qYsNkZzmC9xfFOcDzshZvp2jcsQZJKIcndi3P42QU,1125
+aiomodbus/exceptions.py,sha256=81QyKn_ermTdaUfhOr-xsR4F75NpEztIcqIdj3wIPsM,925
+aiomodbus/serial.py,sha256=m1zpdgpsMqo3jAwOhSwp7YikVxvPMd8re7-Q_Z2S2Js,9028
+aiomodbus/tcp.py,sha256=eESO3cElNfPZW-ZeXjUn5BN59R_kH9Y8W5z9nRb1WJM,8567
+aiomodbus-0.4.0.dist-info/LICENSE,sha256=at7aqF16YWIlin_cEMQxNLwt8NP5TLK20DlC6iAlvzk,1094
+aiomodbus-0.4.0.dist-info/METADATA,sha256=9TCwMNCx1Zl9wUcmn-n7UqkifqbU4PaH6I9jVS0IaaY,754
+aiomodbus-0.4.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+aiomodbus-0.4.0.dist-info/top_level.txt,sha256=_2kUava0-8tAAO_CbW2mxlXqZcsBfKB3YWqof2S9Uc0,10
+aiomodbus-0.4.0.dist-info/RECORD,,
