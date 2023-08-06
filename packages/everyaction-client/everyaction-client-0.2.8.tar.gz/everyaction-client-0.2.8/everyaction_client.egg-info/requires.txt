@@ -1,0 +1,9 @@
+makefun>=1.11.3
+requests>=2.25.1
+
+[doc]
+sphinx>=3.4.3
+
+[test]
+pytest>=6.2.2
+http-router>=2.0.3
