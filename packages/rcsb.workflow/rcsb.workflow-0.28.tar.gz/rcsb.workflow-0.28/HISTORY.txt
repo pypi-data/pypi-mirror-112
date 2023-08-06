@@ -1,0 +1,21 @@
+# File: HISTORY.txt
+#
+11-Mar-2020 - V0.11 Created module with preliminary dependency cache management
+25-Mar-2020 - V0.12 Turn off framing border
+27-Mar-2020 - V0.13 Adjust bond stereo depiction for undefined cases.
+ 2-Apr-2020 - V0.14 Update dependencies
+16-Apr-2020 - V0.15 Adjust bond width with molecule size in 2D depictions
+16-May-2020 - V0.16 Add ChemCompFileWorkflow()
+10-Jun-2020 - V0.17 Add ChemCompSearchIndexWorkflow()
+21-Oct-2020 - V0.18 Add options for files based on model coordinate in ChemCompFileWorkflow()
+21-Oct-2020 - V0.19 Update file naming conventions
+ 8-Jun-2021 - V0.20 Preliminary version of ProteinTargetSequenceWorkflow() and tests, update dependencies
+14-Jun-2021 - V0.21 Adding create database, search database and preliminary build features workflows in ProteinTargetSequenceWorkflow()
+20-Jun-2021 - V0.22 Adding activity and cofactor workflows in ProteinTargetSequenceWorkflow()
+22-Jun-2021 - V0.23 Aligning cofactor content model across data sources
+29-Jun-2021 - V0.24 Adding additional selection filters for neighbor interactions, setup abbreviate tests disabling taxonomy processing
+29-Jun-2021 - V0.25 Update dependencies and install procedures
+ 2-Jul-2021 - V0.26 Add support for CARD taxonomy filtering
+12-Jul-2021 - V0.27 Add activity reload after restore operation ChEMBLTargetActivityProvider()
+12-Jul-2021 - V0.28 Add IMGT feature production to the target workflow
+
