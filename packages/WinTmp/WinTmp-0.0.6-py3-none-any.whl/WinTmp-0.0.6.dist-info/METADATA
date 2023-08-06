@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: WinTmp
+Version: 0.0.6
+Summary: A package used to get temperature on Windows Machines. 
+Home-page: UNKNOWN
+Author: Kethan
+Author-email: kethan@vegunta.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pythonnet
+Requires-Dist: wmi
+
+# WinTmp
+
+This is a python module used to getting temperatures of the cpu and gpu in windows. If a hardware configurate does not work, make sure to open an issue. 
+
+Remember run as admin!
+
+Install:
+`pip install WinTmp`
+
+In admin command prompt type `python`.
+Demo:
+
+```python
+>>> import WinTmp
+
+>>> print(WinTmp.CPU_Temp())
+
+>>> print(WinTmp.GPU_Temp())
+```
+
+PyPI page here: https://pypi.org/project/WinTmp/
+
+Github Page Here: https://github.com/kethan1/WinTmp/
+
+
