@@ -1,0 +1,7 @@
+import 'sub/C.pg' as cB
+
+B1: bT1 B2+ cB.C1;   // reference cB.C1 should end up as cA.C1 as A.pg should import it first
+B2: 'b' bT2;
+
+terminals
+bT1: 'bt';

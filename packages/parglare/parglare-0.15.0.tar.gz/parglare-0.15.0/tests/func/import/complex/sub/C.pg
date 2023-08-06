@@ -1,0 +1,5 @@
+import 'D.pg' as d  // this will end up in default name-space as it is imported
+                    // to it by A.pg
+
+C1: 'c' d.D1;   // C1 will be named cA.C1
+C2: 'c2'+;

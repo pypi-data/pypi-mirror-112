@@ -1,0 +1,4 @@
+    S: M N;
+    M: A M "b" | "x";
+    N: "b" N A | "x";
+    A: EMPTY;

@@ -1,0 +1,13 @@
+import 'B.pg' as b
+import 'sub/C.pg' as cA  // imported in B by the name cB
+import 'sub/D.pg'    // without name, should use already existing name or
+                      // if still not given then the same name as this grammar global
+                      // name is used
+
+@proba
+A1: aT1 b.B1+ 'c' cA.C1;
+cA.C2: 'c2' A1;      // By naming LHS the same we can override imported rule
+
+
+terminals
+aT1: 't1';

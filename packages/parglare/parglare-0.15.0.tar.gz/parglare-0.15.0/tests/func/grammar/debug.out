@@ -1,0 +1,1215 @@
+
+*** GRAMMAR ***
+Terminals:
+b x EMPTY STOP
+NonTerminals:
+S' S M N A
+Productions:
+0: S' = S STOP
+1: S = M N
+2: M = A M b
+3: M = x
+4: N = b N A
+5: N = x
+6: A = EMPTY
+
+** Calculating LR table...
+Constructing LR automaton states...
+13 LR automata states constructed
+Finishing LALR calculation...
+Calculate REDUCTION entries in ACTION tables and resolve possible conflicts.
+
+*** STATES ***
+
+
+State 0:S'
+	0: S' = . S STOP   {}
+	1: S = . M N   {STOP}
+	2: M = . A M b   {b, x}
+	3: M = . x   {b, x}
+	6: A = . EMPTY .   {x}
+
+
+	GOTO:
+	S->1, M->2, A->3
+
+	ACTIONS:
+	x->[SHIFT:4,REDUCE:6]
+
+
+State 1:S
+	0: S' = S . STOP   {}
+
+
+	ACTIONS:
+	STOP->ACCEPT
+
+
+State 2:M
+	1: S = M . N   {STOP}
+	4: N = . b N A   {STOP}
+	5: N = . x   {STOP}
+
+
+	GOTO:
+	N->6
+
+	ACTIONS:
+	x->SHIFT:8, b->SHIFT:7
+
+
+State 3:A
+	2: M = A . M b   {b, x}
+	2: M = . A M b   {b}
+	3: M = . x   {b}
+	6: A = . EMPTY .   {x}
+
+
+	GOTO:
+	M->9, A->3
+
+	ACTIONS:
+	x->[SHIFT:4,REDUCE:6]
+
+
+State 4:x
+	3: M = x .   {b, x}
+
+
+	ACTIONS:
+	x->REDUCE:3, b->REDUCE:3
+
+
+State 5:STOP
+	0: S' = S STOP .   {}
+
+
+	ACTIONS:
+	
+
+
+State 6:N
+	1: S = M N .   {STOP}
+
+
+	ACTIONS:
+	STOP->REDUCE:1
+
+
+State 7:b
+	4: N = b . N A   {STOP}
+	4: N = . b N A   {STOP}
+	5: N = . x   {STOP}
+
+
+	GOTO:
+	N->10
+
+	ACTIONS:
+	x->SHIFT:8, b->SHIFT:7
+
+
+State 8:x
+	5: N = x .   {STOP}
+
+
+	ACTIONS:
+	STOP->REDUCE:5
+
+
+State 9:M
+	2: M = A M . b   {b, x}
+
+
+	ACTIONS:
+	b->SHIFT:11
+
+
+State 10:N
+	4: N = b N . A   {STOP}
+	6: A = . EMPTY .   {STOP}
+
+
+	GOTO:
+	A->12
+
+	ACTIONS:
+	STOP->REDUCE:6
+
+
+State 11:b
+	2: M = A M b .   {b, x}
+
+
+	ACTIONS:
+	x->REDUCE:2, b->REDUCE:2
+
+
+State 12:A
+	4: N = b N A .   {STOP}
+
+
+	ACTIONS:
+	STOP->REDUCE:4
+
+*** S/R conflicts ***
+There are 2 S/R conflicts.
+
+
+State 0:S'
+	0: S' = . S STOP   {}
+	1: S = . M N   {STOP}
+	2: M = . A M b   {b, x}
+	3: M = . x   {b, x}
+	6: A = . EMPTY .   {x}
+
+In state 0:S' and input symbol 'x' can't decide whether to shift or reduce by production(s) '6: A = EMPTY'.
+
+
+State 3:A
+	2: M = A . M b   {b, x}
+	2: M = . A M b   {b}
+	3: M = . x   {b}
+	6: A = . EMPTY .   {x}
+
+In state 3:A and input symbol 'x' can't decide whether to shift or reduce by production(s) '6: A = EMPTY'.
+There are 2 Shift/Reduce conflicts.
+Either use 'prefer_shifts' parser mode, try to resolve manually, or use GLR parsing.
+
+** Calculating LR table...
+Loading LR table from '/home/igor/repos/parglare/tests/func/grammar/test.pgt'
+
+*** STATES ***
+
+
+State 0:S'
+
+
+	GOTO:
+	S->1, M->2, A->3
+
+	ACTIONS:
+	x->[SHIFT:4,REDUCE:6]
+
+
+State 1:S
+
+
+	ACTIONS:
+	STOP->ACCEPT
+
+
+State 2:M
+
+
+	GOTO:
+	N->6
+
+	ACTIONS:
+	x->SHIFT:8, b->SHIFT:7
+
+
+State 3:A
+
+
+	GOTO:
+	M->9, A->3
+
+	ACTIONS:
+	x->[SHIFT:4,REDUCE:6]
+
+
+State 4:x
+
+
+	ACTIONS:
+	x->REDUCE:3, b->REDUCE:3
+
+
+State 5:STOP
+
+
+	ACTIONS:
+	
+
+
+State 6:N
+
+
+	ACTIONS:
+	STOP->REDUCE:1
+
+
+State 7:b
+
+
+	GOTO:
+	N->10
+
+	ACTIONS:
+	x->SHIFT:8, b->SHIFT:7
+
+
+State 8:x
+
+
+	ACTIONS:
+	STOP->REDUCE:5
+
+
+State 9:M
+
+
+	ACTIONS:
+	b->SHIFT:11
+
+
+State 10:N
+
+
+	GOTO:
+	A->12
+
+	ACTIONS:
+	STOP->REDUCE:6
+
+
+State 11:b
+
+
+	ACTIONS:
+	x->REDUCE:2, b->REDUCE:2
+
+
+State 12:A
+
+
+	ACTIONS:
+	STOP->REDUCE:4
+
+*** S/R conflicts ***
+There are 2 S/R conflicts.
+
+
+State 0:S'
+
+In state 0:S' and input symbol 'x' can't decide whether to shift or reduce by production(s) '6: A = EMPTY'.
+
+
+State 3:A
+
+In state 3:A and input symbol 'x' can't decide whether to shift or reduce by production(s) '6: A = EMPTY'.
+*** PARSING STARTED
+
+
+** REDUCING
+Active heads =  1
+	<state=0:S', id=140704626947904, position=0, parents=0, trees=1>
+Number of trees = 1
+
+Finding lookaheads
+Skipping whitespaces: ''
+New position: (1, 0)
+Position: (1, 0)
+Context:  **> xbbbx
+Symbols expected:  ['x']
+Token(s) ahead: [<x(x)>]
+
+	Preparing reductions for head:  <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+	Productions:
+		 6: A = EMPTY
+
+	Processing production: 6: A = EMPTY
+
+	Reduction paths =  1
+	Reduction 1: [(<state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>, Production(
+                     A), [], 0, 0)]
+
+1. REDUCING head  <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+	by prod  6: A = EMPTY
+	to state 3:A
+	root is  <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+	Position span: 0 - 0
+	No action defined  for 'A'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:[]
+	Check loops. Reduce stack states: [0]
+
+	New head:  <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=0, trees=1>
+	Creating link 	from head: <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=1, trees=1>
+			  to head: <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+
+	Preparing reductions for head:  <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=1, trees=1>
+	Productions:
+		 6: A = EMPTY
+
+	Processing production: 6: A = EMPTY
+
+	Reduction paths =  1
+	Reduction 1: [(<state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=1, trees=1>, Production(A
+                     ), [], 0, 0)]
+
+2. REDUCING head  <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=1, trees=1>
+	by prod  6: A = EMPTY
+	to state 3:A
+	root is  <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=1, trees=1>
+	Position span: 0 - 0
+	No action defined  for 'A'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:[]
+	Check loops. Reduce stack states: [0, 3]
+	Looping due to empty reduction. Making GSS loop.
+	Creating link 	from head: <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+			  to head: <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+	Not processing further this head.
+
+	No more reductions for head: <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+	Adding head to reduced heads.
+
+	No more reductions for head: <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1
+                                     >
+	Adding head to reduced heads.
+
+** SHIFTING
+Active heads =  2
+	<state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+	<state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+Number of trees = 2
+
+3. SHIFTING head:  <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+Position: (1, 0)
+Context:  **> xbbbx
+Token(s) ahead: <x(x)>
+	No action defined for 'x'. Result is matched string.
+	Action result =  type:<class 'str'> value:'x'
+	New shifted head  <state=4:x, id=140704626949696, position=1, parents=0, trees=0>
+	Creating link 	from head: <state=4:x, id=140704626949696, position=1, parents=1, trees=1>
+			  to head: <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+
+4. SHIFTING head:  <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+	Creating link 	from head: <state=4:x, id=140704626949696, position=1, parents=2, trees=1>
+			  to head: <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+
+** REDUCING
+Active heads =  1
+	<state=4:x, id=140704626949696, position=1, parents=2, trees=1>
+Number of trees = 1
+
+Finding lookaheads
+Skipping whitespaces: ''
+New position: (1, 1)
+Position: (1, 1)
+Context: x **> bbbx
+Symbols expected:  ['x', 'b']
+Token(s) ahead: [<b(b)>]
+
+	Preparing reductions for head:  <state=4:x, id=140704626949696, token ahead=<b(b)>, position=1, parents=2, trees=1>
+	Productions:
+		 3: M = x
+
+	Processing production: 3: M = x
+	Calculate reduction paths of length 1:
+		start node= [<state=4:x, id=140704626949696, token ahead=<b(b)>, position=1, parents=2, trees=1>], symbo
+                            l=x, length=1
+
+		node = <state=4:x, id=140704626949696, token ahead=<b(b)>, position=1, parents=2, trees=1>
+		backpath length = 1 - ROOT
+			 <state=4:x, id=140704626949696, token ahead=<b(b)>, position=1, parents=2, trees=1>
+			 <state=4:x, id=140704626949696, token ahead=<b(b)>, position=1, parents=2, trees=1>
+
+	Reduction paths =  2
+	Reduction 1: [(<state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>, Production(
+                     M), ['x'], 0, 1), (<state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees
+                     =1>, Production(M), ['x'], 0, 1)]
+	Reduction 2: [(<state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>, Production(
+                     M), ['x'], 0, 1), (<state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees
+                     =1>, Production(M), ['x'], 0, 1)]
+
+5. REDUCING head  <state=4:x, id=140704626949696, token ahead=<b(b)>, position=1, parents=2, trees=1>
+	by prod  3: M = x
+	to state 9:M
+	root is  <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+	Position span: 0 - 1
+	No action defined  for 'M'.
+	Unpacking a single subresult.
+	Action result = type:<class 'str'> value:'x'
+	Check loops. Reduce stack states: [4]
+
+	New head:  <state=9:M, id=140704626950032, token ahead=<b(b)>, position=1, parents=0, trees=1>
+	Creating link 	from head: <state=9:M, id=140704626950032, token ahead=<b(b)>, position=1, parents=1, trees=1>
+			  to head: <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+
+	Preparing reductions for head:  <state=9:M, id=140704626950032, token ahead=<b(b)>, position=1, parents=1, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=9:M, id=140704626950032, token ahead=<b(b)>, position=1, parents=1, trees=1>
+	Adding head to reduced heads.
+
+6. REDUCING head  <state=9:M, id=140704626950032, token ahead=<b(b)>, position=1, parents=1, trees=1>
+	by prod  3: M = x
+	to state 2:M
+	root is  <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+	Position span: 0 - 1
+	No action defined  for 'M'.
+	Unpacking a single subresult.
+	Action result = type:<class 'str'> value:'x'
+	Check loops. Reduce stack states: [4]
+
+	New head:  <state=2:M, id=140704626520240, token ahead=<b(b)>, position=1, parents=0, trees=1>
+	Creating link 	from head: <state=2:M, id=140704626520240, token ahead=<b(b)>, position=1, parents=1, trees=1>
+			  to head: <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+
+	Preparing reductions for head:  <state=2:M, id=140704626520240, token ahead=<b(b)>, position=1, parents=1, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=2:M, id=140704626520240, token ahead=<b(b)>, position=1, parents=1, trees=1>
+	Adding head to reduced heads.
+
+	No more reductions for head: <state=4:x, id=140704626949696, token ahead=<b(b)>, position=1, parents=2, trees=1>
+	Adding head to reduced heads.
+
+** SHIFTING
+Active heads =  3
+	<state=9:M, id=140704626950032, token ahead=<b(b)>, position=1, parents=1, trees=1>
+	<state=2:M, id=140704626520240, token ahead=<b(b)>, position=1, parents=1, trees=1>
+	<state=4:x, id=140704626949696, token ahead=<b(b)>, position=1, parents=2, trees=1>
+Number of trees = 3
+
+Can't shift head:  <state=4:x, id=140704626949696, token ahead=<b(b)>, position=1, parents=2, trees=1>
+
+7. SHIFTING head:  <state=2:M, id=140704626520240, token ahead=<b(b)>, position=1, parents=1, trees=1>
+Position: (1, 1)
+Context: x **> bbbx
+Token(s) ahead: <b(b)>
+	No action defined for 'b'. Result is matched string.
+	Action result =  type:<class 'str'> value:'b'
+	New shifted head  <state=7:b, id=140704626520464, position=2, parents=0, trees=0>
+	Creating link 	from head: <state=7:b, id=140704626520464, position=2, parents=1, trees=1>
+			  to head: <state=2:M, id=140704626520240, token ahead=<b(b)>, position=1, parents=1, trees=1>
+
+8. SHIFTING head:  <state=9:M, id=140704626950032, token ahead=<b(b)>, position=1, parents=1, trees=1>
+Position: (1, 1)
+Context: x **> bbbx
+Token(s) ahead: <b(b)>
+	No action defined for 'b'. Result is matched string.
+	Action result =  type:<class 'str'> value:'b'
+	New shifted head  <state=11:b, id=140704626520688, position=2, parents=0, trees=0>
+	Creating link 	from head: <state=11:b, id=140704626520688, position=2, parents=1, trees=1>
+			  to head: <state=9:M, id=140704626950032, token ahead=<b(b)>, position=1, parents=1, trees=1>
+
+** REDUCING
+Active heads =  2
+	<state=7:b, id=140704626520464, position=2, parents=1, trees=1>
+	<state=11:b, id=140704626520688, position=2, parents=1, trees=1>
+Number of trees = 2
+
+Finding lookaheads
+Skipping whitespaces: ''
+New position: (1, 2)
+Position: (1, 2)
+Context: xb **> bbx
+Symbols expected:  ['x', 'b']
+Token(s) ahead: [<b(b)>]
+
+Finding lookaheads
+Skipping whitespaces: ''
+New position: (1, 2)
+Position: (1, 2)
+Context: xb **> bbx
+Symbols expected:  ['x', 'b']
+Token(s) ahead: [<b(b)>]
+
+	Preparing reductions for head:  <state=7:b, id=140704626520464, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=7:b, id=140704626520464, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	Adding head to reduced heads.
+
+	Preparing reductions for head:  <state=11:b, id=140704626520688, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	Productions:
+		 2: M = A M b
+
+	Processing production: 2: M = A M b
+	Calculate reduction paths of length 3:
+		start node= [<state=11:b, id=140704626520688, token ahead=<b(b)>, position=2, parents=1, trees=1>], symb
+                            ol=b, length=3
+
+		node = <state=11:b, id=140704626520688, token ahead=<b(b)>, position=2, parents=1, trees=1>
+		backpath length = 1
+			 <state=11:b, id=140704626520688, token ahead=<b(b)>, position=2, parents=1, trees=1>
+
+		node = <state=9:M, id=140704626950032, token ahead=<b(b)>, position=1, parents=1, trees=1>
+		backpath length = 2
+			 <state=9:M, id=140704626950032, token ahead=<b(b)>, position=1, parents=1, trees=1>
+
+		node = <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+		backpath length = 3 - ROOT
+			 <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+			 <state=3:A, id=140704626949472, token ahead=<x(x)>, position=0, parents=0, trees=1>
+
+	Reduction paths =  2
+	Reduction 1: [(<state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>, Production(
+                     M), [[], 'x', 'b'], 0, 2), (<state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents
+                     =2, trees=1>, Production(M), [[], 'x', 'b'], 0, 2)]
+	Reduction 2: [(<state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>, Production(
+                     M), [[], 'x', 'b'], 0, 2), (<state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents
+                     =2, trees=1>, Production(M), [[], 'x', 'b'], 0, 2)]
+
+9. REDUCING head  <state=11:b, id=140704626520688, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	by prod  2: M = A M b
+	to state 9:M
+	root is  <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+	Position span: 0 - 2
+	No action defined  for 'M'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:[[], 'x', 'b']
+	Check loops. Reduce stack states: [11]
+
+	New head:  <state=9:M, id=140704626520912, token ahead=<b(b)>, position=2, parents=0, trees=1>
+	Creating link 	from head: <state=9:M, id=140704626520912, token ahead=<b(b)>, position=2, parents=1, trees=1>
+			  to head: <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+
+	Preparing reductions for head:  <state=9:M, id=140704626520912, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=9:M, id=140704626520912, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	Adding head to reduced heads.
+
+10. REDUCING head  <state=9:M, id=140704626520912, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	by prod  2: M = A M b
+	to state 2:M
+	root is  <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+	Position span: 0 - 2
+	No action defined  for 'M'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:[[], 'x', 'b']
+	Check loops. Reduce stack states: [11]
+
+	New head:  <state=2:M, id=140704626521136, token ahead=<b(b)>, position=2, parents=0, trees=1>
+	Creating link 	from head: <state=2:M, id=140704626521136, token ahead=<b(b)>, position=2, parents=1, trees=1>
+			  to head: <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+
+	Preparing reductions for head:  <state=2:M, id=140704626521136, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=2:M, id=140704626521136, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	Adding head to reduced heads.
+
+	No more reductions for head: <state=11:b, id=140704626520688, token ahead=<b(b)>, position=2, parents=1, trees=1
+                                     >
+	Adding head to reduced heads.
+
+** SHIFTING
+Active heads =  4
+	<state=7:b, id=140704626520464, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	<state=9:M, id=140704626520912, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	<state=2:M, id=140704626521136, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	<state=11:b, id=140704626520688, token ahead=<b(b)>, position=2, parents=1, trees=1>
+Number of trees = 4
+
+Can't shift head:  <state=11:b, id=140704626520688, token ahead=<b(b)>, position=2, parents=1, trees=1>
+
+11. SHIFTING head:  <state=2:M, id=140704626521136, token ahead=<b(b)>, position=2, parents=1, trees=1>
+Position: (1, 2)
+Context: xb **> bbx
+Token(s) ahead: <b(b)>
+	No action defined for 'b'. Result is matched string.
+	Action result =  type:<class 'str'> value:'b'
+	New shifted head  <state=7:b, id=140704626521360, position=3, parents=0, trees=0>
+	Creating link 	from head: <state=7:b, id=140704626521360, position=3, parents=1, trees=1>
+			  to head: <state=2:M, id=140704626521136, token ahead=<b(b)>, position=2, parents=1, trees=1>
+
+12. SHIFTING head:  <state=9:M, id=140704626520912, token ahead=<b(b)>, position=2, parents=1, trees=1>
+Position: (1, 2)
+Context: xb **> bbx
+Token(s) ahead: <b(b)>
+	No action defined for 'b'. Result is matched string.
+	Action result =  type:<class 'str'> value:'b'
+	New shifted head  <state=11:b, id=140704626521584, position=3, parents=0, trees=0>
+	Creating link 	from head: <state=11:b, id=140704626521584, position=3, parents=1, trees=1>
+			  to head: <state=9:M, id=140704626520912, token ahead=<b(b)>, position=2, parents=1, trees=1>
+
+13. SHIFTING head:  <state=7:b, id=140704626520464, token ahead=<b(b)>, position=2, parents=1, trees=1>
+	Creating link 	from head: <state=7:b, id=140704626521360, position=3, parents=2, trees=1>
+			  to head: <state=7:b, id=140704626520464, token ahead=<b(b)>, position=2, parents=1, trees=1>
+
+** REDUCING
+Active heads =  2
+	<state=7:b, id=140704626521360, position=3, parents=2, trees=1>
+	<state=11:b, id=140704626521584, position=3, parents=1, trees=1>
+Number of trees = 2
+
+Finding lookaheads
+Skipping whitespaces: ''
+New position: (1, 3)
+Position: (1, 3)
+Context: xbb **> bx
+Symbols expected:  ['x', 'b']
+Token(s) ahead: [<b(b)>]
+
+Finding lookaheads
+Skipping whitespaces: ''
+New position: (1, 3)
+Position: (1, 3)
+Context: xbb **> bx
+Symbols expected:  ['x', 'b']
+Token(s) ahead: [<b(b)>]
+
+	Preparing reductions for head:  <state=7:b, id=140704626521360, token ahead=<b(b)>, position=3, parents=2, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=7:b, id=140704626521360, token ahead=<b(b)>, position=3, parents=2, trees=1>
+	Adding head to reduced heads.
+
+	Preparing reductions for head:  <state=11:b, id=140704626521584, token ahead=<b(b)>, position=3, parents=1, trees=1>
+	Productions:
+		 2: M = A M b
+
+	Processing production: 2: M = A M b
+	Calculate reduction paths of length 3:
+		start node= [<state=11:b, id=140704626521584, token ahead=<b(b)>, position=3, parents=1, trees=1>], symb
+                            ol=b, length=3
+
+		node = <state=11:b, id=140704626521584, token ahead=<b(b)>, position=3, parents=1, trees=1>
+		backpath length = 1
+			 <state=11:b, id=140704626521584, token ahead=<b(b)>, position=3, parents=1, trees=1>
+
+		node = <state=9:M, id=140704626520912, token ahead=<b(b)>, position=2, parents=1, trees=1>
+		backpath length = 2
+			 <state=9:M, id=140704626520912, token ahead=<b(b)>, position=2, parents=1, trees=1>
+
+		node = <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+		backpath length = 3 - ROOT
+			 <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+			 <state=3:A, id=140704626949472, token ahead=<x(x)>, position=0, parents=0, trees=1>
+
+	Reduction paths =  2
+	Reduction 1: [(<state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>, Production(
+                     M), [[], [[], 'x', 'b'], 'b'], 0, 3), (<state=3:A, id=140704626946112, token ahead=<x(x)>, position
+                     =0, parents=2, trees=1>, Production(M), [[], [[], 'x', 'b'], 'b'], 0, 3)]
+	Reduction 2: [(<state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>, Production(
+                     M), [[], [[], 'x', 'b'], 'b'], 0, 3), (<state=3:A, id=140704626946112, token ahead=<x(x)>, position
+                     =0, parents=2, trees=1>, Production(M), [[], [[], 'x', 'b'], 'b'], 0, 3)]
+
+14. REDUCING head  <state=11:b, id=140704626521584, token ahead=<b(b)>, position=3, parents=1, trees=1>
+	by prod  2: M = A M b
+	to state 9:M
+	root is  <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+	Position span: 0 - 3
+	No action defined  for 'M'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:[[], [[], 'x', 'b'], 'b']
+	Check loops. Reduce stack states: [11]
+
+	New head:  <state=9:M, id=140704626521920, token ahead=<b(b)>, position=3, parents=0, trees=1>
+	Creating link 	from head: <state=9:M, id=140704626521920, token ahead=<b(b)>, position=3, parents=1, trees=1>
+			  to head: <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+
+	Preparing reductions for head:  <state=9:M, id=140704626521920, token ahead=<b(b)>, position=3, parents=1, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=9:M, id=140704626521920, token ahead=<b(b)>, position=3, parents=1, trees=1>
+	Adding head to reduced heads.
+
+15. REDUCING head  <state=9:M, id=140704626521920, token ahead=<b(b)>, position=3, parents=1, trees=1>
+	by prod  2: M = A M b
+	to state 2:M
+	root is  <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+	Position span: 0 - 3
+	No action defined  for 'M'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:[[], [[], 'x', 'b'], 'b']
+	Check loops. Reduce stack states: [11]
+
+	New head:  <state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=0, trees=1>
+	Creating link 	from head: <state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=1, trees=1>
+			  to head: <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+
+	Preparing reductions for head:  <state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=1, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=1, trees=1>
+	Adding head to reduced heads.
+
+	No more reductions for head: <state=11:b, id=140704626521584, token ahead=<b(b)>, position=3, parents=1, trees=1
+                                     >
+	Adding head to reduced heads.
+
+** SHIFTING
+Active heads =  4
+	<state=7:b, id=140704626521360, token ahead=<b(b)>, position=3, parents=2, trees=1>
+	<state=9:M, id=140704626521920, token ahead=<b(b)>, position=3, parents=1, trees=1>
+	<state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=1, trees=1>
+	<state=11:b, id=140704626521584, token ahead=<b(b)>, position=3, parents=1, trees=1>
+Number of trees = 4
+
+Can't shift head:  <state=11:b, id=140704626521584, token ahead=<b(b)>, position=3, parents=1, trees=1>
+
+16. SHIFTING head:  <state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=1, trees=1>
+Position: (1, 3)
+Context: xbb **> bx
+Token(s) ahead: <b(b)>
+	No action defined for 'b'. Result is matched string.
+	Action result =  type:<class 'str'> value:'b'
+	New shifted head  <state=7:b, id=140704626522368, position=4, parents=0, trees=0>
+	Creating link 	from head: <state=7:b, id=140704626522368, position=4, parents=1, trees=1>
+			  to head: <state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=1, trees=1>
+
+17. SHIFTING head:  <state=9:M, id=140704626521920, token ahead=<b(b)>, position=3, parents=1, trees=1>
+Position: (1, 3)
+Context: xbb **> bx
+Token(s) ahead: <b(b)>
+	No action defined for 'b'. Result is matched string.
+	Action result =  type:<class 'str'> value:'b'
+	New shifted head  <state=11:b, id=140704626522592, position=4, parents=0, trees=0>
+	Creating link 	from head: <state=11:b, id=140704626522592, position=4, parents=1, trees=1>
+			  to head: <state=9:M, id=140704626521920, token ahead=<b(b)>, position=3, parents=1, trees=1>
+
+18. SHIFTING head:  <state=7:b, id=140704626521360, token ahead=<b(b)>, position=3, parents=2, trees=1>
+	Creating link 	from head: <state=7:b, id=140704626522368, position=4, parents=2, trees=1>
+			  to head: <state=7:b, id=140704626521360, token ahead=<b(b)>, position=3, parents=2, trees=1>
+
+** REDUCING
+Active heads =  2
+	<state=7:b, id=140704626522368, position=4, parents=2, trees=1>
+	<state=11:b, id=140704626522592, position=4, parents=1, trees=1>
+Number of trees = 2
+
+Finding lookaheads
+Skipping whitespaces: ''
+New position: (1, 4)
+Position: (1, 4)
+Context: xbbb **> x
+Symbols expected:  ['x', 'b']
+Token(s) ahead: [<x(x)>]
+
+Finding lookaheads
+Skipping whitespaces: ''
+New position: (1, 4)
+Position: (1, 4)
+Context: xbbb **> x
+Symbols expected:  ['x', 'b']
+Token(s) ahead: [<x(x)>]
+
+	Preparing reductions for head:  <state=7:b, id=140704626522368, token ahead=<x(x)>, position=4, parents=2, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=7:b, id=140704626522368, token ahead=<x(x)>, position=4, parents=2, trees=1>
+	Adding head to reduced heads.
+
+	Preparing reductions for head:  <state=11:b, id=140704626522592, token ahead=<x(x)>, position=4, parents=1, trees=1>
+	Productions:
+		 2: M = A M b
+
+	Processing production: 2: M = A M b
+	Calculate reduction paths of length 3:
+		start node= [<state=11:b, id=140704626522592, token ahead=<x(x)>, position=4, parents=1, trees=1>], symb
+                            ol=b, length=3
+
+		node = <state=11:b, id=140704626522592, token ahead=<x(x)>, position=4, parents=1, trees=1>
+		backpath length = 1
+			 <state=11:b, id=140704626522592, token ahead=<x(x)>, position=4, parents=1, trees=1>
+
+		node = <state=9:M, id=140704626521920, token ahead=<b(b)>, position=3, parents=1, trees=1>
+		backpath length = 2
+			 <state=9:M, id=140704626521920, token ahead=<b(b)>, position=3, parents=1, trees=1>
+
+		node = <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+		backpath length = 3 - ROOT
+			 <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+			 <state=3:A, id=140704626949472, token ahead=<x(x)>, position=0, parents=0, trees=1>
+
+	Reduction paths =  2
+	Reduction 1: [(<state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>, Production(
+                     M), [[], [[], [[], 'x', 'b'], 'b'], 'b'], 0, 4), (<state=3:A, id=140704626946112, token ahead=<x(x)
+                     >, position=0, parents=2, trees=1>, Production(M), [[], [[], [[], 'x', 'b'], 'b'], 'b'], 0, 4)]
+	Reduction 2: [(<state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>, Production(
+                     M), [[], [[], [[], 'x', 'b'], 'b'], 'b'], 0, 4), (<state=3:A, id=140704626946112, token ahead=<x(x)
+                     >, position=0, parents=2, trees=1>, Production(M), [[], [[], [[], 'x', 'b'], 'b'], 'b'], 0, 4)]
+
+19. REDUCING head  <state=11:b, id=140704626522592, token ahead=<x(x)>, position=4, parents=1, trees=1>
+	by prod  2: M = A M b
+	to state 9:M
+	root is  <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+	Position span: 0 - 4
+	No action defined  for 'M'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:[[], [[], [[], 'x', 'b'], 'b'], 'b']
+	Check loops. Reduce stack states: [11]
+
+	New head:  <state=9:M, id=140704626522928, token ahead=<x(x)>, position=4, parents=0, trees=1>
+	Creating link 	from head: <state=9:M, id=140704626522928, token ahead=<x(x)>, position=4, parents=1, trees=1>
+			  to head: <state=3:A, id=140704626946112, token ahead=<x(x)>, position=0, parents=2, trees=1>
+
+	Preparing reductions for head:  <state=9:M, id=140704626522928, token ahead=<x(x)>, position=4, parents=1, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=9:M, id=140704626522928, token ahead=<x(x)>, position=4, parents=1, trees=1>
+	Adding head to reduced heads.
+
+20. REDUCING head  <state=9:M, id=140704626522928, token ahead=<x(x)>, position=4, parents=1, trees=1>
+	by prod  2: M = A M b
+	to state 2:M
+	root is  <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+	Position span: 0 - 4
+	No action defined  for 'M'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:[[], [[], [[], 'x', 'b'], 'b'], 'b']
+	Check loops. Reduce stack states: [11]
+
+	New head:  <state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=0, trees=1>
+	Creating link 	from head: <state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=1, trees=1>
+			  to head: <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+
+	Preparing reductions for head:  <state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=1, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=1, trees=1>
+	Adding head to reduced heads.
+
+	No more reductions for head: <state=11:b, id=140704626522592, token ahead=<x(x)>, position=4, parents=1, trees=1
+                                     >
+	Adding head to reduced heads.
+
+** SHIFTING
+Active heads =  4
+	<state=7:b, id=140704626522368, token ahead=<x(x)>, position=4, parents=2, trees=1>
+	<state=9:M, id=140704626522928, token ahead=<x(x)>, position=4, parents=1, trees=1>
+	<state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=1, trees=1>
+	<state=11:b, id=140704626522592, token ahead=<x(x)>, position=4, parents=1, trees=1>
+Number of trees = 4
+
+Can't shift head:  <state=11:b, id=140704626522592, token ahead=<x(x)>, position=4, parents=1, trees=1>
+
+21. SHIFTING head:  <state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=1, trees=1>
+Position: (1, 4)
+Context: xbbb **> x
+Token(s) ahead: <x(x)>
+	No action defined for 'x'. Result is matched string.
+	Action result =  type:<class 'str'> value:'x'
+	New shifted head  <state=8:x, id=140704626523376, position=5, parents=0, trees=0>
+	Creating link 	from head: <state=8:x, id=140704626523376, position=5, parents=1, trees=1>
+			  to head: <state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=1, trees=1>
+
+Can't shift head:  <state=9:M, id=140704626522928, token ahead=<x(x)>, position=4, parents=1, trees=1>
+
+22. SHIFTING head:  <state=7:b, id=140704626522368, token ahead=<x(x)>, position=4, parents=2, trees=1>
+	Creating link 	from head: <state=8:x, id=140704626523376, position=5, parents=2, trees=1>
+			  to head: <state=7:b, id=140704626522368, token ahead=<x(x)>, position=4, parents=2, trees=1>
+
+** REDUCING
+Active heads =  1
+	<state=8:x, id=140704626523376, position=5, parents=2, trees=1>
+Number of trees = 1
+
+Finding lookaheads
+Skipping whitespaces: ''
+New position: (1, 5)
+Position: (1, 5)
+Context: xbbbx **> 
+Symbols expected:  ['STOP']
+Token(s) ahead: [<STOP()>]
+
+	Preparing reductions for head:  <state=8:x, id=140704626523376, token ahead=<STOP()>, position=5, parents=2, trees=1>
+	Productions:
+		 5: N = x
+
+	Processing production: 5: N = x
+	Calculate reduction paths of length 1:
+		start node= [<state=8:x, id=140704626523376, token ahead=<STOP()>, position=5, parents=2, trees=1>], sym
+                            bol=x, length=1
+
+		node = <state=8:x, id=140704626523376, token ahead=<STOP()>, position=5, parents=2, trees=1>
+		backpath length = 1 - ROOT
+			 <state=8:x, id=140704626523376, token ahead=<STOP()>, position=5, parents=2, trees=1>
+			 <state=8:x, id=140704626523376, token ahead=<STOP()>, position=5, parents=2, trees=1>
+
+	Reduction paths =  2
+	Reduction 1: [(<state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=1, trees=1>, Production(N
+                     ), ['x'], 4, 5), (<state=7:b, id=140704626522368, token ahead=<x(x)>, position=4, parents=2, trees=
+                     1>, Production(N), ['x'], 4, 5)]
+	Reduction 2: [(<state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=1, trees=1>, Production(N
+                     ), ['x'], 4, 5), (<state=7:b, id=140704626522368, token ahead=<x(x)>, position=4, parents=2, trees=
+                     1>, Production(N), ['x'], 4, 5)]
+
+23. REDUCING head  <state=8:x, id=140704626523376, token ahead=<STOP()>, position=5, parents=2, trees=1>
+	by prod  5: N = x
+	to state 10:N
+	root is  <state=7:b, id=140704626522368, token ahead=<x(x)>, position=4, parents=2, trees=1>
+	Position span: 4 - 5
+	No action defined  for 'N'.
+	Unpacking a single subresult.
+	Action result = type:<class 'str'> value:'x'
+	Check loops. Reduce stack states: [8]
+
+	New head:  <state=10:N, id=140704626523712, token ahead=<STOP()>, position=5, parents=0, trees=1>
+	Creating link 	from head: <state=10:N, id=140704626523712, token ahead=<STOP()>, position=5, parents=1, trees=1>
+			  to head: <state=7:b, id=140704626522368, token ahead=<x(x)>, position=4, parents=2, trees=1>
+
+	Preparing reductions for head:  <state=10:N, id=140704626523712, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	Productions:
+		 6: A = EMPTY
+
+	Processing production: 6: A = EMPTY
+
+	Reduction paths =  1
+	Reduction 1: [(<state=10:N, id=140704626523712, token ahead=<STOP()>, position=5, parents=1, trees=1>, Productio
+                     n(A), [], 5, 5)]
+
+24. REDUCING head  <state=10:N, id=140704626523712, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	by prod  6: A = EMPTY
+	to state 12:A
+	root is  <state=10:N, id=140704626523712, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	Position span: 5 - 5
+	No action defined  for 'A'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:[]
+	Check loops. Reduce stack states: [8, 10]
+
+	New head:  <state=12:A, id=140704626523936, token ahead=<STOP()>, position=5, parents=0, trees=1>
+	Creating link 	from head: <state=12:A, id=140704626523936, token ahead=<STOP()>, position=5, parents=1, trees=1>
+			  to head: <state=10:N, id=140704626523712, token ahead=<STOP()>, position=5, parents=1, trees=1
+                                   >
+
+	Preparing reductions for head:  <state=12:A, id=140704626523936, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	Productions:
+		 4: N = b N A
+
+	Processing production: 4: N = b N A
+	Calculate reduction paths of length 3:
+		start node= [<state=12:A, id=140704626523936, token ahead=<STOP()>, position=5, parents=1, trees=1>], sy
+                            mbol=A, length=3
+
+		node = <state=12:A, id=140704626523936, token ahead=<STOP()>, position=5, parents=1, trees=1>
+		backpath length = 1
+			 <state=12:A, id=140704626523936, token ahead=<STOP()>, position=5, parents=1, trees=1>
+
+		node = <state=10:N, id=140704626523712, token ahead=<STOP()>, position=5, parents=1, trees=1>
+		backpath length = 2
+			 <state=10:N, id=140704626523712, token ahead=<STOP()>, position=5, parents=1, trees=1>
+
+		node = <state=7:b, id=140704626522368, token ahead=<x(x)>, position=4, parents=2, trees=1>
+		backpath length = 3 - ROOT
+			 <state=7:b, id=140704626522368, token ahead=<x(x)>, position=4, parents=2, trees=1>
+			 <state=7:b, id=140704626522368, token ahead=<x(x)>, position=4, parents=2, trees=1>
+
+	Reduction paths =  2
+	Reduction 1: [(<state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=1, trees=1>, Production(N
+                     ), ['b', 'x', []], 3, 5), (<state=7:b, id=140704626521360, token ahead=<b(b)>, position=3, parents=
+                     2, trees=1>, Production(N), ['b', 'x', []], 3, 5)]
+	Reduction 2: [(<state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=1, trees=1>, Production(N
+                     ), ['b', 'x', []], 3, 5), (<state=7:b, id=140704626521360, token ahead=<b(b)>, position=3, parents=
+                     2, trees=1>, Production(N), ['b', 'x', []], 3, 5)]
+
+25. REDUCING head  <state=12:A, id=140704626523936, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	by prod  4: N = b N A
+	to state 10:N
+	root is  <state=7:b, id=140704626521360, token ahead=<b(b)>, position=3, parents=2, trees=1>
+	Position span: 3 - 5
+	No action defined  for 'N'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:['b', 'x', []]
+	Check loops. Reduce stack states: [8, 10, 12]
+
+	New head:  <state=10:N, id=140704626524224, token ahead=<STOP()>, position=5, parents=0, trees=1>
+	Creating link 	from head: <state=10:N, id=140704626524224, token ahead=<STOP()>, position=5, parents=1, trees=1>
+			  to head: <state=7:b, id=140704626521360, token ahead=<b(b)>, position=3, parents=2, trees=1>
+
+	Preparing reductions for head:  <state=10:N, id=140704626524224, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	Productions:
+		 6: A = EMPTY
+
+	Processing production: 6: A = EMPTY
+
+	Reduction paths =  1
+	Reduction 1: [(<state=10:N, id=140704626524224, token ahead=<STOP()>, position=5, parents=1, trees=1>, Productio
+                     n(A), [], 5, 5)]
+
+26. REDUCING head  <state=10:N, id=140704626524224, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	by prod  6: A = EMPTY
+	to state 12:A
+	root is  <state=10:N, id=140704626524224, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	Position span: 5 - 5
+	No action defined  for 'A'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:[]
+	Check loops. Reduce stack states: [8, 10, 12, 10]
+	Looping due to empty reduction. Making GSS loop.
+	Creating link 	from head: <state=12:A, id=140704626523936, token ahead=<STOP()>, position=5, parents=2, trees=1>
+			  to head: <state=10:N, id=140704626524224, token ahead=<STOP()>, position=5, parents=1, trees=1
+                                   >
+	Not processing further this head.
+
+	No more reductions for head: <state=10:N, id=140704626524224, token ahead=<STOP()>, position=5, parents=1, trees
+                                     =1>
+	Adding head to reduced heads.
+
+27. REDUCING head  <state=10:N, id=140704626524224, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	by prod  4: N = b N A
+	to state 6:N
+	root is  <state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=1, trees=1>
+	Position span: 3 - 5
+	No action defined  for 'N'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:['b', 'x', []]
+	Check loops. Reduce stack states: [8, 10, 12]
+
+	New head:  <state=6:N, id=140704626524672, token ahead=<STOP()>, position=5, parents=0, trees=1>
+	Creating link 	from head: <state=6:N, id=140704626524672, token ahead=<STOP()>, position=5, parents=1, trees=1>
+			  to head: <state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=1, trees=1>
+
+	Preparing reductions for head:  <state=6:N, id=140704626524672, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	Productions:
+		 1: S = M N
+
+	Processing production: 1: S = M N
+	Calculate reduction paths of length 2:
+		start node= [<state=6:N, id=140704626524672, token ahead=<STOP()>, position=5, parents=1, trees=1>], sym
+                            bol=N, length=2
+
+		node = <state=6:N, id=140704626524672, token ahead=<STOP()>, position=5, parents=1, trees=1>
+		backpath length = 1
+			 <state=6:N, id=140704626524672, token ahead=<STOP()>, position=5, parents=1, trees=1>
+
+		node = <state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=1, trees=1>
+		backpath length = 2 - ROOT
+			 <state=2:M, id=140704626522144, token ahead=<b(b)>, position=3, parents=1, trees=1>
+
+	Reduction paths =  1
+	Reduction 1: [(<state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>, Production(
+                     S), [[[], [[], 'x', 'b'], 'b'], ['b', 'x', []]], 0, 5)]
+
+28. REDUCING head  <state=6:N, id=140704626524672, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	by prod  1: S = M N
+	to state 1:S
+	root is  <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+	Position span: 0 - 5
+	No action defined  for 'S'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:[[[], [[], 'x', 'b'], 'b'], ['b', 'x', []]]
+	Check loops. Reduce stack states: [8, 10, 12, 6]
+
+	New head:  <state=1:S, id=140704626524896, token ahead=<STOP()>, position=5, parents=0, trees=1>
+	Creating link 	from head: <state=1:S, id=140704626524896, token ahead=<STOP()>, position=5, parents=1, trees=1>
+			  to head: <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+
+	Preparing reductions for head:  <state=1:S, id=140704626524896, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=1:S, id=140704626524896, token ahead=<STOP()>, position=5, parents=1, trees=
+                                     1>
+	Adding head to reduced heads.
+
+	No more reductions for head: <state=6:N, id=140704626524672, token ahead=<STOP()>, position=5, parents=1, trees=
+                                     1>
+	Adding head to reduced heads.
+
+	No more reductions for head: <state=12:A, id=140704626523936, token ahead=<STOP()>, position=5, parents=2, trees
+                                     =1>
+	Adding head to reduced heads.
+
+	No more reductions for head: <state=10:N, id=140704626523712, token ahead=<STOP()>, position=5, parents=1, trees
+                                     =1>
+Merging head  <state=10:N, id=140704626523712, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	to head <state=10:N, id=140704626524224, token ahead=<STOP()>, position=5, parents=2, trees=2>
+
+29. REDUCING head  <state=10:N, id=140704626523712, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	by prod  5: N = x
+	to state 6:N
+	root is  <state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=1, trees=1>
+	Position span: 4 - 5
+	No action defined  for 'N'.
+	Unpacking a single subresult.
+	Action result = type:<class 'str'> value:'x'
+	Check loops. Reduce stack states: [8]
+
+	New head:  <state=6:N, id=140704626525120, token ahead=<STOP()>, position=5, parents=0, trees=1>
+	Creating link 	from head: <state=6:N, id=140704626525120, token ahead=<STOP()>, position=5, parents=1, trees=1>
+			  to head: <state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=1, trees=1>
+
+	Preparing reductions for head:  <state=6:N, id=140704626525120, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	Productions:
+		 1: S = M N
+
+	Processing production: 1: S = M N
+	Calculate reduction paths of length 2:
+		start node= [<state=6:N, id=140704626525120, token ahead=<STOP()>, position=5, parents=1, trees=1>], sym
+                            bol=N, length=2
+
+		node = <state=6:N, id=140704626525120, token ahead=<STOP()>, position=5, parents=1, trees=1>
+		backpath length = 1
+			 <state=6:N, id=140704626525120, token ahead=<STOP()>, position=5, parents=1, trees=1>
+
+		node = <state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=1, trees=1>
+		backpath length = 2 - ROOT
+			 <state=2:M, id=140704626523152, token ahead=<x(x)>, position=4, parents=1, trees=1>
+
+	Reduction paths =  1
+	Reduction 1: [(<state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>, Production(
+                     S), [[[], [[], [[], 'x', 'b'], 'b'], 'b'], 'x'], 0, 5)]
+
+30. REDUCING head  <state=6:N, id=140704626525120, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	by prod  1: S = M N
+	to state 1:S
+	root is  <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+	Position span: 0 - 5
+	No action defined  for 'S'.
+	Result is a list of subresults.
+	Action result = type:<class 'list'> value:[[[], [[], [[], 'x', 'b'], 'b'], 'b'], 'x']
+	Check loops. Reduce stack states: [8, 6]
+
+	New head:  <state=1:S, id=140704626525344, token ahead=<STOP()>, position=5, parents=0, trees=1>
+	Creating link 	from head: <state=1:S, id=140704626525344, token ahead=<STOP()>, position=5, parents=1, trees=1>
+			  to head: <state=0:S', id=140704626947904, token ahead=<x(x)>, position=0, parents=0, trees=1>
+
+	Preparing reductions for head:  <state=1:S, id=140704626525344, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	Productions:
+		
+
+	No more reductions for head: <state=1:S, id=140704626525344, token ahead=<STOP()>, position=5, parents=1, trees=
+                                     1>
+Merging head  <state=1:S, id=140704626525344, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	to head <state=1:S, id=140704626524896, token ahead=<STOP()>, position=5, parents=2, trees=2>
+
+	No more reductions for head: <state=6:N, id=140704626525120, token ahead=<STOP()>, position=5, parents=1, trees=
+                                     1>
+Merging head  <state=6:N, id=140704626525120, token ahead=<STOP()>, position=5, parents=1, trees=1>
+	to head <state=6:N, id=140704626524672, token ahead=<STOP()>, position=5, parents=2, trees=2>
+
+	No more reductions for head: <state=8:x, id=140704626523376, token ahead=<STOP()>, position=5, parents=2, trees=
+                                     1>
+	Adding head to reduced heads.
+
+** SHIFTING
+Active heads =  5
+	<state=10:N, id=140704626524224, token ahead=<STOP()>, position=5, parents=2, trees=2>
+	<state=1:S, id=140704626524896, token ahead=<STOP()>, position=5, parents=2, trees=2>
+	<state=6:N, id=140704626524672, token ahead=<STOP()>, position=5, parents=2, trees=2>
+	<state=12:A, id=140704626523936, token ahead=<STOP()>, position=5, parents=2, trees=1>
+	<state=8:x, id=140704626523376, token ahead=<STOP()>, position=5, parents=2, trees=1>
+Number of trees = 8
+
+Can't shift head:  <state=8:x, id=140704626523376, token ahead=<STOP()>, position=5, parents=2, trees=1>
+
+Can't shift head:  <state=12:A, id=140704626523936, token ahead=<STOP()>, position=5, parents=2, trees=1>
+
+Can't shift head:  <state=6:N, id=140704626524672, token ahead=<STOP()>, position=5, parents=2, trees=2>
+**ACCEPTING HEAD:  <state=1:S, id=140704626524896, token ahead=<STOP()>, position=5, parents=2, trees=2>
+
+Can't shift head:  <state=10:N, id=140704626524224, token ahead=<STOP()>, position=5, parents=2, trees=2>
+Generated file parglare_trace.dot.
+You can use dot viewer or generate pdf with the following command:
+dot -Tpdf parglare_trace.dot -O parglare_trace.dot.pdf
+*** 2 sucessful parse(s).
