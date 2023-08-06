@@ -1,0 +1,9 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/performance_monitor.py
+src/performance_monitor.egg-info/PKG-INFO
+src/performance_monitor.egg-info/SOURCES.txt
+src/performance_monitor.egg-info/dependency_links.txt
+src/performance_monitor.egg-info/top_level.txt
