@@ -1,0 +1,9 @@
+Cython
+numpy
+pycocotools>=2.0.2
+Click>=7.0
+opencv_python==4.4.0.42
+imgaug==0.4.0
+matplotlib==3.3.0
+
+[dev]
