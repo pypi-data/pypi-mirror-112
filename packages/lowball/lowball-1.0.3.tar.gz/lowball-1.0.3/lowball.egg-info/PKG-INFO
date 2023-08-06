@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: lowball
+Version: 1.0.3
+Summary: Lowball is designed to add simple endpoint level RBAC to your Flask based API services.
+Home-page: https://github.com/EmersonElectricCo/lowball
+Author: Isaiah Eichen, Grant Steiner, Timothy Lemm
+Author-email: compsecmonkey@gmail.com
+License: Apache License 2.0
+Description: Lowball is designed to add simple endpoint level RBAC to your Flask based API services.
+Platform: UNKNOWN
