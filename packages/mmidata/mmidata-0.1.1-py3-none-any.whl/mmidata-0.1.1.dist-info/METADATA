@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mmidata
+Version: 0.1.1
+Summary: 
+Author: Dan Sikes
+Author-email: dan@methodmi.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: boto3 (>=1.17.107,<2.0.0)
+Requires-Dist: humanize (>=3.10.0,<4.0.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)
