@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: px4ctl
+Version: 1.0.0a3
+Summary: Command-line mission planning, execution and monitoring for MAVSDK
+License: MIT
+Author: Quinn Thibeault
+Author-email: quinn.thibeault96@gmail.com
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: docs
+Requires-Dist: Sphinx (>=3.5.4,<4.0.0); extra == "docs"
+Requires-Dist: click (>=8.0,<9.0)
+Requires-Dist: mavsdk (>=0.17.0,<0.18.0)
+Requires-Dist: pydantic (>=1.8.1,<2.0.0)
+Requires-Dist: sphinx-autodocgen (>=1.2,<2.0); extra == "docs"
+Requires-Dist: sphinx-rtd-theme (>=0.5.2,<0.6.0); extra == "docs"
