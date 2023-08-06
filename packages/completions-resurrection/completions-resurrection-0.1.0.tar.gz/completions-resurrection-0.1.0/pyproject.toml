@@ -1,0 +1,27 @@
+[build-system]
+requires = [ "poetry>=0.12",]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "completions-resurrection"
+version = "0.1.0"
+description = "Shell completions made easy."
+authors = [ "pwwang <pwwang@pwwang.com>", "George Hinkel dev@georgehinkel.com"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/george-hinkel/completions-resurrection"
+repository = "https://github.com/george-hinkel/completions-resurrection"
+packages = [
+    { include = "completions-resurrection" },
+    { include = "completions-resurrection/**/*.py" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.4"
+colorama = "*"
+python-simpleconf = "0.3.3"
+pyparam = "0.2.5"
+pyyaml = "*"
+
+[tool.poetry.scripts]
+completions-resurrection = "completions-resurrection:main"
