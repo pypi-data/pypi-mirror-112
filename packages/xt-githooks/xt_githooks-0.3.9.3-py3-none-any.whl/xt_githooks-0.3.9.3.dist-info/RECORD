@@ -1,0 +1,17 @@
+githooks/__init__.py,sha256=tc9465WbAIoeQNT6UQdD1K1vH_DtYSka8tqlJ1OyvR4,5456
+githooks/base_check.py,sha256=ftpB6i87yRSOGGpbwN6J3e8mOphdIh-0bgtwgWSDzvQ,3894
+githooks/checks.py,sha256=FcYtPQQ1wy7WDl4NxLujd1STJHVo8n4cG4fqx8aQ1NU,1298
+githooks/commit_checks.py,sha256=4dWRuWEXc_DYSRDM9p4qAIWSnJ5DIikeAJIDSJ-IrnE,7472
+githooks/commit_list_checks.py,sha256=xhLjU_7eLaWlykxCIahweZiNe7SzXG0GaF0xUqSoVic,10032
+githooks/config.py,sha256=HfKBNh-4HeE5bFElAILOHpJs0j8J8xT3iGGCKVmwtwk,619
+githooks/default.py,sha256=8500mjSJr6OrQ6pu90hqbao7aiCLBEGchUHNQiMUC24,1058
+githooks/file_checks.py,sha256=wIkCERah87D6diHn_JcUDbK0FOkIe_TE5Qk1F8PX2g0,3264
+githooks/git.py,sha256=ICb_iiUMh9g-_oy-d1scBmlki70hGYyvvpFZFmJQrwg,10321
+githooks/log_utils.py,sha256=QWsicLwKjuL0aitesBa-SRcX_yNiDlIZ3WSPXLM9bFE,1068
+githooks/utils.py,sha256=qnQJxrgePEs6SWBvAyebZSl2vAFVMfDeGIK4MXIIqcI,1224
+xt_githooks-0.3.9.3.dist-info/LICENSE,sha256=98g3CnWyo45cYmwsSh2kqrIb23W9fwVAnzMRAgIO2LU,1067
+xt_githooks-0.3.9.3.dist-info/METADATA,sha256=2h4nfXbob4Y7YGMqN9trzQsBGVAJ5bKWH9EM5kVB9G0,783
+xt_githooks-0.3.9.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+xt_githooks-0.3.9.3.dist-info/entry_points.txt,sha256=JwemDg6DWQeWGBSD8j2F1RdwfdLxm0Odpz7hjsHhSAQ,47
+xt_githooks-0.3.9.3.dist-info/top_level.txt,sha256=hAkKp65VN8ncoGghjAmVNXtSI0ufnbjMjvbpJatJyoQ,9
+xt_githooks-0.3.9.3.dist-info/RECORD,,

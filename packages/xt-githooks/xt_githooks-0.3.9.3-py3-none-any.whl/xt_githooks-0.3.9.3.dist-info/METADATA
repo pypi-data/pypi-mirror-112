@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: xt-githooks
+Version: 0.3.9.3
+Summary: Git pre-receive hook to check commits
+Home-page: https://github.com/BBNoodle/githooks.git
+Author: BBNoodle
+Author-email: 1214403402@qq.com
+License: UNKNOWN
+Keywords: git git-hook python pre-receive hook
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# githooks
+
+
