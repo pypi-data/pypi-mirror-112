@@ -1,0 +1,3 @@
+[console_scripts]
+fosslight_dependency = fosslight_dependency.analyze_dependency:main
+
