@@ -1,0 +1,14 @@
+README.md
+setup.py
+petro_res_pack/__init__.py
+petro_res_pack/math_phis_utils.py
+petro_res_pack/parsing_utils.py
+petro_res_pack/petro_env.py
+petro_res_pack/petro_session.py
+petro_res_pack/properties.py
+petro_res_pack/res_state.py
+petro_res_pack/sub_matices_utils.py
+petro_res_pack.egg-info/PKG-INFO
+petro_res_pack.egg-info/SOURCES.txt
+petro_res_pack.egg-info/dependency_links.txt
+petro_res_pack.egg-info/top_level.txt
