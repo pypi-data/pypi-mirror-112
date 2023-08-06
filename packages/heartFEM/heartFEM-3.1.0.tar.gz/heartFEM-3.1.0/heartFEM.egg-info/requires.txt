@@ -1,0 +1,12 @@
+numpy
+matplotlib
+scipy
+
+[circuit analysis]
+ngspice
+
+[data storage and processing]
+vtk
+
+[fem analysis software]
+fenics
