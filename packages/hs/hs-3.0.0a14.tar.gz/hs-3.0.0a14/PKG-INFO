@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: hs
+Version: 3.0.0a14
+Summary: Hydro-serving command line tool
+License: Apache-2.0
+Author: Hydrospheredata
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: GitPython (>=3.1.18,<4.0.0)
+Requires-Dist: click (>=7.1.2,<7.2.0)
+Requires-Dist: click-aliases (>=1.0.1,<1.1.0)
+Requires-Dist: click-log (>=0.3,<0.4)
+Requires-Dist: hydrosdk (==3.0.0a9)
+Requires-Dist: kafka-python (==1.4.3)
+Requires-Dist: protobuf (>=3.6,<4.0)
+Requires-Dist: pydantic-yaml (>=0.4.0,<0.5.0)
+Requires-Dist: requests (>=2.23.0,<2.24.0)
+Requires-Dist: requests-toolbelt (>=0.9,<0.10)
+Requires-Dist: sseclient-py (>=1.7,<1.8)
+Requires-Dist: tabulate (>=0.8,<0.9)
