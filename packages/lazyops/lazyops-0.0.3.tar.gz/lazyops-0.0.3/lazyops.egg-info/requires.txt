@@ -1,0 +1,5 @@
+file-io>=0.1.15
+requests
+dateparser
+aiohttp
+six
