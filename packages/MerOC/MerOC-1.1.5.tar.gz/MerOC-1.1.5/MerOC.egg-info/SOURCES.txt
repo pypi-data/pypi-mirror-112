@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+MerOC/__init__.py
+MerOC/__main__.py
+MerOC.egg-info/PKG-INFO
+MerOC.egg-info/SOURCES.txt
+MerOC.egg-info/dependency_links.txt
+MerOC.egg-info/entry_points.txt
+MerOC.egg-info/not-zip-safe
+MerOC.egg-info/requires.txt
+MerOC.egg-info/top_level.txt
+MerOC/DATA/LOGO.gif

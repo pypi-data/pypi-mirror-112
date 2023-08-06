@@ -1,0 +1,3 @@
+[console_scripts]
+MerOC = MerOC.__main__:main
+
