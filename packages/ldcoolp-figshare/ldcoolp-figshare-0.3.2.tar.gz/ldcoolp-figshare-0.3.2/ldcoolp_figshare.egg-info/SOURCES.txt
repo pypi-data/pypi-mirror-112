@@ -1,0 +1,13 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+ldcoolp_figshare/__init__.py
+ldcoolp_figshare/main.py
+ldcoolp_figshare.egg-info/PKG-INFO
+ldcoolp_figshare.egg-info/SOURCES.txt
+ldcoolp_figshare.egg-info/dependency_links.txt
+ldcoolp_figshare.egg-info/requires.txt
+ldcoolp_figshare.egg-info/top_level.txt
