@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/CPT_GFFParser/CPT_GFFParser.py
+src/CPT_GFFParser/CPT_ParserHelpers.py
+src/CPT_GFFParser/__init__.py
+src/CPT_GFFParser/gffSeqFeature.py
+src/CPT_GFFParser/setup.py
+src/CPT_GFFParser.egg-info/PKG-INFO
+src/CPT_GFFParser.egg-info/SOURCES.txt
+src/CPT_GFFParser.egg-info/dependency_links.txt
+src/CPT_GFFParser.egg-info/requires.txt
+src/CPT_GFFParser.egg-info/top_level.txt
