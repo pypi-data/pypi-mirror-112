@@ -1,0 +1,6 @@
+include *.rst
+include *.txt
+include *.ini
+include VERSION
+include setup.cfg
+recursive-include ioos_qc *.py
