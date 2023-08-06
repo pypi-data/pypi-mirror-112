@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pynondimensionalizer
+Version: 0.1.0
+Summary: 
+Author: Doug Keller
+Author-email: dg.kllr.jr@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: argparse (>=1.4.0,<2.0.0)
+Requires-Dist: pandas (>=1.2.1,<2.0.0)
+Requires-Dist: pathlib (>=1.0.1,<2.0.0)
+Requires-Dist: sympy (>=1.7.1,<2.0.0)
