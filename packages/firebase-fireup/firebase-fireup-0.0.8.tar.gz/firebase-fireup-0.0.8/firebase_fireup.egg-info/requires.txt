@@ -1,0 +1,4 @@
+firebase-admin==5.0.0
+requests==2.25.1
+requests-toolbelt==0.9.1
+python-jwt==2.0.1
