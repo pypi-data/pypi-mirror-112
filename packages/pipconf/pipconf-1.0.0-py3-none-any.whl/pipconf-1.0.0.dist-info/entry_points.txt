@@ -1,0 +1,3 @@
+[console_scripts]
+pipconf = pipconf.cli:main
+
