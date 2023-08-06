@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: picklepie
+Version: 0.0.1
+Summary: a python package
+Home-page: https://github.com/ah4d1/picklepie
+Author: Ahadi Aprianto
+Author-email: support@pickle.id
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/ah4d1/picklepie
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: imblearn (>=0.0)
+Requires-Dist: imbalanced-learn (>=0.8.0)
+Requires-Dist: kneed (>=0.7.0)
+Requires-Dist: matplotlib (>=3.3.1)
+Requires-Dist: mlxtend (>=0.18.0)
+Requires-Dist: multipledispatch (>=0.6.0)
+Requires-Dist: numpy (>=1.19.1)
+Requires-Dist: openpyxl (>=3.0.7)
+Requires-Dist: pyodbc (>=4.0.30)
+Requires-Dist: seaborn (>=0.11.1)
+Requires-Dist: sklearn (>=0.0)
+Requires-Dist: scikit-learn (>=0.24.2)
+Requires-Dist: scikit-plot (>=0.3.7)
+Requires-Dist: statsmodels (>=0.12.2)
+
+picklepie
+
+picklepie is a python package.
+
+Copyright(c)2021 Ahadi Aprianto
+License     : BSD 3-Clause "New" or "Revised"
+
+
