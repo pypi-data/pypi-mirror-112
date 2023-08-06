@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/deadlink/__init__.py
+src/deadlink/_main.py
+src/deadlink.egg-info/PKG-INFO
+src/deadlink.egg-info/SOURCES.txt
+src/deadlink.egg-info/dependency_links.txt
+src/deadlink.egg-info/entry_points.txt
+src/deadlink.egg-info/requires.txt
+src/deadlink.egg-info/top_level.txt
+src/deadlink/_cli/__init__.py
+src/deadlink/_cli/check.py
+src/deadlink/_cli/replace_redirects.py
