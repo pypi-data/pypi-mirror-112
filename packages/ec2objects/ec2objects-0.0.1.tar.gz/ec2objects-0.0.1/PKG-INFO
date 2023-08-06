@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ec2objects
+Version: 0.0.1
+Summary: ec2objects, represents all aws ec2 services as objects, hiding all those horrible api calls.
+Home-page: https://github.com/zorani/aws-ec2-objects
+Author: zoran ilievski
+Author-email: pythonic@clientuser.net
+License: MIT
+Download-URL: https://github.com/zorani/aws-ec2-objects/archive/refs/tags/v0.0.1.tar.gz
+Description: # aws-objects
+Keywords: aws,api,ec2,objects,awsapi
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
