@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: metrc-client-python
+Version: 0.0.1
+Summary: Python client library for accessing the Metrc API
+Home-page: https://github.com/jessewilliamfreeman/metrc-python
+Author: Jesse Freeman
+Author-email: jessewilliamfreeman@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+
+# metrc-python
+Python backend for connecting with Metrc
+
+## Instructions for example Flask server
+
+Install [pipenv](https://pypi.org/project/pipenv/)
+
+Clone this repostitory, go to the root folder, and run the following commands
+
+`pipenv shell`
+
+`pip install -r requirements.txt`
+
+Now edit the file `example/flask/configs.yml.example` to have key value pairs of the states you have vendor keys in to those vendor keys and rename to `example/flask/configs.yml`
+
+Now run the following and the server should run
+
+`cd example/flask`
+
+`flask run`
+
+
