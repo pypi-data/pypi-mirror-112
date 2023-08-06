@@ -1,0 +1,45 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <opaque name='IONotificationPortRef' type64='^{IONotificationPort=}'/>
+  <constant name='kIOMasterPortDefault' type64='I'/>
+  <string_constant name='kIOFirstPublishNotification' value='IOServiceFirstPublish'/>
+  <string_constant name='kIOPublishNotification' value='IOServicePublish'/>
+  <string_constant name='kIOMatchedNotification' value='IOServiceMatched'/>
+  <string_constant name='kIOFirstMatchNotification' value='IOServiceFirstMatch'/>
+  <string_constant name='kIOTerminatedNotification' value='IOServiceTerminate'/>
+  <string_constant name='kIOUSBDeviceClassName' value='IOUSBDevice'/>
+  <function name='IOIteratorNext'>
+    <arg type64='I'/>
+    <retval type64='I'/>
+  </function>
+  <function name='IONotificationPortCreate'>
+    <arg type64='I'/>
+    <retval already_retained='true' type64='^{IONotificationPort=}'/>
+  </function>
+  <function name='IONotificationPortGetRunLoopSource'>
+    <arg type64='^{IONotificationPort=}'/>
+    <retval type64='^{__CFRunLoopSource=}'/>
+  </function>
+  <function name='IOObjectRelease'>
+    <arg type64='I'/>
+    <retval type64='i'/>
+  </function>
+  <function name='IOServiceAddMatchingNotification'>
+    <arg type64='^{IONotificationPort=}'/>
+    <arg type64='*'/>
+    <arg type64='^{__CFDictionary=}'/>
+    <arg function_pointer='true' type64='^?'>
+      <arg type64='^v'/>
+      <arg type64='I'/>
+      <retval type64='v'/>
+    </arg>
+    <arg type64='^v'/>
+    <arg type64='o^I'/>
+    <retval type64='i'/>
+  </function>
+  <function name='IOServiceMatching'>
+    <arg type64='*'/>
+    <retval type64='^{__CFDictionary=}'/>
+  </function>
+</signatures>
