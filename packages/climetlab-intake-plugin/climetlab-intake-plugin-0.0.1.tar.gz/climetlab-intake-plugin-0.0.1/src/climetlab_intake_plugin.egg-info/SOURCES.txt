@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/climetlab_intake/__init__.py
+src/climetlab_intake/intake.py
+src/climetlab_intake_plugin.egg-info/PKG-INFO
+src/climetlab_intake_plugin.egg-info/SOURCES.txt
+src/climetlab_intake_plugin.egg-info/dependency_links.txt
+src/climetlab_intake_plugin.egg-info/entry_points.txt
+src/climetlab_intake_plugin.egg-info/requires.txt
+src/climetlab_intake_plugin.egg-info/top_level.txt
+src/climetlab_intake_plugin.egg-info/zip-safe
