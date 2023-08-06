@@ -1,0 +1,19 @@
+apiritif>=0.9.8
+astunparse>=1.6.0
+colorama; sys_platform == 'win32'
+colorlog
+cssselect
+Cython; python_version >= '3.9'
+fuzzyset==0.0.19
+hdrpy>=0.3.3
+lxml>=4.6.2
+progressbar33
+psutil>=5.6.6
+pytest>=3
+pyvirtualdisplay; sys_platform != 'win32'
+pyyaml
+requests>=2.18.1
+selenium
+Appium-Python-Client
+urwid
+terminaltables>=3.1.0
