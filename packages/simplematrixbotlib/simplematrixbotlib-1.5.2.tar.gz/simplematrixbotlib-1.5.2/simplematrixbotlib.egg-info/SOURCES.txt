@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+simplematrixbotlib/__init__.py
+simplematrixbotlib/api.py
+simplematrixbotlib/auth.py
+simplematrixbotlib/bot.py
+simplematrixbotlib/callbacks.py
+simplematrixbotlib/match.py
+simplematrixbotlib.egg-info/PKG-INFO
+simplematrixbotlib.egg-info/SOURCES.txt
+simplematrixbotlib.egg-info/dependency_links.txt
+simplematrixbotlib.egg-info/requires.txt
+simplematrixbotlib.egg-info/top_level.txt
