@@ -1,0 +1,58 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.scripts]
+edwh = "console_entry_points:edwh"
+
+[tool.flit.metadata]
+# https://flit.readthedocs.io/en/latest/pyproject_toml.html#metadata-section
+module = "edwh"
+author = "Education Warehouse"
+author-email = "remco.b@educationwarehouse.nl"
+home-page = "https://www.educationwarehouse.nl"
+requires = [
+]
+description-file = "readme.md"
+keywords = "placeholder"
+
+[tool.flit.metadata.urls]
+Changelog = "https://github.com/educationwarehouse/edwh_placeholder/blob/main/CHANGELOG.md"
+
+[tool.flit.metadata.requires-extra]
+test = [
+]
+dev = [
+    "python-semantic-release",
+    "flit",
+    "devpi-client",
+    "black[d]",
+    "invoke",
+]
+
+# https://python-semantic-release.readthedocs.io/en/latest/#getting-started
+[tool.semantic_release]
+version_variable = "edwh/__init__.py:__version__"
+build_command = ""
+upload_to_pypi = true
+upload_to_release = false
+branch = "main"
+
+# https://tox.readthedocs.io/en/latest/examples.html
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = True
+envlist = py38
+
+[testenv]
+deps = pytest
+commands = pytest backend/*.py
+"""
+#[tool.edwh.flit]
+#url = "https://devpi.edwh.nl/remco/dev"
+
+#[tool.edwh.replace_in.dockerfile]
+#path = "../ontwikkelstraat/backend/microservice.Dockerfile"
+#replace = 'RUN pip install(.*)backend==(.*)'
+#with = 'RUN pip install\1backend=={version}'
