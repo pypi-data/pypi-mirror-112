@@ -1,0 +1,16 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+hinbdev/__init__.py
+hinbdev/_nbdev.py
+hinbdev/core.py
+hinbdev.egg-info/PKG-INFO
+hinbdev.egg-info/SOURCES.txt
+hinbdev.egg-info/dependency_links.txt
+hinbdev.egg-info/entry_points.txt
+hinbdev.egg-info/not-zip-safe
+hinbdev.egg-info/requires.txt
+hinbdev.egg-info/top_level.txt
