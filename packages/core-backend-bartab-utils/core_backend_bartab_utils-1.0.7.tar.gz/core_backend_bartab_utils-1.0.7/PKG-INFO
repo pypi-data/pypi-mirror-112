@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: core_backend_bartab_utils
+Version: 1.0.7
+Summary: Common utils files used for any python3 BarTab repository
+Home-page: https://github.com/BarTabPayments/core_backend_bartab_utils
+Author: Cassio Hudson
+Author-email: cassio@bartabapp.co
+License: BSD 2-clause
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE.txt
+
+UNKNOWN
+
