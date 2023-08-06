@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+MatrixBabou/NMFALS.py
+MatrixBabou/__init__.py
+MatrixBabou/mat_prod.py
+MatrixBabou.egg-info/PKG-INFO
+MatrixBabou.egg-info/SOURCES.txt
+MatrixBabou.egg-info/dependency_links.txt
+MatrixBabou.egg-info/requires.txt
+MatrixBabou.egg-info/top_level.txt
