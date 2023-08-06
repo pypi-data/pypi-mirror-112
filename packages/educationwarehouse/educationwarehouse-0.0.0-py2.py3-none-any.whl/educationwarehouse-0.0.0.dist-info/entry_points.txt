@@ -1,0 +1,3 @@
+[console_scripts]
+edwh=console_entry_points:edwh
+

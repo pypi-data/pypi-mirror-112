@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: educationwarehouse
+Version: 0.0.0
+Summary: EducationWarehouse uses `EDWH` as it's internal abbreviation.
+Home-page: https://www.educationwarehouse.nl
+Keywords: placeholder
+Author: Education Warehouse
+Author-email: remco.b@educationwarehouse.nl
+Description-Content-Type: text/markdown
+Requires-Dist: python-semantic-release ; extra == "dev"
+Requires-Dist: flit ; extra == "dev"
+Requires-Dist: devpi-client ; extra == "dev"
+Requires-Dist: black[d] ; extra == "dev"
+Requires-Dist: invoke ; extra == "dev"
+Project-URL: Changelog, https://github.com/educationwarehouse/edwh_placeholder/blob/main/CHANGELOG.md
+Provides-Extra: dev
+Provides-Extra: test
+
+# Placeholder
+
+At EducationWarehouse we use `EDWH` as our internal abbreviation.  
+Since we use it a lot we reserved the name for future tooling.
+
+Meet us at https://www.educationwarehouse.nl
+
