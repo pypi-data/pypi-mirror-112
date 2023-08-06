@@ -1,0 +1,5 @@
+#!/bin/env python3
+from skelgen import main
+
+if __name__ == "__main__":
+    main()

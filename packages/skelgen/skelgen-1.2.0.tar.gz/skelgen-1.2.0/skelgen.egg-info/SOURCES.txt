@@ -1,0 +1,68 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+bin/skel
+skelgen/__init__.py
+skelgen/__main__.py
+skelgen/exception.py
+skelgen/template.py
+skelgen/version.py
+skelgen.egg-info/PKG-INFO
+skelgen.egg-info/SOURCES.txt
+skelgen.egg-info/dependency_links.txt
+skelgen.egg-info/entry_points.txt
+skelgen.egg-info/requires.txt
+skelgen.egg-info/top_level.txt
+skelgen/plugins/__init__.py
+skelgen/plugins/git.py
+skelgen/templates/cmake/CMakeLists.txt
+skelgen/templates/cmake/src/main.cpp
+skelgen/templates/flask-api/.gitignore.___tmpl
+skelgen/templates/flask-api/___template.py
+skelgen/templates/flask-api/requirements.txt
+skelgen/templates/flask-api/setup.cfg
+skelgen/templates/flask-api/setup.py
+skelgen/templates/flask-api/__pycache__/___template.cpython-39.pyc
+skelgen/templates/flask-api/{{ project_name }}/__init__.py
+skelgen/templates/flask-api/{{ project_name }}/__main__.py
+skelgen/templates/flask-api/{{ project_name }}/models.py
+skelgen/templates/flask-api/{{ project_name }}/schemas.py
+skelgen/templates/flask-api/{{ project_name }}/server.py
+skelgen/templates/flask-api/{{ project_name }}/settings.py
+skelgen/templates/flask-api/{{ project_name }}/version.py
+skelgen/templates/flask-api/{{ project_name }}/views.py
+skelgen/templates/nuxt/.gitignore.___tmpl
+skelgen/templates/nuxt/___template.py
+skelgen/templates/nuxt/__pycache__/___template.cpython-39.pyc
+skelgen/templates/nuxt/vue/___template.py
+skelgen/templates/nuxt/vue/__pycache__/___template.cpython-39.pyc
+skelgen/templates/preact/.gitignore.___tmpl
+skelgen/templates/preact/___template.py
+skelgen/templates/preact/__pycache__/___template.cpython-39.pyc
+skelgen/templates/python/.gitignore.___tmpl
+skelgen/templates/python/___template.py
+skelgen/templates/python/requirements.txt
+skelgen/templates/python/setup.cfg
+skelgen/templates/python/setup.py
+skelgen/templates/python-cli/.gitignore.___tmpl
+skelgen/templates/python-cli/___template.py
+skelgen/templates/python-cli/requirements.txt
+skelgen/templates/python-cli/setup.cfg
+skelgen/templates/python-cli/setup.py
+skelgen/templates/python-cli/bin/{{ project_name }}
+skelgen/templates/python-cli/{{ project_name }}/__init__.py
+skelgen/templates/python-cli/{{ project_name }}/__main__.py
+skelgen/templates/python-cli/{{ project_name }}/version.py
+skelgen/templates/python/{{ project_name }}/__init__.py
+skelgen/templates/python/{{ project_name }}/__main__.py
+skelgen/templates/python/{{ project_name }}/version.py
+skelgen/templates/react/.gitignore.___tmpl
+skelgen/templates/react/___template.py
+skelgen/templates/react/__pycache__/___template.cpython-39.pyc
+skelgen/templates/vue/.gitignore.___tmpl
+skelgen/templates/vue/___template.py
+skelgen/templates/vue/__pycache__/___template.cpython-39.pyc
+skelgen/templates/vue/vue/___template.py
+skelgen/templates/vue/vue/__pycache__/___template.cpython-39.pyc
