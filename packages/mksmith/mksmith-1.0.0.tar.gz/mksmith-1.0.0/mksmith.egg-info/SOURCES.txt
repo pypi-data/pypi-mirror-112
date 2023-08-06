@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mksmith.egg-info/PKG-INFO
+mksmith.egg-info/SOURCES.txt
+mksmith.egg-info/dependency_links.txt
+mksmith.egg-info/entry_points.txt
+mksmith.egg-info/requires.txt
+mksmith.egg-info/top_level.txt
+reader/__init__.py
+reader/__main__.py
+reader/config.cfg
+reader/feed.py
+reader/viewer.py
