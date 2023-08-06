@@ -1,0 +1,14 @@
+README.md
+setup.py
+QB_solver.egg-info/PKG-INFO
+QB_solver.egg-info/SOURCES.txt
+QB_solver.egg-info/dependency_links.txt
+QB_solver.egg-info/entry_points.txt
+QB_solver.egg-info/requires.txt
+QB_solver.egg-info/top_level.txt
+qb_solver/__init__.py
+qb_solver/__main__.py
+qb_solver/cubesolver.py
+qb_solver/virtualcube.py
+qb_solver/visCube.py
+qb_solver/visHints.py
