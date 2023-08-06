@@ -1,0 +1,8 @@
+include requirements.txt
+include README.md
+include LICENSE
+include AUTHORS
+include CHANGELOG.md
+include tblock.1.gz
+include tblockc.1.gz
+include README.txt
