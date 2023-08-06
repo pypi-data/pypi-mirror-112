@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: salt-nornir
+Version: 0.4.0
+Summary: SALTSTACK Nornir Modules
+Home-page: https://github.com/dmulyalin/salt-nornir
+Author: Denis Mulyalin
+Author-email: d.mulyalin@gmail.com
+License: UNKNOWN
+Description: # SALTSTACK Nornir
+        
+        Repository to store Nornir based SALTSTACK modules:
+        
+        - salt-nornir proxy minion module 
+        - salt-nornir execution module
+        - salt-nornir state module
+        - salt-nornir runner module
+        
+        Nornir proxy minion helps to interact with network (and not so) devices at scale, 
+        reference [documentation](https://salt-nornir.readthedocs.io/en/latest/index.html) 
+        for details.
+        
+        # Contributing
+        
+        Issues, bug reports and feature requests are welcomed.
+        
+        [buy](https://paypal.me/dmulyalin) Author a coffee
+        
+Platform: UNKNOWN
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
