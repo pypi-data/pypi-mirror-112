@@ -1,0 +1,13 @@
+megatron_11b/__init__.py,sha256=RD56s1v04OPiuFqavsmdTi2wsmoq1fzHz_9o31L4hVk,2857
+megatron_11b/configuration_megatron.py,sha256=5PR59oD25kGN5Hbl_7819lxbw31EhLuBzBru1GJT6E4,6818
+megatron_11b/convert_megatron_original_pytorch_checkpoint_to_pytorch.py,sha256=QUMJT7RPujcjTisHmUnqV2FHQTJayguL5GrHiWRRECo,7576
+megatron_11b/megatron_policy.py,sha256=hqZERd203f56nEbIbbv1Kml62FQmyqmlo1Oo8zVMEww,1691
+megatron_11b/modeling_megatron.py,sha256=yMkSCToBnmGkhE-bgZg7cGBgqqxbv3K6w43sIDmE7WE,53624
+megatron_11b/tokenization_megatron.py,sha256=CMMwkKLYLcAgTtwpYwe9ZRzrCkEtMjfG5TNesHyw1ts,1728
+megatron_11b/tokenization_megatron_fast.py,sha256=buxxVOK4P21tQSICjwwNQqpXZgzfmks3y7R7lyxODvo,1910
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/parallelism.py,sha256=xUGtW0My1gQaAdslnYb9Ja4Xc_wqMmsBGw49UdkKMUg,420
+megatron_11b-1.2.dist-info/METADATA,sha256=XlmbkyN1OXnS9YDnn9Yvgwf8wrGII30wN3OTW1x7yfE,4911
+megatron_11b-1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+megatron_11b-1.2.dist-info/top_level.txt,sha256=YfRWt_8FGazdEmtL3tHyOcQQqCk4idP03_OxSUZuE2E,19
+megatron_11b-1.2.dist-info/RECORD,,
