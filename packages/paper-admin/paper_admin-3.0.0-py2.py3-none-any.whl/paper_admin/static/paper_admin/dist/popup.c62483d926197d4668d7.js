@@ -1,0 +1,2 @@
+(self.webpackChunkpaper_admin=self.webpackChunkpaper_admin||[]).push([[42],{2284:function(){if(/add\/?$/.test(window.location.pathname)){const e=document.querySelector(".paper-form");if(e){const n=e.querySelector("input:not([type=hidden]), select, textarea");n&&n.focus()}}document.addEventListener("keydown",(function(e){27===e.which&&window.close()})),document.addEventListener("click",(function(e){e.target.closest(".cancel-link")&&(e.preventDefault(),window.close())}))}}]);
+//# sourceMappingURL=popup.c62483d926197d4668d7.js.map
