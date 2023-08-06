@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: bbcloud-python-sdk
+Version: 0.0.13
+Summary: bbcloud python sdk
+Home-page: https://github.com/bbcloudGroup/bbcloud_python_sdk
+Author: BBCloud
+Author-email: zealiemai@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+### 说明
+
+BBCloud内部使用的Python工具包
+
+```shell
+# 安装依赖
+pip3 install -r requirements.txt
+
+# 编译
+python3 setup.py sdist bdist_wheel
+# 发布
+python3 -m twine upload --repository pypi dist/*
+```
+
