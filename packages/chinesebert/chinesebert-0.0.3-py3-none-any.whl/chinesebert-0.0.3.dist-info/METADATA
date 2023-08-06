@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: chinesebert
+Version: 0.0.3
+Summary: ChineseBert_pytorch
+Home-page: https://github.com/JunnYu/ChineseBert_pytorch
+Author: Jun Yu
+Author-email: 573009727@qq.com
+License: MIT
+Keywords: ChineseBert,pytorch
+Platform: UNKNOWN
+Requires-Dist: transformers (>=4.7.0)
+Requires-Dist: pypinyin
+Requires-Dist: fastcore
+
+UNKNOWN
+
+

@@ -1,0 +1,15 @@
+chinesebert/__init__.py,sha256=769xd8MtAYLoSevq0Quy8MjIyuYDLcMjA9dWCxjxPVs,467
+chinesebert/classifier.py,sha256=mjganEf01NAmhoSuv-hswaUd0p5QxmqsYNjSPqUgfZw,727
+chinesebert/configuration_chinesebert.py,sha256=pIAjqpTBOGOVg7nkUc9JlegpX7EEbvNQtmvwzyWu4T8,5848
+chinesebert/fusion_embedding.py,sha256=tsn1CIGv7GP3Au44M8o1UZ72FYu5ooaaThAULCKOrJY,3729
+chinesebert/glyph_embedding.py,sha256=-w-KLOMEtKf_sektfA0vdByqMkw7qw6jiXl4GuU0aek,916
+chinesebert/jy_utils.py,sha256=7nqhkI--uMF46WbNEedWL793tQu_wVPw0YO6Tew1Ams,8377
+chinesebert/modeling_chinesebert.py,sha256=QgXfwZ1HPlSbmvEfI_HyhOyeZmTwY1tQkOTdUP5Q8e8,23993
+chinesebert/padding.py,sha256=RpTYe0oqd059Bi0DjmN61pmjiETRhYKW2dYDlxteRmk,1387
+chinesebert/pinyin_embedding.py,sha256=suCicK0YXmYLyFOW4jVf2lp3wvcGToD2sQKFsxun0XQ,2041
+chinesebert/tokenization_chinesebert_fast.py,sha256=xr1VbFjEG1K3uA2xx-EE1qwLjxfr4qzWWUwqM_MO9mc,4239
+chinesebert-0.0.3.dist-info/LICENSE,sha256=fy_0hZf32YM8Kq6cPU5tm3vfH7t8MSKZss-QWs__Foo,1087
+chinesebert-0.0.3.dist-info/METADATA,sha256=_ssnC3XWBte5wJfqxHZiNVQsszDHNPYmORzdEYo_GB8,345
+chinesebert-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+chinesebert-0.0.3.dist-info/top_level.txt,sha256=Qf0ZtXA-ecccEPkAPPctxjaGd92PzzbXWo2iTwwY7rM,12
+chinesebert-0.0.3.dist-info/RECORD,,
