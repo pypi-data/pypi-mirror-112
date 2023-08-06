@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+import "entity.proto";
+import "common.proto";
+import "integration_source.proto";
+
+option java_package = "io.calixa.integration.elt";
+option java_multiple_files = true;
+option optimize_for = SPEED;
+
+package calixa.integration.elt;
+
+/**
+This namespace captures messages/types necessary to perform Loading (the L from the ELT process).
+We assume that all Extraction (E from ELT is performed by Airbyte or Census et al).
+*/
+
+// Captures domain of possible load types
+enum LoadMutationType {
+  LOAD_MUTATION_TYPE_UNSPECIFIED = 0;
+  LOAD_MUTATION_TYPE_UPSERT = 1;
+  LOAD_MUTATION_TYPE_DELETE = 2;
+}
+
+// Captures a single JSON update received from Airbyte. This is the
+// extract portion of the process.
+message ExtractedEntity {
+  string organization_id = 1;
+  string instance_id = 2;
+  calixa.domain.integration.IntegrationSource source = 3;
+  google.protobuf.Timestamp emitted_at = 4;
+  string extraction_id = 5;
+
+  string payload = 10;
+
+  // by default, all processing is async; however, for certain entities we must process them synchronously
+  // as they are dependencies of other entities. For instance, an IntercomTag is a base entity that is
+  // needed by IntercomContact and we must ensure that the base entity (IntercomTag) is synchronously
+  // processed and available for querying in the IntercomContact.
+  bool process_synchronously = 11;
+}
+
+// Once an extracted message is processed, it is represented by this message. This can
+// either be an upsert or a delete.
+message LoadedEntity {
+  calixa.domain.entity.Entity entity = 1; // If mutation_type is DELETE, then entity will be blank
+  calixa.domain.common.ExternalId external_id = 2;
+  LoadMutationType mutation_type = 3;
+  calixa.domain.common.RequestContext request_context = 4;
+  // TODO: this is ugly af. But no-one needs to connect shell entities based on
+  // external relations. Just apiuser->apiaccount. This will be only read and
+  // processed if we are saving an ApiUser. It connects shell user for that with
+  // shell accounts for given api accounts if exists. Ignores silently if it does not
+  repeated string api_account_external_ids = 5;
+}
