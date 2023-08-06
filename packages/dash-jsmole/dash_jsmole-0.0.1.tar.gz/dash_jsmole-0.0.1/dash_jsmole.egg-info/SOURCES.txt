@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+dash_jsmole/DashJsmole.py
+dash_jsmole/__init__.py
+dash_jsmole/_imports_.py
+dash_jsmole/dash_jsmole.min.js
+dash_jsmole/dash_jsmole.min.js.map
+dash_jsmole/metadata.json
+dash_jsmole/package-info.json
+dash_jsmole.egg-info/PKG-INFO
+dash_jsmole.egg-info/SOURCES.txt
+dash_jsmole.egg-info/dependency_links.txt
+dash_jsmole.egg-info/top_level.txt
