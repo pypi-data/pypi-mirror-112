@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: neogiinstruments
+Version: 2.3.1
+Summary: Communication and helper functions for lab equipment
+License: MIT
+Author: UNT Neogi Lab
+Author-email: BrianSquires@my.unt.edu
+Requires-Python: >=3.9,<3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Instrumental-lib (>=0.6,<0.7)
+Requires-Dist: PyMeasure (>=0.9.0,<0.10.0)
+Requires-Dist: PyVISA-py (>=0.5.2,<0.6.0)
+Requires-Dist: h5py (>=3.3.0,<4.0.0)
+Requires-Dist: matplotlib (>=3.4.2,<4.0.0)
+Requires-Dist: nidaqmx (>=0.5.7,<0.6.0)
+Requires-Dist: pandas (>=1.3.0,<2.0.0)
+Requires-Dist: panel (>=0.11.3,<0.12.0)
+Requires-Dist: param (>=1.10.1,<2.0.0)
+Requires-Dist: pigpio (>=1.78,<2.0)
+Requires-Dist: plotly (>=5.0.0,<6.0.0)
+Requires-Dist: pyserial (>=3.5,<4.0)
+Requires-Dist: pyusb (>=1.2.0,<2.0.0)
+Requires-Dist: scipy (>=1.7.0,<2.0.0)
+Requires-Dist: tabulate (>=0.8.9,<0.9.0)
+Description-Content-Type: text/markdown
+
+# Instruments
+
+Communication and helper functions for lab equipment  
+If you're reading this, this is a WIP new class-based system of autodetecing instruments and exposing common APIs
+
+## Creating instruments
+
+1. individual files in neoginstruments will be seperate instruments
+2. folders designate interchangeable instruments with common apis
+    1. Each folder will result in automatic selection of a instrument
+    2. Each folder will use and document an API
+3. Each valid instruments file must have a
+    1. name
+    2. hwid: array of valid hardware IDs (for linux)
+        1. use lsusb to get them. IE:"0403:FAF0"
+        2. use "software" to create a virtual instrument
+    3. instrument class
+        1. Must accept the port as its only argument in `__init__`. You can get the serial with port.serial_number
+
+## Using instruments
+
+Example:
+
+```
+import neogiinstruments  
+rotator = neogiinstruments.rotator("rotator1") #creates rotator named rotator1
+rotator.instrument_selected = '55114654 - ttyUSB7 - K10CR1' 
+rotator.instrument.home() #homes the rotator
+rotator.update_to_serial()
+```
+
+Each module will return its respective instrument. Multiple distinct verisons of the same instrument can exist.   
+You can either manually change instrument_selected or use `.view()` to make an interactive GUI.  
+All functions of each instrument are avalible through the `.instrument` sub-object.
+    
+
+## Utilities
+you can call port_table() to print a port table
