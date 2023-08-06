@@ -1,0 +1,34 @@
+[Desktop Entry]
+Type=Application
+Exec=photocollage
+Icon=photocollage
+Categories=Graphics;2DGraphics;RasterGraphics;GTK;
+Terminal=false
+
+Name=PhotoCollage
+Keywords=photo;collage;image;
+Comment=Graphical tool to make photo collage posters from multiple images
+
+Name[de]=PhotoCollage
+Keywords[de]=Fotos;Bilder;Poster;Plakate;Zusammenstellung;Collage,Photo;Image;
+Comment[de]=Ein grafisches Werkzeug zum Erstellen von Fotocollage-Postern aus mehreren Bildern
+
+Name[es]=PhotoCollage
+Keywords[es]=foto;collage;carteles;imágenes;imagen;fotografía;fotografías;póster;
+Comment[es]=Herramienta gráfica para hacer carteles de collage de fotos a partir de múltiples imágenes.
+
+Name[fr]=PhotoCollage
+Keywords[fr]=photo;collage;image;
+Comment[fr]=Outil graphique pour fabriquer des posters en collant plusieurs photos
+
+Name[it]=PhotoCollage
+Keywords[it]=foto;collage;immagine;fotografia;fotografie;immagini;poster;
+Comment[it]=Utilità grafica per creare poster da collage di fotografie
+
+Name[nl]=PhotoCollage
+Keywords[nl]=foto;collage;afbeelding;fotografie;poster;
+Comment[nl]=Grafische toepassing om fotocollageposters samen te stellen uit meerdere afbeeldingen
+
+Name[ru]=PhotoCollage
+Keywords[ru]=фотография;коллаж;изображение;
+Comment[ru]=Графический инструмент для создания плаката фотоколлажа из нескольких изображений
