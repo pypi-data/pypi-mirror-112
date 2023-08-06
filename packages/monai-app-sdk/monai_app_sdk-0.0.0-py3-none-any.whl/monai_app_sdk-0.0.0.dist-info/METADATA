@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: monai-app-sdk
+Version: 0.0.0
+Summary: A framework and associated tools to design, verify and analyze performance of MONAI apps
+Home-page: https://monai.io/
+Author: MONAI Consortium
+Author-email: monai.contact@gmail.com
+License: Apache License 2.0
+Project-URL: Documentation, https://docs.monai.io/
+Project-URL: Bug Tracker, https://github.com/Project-MONAI/monai-app-sdk/issues
+Project-URL: Source Code, https://github.com/Project-MONAI/monai-app-sdk
+Platform: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE
+Requires-Dist: numpy (>=1.17)
+Provides-Extra: all
+Requires-Dist: cucim (~=21.06) ; extra == 'all'
+Provides-Extra: cucim
+Requires-Dist: cucim (~=21.06) ; extra == 'cucim'
+
+# MONAI Deploy Application SDK
+
+MONAI Deploy Application SDK offers a framework and associated tools to design, verify and analyze performance of AI-driven applications in healthcare domain.
+
+## Features
+
+> _The codebase is currently under active development._
+
+- Pythonic Framework for app development
+- A mechanism to locally run an app via App Runner
+- A lightweight app analytics module
+- A lightweight 2D/3D visualization module
+- A development console
+- A set of sample applications
+- API documentation & User's Guide
+
+## Installation
+
+To install [the current release](https://pypi.org/project/monai-app-sdk/), you can simply run:
+
+```bash
+pip install monai-app-sdk
+```
+
+## Getting Started
+
+## Contributing
+
+## Community
+
+## Links
+
+
