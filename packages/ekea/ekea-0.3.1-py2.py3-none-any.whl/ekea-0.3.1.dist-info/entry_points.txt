@@ -1,0 +1,6 @@
+[console_scripts]
+ekea = ekea.__main__:main
+
+[microapp.projects]
+ekea = ekea
+
