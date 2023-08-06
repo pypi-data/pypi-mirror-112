@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: mabledsocli
+Version: 1.0.41.dev1
+Summary: Mable DSO CLI
+Home-page: https://github.com/bettercaring/mabledsocli
+Author: Ramtin Kazemi
+Author-email: ramtin.kazemi@mable.com.au
+License: GPLV3
+Project-URL: Documentation, https://github.com/bettercaring/mabledsocli
+Project-URL: Source, https://github.com/bettercaring/mabledsocli
+Description: 
+        # Mable DSO Tool CLI
+        This tool assists DevSecOps engineers to perform the following tasks:
+        - Configuration management
+            - Paramaters
+            - Secrets
+            - Templates
+        - Package management
+        - Release management
+        - Provision resources
+        - Deploy releases
+        - Security testing (SAST/DAST)
+        
+        
+        To find out more please visit the [homepage](https://github.com/bettercaring/mabledsocli) of the project. 
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
