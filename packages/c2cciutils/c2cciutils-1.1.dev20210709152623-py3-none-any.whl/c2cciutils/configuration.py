@@ -1,0 +1,486 @@
+"""
+Automatically generated file from a JSON schema.
+"""
+
+
+from typing import List, Any, Literal, Dict, TypedDict, Union
+
+
+# Audit
+#
+# The audit configuration
+class Audit(TypedDict, total=False):
+    npm: "AuditNpm"
+    outdated_versions: "AuditOutdatedVersions"
+    pip: "AuditPip"
+    pipenv: "AuditPipenv"
+    pipfile: "AuditPipfile"
+    pipfile_lock: "AuditPipfileLock"
+    print_versions: "PrintVersions"
+
+
+# audit npm
+#
+# The npm audit configuration
+#
+# oneOf
+AuditNpm = Union["AuditNpmConfig", Literal[False]]
+
+
+# audit npm config
+#
+# The npm audit configuration
+class AuditNpmConfig(TypedDict, total=False):
+    cwe_ignore: List[str]
+
+
+# Audit outdated versions
+#
+# Audit of outdated version
+AuditOutdatedVersions = bool
+
+
+# Audit pip
+#
+# Audit the requirements.txt files
+AuditPip = bool
+
+
+# Audit pipenv
+#
+# The audit Pipfile and Pipfile.lock configuration (old version)
+#
+# oneOf
+AuditPipenv = Union["AuditPipenvConfig", Literal[False]]
+
+
+# Audit pipenv config
+#
+# The audit Pipfile and Pipfile.lock configuration (old version)
+class AuditPipenvConfig(TypedDict, total=False):
+    python_versions: List[str]
+
+
+# Audit pipfile
+#
+# The audit Pipfile configuration
+#
+# oneOf
+AuditPipfile = Union["AuditPipfileConfig", Literal[False]]
+
+
+# Audit pipfile config
+#
+# The audit Pipfile configuration
+class AuditPipfileConfig(TypedDict, total=False):
+    sections: List[str]
+
+
+# Audit pipfile lock
+#
+# The audit Pipfile.lock configuration
+#
+# oneOf
+AuditPipfileLock = Union["AuditPipfileLockConfig", Literal[False]]
+
+
+# Audit pipfile lock config
+#
+# The audit Pipfile.lock configuration
+class AuditPipfileLockConfig(TypedDict, total=False):
+    sections: List[str]
+
+
+# Checks
+#
+# The checkers configurations
+class Checks(TypedDict, total=False):
+    black: "ChecksBlack"
+    black_config: "ChecksBlackConfiguration"
+    codespell: "ChecksCodespell"
+    dependabot_config: "ChecksDependabotConfiguration"
+    editorconfig: "ChecksEditorconfig"
+    eof: "ChecksEof"
+    gitattribute: "ChecksGitattribute"
+    isort: "ChecksIsort"
+    print_config: "ChecksPrintConfig"
+    required_workflows: "ChecksRequiredWorkflows"
+    versions: "ChecksVersions"
+    workflows: "ChecksWorkflows"
+    setup: "ChecksSetup"
+    prettier: "ChecksPrettier"
+    print_versions: "PrintVersions"
+
+
+# Checks Black
+#
+# The Black check configuration
+#
+# oneOf
+ChecksBlack = Union["ChecksBlackConfig", Literal[False]]
+
+
+# Checks black config
+#
+# The Black check configuration
+class ChecksBlackConfig(TypedDict, total=False):
+    properties: Dict[str, Any]
+    ignore_patterns_re: List[str]
+
+
+# Checks Black configuration
+#
+# The Black configuration check configuration
+#
+# oneOf
+ChecksBlackConfiguration = Union["ChecksBlackConfigurationConfig", Literal[False]]
+
+
+# Checks black configuration config
+#
+# The Black configuration check configuration
+class ChecksBlackConfigurationConfig(TypedDict, total=False):
+    properties: Dict[str, Union[Union[int, float], str]]
+
+
+# Checks codespell
+#
+# The codespell check configuration
+#
+# oneOf
+ChecksCodespell = Union["ChecksCodespellConfig", Literal[False]]
+
+
+# Checks codespell config
+#
+# The codespell check configuration
+class ChecksCodespellConfig(TypedDict, total=False):
+    arguments: List[str]
+    ignore_re: List[str]
+
+
+# Checks Dependabot configuration
+#
+# The Dependabot configuration check configuration
+#
+# oneOf
+ChecksDependabotConfiguration = Union["ChecksDependabotConfigurationConfig", Literal[False]]
+
+
+# Checks Dependabot configuration config
+#
+# The Dependabot configuration check configuration
+class ChecksDependabotConfigurationConfig(TypedDict, total=False):
+    ignore_version_files: List[str]
+    types: List["_ChecksDependabotConfigurationConfigTypesItem"]
+    update_ignore: List["_ChecksDependabotConfigurationConfigUpdateIgnoreItem"]
+
+
+# Checks editorconfig
+#
+# The editorconfig configuration check configuration
+#
+# oneOf
+ChecksEditorconfig = Union["ChecksEditorconfigConfig", Literal[False]]
+
+
+# Checks editorconfig config
+#
+# The editorconfig configuration check configuration
+class ChecksEditorconfigConfig(TypedDict, total=False):
+    properties: Dict[str, Dict[str, str]]
+
+
+# checks eof
+#
+# Check the end-of-file
+ChecksEof = bool
+
+
+# checks gitattribute
+#
+# Run the Git attributes check
+ChecksGitattribute = bool
+
+
+# checks isort
+#
+# The isort check configuration
+#
+# oneOf
+ChecksIsort = Union["ChecksIsortConfig", Literal[False]]
+
+
+# checks isort config
+#
+# The isort check configuration
+class ChecksIsortConfig(TypedDict, total=False):
+    ignore_patterns_re: List[str]
+
+
+# Checks Prettier
+#
+# The Prettier check configuration
+#
+# oneOf
+ChecksPrettier = Union["ChecksPrettierConfig", Literal[False]]
+
+
+# Checks Prettier config
+#
+# The Prettier check configuration
+class ChecksPrettierConfig(TypedDict, total=False):
+    properties: Dict[str, Any]
+    ignore_patterns_re: List[str]
+
+
+# Checks print config
+#
+# The print the autogenerated configguration
+ChecksPrintConfig = bool
+
+
+# checks required workflows
+#
+# The required workflow check configuration
+#
+# oneOf
+ChecksRequiredWorkflows = Union["ChecksRequiredWorkflowsConfig", Literal[False]]
+
+
+# checks required workflows config
+#
+# The required workflow check configuration
+ChecksRequiredWorkflowsConfig = Dict[str, "_ChecksRequiredWorkflowsConfigAdditionalproperties"]
+
+
+# checks setup
+#
+# Check the typing options in setup.cfg and in setup.py
+#
+# oneOf
+ChecksSetup = Union["ChecksSetupConfig", Literal[False]]
+
+
+# checks setup config
+#
+# Check the typing options in setup.cfg and in setup.py
+class ChecksSetupConfig(TypedDict, total=False):
+    ignore_file: List[str]
+    cfg: Dict[str, Dict[str, str]]
+    classifiers: List[str]
+
+
+# checks versions
+#
+# The version check configuration
+#
+# oneOf
+ChecksVersions = Union["ChecksVersionsConfig", Literal[False]]
+
+
+# checks versions config
+#
+# The version check configuration
+class ChecksVersionsConfig(TypedDict, total=False):
+    audit: bool
+    backport_labels: bool
+    branches: bool
+    extra_versions: List[str]
+    rebuild: Union["ChecksVersionsRebuild", Literal[False]]
+
+
+# checks versions rebuild
+#
+# Check the versions in the rebuild workflows
+class ChecksVersionsRebuild(TypedDict, total=False):
+    files: List[str]
+
+
+# checks workflows
+#
+# The workflows checks configuration
+#
+# oneOf
+ChecksWorkflows = Union["ChecksWorkflowsConfig", Literal[False]]
+
+
+# checks workflows config
+#
+# The workflows checks configuration
+class ChecksWorkflowsConfig(TypedDict, total=False):
+    images_blacklist: List[str]
+    timeout: bool
+
+
+# configuration
+#
+# C2C CI utils configuration file
+class Configuration(TypedDict, total=False):
+    audit: "Audit"
+    checks: "Checks"
+    publish: "Publish"
+    version: "Version"
+
+
+# Print versions
+#
+# The print versions configuration
+class PrintVersions(TypedDict, total=False):
+    versions: List["_PrintVersionsVersionsItem"]
+
+
+# Publish
+#
+# The publishing configurations
+class Publish(TypedDict, total=False):
+    docker: "PublishDocker"
+    pypi: "PublishPypi"
+    google_calendar: "PublishGoogleCalendar"
+    print_versions: "PrintVersions"
+
+
+# Publish Docker
+#
+# The configuration used to publish on Docker
+#
+# oneOf
+PublishDocker = Union["PublishDockerConfig", Literal[False]]
+
+
+# Publish Docker config
+#
+# The configuration used to publish on Docker
+class PublishDockerConfig(TypedDict, total=False):
+    images: List["PublishDockerImage"]
+    repository: Dict[str, "PublishDockerRepository"]
+
+
+# Publish Docker image
+class PublishDockerImage(TypedDict, total=False):
+    group: str
+    name: str
+    tags: List[str]
+
+
+# Publish Docker repository
+class PublishDockerRepository(TypedDict, total=False):
+    server: str
+    versions: List[str]
+
+
+# Publish Google calendar
+#
+# The configuration to publish on Google Calendar
+#
+# oneOf
+PublishGoogleCalendar = Union["PublishGoogleCalendarConfig", Literal[False]]
+
+
+# Publish Google calendar config
+#
+# The configuration to publish on Google Calendar
+class PublishGoogleCalendarConfig(TypedDict, total=False):
+    on: List[str]
+
+
+# publish pypi
+#
+# Configuration to publish on pypi
+#
+# oneOf
+PublishPypi = Union["PublishPypiConfig", Literal[False]]
+
+
+# publish pypi config
+#
+# Configuration to publish on pypi
+class PublishPypiConfig(TypedDict, total=False):
+    packages: List["PublishPypiPackage"]
+    versions: List[str]
+
+
+# publish pypi package
+#
+# The configuration of package that will be published
+class PublishPypiPackage(TypedDict, total=False):
+    group: str
+    path: str
+
+
+# Version
+#
+# The version configurations
+class Version(TypedDict, total=False):
+    branch_to_version_re: "VersionTransform"
+    tag_to_version_re: "VersionTransform"
+
+
+# Version transform
+#
+# A version transformer definition
+VersionTransform = List["_VersionTransformItem"]
+
+
+class _ChecksDependabotConfigurationConfigTypesItem(TypedDict, total=False):
+    ecosystem: str
+    filename: str
+
+
+_ChecksDependabotConfigurationConfigUpdateIgnoreItem = TypedDict(
+    "_ChecksDependabotConfigurationConfigUpdateIgnoreItem",
+    {
+        # The use ecosystem
+        "package-ecosystem": str,
+        # The use directory
+        "directory": str,
+    },
+    total=False,
+)
+
+
+# oneOf
+_ChecksRequiredWorkflowsConfigAdditionalproperties = Union[
+    "_ChecksRequiredWorkflowsConfigAdditionalpropertiesOneof0", bool
+]
+
+
+_ChecksRequiredWorkflowsConfigAdditionalpropertiesOneof0 = TypedDict(
+    "_ChecksRequiredWorkflowsConfigAdditionalpropertiesOneof0",
+    {
+        # The required steps configuration
+        "steps": List["_ChecksRequiredWorkflowsConfigAdditionalpropertiesOneof0StepsItem"],
+        # Should we have a fail fast configuration
+        "strategy-fail-fast": bool,
+        # The if that we should have
+        "if": str,
+        # We shouldn't have any if
+        "noif": bool,
+        # The on configuration that we should have
+        "on": Dict[str, Any],
+    },
+    total=False,
+)
+
+
+class _ChecksRequiredWorkflowsConfigAdditionalpropertiesOneof0StepsItem(TypedDict, total=False):
+    env: List[str]
+    run_re: str
+
+
+class _PrintVersionsVersionsItem(TypedDict, total=False):
+    cmd: List[str]
+    name: str
+    prefix: str
+
+
+_VersionTransformItem = TypedDict(
+    "_VersionTransformItem",
+    {
+        # The from regular expression
+        "from": str,
+        # The expand regular expression: https://docs.python.org/3/library/re.html#re.Match.expand
+        "to": str,
+    },
+    total=False,
+)
