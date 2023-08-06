@@ -1,0 +1,105 @@
+# input data file for generating daily data using NCAR/CESM naming conventions
+variables :
+  name :
+    - "FLUT"
+    - "OMEGA500"
+    - "PRECT"
+    - "T250"
+    - "U200"
+    - "U250"
+    - "U850"
+    - "V200"
+    - "V850"
+    - "Z250"
+FLUT :
+  atts :
+    cell_methods : "time: mean"
+    long_name : "Upwelling longwave flux at top of model"
+    units : "W/m2"
+    Sampling_Sequence : "rad_lwsw"
+
+  stats :
+    - [224.86646, 48.011627]
+OMEGA500 :
+  atts :
+    Sampling_Sequence : "rad_lwsw"
+    units : "Pa/s"
+    long_name : "Vertical velocity at 500 mbar pressure surface"
+    cell_methods: "time: mean"
+  stats :
+    - [-0.00053095096, 0.09604603]
+PRECT :
+  atts :
+    Sampling_Sequence : "rad_lwsw"
+    units : "m/s"
+    long_name : "Total (convective and large-scale) precipitation rate (liq + ice)"
+    cell_methods : "time: mean"
+  stats :
+    - [2.929617e-08, 5.7031237e-08]
+
+T250 :
+  atts :
+    p : 250.0
+    cell_methods : "time: mean"
+    long_name : "Temperature"
+    units : "K"
+    mdims : 1
+    time : 0.0
+  stats :
+    - [219.75917, 8.456115]
+U200 :
+  atts :
+    Sampling_Sequence : "rad_lwsw"
+    units : "m/s"
+    long_name : "Zonal wind at 200 mbar pressure surface"
+    cell_methods : "time: mean"
+  stats :
+    - [13.888344, 17.738035]
+
+U250 :
+  atts :
+    time : 0.0
+    mdims : 1
+    units : "m/s"
+    long_name : "Zonal wind"
+    cell_methods : "time: mean"
+    p : 250.0
+  stats :
+    - [12.897135, 17.588223]
+U850 :
+  atts :
+    Sampling_Sequence : "rad_lwsw"
+    units : "m/s"
+    long_name : "Zonal wind at 850 mbar pressure surface"
+    cell_methods : "time: mean"
+  stats :
+    - [1.4072706, 8.031601]
+V200 :
+  atts :
+    units : "m/s"
+    long_name : "Meridional wind at 200 mbar pressure surface"
+    cell_methods : "time: mean"
+  stats :
+    - [-0.10729608, 11.274971]
+V850 :
+  atts :
+    lon : 0.0
+    lat : -90.0
+    lev : 2.501650543212891
+    time : 0.0
+    mdims : 1
+    units : "m/s"
+    long_name : "meridional wind at 850 hPa"
+    cell_methods : "time: mean"
+  stats :
+    - [0.06057823, 5.5419374]
+Z250 :
+  atts :
+    p : 250.0
+    cell_methods : "time: mean"
+    long_name : "Geopotential Height (above sea level)"
+    units : "m"
+    mdims : 1
+    time : 0.0
+  stats :
+    - [10259.143, 568.0995]
