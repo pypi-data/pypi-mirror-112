@@ -1,0 +1,32 @@
+BBC
+===
+
+.. image:: https://img.shields.io/pypi/v/BBC.svg
+    :target: https://pypi.python.org/pypi/BBC
+    :alt: Latest PyPI version
+
+.. image:: https://travis-ci.org/kragniz/cookiecutter-pypackage-minimal.png
+   :target: https://travis-ci.org/kragniz/cookiecutter-pypackage-minimal
+   :alt: Latest Travis CI build status
+
+Read BBC News
+
+Usage
+-----
+
+Installation
+------------
+
+Requirements
+^^^^^^^^^^^^
+
+Compatibility
+-------------
+
+Licence
+-------
+
+Authors
+-------
+
+`BBC` was written by `Khang Nguyen <khangvu.1109@gmail.com>`_.
