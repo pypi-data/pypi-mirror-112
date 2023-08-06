@@ -1,0 +1,6 @@
+[console_scripts]
+quilla = quilla:run
+
+[pytest11]
+quilla = pytest_quilla
+
