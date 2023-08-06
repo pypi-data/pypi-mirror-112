@@ -1,0 +1,10 @@
+README.md
+setup.py
+pymc3_quap.egg-info/PKG-INFO
+pymc3_quap.egg-info/SOURCES.txt
+pymc3_quap.egg-info/dependency_links.txt
+pymc3_quap.egg-info/top_level.txt
+quap/__init__.py
+quap/quap.py
+test/__init__.py
+test/test_quap.py
