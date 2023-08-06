@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: drukbam
+Version: 1.1.0
+Summary: Comandline plotting of sort,indexed bam files
+License: MIT
+Author: Stephan Holger Drukewitz
+Requires-Python: >=3.7.1,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cython (>=0.29,<0.30)
+Requires-Dist: matplotlib (>=3.4.2,<4.0.0)
+Requires-Dist: pandas (>=1.2.4,<2.0.0)
+Requires-Dist: pysam (>=0.16.0,<0.17.0)
+Requires-Dist: tqdm (>=4.61.1,<5.0.0)
