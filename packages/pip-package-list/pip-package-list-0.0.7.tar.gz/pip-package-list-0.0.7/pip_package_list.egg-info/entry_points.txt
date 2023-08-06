@@ -1,0 +1,3 @@
+[console_scripts]
+pip-package-list = pippackagelist.__main__:main
+
