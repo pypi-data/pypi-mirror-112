@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: many-world
+Version: 0.0.2
+Summary: Many-world Environment, for Object-centric RL
+Home-page: UNKNOWN
+Author: Ge Yang
+Author-email: ge.ike.yang@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: mujoco-py
+Requires-Dist: gym
+
+UNKNOWN
+
+
