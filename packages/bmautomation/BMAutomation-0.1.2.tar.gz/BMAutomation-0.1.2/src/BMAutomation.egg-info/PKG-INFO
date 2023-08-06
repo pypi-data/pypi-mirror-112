@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: BMAutomation
+Version: 0.1.2
+Summary: An Automation Tool for Benchamarking Automation.
+Home-page: https://github.com/YuudachiXMMY/BMAutomation
+Author: YuudachiXMMY
+Author-email: hwu9@uw.edu
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/YuudachiXMMY/BMAutomation/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# BMAutomation
+
+This is a test BenchmarkAutomation package. You can check it on [Github BMAutomation](https://github.com/YuudachiXMMY/BMAutomation).
+
+## Dependency
+This library utilizes these libraries `pyautogui`, `uiautomation`, `pywin32`.
+
+## TestPyPI
+Please check test packages on TestPyPI [here](https://test.pypi.org/project/BMAutomation/)
+
+If you are interested in using a test package, install the test package using
+```
+pip install -i https://test.pypi.org/simple/ BMAutomation
+```
+
