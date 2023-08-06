@@ -1,0 +1,3 @@
+[pytest11]
+tmreport = pytest_tmreport.plugin
+
