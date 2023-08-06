@@ -1,0 +1,10 @@
+
+[development]
+flake8
+isort
+oitnb
+
+[testing]
+pytest
+pytest-cov
+pytest-xdist
