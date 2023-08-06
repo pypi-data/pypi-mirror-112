@@ -1,0 +1,15 @@
+$def with (year, posts)
+$var title: $year
+
+<ul>
+$for post in posts:
+    $ p = post["resource"]
+    <li>
+    $ pt = discover_post_type(p)
+    $if pt == "note":
+        <big>$p["content"][0]</big>
+    $elif pt == "rsvp":
+        <big>RSVP'd <em>$p["rsvp"][0]</em> to
+        <a href=$p["url"][0]>$p["name"][0]</a></big>
+    <br><small>$p["published"][0]</small></li>
+</ul>
