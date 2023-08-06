@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gpt-utils
+Version: 0.0.7.1
+Summary: Collection of utilities for use with GPT-3
+Home-page: https://github.com/nelsonlove/gpt-utils
+Author: Nelson Love
+Author-email: nelson@nelson.love
+License: LICENSE.txt
+Project-URL: Bug Reports, https://github.com/nelsonlove/gpt-utils/issues
+Project-URL: Source, https://github.com/nelsonlove/gpt-utils/
+Platform: UNKNOWN
+License-File: LICENSE.txt
+Requires-Dist: transformers (~=4.8.2)
+Requires-Dist: openai (~=0.9.3)
+
+UNKNOWN
+
