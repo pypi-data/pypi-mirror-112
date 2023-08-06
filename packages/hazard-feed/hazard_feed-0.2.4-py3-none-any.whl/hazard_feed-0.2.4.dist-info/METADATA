@@ -1,0 +1,152 @@
+Metadata-Version: 2.1
+Name: hazard-feed
+Version: 0.2.4
+Summary: pogoda.by storm warning rss parser
+Home-page: https://github.com/hitnik/hazard_feed
+Author: Aleksandr Nikitin
+Author-email: hitnik@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiosmtplib (==1.1.4)
+Requires-Dist: asgiref (==3.3.1)
+Requires-Dist: async-timeout (==3.0.1)
+Requires-Dist: attrs (==20.3.0)
+Requires-Dist: autobahn (==20.7.1)
+Requires-Dist: Automat (==20.2.0)
+Requires-Dist: beautifulsoup4 (==4.9.3)
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: cffi (==1.14.4)
+Requires-Dist: channels (==3.0.2)
+Requires-Dist: channels-redis (==3.2.0)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: constantly (==15.1.0)
+Requires-Dist: coreapi (==2.3.3)
+Requires-Dist: coreschema (==0.0.4)
+Requires-Dist: croniter (==0.3.36)
+Requires-Dist: cryptography (==3.3.1)
+Requires-Dist: daphne (==3.0.1)
+Requires-Dist: Django (==3.1.4)
+Requires-Dist: django-cors-headers (==3.5.0)
+Requires-Dist: django-filter (==2.4.0)
+Requires-Dist: django-rq (==2.4.1)
+Requires-Dist: django-tinymce (==3.2.0)
+Requires-Dist: djangorestframework (==3.12.2)
+Requires-Dist: drf-spectacular (==0.11.1)
+Requires-Dist: feedparser (==6.0.2)
+Requires-Dist: gunicorn (==20.0.4)
+Requires-Dist: h11 (==0.8.1)
+Requires-Dist: h2 (==3.2.0)
+Requires-Dist: hiredis (==1.1.0)
+Requires-Dist: hpack (==3.0.0)
+Requires-Dist: http3 (==0.6.7)
+Requires-Dist: httptools (==0.1.1)
+Requires-Dist: hyperframe (==5.2.0)
+Requires-Dist: hyperlink (==20.0.1)
+Requires-Dist: idna (==2.10)
+Requires-Dist: incremental (==17.5.0)
+Requires-Dist: inflection (==0.5.1)
+Requires-Dist: itypes (==1.2.0)
+Requires-Dist: Jinja2 (==2.11.2)
+Requires-Dist: joblib (==0.17.0)
+Requires-Dist: jsonschema (==3.2.0)
+Requires-Dist: MarkupSafe (==1.1.1)
+Requires-Dist: msgpack (==1.0.1)
+Requires-Dist: natsort (==7.1.0)
+Requires-Dist: nltk (==3.5)
+Requires-Dist: oauthlib (==3.1.0)
+Requires-Dist: packaging (==20.7)
+Requires-Dist: pip-review (==1.1.0)
+Requires-Dist: psycopg2 (==2.8.6)
+Requires-Dist: pyasn1 (==0.4.8)
+Requires-Dist: pyasn1-modules (==0.2.8)
+Requires-Dist: pycparser (==2.20)
+Requires-Dist: PyHamcrest (==2.0.2)
+Requires-Dist: PyJWT (==1.7.1)
+Requires-Dist: pyOpenSSL (==20.0.0)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: pyrsistent (==0.17.3)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2020.4)
+Requires-Dist: PyYAML (==5.3.1)
+Requires-Dist: redis (==3.5.3)
+Requires-Dist: regex (==2020.11.13)
+Requires-Dist: requests (==2.25.0)
+Requires-Dist: requests-oauthlib (==1.3.0)
+Requires-Dist: rfc3986 (==1.4.0)
+Requires-Dist: rq (==1.8.1)
+Requires-Dist: rq-scheduler (==0.11.0)
+Requires-Dist: ruamel.yaml (==0.16.12)
+Requires-Dist: ruamel.yaml.clib (==0.2.2)
+Requires-Dist: selenium (==3.141.0)
+Requires-Dist: service-identity (==18.1.0)
+Requires-Dist: sgmllib3k (==1.0.0)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: soupsieve (==2.1)
+Requires-Dist: sqlparse (==0.4.1)
+Requires-Dist: tqdm (==4.54.1)
+Requires-Dist: Twisted (==20.3.0)
+Requires-Dist: txaio (==20.4.1)
+Requires-Dist: uritemplate (==3.0.1)
+Requires-Dist: urllib3 (==1.26.2)
+Requires-Dist: uvicorn (==0.13.1)
+Requires-Dist: uvloop (==0.14.0)
+Requires-Dist: websockets (==8.1)
+Requires-Dist: whitenoise (==5.2.0)
+Requires-Dist: zope.interface (==5.2.0)
+
+=====
+Hazard_feed
+=====
+
+Hazard_feed is a Django app to get storm warnings from http://www.pogoda.by conduct Web-based polls and send notifications 
+by email to subscribed recipents.
+
+
+
+Quick start
+-----------
+
+1. Add "hazard_feed", "corsheaders' and others to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...
+        'corsheaders',
+        'django_rq',
+        'tinymce',
+        'rest_framework',
+        'drf_yasg',
+        'hazard_feed',
+    ]
+
+2. Define next email settings in settings.py or your environment viriables:
+	        WEATHER_EMAIL_SMTP_HOST
+			WEATHER_EMAIL_SMTP_PORT
+            WEATHER_USE_TSL
+            WEATHER_EMAIL_HOST_USER 
+			WEATHER_EMAIL_HOST_PASSWORD
+			
+3. Define in settings.py
+			WEATHER_EMAIL_FROM
+			
+4. Add "corsheaders' settings to your settings.py 
+
+     CORS_ORIGIN_ALLOW_ALL = True
+
+			
+5. Define django_rq settings
+
+6. Start rqworker and rqscheduler
+
+7. For websocket works add channels redis and configure 
+it as channels documentation 		
+
+8. Run `python manage.py migrate` to create the azard_feed models.
+
+
