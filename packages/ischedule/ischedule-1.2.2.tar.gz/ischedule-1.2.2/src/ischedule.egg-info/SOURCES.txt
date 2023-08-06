@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/ischedule/__init__.py
+src/ischedule/ischedule.py
+src/ischedule.egg-info/PKG-INFO
+src/ischedule.egg-info/SOURCES.txt
+src/ischedule.egg-info/dependency_links.txt
+src/ischedule.egg-info/top_level.txt
