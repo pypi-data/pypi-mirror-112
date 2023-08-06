@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+sweetpie/__init__.py
+sweetpie/readers.py
+sweetpie/sequence_processor.py
+sweetpie/tokenizers.py
+sweetpie.egg-info/PKG-INFO
+sweetpie.egg-info/SOURCES.txt
+sweetpie.egg-info/dependency_links.txt
+sweetpie.egg-info/top_level.txt
+tests/__init__.py
+tests/readers_test.py
+tests/sequence_processor_test.py
