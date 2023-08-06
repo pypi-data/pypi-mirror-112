@@ -1,0 +1,11 @@
+numpy==1.19.5
+scipy>=1.5.1
+pandas>=1.2.4
+redvox>=3.0.0
+libwwz>=1.0.1
+obspy
+libquantum
+matplotlib>=3.4.2
+librosa
+pymap3d
+fastkml
