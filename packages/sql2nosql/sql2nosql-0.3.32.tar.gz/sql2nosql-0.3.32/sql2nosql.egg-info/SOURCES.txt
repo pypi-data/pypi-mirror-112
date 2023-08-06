@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+sql2nosql/__init__.py
+sql2nosql/errors.py
+sql2nosql/utils.py
+sql2nosql.egg-info/PKG-INFO
+sql2nosql.egg-info/SOURCES.txt
+sql2nosql.egg-info/dependency_links.txt
+sql2nosql.egg-info/requires.txt
+sql2nosql.egg-info/top_level.txt
+test/test_migrator.py
