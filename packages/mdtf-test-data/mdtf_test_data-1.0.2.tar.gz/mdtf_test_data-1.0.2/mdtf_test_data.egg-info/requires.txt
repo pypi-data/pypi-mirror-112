@@ -1,0 +1,5 @@
+cftime
+envyaml
+netcdf4
+numpy>=1.17
+xarray>=0.17.0
