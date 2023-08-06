@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: anodict
+Version: 0.0.2
+Summary: Annotate your Python dict
+Home-page: https://github.com/keuin/anodict
+Author: Keuin
+Author-email: keuinx@gmail.com
+License: BSD 2-Clause License
+Keywords: dict,deserialize,annotation,json
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# anodict: annotated dict
+
+[![Pyversions](https://img.shields.io/pypi/pyversions/anodict.svg?style=flat-square)](https://pypi.org/project/anodict/)
+
+Convert a `dict` to an annotated object.
+
+# Usage
+
+## Installation
+
+```shell
+pip install anodict
+```
+
+## Example
+
+```python
+import anodict
+
+
+class Person:
+    name: str
+    age: int
+
+person = anodict.dict_to_class({
+    "name": "bob",
+    "age": 23
+}, Person)
+
+print("type:", type(person))
+print("name:", person.name)
+print("age:", person.age)
+```
+
+will give:
+
+```
+type: <class '__main__.Person'>
+name: bob
+age: 23
+```
+
