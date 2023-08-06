@@ -1,0 +1,7 @@
+tensorflow>=2.4.1
+Keras>=2.4.3
+pandas>=1.2.3
+numpy>=1.19.5
+sklearn>=0.0
+joblib>=0.16.0
+pydot>=1.4.2
