@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+target-version = ['py37', 'py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | venv
+  | _build
+  | build
+  | dist
+)/
+'''
+
+[tool.coverage.run]
+branch = true
+source = ["."]
+omit = [
+  ".tox/*",
+  "*/tests/*"
+]
+
+[tool.tox]
+legacy_tox_ini = '''
+[tox]
+envlist = clean,py37,py38,py39,report
+skipsdist = True
+
+[testenv]
+deps =
+    pytest-cov
+    pytest-randomly
+    pytest-xdist
+    .[test]
+depends =
+    {py37,py38,py39}: clean
+    report: py37,py38,py39
+commands = pytest {posargs: -n 4 --cov --cov-append --cov-report=}
+
+[testenv:report]
+deps = coverage[toml]
+skip_install = true
+commands =
+    coverage report
+
+[testenv:clean]
+deps = coverage[toml]
+skip_install = true
+commands = coverage erase
+'''
