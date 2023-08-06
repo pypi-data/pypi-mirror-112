@@ -1,0 +1,3 @@
+[console_scripts]
+clang-parse=ccm_clang_tools.clang_parse:run_clang_parse
+

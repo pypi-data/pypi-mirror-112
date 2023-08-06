@@ -1,0 +1,12 @@
+ccm_clang_tools/LICENSE,sha256=nj-76iB3E-oo7QHth0N_INmUBO4-HzzPmn3uv5Ro00k,1168
+ccm_clang_tools/LLVM-LICENSE,sha256=srg1mTaR-MV6Pmls92JF-DgaIM_7UhvBixXDINEaBcE,1936
+ccm_clang_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ccm_clang_tools/build_plugin.py,sha256=YfahNt1bRr4zEN-cMZL8AmksRqva9UbCT4bBU9nBUuA,297
+ccm_clang_tools/clang_parse.py,sha256=WrLEaDnnc2bgdlHDBMn9Y2KzgzKtDYrCdLRFGAzjaoE,4686
+ccm_clang_tools/get_clang_tool.py,sha256=9DL4myXlikIHOnW9lrWQpR-IMTH29ZxLdjA2WT7R4FI,911
+ccm_clang_tools/utils.py,sha256=Z3Clug8HqBuc1b28faQMTlQH7I3Nv5nO5iiixBLSXd4,412
+ccm_clang_tools-0.1.0.dist-info/entry_points.txt,sha256=UGgL6EBD5vMdYkFMeYOo1ZaZ0l5k-3JilPytr4EjbYk,75
+ccm_clang_tools-0.1.0.dist-info/WHEEL,sha256=GtOe9Z1UnXuAnkQzfkp5LrqqbvoFlVqRVeimTb4jglc,87
+ccm_clang_tools-0.1.0.dist-info/METADATA,sha256=46Nwop9JtiyZslXa9CmvnVtFw6rRkS1j7tX3f48sydc,446
+ccm_clang_tools-0.1.0.dist-info/LICENSE,sha256=nj-76iB3E-oo7QHth0N_INmUBO4-HzzPmn3uv5Ro00k,1168
+ccm_clang_tools-0.1.0.dist-info/RECORD,,
