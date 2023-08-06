@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gym-discrete
+Version: 1.0.6
+Summary: A OpenAI Gym Env for discrete
+Home-page: UNKNOWN
+Author: Claudia Viaro
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: gym
+
+# gym-discrete
+
+
