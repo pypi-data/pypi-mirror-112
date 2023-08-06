@@ -1,0 +1,8 @@
+deemix==2.0.16
+deezer-py==0.0.15
+packaging~=20.9
+requests~=2.25.1
+click~=8.0.1
+setuptools~=56.2.0
+PlexAPI~=4.5.2
+tqdm~=4.61.0
