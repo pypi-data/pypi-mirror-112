@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: palkit
+Version: 0.3.6
+Summary: Useful functions.
+Home-page: https://github.com/predictive-analytics-lab/palkit
+License: Apache-2.0
+Keywords: typing,python
+Author: PAL
+Author-email: info@predictive-analytics-lab.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Typing :: Typed
+Provides-Extra: ci
+Provides-Extra: hydra
+Provides-Extra: torch
+Requires-Dist: hydra-core (>=1.1.0,<2.0.0); extra == "hydra"
+Requires-Dist: numpy (>=1.20.3,<2.0.0); extra == "ci"
+Requires-Dist: pytorch-lightning; extra == "torch"
+Requires-Dist: torch (>=1.8,<2.0); extra == "ci" or extra == "torch"
+Project-URL: Repository, https://github.com/predictive-analytics-lab/palkit
+Description-Content-Type: text/markdown
+
+# PAL kit
+
+This is a collection of useful functions for code that we write in our group.
+
+## Install
+
+Run
+```
+pip install palkit
+```
+
+or install directly from GitHub:
+```
+pip install git+https://github.com/predictive-analytics-lab/palkit.git@main
+```
+
