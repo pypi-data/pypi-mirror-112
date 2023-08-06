@@ -1,0 +1,13 @@
+pyzmq
+typer
+click<8
+python-dateutil
+
+[test]
+mypy
+flake8
+black
+pytest
+pytest-asyncio
+types-python-dateutil
+kernel_driver
