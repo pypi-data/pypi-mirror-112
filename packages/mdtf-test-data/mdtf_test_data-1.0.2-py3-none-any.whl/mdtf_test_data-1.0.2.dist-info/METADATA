@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: mdtf-test-data
+Version: 1.0.2
+Summary: Tools for working with MDTF Diagnostics test data sets
+Home-page: https://github.com/jkrasting/mdtf_test_data
+Author: MDTF Development Team
+Author-email: oar.gfdl.mdtf@noaa.gov
+License: UNKNOWN
+Keywords: process-oriented diagnostics climate weather mdtf
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: Public Domain
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+Requires-Dist: cftime
+Requires-Dist: envyaml
+Requires-Dist: netcdf4
+Requires-Dist: numpy (>=1.17)
+Requires-Dist: xarray (>=0.17.0)
+
+
+**mdtf_test_data** is a Python package in the public domain
+that processes and generates coarse-resolutions datasets
+that are suitable for testing process-oriented diagnostics
+that are part of the `Model Diagnostics Task Force Package
+<https://github.com/NOAA-GFDL/MDTF-diagnostics>`_.
+
+The package provides two types of functionality:
+
+1. Coarsening the horizontal resolution of existing data
+2. Generating synthetic NCAR or GFDL-formatted data
+
+More Information
+----------------
+- Source code: `<http://github.com/jkrasting/mdtf_test_data>`_
+

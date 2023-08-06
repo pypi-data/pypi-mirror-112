@@ -1,0 +1,11 @@
+# input data file for generating 3-hourly data using NCAR/CESM naming conventions
+variables :
+  name :
+    - "PRECT"
+PRECT :
+  atts :
+    units : "m/s"
+    long_name : "Total (convective and large-scale) precipitation rate (liq + ice)"
+    cell_methods : "time: mean"
+  stats :
+    - [2.6630838e-08, 6.908e-08]
