@@ -1,0 +1,14 @@
+cloud_sql_python_connector-0.2.1-py3.8-nspkg.pth,sha256=b0D5dZk3RUzK54tZ9iZDvLm7u8ltc5EzYrGCmhsuoNw,1698
+google/cloud/sql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+google/cloud/sql/connector/__init__.py,sha256=ihTk20ffUPP6WZGIUmC8jLRtkPXFfWXBmtbwWL_cPsY,930
+google/cloud/sql/connector/connector.py,sha256=F5wFyk4_tYtE4032u-UreNSbzzMEJ753dI8oZu4qiZo,3660
+google/cloud/sql/connector/instance_connection_manager.py,sha256=7GR2RPBG6ZNc0qYcDNe2aFO1QRgqABrhMwpuWfUgThk,19257
+google/cloud/sql/connector/refresh_utils.py,sha256=HN3oc7_wnjjPhn6lgIVwE8rUfBexZQDSEgFytq6G9Go,5424
+google/cloud/sql/connector/utils.py,sha256=GBTxEc_adsSAR5YsIOu0BP8Dfwbhhp7L2Suiud2Tdls,2651
+google/cloud/sql/connector/version.py,sha256=sFQXglh1_5dO8YA3f0twTok6YryoJVQj_K9wxDfMujk,597
+cloud_sql_python_connector-0.2.1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+cloud_sql_python_connector-0.2.1.dist-info/METADATA,sha256=a3SqNRZKq9Gu6TscFASCI3gXGIPZvXKRWtZLnq4j_JA,7670
+cloud_sql_python_connector-0.2.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+cloud_sql_python_connector-0.2.1.dist-info/namespace_packages.txt,sha256=v8IaYqRE2a0onAGJIpZeFkkH83wXSWZRR9eOyfMwoTc,20
+cloud_sql_python_connector-0.2.1.dist-info/top_level.txt,sha256=_1QvSJIhFAGfxb79D6DhB7SUw2X6T4rwnz_LLrbcD3c,7
+cloud_sql_python_connector-0.2.1.dist-info/RECORD,,
