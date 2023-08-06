@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "map_analyser"
+version = "0.1.6"
+description = ""
+authors = ["Simon Navratil <navratil.simon@gmail.com>"]
+packages = [
+    { include = "map_analyser" },
+    { include = "map_analyser/maplib" },
+    { include = "map_analyser/mapanalyser" },
+    { include = "map_analyser/lib" },
+    { include = "map_analyser/app" }
+]
+repository = "https://github.com/maischon/Bc"
+
+
+[tool.poetry.scripts]
+cli_script = "map_analyser.__main__:main"
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+numpy = "^1.20.1"
+scipy = "^1.6.0"
+Pillow = "^8.1.0"
+cvxpy = "^1.1.10"
+cvxopt = "^1.2.5"
+Mosek = "^9.2.37"
+pyclipper = "^1.2.1"
+sect = "^0.5.0"
+tripy = "^1.0.0"
+func-timeout = "^4.3.5"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.7.0"
+matplotlib = "^3.4.1"
+pyinstaller = "^4.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
