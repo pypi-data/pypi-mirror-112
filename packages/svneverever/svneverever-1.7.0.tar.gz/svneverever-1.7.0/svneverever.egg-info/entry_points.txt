@@ -1,0 +1,3 @@
+[console_scripts]
+svneverever = svneverever.__main__:main
+
