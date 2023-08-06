@@ -1,0 +1,3 @@
+[console_scripts]
+vaip = vaip.cli:main
+
