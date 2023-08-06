@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: abhiprime
+Version: 1.2.2
+Summary: A program to check if the given number is a prime number or not
+Home-page: UNKNOWN
+Author: Abhishek Singh
+Author-email: abhisheksingh@ggits.org
+License: UNKNOWN
+Keywords: primenumber
+Platform: UNKNOWN
+
+This is an efficient prime number tester program created to check if the given number is a prime number or not.
+
+Change Log
+==========
+
+1.2.2(09/07/2021)
+------------------
+- Fourth Release
+
+
