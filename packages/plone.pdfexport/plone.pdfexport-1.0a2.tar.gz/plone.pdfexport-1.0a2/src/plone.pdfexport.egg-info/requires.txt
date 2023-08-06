@@ -1,0 +1,13 @@
+beautifulsoup4
+plone.api>=1.8.4
+plone.app.dexterity
+plone.restapi<8.0.0
+setuptools
+weasyprint
+z3c.jbot
+
+[test]
+plone.app.contenttypes
+plone.app.robotframework[debug]
+plone.app.testing
+plone.testing>=5.0.0
