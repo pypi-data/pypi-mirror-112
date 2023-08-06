@@ -1,0 +1,116 @@
+from typing import Union
+import asyncio
+from datetime import datetime
+import json
+
+from pydantic import BaseModel, Field, Json
+import uvloop
+import requests
+
+from config import SERVER_CREDENTIALS, CLIENT_CREDENTIALS, LOCAL_INFO
+
+# Setup UvLoop
+uvloop.install()
+
+# Event Loop
+LOOP = asyncio.get_event_loop()
+
+
+class DataModel(BaseModel):
+    app_name: str
+    instance_name: str
+    data: dict
+    timestamp: str
+
+
+class LoggerClient:
+    """ Logger Client is reponsible to sent logging messages to client server.
+    """
+
+    def __init__(self, client_name, app_name, server_uri) -> None:
+        self.client_name = client_name
+        self.app_name = app_name
+        self._connection_uri = f"{server_uri}"
+
+    def _log(self, level, msg) -> None:
+        msg_dict = {
+            'content': msg,
+            "message_level": level
+        }
+        data = DataModel(
+            app_name=self.app_name,
+            instance_name=self.client_name,
+            data=msg_dict,
+            timestamp= datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+            )
+        self._load_and_log()
+        LOOP.run_until_complete(self._send(data))
+
+    def _store(self, data: DataModel) -> None:
+        storing_file = open(LOCAL_INFO["offline_filepath"], "a")
+        try:
+           storing_file.write(data.json() + "\n")
+        finally:
+            storing_file.close()
+    
+    def _load_and_log(self) -> None:
+        storing_file = open(LOCAL_INFO["offline_filepath"], "r+")
+        string_messages = storing_file.read().splitlines()
+
+        if len(string_messages) < 1:
+            return None
+
+        storing_file.close()
+        erasing_file = open(LOCAL_INFO["offline_filepath"], "w")
+        ofline_messages = [
+            DataModel.parse_raw(string_message) for string_message in string_messages]
+
+        for ofline_message in ofline_messages:
+            LOOP.run_until_complete(self._send(ofline_message))
+
+    async def _send(self, data: DataModel) -> None:
+        try:
+            response_message = requests.post(
+                self._connection_uri,
+                json=data.dict())
+
+            if response_message.status_code != 200:
+                self._store(data)
+        except requests.exceptions.ConnectionError:
+            self._store(data)
+
+
+    def debug(self, msg) -> None:
+        self._log("DEBUG", msg)
+
+    def info(self, msg) -> None:
+        self._log("INFO", msg)
+
+    def warning(self, msg) -> None:
+        self._log("WARNING", msg)
+
+    def error(self, msg) -> None:
+        self._log("ERROR", msg)
+
+    def critical(self, msg) -> None:
+        self._log("CRITICAL", msg)
+
+    def teardown(self) -> None:
+        LOOP.run_until_complete(self._disco())
+
+    @classmethod
+    def setup(cls, client_name, app_name, server_uri):
+        c = cls(client_name, app_name, server_uri)
+        cls.is_connected = True
+        return c
+
+
+if __name__ == "__main__":
+    client = LoggerClient.setup(
+        CLIENT_CREDENTIALS['client_name'],
+        CLIENT_CREDENTIALS['app_name'],
+        SERVER_CREDENTIALS['url']
+    )
+    for x in range(5):
+        client.info(f"oie {x}")
+    client.debug('{"b": 1}')
