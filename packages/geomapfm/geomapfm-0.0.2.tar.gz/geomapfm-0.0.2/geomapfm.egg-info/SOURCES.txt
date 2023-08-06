@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+geomapfm/__init__.py
+geomapfm/geomapfm.py
+geomapfm.egg-info/PKG-INFO
+geomapfm.egg-info/SOURCES.txt
+geomapfm.egg-info/dependency_links.txt
+geomapfm.egg-info/not-zip-safe
+geomapfm.egg-info/top_level.txt
