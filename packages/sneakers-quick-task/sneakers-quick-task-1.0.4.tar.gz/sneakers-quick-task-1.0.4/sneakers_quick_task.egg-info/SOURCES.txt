@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+sneakers_quick_task.egg-info/PKG-INFO
+sneakers_quick_task.egg-info/SOURCES.txt
+sneakers_quick_task.egg-info/dependency_links.txt
+sneakers_quick_task.egg-info/top_level.txt
+sneakersaio/__init__.py
+sneakersaio/quicktask.py
