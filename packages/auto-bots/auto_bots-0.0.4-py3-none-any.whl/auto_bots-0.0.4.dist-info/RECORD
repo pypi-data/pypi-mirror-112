@@ -1,0 +1,17 @@
+AutoTS/AutoTS.py,sha256=KVPR1PQFvAPg1ZX6b8dAyjKlBybOJ5zXs19OkwCWVO4,24505
+AutoTS/__init__.py,sha256=lKsIM6yvrOxhldbDcTOQpE6f_a6Qa1CEEFlH1WEsGXk,26
+AutoTS/utils/CandidateModel.py,sha256=lghVsba_gldMacHEC0KCkQv924v5Ci01xc3FOPOnxxk,205
+AutoTS/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AutoTS/utils/error_metrics.py,sha256=e05Zr72jsQvbPJ1pTeCUy88F45hkkLKhGZWj626SiUY,975
+AutoTS/utils/validation.py,sha256=AFYpY97z8966R06lFIpPdaJl7z1QzwHEFmyovnLrNf8,2670
+auto_bots/AutoTS.py,sha256=zZ3XpK0dJOzbdGaR3l0sT0lx2m1T2c4cPW1mOJJSEOo,26033
+auto_bots/__init__.py,sha256=lKsIM6yvrOxhldbDcTOQpE6f_a6Qa1CEEFlH1WEsGXk,26
+auto_bots/utils/CandidateModel.py,sha256=lghVsba_gldMacHEC0KCkQv924v5Ci01xc3FOPOnxxk,205
+auto_bots/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+auto_bots/utils/error_metrics.py,sha256=e05Zr72jsQvbPJ1pTeCUy88F45hkkLKhGZWj626SiUY,975
+auto_bots/utils/validation.py,sha256=AFYpY97z8966R06lFIpPdaJl7z1QzwHEFmyovnLrNf8,2670
+auto_bots-0.0.4.dist-info/LICENSE,sha256=SiSJBNC9GgFzixTC3vDNpFjOHvHP2f_Y7Tu7lpKltQQ,1069
+auto_bots-0.0.4.dist-info/METADATA,sha256=wTT-eEv64GeGzM3j7OYRGVGb47W9F65oLeefLgbxJWI,1820
+auto_bots-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+auto_bots-0.0.4.dist-info/top_level.txt,sha256=IAPWj1YChk_kdQie_glb24rlXPF73Aw0xB9r_IQTPe0,10
+auto_bots-0.0.4.dist-info/RECORD,,
