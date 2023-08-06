@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mindscope_utilities/__init__.py
+mindscope_utilities/general_utilities.py
+mindscope_utilities/plotting_utilities.py
+mindscope_utilities.egg-info/PKG-INFO
+mindscope_utilities.egg-info/SOURCES.txt
+mindscope_utilities.egg-info/dependency_links.txt
+mindscope_utilities.egg-info/requires.txt
+mindscope_utilities.egg-info/top_level.txt
+mindscope_utilities/behavior/__init__.py
+mindscope_utilities/visual_behavior_ophys/__init__.py
+mindscope_utilities/visual_behavior_ophys/data_formatting.py
