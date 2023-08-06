@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: kuiper
+Version: 0.5.4
+Summary: A terminal-based dating application for UTD students
+Home-page: https://github.com/CharlesAverill/kuiper
+Author: CharlesAverill
+Author-email: charlesaverill20@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (==5.3)
+Requires-Dist: sqlalchemy (==1.4.20)
+Requires-Dist: websockets (==9.1)
+Description-Content-Type: text/markdown
+
+# Kuiper
+
+A terminal-based dating application for UTD students, built with the `curses` api
+
+## Usage
+```bash
+$ pip install kuiper # Install
+$ kuiper             # Start the TUI
+$ kuiper -h          # View the help menu
+```
+
+## Inspiration
+[UTD Bruh Moments IG Post](https://www.instagram.com/p/CRCJhEmpbI0/)
+
+[Original Reddit Post](https://www.reddit.com/r/utdallas/comments/od9roi/how_easy_is_it_to_find_men_above_the_age_of_23_at/)
+
