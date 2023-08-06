@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: aihubcli
+Version: 1.0.0
+Summary: A simple cli utility to generate ML project structure for quickly starting ML projects
+Home-page: https://github.com/vikramsoni2/aihubcli
+Author: Vikram Soni
+Author-email: vikram9880@gmail.com
+License: MIT
+Description: ### Project Structure for MLflow integrated ML Projects
+        
+        This cli tool generates the following directory structure for quickstart ML projects
+        
+        installaton:  
+        
+            pip install aihubcli
+        
+        example use:  
+            
+            aihubcli create mytestproject
+            
+        
+        It generates the project with following structure
+        
+            Project
+            |
+            +--- Input
+            |    |
+            |    +--- raw               Raw data here
+            |    |
+            |    +--- interim           Any intermediate data, to pause and continue experiments
+            |    |
+            |    +--- processed         Processed data ready for ML pipeline
+            |
+            +--- output
+            |    |
+            |    +--- models             Model pickle or model weights stored here
+            |    |
+            |    +--- artifacts         Serialized artifacts like LabelEncoder, Vectorizer etc
+            |    |
+            |    +--- images            All plots and visualizations goes here
+            |    |
+            |    +--- Results           If the results needs to be stored for review, save here
+            |
+            +--- notebooks              All notebooks and experiments resides here
+            |
+            +--- src                    Final program, with training and prediction pipeline
+            |
+            |
+            README.md                   Description and instruction about the project
+            MLProject                   MLflow project file. If you want to use this directory as MLflow project
+            Requirements.txt            python dependencies
+            Config.yml                  configuration key values in yaml format
+         
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown

@@ -1,0 +1,12 @@
+README.md
+setup.py
+aihubcli/__init__.py
+aihubcli/__main__.py
+aihubcli/creator.py
+aihubcli.egg-info/PKG-INFO
+aihubcli.egg-info/SOURCES.txt
+aihubcli.egg-info/dependency_links.txt
+aihubcli.egg-info/entry_points.txt
+aihubcli.egg-info/requires.txt
+aihubcli.egg-info/top_level.txt
+aihubcli/templates/default.zip
