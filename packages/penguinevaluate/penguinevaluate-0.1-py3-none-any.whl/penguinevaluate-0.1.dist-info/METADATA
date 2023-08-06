@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: penguinevaluate
+Version: 0.1
+Summary: assesses books sold after publicity or marketing
+Home-page: https://github.com/puk/marketing-evaluation
+Author: Jessica Harris
+Author-email: jharris2@penguinrandomhouse.co.uk
+License: ?
+Platform: UNKNOWN
+Requires-Dist: causalimpact
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tslearn
+Requires-Dist: sklearn
+
+UNKNOWN
+
+
