@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: webpage2telegraph
+Version: 2021.7.14
+Summary: Transfer webpage to Telegraph archive.
+Home-page: https://github.com/NullPointerMaker/webpage2telegraph.adapter
+Author: NullPointerMaker
+License: UNKNOWN
+Description: # Webpage to Telegraph Adapter
+        
+        Adapter library to [Export to Telegraph](https://github.com/gaoyunzhi/export_to_telegraph): Transfer webpage to
+        Telegraph archive.  
+        Hacking with monkey patches.
+        
+        ## Usage
+        
+        ```
+        import webpage2telegraph
+        webpage2telegraph.token = YOUR_TELEGRAPH_TOKEN
+        telegraph_url = webpage2telegraph.transfer(webpage_url)
+        ```
+        
+        If transfer failed, `telegraph_url` will be `None`.
+        
+        ## Install
+        
+        ```
+        pip3 install webpage2telegraph
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
