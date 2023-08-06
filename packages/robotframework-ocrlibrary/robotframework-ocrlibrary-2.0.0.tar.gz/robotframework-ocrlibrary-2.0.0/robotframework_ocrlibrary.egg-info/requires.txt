@@ -1,0 +1,4 @@
+robotframework>=3.0
+opencv-python>=4.0.0.21
+pytesseract>=0.3.8
+numpy>=1.19.3
