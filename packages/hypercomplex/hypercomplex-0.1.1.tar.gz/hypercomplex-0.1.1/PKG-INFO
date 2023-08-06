@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hypercomplex
+Version: 0.1.1
+Summary: Library for arbitrary hypercomplex numbers following the Cayley-Dickson construction.
+Home-page: https://github.com/discretegames/hypercomplex
+Author: discretegames
+Author-email: discretizedgames@gmail.com
+License: MIT
+Description: # Hypercomplex Python Math
+        
+        TODO
+Keywords: python,math,complex,number,hypercomplex,Cayley,Dickson,construction,algebra,quaternion,octonion,sedenion
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
