@@ -1,0 +1,4 @@
+[console_scripts]
+uhb-test-launcher = ultimate_hosts_blacklist.test_launcher.cli:tool
+ultimate-hosts-blacklist-test-launcher = ultimate_hosts_blacklist.test_launcher.cli:tool
+
