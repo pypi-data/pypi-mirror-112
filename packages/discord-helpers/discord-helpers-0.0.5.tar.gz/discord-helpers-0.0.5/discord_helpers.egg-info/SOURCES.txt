@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+discord/ext/helpers/__init__.py
+discord/ext/helpers/chatbot.py
+discord/ext/helpers/database.py
+discord/ext/helpers/embed.py
+discord/ext/helpers/paginator.py
+discord/ext/helpers/requests.py
+discord/ext/helpers/status.py
+discord/ext/helpers/webhooks.py
+discord_helpers.egg-info/PKG-INFO
+discord_helpers.egg-info/SOURCES.txt
+discord_helpers.egg-info/dependency_links.txt
+discord_helpers.egg-info/requires.txt
+discord_helpers.egg-info/top_level.txt
