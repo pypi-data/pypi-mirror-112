@@ -1,0 +1,13 @@
+README.md
+__init__.py
+optimizo.py
+setup.py
+classes/add_instruction.py
+classes/bootstrap.py
+classes/minify.py
+classes/run_instructions.py
+optimizo.egg-info/PKG-INFO
+optimizo.egg-info/SOURCES.txt
+optimizo.egg-info/dependency_links.txt
+optimizo.egg-info/requires.txt
+optimizo.egg-info/top_level.txt
