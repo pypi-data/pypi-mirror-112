@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: rtp
+Version: 0.0.0
+Summary: A library for decoding/encoding rtp packets
+Home-page: https://github.com/bbc/rd-apmm-python-lib-rtp
+Author: James Sandford
+Author-email: james.sandford@bbc.co.uk
+License: apache-2.0
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: six
+Requires-Dist: flask
+Requires-Dist: mypy
+
+A library for decoding/encoding rtp packets
+
