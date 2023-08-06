@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: wordpressupdater
+Version: 0.5.15
+Summary: Discovers and updates wordpress instances by reading Apache2 virtualhost configuration
+Home-page: https://github.com/buanzo/wordpress-updater
+Author: Arturo "Buanzo" Busleiman
+Author-email: buanzo@buanzo.com.ar
+License: GPLv3
+Keywords: wordpress,wp-cli,wrapper,apache2,automagically,digitalocean,devops,sysadmin
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: Other
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6
+Requires-Dist: apacheconfig (==0.3.2)
+Requires-Dist: requests (>=2.20.0)
+
+Python module and CLI tool tool that reads Apache2 configuration files to let you automagically perform wp-cli updates and maintenance on discovered wordpress installations.
+
+
