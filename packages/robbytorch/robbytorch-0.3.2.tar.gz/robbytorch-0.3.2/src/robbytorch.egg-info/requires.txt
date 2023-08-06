@@ -1,0 +1,12 @@
+numpy
+matplotlib
+tqdm
+pandas
+seaborn
+livelossplot
+mypy
+mlflow
+dill
+pyinstrument
+ipywidgets
+opencv-python-headless
