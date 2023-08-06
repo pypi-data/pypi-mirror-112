@@ -1,0 +1,17 @@
+odoo/addons/ir_filters_multi_company/README.rst,sha256=pvjvQvX_W0tUrvKF-6KUoolH01TKydN6HcUulzRPnug,2741
+odoo/addons/ir_filters_multi_company/__init__.py,sha256=P9PWzjZ_CJYji7TWsNDHArxMhFvz1EB2aUPmKVmIBr0,70
+odoo/addons/ir_filters_multi_company/__manifest__.py,sha256=jdDUGcbpD4r0NOUwvsrhiq6iQuhIzB11TML3gn7pODI,564
+odoo/addons/ir_filters_multi_company/hooks/post_init_hook.py,sha256=kLTYkPOxzYZ377TcNQ47C6ajDkSQ2niFnidgcdlf2kw,300
+odoo/addons/ir_filters_multi_company/i18n/ir_filters_multi_company.pot,sha256=i-y8RtpziItNN8iPLE5Wiz3Cgfo269TG9e7NTIdxtdc,661
+odoo/addons/ir_filters_multi_company/models/__init__.py,sha256=iV65SN043jMwnG0wEYzBSyak3EiTzTj-3SiGK5TvUHM,25
+odoo/addons/ir_filters_multi_company/models/ir_filters.py,sha256=xDf1EH40s_uj14FyJFlIZebl1kTMn9g73rvov54kRWE,411
+odoo/addons/ir_filters_multi_company/readme/CONTRIBUTORS.rst,sha256=eg-pNPuCPWTyvQk7v-s8EauE_ev7JyxExZStt6tLNfI,46
+odoo/addons/ir_filters_multi_company/readme/DESCRIPTION.rst,sha256=WyUHPIPRRfBgNjThoc0vaIKcfONg-N8SfjR2ZEKkxjg,65
+odoo/addons/ir_filters_multi_company/security/ir_filters.xml,sha256=iPSumHIkEWsPnkvYYZ3bU818hh50yh4caQ7SGRK8yoU,507
+odoo/addons/ir_filters_multi_company/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/ir_filters_multi_company/static/description/index.html,sha256=Li7Gp6Ao67adqsP2Iswpbpl6W1E8jcRJ-FCZNvMqD1c,11856
+odoo/addons/ir_filters_multi_company/views/ir_filters.xml,sha256=T5QRi5fLnNqidzkWHKJV2_QpZ9zZurGfkFqMEpE1e5k,931
+odoo12_addon_ir_filters_multi_company-12.0.1.0.0.99.dev3.dist-info/METADATA,sha256=JAWJpw7btQog6ofNLyUioHW2fpz0gPhFetBr4TolcFE,3300
+odoo12_addon_ir_filters_multi_company-12.0.1.0.0.99.dev3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+odoo12_addon_ir_filters_multi_company-12.0.1.0.0.99.dev3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_ir_filters_multi_company-12.0.1.0.0.99.dev3.dist-info/RECORD,,
