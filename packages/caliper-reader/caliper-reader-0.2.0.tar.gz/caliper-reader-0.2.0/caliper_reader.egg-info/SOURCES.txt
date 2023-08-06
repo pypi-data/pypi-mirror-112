@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+caliper_reader.egg-info/PKG-INFO
+caliper_reader.egg-info/SOURCES.txt
+caliper_reader.egg-info/dependency_links.txt
+caliper_reader.egg-info/top_level.txt
+caliperreader/__init__.py
+caliperreader/caliperreader.py
+caliperreader/caliperstreamreader.py
+caliperreader/metadatadb.py
+caliperreader/readererror.py
+caliperreader/version.py
