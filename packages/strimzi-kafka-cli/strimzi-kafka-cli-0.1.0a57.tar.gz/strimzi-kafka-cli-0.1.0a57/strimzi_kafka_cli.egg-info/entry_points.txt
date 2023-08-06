@@ -1,0 +1,3 @@
+[console_scripts]
+kfk = kfk.main:kfk
+
