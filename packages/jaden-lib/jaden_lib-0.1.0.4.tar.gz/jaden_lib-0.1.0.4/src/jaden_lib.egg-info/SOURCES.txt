@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/jaden_lib/__init__.py
+src/jaden_lib/modify_file.py
+src/jaden_lib/print.py
+src/jaden_lib.egg-info/PKG-INFO
+src/jaden_lib.egg-info/SOURCES.txt
+src/jaden_lib.egg-info/dependency_links.txt
+src/jaden_lib.egg-info/top_level.txt
