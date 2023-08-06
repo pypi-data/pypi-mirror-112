@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+./pygtrans/ApiKeyTranslate.py
+./pygtrans/DetectResponse.py
+./pygtrans/LanguageResponse.py
+./pygtrans/Null.py
+./pygtrans/Translate.py
+./pygtrans/TranslateResponse.py
+./pygtrans/__init__.py
+pygtrans.egg-info/PKG-INFO
+pygtrans.egg-info/SOURCES.txt
+pygtrans.egg-info/dependency_links.txt
+pygtrans.egg-info/requires.txt
+pygtrans.egg-info/top_level.txt
