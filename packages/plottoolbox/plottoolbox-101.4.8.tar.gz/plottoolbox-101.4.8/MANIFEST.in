@@ -1,0 +1,9 @@
+include *.txt
+include VERSION
+include AUTHORS.rst
+include CONTRIBUTING.rst
+include LICENSE.txt
+include README.rst
+include plottoolbox/skill_metrics/README_SkillMetrics.txt
+include plottoolbox/skill_metrics/LICENSE_SkillMetrics.txt
+include plottoolbox/SciencePlots_styles/*
