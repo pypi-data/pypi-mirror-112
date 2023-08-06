@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "rezide"
+version = "0.9.0"
+description = ""
+authors = ["abstractlyZach <zach3lee@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+i3ipc = "^2.2.1"
+click = "^8.0.0"
+toml = "^0.10.2"
+
+[tool.poetry.dev-dependencies]
+coverage = {extras = ["toml"], version = "^5.5"}
+pytest-cov = "^2.12.0"
+flake8 = "^3.9.2"
+black = "^21.5b1"
+flake8-black = "^0.2.1"
+flake8-import-order = "^0.18.1"
+isort = "^5.8.0"
+flake8-bugbear = "^21.4.3"
+flake8-bandit = "^2.1.2"
+mypy = "^0.812"
+flake8-annotations = "^2.6.2"
+codecov = "^2.1.11"
+pytest = "^6"
+pytest-mock = "^3.6.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["rezide"]
+omit = [
+    # abstract functions so we never actually call their code
+    "src/rezide/utils/interfaces.py",
+    # external apis
+    "src/rezide/utils/sway.py",
+    "src/rezide/utils/filestore.py",
+]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+
+[tool.isort]
+profile = "google"
+
+[tool.poetry.scripts]
+rzd = "rezide.rezide:main"
+get-window-sizes = "rezide.get_window_sizes:main"
+get-tree = "rezide.get_tree:main"
+
+[tool.pytest.ini_options]
+addopts = "--exitfirst --verbosity=2"
+log_file_level = "DEBUG"
+markers = [
+    'e2e',
+]
