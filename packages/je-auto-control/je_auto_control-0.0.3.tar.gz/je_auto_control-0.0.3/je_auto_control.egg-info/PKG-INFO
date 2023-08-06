@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: je-auto-control
+Version: 0.0.3
+Summary: auto control alpha 0.0.3
+Home-page: https://github.com/JE-Chen/Python_AutoControl
+Author: JE-Chen
+Author-email: zenmailman@gmail.com
+License: UNKNOWN
+Description: #### you can use this lib to control windows mouse and keyboard
+        #### JEAutoControl.Mouse
+        *  Contains classes for control mouse 
+        #### JEAutoControl.Keyboard
+        *   Contains classes for keyboard classes
+        #### Detail
+        * Alpha version 0.0.3
+        * Run on windows
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Chinese (Traditional)
+Classifier: Operating System :: Microsoft
+Description-Content-Type: text/markdown
