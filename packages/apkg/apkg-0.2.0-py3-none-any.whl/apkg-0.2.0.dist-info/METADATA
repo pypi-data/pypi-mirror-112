@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: apkg
+Version: 0.2.0
+Summary: cross-distro upstream packaging automation tool
+Home-page: https://gitlab.nic.cz/packaging/apkg
+Author: Jakub Ružicka
+Author-email: jakub.ruzicka@nic.cz
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.nic.cz/packaging/apkg/-/issues
+Project-URL: Docs, https://apkg.readthedocs.io/
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Archiving :: Packaging
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: COPYING
+Requires-Dist: beautifulsoup4
+Requires-Dist: blessings
+Requires-Dist: cached-property
+Requires-Dist: click
+Requires-Dist: distro
+Requires-Dist: jinja2
+Requires-Dist: packaging
+Requires-Dist: requests
+Requires-Dist: toml
+
+# [apkg docs online][upstream-docs]
+
+## [apkg docs on Read the Docs][docs]
+
+## [apkg docs on GitLab](https://gitlab.nic.cz/packaging/apkg/-/blob/master/docs/README.md)
+
+## apkg docs offline
+
+See docs/index.md and other files in docs/ directory.
+
+You can also render docs into HTML using mkdocs:
+
+    pip install -r doc-requirements.txt
+    mkdocs build
+    browser site/index.html
+
+#### read the [docs] and have a nice packaging ᕕ( ᐛ )ᕗ
+
+[docs]: https://apkg.rtfd.io
+[upstream-docs]: https://pkg.labs.nic.cz/pages/apkg
+
+
