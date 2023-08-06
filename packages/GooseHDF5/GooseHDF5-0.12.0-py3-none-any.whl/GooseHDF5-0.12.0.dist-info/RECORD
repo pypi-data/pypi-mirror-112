@@ -1,0 +1,15 @@
+GooseHDF5/__init__.py,sha256=YjI-Mlld8tbyU5UPn3WBPvbFlTUDED0uZnN1lkuGSN8,14659
+GooseHDF5/_version.py,sha256=LuPEHRhERWKL6zGgEH5qx9paOQFwngqPzvtkDtd7igo,144
+GooseHDF5/cli/G5check.py,sha256=ZnWc4VUOgLP6rbn9FGsjei_LPaiGQYKFPqvYvy0cX3Q,1498
+GooseHDF5/cli/G5compare.py,sha256=GENMQ7EOrZodlJDOuFxrmbI778PHUjg0Ppvi6_ZKP40,4277
+GooseHDF5/cli/G5list.py,sha256=xq7oCiF8EWa95c3lbfRUBUgHi1jEZ-jvk1yFLmBGB3o,4372
+GooseHDF5/cli/G5print.py,sha256=U53Dv3OEdbgLzl7QFaJmIVhqAVpUreCpoa2a9Efr6x0,3902
+GooseHDF5/cli/G5repack.py,sha256=Yc4HcHYsH4c-wiPo7v0fWC2sUlad22vE0a-umlq2tQQ,1858
+GooseHDF5/cli/G5repair.py,sha256=Jv-ZhBSDRnTZtEGdLJIdpp_D35ty_TJthAZhZZctoxs,1831
+GooseHDF5/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+GooseHDF5-0.12.0.dist-info/LICENSE,sha256=T-VugPjkf0PsKJyihdN67Q2mw06X3bCQiF_ElhFW3Fw,1068
+GooseHDF5-0.12.0.dist-info/METADATA,sha256=jXD_mDwwIiS478ctdHKsJb2SJ1Qfe2yd80JSotesuBU,271
+GooseHDF5-0.12.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+GooseHDF5-0.12.0.dist-info/entry_points.txt,sha256=hoKstbkdnUGcHRnMn4X3mCZSMnKq1grykmr4oFoWQRQ,247
+GooseHDF5-0.12.0.dist-info/top_level.txt,sha256=FVO2xF4pM9y0e7ufnmcELj0rfiDlb24nDkjIGHTA4B8,10
+GooseHDF5-0.12.0.dist-info/RECORD,,
