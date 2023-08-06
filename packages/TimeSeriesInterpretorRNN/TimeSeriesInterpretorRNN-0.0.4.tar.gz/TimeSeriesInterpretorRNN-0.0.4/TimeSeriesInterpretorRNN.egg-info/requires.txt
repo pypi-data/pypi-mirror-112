@@ -1,0 +1,4 @@
+tensorflow==2.2
+numpy
+shap==0.39.0
+pandas
