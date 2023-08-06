@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ElasticSearchHandler
+Version: 0.0.1
+Summary: Elasticsearch handler for logging
+Home-page: https://github.com/oleglpts/ElasticSearchHandler
+Author: Oleg Lupats
+Author-email: oleglupats@gmail.com
+License: MIT
+Platform: any
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+Standard logging handler module for sending logs to Elasticsearch
+
