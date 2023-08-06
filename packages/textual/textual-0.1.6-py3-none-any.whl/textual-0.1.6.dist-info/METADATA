@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: textual
+Version: 0.1.6
+Summary: Text User Interface using Rich
+Home-page: https://github.com/willmcgugan/textual
+License: MIT
+Author: Will McGugan
+Author-email: willmcgugan@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: rich (>=10.6.0,<11.0.0)
+Requires-Dist: typing-extensions (>=3.10.0,<4.0.0); python_version < "3.8"
