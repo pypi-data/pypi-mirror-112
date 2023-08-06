@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/dotstree/__init__.py
+src/dotstree/lib.py
+src/dotstree/main.py
+src/dotstree.egg-info/PKG-INFO
+src/dotstree.egg-info/SOURCES.txt
+src/dotstree.egg-info/dependency_links.txt
+src/dotstree.egg-info/entry_points.txt
+src/dotstree.egg-info/requires.txt
+src/dotstree.egg-info/top_level.txt
