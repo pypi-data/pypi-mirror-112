@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: merry
+Version: 0.3.0
+Summary: Decorator based error parsing.
+Home-page: https://github.com/miguelgrinberg/merry
+Author: Miguel Grinberg
+Author-email: miguel.grinberg@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/miguelgrinberg/merry/issues
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# merry
+
+[![Build status](https://github.com/miguelgrinberg/merry/workflows/build/badge.svg)](https://github.com/miguelgrinberg/merry/actions) [![codecov](https://codecov.io/gh/miguelgrinberg/merry/branch/main/graph/badge.svg)](https://codecov.io/gh/miguelgrinberg/merry)
+
+Decorator based error handling for Python
+
+## Resources
+
+- [Documentation](http://merry-py.readthedocs.io/en/latest/)
+- [PyPI](https://pypi.python.org/pypi/merry)
+- [Change Log](https://github.com/miguelgrinberg/merry/blob/main/CHANGES.md)
+
+
+
