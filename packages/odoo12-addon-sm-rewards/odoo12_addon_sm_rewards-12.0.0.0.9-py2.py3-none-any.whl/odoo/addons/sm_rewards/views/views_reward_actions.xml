@@ -1,0 +1,50 @@
+<odoo>
+  <data>
+
+    <record id="view_reset_state_rewards_workflow" model="ir.actions.server">
+      <field name="name">Reset state</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="binding_model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="state">code</field>
+      <field name="code">action = model.reset_state_action()</field>
+    </record>
+
+    <record id="view_compute_member_rewards_workflow" model="ir.actions.server">
+      <field name="name">Compute Member</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="binding_model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="state">code</field>
+      <field name="code">action = model.compute_member_action()</field>
+    </record>
+
+    <record id="view_add_follower_rewards_workflow" model="ir.actions.server">
+      <field name="name">Add Follower</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="binding_model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="state">code</field>
+      <field name="code">action = model.add_follower_action()</field>
+    </record>
+
+    <record id="complete_reward_rewards_workflow" model="ir.actions.server">
+      <field name="name">Complete Reward</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="binding_model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="state">code</field>
+      <field name="code">action = model.complete_reward_action()</field>
+    </record>
+
+    <record id="find_reservation_rewards_workflow" model="ir.actions.server">
+      <field name="name">Find related reservation</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="binding_model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="state">code</field>
+      <field name="code">action = model.find_related_reservation_action()</field>
+    </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,28 @@
+<odoo>
+  <data noupdate="1">
+
+    <record id="email_template_cs_reward_complete" model="mail.template">
+      <field name="name">email_tmpl_promo_reward_completed</field>
+      <field name="email_from">carsharing@ommobilitat.coop</field>
+      <field name="subject">Recompensa activada - Som Mobilitat</field>
+      <field name="email_to">${object.member_email}</field>
+      <field name="model_id" ref="sm_rewards.model_sm_rewards_sm_reward"/>
+      <field name="auto_delete" eval="True"/>
+      <field name="body_html"><![CDATA[
+
+<div style="font-family: helvetica;font-size: 14px;">
+  <p style="margin-bottom: 0.14in;" align="justify">Hola ${object.related_member_id.firstname},</p>
+  <p style="margin-bottom: 0.14in;" align="justify">Has completat amb èxit la promoció i t’hem afegit la recompensa al teu moneder virtual.</p>
+  <p style="margin-bottom: 0.14in;" align="justify">Si ets un nou usuari del servei de carsharing, rebràs un correu explicant el següent pas per l’activació del servei.</p>
+  <p style="margin-bottom: 0.14in;" align="justify">Endavant amb la mobilitat elèctrica,</p>
+  <br>
+</div>
+% if ctx.get('send_from_code'):
+  ${user.signature|safe}
+% endif
+
+      ]]></field>
+    </record>
+
+  </data>
+</odoo>

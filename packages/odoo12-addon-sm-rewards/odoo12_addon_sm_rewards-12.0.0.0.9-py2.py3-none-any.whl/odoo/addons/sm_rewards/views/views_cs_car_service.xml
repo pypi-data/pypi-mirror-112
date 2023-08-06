@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+
+    <record id="view_cs_car_service_list_inherit" model="ir.ui.view">
+      <field name="name">sm_carsharing_structure.cs_car_service.tree.inherit</field>
+      <field name="model">fleet.vehicle.log.services</field>
+      <field name="inherit_id" ref="sm_carsharing_structure.view_cs_car_service_list"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='amount']"  position="before">
+          <field name="related_reward_id" />
+        </xpath>
+      </field>
+    </record>
+    <record id="view_cs_car_service_form_inherit" model="ir.ui.view">
+      <field name="name">sm_carsharing_structure.cs_car_service.form.inherit</field>
+      <field name="model">fleet.vehicle.log.services</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="sm_carsharing_structure.view_cs_car_service_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='related_invoice_id']"  position="after">
+          <field name="related_reward_id"/>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>

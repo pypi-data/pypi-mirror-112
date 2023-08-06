@@ -1,0 +1,32 @@
+<odoo>
+  <data>
+    <record id="view_smp_rewards_members_form" model="ir.ui.view">
+      <field name="name">sm_rewards.members.form</field>
+      <field name="model">res.partner</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="sm_partago_user.view_smp_members_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='cs_registration_coupon']" position="after">
+          <field name="creation_coupon" />
+        </xpath>
+        <xpath expr="//notebook" position="inside">
+          <page name='carsharing_rewards' string="Carsharing rewards">
+            <group name="container">
+              <field name="cs_rewards_id" widget="one2many_list">
+                <tree string="Related Rewards" create="false" edit="false" delete="false" open="true">
+                  <field name="id"/>
+                  <field name="reward_date"/>
+                  <field name="reward_info"/>
+                  <field name="promo_code"/>
+                  <field name="related_member_id"/>
+                  <field name="completed"/>
+                  <field name="final_state"/>
+                </tree>
+              </field>
+            </group>
+          </page>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

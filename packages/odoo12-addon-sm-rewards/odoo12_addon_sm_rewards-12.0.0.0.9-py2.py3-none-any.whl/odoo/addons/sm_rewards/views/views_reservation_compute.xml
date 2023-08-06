@@ -1,0 +1,24 @@
+<odoo>
+  <data>
+    <record id="view_reservation_compute_form_inherited" model="ir.ui.view">
+      <field name="name">smp.reservation_compute.form.inherit</field>
+      <field name="model">smp.sm_reservation_compute</field>
+      <field name="inherit_id" ref="sm_partago_usage.view_reservation_compute_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="/form/sheet/notebook" position="before">
+
+            <div class="oe_button_box" name="button_box">
+              <button name="rewards_return_action_to_open"
+                  type="object"
+                  class="oe_stat_button"
+                  icon="fa-book"
+                  context="{'xml_id':'view_reward_window'}"
+                  help="Show related rewards">
+                <field name="related_reward_count" widget="statinfo" string="Rewards"/>
+              </button>
+            </div>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

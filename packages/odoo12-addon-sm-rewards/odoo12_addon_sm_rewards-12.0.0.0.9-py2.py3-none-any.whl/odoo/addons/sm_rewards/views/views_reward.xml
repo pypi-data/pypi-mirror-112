@@ -1,0 +1,235 @@
+<odoo>
+  <data>
+    <record id="view_reward_window" model="ir.actions.act_window">
+      <field name="name">Rewards</field>
+      <field name="res_model">sm_rewards.sm_reward</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_reward_search" model="ir.ui.view">
+      <field name="name">sm_rewards.reward.search</field>
+      <field name="model">sm_rewards.sm_reward</field>
+      <field name="type">search</field>
+      <field name="arch" type="xml">
+        <search string="DB rewards search">
+          <field name="id"/>
+          <field name="reward_info"/>
+          <field name="promo_code"/>
+          <field name="related_member_id"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="view_reward_list" model="ir.ui.view">
+      <field name="name">sm_rewards.reward.tree</field>
+      <field name="model">sm_rewards.sm_reward</field>
+      <field name="arch" type="xml">
+        <!-- <tree editable="top"> -->
+        <tree>
+          <!-- <button name="get_reward_form_view" type='object' string="View" context="{'active_id': id}"/> -->
+          <field name="state" readonly="1"/>
+          <field name="reward_date"/>
+          <field name="reward_type"/>
+          <field name="related_member_id"/>
+          <field name="reward_addtime"/>
+          <field name="reward_addmoney"/>
+          <field name="related_analytic_account_id"/>
+          <field name="maintenance_forgive_reservation"/>
+          <field name="maintenance_discount_reservation"/>
+          <field name="maintenance_reservation_id"/>
+          <field name="maintenance_create_car_service"/>
+          <field name="maintenance_car_service_id"/>
+          <field name="maintenance_reservation_type"/>
+          <field name="maintenance_type"/>
+          <field name="maintenance_duration"/>
+          <field name="maintenance_observations"/>
+          <field name="maintenance_carconfig_home"/>
+          <field name="maintenance_reservation_start"/>
+          <field name="maintenance_car_id_plate"/>
+          <field name="data_partner_vat"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_reward_form" model="ir.ui.view">
+      <field name="name">sm_rewards.reward.form</field>
+      <field name="model">sm_rewards.sm_reward</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Workflow record">
+          <header>
+            <button string="Compute member" type="object" name="compute_member_progressbar_action"
+                class="oe_highlight"
+                attrs="{'invisible': [('state','!=','new')]}"/>
+            <button string="Add member to followers" type="object" name="add_follower_progressbar_action"
+                class="oe_highlight"
+                attrs="{'invisible': [('state','!=','member')]}"/>
+            <button string="Complete" type="object" name="complete_reward_progressbar_action"
+                class="oe_highlight"
+                attrs="{'invisible': [('state','!=','follower')]}"/>
+            <button string="Cancel" type="object" name="cancel_reward_progressbar_action"
+                class="oe_highlight"
+                attrs="{'invisible': ['|',('state','=','complete'),('state','=','cancelled')]}"/>
+            <field name="state" widget="statusbar"/>
+          </header>
+
+          <sheet>
+            <notebook>
+              <page string="Main">
+                <group string="General">
+                  <field name="name"/>
+                  <field name="reward_type"/>
+                  <field name="data_partner_creation_type"/>
+                  <field name="reward_date"/>
+                  <field name="reward_info"/>
+                  <field name="cron_executed"/>
+                </group>
+                <group string="External refs">
+                  <field name="promo_code" attrs="{'invisible': [('reward_type','!=','promocode')]}"/>
+                  <field name="external_obj_id"/>
+                  <field name="external_promo_obj_id" attrs="{'invisible': [('reward_type','!=','promocode')]}"/>
+                </group>
+                <group string="External data">
+                  <field name="maintenance_cs_person_index" attrs="{'invisible': [('reward_type','!=','fleet_maintenance')]}"/>
+                  <field name="data_partner_cs_user_type" attrs="{'invisible': ['&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                  <field name="data_partner_firstname"/>
+                  <field name="data_partner_lastname"/>
+                  <field name="data_partner_vat"/>
+                  <field name="data_partner_email"/>
+                  <field name="data_partner_mobile" attrs="{'invisible': ['|',('reward_type','!=','promocode'),'&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                  <field name="data_partner_phone" attrs="{'invisible': ['|',('reward_type','!=','promocode'),'&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                  <field name="data_partner_gender" attrs="{'invisible': ['|',('reward_type','!=','promocode'),'&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                  <field name="data_partner_birthdate_date" attrs="{'invisible': ['|',('reward_type','!=','promocode'),'&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                  <field name="data_partner_street" attrs="{'invisible': ['|',('reward_type','!=','promocode'),'&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                  <field name="data_partner_zip" attrs="{'invisible': ['|',('reward_type','!=','promocode'),'&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                  <field name="data_partner_state_id" attrs="{'invisible': ['|',('reward_type','!=','promocode'),'&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                  <field name="data_partner_city" attrs="{'invisible': ['|',('reward_type','!=','promocode'),'&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                  <field name="data_partner_iban" attrs="{'invisible': ['|',('reward_type','!=','promocode'),'&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                  <field name="data_partner_driving_license_expiration_date" attrs="{'invisible': ['|',('reward_type','!=','promocode'),'&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                  <field name="data_partner_image_dni" attrs="{'invisible': ['|',('reward_type','!=','promocode'),'&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                  <field name="data_partner_image_driving_license" attrs="{'invisible': ['|',('reward_type','!=','promocode'),'&amp;',('data_partner_creation_type','!=','new'),('data_partner_creation_type','!=','subscription')]}"/>
+                </group>
+              </page>
+              <page string="Reward Data">
+                <group string="Member compuation">
+                  <field name="related_member_id"/>
+                </group>
+                <group string="Complete behaviour data">
+                  <field name="reward_addtime"/>
+                  <field name="reward_addmoney"/>
+                  <field name="force_register_cs" attrs="{'invisible': [('reward_type','!=','promocode')]}"/>
+                  <field name="force_dedicated_ba" attrs="{'invisible': [('reward_type','!=','promocode')]}"/>
+                  <field name="coupon_group" attrs="{'invisible': [('reward_type','!=','promocode')]}"/>
+                  <field name="coupon_group_secondary" attrs="{'invisible': [('reward_type','!=','promocode')]}"/>
+                  <field name="related_analytic_account_id"/>
+                  <field name="maintenance_forgive_reservation" attrs="{'invisible': [('reward_type','!=','fleet_maintenance')]}"/>
+                  <field name="maintenance_discount_reservation" attrs="{'invisible': [('reward_type','!=','fleet_maintenance')]}"/>
+                  <field name="maintenance_reservation_id" attrs="{'invisible': [('reward_type','!=','fleet_maintenance')]}"/>
+                  <field name="maintenance_create_car_service" attrs="{'invisible': [('reward_type','!=','fleet_maintenance')]}"/>
+                  <field name="maintenance_car_service_id" attrs="{'invisible': [('reward_type','!=','fleet_maintenance')]}"/>
+                </group>
+
+                <group string="Maintenance" attrs="{'invisible': [('reward_type','!=','fleet_maintenance')]}">
+                  <field name="maintenance_reservation_type"/>
+                  <field name="maintenance_type"/>
+                  <field name="maintenance_duration"/>
+                  <field name="maintenance_observations"/>
+                  <field name="maintenance_carconfig_index"/>
+                  <field name="maintenance_carconfig_id"/>
+                  <field name="maintenance_carconfig_home"/>
+                  <field name="maintenance_reservation_start"/>
+                  <field name="maintenance_car_plate"/>
+                  <field name="maintenance_car_id"/>
+                  <field name="maintenance_car_id_plate"/>
+                </group>
+              </page>
+
+              <page string="Tariff">
+                <group col="4">
+                  <field name="tariff_name"/>
+                  <field name="tariff_related_model"/>
+                  <field name="tariff_type"/>
+                  <field name="tariff_quantity"/>
+                </group>
+              </page>
+
+              <page string="Computation">
+                <group>
+                  <field name="maintenance_car_service_log_ids" widget="many2many_list">
+                    <tree string="CS car services" create="false" edit="false" delete="false" open="true">
+                      <field name="date" />
+                      <field name="vehicle_id" />
+                      <field name="cost_subtype_id"/>
+                      <field name="related_member_id" />
+                      <field name="vendor_id" />
+                      <field name="related_invoice_id" />
+                      <field name="amount" sum="Total"/>
+                    </tree>
+                  </field>
+                  <field name="pb_record_ids" widget="many2many_list">
+                    <tree string="Pocketbook records" create="false" edit="false" delete="false" open="true">
+                      <field name="id"/>
+                      <field name="name"/>
+                      <field name="date"/>
+                      <field name="amount"/>
+                      <field name="obs"/>
+                      <field name="related_member_id"/>
+                      <field name="related_account_id"/>
+                      <field name="related_analytic_account_id"/>
+                    </tree>
+                  </field>
+                  <field name="tariffs_ids" widget="many2many_list">
+                    <tree string="Tariffs" create="false" edit="false" delete="false" open="true">
+                      <field name="id"/>
+                      <field name="name"/>
+                      <field name="reason"/>
+                      <field name="tariff_type"/>
+                      <field name="date_valid"/>
+                      <field name="related_member_id"/>
+                      <field name="tariff_model_id"/>
+                      <field name="description"/>
+                      <field name="abouttoexpire"/>
+                      <field name="closed"/>
+                      <field name="abouttoexpire_member_notified"/>
+                    </tree>
+                  </field>
+                  <field name="cs_registration_request_ids" widget="many2many_list">
+                    <tree string="CS registration requests" create="false" edit="false" delete="false" open="true">
+                      <field name="id"/>
+                      <field name="create_date"/>
+                      <field name="related_member_id"/>
+                      <field name="force_registration"/>
+                      <field name="group_index"/>
+                      <field name="group_id"/>
+                      <field name="ba_behaviour"/>
+                      <field name="ba_credits"/>
+                      <field name="related_coupon_index"/>
+                      <field name="related_cs_update_data_id"/>
+                      <field name="completed"/>
+                      <field name="completed_date"/>
+                      <field name="completed_behaviour"/>
+                      <field name="completed_behaviour_before_error"/>
+                      <field name="completed_error_description"/>
+                    </tree>
+                  </field>
+                </group>
+                <group string="status">
+                  <field name="completed"/>
+                  <field name="final_state"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+            <field name="message_ids" widget="mail_thread"/>
+          </div>
+        </form>
+      </field>
+    </record>
+
+    <menuitem name="CS Rewards" id="sm_rewards.reward_main" parent="vertical_carsharing.menu_root" 
+      action="view_reward_window"/>
+
+  </data>
+</odoo>

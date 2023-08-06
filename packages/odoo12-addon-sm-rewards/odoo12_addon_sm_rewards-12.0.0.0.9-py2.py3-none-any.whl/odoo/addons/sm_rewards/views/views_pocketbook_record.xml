@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+
+    <record id="view_pocketbook_record_list_inherit" model="ir.ui.view">
+      <field name="name">sm_partago_invoicing.pocketbook_record.list.inherit</field>
+      <field name="model">pocketbook.pocketbook_record</field>
+      <field name="inherit_id" ref="sm_pocketbook.view_pocketbook_record_list"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='related_analytic_account_id']"  position="after">
+          <field name="related_reward_id" />
+        </xpath>
+      </field>
+    </record>
+    <record id="view_pocketbook_record_form_inherit" model="ir.ui.view">
+      <field name="name">sm_partago_invoicing.pocketbook_record.form.inherit</field>
+      <field name="model">pocketbook.pocketbook_record</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="sm_pocketbook.view_pocketbook_record_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='related_analytic_account_id']"  position="after">
+          <field name="related_reward_id"/>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>
