@@ -1,0 +1,14 @@
+future
+kitchen
+deprecated
+funcsigs
+
+[dev]
+pylama
+check-manifest
+
+[test]
+mock
+pygments
+pytest
+parameterized
