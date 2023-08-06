@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+zoho_crm_connector/__init__.py
+zoho_crm_connector/zoho_crm_api.py
+zoho_crm_connector.egg-info/PKG-INFO
+zoho_crm_connector.egg-info/SOURCES.txt
+zoho_crm_connector.egg-info/dependency_links.txt
+zoho_crm_connector.egg-info/requires.txt
+zoho_crm_connector.egg-info/top_level.txt
