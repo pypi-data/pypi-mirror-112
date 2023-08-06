@@ -1,0 +1,10 @@
+README.rst
+setup.py
+django_urbano.egg-info/PKG-INFO
+django_urbano.egg-info/SOURCES.txt
+django_urbano.egg-info/dependency_links.txt
+django_urbano.egg-info/requires.txt
+django_urbano.egg-info/top_level.txt
+urbano/connector.py
+urbano/handler.py
+urbano/settings.py
