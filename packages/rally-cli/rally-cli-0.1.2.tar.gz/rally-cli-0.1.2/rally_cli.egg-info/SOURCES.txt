@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+rally_cli.egg-info/PKG-INFO
+rally_cli.egg-info/SOURCES.txt
+rally_cli.egg-info/dependency_links.txt
+rally_cli.egg-info/requires.txt
+rally_cli.egg-info/top_level.txt
+rallycli/__init__.py
+rallycli/base_api.py
+rallycli/rally_api.py
+rallycli/session_builder.py
