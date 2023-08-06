@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: tellomr
+Version: 0.0.5
+Summary: Control DJI Tello drone with Python3
+Home-page: https://github.com/cocpy/Tello-Python
+Author: C灵C
+Author-email: c0c@cocpy.com
+License: UNKNOWN
+Description: # Installation
+        
+            pip install tellomr
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
