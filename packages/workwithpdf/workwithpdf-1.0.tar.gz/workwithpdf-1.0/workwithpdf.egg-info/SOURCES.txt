@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+workwithpdf/__init__.py
+workwithpdf/pdf2image.py
+workwithpdf/pdf2text.py
+workwithpdf.egg-info/PKG-INFO
+workwithpdf.egg-info/SOURCES.txt
+workwithpdf.egg-info/dependency_links.txt
+workwithpdf.egg-info/top_level.txt
