@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: BuilT
+Version: 0.0.1
+Summary: Easily build your trainer for DNNs.
+Home-page: https://github.com/UoA-CARES/BuilT
+Author: JongYoon Lim
+Author-email: jy.lim@auckland.ac.nz
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/UoA-CARES/BuilT/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+[![Build Status](https://travis-ci.com/UoA-CARES/BuilT.svg?branch=master)](https://travis-ci.com/UoA-CARES/BuilT)
+[![codecov](https://codecov.io/gh/UoA-CARES/BuilT/branch/master/graph/badge.svg)](https://codecov.io/gh/UoA-CARES/BuilT)
+
+# BuilT(Build a Trainer)
+Easily build a trainer for DNNs using GUI and quickly do experiments for them. 
+
+## Installation
+```
+conda create -n conda_BuilT python=3.7
+conda activate conda_BuilT
+pip install requirements-gpu.txt
+```
+
+## How to run MNIST example
+```
+conda activate conda_BuilT
+git clone https://github.com/UoA-CARES/BuilT.git
+cd BuilT
+sh ./train.sh
+```
+
+
+
