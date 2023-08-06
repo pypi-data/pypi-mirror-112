@@ -1,0 +1,6 @@
+[console_scripts]
+nlcov=pytest_nlcov:cli
+
+[pytest11]
+nlcov=pytest_nlcov
+
