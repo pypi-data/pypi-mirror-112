@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+pygifconvt_sihyeon/__init__.py
+pygifconvt_sihyeon/converter.py
+pygifconvt_sihyeon.egg-info/PKG-INFO
+pygifconvt_sihyeon.egg-info/SOURCES.txt
+pygifconvt_sihyeon.egg-info/dependency_links.txt
+pygifconvt_sihyeon.egg-info/not-zip-safe
+pygifconvt_sihyeon.egg-info/requires.txt
+pygifconvt_sihyeon.egg-info/top_level.txt
