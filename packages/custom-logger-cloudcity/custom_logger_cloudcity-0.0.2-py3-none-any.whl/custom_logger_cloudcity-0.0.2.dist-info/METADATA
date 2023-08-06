@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: custom-logger-cloudcity
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: https://gitlab.com/dqna/custom-logger-cloudcity
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: google-cloud-logging (==2.5.0)
+
+# Custom Logger CloudCity
+
+To unify the way we log and alert to Google Cloud Logger and Sentry, we have created this package.
+
+## Example
+
+How to use:
+
+1. Include the package in your project by doing `pip install custom-logger-cloudcity`
+2. Simply import the module!
+
+Below is an examlpe how to use
+
+```python
+
+import os
+
+os.environ.update({"GOOGLE_APPLICATION_CREDENTIALS": "/Users/sebas/dev/custom-logger/service_account.json"})
+os.environ.update({"CLOUD_LOGGER_NAME": "nice_test_logger"})
+os.environ.update({"ENV": ""})
+# We need to set the environment vars before importing the custom_logger
+# You can do so as this example or just set it in the machine wide environment
+import custom_logger
+
+if __name__ == '__main__':
+    # A message as a string will end up in as a textPayload in Google Cloud Logging
+    # custom_logger.info("This is a test log in a textPayload")
+    custom_logger.error("not ok")
+    # A message as an argument will end up in as a jsonPayload in Google Cloud Logging
+    custom_logger.info(some_message="This is a test log in a jsonPayload")
+    # An example with multiple arguments
+    custom_logger.info(
+        some_message="This is a test log in a jsonPayload",
+        more_info="It has more info",
+        and_even_more="These can all be metrics and stuff",
+        but="We need to make sure that we catch the logging exceptions and print the whole lot",
+    )
+    # You can even nest data, as this is stored as a struct in Google Cloud Logging
+    custom_logger.info(amount_transfered=10, amount_failed=10, errors=["a", "b", "c"])
+```
+
