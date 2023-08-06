@@ -1,0 +1,4 @@
+asynchronousfilereader~=0.2.1
+boto3~=1.12.21
+asyncio-nats-client==0.11.4
+redis

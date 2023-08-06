@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: libcatapult
+Version: 0.1.4
+Summary: A library of useful code for use in the catapult
+Home-page: https://github.com/SatelliteApplicationsCatapult/libcatapult
+Author: Emily Selwood
+Author-email: emily.selwood@sa.catapult.org.uk
+License: apache2
+Description: # LibCatapult
+        
+        This library is a place to put all the useful tools and functions the Satellite Applications Catapult develop so they can be easily reused.
+        
+        Please try to keep the structure sensible. Add anything you need to use in more than one project here.
+        
+        This must run against python 3.5+ No support for 2.7 is planned or expected.
+        
+        # History
+        
+        
+        Project started 14-01-2020
+Keywords: catapult library
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
